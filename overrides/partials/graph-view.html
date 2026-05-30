@@ -1,0 +1,164 @@
+<!-- Graph View Button -->
+<button
+  class="md-graph-button"
+  onclick="toggleGraphView()"
+  title="Graph View (G)"
+  aria-label="Open graph view">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+    <path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+    <circle cx="12" cy="12" r="3" fill="currentColor"/>
+    <circle cx="6" cy="6" r="2" fill="currentColor"/>
+    <circle cx="18" cy="6" r="2" fill="currentColor"/>
+    <circle cx="6" cy="18" r="2" fill="currentColor"/>
+    <circle cx="18" cy="18" r="2" fill="currentColor"/>
+  </svg>
+</button>
+
+<!-- Graph View Modal -->
+<div id="graph-modal" class="md-graph-modal" style="display: none;">
+  <div class="md-graph-container">
+    <div class="md-graph-header">
+      <h2>Knowledge Graph</h2>
+      <button onclick="toggleGraphView()" class="md-graph-close" aria-label="Close graph view">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+          <path fill="currentColor" d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+        </svg>
+      </button>
+    </div>
+    <div class="md-graph-controls">
+      <button onclick="resetGraph()" title="Reset view">Reset</button>
+      <button onclick="centerCurrentPage()" title="Center current page">Center Current</button>
+      <label>
+        <input type="range" id="link-distance" min="30" max="200" value="100" oninput="updateLinkDistance(this.value)">
+        Link Distance
+      </label>
+    </div>
+    <svg id="graph-canvas"></svg>
+  </div>
+</div>
+
+<style>
+/* Graph Button */
+.md-graph-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--md-accent-fg-color, #635BFF);
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.md-graph-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+}
+
+.md-graph-button svg {
+  color: white;
+}
+
+/* Graph Modal */
+.md-graph-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.md-graph-container {
+  width: 90%;
+  height: 90%;
+  background: var(--md-default-bg-color, #FAFAF8);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.md-graph-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  border-bottom: 1px solid var(--md-default-fg-color--lightest, #E6E4DE);
+}
+
+.md-graph-header h2 {
+  margin: 0;
+  font-size: 20px;
+  color: var(--md-default-fg-color, #111111);
+}
+
+.md-graph-close {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.md-graph-close:hover {
+  background: var(--md-default-fg-color--lightest, #F4F4F1);
+}
+
+.md-graph-controls {
+  display: flex;
+  gap: 12px;
+  padding: 12px 24px;
+  border-bottom: 1px solid var(--md-default-fg-color--lightest, #E6E4DE);
+  align-items: center;
+}
+
+.md-graph-controls button {
+  padding: 6px 12px;
+  border: 1px solid var(--md-default-fg-color--lighter, #D4D0C7);
+  background: var(--md-default-bg-color, #FFFFFF);
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.md-graph-controls button:hover {
+  background: var(--md-accent-fg-color--transparent, #EFEEFF);
+}
+
+.md-graph-controls label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+}
+
+#graph-canvas {
+  flex: 1;
+  width: 100%;
+}
+
+/* Dark mode support */
+[data-md-color-scheme="slate"] .md-graph-container {
+  background: var(--md-default-bg-color, #08090A);
+}
+
+[data-md-color-scheme="slate"] .md-graph-header h2,
+[data-md-color-scheme="slate"] .md-graph-controls {
+  color: var(--md-default-fg-color, #F7F7F5);
+}
+</style>

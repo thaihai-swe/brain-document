@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block scripts %}
+  {{ super() }}
+  <!-- D3.js for graph visualization -->
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="{{ 'assets/javascripts/graph-view.js' | url }}"></script>
+{% endblock %}
+
+{% block content %}
+  {{ super() }}
+  {% include "partials/graph-view.html" %}
+{% endblock %}

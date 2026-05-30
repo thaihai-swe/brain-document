@@ -4,6 +4,7 @@ site_author: Your Name
 
 theme:
   name: material
+  custom_dir: overrides  # Enable custom theme overrides
   palette:
     # Light mode - Warm Editorial (DESIGN.md §20.1)
     - scheme: default

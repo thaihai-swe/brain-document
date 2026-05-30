@@ -32,17 +32,19 @@ Each microservice is independently deployable and focuses on a specific business
 
 ## Common Patterns
 
-```
-┌─────────────┐
-│  API Gateway │
-└──────┬──────┘
-       │
-   ┌───┴────┬────────┬────────┐
-   │        │        │        │
-┌──▼──┐  ┌──▼──┐  ┌──▼──┐  ┌──▼──┐
-│User │  │Order│  │Pay  │  │Notif│
-│Svc  │  │Svc  │  │Svc  │  │Svc  │
-└─────┘  └─────┘  └─────┘  └─────┘
+```mermaid
+graph TD
+    Gateway[API Gateway]
+    Gateway --> UserSvc[User Service]
+    Gateway --> OrderSvc[Order Service]
+    Gateway --> PaySvc[Payment Service]
+    Gateway --> NotifSvc[Notification Service]
+    
+    style Gateway fill:#635BFF,stroke:#4F46E5,stroke-width:2px,color:#fff
+    style UserSvc fill:#06B6D4,stroke:#0284C7,stroke-width:2px,color:#fff
+    style OrderSvc fill:#16A34A,stroke:#15803D,stroke-width:2px,color:#fff
+    style PaySvc fill:#F59E0B,stroke:#D97706,stroke-width:2px,color:#fff
+    style NotifSvc fill:#8B5CF6,stroke:#7C3AED,stroke-width:2px,color:#fff
 ```
 
 ## Best Practices

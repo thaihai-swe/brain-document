@@ -43,6 +43,15 @@ plugins:
       lang: en
       separator: '[\s\-\.]+'  # Better search tokenization
   - awesome-pages
+  - minify:
+      minify_html: true
+      minify_js: true
+      minify_css: true
+      htmlmin_opts:
+        remove_comments: true
+        remove_empty_space: true
+        reduce_boolean_attributes: true
+      cache_safe: true
 
 markdown_extensions:
   - pymdownx.highlight:

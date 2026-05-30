@@ -21,18 +21,20 @@ theme:
         name: Switch to light mode
   font: false  # Use system fonts per DESIGN.md stack-agnostic rule
   features:
-    # Remove navigation.tabs for scalability
+    # Navigation - Left sidebar for folder structure
     - navigation.sections
     - navigation.expand
     - navigation.top
     - navigation.indexes
     - navigation.path  # Show breadcrumb path
     - navigation.prune  # Only render visible navigation (performance)
-    - toc.follow  # Sidebar TOC follows scroll
-    - toc.integrate  # Integrate TOC into sidebar
+    # TOC - Right sidebar for page structure (removed toc.integrate)
+    - toc.follow  # Right sidebar TOC follows scroll
+    # Search
     - search.suggest
     - search.highlight
     - search.share  # Share search results
+    # Content
     - content.code.copy
     - content.code.annotate
 

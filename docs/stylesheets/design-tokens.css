@@ -106,8 +106,8 @@
   --bd-ease-out:      cubic-bezier(0.16, 1, 0.3, 1);
   --bd-ease-in-out:   cubic-bezier(0.65, 0, 0.35, 1);
 
-  /* Type families (§5) — Monaspace Neon for monospace */
-  --bd-font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  /* Type families (§5) — Monaspace Neon for all text */
+  --bd-font-sans: "Monaspace Neon", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   --bd-font-mono: "Monaspace Neon", ui-monospace, "SF Mono", "JetBrains Mono", "Fira Code", "Cascadia Code", Menlo, Consolas, monospace;
 
   /* Content widths (§5) */

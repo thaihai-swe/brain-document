@@ -5,20 +5,21 @@ site_author: Your Name
 theme:
   name: material
   palette:
-    # Light mode
+    # Light mode - Warm Editorial (DESIGN.md §20.1)
     - scheme: default
-      primary: indigo
-      accent: indigo
+      primary: custom
+      accent: custom
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
-    # Dark mode
+    # Dark mode - Near-Black Craft Tool (DESIGN.md §20.2)
     - scheme: slate
-      primary: indigo
-      accent: indigo
+      primary: custom
+      accent: custom
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
+  font: false  # Use system fonts per DESIGN.md stack-agnostic rule
   features:
     - navigation.tabs
     - navigation.sections
@@ -28,6 +29,7 @@ theme:
     - search.suggest
     - search.highlight
     - content.code.copy
+    - content.code.annotate
 
 plugins:
   - search:
@@ -37,6 +39,8 @@ plugins:
 markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
   - pymdownx.superfences
   - pymdownx.tasklist:
       custom_checkbox: true
@@ -46,3 +50,7 @@ markdown_extensions:
   - md_in_html
   - toc:
       permalink: true
+      toc_depth: 3
+
+extra_css:
+  - stylesheets/design-tokens.css

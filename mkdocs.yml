@@ -42,6 +42,7 @@ plugins:
   - search:
       lang: en
       separator: '[\s\-\.]+'  # Better search tokenization
+  - roamlinks  # Obsidian-style [[wiki-links]] - must be BEFORE awesome-pages
   - awesome-pages
   - minify:
       minify_html: true

@@ -42,6 +42,10 @@ plugins:
   - search:
       lang: en
       separator: '[\s\-\.]+'  # Better search tokenization
+      pipeline:
+        - stemmer
+        - stopWordFilter
+        - trimmer
   - roamlinks  # Obsidian-style [[wiki-links]] - must be BEFORE awesome-pages
   - awesome-pages
   - blog:

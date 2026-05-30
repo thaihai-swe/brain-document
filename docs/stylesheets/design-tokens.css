@@ -73,9 +73,9 @@
   --bd-info-soft:         #E0F2FE;
 
   /* Color — code surface (§4, §8.10) */
-  --bd-code-bg:           #0B0D10;
-  --bd-code-border:       #24272E;
-  --bd-code-text:         #F7F7F5;
+  --bd-code-bg:           #F4F4F1;   /* Light warm surface for light mode */
+  --bd-code-border:       #E6E4DE;
+  --bd-code-text:         #26251E;   /* Dark text for light mode */
 
   /* Gradient signature moment (§4) */
   --bd-gradient-primary:  linear-gradient(135deg, #635BFF 0%, #8B5CF6 45%, #06B6D4 100%);

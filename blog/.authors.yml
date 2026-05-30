@@ -1,0 +1,4 @@
+admin:
+  name: Admin
+  description: Site administrator and primary author
+  avatar: https://github.com/identicons/admin.png

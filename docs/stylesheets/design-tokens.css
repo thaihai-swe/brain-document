@@ -141,8 +141,7 @@
 /* --------------------------------------------------------------------------
    3. Material variable bridge — make Material consume the tokens
    -------------------------------------------------------------------------- */
-:root,
-[data-md-color-scheme="default"] {
+:root {
   --md-default-bg-color:          var(--bd-background);
   --md-default-fg-color:           var(--bd-text-primary);
   --md-default-fg-color--light:    var(--bd-text-secondary);
@@ -174,30 +173,7 @@
 }
 
 [data-md-color-scheme="slate"] {
-  --md-default-bg-color:           var(--bd-background);
-  --md-default-fg-color:            var(--bd-text-primary);
-  --md-default-fg-color--light:     var(--bd-text-secondary);
-  --md-default-fg-color--lighter:   var(--bd-text-muted);
-  --md-default-fg-color--lightest:  var(--bd-text-disabled);
-
-  --md-primary-fg-color:            var(--bd-background);
-  --md-primary-bg-color:            var(--bd-text-primary);
-  --md-primary-fg-color--light:     var(--bd-surface-muted);
   --md-primary-fg-color--dark:      var(--bd-surface-featured);
-
-  --md-accent-fg-color:             var(--bd-accent);
-  --md-accent-fg-color--transparent: var(--bd-accent-soft);
-  --md-accent-bg-color:             var(--bd-text-inverse);
-  --md-accent-bg-color--light:      var(--bd-accent-soft);
-
-  --md-typeset-color:               var(--bd-text-primary);
-  --md-typeset-a-color:             var(--bd-accent);
-
-  --md-code-bg-color:               var(--bd-code-bg);
-  --md-code-fg-color:               var(--bd-code-text);
-
-  --md-footer-bg-color:             var(--bd-surface-featured);
-  --md-footer-bg-color--dark:       var(--bd-surface-featured);
 }
 
 /* --------------------------------------------------------------------------
@@ -210,143 +186,13 @@ html {
   font-variant-numeric: tabular-nums;
 }
 
-/* Type scale (§5) — aggressive tracking at display sizes (§21) */
+/* Base body styles */
 body {
   font-family: var(--bd-font-sans);
   font-size: 16px;
   line-height: 1.55;
   color: var(--bd-text-primary);
   background-color: var(--bd-background);
-}
-
-/* Display sizes — hero scale (§5, §21) */
-h1 {
-  font-size: 56px;
-  line-height: 1.04;
-  font-weight: 600;
-  letter-spacing: -0.050em;  /* 4.8% tracking (§5) */
-  margin: var(--bd-space-20) 0 var(--bd-space-12) 0;
-}
-
-h2 {
-  font-size: 44px;
-  line-height: 1.08;
-  font-weight: 600;
-  letter-spacing: -0.045em;
-  margin: var(--bd-space-16) 0 var(--bd-space-10) 0;
-}
-
-h3 {
-  font-size: 28px;
-  line-height: 1.18;
-  font-weight: 600;
-  letter-spacing: -0.030em;
-  margin: var(--bd-space-12) 0 var(--bd-space-6) 0;
-}
-
-h4 {
-  font-size: 22px;
-  line-height: 1.25;
-  font-weight: 600;
-  letter-spacing: -0.020em;
-  margin: var(--bd-space-10) 0 var(--bd-space-4) 0;
-}
-
-h5 {
-  font-size: 18px;
-  line-height: 1.35;
-  font-weight: 600;
-  letter-spacing: -0.010em;
-  margin: var(--bd-space-8) 0 var(--bd-space-3) 0;
-}
-
-h6 {
-  font-size: 16px;
-  line-height: 1.50;
-  font-weight: 600;
-  letter-spacing: -0.005em;
-  margin: var(--bd-space-6) 0 var(--bd-space-2) 0;
-}
-
-/* Body text (§5) */
-p {
-  margin: 0 0 var(--bd-space-6) 0;
-  max-width: var(--bd-container-article);
-}
-
-/* Links — accent color, no underline by default (§4, §21) */
-a {
-  color: var(--bd-accent);
-  text-decoration: none;
-  transition: color var(--bd-motion-base) var(--bd-ease-standard);
-}
-
-a:hover {
-  color: var(--bd-accent-hover);
-  text-decoration: underline;
-}
-
-a:focus-visible {
-  outline: 2px solid var(--bd-accent);
-  outline-offset: 2px;
-  border-radius: 2px;
-}
-
-/* Code inline (§5) */
-code {
-  font-family: var(--bd-font-mono);
-  font-size: 13px;
-  line-height: 1.55;
-  background-color: var(--bd-surface-inset);
-  color: var(--bd-accent-strong);
-  padding: 2px 6px;
-  border-radius: var(--bd-radius-xs);
-  font-feature-settings: "kern" 0;
-}
-
-/* Code blocks (§8.10) */
-pre {
-  background-color: var(--bd-code-bg) !important;
-  border: 1px solid var(--bd-code-border);
-  border-radius: var(--bd-radius-lg);
-  padding: var(--bd-space-6);
-  overflow-x: auto;
-  margin: var(--bd-space-6) 0;
-}
-
-pre code {
-  font-size: 13px;
-  line-height: 1.55;
-  color: var(--bd-code-text);
-  background: none;
-  padding: 0;
-  border-radius: 0;
-}
-
-/* Blockquote (§5) */
-blockquote {
-  border-left: 4px solid var(--bd-accent);
-  padding-left: var(--bd-space-4);
-  margin-left: 0;
-  color: var(--bd-text-secondary);
-  font-style: italic;
-}
-
-/* Lists (§5) */
-ul, ol {
-  margin: var(--bd-space-6) 0;
-  padding-left: var(--bd-space-6);
-}
-
-li {
-  margin-bottom: var(--bd-space-3);
-}
-
-/* Horizontal rule */
-hr {
-  border: none;
-  border-top: 1px solid var(--bd-border-subtle);
-  margin: var(--bd-space-12) 0;
 }
 
 /* --------------------------------------------------------------------------
@@ -408,16 +254,60 @@ hr {
 .md-typeset p,
 .md-typeset li {
   color: var(--bd-text-secondary);
+  margin: 0 0 var(--bd-space-6) 0;
+  max-width: var(--bd-container-article);
+}
+
+.md-typeset ul,
+.md-typeset ol {
+  margin: var(--bd-space-6) 0;
+  padding-left: var(--bd-space-6);
+}
+
+.md-typeset li {
+  margin-bottom: var(--bd-space-3);
 }
 
 .md-typeset a {
   color: var(--bd-accent);
   text-decoration: none;
+  transition: color var(--bd-motion-base) var(--bd-ease-standard);
 }
 
 .md-typeset a:hover {
   color: var(--bd-accent-hover);
   text-decoration: underline;
+}
+
+.md-typeset a:focus-visible {
+  outline: 2px solid var(--bd-accent);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+.md-typeset blockquote {
+  border-left: 4px solid var(--bd-accent);
+  padding-left: var(--bd-space-4);
+  margin-left: 0;
+  color: var(--bd-text-secondary);
+  font-style: italic;
+}
+
+.md-typeset hr {
+  border: none;
+  border-top: 1px solid var(--bd-border-subtle);
+  margin: var(--bd-space-12) 0;
+}
+
+.md-typeset abbr {
+  text-decoration: underline dotted var(--bd-border-strong);
+  cursor: help;
+}
+
+.md-typeset img {
+  border-radius: var(--bd-radius-lg);
+  max-width: 100%;
+  height: auto;
 }
 
 /* --------------------------------------------------------------------------
@@ -582,12 +472,6 @@ hr {
   color: var(--bd-accent-strong);
   background-color: var(--bd-accent-soft);
   font-weight: 500;
-}
-
-[data-md-color-scheme="slate"] .md-nav__link--active,
-[data-md-color-scheme="slate"] .md-nav__item--active > .md-nav__link {
-  color: var(--bd-accent-strong);
-  background-color: var(--bd-accent-soft);
 }
 
 .md-nav__link .md-ellipsis {
@@ -1012,17 +896,6 @@ a[role="button"]:active,
   border-radius: 2px;
 }
 
-/* Material-specific focus overrides */
-.md-header__button:focus-visible,
-.md-nav__link:focus-visible,
-.md-tabs__link:focus-visible,
-.md-search__input:focus-visible,
-.md-search-result__link:focus-visible,
-.md-footer__link:focus-visible {
-  outline: 2px solid var(--bd-accent);
-  outline-offset: 2px;
-}
-
 /* Skip link (§12) — visible on focus, positioned off-screen by default */
 .md-skip {
   position: absolute;
@@ -1043,14 +916,6 @@ a[role="button"]:active,
   left: var(--bd-space-4);
   outline: none;
   box-shadow: var(--bd-shadow-md);
-}
-
-/* Form inputs */
-input:focus-visible,
-textarea:focus-visible,
-select:focus-visible {
-  outline: 2px solid var(--bd-accent);
-  outline-offset: 2px;
 }
 
 /* --------------------------------------------------------------------------
@@ -1111,26 +976,6 @@ select:focus-visible {
 
 ::-webkit-scrollbar-thumb:hover {
   background-color: var(--bd-border);
-}
-
-/* Images in content — radius-lg (§7) */
-.md-typeset img {
-  border-radius: var(--bd-radius-lg);
-  max-width: 100%;
-  height: auto;
-}
-
-/* Horizontal rule — subtle, generous margin (§5) */
-.md-typeset hr {
-  border: none;
-  border-top: 1px solid var(--bd-border-subtle);
-  margin: var(--bd-space-12) 0;
-}
-
-/* Abbreviation underline */
-.md-typeset abbr {
-  text-decoration: underline dotted var(--bd-border-strong);
-  cursor: help;
 }
 
 /* --------------------------------------------------------------------------
@@ -1350,51 +1195,6 @@ select:focus-visible {
   .card-grid {
     grid-template-columns: repeat(4, 1fr);
   }
-}
-
-/* --------------------------------------------------------------------------
-   22. Dark mode adjustments (§20.2)
-   -------------------------------------------------------------------------- */
-
-[data-md-color-scheme="slate"] .hero {
-  background-color: var(--bd-surface-featured);
-  color: var(--bd-text-inverse);
-}
-
-[data-md-color-scheme="slate"] .card {
-  background-color: var(--bd-surface);
-  border-color: var(--bd-border);
-}
-
-[data-md-color-scheme="slate"] .card:hover {
-  border-color: var(--bd-border-strong);
-}
-
-[data-md-color-scheme="slate"] .stat-strip {
-  background-color: var(--bd-surface-muted);
-  border-color: var(--bd-border);
-}
-
-[data-md-color-scheme="slate"] .cta {
-  background-color: var(--bd-primary);
-  color: var(--bd-text-inverse);
-  border-color: var(--bd-primary);
-}
-
-[data-md-color-scheme="slate"] .cta:hover {
-  background-color: var(--bd-primary-hover);
-  border-color: var(--bd-primary-hover);
-}
-
-[data-md-color-scheme="slate"] .cta-secondary {
-  background-color: var(--bd-surface);
-  color: var(--bd-text-primary);
-  border-color: var(--bd-border);
-}
-
-[data-md-color-scheme="slate"] .cta-secondary:hover {
-  background-color: var(--bd-surface-muted);
-  border-color: var(--bd-border-strong);
 }
 
 /* End of design-tokens.css */

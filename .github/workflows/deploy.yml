@@ -33,6 +33,9 @@ jobs:
         run: |
           pip install -r requirements.txt
 
+      - name: Build library index
+        run: python3 build_library.py
+
       - name: Build MkDocs site
         run: mkdocs build
 

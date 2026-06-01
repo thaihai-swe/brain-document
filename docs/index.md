@@ -8,6 +8,7 @@ This site is designed to scale with your knowledge:
 
 - **Use the search bar** (top right) - The fastest way to find anything
 - **Browse the sidebar** (left) - Organized by topic with expandable sections
+- **Open the [Library](library.md)** - Browse standalone HTML decks and PDFs
 - **Click the breadcrumb path** - Shows where you are in the hierarchy
 - **Use keyboard shortcuts**:
   - `/` or `S` - Focus search

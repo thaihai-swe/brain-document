@@ -1,0 +1,10 @@
+overrides/**/*.html
+overrides/**/*.njk
+README.md
+AGENTS.md
+DESIGN.md
+IMPLEMENTATION.md
+QUICKSTART.md
+DEPLOYMENT.md
+node_modules/
+public/

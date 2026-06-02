@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title | default("My Digital Brain") }}</title>
+  
+  <!-- CSS Design Tokens -->
+  <link rel="stylesheet" href="/overrides/assets/stylesheets/design-tokens.css">
+  <link rel="stylesheet" href="/overrides/assets/stylesheets/extra.css">
+</head>
+<body data-theme="default">
+
+  <header class="site-header">
+    <div class="logo"><strong>My Digital Brain</strong></div>
+    
+    <!-- Pagefind Search UI will mount here -->
+    <div id="search" class="search-ui"></div>
+    
+    <button id="theme-toggle" class="theme-toggle">Toggle Dark Mode</button>
+  </header>
+
+  <div class="site-layout">
+    <!-- Left Navigation (15%) -->
+    <nav class="site-nav">
+      <h3>Navigation</h3>
+      <!-- Using Eleventy Navigation for structure -->
+      {{ collections.all | eleventyNavigation | eleventyNavigationToHtml({
+          listClass: "nav-list",
+          listItemClass: "nav-item",
+          activeListItemClass: "nav-item-active",
+          activeKey: eleventyNavigation.key
+      }) | safe }}
+    </nav>
+    
+    <!-- Main Content (75%) -->
+    <main class="site-content" data-pagefind-body>
+      <article class="md-typeset">
+        {{ content | safe }}
+      </article>
+      
+      <hr>
+
+      <!-- Backlinks injected by Eleventy collection -->
+      {% if collections.backlinks[page.url] and collections.backlinks[page.url].length > 0 %}
+      <section class="backlinks">
+        <h3>Backlinks</h3>
+        <ul>
+        {% for link in collections.backlinks[page.url] %}
+          <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+        {% endfor %}
+        </ul>
+      </section>
+      {% endif %}
+
+      <!-- Graph View -->
+      {% include "graph-view.njk" ignore missing %}
+    </main>
+
+    <!-- Right TOC (10%) -->
+    <aside class="site-toc" id="toc-container">
+      <h3>Table of Contents</h3>
+      <!-- JavaScript will populate this based on h2/h3 tags -->
+    </aside>
+  </div>
+
+  <!-- Pagefind Script (Added during build) -->
+  <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  <script src="/pagefind/pagefind-ui.js"></script>
+  <script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+      new PagefindUI({ element: "#search", showSubResults: true });
+    });
+  </script>
+
+  <!-- Client-side TOC Generator & Scroll Spy -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const tocContainer = document.getElementById('toc-container');
+      const headings = document.querySelectorAll('.site-content article h2, .site-content article h3');
+      const tocLinks = [];
+      
+      if (headings.length > 0) {
+        const ul = document.createElement('ul');
+        ul.style.listStyle = 'none';
+        ul.style.paddingLeft = '0';
+        
+        headings.forEach(h => {
+          const li = document.createElement('li');
+          const a = document.createElement('a');
+          
+          if (!h.id) {
+            h.id = h.innerText.toLowerCase().replace(/\s+/g, '-').replace(/[^\w-]/g, '');
+          }
+          
+          a.href = '#' + h.id;
+          a.innerText = h.innerText;
+          
+          if (h.tagName.toLowerCase() === 'h3') {
+            li.style.paddingLeft = '1rem';
+          }
+          
+          li.style.marginBottom = '0.2rem';
+          li.appendChild(a);
+          ul.appendChild(li);
+          tocLinks.push({ id: h.id, link: a });
+        });
+        
+        tocContainer.appendChild(ul);
+
+        // Scroll Spy Intersection Observer
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              // Remove active from all
+              tocLinks.forEach(item => item.link.classList.remove('active'));
+              // Find corresponding link and make active
+              const activeItem = tocLinks.find(item => item.id === entry.target.id);
+              if (activeItem) {
+                activeItem.link.classList.add('active');
+              }
+            }
+          });
+        }, { rootMargin: "0px 0px -80% 0px", threshold: 0.1 }); // Trigger when heading passes top 20%
+        
+        headings.forEach(h => observer.observe(h));
+      }
+    });
+  </script>
+
+  <!-- Theme Toggle -->
+  <script>
+    const themeToggle = document.getElementById('theme-toggle');
+    
+    // Check local storage for theme
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      document.body.setAttribute('data-theme', savedTheme);
+    }
+    
+    themeToggle.addEventListener('click', () => {
+      const currentTheme = document.body.getAttribute('data-theme');
+      const newTheme = currentTheme === 'default' ? 'slate' : 'default';
+      
+      document.body.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+    });
+  </script>
+
+  <!-- Legacy Scripts (if still needed) -->
+  <script src="/overrides/assets/javascripts/backlinks.js"></script>
+  <!-- <script type="module" src="/overrides/assets/javascripts/graph-view.js"></script> -->
+</body>
+</html>

@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Digital Brain</title>
+  
+  <!-- CSS Design Tokens -->
+  <link rel="stylesheet" href="/overrides/assets/stylesheets/design-tokens.css">
+  <link rel="stylesheet" href="/overrides/assets/stylesheets/extra.css">
+</head>
+<body data-theme="default">
+
+  <header class="site-header">
+    <div class="logo"><strong>My Digital Brain</strong></div>
+    
+    <!-- Pagefind Search UI will mount here -->
+    <div id="search" class="search-ui"></div>
+    
+    <button id="theme-toggle" class="theme-toggle">Toggle Dark Mode</button>
+  </header>
+
+  <div class="site-layout">
+    <!-- Left Navigation (15%) -->
+    <nav class="site-nav">
+      <h3>Navigation</h3>
+      <!-- Using Eleventy Navigation for structure -->
+      
+    </nav>
+    
+    <!-- Main Content (75%) -->
+    <main class="site-content" data-pagefind-body>
+      <article class="md-typeset">
+        <h1 id="mkdocs-vs-hugo-comparison" tabindex="-1"><a class="header-anchor" href="#mkdocs-vs-hugo-comparison">MkDocs vs Hugo Comparison</a></h1>
+<h2 id="overview" tabindex="-1"><a class="header-anchor" href="#overview">Overview</a></h2>
+<p>Both MkDocs and Hugo are popular static site generators, but they serve different purposes and have different strengths.</p>
+<h2 id="quick-comparison-table" tabindex="-1"><a class="header-anchor" href="#quick-comparison-table">Quick Comparison Table</a></h2>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>MkDocs</th>
+<th>Hugo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Language</strong></td>
+<td>Python</td>
+<td>Go</td>
+</tr>
+<tr>
+<td><strong>Speed</strong></td>
+<td>Moderate (slower on large sites)</td>
+<td>Very fast (even with 1000+ pages)</td>
+</tr>
+<tr>
+<td><strong>Primary Use Case</strong></td>
+<td>Documentation sites</td>
+<td>Blogs, portfolios, general websites</td>
+</tr>
+<tr>
+<td><strong>Learning Curve</strong></td>
+<td>Easy</td>
+<td>Moderate</td>
+</tr>
+<tr>
+<td><strong>Configuration</strong></td>
+<td>Simple YAML</td>
+<td>More complex (TOML/YAML/JSON)</td>
+</tr>
+<tr>
+<td><strong>Themes</strong></td>
+<td>Fewer, documentation-focused</td>
+<td>Many, diverse purposes</td>
+</tr>
+<tr>
+<td><strong>Build Time (1000 pages)</strong></td>
+<td>~30-60 seconds</td>
+<td>~1-2 seconds</td>
+</tr>
+<tr>
+<td><strong>Setup Complexity</strong></td>
+<td>Very simple</td>
+<td>Moderate</td>
+</tr>
+<tr>
+<td><strong>Content Organization</strong></td>
+<td>Flat structure, simple nav</td>
+<td>Hierarchical, sections, taxonomies</td>
+</tr>
+</tbody>
+</table>
+<h2 id="detailed-comparison" tabindex="-1"><a class="header-anchor" href="#detailed-comparison">Detailed Comparison</a></h2>
+<h3 id="1.-speed-%26-performance" tabindex="-1"><a class="header-anchor" href="#1.-speed-%26-performance">1. Speed &amp; Performance</a></h3>
+<p><strong>Hugo:</strong></p>
+<ul>
+<li>⚡ Extremely fast build times (written in Go)</li>
+<li>Can build 1000+ pages in seconds</li>
+<li>No runtime dependencies</li>
+<li>Single binary executable</li>
+</ul>
+<p><strong>MkDocs:</strong></p>
+<ul>
+<li>Slower build times (Python-based)</li>
+<li>Noticeable on sites with 500+ pages</li>
+<li>Requires Python runtime</li>
+<li>Good enough for small-to-medium documentation sites</li>
+</ul>
+<p><strong>Winner:</strong> Hugo (by far)</p>
+<h3 id="2.-ease-of-use" tabindex="-1"><a class="header-anchor" href="#2.-ease-of-use">2. Ease of Use</a></h3>
+<p><strong>MkDocs:</strong></p>
+<ul>
+<li>✅ Very simple to get started</li>
+<li>Minimal configuration needed</li>
+<li>Clear documentation structure</li>
+<li><code>mkdocs.yml</code> is straightforward</li>
+<li>Great for beginners</li>
+</ul>
+<p><strong>Hugo:</strong></p>
+<ul>
+<li>More concepts to learn (archetypes, sections, taxonomies)</li>
+<li>More powerful but steeper learning curve</li>
+<li>Configuration can be complex</li>
+<li>Template syntax takes time to master</li>
+</ul>
+<p><strong>Winner:</strong> MkDocs</p>
+<h3 id="3.-documentation-sites" tabindex="-1"><a class="header-anchor" href="#3.-documentation-sites">3. Documentation Sites</a></h3>
+<p><strong>MkDocs:</strong></p>
+<ul>
+<li>✅ Built specifically for documentation</li>
+<li>Material theme is excellent for docs</li>
+<li>Built-in search optimized for docs</li>
+<li>Navigation designed for technical content</li>
+<li>Markdown extensions for code, admonitions, etc.</li>
+</ul>
+<p><strong>Hugo:</strong></p>
+<ul>
+<li>Can build documentation sites</li>
+<li>Requires more configuration</li>
+<li>Themes not always documentation-focused</li>
+<li>More flexibility but more work</li>
+</ul>
+<p><strong>Winner:</strong> MkDocs</p>
+<h3 id="4.-flexibility-%26-features" tabindex="-1"><a class="header-anchor" href="#4.-flexibility-%26-features">4. Flexibility &amp; Features</a></h3>
+<p><strong>Hugo:</strong></p>
+<ul>
+<li>✅ Highly flexible and powerful</li>
+<li>Content types and taxonomies</li>
+<li>Multilingual support built-in</li>
+<li>Custom output formats</li>
+<li>Advanced templating</li>
+<li>Image processing</li>
+<li>RSS, sitemaps, etc. built-in</li>
+</ul>
+<p><strong>MkDocs:</strong></p>
+<ul>
+<li>Focused on documentation</li>
+<li>Less flexible for other use cases</li>
+<li>Plugin system for extensions</li>
+<li>Limited content types</li>
+</ul>
+<p><strong>Winner:</strong> Hugo</p>
+<h3 id="5.-themes-%26-customization" tabindex="-1"><a class="header-anchor" href="#5.-themes-%26-customization">5. Themes &amp; Customization</a></h3>
+<p><strong>Hugo:</strong></p>
+<ul>
+<li>✅ Hundreds of themes available</li>
+<li>Themes for blogs, portfolios, landing pages, docs</li>
+<li>Highly customizable</li>
+<li>Active theme ecosystem</li>
+</ul>
+<p><strong>MkDocs:</strong></p>
+<ul>
+<li>Fewer themes (mostly documentation-focused)</li>
+<li>Material theme is excellent but limited options</li>
+<li>Easier to customize within constraints</li>
+<li>Less variety</li>
+</ul>
+<p><strong>Winner:</strong> Hugo</p>
+<h3 id="6.-search-functionality" tabindex="-1"><a class="header-anchor" href="#6.-search-functionality">6. Search Functionality</a></h3>
+<p><strong>MkDocs:</strong></p>
+<ul>
+<li>✅ Built-in client-side search</li>
+<li>Fast and works offline</li>
+<li>Optimized for documentation</li>
+<li>Material theme has excellent search</li>
+</ul>
+<p><strong>Hugo:</strong></p>
+<ul>
+<li>No built-in search</li>
+<li>Requires third-party solutions (Algolia, Lunr.js)</li>
+<li>More setup required</li>
+</ul>
+<p><strong>Winner:</strong> MkDocs</p>
+<h3 id="7.-deployment" tabindex="-1"><a class="header-anchor" href="#7.-deployment">7. Deployment</a></h3>
+<p><strong>MkDocs:</strong></p>
+<ul>
+<li>Simple <code>mkdocs build</code> command</li>
+<li>Easy GitHub Pages deployment</li>
+<li><code>mkdocs gh-deploy</code> command available</li>
+</ul>
+<p><strong>Hugo:</strong></p>
+<ul>
+<li>Simple <code>hugo</code> command</li>
+<li>Very fast builds</li>
+<li>Easy to deploy anywhere</li>
+<li>Popular on Netlify, Vercel</li>
+</ul>
+<p><strong>Winner:</strong> Tie (both are easy)</p>
+<h3 id="8.-community-%26-ecosystem" tabindex="-1"><a class="header-anchor" href="#8.-community-%26-ecosystem">8. Community &amp; Ecosystem</a></h3>
+<p><strong>Hugo:</strong></p>
+<ul>
+<li>✅ Larger community</li>
+<li>More themes and templates</li>
+<li>Active development</li>
+<li>More tutorials and resources</li>
+</ul>
+<p><strong>MkDocs:</strong></p>
+<ul>
+<li>Smaller but focused community</li>
+<li>Strong documentation focus</li>
+<li>Material theme has excellent support</li>
+<li>Good plugin ecosystem</li>
+</ul>
+<p><strong>Winner:</strong> Hugo</p>
+<h2 id="use-case-recommendations" tabindex="-1"><a class="header-anchor" href="#use-case-recommendations">Use Case Recommendations</a></h2>
+<h3 id="choose-mkdocs-if%3A" tabindex="-1"><a class="header-anchor" href="#choose-mkdocs-if%3A">Choose MkDocs if:</a></h3>
+<ul>
+<li>✅ Building a <strong>documentation site</strong> (your use case!)</li>
+<li>✅ Want <strong>simplicity</strong> and quick setup</li>
+<li>✅ Need <strong>built-in search</strong> without extra setup</li>
+<li>✅ Prefer <strong>Python</strong> ecosystem</li>
+<li>✅ Site has &lt; 500 pages</li>
+<li>✅ Want the <strong>Material theme</strong> (excellent for docs)</li>
+<li>✅ Team is familiar with Python</li>
+</ul>
+<h3 id="choose-hugo-if%3A" tabindex="-1"><a class="header-anchor" href="#choose-hugo-if%3A">Choose Hugo if:</a></h3>
+<ul>
+<li>Building a <strong>blog</strong> or <strong>portfolio</strong></li>
+<li>Need <strong>very fast</strong> build times (1000+ pages)</li>
+<li>Want <strong>maximum flexibility</strong></li>
+<li>Building a <strong>multilingual</strong> site</li>
+<li>Need <strong>advanced content organization</strong> (taxonomies, sections)</li>
+<li>Prefer <strong>Go</strong> ecosystem</li>
+<li>Want more <strong>theme variety</strong></li>
+<li>Need <strong>image processing</strong> built-in</li>
+</ul>
+<h2 id="for-your-%22digital-brain%22-project" tabindex="-1"><a class="header-anchor" href="#for-your-%22digital-brain%22-project">For Your &quot;Digital Brain&quot; Project</a></h2>
+<p><strong>MkDocs is the better choice because:</strong></p>
+<ol>
+<li>✅ <strong>Purpose-built for documentation</strong> - exactly what you need</li>
+<li>✅ <strong>Simpler to use</strong> - just create folders and markdown files</li>
+<li>✅ <strong>Better navigation</strong> for knowledge bases</li>
+<li>✅ <strong>Built-in search</strong> works perfectly for finding notes</li>
+<li>✅ <strong>Material theme</strong> provides excellent reading experience</li>
+<li>✅ <strong>Faster to set up</strong> - you're already running!</li>
+<li>✅ <strong>Automatic navigation</strong> with awesome-pages plugin</li>
+</ol>
+<p><strong>Hugo would be overkill</strong> for a personal documentation site and would require more configuration without providing significant benefits for your use case.</p>
+<h2 id="performance-comparison-example" tabindex="-1"><a class="header-anchor" href="#performance-comparison-example">Performance Comparison Example</a></h2>
+<p><strong>Building a 100-page documentation site:</strong></p>
+<pre><code class="language-bash"># MkDocs
+$ time mkdocs build
+real    0m3.5s
+
+# Hugo
+$ time hugo
+real    0m0.2s
+</code></pre>
+<p>Hugo is ~17x faster, but 3.5 seconds is still perfectly acceptable for a personal documentation site.</p>
+<h2 id="conclusion" tabindex="-1"><a class="header-anchor" href="#conclusion">Conclusion</a></h2>
+<p>For your <strong>digital brain documentation project</strong>, <strong>MkDocs is the right choice</strong>. It's simpler, purpose-built for documentation, and provides everything you need without unnecessary complexity.</p>
+<p>Hugo is excellent for blogs, marketing sites, and large-scale projects where build speed matters, but it's more than you need for a personal knowledge base.</p>
+<hr>
+<p><strong>Bottom line:</strong> You made the right choice with MkDocs! 🎯</p>
+
+      </article>
+      
+      <hr>
+
+      <!-- Backlinks injected by Eleventy collection -->
+      
+
+      <!-- Graph View -->
+      <div id="graph-view-container" style="width: 100%; height: 400px; border: 1px solid var(--border-color, #eaeaea); border-radius: 8px; margin-top: 2rem; overflow: hidden; background: var(--header-bg, #fff);">
+  <svg id="graph-svg" width="100%" height="100%"></svg>
+</div>
+
+<!-- Load D3.js -->
+<script src="https://d3js.org/d3.v7.min.css"></script>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const svg = d3.select("#graph-svg");
+    const container = document.getElementById('graph-view-container');
+    const width = container.clientWidth;
+    const height = container.clientHeight;
+
+    // Fetch the graph data generated by Eleventy
+    fetch('/graph.json')
+      .then(response => response.json())
+      .then(data => {
+        const simulation = d3.forceSimulation(data.nodes)
+            .force("link", d3.forceLink(data.links).id(d => d.id).distance(100))
+            .force("charge", d3.forceManyBody().strength(-300))
+            .force("center", d3.forceCenter(width / 2, height / 2));
+
+        const link = svg.append("g")
+            .attr("stroke", "#999")
+            .attr("stroke-opacity", 0.6)
+          .selectAll("line")
+          .data(data.links)
+          .join("line")
+            .attr("stroke-width", d => Math.sqrt(d.value || 1));
+
+        const node = svg.append("g")
+            .attr("stroke", "#fff")
+            .attr("stroke-width", 1.5)
+          .selectAll("circle")
+          .data(data.nodes)
+          .join("circle")
+            .attr("r", 5)
+            .attr("fill", "var(--accent-color, #635BFF)")
+            .call(drag(simulation));
+            
+        node.on("click", (event, d) => {
+          if (d.url) {
+            window.location.href = d.url;
+          }
+        });
+
+        const label = svg.append("g")
+          .selectAll("text")
+          .data(data.nodes)
+          .join("text")
+            .attr("dy", -10)
+            .attr("dx", 8)
+            .attr("fill", "var(--text-color, #333)")
+            .text(d => d.title || d.id)
+            .style("font-size", "10px");
+
+        simulation.on("tick", () => {
+          link
+              .attr("x1", d => d.source.x)
+              .attr("y1", d => d.source.y)
+              .attr("x2", d => d.target.x)
+              .attr("y2", d => d.target.y);
+
+          node
+              .attr("cx", d => d.x)
+              .attr("cy", d => d.y);
+              
+          label
+              .attr("x", d => d.x)
+              .attr("y", d => d.y);
+        });
+      });
+
+      function drag(simulation) {
+        function dragstarted(event) {
+          if (!event.active) simulation.alphaTarget(0.3).restart();
+          event.subject.fx = event.subject.x;
+          event.subject.fy = event.subject.y;
+        }
+        
+        function dragged(event) {
+          event.subject.fx = event.x;
+          event.subject.fy = event.y;
+        }
+        
+        function dragended(event) {
+          if (!event.active) simulation.alphaTarget(0);
+          event.subject.fx = null;
+          event.subject.fy = null;
+        }
+        
+        return d3.drag()
+            .on("start", dragstarted)
+            .on("drag", dragged)
+            .on("end", dragended);
+      }
+  });
+</script>
+
+    </main>
+
+    <!-- Right TOC (10%) -->
+    <aside class="site-toc" id="toc-container">
+      <h3>Table of Contents</h3>
+      <!-- JavaScript will populate this based on h2/h3 tags -->
+    </aside>
+  </div>
+
+  <!-- Pagefind Script (Added during build) -->
+  <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  <script src="/pagefind/pagefind-ui.js"></script>
+  <script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+      new PagefindUI({ element: "#search", showSubResults: true });
+    });
+  </script>
+
+  <!-- Client-side TOC Generator -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const tocContainer = document.getElementById('toc-container');
+      const headings = document.querySelectorAll('.site-content article h2, .site-content article h3');
+      
+      if (headings.length > 0) {
+        const ul = document.createElement('ul');
+        ul.style.listStyle = 'none';
+        ul.style.paddingLeft = '0';
+        
+        headings.forEach(h => {
+          const li = document.createElement('li');
+          const a = document.createElement('a');
+          
+          if (!h.id) {
+            h.id = h.innerText.toLowerCase().replace(/\s+/g, '-').replace(/[^\w-]/g, '');
+          }
+          
+          a.href = '#' + h.id;
+          a.innerText = h.innerText;
+          a.style.textDecoration = 'none';
+          a.style.color = 'inherit';
+          
+          if (h.tagName.toLowerCase() === 'h3') {
+            li.style.paddingLeft = '1rem';
+          }
+          
+          li.style.marginBottom = '0.5rem';
+          li.appendChild(a);
+          ul.appendChild(li);
+        });
+        
+        tocContainer.appendChild(ul);
+      }
+    });
+  </script>
+
+  <!-- Theme Toggle -->
+  <script>
+    const themeToggle = document.getElementById('theme-toggle');
+    
+    // Check local storage for theme
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      document.body.setAttribute('data-theme', savedTheme);
+    }
+    
+    themeToggle.addEventListener('click', () => {
+      const currentTheme = document.body.getAttribute('data-theme');
+      const newTheme = currentTheme === 'default' ? 'slate' : 'default';
+      
+      document.body.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+    });
+  </script>
+
+  <!-- Legacy Scripts (if still needed) -->
+  <script src="/overrides/assets/javascripts/backlinks.js"></script>
+  <!-- <script type="module" src="/overrides/assets/javascripts/graph-view.js"></script> -->
+</body>
+</html>

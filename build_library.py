@@ -2,12 +2,12 @@
 """Build docs/library.md — a browseable tree of HTML/PDF docs.
 
 Scans docs/ for .html and .pdf files and writes a single markdown page
-that MkDocs renders at /library/ and includes in the sidebar nav.
-Markdown files are intentionally excluded because MkDocs already exposes
+that Eleventy renders at /library/ and includes in the sidebar nav.
+Markdown files are intentionally excluded because Eleventy already exposes
 them in the sidebar.
 
 Run manually:    python3 build_library.py
-On push to GitHub: handled by .github/workflows/deploy.yml (before mkdocs build)
+On push to GitHub: handled by .github/workflows/deploy.yml (before eleventy build)
 """
 
 from __future__ import annotations

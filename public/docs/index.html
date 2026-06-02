@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Digital Brain</title>
+  
+  <!-- CSS Design Tokens -->
+  <link rel="stylesheet" href="/overrides/assets/stylesheets/design-tokens.css">
+  <link rel="stylesheet" href="/overrides/assets/stylesheets/extra.css">
+</head>
+<body data-theme="default">
+
+  <header class="site-header">
+    <div class="logo"><strong>My Digital Brain</strong></div>
+    
+    <!-- Pagefind Search UI will mount here -->
+    <div id="search" class="search-ui"></div>
+    
+    <button id="theme-toggle" class="theme-toggle">Toggle Dark Mode</button>
+  </header>
+
+  <div class="site-layout">
+    <!-- Left Navigation (15%) -->
+    <nav class="site-nav">
+      <h3>Navigation</h3>
+      <!-- Using Eleventy Navigation for structure -->
+      
+    </nav>
+    
+    <!-- Main Content (75%) -->
+    <main class="site-content" data-pagefind-body>
+      <article class="md-typeset">
+        <h1 id="my-digital-brain" tabindex="-1"><a class="header-anchor" href="#my-digital-brain">My Digital Brain</a></h1>
+<p>Welcome to my personal knowledge base - a living collection of everything I learn, explore, and discover.</p>
+<h2 id="%F0%9F%94%8D-how-to-navigate" tabindex="-1"><a class="header-anchor" href="#%F0%9F%94%8D-how-to-navigate">🔍 How to Navigate</a></h2>
+<p>This site is designed to scale with your knowledge:</p>
+<ul>
+<li><strong>Use the search bar</strong> (top right) - The fastest way to find anything</li>
+<li><strong>Browse the sidebar</strong> (left) - Organized by topic with expandable sections</li>
+<li><strong>Open the <a href="library.md">Library</a></strong> - Browse standalone HTML decks and PDFs</li>
+<li><strong>Click the breadcrumb path</strong> - Shows where you are in the hierarchy</li>
+<li><strong>Use keyboard shortcuts</strong>:
+<ul>
+<li><code>/</code> or <code>S</code> - Focus search</li>
+<li><code>F</code> or <code>S</code> - Open search</li>
+<li><code>P</code> - Previous page</li>
+<li><code>N</code> - Next page</li>
+</ul>
+</li>
+</ul>
+<h2 id="%F0%9F%93%9A-content-organization" tabindex="-1"><a class="header-anchor" href="#%F0%9F%93%9A-content-organization">📚 Content Organization</a></h2>
+<p>Content is organized into logical categories that expand as you explore:</p>
+<h3 id="technical-knowledge" tabindex="-1"><a class="header-anchor" href="#technical-knowledge">Technical Knowledge</a></h3>
+<ul>
+<li><strong>Architecture</strong> - System design, patterns, and best practices</li>
+<li><strong>Databases</strong> - SQL, NoSQL, caching, and data modeling</li>
+<li><strong>DevOps</strong> - Containers, orchestration, CI/CD, and infrastructure</li>
+<li><strong>Web Development</strong> - Frontend frameworks, TypeScript, and modern web</li>
+<li><strong>Programming</strong> - Languages, paradigms, and core concepts</li>
+</ul>
+<h3 id="learning-%26-growth" tabindex="-1"><a class="header-anchor" href="#learning-%26-growth">Learning &amp; Growth</a></h3>
+<ul>
+<li><strong>Learning</strong> - Study techniques, resources, and methodologies</li>
+<li><strong>Notes</strong> - Daily notes, quick references, and observations</li>
+<li><strong>Tools</strong> - Development tools, utilities, and workflows</li>
+</ul>
+<h3 id="reference" tabindex="-1"><a class="header-anchor" href="#reference">Reference</a></h3>
+<ul>
+<li><strong>Compare</strong> - Technology comparisons and decision guides</li>
+</ul>
+<h2 id="%F0%9F%92%A1-tips-for-large-knowledge-bases" tabindex="-1"><a class="header-anchor" href="#%F0%9F%92%A1-tips-for-large-knowledge-bases">💡 Tips for Large Knowledge Bases</a></h2>
+<p>!!! tip &quot;Scaling Your Brain&quot;<br>
+As your knowledge base grows to hundreds or thousands of documents:</p>
+<p>- <strong>Tag consistently</strong> - Use consistent naming conventions<br>
+- <strong>Link liberally</strong> - Cross-reference related topics<br>
+- <strong>Search first</strong> - The search is your best friend<br>
+- <strong>Review regularly</strong> - Revisit and update old notes<br>
+- <strong>Keep it simple</strong> - Don't over-organize, let search do the work</p>
+<h2 id="%F0%9F%9A%80-quick-start" tabindex="-1"><a class="header-anchor" href="#%F0%9F%9A%80-quick-start">🚀 Quick Start</a></h2>
+<p><strong>Adding new content is simple:</strong></p>
+<pre><code class="language-bash"># Create a new topic
+mkdir -p docs/new-topic
+echo &quot;# My New Topic&quot; &gt; docs/new-topic/index.md
+
+# Navigation updates automatically!
+</code></pre>
+<p><strong>No configuration needed</strong> - just create folders and markdown files. The navigation builds itself.</p>
+<h2 id="%F0%9F%93%8A-current-stats" tabindex="-1"><a class="header-anchor" href="#%F0%9F%93%8A-current-stats">📊 Current Stats</a></h2>
+<p>As of 2026-05-30:</p>
+<ul>
+<li>8 main categories</li>
+<li>16 documents</li>
+<li>Growing daily</li>
+</ul>
+<hr>
+<p><em>Start exploring using the sidebar or search above. Your knowledge journey begins here.</em></p>
+
+      </article>
+      
+      <hr>
+
+      <!-- Backlinks injected by Eleventy collection -->
+      
+
+      <!-- Graph View -->
+      <div id="graph-view-container" style="width: 100%; height: 400px; border: 1px solid var(--border-color, #eaeaea); border-radius: 8px; margin-top: 2rem; overflow: hidden; background: var(--header-bg, #fff);">
+  <svg id="graph-svg" width="100%" height="100%"></svg>
+</div>
+
+<!-- Load D3.js -->
+<script src="https://d3js.org/d3.v7.min.css"></script>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const svg = d3.select("#graph-svg");
+    const container = document.getElementById('graph-view-container');
+    const width = container.clientWidth;
+    const height = container.clientHeight;
+
+    // Fetch the graph data generated by Eleventy
+    fetch('/graph.json')
+      .then(response => response.json())
+      .then(data => {
+        const simulation = d3.forceSimulation(data.nodes)
+            .force("link", d3.forceLink(data.links).id(d => d.id).distance(100))
+            .force("charge", d3.forceManyBody().strength(-300))
+            .force("center", d3.forceCenter(width / 2, height / 2));
+
+        const link = svg.append("g")
+            .attr("stroke", "#999")
+            .attr("stroke-opacity", 0.6)
+          .selectAll("line")
+          .data(data.links)
+          .join("line")
+            .attr("stroke-width", d => Math.sqrt(d.value || 1));
+
+        const node = svg.append("g")
+            .attr("stroke", "#fff")
+            .attr("stroke-width", 1.5)
+          .selectAll("circle")
+          .data(data.nodes)
+          .join("circle")
+            .attr("r", 5)
+            .attr("fill", "var(--accent-color, #635BFF)")
+            .call(drag(simulation));
+            
+        node.on("click", (event, d) => {
+          if (d.url) {
+            window.location.href = d.url;
+          }
+        });
+
+        const label = svg.append("g")
+          .selectAll("text")
+          .data(data.nodes)
+          .join("text")
+            .attr("dy", -10)
+            .attr("dx", 8)
+            .attr("fill", "var(--text-color, #333)")
+            .text(d => d.title || d.id)
+            .style("font-size", "10px");
+
+        simulation.on("tick", () => {
+          link
+              .attr("x1", d => d.source.x)
+              .attr("y1", d => d.source.y)
+              .attr("x2", d => d.target.x)
+              .attr("y2", d => d.target.y);
+
+          node
+              .attr("cx", d => d.x)
+              .attr("cy", d => d.y);
+              
+          label
+              .attr("x", d => d.x)
+              .attr("y", d => d.y);
+        });
+      });
+
+      function drag(simulation) {
+        function dragstarted(event) {
+          if (!event.active) simulation.alphaTarget(0.3).restart();
+          event.subject.fx = event.subject.x;
+          event.subject.fy = event.subject.y;
+        }
+        
+        function dragged(event) {
+          event.subject.fx = event.x;
+          event.subject.fy = event.y;
+        }
+        
+        function dragended(event) {
+          if (!event.active) simulation.alphaTarget(0);
+          event.subject.fx = null;
+          event.subject.fy = null;
+        }
+        
+        return d3.drag()
+            .on("start", dragstarted)
+            .on("drag", dragged)
+            .on("end", dragended);
+      }
+  });
+</script>
+
+    </main>
+
+    <!-- Right TOC (10%) -->
+    <aside class="site-toc" id="toc-container">
+      <h3>Table of Contents</h3>
+      <!-- JavaScript will populate this based on h2/h3 tags -->
+    </aside>
+  </div>
+
+  <!-- Pagefind Script (Added during build) -->
+  <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  <script src="/pagefind/pagefind-ui.js"></script>
+  <script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+      new PagefindUI({ element: "#search", showSubResults: true });
+    });
+  </script>
+
+  <!-- Client-side TOC Generator & Scroll Spy -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const tocContainer = document.getElementById('toc-container');
+      const headings = document.querySelectorAll('.site-content article h2, .site-content article h3');
+      const tocLinks = [];
+      
+      if (headings.length > 0) {
+        const ul = document.createElement('ul');
+        ul.style.listStyle = 'none';
+        ul.style.paddingLeft = '0';
+        
+        headings.forEach(h => {
+          const li = document.createElement('li');
+          const a = document.createElement('a');
+          
+          if (!h.id) {
+            h.id = h.innerText.toLowerCase().replace(/\s+/g, '-').replace(/[^\w-]/g, '');
+          }
+          
+          a.href = '#' + h.id;
+          a.innerText = h.innerText;
+          
+          if (h.tagName.toLowerCase() === 'h3') {
+            li.style.paddingLeft = '1rem';
+          }
+          
+          li.style.marginBottom = '0.2rem';
+          li.appendChild(a);
+          ul.appendChild(li);
+          tocLinks.push({ id: h.id, link: a });
+        });
+        
+        tocContainer.appendChild(ul);
+
+        // Scroll Spy Intersection Observer
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              // Remove active from all
+              tocLinks.forEach(item => item.link.classList.remove('active'));
+              // Find corresponding link and make active
+              const activeItem = tocLinks.find(item => item.id === entry.target.id);
+              if (activeItem) {
+                activeItem.link.classList.add('active');
+              }
+            }
+          });
+        }, { rootMargin: "0px 0px -80% 0px", threshold: 0.1 }); // Trigger when heading passes top 20%
+        
+        headings.forEach(h => observer.observe(h));
+      }
+    });
+  </script>
+
+  <!-- Theme Toggle -->
+  <script>
+    const themeToggle = document.getElementById('theme-toggle');
+    
+    // Check local storage for theme
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      document.body.setAttribute('data-theme', savedTheme);
+    }
+    
+    themeToggle.addEventListener('click', () => {
+      const currentTheme = document.body.getAttribute('data-theme');
+      const newTheme = currentTheme === 'default' ? 'slate' : 'default';
+      
+      document.body.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+    });
+  </script>
+
+  <!-- Legacy Scripts (if still needed) -->
+  <script src="/overrides/assets/javascripts/backlinks.js"></script>
+  <!-- <script type="module" src="/overrides/assets/javascripts/graph-view.js"></script> -->
+</body>
+</html>

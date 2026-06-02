@@ -71,6 +71,52 @@ module.exports = function(eleventyConfig) {
     return collectionApi.getFilteredByGlob("blog/posts/**/*.md").reverse();
   });
 
+  // Grouped Navigation for Sidebar
+  eleventyConfig.addCollection("groupedNav", function(collectionApi) {
+    const docs = collectionApi.getFilteredByGlob("docs/**/*.md");
+    const grouped = {};
+    docs.forEach(page => {
+      if (page.url === '/docs/') return; // Skip the index page itself
+      
+      const parts = page.url.split('/').filter(p => p);
+      // parts is e.g. ['docs', 'programming', 'javascript']
+      let category = "General";
+      if (parts.length >= 3) {
+        // Format category name: "web-development" -> "Web Development"
+        category = parts[1].replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+      }
+      
+      if (!grouped[category]) {
+        grouped[category] = [];
+      }
+      
+      let title = page.data.title;
+      if (!title) {
+        title = page.fileSlug.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+      }
+      
+      grouped[category].push({
+        title: title,
+        url: page.url
+      });
+    });
+    
+    // Sort pages within categories alphabetically
+    for (const key in grouped) {
+      grouped[key].sort((a, b) => a.title.localeCompare(b.title));
+    }
+    
+    // Sort the categories themselves alphabetically, keeping "General" at the top
+    const sortedGrouped = {};
+    const keys = Object.keys(grouped).sort();
+    if (grouped["General"]) sortedGrouped["General"] = grouped["General"];
+    keys.forEach(k => {
+      if (k !== "General") sortedGrouped[k] = grouped[k];
+    });
+    
+    return sortedGrouped;
+  });
+
   // Backlinks Data Structure
   eleventyConfig.addCollection("backlinks", function(collectionApi) {
     const allPages = collectionApi.getAll();

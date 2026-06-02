@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="/overrides/assets/stylesheets/design-tokens.css">
   <link rel="stylesheet" href="/overrides/assets/stylesheets/extra.css">
 </head>
-<body data-theme="default">
+<body data-md-color-scheme="default">
 
   <header class="site-header">
     <div class="logo"><strong>My Digital Brain</strong></div>
@@ -24,13 +24,21 @@
     <!-- Left Navigation (15%) -->
     <nav class="site-nav">
       <h3>Navigation</h3>
-      <!-- Using Eleventy Navigation for structure -->
-      {{ collections.all | eleventyNavigation | eleventyNavigationToHtml({
-          listClass: "nav-list",
-          listItemClass: "nav-item",
-          activeListItemClass: "nav-item-active",
-          activeKey: eleventyNavigation.key
-      }) | safe }}
+      
+      {% for category, pages in collections.groupedNav %}
+        <div class="nav-category">
+          <div style="font-size: 0.7rem; text-transform: uppercase; color: var(--bd-text-muted); margin-top: 1.5rem; margin-bottom: 0.5rem; letter-spacing: 0.10em; font-family: var(--bd-font-mono);">
+            {{ category }}
+          </div>
+          <ul class="nav-list" style="margin-left: 0; padding-left: 0;">
+            {% for item in pages %}
+              <li class="nav-item {% if page.url == item.url %}nav-item-active{% endif %}" style="list-style: none;">
+                <a href="{{ item.url }}">{{ item.title }}</a>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      {% endfor %}
     </nav>
     
     <!-- Main Content (75%) -->
@@ -69,7 +77,13 @@
   <script src="/pagefind/pagefind-ui.js"></script>
   <script>
     window.addEventListener('DOMContentLoaded', (event) => {
-      new PagefindUI({ element: "#search", showSubResults: true });
+      try {
+        if (typeof PagefindUI !== 'undefined') {
+          new PagefindUI({ element: "#search", showSubResults: true });
+        }
+      } catch(e) {
+        console.log("Pagefind UI not loaded locally");
+      }
     });
   </script>
 
@@ -135,14 +149,14 @@
     // Check local storage for theme
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme) {
-      document.body.setAttribute('data-theme', savedTheme);
+      document.body.setAttribute('data-md-color-scheme', savedTheme);
     }
     
     themeToggle.addEventListener('click', () => {
-      const currentTheme = document.body.getAttribute('data-theme');
+      const currentTheme = document.body.getAttribute('data-md-color-scheme') || 'default';
       const newTheme = currentTheme === 'default' ? 'slate' : 'default';
       
-      document.body.setAttribute('data-theme', newTheme);
+      document.body.setAttribute('data-md-color-scheme', newTheme);
       localStorage.setItem('theme', newTheme);
     });
   </script>

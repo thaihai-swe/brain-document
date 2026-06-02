@@ -1,11 +1,11 @@
 Dont commit and push code
 
-# AI Agent Instructions for "My Digital Brain"
+# AI Agent Instructions for "Digital Brain"
 
 This file (`AGENTS.md`) serves as the core instruction manual for any AI assistant (Gemini, Claude, Cursor, etc.) interacting with this codebase.
 
 ## 🎯 Project Overview
-- **Name:** My Digital Brain
+- **Name:** Digital Brain
 - **Purpose:** A personal knowledge base and documentation site.
 - **Framework:** [Eleventy](https://www.11ty.dev/).
 - **Core Principle:** Simple markdown authoring with advanced interconnected features (like Obsidian).
@@ -13,7 +13,7 @@ This file (`AGENTS.md`) serves as the core instruction manual for any AI assista
 ## 🛠 Tech Stack & Structure
 - **Content:** Written in standard Markdown (`.md`) inside the `docs/` and `blog/` directories.
 - **Styling:** Vanilla CSS overrides located in `overrides/assets/stylesheets/design-tokens.css` and `overrides/assets/stylesheets/extra.css`. We do NOT use Tailwind or other CSS frameworks.
-- **JavaScript:** Custom scripts (graph view, backlinks) are in `overrides/assets/javascripts/`.
+- **JavaScript:** Custom scripts (backlinks) are in `overrides/assets/javascripts/`.
 - **Config:** `.eleventy.js` holds all plugin configurations and collections.
 
 ## 🎨 Design & Aesthetics
@@ -27,10 +27,9 @@ Always refer to the custom design system when making UI/CSS changes:
 
 ## 🧠 Key Features to Maintain
 1. **Wiki Links:** We use Obsidian-style `[[page-name]]` or `[[page-name|Display Text]]` links. Do not replace these with standard markdown links unless requested.
-2. **Graph View:** An interactive D3.js knowledge graph (`overrides/partials/graph-view.html`). Do not break the HTML structure it relies on.
-3. **Backlinks:** Bidirectional links automatically rendered at the bottom of pages.
-4. **Blog:** Posts are located in `blog/posts/YYYY/MM/`. They require specific YAML frontmatter (date, authors, categories).
-5. **Mermaid Diagrams:** Heavily used for architecture and flow charts. Use ````mermaid` syntax.
+2. **Backlinks:** Bidirectional links automatically rendered at the bottom of pages.
+3. **Blog:** Posts are located in `blog/posts/YYYY/MM/`. They require specific YAML frontmatter (date, authors, categories).
+4. **Mermaid Diagrams:** Heavily used for architecture and flow charts. Use ` ```mermaid ` syntax.
 
 ## ⚙️ Workflows & Commands
 - **Local Dev:** Run `npm start` to preview changes at `http://localhost:8080`.

@@ -9,6 +9,7 @@
   "devDependencies": {
     "@11ty/eleventy": "^3.1.5",
     "@11ty/eleventy-navigation": "^1.0.5",
+    "html-minifier-terser": "^7.2.0",
     "markdown-it": "^14.2.0",
     "markdown-it-anchor": "^9.2.0",
     "markdown-it-attrs": "^5.0.0",
@@ -21,7 +22,7 @@
     "start": "npm-run-all --parallel dev:*",
     "dev:eleventy": "eleventy --serve",
     "dev:pagefind": "echo 'Pagefind will run on build'",
-    "build": "eleventy && pagefind --site public",
+    "build": "NODE_ENV=production eleventy && pagefind --site public",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

@@ -1,5 +1,5 @@
 ---
-title: "Welcome to My Digital Brain Blog"
+title: "Welcome to Digital Brain Blog"
 date: 2026-05-30
 authors:
   - admin
@@ -8,9 +8,9 @@ categories:
   - Features
 ---
 
-# Welcome to My Digital Brain Blog
+# Welcome to Digital Brain Blog
 
-Welcome to the blog section of my digital brain! This is where I'll share longer-form thoughts, tutorials, and updates.
+Welcome to the blog section of Digital Brain! This is where I'll share longer-form thoughts, tutorials, and updates.
 
 <!-- more -->
 

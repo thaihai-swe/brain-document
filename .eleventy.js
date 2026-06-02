@@ -203,7 +203,7 @@ module.exports = function(eleventyConfig) {
       output: "public" // Eleventy output to public, matching our pagefind target
     },
     templateFormats: ["md", "njk"],
-    markdownTemplateEngine: "njk",
+    pathPrefix: "/brain-document",
     htmlTemplateEngine: "njk",
     dataTemplateEngine: "njk"
   };

@@ -77,7 +77,7 @@ module.exports = function(eleventyConfig) {
   });
 
   eleventyConfig.addCollection("posts", function(collectionApi) {
-    return collectionApi.getFilteredByGlob("blog/posts/**/*.md").reverse();
+    return collectionApi.getFilteredByGlob("docs/blog/posts/**/*.md").reverse();
   });
 
   // Grouped Navigation for Sidebar (Recursive Folder Structure)
@@ -130,6 +130,8 @@ module.exports = function(eleventyConfig) {
         if (node.name === "root") {
            if (a.name === "Library") return -1;
            if (b.name === "Library") return 1;
+           if (a.name === "Blog") return -1;
+           if (b.name === "Blog") return 1;
         }
         // Folders first, then files
         if (a.type !== b.type) {

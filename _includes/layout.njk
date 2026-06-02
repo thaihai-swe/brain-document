@@ -5,8 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ title | default("My Digital Brain") }}</title>
   
-  <!-- CSS Design Tokens -->
-  <link rel="stylesheet" href="{{ '/overrides/assets/stylesheets/design-tokens.css' | url }}">
+  <!-- Single unified stylesheet -->
   <link rel="stylesheet" href="{{ '/overrides/assets/stylesheets/extra.css' | url }}">
 </head>
 <body data-md-color-scheme="default">
@@ -29,20 +28,20 @@
         {% if node.type == "folder" and node.name != "root" %}
           <details class="nav-folder">
             <summary class="nav-summary">{{ node.name }}</summary>
-            <ul class="nav-list">
+            <div class="nav-list">
               {% for child in node.childrenArray %}
                 {{ renderNode(child, currentUrl) }}
               {% endfor %}
-            </ul>
+            </div>
           </details>
         {% elif node.type == "folder" and node.name == "root" %}
           {% for child in node.childrenArray %}
             {{ renderNode(child, currentUrl) }}
           {% endfor %}
         {% elif node.type == "file" %}
-          <li class="nav-item {% if currentUrl == node.url %}nav-item-active{% endif %}" style="list-style: none;">
+          <div class="nav-item {% if currentUrl == node.url %}nav-item-active{% endif %}">
             <a href="{{ node.url | url }}">{{ node.title }}</a>
-          </li>
+          </div>
         {% endif %}
       {% endmacro %}
       
@@ -176,5 +175,34 @@
   <!-- Legacy Scripts (if still needed) -->
   <script src="{{ '/overrides/assets/javascripts/backlinks.js' | url }}"></script>
   <!-- <script type="module" src="{{ '/overrides/assets/javascripts/graph-view.js' | url }}"></script> -->
+
+  <!-- Mermaid.js for Diagrams -->
+  <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+    
+    document.addEventListener("DOMContentLoaded", () => {
+      const isDarkMode = document.body.getAttribute('data-md-color-scheme') === 'slate';
+      mermaid.initialize({ 
+        startOnLoad: false, 
+        theme: isDarkMode ? 'dark' : 'default',
+        securityLevel: 'loose'
+      });
+      
+      // Convert markdown-it <code class="language-mermaid"> to <div class="mermaid">
+      const mermaidBlocks = document.querySelectorAll('code.language-mermaid');
+      mermaidBlocks.forEach(el => {
+        const pre = el.parentElement;
+        if (pre && pre.tagName === 'PRE') {
+          const div = document.createElement('div');
+          div.className = 'mermaid';
+          div.textContent = el.textContent;
+          pre.parentElement.replaceChild(div, pre);
+        }
+      });
+      
+      // Run mermaid on all elements with class 'mermaid'
+      mermaid.run({ querySelector: '.mermaid' }).catch(err => console.error(err));
+    });
+  </script>
 </body>
 </html>

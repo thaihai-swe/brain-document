@@ -28,21 +28,59 @@ That's it! Wait 2-3 minutes, then visit: https://thaihai-swe.github.io/brain-doc
 
 ## 📝 How to Add Content
 
-**It's automatic! Just create files:**
+Your Digital Brain automatically organizes different types of content based on where you place the files.
 
+### 1. Regular Posts (Knowledge Base)
+For evergreen notes, guides, and documentation.
+
+1. Create a markdown file anywhere under the `docs/` folder.
+   ```bash
+   # Example:
+   touch docs/my-category/my-topic.md
+   ```
+2. Add a title (`# My Topic`) or YAML frontmatter (`title: My Topic`).
+3. The navigation sidebar will automatically update to include your new folder and file!
+
+### 2. Blog Posts
+For time-bound updates, release notes, or journals.
+
+1. Create a markdown file inside `docs/blog/posts/YYYY/MM/`.
+   ```bash
+   # Example:
+   touch docs/blog/posts/2026/06/my-update.md
+   ```
+2. You **must** include YAML frontmatter with at least the `title` and `date`:
+   ```markdown
+   ---
+   title: "My Update"
+   date: 2026-06-02
+   ---
+   Your introduction here...
+   
+   <!-- more -->
+   
+   The rest of your post...
+   ```
+3. Use the `<!-- more -->` separator to split the summary from the full post. The post will automatically appear on the `/docs/blog/` index page.
+
+### 3. Library (HTML/PDF Documents)
+For standalone HTML slide decks, PDF books, or external documents.
+
+1. Drop any `.html`, `.htm`, or `.pdf` file anywhere inside the `docs/` folder (or its subfolders).
+2. Run the library builder script to scan for new files and update the `docs/library.md` index:
+   ```bash
+   python3 build_library.py
+   ```
+3. The file will now be searchable and accessible from the **Library** section in the sidebar.
+
+### Publishing Your Changes
+Once you've added your content:
 ```bash
-# Create a new document
-echo "# My New Topic" > docs/new-folder/new-file.md
-
-# Commit and push
 git add .
-git commit -m "Add new topic"
+git commit -m "Add new content"
 git push origin main
-
-# Wait 2-3 minutes - it's live!
 ```
-
-**No configuration needed** - navigation updates automatically!
+**No other configuration is needed!** Wait 2-3 minutes for the GitHub Action to deploy your changes.
 
 ## 🎨 Features
 

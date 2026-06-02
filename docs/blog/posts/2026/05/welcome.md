@@ -1,4 +1,5 @@
 ---
+title: "Welcome to My Digital Brain Blog"
 date: 2026-05-30
 authors:
   - admin

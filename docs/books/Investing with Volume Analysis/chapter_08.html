@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Book Slides</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="common.css">
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11.10.0/dist/mermaid.min.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div class="progress-bar" id="progressBar"></div>
+
+<div class="chapter-menu">
+  <button class="menu-btn" id="chapterMenuBtn" onclick="toggleChapterMenu()" aria-haspopup="true" aria-expanded="false">Chapters &#9662;</button>
+  <div class="chapter-menu-panel" id="chapterMenuPanel" role="menu"></div>
+</div>
+
+<div class="slide-container" id="slideContainer">
+
+  <section class="slide" aria-hidden="false">
+<h1>Investing with Volume Analysis</h1>
+<p class="subtitle">Buff Pelz Dormeier · FT Press 2011 — Chương 8: <em>Volume in Patterns</em></p>
+<div class="meta-grid">
+<div class="meta-pill">
+<div class="label">Trang gốc</div>
+<div class="value">112-131</div>
+</div>
+<div class="meta-pill">
+<div class="label">Thời gian đọc gốc</div>
+<div class="value">~20 phút</div>
+</div>
+<div class="meta-pill">
+<div class="label">Độ sâu</div>
+<div class="value">Deep</div>
+</div>
+<div class="meta-pill">
+<div class="label">Đối tượng</div>
+<div class="value">Business / Pro</div>
+</div>
+</div>
+  </section>
+
+  <section class="slide chapter-divider">
+<div class="chapter-number">Chapter 8</div>
+<h2>Volume in Patterns</h2>
+<p class="chapter-meta">~20 phút · Chuyên sâu · Kênh giá · Tam giác · Cup & Handle · Breakout</p>
+  </section>
+
+  <section class="slide">
+    <h2>Tổng Quan Trực Quan</h2>
+<div class="content-card">
+  <div class="mermaid">
+  graph TD
+      A[Mô Hình Giá] --> B(Plots - Xu hướng chính)
+      A --> C(Complex Plots - Tổ hợp phức)
+      A --> D(Subplots - Xu hướng phụ)
+      
+      B --> B1(Kênh Giá - Channels)
+      B --> B2(Tam Giác - Triangles)
+      B --> B3(Đáy/Đỉnh Bo Tròn)
+      
+      C --> C1(Cốc Tay Cầm - Cup & Handle)
+      C --> C2(Vai Đầu Vai - Head & Shoulders)
+      
+      D --> D1(Cờ / Cờ Đuôi Nheo - Flags / Pennants)
+      
+      style A fill:#EFEEFF,stroke:#635BFF
+      style B fill:#DCFCE7,stroke:#059669
+      style C fill:#FEE2E2,stroke:#DC2626
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+<div class="takeaway-hero">
+  <div class="kicker">CH 8 · THE BIG IDEA</div>
+  <div class="headline">"Mô hình giá là kịch bản của thị trường. Khối lượng quyết định mức độ tin cậy của kịch bản đó."</div>
+  <div class="subline">Giá vẽ ra diễn biến tâm lý (narrative), nhưng khối lượng phát hiện dấu chân của Dòng tiền thông minh (Smart Money) tại các điểm phá vỡ then chốt.</div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <h2>Tóm Tắt Nội Dung</h2>
+<div class="callout" style="margin-bottom: 2rem;">
+  <div class="callout-icon">🎯</div>
+  <div class="callout-content">
+    <strong>Trong một câu:</strong> Chương 8 hệ thống hóa các mô hình giá kinh điển của thị trường tài chính và tích hợp quy tắc Khối lượng (Volume) vào từng giai đoạn hình thành, phá vỡ của chúng.
+  </div>
+</div>
+
+<div class="bullet-grid">
+  <div class="bullet-card">
+    <div class="icon">🔍</div>
+    <div class="heading">Bối cảnh (The Setup)</div>
+    <div class="body">Đám đông luôn phản ứng giống nhau trước những sự kiện tương tự, tạo ra các mô hình giá có thể nhận diện. Mô hình giống như cấu trúc kịch bản của một bộ phim.</div>
+  </div>
+  
+  <div class="bullet-card">
+    <div class="icon">🧠</div>
+    <div class="heading">Lập luận (The Argument)</div>
+    <div class="body">Chỉ nhìn vào Giá (Price) là chưa đủ. Giá có thể bị làm giả bằng một lệnh mua nhỏ lúc đóng cửa, nhưng Khối lượng là bằng chứng thực tế không thể chối cãi.</div>
+  </div>
+
+  <div class="bullet-card">
+    <div class="icon">📉</div>
+    <div class="heading">Quy luật (The Evidence)</div>
+    <div class="body">Trong quá trình tích lũy (consolidation), khối lượng phải thu hẹp. Tại điểm phá vỡ (Breakout/Breakdown), khối lượng phải mở rộng đột biến (150% - 200%).</div>
+  </div>
+
+  <div class="bullet-card">
+    <div class="icon">✨</div>
+    <div class="heading">Hệ quả (The Implications)</div>
+    <div class="body">Biết cách kết hợp mô hình giá và khối lượng giúp loại bỏ các điểm phá vỡ giả (False Breakout) và đo lường được "sức bật" của cổ phiếu.</div>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <h2>Ma Trận Khối Lượng</h2>
+<div class="content-card">
+  <h3>Ma Trận Khối Lượng & Mô Hình Giá</h3>
+  <table class="signal-matrix">
+    <thead>
+      <tr>
+        <th>Mô hình</th>
+        <th>Tích Lũy (Consolidation)</th>
+        <th>Xác nhận Đột Phá (Breakout)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th class="row-header">Channels & Triangles</th>
+        <td>Khối lượng thu hẹp dần (co thắt). Nén lò xo.</td>
+        <td class="bullish">Khối lượng > 150% - 200% mức TB</td>
+      </tr>
+      <tr>
+        <th class="row-header">Broadening (Loa kèn)</th>
+        <td class="warning">Biến động giá rộng ra, khối lượng TĂNG DẦN. (Cảm xúc mất kiểm soát)</td>
+        <td class="bearish">Breakdown xuống: Volume đạt đỉnh (Climax)</td>
+      </tr>
+      <tr>
+        <th class="row-header">Đáy Bo Tròn (Rounding Bottom)</th>
+        <td class="opportunity">Khối lượng rớt thê thảm, cạn cung (Dead volume)</td>
+        <td class="bullish">Khối lượng dần nở ra theo hình chiếc bát ngửa</td>
+      </tr>
+      <tr>
+        <th class="row-header">Vai Đầu Vai (Đỉnh)</th>
+        <td>Volume Vai Trái > Đầu > Vai Phải (Lực cầu hụt hơi)</td>
+        <td class="bearish">Cắt viền cổ (Neckline): Volume bùng nổ</td>
+      </tr>
+      <tr>
+        <th class="row-header">Flags & Pennants (Subplots)</th>
+        <td>Khối lượng sụt giảm nhanh (Dưới 115% TB)</td>
+        <td class="bullish">Bật tiếp diễn xu hướng: Volume nổ mạnh</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <h2>Mô Hình Tư Duy</h2>
+<div class="content-card">
+  <h3 style="color: var(--accent-cyan); margin-bottom: 1rem;">Mô Hình Tư Duy: Cốt Truyện Của Thị Trường</h3>
+  
+  <div class="split-layout">
+    <div class="split-left" style="border-top: 4px solid var(--accent-purple);">
+      <h4 style="color: var(--accent-purple);">Cấu trúc Phim Hành Động</h4>
+      <ul>
+        <li><strong>Vai Chính (Anh hùng):</strong> Xu hướng Tăng (Uptrend). Kẻ phản diện: Xu hướng Giảm.</li>
+        <li><strong>Biến cố (Kháng cự):</strong> Anh hùng bị dồn nén, gặp bế tắc. (Vùng tích lũy / Coils).</li>
+        <li><strong>Cao trào (Climax / Breakout):</strong> Trận chiến quyết định sinh tử. Kẻ yếu bị tiêu diệt.</li>
+      </ul>
+    </div>
+    
+    <div class="split-right" style="border-top: 4px solid var(--accent-emerald);">
+      <h4 style="color: var(--accent-emerald);">Bản Dịch Sang Chart</h4>
+      <ul>
+        <li><strong>Thanh Khoản = Độ Căng Thẳng:</strong> Lúc dồn nén hồi hộp thì im ắng (Volume thấp). Lúc trận chiến nổ ra thì súng đạn rầm trời (Volume khủng).</li>
+        <li><strong>Xác thực (Verification):</strong> Nếu giá bứt phá (Breakout) nhưng Volume lèo tèo -> Giống phim bom tấn nhưng rạp không có ai xem -> Cú bứt phá giả (False Breakout).</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <h2>Deep Dive</h2>
+<div class="deep-section">
+  <h3 style="margin-bottom: 1.5rem; text-align: center;">Deep Dive: Tam Giác Đối Xứng (The Coil)</h3>
+  <div class="bullet-grid">
+    <div class="bullet-card">
+      <div class="heading" style="color: var(--accent-amber);">Bản chất tâm lý</div>
+      <p>Sinh ra từ sự bất đồng quan điểm tột độ. Một bên cực kỳ Bullish, một bên cực kỳ Bearish. Giá giật lên giật xuống dữ dội ban đầu, sau đó biên độ thu hẹp dần.</p>
+    </div>
+    <div class="bullet-card">
+      <div class="heading" style="color: var(--accent-cyan);">Dấu vết Khối lượng</div>
+      <p>Khi biên độ hẹp lại, hai bên dần tiến đến điểm cân bằng (Apex). Cơ hội chênh lệch giá biến mất -> Khối lượng tụt dốc thê thảm, thị trường nín thở.</p>
+    </div>
+    <div class="bullet-card">
+      <div class="heading" style="color: var(--accent-emerald);">Nén Lò Xo</div>
+      <p>Thị trường ghét sự cân bằng (vì không sinh ra tiền). Lò xo nén càng lâu, điểm bung (Breakout) càng uy lực. Bắt buộc khối lượng Breakout > 200% để xác nhận bên chiến thắng.</p>
+    </div>
+    <div class="bullet-card">
+      <div class="heading" style="color: var(--accent-purple);">Bằng chứng Định lượng</div>
+      <p>Theo Thomas Bulkowski: Upside breakout outpeform +25% so với S&P 500 (chỉ 15% thất bại). Downside breakdown outpeform short +16% so với S&P 500.</p>
+    </div>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <h2>Phân Tích Đa Tầng</h2>
+<div class="content-card">
+  <h3 style="color: var(--accent-cyan);">Phân Tích Đa Tầng (Reading Layers)</h3>
+  
+  <div class="timeline" style="margin-top: 1.5rem;">
+    <div class="timeline-item">
+      <div class="timeline-marker" style="background: var(--accent-cyan)">1</div>
+      <div class="timeline-body">
+        <strong>Tầng Mặt (Surface):</strong> Nhận diện hình dáng đồ thị (tam giác, cốc tay cầm, vai đầu vai) để đoán hướng đi tiếp theo.
+      </div>
+    </div>
+    
+    <div class="timeline-item">
+      <div class="timeline-marker" style="background: var(--accent-amber)">2</div>
+      <div class="timeline-body">
+        <strong>Tầng Cấu trúc (Structural):</strong> Mô hình giá là sự chênh lệch (disparity) hoặc đồng thuận (parity) giữa Cung và Cầu, được xác minh bằng độ lớn của Khối lượng.
+      </div>
+    </div>
+    
+    <div class="timeline-item">
+      <div class="timeline-marker" style="background: var(--accent-emerald)">3</div>
+      <div class="timeline-body">
+        <strong>Tầng Bối cảnh (Contextual):</strong> Những cú false breakout là bẫy thanh khoản (liquidity traps) do Smart Money giăng ra. Khối lượng thấp tại điểm nổ là tín hiệu lùa gà.
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-marker" style="background: var(--accent-purple)">4</div>
+      <div class="timeline-body">
+        <strong>Tầng Phê bình (Critical):</strong> Việc phân loại mô hình có tính chủ quan cao (ảo giác Pareidolia). Không có Volume, Chart Patterns chỉ là bói toán (Astrology for men).
+      </div>
+    </div>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <h2>Đánh Giá Bằng Chứng</h2>
+<div class="content-card">
+  <h3>Đánh Giá Bằng Chứng (Evidence Evaluation)</h3>
+  <br>
+  
+  <div style="margin-bottom: 1.5rem; padding: 1rem; background: var(--surface-light); border-radius: var(--radius-lg); border-left: 4px solid var(--accent-amber);">
+    <strong>Luận điểm:</strong> Các mô hình giá kinh điển có xác suất thành công cao hơn việc tung đồng xu nếu đi kèm đột biến khối lượng.
+  </div>
+  
+  <div class="bullet-grid">
+    <div class="bullet-card">
+      <div class="heading">Loại bằng chứng</div>
+      <div class="body">☒ Dữ liệu lịch sử (Thomas Bulkowski's Encyclopedia of Chart Patterns).<br>Đánh giá: ⭐⭐⭐⭐☆ (4/5)</div>
+    </div>
+    <div class="bullet-card">
+      <div class="heading">Điểm mạnh</div>
+      <div class="body">Tác giả dùng số liệu thống kê. Ví dụ: Symmetrical triangle breakout outpeform +25%, failure rate chỉ 15%. Nó biến lý thuyết thành xác suất cụ thể.</div>
+    </div>
+    <div class="bullet-card">
+      <div class="heading">Điểm yếu</div>
+      <div class="body">Thống kê của Bulkowski dựa trên thị trường thập niên cũ (trước kỷ nguyên Algo/HFT). Môi trường hiện đại có tỷ lệ nhiễu cao hơn rất nhiều.</div>
+    </div>
+    <div class="bullet-card">
+      <div class="heading">Kiểm chứng bối cảnh</div>
+      <div class="body">Các thuật toán săn Stop-loss hiện nay thường đánh gãy các vùng hỗ trợ/kháng cự của mô hình một chút rồi mới giật ngược lại (Stop run). Rất dễ dính bẫy nếu áp dụng máy móc.</div>
+    </div>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <h2>Góc Nhìn Đối Lập</h2>
+<div class="split-layout">
+  <div class="split-left" style="border-top: 4px solid var(--accent-emerald);">
+    <h3 style="color: var(--accent-emerald);">Góc nhìn của Chương (Pattern Recognition)</h3>
+    <p>Biểu đồ có tính lặp lại vì tâm lý con người lặp lại. Nhận diện sớm mô hình + xác nhận khối lượng giúp ta có lợi thế thống kê (Edge) để dự phóng tương lai.</p>
+  </div>
+  
+  <div class="split-right" style="border-top: 4px solid var(--accent-amber);">
+    <h3 style="color: var(--accent-amber);">Góc nhìn đối lập (Random Walk Hypothesis)</h3>
+    <p><strong>Lập luận:</strong> Giá chạy hoàn toàn ngẫu nhiên (Malkiel - A Random Walk Down Wall Street). Việc nhìn ra mô hình giống như việc nhìn thấy hình con vật trên những đám mây. Kẻ chiến thắng chỉ do may mắn ngắn hạn.</p>
+  </div>
+</div>
+
+<div class="content-card" style="margin-top: 1rem; border: 1px solid var(--accent-purple);">
+  <h4 style="color: var(--accent-purple);">Tổng hợp (Synthesis)</h4>
+  <p>Có thể Giá trong biên độ hẹp là nhiễu ngẫu nhiên. Nhưng khi Cung - Cầu mất cân bằng cực đại (biểu hiện qua Volume bùng nổ tại các nút thắt), thị trường không còn ngẫu nhiên nữa. Khối lượng là mỏ neo kéo Chart Patterns thoát khỏi sự ảo giác và trở thành công cụ thực thụ.</p>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <h2>Lộ Trình Thực Hành</h2>
+<div class="content-card">
+  <h3>Lộ Trình Thực Hành (Implementation Guide)</h3>
+  <br>
+  
+  <div class="phase-progress">
+    <div class="phase active">Tuần 1: Nhận Diện</div>
+    <div class="phase">Tuần 2: Xác Nhận</div>
+    <div class="phase">Tháng 2: Đo Lường</div>
+    <div class="phase">Tháng 6: Tinh Thông</div>
+  </div>
+  
+  <div style="margin-top: 2rem;">
+    <p><strong>Tuần 1 - Nhận Diện:</strong></p>
+    <ul style="margin-bottom: 1.5rem; margin-left: 1.5rem; list-style-type: disc;">
+      <li>Mở biểu đồ của các cổ phiếu top đầu. Tìm kiếm các mô hình nén (Channels, Triangles, Cup & Handle).</li>
+      <li>Tập che phần Giá đi, chỉ nhìn vào Khối lượng xem bạn có đoán được đoạn nào đang nén, đoạn nào đang Breakout không?</li>
+    </ul>
+
+    <p><strong>Cạm bẫy cần tránh (Pitfalls):</strong></p>
+    <ul style="margin-left: 1.5rem; list-style-type: disc;">
+      <li>Chưa Breakout đã vội mua: Mua khi giá còn ở trong vùng Apex của tam giác là đoán mò, rủi ro cực cao.</li>
+      <li>Giao dịch các mô hình trên khung thời gian phút (M5, M15). Đa phần chỉ là nhiễu.</li>
+    </ul>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <h2>Cây Phụ Thuộc Khái Niệm</h2>
+<div class="content-card">
+  <h3 style="text-align: center; color: var(--accent-cyan); margin-bottom: 1.5rem;">Cây Phụ Thuộc Khái Niệm (Dependency Graph)</h3>
+  
+  <div style="text-align: center; font-family: monospace; line-height: 1.8; color: var(--text-secondary); margin-bottom: 2rem;">
+    [Ch 7: Khối lượng xác nhận Xu Hướng (Khái quát)]<br>
+    ↓<br>
+    <strong style="color: var(--text);">[Ch 8: Khối lượng trong Mô Hình Giá (Cụ thể)]</strong><br>
+    ↓<br>
+    [Ch 9: Đo Lường Thông Tin Khối Lượng (Định Lượng)]
+  </div>
+  
+  <div class="bullet-grid">
+    <div class="bullet-card">
+      <div class="heading">Nền Tảng Tiền Đề</div>
+      <div class="body">Mô hình giá bản chất là hệ quả của việc Strong Hands đang phân phối hay tích lũy ở Chương 7.</div>
+    </div>
+    
+    <div class="bullet-card">
+      <div class="heading">Khóa mở tiếp theo</div>
+      <div class="body">Mắt người không thể lúc nào cũng ước lượng tỷ lệ phần trăm khối lượng chính xác. Chương 9 sẽ dùng Toán học để lượng hóa các mức độ này.</div>
+    </div>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <h2>Key Takeaways</h2>
+<div class="takeaway-list">
+  <div class="takeaway-item content-card">
+    <div class="takeaway-badge">1</div>
+    <div style="flex: 1;">
+      <div class="takeaway-text" style="font-size: 1.25rem; color: var(--accent); margin-bottom: 0.5rem;">
+        <strong>Sự phá vỡ kháng cự (Breakout) phải có Khối lượng đi kèm</strong>
+      </div>
+      <div class="takeaway-detail">
+        <div style="margin-bottom: 0.5rem;"><strong>Tại sao quan trọng:</strong> Nếu Giá vượt đỉnh nhưng Khối lượng yếu ớt, đó là một cú thọc sườn giả (False Breakout).</div>
+        <div style="margin-bottom: 0.5rem;"><strong>Bằng chứng:</strong> Breakout xịn cần Volume cao hơn ít nhất 150-200% so với trung bình để xác nhận lực cầu áp đảo. <span class="page-ref">Ch 8, p. 95</span></div>
+        <div><strong>Ứng dụng:</strong> Không bao giờ FOMO mua đuổi ở các nhịp vượt đỉnh nếu thanh khoản khô cạn.</div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="takeaway-item content-card">
+    <div class="takeaway-badge" style="background: var(--accent-amber);">2</div>
+    <div style="flex: 1;">
+      <div class="takeaway-text" style="font-size: 1.25rem; color: var(--accent-amber); margin-bottom: 0.5rem;">
+        <strong>Càng nén lâu, bung càng mạnh</strong>
+      </div>
+      <div class="takeaway-detail">
+        <div style="margin-bottom: 0.5rem;"><strong>Tại sao quan trọng:</strong> Các vùng giá đi ngang với biên độ thu hẹp dần giống như chiếc lò xo bị nén. Sự dồn nén diễn ra càng lâu, động năng được giải phóng càng khủng khiếp.</div>
+        <div style="margin-bottom: 0.5rem;"><strong>Bằng chứng:</strong> Trong quá trình nén, Volume tụt thảm hại do cơ hội lợi nhuận lướt sóng biến mất. <span class="page-ref">Ch 8, p. 96</span></div>
+        <div><strong>Ứng dụng:</strong> Đưa các cổ phiếu đang tạo mô hình nén chặt vào Watchlist. Tuyệt đối không đoán hướng trước khi bứt phá.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <h2>Câu Hỏi Suy Ngẫm</h2>
+<div class="content-card">
+  <h3>Câu Hỏi Suy Ngẫm</h3>
+  <br>
+  <ul>
+    <li>Bạn đã bao giờ vẽ ra một mô hình tam giác hoàn hảo, mua vào trước khi nó bứt phá, và rồi bị quét stop-loss chưa? Sự thiếu kiên nhẫn chờ xác nhận từ khối lượng đã làm hại bạn như thế nào?</li>
+    <li>Có phải bạn thường xuyên nhầm lẫn một sự tạm nghỉ (Pullback của Cờ đuôi nheo) với một xu hướng đảo chiều (Đỉnh) vì không để ý đến việc Khối lượng đang cạn dần?</li>
+  </ul>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <h2>Hành Động Đề Xuất</h2>
+<ul class="action-list">
+  <li class="action-item">
+    <div>
+      <div class="action-headline">Chờ Đợi Điểm Xác Nhận Mới Xuống Tiền</div>
+      <div class="action-detail">Quy tắc thép: Nếu thấy mô hình đẹp, hãy đặt cảnh báo giá (Price Alert) ngay tại đường kháng cự. Chỉ mua vào nếu giá chạm mức đó VÀ kèm theo Volume bùng nổ.</div>
+    </div>
+  </li>
+  <li class="action-item">
+    <div>
+      <div class="action-headline">Kiểm tra tính hợp lệ của Điểm phá vỡ quá khứ</div>
+      <div class="action-detail">Mở lại lịch sử giao dịch thua lỗ của bạn. Lọc ra những lệnh mua đuổi Breakout nhưng thất bại. Nhìn xuống cột Volume ngày hôm đó: Có phải chúng rất lẹt đẹt (False Breakout) không?</div>
+    </div>
+  </li>
+</ul>
+
+  </section>
+
+</div>
+
+<div class="nav-controls">
+  <button class="nav-btn" id="prevBtn" onclick="prevSlide()" aria-label="Previous slide">&#8592;</button>
+  <div class="counter" id="counter" aria-live="polite">1 / 1</div>
+  <button class="nav-btn" id="nextBtn" onclick="nextSlide()" aria-label="Next slide">&#8594;</button>
+</div>
+
+<script src="common.js"></script>
+</body>
+</html>

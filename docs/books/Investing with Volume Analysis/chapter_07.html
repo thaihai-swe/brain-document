@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Book Slides</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="common.css">
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11.10.0/dist/mermaid.min.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div class="progress-bar" id="progressBar"></div>
+
+<div class="chapter-menu">
+  <button class="menu-btn" id="chapterMenuBtn" onclick="toggleChapterMenu()" aria-haspopup="true" aria-expanded="false">Chapters &#9662;</button>
+  <div class="chapter-menu-panel" id="chapterMenuPanel" role="menu"></div>
+</div>
+
+<div class="slide-container" id="slideContainer">
+
+  <section class="slide" aria-hidden="false">
+<h1>Investing with Volume Analysis</h1>
+<p class="subtitle">Buff Pelz Dormeier · FT Press 2011 — Chương 7: <em>Volume in Trends</em></p>
+<div class="meta-grid">
+<div class="meta-pill">
+<div class="label">Trang gốc</div>
+<div class="value">93-111</div>
+</div>
+<div class="meta-pill">
+<div class="label">Thời gian đọc gốc</div>
+<div class="value">~18 phút</div>
+</div>
+<div class="meta-pill">
+<div class="label">Độ sâu</div>
+<div class="value">Deep</div>
+</div>
+<div class="meta-pill">
+<div class="label">Đối tượng</div>
+<div class="value">Business / Pro</div>
+</div>
+</div>
+  </section>
+
+  <section class="slide chapter-divider">
+<div class="chapter-number">Chapter 7</div>
+<h2>Volume in Trends</h2>
+<p class="chapter-meta">~18 phút · Chuyên sâu · Smart Money · Nghịch lý Khối lượng · Vùng tích lũy</p>
+  </section>
+
+  <section class="slide">
+    <h2>Tổng Quan Trực Quan (Visual Summary)</h2>
+<div class="content-card">
+  <div class="mermaid">
+  graph TD
+      A[Trend Prices] --> B{Volume Analysis}
+      B --> C[Uptrend]
+      B --> D[Downtrend]
+      C --> |Volume Rising| E[Phase 1: Strong Demand<br>Greed + Energy = Invigorated Greed]
+      C --> |Volume Falling| F[Phase 2: Weak Demand<br>Greed + Entropy = Complacency]
+      D --> |Volume Rising| G[Phase 3: Strong Supply<br>Fear + Energy = Fear]
+      D --> |Volume Falling| H[Phase 4: Weak Supply<br>Fear + Entropy = Apathy]
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+<div class="takeaway-hero">
+  <div class="kicker">CH 7 · THE BIG IDEA</div>
+  <div class="headline">"If a trend increases its trajectory, it needs at least an equivalent increase in volume to maintain it."</div>
+  <div class="subline">Khối lượng là nhiên liệu (fuel) để xác nhận tính bền vững của bất kỳ sự thay đổi giá nào.</div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <h2>Tóm Tắt Nội Dung</h2>
+<div class="callout" style="margin-bottom: 2rem;">
+  <div class="callout-icon">🎯</div>
+  <div class="callout-content">
+    <strong>Trong một câu:</strong> Phân tích xu hướng thông qua khối lượng là việc theo dõi sự tích lũy của lực cầu (accumulation) và sự phân phối của lực cung (distribution) trên 4 giai đoạn cốt lõi của thị trường.
+  </div>
+</div>
+
+<div class="bullet-grid">
+  <div class="bullet-card">
+    <div class="icon">🔍</div>
+    <div class="heading">Bối cảnh (The Setup)</div>
+    <div class="body">Mọi người thường nghĩ họ đang đầu tư vào công ty, nhưng thực chất họ đang tương tác với những nhà đầu tư khác. Xu hướng phản ánh tâm lý của chính đám đông này.</div>
+  </div>
+  
+  <div class="bullet-card">
+    <div class="icon">🧠</div>
+    <div class="heading">Lập luận (The Argument)</div>
+    <div class="body">Xu hướng giống như máy bay. Muốn tăng góc bay (uptrend dốc hơn), phải tăng lực đẩy (volume). Thiếu lực đẩy, máy bay sẽ rơi (stalling).</div>
+  </div>
+
+  <div class="bullet-card">
+    <div class="icon">📉</div>
+    <div class="heading">Quy luật (The Evidence)</div>
+    <div class="body">Tăng giá đi kèm khối lượng lớn củng cố xu hướng. Tăng giá với khối lượng thấp là sự kiệt sức của lực cầu, tiềm ẩn sự đảo chiều.</div>
+  </div>
+
+  <div class="bullet-card">
+    <div class="icon">✨</div>
+    <div class="heading">Hệ quả (The Implications)</div>
+    <div class="body">Hiểu khối lượng giúp ta nương theo "Smart Money" (Strong hands), không bị kẹt lại làm nạn nhân của cảm xúc thị trường (Weak hands).</div>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <h2>Ma Trận 4 Pha Khối Lượng</h2>
+<div class="content-card">
+  <h3>Ma Trận 4 Pha Khối Lượng (Table 7.1)</h3>
+  <table class="signal-matrix">
+    <thead>
+      <tr>
+        <th></th>
+        <th>Khối lượng Tăng (Volume Rising)</th>
+        <th>Khối lượng Giảm (Volume Falling)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th class="row-header">Giá Tăng (Uptrend)</th>
+        <td class="bullish"><span class="signal-label">Phase 1: Strong Demand</span>Tham lam + Năng lượng = Củng cố xu hướng tăng (Bullish Confirmation)</td>
+        <td class="warning"><span class="signal-label">Phase 2: Weak Demand</span>Tham lam + Suy kiệt = Tự mãn (Bearish Contradiction)</td>
+      </tr>
+      <tr>
+        <th class="row-header">Giá Giảm (Downtrend)</th>
+        <td class="bearish"><span class="signal-label">Phase 3: Strong Supply</span>Sợ hãi + Năng lượng = Bán tháo (Bearish Confirmation)</td>
+        <td class="opportunity"><span class="signal-label">Phase 4: Weak Supply</span>Sợ hãi + Suy kiệt = Thờ ơ, tạo đáy tiềm năng (Bullish Contradiction)</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <h2>Mô Hình Tư Duy</h2>
+<div class="content-card">
+  <h3 style="color: var(--accent-cyan); margin-bottom: 1rem;">Mô Hình Tư Duy: Strong Hands vs. Weak Hands</h3>
+  
+  <div class="split-layout">
+    <div class="split-left" style="border-top: 4px solid var(--accent-purple);">
+      <h4 style="color: var(--accent-purple);">Weak Hands (Công chúng)</h4>
+      <ul>
+        <li><strong>Động lực:</strong> Tham lam (mua vì sợ lỡ cơ hội) và Sợ hãi (bán vì sợ mất vốn).</li>
+        <li><strong>Nguồn vốn:</strong> Yếu, dễ bị cảm xúc chi phối vì đây là tiền cần thiết cho cuộc sống.</li>
+        <li><strong>Hành vi:</strong> Chốt lời sớm (bán lãi nhỏ) nhưng gồng lỗ dai dẳng vì cái tôi cao.</li>
+      </ul>
+    </div>
+    
+    <div class="split-right" style="border-top: 4px solid var(--accent-emerald);">
+      <h4 style="color: var(--accent-emerald);">Strong Hands (Tổ chức/Smart Money)</h4>
+      <ul>
+        <li><strong>Động lực:</strong> Tìm kiếm sự tăng trưởng vốn dài hạn, tư duy logic, thông tin tốt.</li>
+        <li><strong>Hành vi mua:</strong> Mua gom âm thầm trong vùng giá tích lũy (consolidation) hoặc khi thị trường suy yếu.</li>
+        <li><strong>Hành vi bán:</strong> Phân phối hàng (bán) lại cho Weak hands ở những lúc thị trường hưng phấn tột độ.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <h2>Deep Dive: Nghịch Lý Khối Lượng</h2>
+<div class="deep-section">
+  <h3 style="margin-bottom: 1.5rem; text-align: center;">Giải Mã Mâu Thuẫn (The Contradiction Code)</h3>
+  <div class="bullet-grid">
+    <div class="bullet-card">
+      <div class="heading" style="color: var(--accent-amber);">Nghịch Lý</div>
+      <p><strong>Luật Nỗ lực vs. Kết quả:</strong> Khối lượng tăng mạnh nhưng giá không đổi = Đảo chiều.</p>
+      <p><strong>Quy tắc Xu hướng:</strong> Khối lượng tăng củng cố sức mạnh của xu hướng = Tiếp tục xu hướng.</p>
+    </div>
+    <div class="bullet-card">
+      <div class="heading" style="color: var(--accent-cyan);">Chìa Khóa: Bối Cảnh</div>
+      <p>Câu trả lời nằm ở <strong>Vị trí của giá trên biểu đồ</strong> và <strong>Ai đang kiểm soát thị trường?</strong></p>
+    </div>
+    <div class="bullet-card">
+      <div class="heading" style="color: var(--accent-emerald);">Tại Vùng Tích Lũy / Kháng Cự</div>
+      <p>Giá đi ngang. Khối lượng TĂNG MẠNH nhưng giá không bứt phá -> <em>Luật Nỗ lực vs Kết quả</em>. Strong hands đang phân phối (churning). <strong>Cẩn thận đảo chiều!</strong></p>
+    </div>
+    <div class="bullet-card">
+      <div class="heading" style="color: var(--accent-purple);">Tại Xu Hướng Bứt Phá (Breakout/Trend)</div>
+      <p>Giá tăng/bứt phá. Khối lượng TĂNG TƯƠNG XỨNG -> <em>Quy tắc Xu hướng</em>. Strong hands đang gom hàng đẩy giá. <strong>Xu hướng bền vững.</strong></p>
+    </div>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <h2>Phân Tích Đa Tầng</h2>
+<div class="content-card">
+  <h3 style="color: var(--accent-cyan);">Phân Tích Đa Tầng (Reading Layers)</h3>
+  
+  <div class="timeline" style="margin-top: 1.5rem;">
+    <div class="timeline-item">
+      <div class="timeline-marker" style="background: var(--accent-cyan)">1</div>
+      <div class="timeline-body">
+        <strong>Tầng Mặt (Surface):</strong> Tăng giá + tăng volume = tốt. Tăng giá + giảm volume = xấu. Giảm giá + tăng volume = xấu. Giảm giá + giảm volume = tốt.
+      </div>
+    </div>
+    
+    <div class="timeline-item">
+      <div class="timeline-marker" style="background: var(--accent-amber)">2</div>
+      <div class="timeline-body">
+        <strong>Tầng Cấu trúc (Structural):</strong> Tác giả đi từ định lý vật lý (năng lượng đẩy) và phân cực tâm lý (Tham lam vs Sợ hãi) để giải thích sự vận động của dòng tiền.
+      </div>
+    </div>
+    
+    <div class="timeline-item">
+      <div class="timeline-marker" style="background: var(--accent-emerald)">3</div>
+      <div class="timeline-body">
+        <strong>Tầng Bối cảnh (Contextual):</strong> Xu hướng thị trường thực chất là cuộc chiến chuyển giao rủi ro từ tay người thao túng (Strong hands) sang những người ngây thơ (Weak hands).
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-marker" style="background: var(--accent-purple)">4</div>
+      <div class="timeline-body">
+        <strong>Tầng Phê bình (Critical):</strong> Việc phân tích sự suy kiệt (dull lack-luster) bằng khối lượng Index hiện đại có thể bị bóp méo do các giao dịch HFT, ETF làm khối lượng trông cao hơn thực tế.
+      </div>
+    </div>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <h2>Đánh Giá Bằng Chứng</h2>
+<div class="content-card">
+  <h3>Đánh Giá Bằng Chứng (Evidence Evaluation)</h3>
+  <br>
+  
+  <div style="margin-bottom: 1.5rem; padding: 1rem; background: var(--surface-light); border-radius: var(--radius-lg); border-left: 4px solid var(--accent-amber);">
+    <strong>Luận điểm cốt lõi:</strong> Thị trường rớt giá mạnh nhưng đi kèm khối lượng thấp là sự cạn kiệt nguồn cung, báo hiệu tạo đáy.
+  </div>
+  
+  <div class="bullet-grid">
+    <div class="bullet-card">
+      <div class="heading">Loại bằng chứng</div>
+      <div class="body">☐ Dữ liệu lịch sử ☒ Logic suy luận tâm lý. <br>Đánh giá độ tin cậy: ⭐⭐⭐☆☆ (3/5)</div>
+    </div>
+    <div class="bullet-card">
+      <div class="heading">Điểm mạnh</div>
+      <div class="body">Cực kỳ logic về mặt tâm lý học. Khi sự hoảng loạn qua đi, những ai sợ hãi đã bán xong. Những người ôm hàng còn lại thà chịu kẹt chứ không bán giá bèo.</div>
+    </div>
+    <div class="bullet-card">
+      <div class="heading">Điểm yếu</div>
+      <div class="body">"Dữ liệu bị bóp méo" (data distortion). Sự sụt giảm volume đôi khi chỉ là nhịp hồi ảo (dead cat bounce) do phe Short tạm ngưng chốt lời, chứ phe Long chưa hề nhập cuộc.</div>
+    </div>
+    <div class="bullet-card">
+      <div class="heading">Kiểm chứng bối cảnh hiện tại</div>
+      <div class="body">Thị trường hiện đại bị chi phối bởi dòng vốn thụ động (ETF) và giao dịch thuật toán (Algo), nên khối lượng đáy đôi khi nổ cực đại (Climax) chứ không suy kiệt dần như lý thuyết cũ.</div>
+    </div>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <h2>Góc Nhìn Đối Lập</h2>
+<div class="split-layout">
+  <div class="split-left" style="border-top: 4px solid var(--accent-emerald);">
+    <h3 style="color: var(--accent-emerald);">Góc nhìn của Chương (Dormeier/Wyckoff)</h3>
+    <p>Khối lượng là chỉ báo độc lập đi trước Giá. Khối lượng là <strong>nguyên nhân</strong> (lực đẩy), Giá là <strong>kết quả</strong>. Không thể xác nhận độ tin cậy của một xu hướng nếu thiếu khối lượng.</p>
+  </div>
+  
+  <div class="split-right" style="border-top: 4px solid var(--accent-amber);">
+    <h3 style="color: var(--accent-amber);">Góc nhìn đối lập (Trend Following thuần túy)</h3>
+    <p><strong>Lập luận:</strong> "Giá là thứ duy nhất trả tiền cho bạn". Các trader như Ed Seykota hay Richard Dennis (Turtles) không quan tâm khối lượng, chỉ cần Giá Breakout là mua. Mọi hành vi thị trường đều đã phản ánh hết vào giá.</p>
+  </div>
+</div>
+
+<div class="content-card" style="margin-top: 1rem; border: 1px solid var(--accent-purple);">
+  <h4 style="color: var(--accent-purple);">Tổng hợp (Synthesis)</h4>
+  <p>Hai quan điểm này hoàn toàn có thể dung hòa: Sử dụng Giá để <em>Kích hoạt giao dịch (Trigger)</em> nhưng dùng Khối lượng để <em>Xác nhận độ tin cậy (Confirmation)</em> nhằm lọc nhiễu, giảm thiểu tỷ lệ bẫy giá (False Breakouts).</p>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <h2>Lộ Trình Thực Hành</h2>
+<div class="content-card">
+  <h3>Lộ Trình Thực Hành (Implementation Guide)</h3>
+  <br>
+  
+  <div class="phase-progress">
+    <div class="phase active">Tuần 1: Hiểu & Định Vị</div>
+    <div class="phase">Tuần 2: Thử Nghiệm</div>
+    <div class="phase">Tháng 2: Tích Hợp</div>
+    <div class="phase">Tháng 6: Tinh Thông</div>
+  </div>
+  
+  <div style="margin-top: 2rem;">
+    <p><strong>Tuần 1 - Hiểu & Định Vị:</strong></p>
+    <ul style="margin-bottom: 1.5rem; margin-left: 1.5rem; list-style-type: disc;">
+      <li>Quay lại xem biểu đồ của 5 cổ phiếu bạn đang nắm giữ. Nhìn vào những phiên tăng giá dốc nhất, khối lượng ở đó là đỉnh hay đang giảm dần?</li>
+      <li>Tự hỏi: Mình đang đóng vai Strong Hand (gom lúc đi ngang rũ bỏ) hay Weak Hand (nhảy vào lúc breakout hưng phấn nhất)?</li>
+    </ul>
+
+    <p><strong>Cạm bẫy cần tránh (Pitfalls):</strong></p>
+    <ul style="margin-left: 1.5rem; list-style-type: disc;">
+      <li>Áp dụng máy móc vào các cổ phiếu thanh khoản quá thấp (illiquid). Ở đó khối lượng dễ dàng bị thao túng, quy luật này mất tác dụng.</li>
+      <li>Quên rằng khung thời gian (Timeframe) là then chốt. Cần áp dụng đúng khung Trend chính yếu (Primary Trend) thay vì chỉ nhìn nến 15 phút.</li>
+    </ul>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <h2>Cây Phụ Thuộc Khái Niệm</h2>
+<div class="content-card">
+  <h3 style="text-align: center; color: var(--accent-cyan); margin-bottom: 1.5rem;">Cây Phụ Thuộc Khái Niệm (Dependency Graph)</h3>
+  
+  <div style="text-align: center; font-family: monospace; line-height: 1.8; color: var(--text-secondary); margin-bottom: 2rem;">
+    [Ch 6: Luật Nỗ Lực vs. Kết Quả]<br>
+    ↓<br>
+    <strong style="color: var(--text);">[Ch 7: Khối lượng xác nhận Xu Hướng (Rule of Trends)]</strong><br>
+    ↓<br>
+    [Ch 8: Khối lượng trong các Mô Hình Giá (Volume in Patterns)]
+  </div>
+  
+  <div class="bullet-grid">
+    <div class="bullet-card">
+      <div class="heading">Nền Tảng Tiền Đề</div>
+      <div class="body">Cần nắm vững khái niệm <strong>Nỗ Lực (Volume)</strong> và <strong>Kết Quả (Price change)</strong> ở Chương 6 trước khi xử lý mâu thuẫn giữa 2 bộ quy tắc ở Chương 7.</div>
+    </div>
+    
+    <div class="bullet-card">
+      <div class="heading">Khóa mở tiếp theo</div>
+      <div class="body">Sự hiểu biết về sự khác biệt hành vi Cung - Cầu và Weak/Strong hands ở Chương 7 là điều kiện bắt buộc để đọc hiểu sự hình thành các mô hình giá (Price Patterns) ở Chương 8.</div>
+    </div>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <h2>Key Takeaways</h2>
+<div class="takeaway-list">
+  <div class="takeaway-item content-card">
+    <div class="takeaway-badge">1</div>
+    <div style="flex: 1;">
+      <div class="takeaway-text" style="font-size: 1.25rem; color: var(--accent); margin-bottom: 0.5rem;">
+        <strong>Sự thay đổi của giá cần được Khối lượng "bảo chứng"</strong>
+      </div>
+      <div class="takeaway-detail">
+        <div style="margin-bottom: 0.5rem;"><strong>Tại sao quan trọng:</strong> Bất cứ một xu hướng dốc lên hay dốc xuống nào nếu thiếu đi sự mở rộng của khối lượng tương xứng đều tiềm ẩn rủi ro gãy đổ (stalling).</div>
+        <div style="margin-bottom: 0.5rem;"><strong>Bằng chứng:</strong> "If a trend increases its trajectory, it needs at least an equivalent increase in volume to maintain the trajectory." <span class="page-ref">Ch 7, p. 77-78</span></div>
+        <div><strong>Ứng dụng:</strong> Không bao giờ mua vào ở một nhịp tăng giá dốc đứng nếu khối lượng đang teo tóp dần. Đó là pha "Weak Demand".</div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="takeaway-item content-card">
+    <div class="takeaway-badge" style="background: var(--accent-amber);">2</div>
+    <div style="flex: 1;">
+      <div class="takeaway-text" style="font-size: 1.25rem; color: var(--accent-amber); margin-bottom: 0.5rem;">
+        <strong>Thị trường rớt giá mạnh trên khối lượng thấp là một cái bẫy gấu (Bear trap)</strong>
+      </div>
+      <div class="takeaway-detail">
+        <div style="margin-bottom: 0.5rem;"><strong>Tại sao quan trọng:</strong> Nhiều nhà đầu tư sợ hãi tột độ khi giá rơi mạnh, nhưng nếu khối lượng (volume) ở mức thấp hoặc đang giảm dần, điều đó chứng tỏ phe Bán đã cạn kiệt.</div>
+        <div style="margin-bottom: 0.5rem;"><strong>Bằng chứng:</strong> Giai đoạn "Weak Supply" thường dẫn đến việc tạo đáy (bottoming), vì người bán đã trở nên thờ ơ, không còn muốn bán ở giá rẻ mạt nữa. <span class="page-ref">Ch 7, p. 83</span></div>
+        <div><strong>Ứng dụng:</strong> Tìm kiếm cơ hội mua vào khi thị trường hoảng loạn nhưng khối lượng cung suy kiệt.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <h2>Câu Hỏi Suy Ngẫm</h2>
+<div class="content-card">
+  <h3>Câu Hỏi Suy Ngẫm</h3>
+  <br>
+  <ul>
+    <li>Bạn thường giao dịch dựa trên hành vi của <strong>Strong hands</strong> hay <strong>Weak hands</strong>? Nếu nhìn lại lịch sử giao dịch, bạn thường mua vì sợ lỡ cơ hội hay mua vì tín hiệu logic?</li>
+    <li>Làm thế nào để phân biệt giữa một pha <em>Churning</em> (giá không đổi, khối lượng lớn ở đỉnh) và một pha <em>Tích lũy thực sự</em> (giá không đổi, khối lượng lớn ở đáy)?</li>
+    <li>Mức độ dốc của xu hướng hiện tại trên danh mục của bạn có được hỗ trợ bởi khối lượng tăng tương xứng không?</li>
+  </ul>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <h2>Hành Động Đề Xuất</h2>
+<ul class="action-list">
+  <li class="action-item">
+    <div>
+      <div class="action-headline">Chỉ xác nhận xu hướng khi Khối lượng đồng thuận</div>
+      <div class="action-detail">Kiểm tra lại toàn bộ danh mục. Nếu cổ phiếu đang tăng giá nhưng khối lượng thấp hơn trung bình 20 phiên, hãy chuẩn bị kịch bản chốt lời hoặc đặt stop-loss chặt chẽ.</div>
+    </div>
+  </li>
+  <li class="action-item">
+    <div>
+      <div class="action-headline">Xác định bạn đang ở Pha nào trong 4 Pha Khối lượng</div>
+      <div class="action-detail">Sử dụng Bảng Ma trận tín hiệu (Table 7.1) để phân loại trạng thái hiện tại của thị trường chung và đưa ra chiến lược quản trị rủi ro phù hợp.</div>
+    </div>
+  </li>
+</ul>
+
+  </section>
+
+</div>
+
+<div class="nav-controls">
+  <button class="nav-btn" id="prevBtn" onclick="prevSlide()" aria-label="Previous slide">&#8592;</button>
+  <div class="counter" id="counter" aria-live="polite">1 / 1</div>
+  <button class="nav-btn" id="nextBtn" onclick="nextSlide()" aria-label="Next slide">&#8594;</button>
+</div>
+
+<script src="common.js"></script>
+</body>
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+
+<html lang="vi">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Investing with Volume Analysis — Chapter 3</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Merriweather:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="common.css" rel="stylesheet"/>
+<script crossorigin="anonymous" src="https://cdn.jsdelivr.net/npm/mermaid@11.10.0/dist/mermaid.min.js"></script>
+</head>
+<body>
+<div class="progress-bar" id="progressBar"></div>
+<div class="chapter-menu">
+<button aria-expanded="false" aria-haspopup="true" class="menu-btn" id="chapterMenuBtn" onclick="toggleChapterMenu()">Chapters ▾</button>
+<div class="chapter-menu-panel" id="chapterMenuPanel" role="menu"></div>
+</div>
+<div class="slide-container" id="slideContainer">
+<section aria-hidden="false" class="slide">
+<h1>Investing with Volume Analysis</h1>
+<p class="subtitle">Buff Pelz Dormeier · FT Press 2011 — Chương 3: <em>Price Analysis</em></p>
+<div class="meta-grid">
+<div class="meta-pill">
+<div class="label">Trang gốc</div>
+<div class="value">27-31</div>
+</div>
+<div class="meta-pill">
+<div class="label">Thời gian đọc gốc</div>
+<div class="value">~6 phút</div>
+</div>
+<div class="meta-pill">
+<div class="label">Độ sâu</div>
+<div class="value">Deep</div>
+</div>
+<div class="meta-pill">
+<div class="label">Đối tượng</div>
+<div class="value">Business / Pro</div>
+</div>
+</div>
+</section>
+<section class="slide chapter-divider">
+<div class="chapter-number">Chapter 3</div>
+<h2>Price Analysis</h2>
+<p class="chapter-meta">~6 phút · Beginner · Price = sự đồng ý duy nhất giữa hai phía bất đồng · 6 thành phần của price bar (O-H-L-C-change-range) · "Price is truth" · cầu nối sang Volume Analysis</p>
+</section>
+<section class="slide">
+<div class="slide-kicker">CH 3 · VISUAL SUMMARY</div>
+<h2>Cấu trúc lập luận</h2>
+<div class="mermaid">
+graph TD
+    A["Buyer (tin: stock sẽ lên)"] --&gt;|đồng ý exchange| C["PRICE<br/>= điểm đồng thuận duy nhất"]
+    B["Seller (tin: stock sẽ xuống)"] --&gt;|đồng ý exchange| C
+    C --&gt; D["Price bar (1 phiên)"]
+    D --&gt; E["Open<br/>vị thế đầu phiên"]
+    D --&gt; F["High<br/>kháng cự / sức bull"]
+    D --&gt; G["Low<br/>hỗ trợ / sức bear"]
+    D --&gt; H["Close<br/>điểm số cuối trận"]
+    D --&gt; I["Change<br/>cầu vs cung"]
+    D --&gt; J["Range<br/>độ dễ di chuyển"]
+    D --&gt;|chuỗi bar| K["Trend = chart"]
+    K --&gt;|nhưng| L["Fundamentals LAG price<br/>chỉ volume + derivative LEAD price"]
+    style C fill:#EFEEFF,stroke:#635BFF,color:#111111
+    style L fill:#FEE2E2,stroke:#DC2626,color:#111111
+</div>
+<p class="caveat" style="margin-top:var(--space-6)">Cấu trúc lập luận chương: từ "price là điểm đồng thuận" → "price bar có 6 thông tin" → "fundamentals lag price, chỉ volume lead price" — câu cuối là cầu nối sang Ch 4. <span class="page-ref">Ch 3, p. 27-31</span></p>
+</section>
+<section class="slide">
+<div class="slide-kicker">CH 3 · THE BIG IDEA</div>
+<h2>Một câu cốt lõi</h2>
+<div class="takeaway-hero">
+<div class="kicker">CH 3 · THE BIG IDEA</div>
+<div class="headline">"Price là điểm đồng thuận duy nhất giữa hai phía bất đồng — và là dữ liệu duy nhất không bao giờ bị sửa lại."</div>
+<div class="subline">Mọi fundamentals lag price; chỉ volume và đạo hàm của price mới có khả năng dẫn dắt nó.</div>
+</div>
+</section>
+<section class="slide">
+<div class="slide-kicker">CH 3 · KEY TAKEAWAYS</div>
+<h2>Năm takeaway chính</h2>
+<div class="takeaway-list"><div class="takeaway-item content-card"><div class="takeaway-badge">1</div><div style="flex: 1;"><div class="takeaway-text" style="font-size: 1.25rem; color: var(--accent); margin-bottom: 0.5rem;"><strong>Price là <em>điểm đồng thuận duy nhất</em> giữa người mua tin "lên" và người bán tin "xuống" — bản chất là một sự bất đồng, không phải cảm nhận cùng chiều. <span class="page-ref">Ch 3, p. 27</span></strong></div><div class="takeaway-detail"><strong>Why:</strong> Hiểu price là kết quả của bất đồng → không kỳ vọng nó "đúng" theo nghĩa value, mà "đúng" theo nghĩa thực tại exchange. <strong>Apply:</strong> Khi xem 1 tick, hỏi: phía đối lập với mình đang nghĩ gì để cùng đồng ý ở giá này? <strong>Caveat:</strong> Trong thanh khoản kém, "đồng thuận" có thể chỉ là 1-2 lệnh — không đại diện thị trường.</div></div></div><div class="takeaway-item content-card"><div class="takeaway-badge" style="background: var(--accent-amber);">2</div><div style="flex: 1;"><div class="takeaway-text" style="font-size: 1.25rem; color: var(--accent-amber); margin-bottom: 0.5rem;"><strong>Value là ý kiến (theoretical), price là sự thật (de facto) — khi intrinsic value khác market price, "<em>that opinion is currently wrong</em>". <span class="page-ref">Ch 3, p. 28</span></strong></div><div class="takeaway-detail"><strong>Why:</strong> Đảo ngược quan điểm phổ biến "thị trường sai, value đúng, đợi sửa". Dormeier nói thẳng: tại bất kỳ thời điểm, opinion chính là cái cần sửa. <strong>Apply:</strong> Khi vào lệnh value, ghi rõ: bao lâu thị trường có thể "ở phía sai" trước khi position bị stop. <strong>Caveat:</strong> Lập luận này gần với EMH dạng yếu — Dormeier không tranh luận EMH ở đây, chỉ định nghĩa lại price/value để mở đường cho volume.</div></div></div><div class="takeaway-item content-card"><div class="takeaway-badge" style="background: var(--accent-purple);">3</div><div style="flex: 1;"><div class="takeaway-text" style="font-size: 1.25rem; color: var(--accent-purple); margin-bottom: 0.5rem;"><strong>Mọi fundamental data, economic data, financial ratios đều <em>lag price</em>. Chỉ volume và "technically manipulated data (such as derivatives of price)" được chứng minh dẫn price. <span class="page-ref">Ch 3, p. 28</span></strong></div><div class="takeaway-detail"><strong>Why:</strong> Đây là lập luận then chốt cho cả cuốn sách — nếu nhận thì các chương sau (volume indicator) là logic; nếu không nhận thì cả nửa cuối sách rơi. <strong>Apply:</strong> Khi đánh giá một indicator mới, hỏi: nó là derivative của price/volume hay là fundamental? <strong>Caveat:</strong> Câu này Dormeier nói "have been demonstrated" nhưng không trích nguồn — đây là claim mạnh thiếu citation; cần check Lo &amp; MacKinlay, Karpoff (1987) để xác minh.</div></div></div><div class="takeaway-item content-card"><div class="takeaway-badge" style="background: var(--accent-emerald);">4</div><div style="flex: 1;"><div class="takeaway-text" style="font-size: 1.25rem; color: var(--accent-emerald); margin-bottom: 0.5rem;"><strong>Price không bao giờ bị sửa lại — không như fundamental/economic data thường xuyên revise. <span class="page-ref">Ch 3, p. 28</span></strong></div><div class="takeaway-detail"><strong>Why:</strong> Một lợi thế thực dụng ít người chú ý — backtest dùng price không bị nhiễu bởi revisions; backtest dùng GDP/EPS thì có. <strong>Apply:</strong> Ưu tiên signal dựa trên price/volume khi backtest qua nhiều chu kỳ, vì dữ liệu nguyên gốc. <strong>Caveat:</strong> Vẫn có corporate action (split, dividend) cần adjust — không phải zero-revision tuyệt đối.</div></div></div><div class="takeaway-item content-card"><div class="takeaway-badge" style="background: var(--accent-cyan);">5</div><div style="flex: 1;"><div class="takeaway-text" style="font-size: 1.25rem; color: var(--accent-cyan); margin-bottom: 0.5rem;"><strong>Close là điểm dữ liệu quan trọng nhất trong 6 thành phần — "the day's final score between the battle of bears and bulls", quyết định vị thế qua đêm khi nhà đầu tư không thể giao dịch thanh khoản. <span class="page-ref">Ch 3, p. 29-30</span></strong></div><div class="takeaway-detail"><strong>Why:</strong> Nhiều intraday bar là noise; close lọc noise. <strong>Apply:</strong> Indicator đáng tin cậy nhất nên dựa trên close (EMA close, OBV close-based), không phải tick high/low. <strong>Caveat:</strong> Trong thị trường 24/5 (FX, crypto) khái niệm close yếu đi — phải định nghĩa session boundary rõ.</div></div></div></div>
+</section>
+<section class="slide">
+<div class="slide-kicker">CH 3 · MENTAL MODEL</div>
+<h2>Anatomy of a Price Bar</h2>
+<div class="mental-model-card">
+<h4 class="model-name">Anatomy of a Price Bar — 6 thành phần</h4>
+<div class="model-principle">Một bar = một phiên giao dịch nén thành 6 con số. Mỗi con số có ý nghĩa hành vi riêng — gộp lại tạo thành "DNA" của chart. Đọc đúng thứ tự các thành phần thì 1 bar đã đủ trả lời "ai thắng phiên này?". <span class="page-ref">Ch 3, p. 28-30</span></div>
+<div class="model-application">
+<strong>6 thành phần &amp; ý nghĩa hành vi:</strong>
+<ul>
+<li><strong>Open</strong> — vị thế khách muốn nắm đầu phiên sau khi review thị trường overnight. Lệnh open thường là lệnh lớn nhất, thanh khoản cao nhất → institution dùng để accumulate/distribute mà ít tác động giá. <span class="page-ref">Ch 3, p. 28-29</span></li>
+<li><strong>High</strong> — điểm xa nhất bull đẩy được. Là vùng kháng cự cho buyer sau này. <em>Exception:</em> nếu close trùng high → bull chưa gặp resistance thực, chỉ "ran out of time".</li>
+<li><strong>Low</strong> — điểm xa nhất bear ép được. Là vùng hỗ trợ. <em>Exception:</em> nếu close trùng low → bull chưa gặp support thực, "saved by the closing bell".</li>
+<li><strong>Close</strong> — "the most important piece of information of all financial data". Vị thế cuối ngày = vị thế nhà đầu tư <em>muốn giữ qua đêm</em>. <span class="page-ref">Ch 3, p. 29</span></li>
+<li><strong>Change</strong> — close hôm nay − close hôm trước. Dương = demand vượt supply; âm = supply vượt demand. "Perhaps the most sought after piece of financial data on the planet." <span class="page-ref">Ch 3, p. 30</span></li>
+<li><strong>Range</strong> — high − low. Phản ánh độ <em>dễ</em> di chuyển: range rộng = supply/demand di chuyển price dễ; range hẹp = đang giằng co.</li>
+</ul>
+</div>
+<div class="model-application">
+<strong>When to apply:</strong>
+<ul>
+<li>Đọc một bar độc lập (price action thuần), trước khi áp indicator</li>
+<li>Phân tích close-on-high / close-on-low như tín hiệu sức mua/bán mạnh chưa kịp gặp đối kháng</li>
+<li>So sánh range để đánh giá liquidity và độ dễ di chuyển — base cho mọi volume-volatility indicator</li>
+</ul>
+</div>
+<div class="model-limitations">
+<strong>⚠️ Limitations:</strong>
+<ul>
+<li>1 bar không xác định trend — phải đặt trong chuỗi ít nhất 5-10 bar</li>
+<li>Open có thể bị skew bởi auction algo / pre-market news → không phải mọi open đều phản ánh "review overnight"</li>
+<li>"Close trùng high/low" interpretation yếu trong thị trường 24/5 (close là quy ước)</li>
+</ul>
+</div>
+</div>
+</section>
+<section class="slide">
+<div class="slide-kicker">CH 3 · NOTABLE QUOTES</div>
+<h2>Ba câu đáng giữ</h2>
+<div class="quote-block">
+<p class="quote-text">"In the financial markets, a collective human bias renders a decision. This decision takes the form of price on an electronic quote machine, or at the post of a global exchange. Price influences other participants and then they make decisions according to the prevailing market trends. Price, therefore, plays a profound role in shaping the future outcome for many events (in the global stock markets)."</p>
+<p class="quote-context"><strong>— J.C. Coppola, III</strong>, chapter epigraph. Đặt khung "price không trung tính — nó <em>tác động ngược</em> tới quyết định người tham gia khác". Đây là cơ sở reflexivity (Soros): price tạo ra phản hồi vào chính nó. <span class="page-ref">Ch 3, p. 27</span></p>
+</div>
+<div class="quote-block" style="margin-top:var(--space-6)">
+<p class="quote-text">"Whether one uses the term intrinsic, fundamental, or theoretical value, value is just that: theoretical. Value represents someone's opinion. Price is truth."</p>
+<p class="quote-context"><strong>— Buff Dormeier</strong>, mở đầu phần "The Market's Price Is Right". Câu chốt định nghĩa lại quan hệ value/price — bất kỳ ai dùng phương pháp value đều phải đối thoại với khung này. <span class="page-ref">Ch 3, p. 28</span></p>
+</div>
+<div class="quote-block" style="margin-top:var(--space-6)">
+<p class="quote-text">"Like the DNA in living creatures, price is the basic building block of the chart. As DNA contains all genetic information of the cell, price contains the collective information known by investors about the company."</p>
+<p class="quote-context"><strong>— Buff Dormeier</strong>, mở đầu phần "The Basic Building Block of the Chart". Phép ẩn dụ DNA dùng để chính danh hoá price-as-data: không phải trace của hành vi, mà là <em>chất liệu mang thông tin</em>. <span class="page-ref">Ch 3, p. 28</span></p>
+</div></section>
+<section class="slide">
+<div class="slide-kicker">CH 3 · REFLECTION</div>
+<h2>Câu hỏi suy ngẫm</h2>
+<ul class="reflection-list">
+<li class="reflection-item">
+<span class="reflection-cat">Remember</span>
+<p class="reflection-question">Liệt kê 6 thành phần của một price bar. Thành phần nào Dormeier coi là quan trọng nhất, vì sao?</p>
+</li>
+<li class="reflection-item">
+<span class="reflection-cat">Understand</span>
+<p class="reflection-question">Giải thích ngắn: vì sao Dormeier nói "value is theoretical, price is truth"? Đây có phải EMH không?</p>
+</li>
+<li class="reflection-item">
+<span class="reflection-cat">Apply</span>
+<p class="reflection-question">Mở chart 1 cổ phiếu bất kỳ — chọn 1 phiên có close-on-high. Theo Dormeier, sức bull thật hay chỉ "ran out of time"? Bạn dùng dữ kiện gì để phân biệt?</p>
+</li>
+<li class="reflection-item">
+<span class="reflection-cat">Analyze</span>
+<p class="reflection-question">Claim "fundamentals lag price, only volume and derivatives lead price" không có citation. Liệt kê 2 nghiên cứu bạn sẽ tìm để verify hoặc bác bỏ.</p>
+</li>
+<li class="reflection-item">
+<span class="reflection-cat">Evaluate</span>
+<p class="reflection-question">Lập luận của Dormeier (price không bị revise → đáng tin hơn fundamentals) mạnh đến đâu trong việc <em>chọn</em> chiến lược đầu tư cụ thể? Có lúc nào revision của fundamentals lại là <em>tính năng</em> chứ không phải bug?</p>
+</li>
+<li class="reflection-item">
+<span class="reflection-cat">Create</span>
+<p class="reflection-question">Thiết kế 1 quy tắc giao dịch dựa hoàn toàn trên 6 thành phần price bar (không indicator). Mô tả entry, stop, exit. Sau đó: bạn cần thêm thông tin gì để biết quy tắc đó hoạt động?</p>
+</li>
+<li class="reflection-item">
+<span class="reflection-cat">Personal</span>
+<p class="reflection-question">Trong các lệnh gần nhất, bạn ra quyết định dựa nhiều hơn vào value (opinion) hay price (truth)? Khi hai cái đối nghịch, bạn theo phía nào, và đã trả giá thế nào?</p>
+</li>
+</ul>
+</section>
+<section class="slide">
+<div class="slide-kicker">CH 3 · CLOSING ACTIONS</div>
+<h2>Ba việc làm tiếp theo</h2>
+<ul class="action-list">
+<li class="action-item">
+<div>
+<div class="action-headline">Trong 1 tuần, ghi lại "thua/hòa/thắng" của 5 phiên close-on-high &amp; close-on-low</div>
+<div class="action-detail">Mỗi sáng, scan watchlist và đánh dấu cổ phiếu close trên hoặc dưới. Theo dõi phiên kế tiếp: sức mua/bán có tiếp diễn không, hay chỉ là "ran out of time / saved by the bell"? Sau 1 tuần bạn sẽ có cảm giác thực với exception rule của Dormeier.</div>
+</div>
+</li>
+<li class="action-item">
+<div>
+<div class="action-headline">Verify (hoặc bác) claim "fundamentals lag price"</div>
+<div class="action-detail">Tìm 1 paper academic về lead-lag relationship giữa price và một fundamental signal (vd. earnings revisions, analyst forecasts). Đọc và viết 3 dòng kết luận: claim của Dormeier có chính xác không, hay nuance hơn?</div>
+</div>
+</li>
+<li class="action-item">
+<div>
+<div class="action-headline">Đổi default chart sang OHLC bar (hoặc candlestick) thay vì line</div>
+<div class="action-detail">Nếu đang dùng line chart (chỉ close), chuyển ít nhất 1 timeframe sang OHLC để thấy 4 trên 6 thông tin. Bài tập tâm trí: trong tuần đầu, ghi 1 dòng/ngày về một bar có range bất thường — vì sao bull/bear di chuyển dễ/khó đến vậy?</div>
+</div>
+</li>
+</ul>
+</section>
+</div>
+<div class="nav-controls">
+<button aria-label="Previous slide" class="nav-btn" id="prevBtn" onclick="prevSlide()">←</button>
+<div aria-live="polite" class="counter" id="counter">1 / 1</div>
+<button aria-label="Next slide" class="nav-btn" id="nextBtn" onclick="nextSlide()">→</button>
+</div>
+<script src="common.js"></script>
+</body>
+</html>

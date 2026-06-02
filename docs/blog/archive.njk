@@ -1,0 +1,19 @@
+---
+layout: layout.njk
+title: Archive
+permalink: /docs/blog/archive/
+---
+# Blog Archive
+
+<p>Here are all the blog posts ever published, sorted from newest to oldest.</p>
+
+<ul class="post-list">
+{% for post in collections.posts %}
+  <li>
+    <a href="{{ post.url | url }}">{{ post.data.title | default(post.fileSlug) }}</a>
+    <small style="color: var(--bd-text-muted);"> — {{ post.data.date | date("yyyy-MM-dd") }}</small>
+  </li>
+{% else %}
+  <li>No posts found yet.</li>
+{% endfor %}
+</ul>

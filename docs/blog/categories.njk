@@ -1,0 +1,22 @@
+---
+layout: layout.njk
+title: Categories
+permalink: /docs/blog/categories/
+---
+# Browse by Category
+
+{% for cat in collections.categories %}
+  <h2 id="{{ cat | slugify }}">{{ cat }}</h2>
+  <ul class="post-list">
+  {% for post in collections.posts %}
+    {% if post.data.categories and cat in post.data.categories %}
+      <li>
+        <a href="{{ post.url | url }}">{{ post.data.title | default(post.fileSlug) }}</a>
+        <small style="color: var(--bd-text-muted);"> — {{ post.data.date | date("yyyy-MM-dd") }}</small>
+      </li>
+    {% endif %}
+  {% endfor %}
+  </ul>
+{% else %}
+  <p>No categories found.</p>
+{% endfor %}

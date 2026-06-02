@@ -80,6 +80,17 @@ module.exports = function(eleventyConfig) {
     return collectionApi.getFilteredByGlob("docs/blog/posts/**/*.md").reverse();
   });
 
+  eleventyConfig.addCollection("categories", function(collectionApi) {
+    const posts = collectionApi.getFilteredByGlob("docs/blog/posts/**/*.md");
+    let categorySet = new Set();
+    posts.forEach(post => {
+      if (post.data.categories) {
+        post.data.categories.forEach(cat => categorySet.add(cat));
+      }
+    });
+    return [...categorySet].sort();
+  });
+
   // Grouped Navigation for Sidebar (Recursive Folder Structure)
   eleventyConfig.addCollection("folderTree", function(collectionApi) {
     const docs = collectionApi.getFilteredByGlob("docs/**/*.md");

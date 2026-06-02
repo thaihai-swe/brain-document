@@ -1,4 +1,4 @@
-# My Digital Brain
+# Digital Brain
 
 Welcome to my personal knowledge base - a living collection of everything I learn, explore, and discover.
 

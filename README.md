@@ -1,4 +1,4 @@
-# My Digital Brain
+# Digital Brain
 
 Personal knowledge base and documentation site built with Eleventy.
 

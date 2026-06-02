@@ -1,11 +1,11 @@
 Dont commit and push code
 
-# AI Agent Instructions for "My Digital Brain"
+# AI Agent Instructions for "Digital Brain"
 
 This file (`AGENTS.md`) serves as the core instruction manual for any AI assistant (Gemini, Claude, Cursor, etc.) interacting with this codebase.
 
 ## 🎯 Project Overview
-- **Name:** My Digital Brain
+- **Name:** Digital Brain
 - **Purpose:** A personal knowledge base and documentation site.
 - **Framework:** [Eleventy](https://www.11ty.dev/).
 - **Core Principle:** Simple markdown authoring with advanced interconnected features (like Obsidian).

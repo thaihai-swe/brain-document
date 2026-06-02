@@ -4,6 +4,7 @@ const markdownItAnchor = require("markdown-it-anchor");
 const markdownItTocDoneRight = require("markdown-it-toc-done-right");
 const markdownItAttrs = require("markdown-it-attrs");
 const markdownItTaskLists = require("markdown-it-task-lists");
+const { minify } = require("html-minifier-terser");
 const fs = require("fs");
 const path = require("path");
 
@@ -35,6 +36,18 @@ module.exports = function(eleventyConfig) {
     .use(markdownItTocDoneRight)
     .use(markdownItAttrs)
     .use(markdownItTaskLists)
+    .use(function(md) {
+      // Performance: add loading=lazy & decoding=async to all markdown images
+      const defaultImageRenderer = md.renderer.rules.image || function(tokens, idx, options, env, self) {
+        return self.renderToken(tokens, idx, options);
+      };
+      md.renderer.rules.image = function(tokens, idx, options, env, self) {
+        const token = tokens[idx];
+        token.attrSet('loading', 'lazy');
+        token.attrSet('decoding', 'async');
+        return defaultImageRenderer(tokens, idx, options, env, self);
+      };
+    })
     .use(function(md) {
       // Custom WikiLink Plugin: [[page-name]] or [[page-name|Display Text]]
       const defaultRender = md.renderer.rules.text || function(tokens, idx, options, env, self) {
@@ -208,6 +221,24 @@ module.exports = function(eleventyConfig) {
     const d = new Date(dateObj);
     return d.toISOString().split('T')[0]; // Simple YYYY-MM-DD for now
   });
+
+  // Performance: Minify HTML output (only during production builds)
+  if (process.env.NODE_ENV === "production") {
+    eleventyConfig.addTransform("htmlmin", async function(content) {
+      if ((this.page.outputPath || "").endsWith(".html")) {
+        return await minify(content, {
+          removeComments: true,
+          collapseWhitespace: true,
+          removeRedundantAttributes: true,
+          useShortDoctype: true,
+          removeEmptyAttributes: true,
+          minifyCSS: true,  // minify any inline <style> blocks
+          minifyJS: true,   // minify any inline <script> blocks
+        });
+      }
+      return content;
+    });
+  }
 
   return {
     dir: {

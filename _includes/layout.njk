@@ -3,15 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ title | default("My Digital Brain") }}</title>
-  
+  <title>{{ title | default("Digital Brain") }}</title>
+  <meta name="description" content="{{ description | default('A personal knowledge base, digital garden, and blog.') }}">
+
+  <!-- Performance: preconnect to CDNs used for fonts and mermaid -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+
   <!-- Single unified stylesheet -->
   <link rel="stylesheet" href="{{ '/overrides/assets/stylesheets/extra.css' | url }}">
 </head>
 <body data-md-color-scheme="default">
 
   <header class="site-header">
-    <div class="logo"><strong>My Digital Brain</strong></div>
+    <div class="logo"><strong>Digital Brain</strong></div>
     
     <!-- Pagefind Search UI will mount here -->
     <div id="search" class="search-ui"></div>
@@ -79,9 +84,9 @@
     </aside>
   </div>
 
-  <!-- Pagefind Script (Added during build) -->
-  <link href="{{ '/pagefind/pagefind-ui.css' | url }}" rel="stylesheet">
-  <script src="{{ '/pagefind/pagefind-ui.js' | url }}"></script>
+  <!-- Pagefind Script (loaded after content paints) -->
+  <link href="{{ '/pagefind/pagefind-ui.css' | url }}" rel="stylesheet" media="print" onload="this.media='all'">
+  <script defer src="{{ '/pagefind/pagefind-ui.js' | url }}"></script>
   <script>
     window.addEventListener('DOMContentLoaded', (event) => {
       try {
@@ -173,7 +178,7 @@
   </script>
 
   <!-- Legacy Scripts (if still needed) -->
-  <script src="{{ '/overrides/assets/javascripts/backlinks.js' | url }}"></script>
+  <script defer src="{{ '/overrides/assets/javascripts/backlinks.js' | url }}"></script>
   <!-- <script type="module" src="{{ '/overrides/assets/javascripts/graph-view.js' | url }}"></script> -->
 
   <!-- Mermaid.js for Diagrams -->

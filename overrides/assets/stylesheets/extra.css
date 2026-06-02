@@ -1,5 +1,5 @@
 /* ==========================================================================
-   styles.css  —  My Digital Brain (Eleventy)
+   styles.css  —  Digital Brain (Eleventy)
    Single source of truth: tokens + layout + components
    Design: Warm Editorial light / Near-Black Craft Tool dark
    Accent: Indigo Voltage #635BFF
@@ -15,6 +15,7 @@
   font-style: normal;
   font-display: swap;
 }
+
 @font-face {
   font-family: 'Monaspace Neon';
   src: url('https://cdn.jsdelivr.net/npm/@fontsource/monaspace-neon@5.0.0/files/monaspace-neon-latin-500-normal.woff2') format('woff2');
@@ -22,6 +23,7 @@
   font-style: normal;
   font-display: swap;
 }
+
 @font-face {
   font-family: 'Monaspace Neon';
   src: url('https://cdn.jsdelivr.net/npm/@fontsource/monaspace-neon@5.0.0/files/monaspace-neon-latin-600-normal.woff2') format('woff2');
@@ -35,67 +37,81 @@
    -------------------------------------------------------------------------- */
 :root {
   /* Surfaces */
-  --bd-background:       #FAF9F5;
-  --bd-surface:          #FFFFFF;
-  --bd-surface-muted:    #F4F4F1;
-  --bd-surface-raised:   #FFFFFF;
-  --bd-surface-inset:    #F1F1EE;
+  --bd-background: #FAF9F5;
+  --bd-surface: #FFFFFF;
+  --bd-surface-muted: #F4F4F1;
+  --bd-surface-raised: #FFFFFF;
+  --bd-surface-inset: #F1F1EE;
   --bd-surface-featured: #181715;
 
   /* Borders */
-  --bd-border:           #E6E4DE;
-  --bd-border-strong:    #D4D0C7;
-  --bd-border-subtle:    #EFEEE9;
+  --bd-border: #E6E4DE;
+  --bd-border-strong: #D4D0C7;
+  --bd-border-subtle: #EFEEE9;
 
   /* Text */
-  --bd-text-primary:     #26251E;
-  --bd-text-secondary:   #55524C;
-  --bd-text-muted:       #8A867C;
-  --bd-text-disabled:    #AAA69C;
-  --bd-text-inverse:     #FFFFFF;
+  --bd-text-primary: #26251E;
+  --bd-text-secondary: #55524C;
+  --bd-text-muted: #8A867C;
+  --bd-text-disabled: #AAA69C;
+  --bd-text-inverse: #FFFFFF;
 
   /* Actions */
-  --bd-primary:          #26251E;
-  --bd-primary-hover:    #3A382F;
-  --bd-accent:           #635BFF;
-  --bd-accent-hover:     #574FE8;
-  --bd-accent-soft:      #EFEEFF;
-  --bd-accent-strong:    #4F46E5;
+  --bd-primary: #26251E;
+  --bd-primary-hover: #3A382F;
+  --bd-accent: #635BFF;
+  --bd-accent-hover: #574FE8;
+  --bd-accent-soft: #EFEEFF;
+  --bd-accent-strong: #4F46E5;
 
   /* Status */
-  --bd-success:          #16A34A;
-  --bd-success-soft:     #DCFCE7;
-  --bd-warning:          #F59E0B;
-  --bd-warning-soft:     #FEF3C7;
-  --bd-danger:           #DC2626;
-  --bd-danger-soft:      #FEE2E2;
-  --bd-info:             #0284C7;
-  --bd-info-soft:        #E0F2FE;
+  --bd-success: #16A34A;
+  --bd-success-soft: #DCFCE7;
+  --bd-warning: #F59E0B;
+  --bd-warning-soft: #FEF3C7;
+  --bd-danger: #DC2626;
+  --bd-danger-soft: #FEE2E2;
+  --bd-info: #0284C7;
+  --bd-info-soft: #E0F2FE;
 
   /* Code surfaces */
-  --bd-code-bg:          #F4F4F1;
-  --bd-code-border:      #E6E4DE;
-  --bd-code-text:        #26251E;
+  --bd-code-bg: #F4F4F1;
+  --bd-code-border: #E6E4DE;
+  --bd-code-text: #26251E;
 
   /* Gradient */
   --bd-gradient-primary: linear-gradient(135deg, #635BFF 0%, #8B5CF6 45%, #06B6D4 100%);
 
   /* Spacing — 8-unit base */
-  --bd-space-1: 4px;   --bd-space-2: 8px;   --bd-space-3: 12px;  --bd-space-4: 16px;
-  --bd-space-5: 20px;  --bd-space-6: 24px;  --bd-space-8: 32px;  --bd-space-10: 40px;
-  --bd-space-12: 48px; --bd-space-16: 64px; --bd-space-20: 80px; --bd-space-24: 96px;
+  --bd-space-1: 4px;
+  --bd-space-2: 8px;
+  --bd-space-3: 12px;
+  --bd-space-4: 16px;
+  --bd-space-5: 20px;
+  --bd-space-6: 24px;
+  --bd-space-8: 32px;
+  --bd-space-10: 40px;
+  --bd-space-12: 48px;
+  --bd-space-16: 64px;
+  --bd-space-20: 80px;
+  --bd-space-24: 96px;
 
   /* Radii */
-  --bd-radius-xs: 4px;  --bd-radius-sm: 6px;   --bd-radius-md: 10px;
-  --bd-radius-lg: 14px; --bd-radius-xl: 20px;  --bd-radius-2xl: 28px;
-  --bd-radius-pill: 100px; --bd-radius-full: 999px;
+  --bd-radius-xs: 4px;
+  --bd-radius-sm: 6px;
+  --bd-radius-md: 10px;
+  --bd-radius-lg: 14px;
+  --bd-radius-xl: 20px;
+  --bd-radius-2xl: 28px;
+  --bd-radius-pill: 100px;
+  --bd-radius-full: 999px;
 
   /* Shadows */
-  --bd-shadow-xs: 0 1px 2px rgba(24,23,21,.05);
-  --bd-shadow-sm: 0 2px 8px rgba(24,23,21,.06), 0 1px 2px rgba(24,23,21,.04);
-  --bd-shadow-md: 0 8px 24px rgba(24,23,21,.10), 0 2px 6px rgba(24,23,21,.06);
-  --bd-shadow-lg: 0 24px 64px rgba(24,23,21,.16), 0 8px 24px rgba(24,23,21,.08);
-  --bd-shadow-glow: 0 0 48px rgba(99,91,255,.28);
+  --bd-shadow-xs: 0 1px 2px rgba(24, 23, 21, .05);
+  --bd-shadow-sm: 0 2px 8px rgba(24, 23, 21, .06), 0 1px 2px rgba(24, 23, 21, .04);
+  --bd-shadow-md: 0 8px 24px rgba(24, 23, 21, .10), 0 2px 6px rgba(24, 23, 21, .06);
+  --bd-shadow-lg: 0 24px 64px rgba(24, 23, 21, .16), 0 8px 24px rgba(24, 23, 21, .08);
+  --bd-shadow-glow: 0 0 48px rgba(99, 91, 255, .28);
 
   /* Motion */
   --bd-motion-fast: 100ms;
@@ -103,8 +119,8 @@
   --bd-motion-slow: 240ms;
   --bd-motion-page: 360ms;
   --bd-ease-standard: cubic-bezier(0.2, 0.0, 0.0, 1.0);
-  --bd-ease-out:      cubic-bezier(0.16, 1, 0.3, 1);
-  --bd-ease-in-out:   cubic-bezier(0.65, 0, 0.35, 1);
+  --bd-ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --bd-ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
 
   /* Typography */
   --bd-font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -118,48 +134,48 @@
    2. Design tokens — Dark mode
    -------------------------------------------------------------------------- */
 [data-md-color-scheme="slate"] {
-  --bd-background:       #0A0A0B;
-  --bd-surface:          #0F1011;
-  --bd-surface-muted:    #18191B;
-  --bd-surface-raised:   #1A1B1E;
-  --bd-surface-inset:    #0B0C0E;
+  --bd-background: #0A0A0B;
+  --bd-surface: #0F1011;
+  --bd-surface-muted: #18191B;
+  --bd-surface-raised: #1A1B1E;
+  --bd-surface-inset: #0B0C0E;
   --bd-surface-featured: #010102;
 
-  --bd-border:           #23252A;
-  --bd-border-strong:    #3A3F47;
-  --bd-border-subtle:    #1B1D21;
+  --bd-border: #23252A;
+  --bd-border-strong: #3A3F47;
+  --bd-border-subtle: #1B1D21;
 
-  --bd-text-primary:     #F7F8F8;
-  --bd-text-secondary:   #B7B8BC;
-  --bd-text-muted:       #7D828A;
-  --bd-text-disabled:    #5F656E;
-  --bd-text-inverse:     #0A0A0B;
+  --bd-text-primary: #F7F8F8;
+  --bd-text-secondary: #B7B8BC;
+  --bd-text-muted: #7D828A;
+  --bd-text-disabled: #5F656E;
+  --bd-text-inverse: #0A0A0B;
 
-  --bd-primary:          #FFFFFF;
-  --bd-primary-hover:    #E8E8E8;
-  --bd-accent:           #8B7CFF;
-  --bd-accent-hover:     #A799FF;
-  --bd-accent-soft:      #1D1A3D;
-  --bd-accent-strong:    #A799FF;
+  --bd-primary: #FFFFFF;
+  --bd-primary-hover: #E8E8E8;
+  --bd-accent: #8B7CFF;
+  --bd-accent-hover: #A799FF;
+  --bd-accent-soft: #1D1A3D;
+  --bd-accent-strong: #A799FF;
 
-  --bd-success:          #22C55E;
-  --bd-success-soft:     #0F2E1A;
-  --bd-warning:          #FBBF24;
-  --bd-warning-soft:     #2A1F08;
-  --bd-danger:           #F87171;
-  --bd-danger-soft:      #2A1010;
-  --bd-info:             #38BDF8;
-  --bd-info-soft:        #07273C;
+  --bd-success: #22C55E;
+  --bd-success-soft: #0F2E1A;
+  --bd-warning: #FBBF24;
+  --bd-warning-soft: #2A1F08;
+  --bd-danger: #F87171;
+  --bd-danger-soft: #2A1010;
+  --bd-info: #38BDF8;
+  --bd-info-soft: #07273C;
 
-  --bd-code-bg:          #121417;
-  --bd-code-border:      #23252A;
-  --bd-code-text:        #F7F8F8;
+  --bd-code-bg: #121417;
+  --bd-code-border: #23252A;
+  --bd-code-text: #F7F8F8;
 
-  --bd-shadow-xs: 0 0 0 1px rgba(255,255,255,.02);
-  --bd-shadow-sm: 0 1px 2px rgba(0,0,0,.5);
-  --bd-shadow-md: 0 12px 32px rgba(0,0,0,.55);
-  --bd-shadow-lg: 0 24px 64px rgba(0,0,0,.65);
-  --bd-shadow-glow: 0 0 56px rgba(139,124,255,.32);
+  --bd-shadow-xs: 0 0 0 1px rgba(255, 255, 255, .02);
+  --bd-shadow-sm: 0 1px 2px rgba(0, 0, 0, .5);
+  --bd-shadow-md: 0 12px 32px rgba(0, 0, 0, .55);
+  --bd-shadow-lg: 0 24px 64px rgba(0, 0, 0, .65);
+  --bd-shadow-glow: 0 0 56px rgba(139, 124, 255, .32);
 }
 
 /* --------------------------------------------------------------------------
@@ -172,11 +188,13 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  font-family: inherit; /* every element inherits from html, no exceptions */
+  font-family: inherit;
+  /* every element inherits from html, no exceptions */
 }
 
 html {
-  font-family: var(--bd-font-sans); /* THE source of truth for fonts */
+  font-family: var(--bd-font-sans);
+  /* THE source of truth for fonts */
   font-size: 16px;
   font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
   font-variant-numeric: tabular-nums;
@@ -237,14 +255,17 @@ body {
   /* font-family already inherited from html via the * reset above */
 }
 
-.site-nav::-webkit-scrollbar { width: 4px; }
+.site-nav::-webkit-scrollbar {
+  width: 4px;
+}
+
 .site-nav::-webkit-scrollbar-thumb {
   background: var(--bd-border-strong);
   border-radius: var(--bd-radius-full);
 }
 
 /* Top-level "Navigation" heading */
-.site-nav > h3 {
+.site-nav>h3 {
   font-family: var(--bd-font-sans);
   font-size: 0.68rem;
   font-weight: 600;
@@ -264,7 +285,7 @@ body {
 }
 
 /* Root-level files (e.g. Library, Blog) styled like folder headers */
-.site-nav > .nav-item > a {
+.site-nav>.nav-item>a {
   font-family: var(--bd-font-sans);
   font-size: 0.68rem;
   font-weight: 600;
@@ -275,12 +296,12 @@ body {
   margin: 0.3rem 0;
 }
 
-.site-nav > .nav-item > a:hover {
+.site-nav>.nav-item>a:hover {
   background-color: var(--bd-surface-muted);
   color: var(--bd-text-secondary);
 }
 
-.site-nav > .nav-item-active > a {
+.site-nav>.nav-item-active>a {
   color: var(--bd-accent-strong);
   background-color: transparent;
 }
@@ -310,7 +331,7 @@ body {
 }
 
 /* Active page link */
-.site-nav .nav-item-active > a {
+.site-nav .nav-item-active>a {
   color: var(--bd-accent-strong);
   background-color: var(--bd-accent-soft);
   font-weight: 500;
@@ -321,7 +342,7 @@ details.nav-folder {
   margin: 0.3rem 0;
 }
 
-details.nav-folder > summary {
+details.nav-folder>summary {
   /* eyebrow-style section label */
   display: block;
   cursor: pointer;
@@ -338,19 +359,19 @@ details.nav-folder > summary {
   transition: background-color var(--bd-motion-fast) var(--bd-ease-standard);
 }
 
-details.nav-folder > summary::-webkit-details-marker,
-details.nav-folder > summary::marker {
+details.nav-folder>summary::-webkit-details-marker,
+details.nav-folder>summary::marker {
   display: none;
   content: '';
 }
 
-details.nav-folder > summary:hover {
+details.nav-folder>summary:hover {
   background-color: var(--bd-surface-muted);
   color: var(--bd-text-secondary);
 }
 
-details.nav-folder > ul,
-details.nav-folder > .nav-list {
+details.nav-folder>ul,
+details.nav-folder>.nav-list {
   padding-left: 0.75rem;
   border-left: 1px solid var(--bd-border-subtle);
   margin: 0.2rem 0 0.2rem 0.5rem;
@@ -361,7 +382,8 @@ details.nav-folder > .nav-list {
    -------------------------------------------------------------------------- */
 .site-content {
   padding: 2rem 2.5rem;
-  min-width: 0; /* prevent grid blowout */
+  min-width: 0;
+  /* prevent grid blowout */
 }
 
 /* Article typography */
@@ -547,13 +569,16 @@ details.nav-folder > .nav-list {
   font-size: 0.78rem;
 }
 
-.site-toc::-webkit-scrollbar { width: 4px; }
+.site-toc::-webkit-scrollbar {
+  width: 4px;
+}
+
 .site-toc::-webkit-scrollbar-thumb {
   background: var(--bd-border-strong);
   border-radius: var(--bd-radius-full);
 }
 
-.site-toc > h3 {
+.site-toc>h3 {
   font-family: var(--bd-font-sans);
   font-size: 0.68rem;
   font-weight: 600;
@@ -644,10 +669,23 @@ details.nav-folder > .nav-list {
   color: var(--bd-accent-strong);
 }
 
-::-webkit-scrollbar       { width: 6px; height: 6px; }
-::-webkit-scrollbar-track { background: transparent; }
-::-webkit-scrollbar-thumb { background: var(--bd-border-strong); border-radius: 4px; }
-::-webkit-scrollbar-thumb:hover { background: var(--bd-text-disabled); }
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--bd-border-strong);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--bd-text-disabled);
+}
 
 /* --------------------------------------------------------------------------
    10. Focus ring — accessibility
@@ -662,15 +700,22 @@ details.nav-folder > .nav-list {
    11. Responsive — tablet (≤1024px): hide TOC, widen nav
    -------------------------------------------------------------------------- */
 @media (max-width: 1024px) {
-  .site-layout { grid-template-columns: 22% 78%; }
-  .site-toc    { display: none; }
+  .site-layout {
+    grid-template-columns: 22% 78%;
+  }
+
+  .site-toc {
+    display: none;
+  }
 }
 
 /* --------------------------------------------------------------------------
    12. Responsive — mobile (≤768px): full-width, slide-in nav
    -------------------------------------------------------------------------- */
 @media (max-width: 768px) {
-  .site-layout { grid-template-columns: 1fr; }
+  .site-layout {
+    grid-template-columns: 1fr;
+  }
 
   .site-nav {
     position: fixed;
@@ -702,6 +747,7 @@ details.nav-folder > .nav-list {
    13. Reduced motion
    -------------------------------------------------------------------------- */
 @media (prefers-reduced-motion: reduce) {
+
   *,
   *::before,
   *::after {

@@ -19,7 +19,7 @@ The site should be available at: `https://thaihai-swe.github.io/brain-document/`
 ### 2. Verify GitHub Actions Workflow
 
 1. Go to the **Actions** tab in your repository
-2. You should see a workflow called "Deploy MkDocs to GitHub Pages"
+2. You should see a workflow called "Deploy Eleventy to GitHub Pages"
 3. If there are no workflow runs, trigger one by:
    - Making a small change and pushing
    - Or click "Run workflow" manually
@@ -87,13 +87,13 @@ If GitHub Actions doesn't work, you can deploy manually:
 
 ```bash
 # Build the site locally
-mkdocs build
+npm run build
 
-# Deploy to gh-pages branch
-mkdocs gh-deploy
+# Deploy to gh-pages branch (requires gh-pages package)
+npx gh-pages -d public
 ```
 
-This creates a `gh-pages` branch and pushes the built site.
+This pushes the `public` directory to a `gh-pages` branch.
 
 Then in Settings → Pages, set:
 - Source: Deploy from a branch
@@ -117,10 +117,8 @@ Once deployed, you should see:
    - Verify navigation works
    - Test on mobile
 
-2. **Update site_url in mkdocs.yml** (optional)
-   ```yaml
-   site_url: https://thaihai-swe.github.io/brain-document/
-   ```
+2. **Update site_url** (optional)
+   If you have a base path, configure it in `.eleventy.js` as the `pathPrefix`.
 
 3. **Add custom domain** (optional)
    - Go to Settings → Pages
@@ -141,10 +139,10 @@ Every time you push to the `main` branch:
 | Action | Command |
 |--------|---------|
 | Add new content | Create `.md` file in `docs/` |
-| Test locally | `mkdocs serve` |
+| Test locally | `npm start` |
 | Commit changes | `git add . && git commit -m "message"` |
 | Deploy | `git push origin main` |
-| Manual deploy | `mkdocs gh-deploy` |
+| Manual deploy | `npm run build && npx gh-pages -d public` |
 
 ---
 

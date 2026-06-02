@@ -1,0 +1,53 @@
+---
+layout: layout.njk
+---
+<div class="blog-post">
+  <header class="blog-header">
+    <h1>{{ title }}</h1>
+    <div class="post-meta">
+      {% if date %}<span class="post-date">{{ date | date("yyyy-MM-dd") }}</span>{% endif %}
+      {% if authors %}
+        <span class="post-authors">By {{ authors | join(", ") }}</span>
+      {% endif %}
+      {% if categories %}
+        <span class="post-categories">
+          Categories: 
+          {% for cat in categories %}
+            <span class="category-tag">{{ cat }}</span>
+          {% endfor %}
+        </span>
+      {% endif %}
+    </div>
+  </header>
+  
+  <div class="blog-content">
+    {{ content | safe }}
+  </div>
+</div>
+
+<style>
+  .blog-header {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color, #eaeaea);
+  }
+  .post-meta {
+    font-size: 0.9rem;
+    color: var(--text-muted, #666);
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  .category-tag {
+    background: var(--bg-muted, #eee);
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+  }
+  body[data-theme="slate"] .post-meta {
+    --text-muted: #aaa;
+  }
+  body[data-theme="slate"] .category-tag {
+    --bg-muted: #222;
+  }
+</style>

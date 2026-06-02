@@ -4,7 +4,7 @@ Quick notes and reminders.
 
 ## 2026-05-30
 
-- Set up MkDocs documentation site
+- Set up Eleventy documentation site
 - Configured automatic navigation
 - Added example content
 

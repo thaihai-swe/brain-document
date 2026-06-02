@@ -1,0 +1,30 @@
+---
+permalink: /graph.json
+---
+{
+  "nodes": [
+    {% for page in collections.all %}
+      {% if loop.index0 > 0 %},{% endif %}
+      {
+        "id": "{{ page.url }}",
+        "title": "{{ page.data.title | default(page.fileSlug) }}",
+        "url": "{{ page.url }}",
+        "group": {% if 'blog' in page.url %}2{% else %}1{% endif %}
+      }
+    {% endfor %}
+  ],
+  "links": [
+    {% set comma = false %}
+    {% for pageUrl, incomingLinks in collections.backlinks %}
+      {% for link in incomingLinks %}
+        {% if comma %},{% endif %}
+        {
+          "source": "{{ link.url }}",
+          "target": "{{ pageUrl }}",
+          "value": 1
+        }
+        {% set comma = true %}
+      {% endfor %}
+    {% endfor %}
+  ]
+}

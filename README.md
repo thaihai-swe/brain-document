@@ -1,6 +1,6 @@
 # My Digital Brain
 
-Personal knowledge base and documentation site built with MkDocs Material.
+Personal knowledge base and documentation site built with Eleventy.
 
 ## Quick Start
 
@@ -8,12 +8,12 @@ Personal knowledge base and documentation site built with MkDocs Material.
 
 1. Install dependencies:
 ```bash
-pip install -r requirements.txt
+npm install
 ```
 
 2. Serve locally:
 ```bash
-mkdocs serve
+npm start
 ```
 
 Visit http://127.0.0.1:8000
@@ -45,9 +45,9 @@ Push to GitHub and the site will automatically deploy to GitHub Pages via GitHub
 
 ## Customization
 
-Edit `mkdocs.yml` to customize:
-- Site name and description
-- Theme colors
+Edit `.eleventy.js` and CSS files to customize:
+- Site configuration and collections
+- Theme colors in `overrides/assets/stylesheets/design-tokens.css`
 - Features and plugins
 
 

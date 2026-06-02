@@ -8,7 +8,7 @@
 
 ## ✅ What's Done
 
-- ✅ MkDocs with Material theme installed
+- ✅ Eleventy installed and configured
 - ✅ Automatic navigation (no manual config needed)
 - ✅ 28 documents across 12 folders
 - ✅ Nested folder support (3+ levels deep)

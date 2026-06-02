@@ -1,0 +1,8 @@
+@media screen and (max-width: 1219px) {
+  .md-header__button[for="__toc"] {
+    display: none !important;
+  }
+  .md-sidebar--secondary {
+    display: none !important;
+  }
+}

@@ -1187,9 +1187,6 @@ a[role="button"]:active,
 
 /* Compact: < 640px */
 @media screen and (max-width: 39.9375em) {
-  .md-sidebar {
-    width: 100%;
-  }
   .card-grid {
     grid-template-columns: 1fr;
   }
@@ -1221,5 +1218,97 @@ a[role="button"]:active,
     grid-template-columns: repeat(4, 1fr);
   }
 }
+
+/* --------------------------------------------------------------------------
+   22. 3-column layout proportions — left 15% / content 75% / right 10%
+   -------------------------------------------------------------------------- */
+@media screen and (min-width: 76.25em) {
+  /* Use full viewport width instead of Material's 61rem cap */
+  .md-grid {
+    max-width: none !important;
+    margin: 0 !important;
+  }
+  .md-main__inner {
+    display: flex !important;
+    width: 100%;
+    max-width: 100% !important;
+    margin: 0 !important;
+  }
+  /* Left sidebar - fixed 15% width */
+  .md-sidebar--primary {
+    position: fixed !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: 15% !important;
+    max-width: 15% !important;
+    height: 100vh !important;
+    padding-top: 4rem !important;
+    overflow-y: auto !important;
+    flex-shrink: 0 !important;
+  }
+  /* Right sidebar - fixed 10% width */
+  .md-sidebar--secondary {
+    position: fixed !important;
+    right: 0 !important;
+    top: 0 !important;
+    width: 10% !important;
+    max-width: 10% !important;
+    height: 100vh !important;
+    padding-top: 4rem !important;
+    overflow-y: auto !important;
+    flex-shrink: 0 !important;
+  }
+  /* Main content - 75% width, centered */
+  .md-content {
+    width: 75% !important;
+    max-width: 75% !important;
+    margin-left: 15% !important;
+    margin-right: 10% !important;
+    flex-shrink: 0 !important;
+    padding: 0 !important;
+  }
+  /* Add horizontal padding to inner content */
+  .md-content__inner {
+    margin: 0 !important;
+    padding: 0 7.5% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  /* Ensure article respects padding */
+  .md-content__inner.md-typeset {
+    padding: 0 7.5% !important;
+  }
+  /* Make iframe use full available width within padding */
+  .md-content iframe {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+}
+
+/* Smooth scrolling for sidebars */
+.md-sidebar__scrollwrap {
+  overflow-y: auto;
+  scrollbar-width: thin;
+}
+
+.md-sidebar__scrollwrap::-webkit-scrollbar {
+  width: 6px;
+}
+
+.md-sidebar__scrollwrap::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.md-sidebar__scrollwrap::-webkit-scrollbar-thumb {
+  background: var(--md-default-fg-color--lightest);
+  border-radius: 3px;
+}
+
+.md-sidebar__scrollwrap::-webkit-scrollbar-thumb:hover {
+  background: var(--md-default-fg-color--lighter);
+}
+
+/* Mobile behavior natively handled by Material for MkDocs */
 
 /* End of design-tokens.css */

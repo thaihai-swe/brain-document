@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chapter 18 Slides</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="common.css">
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11.10.0/dist/mermaid.min.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div class="progress-bar" id="progressBar"></div>
+
+<div class="chapter-menu">
+  <button class="menu-btn" id="chapterMenuBtn" onclick="toggleChapterMenu()" aria-haspopup="true" aria-expanded="false">Chapters &#9662;</button>
+  <div class="chapter-menu-panel" id="chapterMenuPanel" role="menu"></div>
+</div>
+
+<div class="slide-container" id="slideContainer">
+
+  <section class="slide chapter-divider">
+
+<div class="chapter-divider">
+  <h1>Chapter 18</h1>
+  <h2>A Compendium of Breadth Indicators</h2>
+  <div class="metadata">
+    <span><strong>Reading Time:</strong> ~25 mins</span>
+    <span><strong>Difficulty:</strong> Advanced</span>
+  </div>
+  <div class="key-concepts">
+    <h3>Key Concepts</h3>
+    <ul>
+      <li>Market of Markets Methodology</li>
+      <li>Breadth Divergence & Liquidity</li>
+      <li>Data Pitfalls (Decimalization, Composition)</li>
+      <li>Arms Index (TRIN)</li>
+      <li>McClellan Oscillator & RASI</li>
+    </ul>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 18 · VISUAL SUMMARY</div>
+    <h2>Market Breadth Architecture</h2>
+
+<div class="mermaid">
+  graph TD
+      A[Market Breadth] --> B[Raw Statistics]
+      A --> C[Breadth Indicators]
+      
+      B --> B1[Advance/Decline Line]
+      B --> B2[New Highs/Lows]
+      B --> B3[Up/Down Volume]
+      
+      C --> C1[PVI & NVI]
+      C --> C2[Arms Index / TRIN]
+      C --> C3[McClellan Oscillator]
+      
+      C1 --> D1[Volume-Conditioned Signals]
+      C2 --> D2[Intraday Capital Flows]
+      C3 --> D3[Breadth Momentum]
+      
+      style A fill:#7C3AED,stroke:#E2E8F0,color:#FFFFFF
+      style B fill:#3B82F6,stroke:#E2E8F0,color:#FFFFFF
+      style C fill:#3B82F6,stroke:#E2E8F0,color:#FFFFFF
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 18 · THE BIG IDEA</div>
+
+<div class="takeaway-hero">
+  <div class="headline">"Price indexes show the surface trend, but market breadth reveals the actual liquidity and conviction beneath it."</div>
+  <div class="subline">A rising market with shrinking breadth is a warning of illiquidity and institutional distribution.</div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 18 · SUMMARY</div>
+    <h2>Chapter Summary</h2>
+
+<div class="content-card">
+  <p><strong>In One Sentence:</strong> Market breadth indicators measure the internal strength of a trend by tracking the broad participation of individual issues, revealing institutional footprints before price tops.</p>
+  <p><strong>The Setup:</strong> Price indexes can be skewed by cap-weighting, allowing a few large stocks to artificially support the market while underlying equities break down.</p>
+  <p><strong>The Argument:</strong> True market health is determined by widespread participation (liquidity). When breadth diverges from the price index, a reversal is often imminent.</p>
+  <p><strong>The Evidence:</strong> Historical divergences, such as the A-D line peaking in 1998 while the Tech Bubble pushed the composite higher until 2000, and the divergence of new highs in 2007.</p>
+  <p><strong>The Controversy:</strong> Whether to include non-operating issues (ETFs, preferred stocks, bond funds) in breadth calculations, as these represent over 40% of NYSE listings today.</p>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 18 · KEY TAKEAWAYS</div>
+    <h2>Critical Insights</h2>
+
+<ul class="takeaway-list">
+  <li class="takeaway-item">
+    <strong>Breadth precedes price in major reversals</strong>
+    <p><strong>Why it matters:</strong> Broad participation shrinks before the cap-weighted index rolls over.</p>
+    <p><strong>Evidence:</strong> The A-D line peaked in May 1928, over a year before the 1929 crash. <span class="page-ref">Ch 18, p. 214</span></p>
+    <p><strong>Application:</strong> Use breadth as an early warning system to reduce long exposure.</p>
+  </li>
+  <li class="takeaway-item">
+    <strong>Institutions distribute smaller caps first</strong>
+    <p><strong>Why it matters:</strong> Large players must exit illiquid positions slowly while maintaining the illusion of a strong market through big-cap support.</p>
+    <p><strong>Evidence:</strong> Divergent paths of small caps versus large caps at market tops. <span class="page-ref">Ch 18, p. 212</span></p>
+    <p><strong>Caveat:</strong> Divergence can last for years (e.g., 1998-2000) before the actual price collapse.</p>
+  </li>
+  <li class="takeaway-item">
+    <strong>Decimalization altered historical baselines</strong>
+    <p><strong>Why it matters:</strong> Moving from fractions to pennies drastically reduced the buying pressure needed to register a stock as an "advancer."</p>
+    <p><strong>Caveat:</strong> Modern breadth data is skewed; moving a stock now requires one-sixth the capital it did pre-2001. <span class="page-ref">Ch 18, p. 216</span></p>
+  </li>
+</ul>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 18 · MENTAL MODELS</div>
+    <h2>Model 1: Breadth Divergence</h2>
+
+<div class="content-card">
+  <p><strong>Core Principle:</strong> A market trend must be supported by the majority of its participants; if the index climbs while the majority of stocks fall, the trend is starving for liquidity.</p>
+  <p><strong>How It Works:</strong> Large-cap stocks disproportionately pull the index up, masking the weakness in small and mid-cap stocks. Because small-caps are less liquid, smart money sells them first when anticipating a downturn.</p>
+  <p><strong>When to Apply:</strong>
+  <ul>
+    <li>Late-stage bull markets to detect internal exhaustion.</li>
+    <li>During multi-year rallies to distinguish healthy corrections from structural tops.</li>
+  </ul></p>
+  <p><strong>Limitations:</strong> Breadth divergence is a condition, not a timing signal. A market can have "bad breadth" for months or years before correcting.</p>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 18 · MENTAL MODELS</div>
+    <h2>Model 2: Arms Index (TRIN)</h2>
+
+<div class="content-card">
+  <p><strong>Core Principle:</strong> Tracks not just how many stocks are moving, but whether the volume is flowing toward the advancers or the decliners.</p>
+  <p><strong>How It Works:</strong> Calculates the ratio of (Advancing Issues / Declining Issues) divided by (Advancing Volume / Declining Volume). An inverse indicator.</p>
+  <p><strong>Interpretation:</strong>
+  <ul>
+    <li><strong>&lt; 1.0:</strong> Bullish. Up-volume is disproportionately large compared to the number of advancing issues.</li>
+    <li><strong>1.0:</strong> Equilibrium.</li>
+    <li><strong>&gt; 1.0:</strong> Bearish. Down-volume is disproportionately large compared to declining issues.</li>
+  </ul></p>
+  <p><strong>Limitations:</strong> Best used for short-term/intraday timing. Because it is calculated logarithmically, averaging the TRIN arithmetically creates a severe downward bias. <span class="page-ref">Ch 18, p. 222</span></p>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 18 · CONTEXT &amp; BACKGROUND</div>
+    <h2>Rocket Science Meets Wall Street</h2>
+
+<div class="content-card">
+  <p><strong>The Era:</strong> Late 1960s, prior to widespread personal computing.</p>
+  <p><strong>The Innovation:</strong> Peter N. Haurlan, a JPL rocket scientist working on unmanned space probes, realized that the Exponential Moving Averages (EMAs) used to track missile guidance could filter stock market breadth data.</p>
+  <p><strong>The Execution:</strong> Sneaking computer time on JPL mainframes at night, Haurlan introduced EMAs to the stock market. Sherman and Marian McClellan then developed the <strong>McClellan Oscillator</strong> in 1968 by subtracting the 39-day EMA from the 19-day EMA of the A-D line.</p>
+  <p><strong>Modern Evolution:</strong> This aerospace mathematical framework solved the analog computation limits of the 1960s and formed the basis for modern momentum oscillators.</p>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 18 · AUTHOR&#x27;S WARNINGS</div>
+    <h2>Breadth Data Impurities</h2>
+
+<div class="warning-card">
+  <div class="warning-headline">Beware the downward bias of delisted companies</div>
+  <div class="warning-detail"><strong>Why:</strong> Cumulative indicators (like the A-D line) absorb the negative history of bankrupt companies. Once a company goes under, its past declines remain permanently encoded in the cumulative line. Focus on present divergences. <span class="page-ref">Ch 18, p. 215</span></div>
+</div>
+<div class="warning-card">
+  <div class="warning-headline">Do not assume all NYSE issues are common stocks</div>
+  <div class="warning-detail"><strong>Why:</strong> Over 40% of NYSE issues today are ETFs, preferred stocks, or closed-end bond funds. Breadth statistics are heavily polluted by interest-rate-sensitive instruments. <span class="page-ref">Ch 18, p. 217</span></div>
+</div>
+<div class="warning-card">
+  <div class="warning-headline">Do not arithmetically average the Arms Index (TRIN)</div>
+  <div class="warning-detail"><strong>Why:</strong> It's a logarithmic ratio. Averaging TRIN creates a downward mathematical bias. Use anti-logs to smooth the data. <span class="page-ref">Ch 18, p. 222</span></div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 18 · SIGNAL MATRIX</div>
+    <h2>Intraday Arms Index (TRIN)</h2>
+
+<table class="signal-matrix">
+  <thead>
+    <tr><th></th><th>TRIN Falling (&lt; 1.0)</th><th>TRIN Rising (&gt; 1.0)</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th class="row-header">Market Price Declining</th>
+      <td class="warning"><span class="signal-label">Divergence</span>Selling volume drying up. Potential reversal.</td>
+      <td class="bearish"><span class="signal-label">Confirm</span>Declining issues absorbing maximum volume.</td>
+    </tr>
+    <tr>
+      <th class="row-header">Market Price Advancing</th>
+      <td class="bullish"><span class="signal-label">Confirm</span>Advancing issues absorbing heavy buying volume.</td>
+      <td class="warning"><span class="signal-label">Divergence</span>Rally is shallow; lacking volume conviction.</td>
+    </tr>
+  </tbody>
+</table>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 18 · COMPETING VIEWS</div>
+    <h2>The Data Purity Debate</h2>
+
+<div class="content-card">
+  <p><strong>The Debate:</strong> Should market breadth include non-operating companies (ETFs, preferreds, closed-end funds)?</p>
+  <hr>
+  <p><strong>View 1: Purified Operating Companies Only (Paul Desmond / Lowery Research)</strong><br>
+  <em>Claim:</em> Non-operating companies distort the data. By stripping them out, you get a pure equity signal. This method successfully predicted the Fall 2001 market decline while traditional data was bullish. <span class="page-ref">Ch 18, p. 217</span></p>
+  <hr>
+  <p><strong>View 2: Include Everything (Tom McClellan)</strong><br>
+  <em>Claim:</em> Non-operating securities, particularly preferred stocks, are heavily institutionally owned and highly interest-rate sensitive. They provide an excellent gauge of overall market liquidity. Their inclusion actually adds predictive power and reduces whipsaws. <span class="page-ref">Ch 18, p. 218</span></p>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 18 · DEEP DIVE</div>
+    <h2>The Illusion of Cap-Weighting</h2>
+
+<div class="content-card">
+  <p><strong>Core Argument:</strong> The headline price index is a lie of proportion. Large cap stocks can prop up a market while the vast majority of companies are technically broken.</p>
+  <p><strong>Logical Structure:</strong>
+  <ol>
+    <li>Institutional investors manage portfolios too large to exit quickly without collapsing prices.</li>
+    <li>To raise cash, they secretly liquidate less liquid small and mid-cap stocks first.</li>
+    <li>They hold or gently support mega-caps to keep the index elevated and prevent panic.</li>
+    <li>Breadth breaks down (bad internals) while the index price remains high (good externals).</li>
+  </ol></p>
+  <p><strong>Practical Implication:</strong> Never trust a new high in the S&P 500 if the number of new 52-week highs is contracting. <span class="page-ref">Ch 18, p. 212</span></p>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 18 · EVIDENCE EVALUATION</div>
+    <h2>Negative Volume Index (NVI)</h2>
+
+<div class="content-card">
+  <p><strong>Claim:</strong> "NVI proved to be the most valuable of all breadth indexes" (Paul F. Dysart, Jr., 1967). <span class="page-ref">Ch 18, p. 219</span></p>
+  <p><strong>How it Works:</strong> NVI only updates on days when volume is <em>lower</em> than the previous day. It measures what the "smart money" is doing on quiet days, ignoring the retail-driven high-volume noise.</p>
+  <p><strong>Quality Assessment:</strong> ⭐⭐⭐☆☆ (3/5)</p>
+  <p><strong>Weaknesses:</strong> NVI lost its effectiveness in the mid-1960s due to the massive expansion in the number of listed issues.</p>
+  <p><strong>Modern Adaptation:</strong> John A. Carder substituted exchange volume with Dow Jones Industrial volume to rectify the scaling issue, demonstrating that raw 1930s formulas must be continuously adapted to structural market changes.</p>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 18 · IMPLEMENTATION</div>
+    <h2>Applying Breadth Indicators</h2>
+
+<div class="content-card">
+  <p><strong>Phase 1: Understanding</strong><br>
+  Observe the daily Advance-Decline line alongside the S&P 500. Identify the days when they move in opposite directions.</p>
+  <p><strong>Phase 2: Experimentation</strong><br>
+  Add the McClellan Oscillator (Ratio Adjusted) to your charting software. Note market behavior when the oscillator drops below -500 (oversold) and turns up. <span class="page-ref">Ch 18, p. 224</span></p>
+  <p><strong>Phase 3: Integration</strong><br>
+  Before taking any swing trade in an index ETF, check if the TRIN confirms the intraday trend. A rising market with a TRIN &gt; 1.2 is a major warning.</p>
+  <p><strong>Common Pitfall:</strong> Do not use breadth divergence for exact timing. A divergence is a condition indicating illiquidity, but an illiquid bubble can float higher for longer than you can remain solvent.</p>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 18 · REFLECTION</div>
+    <h2>Check Your Understanding</h2>
+
+<div class="content-card">
+  <ul>
+    <li><strong>Understand:</strong> Why does a cumulative advance-decline line naturally have a downward bias over decades?</li>
+    <li><strong>Analyze:</strong> How did decimalization in 2001 forever alter the threshold of what constitutes "buying pressure"?</li>
+    <li><strong>Evaluate:</strong> If 40% of the NYSE is composed of non-operating companies, is the traditional NYSE A-D line obsolete? Should we strictly use operating-company data?</li>
+    <li><strong>Create:</strong> How could you build a personalized breadth indicator for your specific watchlist or sector, rather than the entire market?</li>
+    <li><strong>Ethical:</strong> Does the cap-weighted structure of major indices create a false sense of security for retail index-fund investors during early-stage distribution?</li>
+  </ul>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 18 · CLOSING ACTIONS</div>
+
+<ul class="action-list">
+  <li class="action-item">
+    <div>
+      <div class="action-headline">Track the New Highs / New Lows Ratio</div>
+      <div class="action-detail">Overlay a 52-week High/Low plot on the S&P 500 to immediately spot long-term breadth divergences.</div>
+    </div>
+  </li>
+  <li class="action-item">
+    <div>
+      <div class="action-headline">Use the RASI for intermediate trend entries</div>
+      <div class="action-detail">Monitor the Ratio Adjusted Summation Index. Use a cross above -500 from below as a low-risk entry signal for market advances.</div>
+    </div>
+  </li>
+  <li class="action-item">
+    <div>
+      <div class="action-headline">Disregard TRIN simple moving averages</div>
+      <div class="action-detail">Remove any simple moving averages from your Arms Index (TRIN) chart due to logarithmic bias; use an anti-log smoothing method instead.</div>
+    </div>
+  </li>
+</ul>
+
+  </section>
+
+</div>
+
+<div class="nav-controls">
+  <button class="nav-btn" id="prevBtn" onclick="prevSlide()" aria-label="Previous slide">&#8592;</button>
+  <div class="counter" id="counter" aria-live="polite">1 / 1</div>
+  <button class="nav-btn" id="nextBtn" onclick="nextSlide()" aria-label="Next slide">&#8594;</button>
+</div>
+
+<script src="common.js"></script>
+</body>
+</html>

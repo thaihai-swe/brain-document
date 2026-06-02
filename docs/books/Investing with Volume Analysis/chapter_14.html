@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Investing with Volume Analysis - Chapter 14</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="common.css">
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11.10.0/dist/mermaid.min.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div class="progress-bar" id="progressBar"></div>
+
+<div class="chapter-menu">
+  <button class="menu-btn" id="chapterMenuBtn" onclick="toggleChapterMenu()" aria-haspopup="true" aria-expanded="false">Chapters &#9662;</button>
+  <div class="chapter-menu-panel" id="chapterMenuPanel" role="menu"></div>
+</div>
+
+<div class="slide-container" id="slideContainer">
+
+  <section class="slide chapter-divider">
+<div class="chapter-hero">
+  <div class="chapter-number">CHAPTER 14</div>
+  <h1 class="chapter-title">Price Accumulation Based on Volume Indicators</h1>
+  <div class="chapter-metadata">
+    <div class="metadata-item"><strong>Reading Time:</strong> ~10 mins</div>
+    <div class="metadata-item"><strong>Difficulty:</strong> Intermediate</div>
+    <div class="metadata-item"><strong>Key Concept:</strong> NVI, PVI, Smart Money Footprints</div>
+  </div>
+</div>
+  </section>
+
+  <section class="slide">
+<div class="slide-header">
+  <div class="slide-kicker">CH 14 · VISUAL SUMMARY</div>
+  <h2 class="slide-title">The Institutional Footprint</h2>
+</div>
+<div class="slide-content">
+  <div class="mermaid">
+  graph TD
+      A[Market Volume Behavior] --> B[Volume > Yesterday]
+      A --> C[Volume < Yesterday]
+      B --> D[Positive Volume Index PVI]
+      C --> E[Negative Volume Index NVI]
+      
+      D --> F[Tracks Crowd / Broad Participation]
+      E --> G[Tracks Smart Money / Institutions]
+      
+      F --> H[High Probability of Bull: 79%]
+      G --> I[High Probability of Bull: 96%]
+      
+      style A fill:#1E293B,stroke:#E2E8F0,color:#FFFFFF
+      style B fill:#334155,stroke:#E2E8F0,color:#FFFFFF
+      style C fill:#334155,stroke:#E2E8F0,color:#FFFFFF
+      style D fill:#EF4444,stroke:#E2E8F0,color:#FFFFFF
+      style E fill:#10B981,stroke:#E2E8F0,color:#FFFFFF
+      style G fill:#7C3AED,stroke:#E2E8F0,color:#FFFFFF
+      style I fill:#059669,stroke:#E2E8F0,color:#FFFFFF
+  </div>
+</div>
+  </section>
+
+  <section class="slide">
+<div class="takeaway-hero">
+  <div class="kicker">CH 14 · THE BIG IDEA</div>
+  <div class="headline">"The most valuable information is often hidden in quiet days, not loud ones."</div>
+  <div class="subline">Institutions disguise their accumulation during low-volume sessions, making the Negative Volume Index (NVI) a more precise tracker of "smart money" than high-volume breakouts.</div>
+</div>
+  </section>
+
+  <section class="slide">
+<div class="slide-header">
+  <div class="slide-kicker">CH 14 · KEY TAKEAWAYS</div>
+  <h2 class="slide-title">Unmasking Market Intent</h2>
+</div>
+<div class="slide-content">
+  <div class="takeaway-list">
+    <div class="takeaway-item">
+      <div class="takeaway-title">1. Quiet Days Reveal Institutions</div>
+      <div class="takeaway-text"><strong>Why it matters:</strong> Large players avoid moving the market, accumulating shares when volume is light.</div>
+      <div class="takeaway-text"><strong>Evidence:</strong> NVI captures these footprints. <span class="page-ref">Ch 14, p. 148</span></div>
+      <div class="takeaway-text"><strong>Application:</strong> Watch for rising NVI during market pullbacks.</div>
+    </div>
+    <div class="takeaway-item">
+      <div class="takeaway-title">2. NVI is the Ultimate Bull Market Indicator</div>
+      <div class="takeaway-text"><strong>Why it matters:</strong> NVI identifies structural accumulation before the crowd catches on.</div>
+      <div class="takeaway-text"><strong>Evidence:</strong> NVI above its 1-year average means a 96% chance of a bull market. <span class="page-ref">Ch 14, p. 150</span></div>
+      <div class="takeaway-text"><strong>Caveat:</strong> Below the average, the market is still bullish 47% of the time, making it a weak bear indicator.</div>
+    </div>
+    <div class="takeaway-item">
+      <div class="takeaway-title">3. PVI Exposes the Uninformed Crowd</div>
+      <div class="takeaway-text"><strong>Why it matters:</strong> PVI surges on news and events, attracting retail participants.</div>
+      <div class="takeaway-text"><strong>Evidence:</strong> When PVI falls below its 1-year average, the market is bullish only 33% of the time. <span class="page-ref">Ch 14, p. 150</span></div>
+      <div class="takeaway-text"><strong>Application:</strong> Use PVI breakdowns to identify incoming bear markets.</div>
+    </div>
+  </div>
+</div>
+  </section>
+
+  <section class="slide">
+<div class="slide-header">
+  <div class="slide-kicker">CH 14 · CONTEXT & BACKGROUND</div>
+  <h2 class="slide-title">The Evolution of Price Accumulation</h2>
+</div>
+<div class="slide-content">
+  <div class="content-card">
+    <p><strong>1. Intellectual Tradition</strong></p>
+    <ul>
+      <li><strong>Origin:</strong> Developed by Paul L. Dysart in the 1930s using market breadth statistics. <span class="page-ref">Ch 14, p. 147</span></li>
+      <li><strong>Popularization:</strong> Econometrician Norman G. Fosback adapted them for individual securities in 1976 (<em>Stock Market Logic</em>).</li>
+    </ul>
+    <p><strong>2. Historical Moment vs 2026 Reality</strong></p>
+    <ul>
+      <li><strong>Then (1976):</strong> Institutional trading was done manually. Low volume meant literal quietness on the exchange floor.</li>
+      <li><strong>Now (2026):</strong> Algorithms slice orders into micro-trades (VWAP execution). Dark pools and off-exchange trading hide volume completely. The NVI thesis—that smart money acts quietly—is more relevant today than ever, even as the mechanisms of hiding have grown infinitely more complex.</li>
+    </ul>
+  </div>
+</div>
+  </section>
+
+  <section class="slide">
+<div class="slide-header">
+  <div class="slide-kicker">CH 14 · MENTAL MODELS</div>
+  <h2 class="slide-title">Model 1: The Smart Money Stealth Paradigm</h2>
+</div>
+<div class="slide-content">
+  <div class="content-card">
+    <p><strong>Core Principle:</strong> High volume attracts attention; low volume provides cover. Institutions must buy enormous quantities, but doing so on high-volume days competes with the crowd.</p>
+    <p><strong>How It Works:</strong></p>
+    <ul>
+      <li><strong>The Trap:</strong> Retail investors assume big volume = big money. They buy breakouts.</li>
+      <li><strong>The Truth:</strong> Big money buys the dip when the market is asleep.</li>
+      <li><strong>The Metric:</strong> NVI increments price changes <em>only</em> on days where volume is lower than the previous day. <span class="page-ref">Ch 14, p. 148</span></li>
+    </ul>
+    <p><strong>When to Apply:</strong> During secular bull market pullbacks. If the price drifts lower but NVI holds steady or rises, it confirms institutional accumulation is continuing beneath the surface.</p>
+  </div>
+</div>
+  </section>
+
+  <section class="slide">
+<div class="slide-header">
+  <div class="slide-kicker">CH 14 · MENTAL MODELS</div>
+  <h2 class="slide-title">Model 2: Divergence as Exhaustion</h2>
+</div>
+<div class="slide-content">
+  <div class="content-card">
+    <p><strong>Core Principle:</strong> When price and volume participation diverge, the prevailing trend is nearing exhaustion.</p>
+    <p><strong>How It Works:</strong></p>
+    <ul>
+      <li><strong>Fading Bull:</strong> Prices increase, but volume drops. The crowd is exhausted. PVI diverges or drops.</li>
+      <li><strong>Distribution Phase:</strong> PVI drops while the market climbs, signaling that heavy-volume days are being used by institutions to distribute (sell) to the crowd. <span class="page-ref">Ch 14, p. 150</span></li>
+    </ul>
+    <p><strong>Limitations & 2026 Extrapolation:</strong> In an era of zero-commission algorithmic trading, "heavy volume" can sometimes just be high-frequency market-making noise rather than true crowd participation. Analysts must filter for true directional volume.</p>
+  </div>
+</div>
+  </section>
+
+  <section class="slide">
+<div class="slide-header">
+  <div class="slide-kicker">CH 14 · NOTABLE QUOTES</div>
+  <h2 class="slide-title">The Value of the Negative</h2>
+</div>
+<div class="slide-content">
+  <div class="quote-block">
+    <p class="quote-text">"As we study volume, we will find that quite frequently the negative implications are the ones from which we gain the most useful conclusions."</p>
+    <p class="quote-context">— Harold M. Gartley <span class="page-ref">Ch 14, p. 147</span></p>
+  </div>
+  <div class="content-card" style="margin-top: 1rem;">
+    <p><strong>Interpretation:</strong> Market participants are biologically wired to focus on action—price spikes, volume surges, flashing green screens. Gartley (and later Dysart) recognized that studying the <em>absence</em> of action (negative volume days) strips away the emotional noise and reveals structural intent.</p>
+    <p><strong>Application:</strong> Stop looking solely for breakouts. Look for quiet days where price refuses to fall further, indicating passive institutional bidding.</p>
+  </div>
+</div>
+  </section>
+
+  <section class="slide">
+<div class="slide-header">
+  <div class="slide-kicker">CH 14 · SIGNAL MATRIX</div>
+  <h2 class="slide-title">PVI & NVI Decision Framework</h2>
+</div>
+<div class="slide-content">
+  <table class="signal-matrix">
+    <thead>
+      <tr>
+        <th>Indicator State</th>
+        <th>NVI > 1-Year Avg</th>
+        <th>NVI < 1-Year Avg</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th class="row-header">PVI > 1-Year Avg</th>
+        <td class="bullish"><span class="signal-label">Max Bullish</span>Both Smart & Crowd Buying<br>(79-96% Bullish) <span class="page-ref">Ch 14, p. 150</span></td>
+        <td class="warning"><span class="signal-label">Vulnerable</span>Retail Buying, Institutions Absent<br>Watch for Reversal</td>
+      </tr>
+      <tr>
+        <th class="row-header">PVI < 1-Year Avg</th>
+        <td class="bullish"><span class="signal-label">Stealth Bull</span>Institutions Accumulating<br>Crowd is Scared</td>
+        <td class="bearish"><span class="signal-label">Max Bearish</span>Total Distribution<br>(33% Bullish) <span class="page-ref">Ch 14, p. 150</span></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+  </section>
+
+  <section class="slide">
+<div class="slide-header">
+  <div class="slide-kicker">CH 14 · DEEP DIVE 1</div>
+  <h2 class="slide-title">Analyzing Fosback's 96% Claim</h2>
+</div>
+<div class="slide-content">
+  <div class="content-card">
+    <p><strong>The Claim:</strong> When NVI trends above its one-year moving average, there is a 96% probability the market is bullish. <span class="page-ref">Ch 14, p. 150</span></p>
+    <p><strong>Evidence Assessment:</strong></p>
+    <ul>
+      <li><strong>Timeframe:</strong> Fosback's research covered 1941 through 1975 (34 years).</li>
+      <li><strong>Strength:</strong> Exceptional historically. 96% is a near-certainty in financial statistics, suggesting NVI captures a fundamental mechanical truth about market structure.</li>
+      <li><strong>Confounding Factors:</strong> The 1941-1975 period experienced entirely manual trading, rigid commission structures, and retail dominance. Institutional block trading was handled very differently.</li>
+      <li><strong>The Missing Link:</strong> The text does not provide Fosback's specific definition of "bullish" (e.g., higher prices 6 months out?).</li>
+    </ul>
+  </div>
+</div>
+  </section>
+
+  <section class="slide">
+<div class="slide-header">
+  <div class="slide-kicker">CH 14 · DEEP DIVE 2</div>
+  <h2 class="slide-title">Extrapolating NVI to 2026</h2>
+</div>
+<div class="slide-content">
+  <div class="content-card">
+    <p><strong>The Modern Challenge:</strong> In the 2020s, up to 40% of equity volume executes off-exchange in "Dark Pools". Can NVI still track Smart Money?</p>
+    <p><strong>The Extrapolation:</strong></p>
+    <ul>
+      <li>Dark pool prints are eventually reported to the consolidated tape. High volume days <em>still</em> reflect broad participation (including retail options mania), while low volume days <em>still</em> reflect the underlying algorithmic baseline.</li>
+      <li><strong>Algorithmic Execution:</strong> TWAP (Time-Weighted) and VWAP (Volume-Weighted) execution algorithms are explicitly designed to mirror Dysart's logic—buying precisely when they will not disturb the market (low volume).</li>
+      <li><strong>Conclusion:</strong> NVI's core philosophical premise—that large buyers suppress their own footprints—survives modern market structure changes because it relies on the mechanical limits of liquidity, not human psychology.</li>
+    </ul>
+  </div>
+</div>
+  </section>
+
+  <section class="slide">
+<div class="slide-header">
+  <div class="slide-kicker">CH 14 · READING LAYERS</div>
+  <h2 class="slide-title">Multi-Dimensional Analysis</h2>
+</div>
+<div class="slide-content">
+  <div class="content-card">
+    <ul>
+      <li><strong>Layer 1 (Surface):</strong> NVI tracks price on down-volume days; PVI tracks price on up-volume days. Fosback proved NVI is highly predictive. <span class="page-ref">Ch 14, p. 148</span></li>
+      <li><strong>Layer 2 (Structural):</strong> The author uses inverse logic. Instead of finding strength in obvious places (high volume), true strength is found by filtering out the noise (PVI) and isolating the signal (NVI).</li>
+      <li><strong>Layer 3 (Contextual):</strong> The indicators bridge the gap from Dysart's 1930s breadth theory to Fosback's 1970s quantitative modeling, representing an early attempt at algorithmic signal processing.</li>
+      <li><strong>Layer 4 (Critical):</strong> NVI is useless for highly illiquid small-cap stocks where a single retail order can dictate the "up-volume" day. It works best on broad indices (S&P 500).</li>
+      <li><strong>Layer 5 (Generative):</strong> How could we build a "Dark Pool NVI" in 2026? By measuring price accumulation only on days where dark pool ratio > 50% of total volume.</li>
+    </ul>
+  </div>
+</div>
+  </section>
+
+  <section class="slide">
+<div class="slide-header">
+  <div class="slide-kicker">CH 14 · COMPETING VIEWS</div>
+  <h2 class="slide-title">Is Volume Truly a "Footprint"?</h2>
+</div>
+<div class="slide-content">
+  <div class="content-card">
+    <p><strong>This Chapter's Position:</strong> Volume acts as an unavoidable physical footprint. Institutions cannot hide their actions; they can only delay them to low-volume days (NVI).</p>
+    <p><strong>Alternative View: Efficient Market Hypothesis (Fama)</strong></p>
+    <ul>
+      <li><strong>Core Claim:</strong> Volume is irrelevant noise. Price already reflects all known public information.</li>
+      <li><strong>Why They Differ:</strong> EMH assumes infinite, instant liquidity and instantaneous information dissemination. Dysart/Fosback assume liquidity is finite and institutions require time (days/weeks) to build positions.</li>
+      <li><strong>When EMH is Right:</strong> During massive macroeconomic shocks (e.g., Fed rate surprises), price adjusts instantly regardless of NVI/PVI.</li>
+      <li><strong>When NVI is Right:</strong> During structural, multi-month economic transitions where institutions slowly deploy capital.</li>
+    </ul>
+  </div>
+</div>
+  </section>
+
+  <section class="slide">
+<div class="slide-header">
+  <div class="slide-kicker">CH 14 · EVIDENCE EVALUATION</div>
+  <h2 class="slide-title">Assessing Fosback's Quantitative Claim</h2>
+</div>
+<div class="slide-content">
+  <div class="content-card">
+    <p><strong>Claim:</strong> "If the PVI trends below its one-year average, the market is bullish only 33% of the time." <span class="page-ref">Ch 14, p. 150</span></p>
+    <p><strong>Quality Score:</strong> ⭐⭐⭐☆☆ (3/5)</p>
+    <ul>
+      <li><strong>Strengths:</strong> Long historical sample (34 years), binary rule-based testing (above/below average), addresses downside risk specifically.</li>
+      <li><strong>Weaknesses:</strong> The data ends in 1975. The market has undergone Decimalization (2001), High-Frequency Trading dominance, and the shift from active to passive indexing (ETFs). </li>
+      <li><strong>Modern Relevance (2026):</strong> PVI's effectiveness may be diluted by passive ETF inflows which mechanically execute regardless of market conditions. However, the psychological exhaustion of the crowd remains a constant.</li>
+    </ul>
+  </div>
+</div>
+  </section>
+
+  <section class="slide">
+<div class="slide-header">
+  <div class="slide-kicker">CH 14 · REFLECTION QUESTIONS</div>
+  <h2 class="slide-title">Testing Your Understanding</h2>
+</div>
+<div class="slide-content">
+  <div class="content-card">
+    <ul>
+      <li><strong>Remember:</strong> Which index (PVI or NVI) captures the actions of the "smart money" during low-volume days?</li>
+      <li><strong>Understand:</strong> Why does a rising PVI in a mature bull market indicate that a reversal might be imminent?</li>
+      <li><strong>Apply:</strong> If the S&P 500 rises 2% today, but volume is lower than yesterday, how do the PVI and NVI react?</li>
+      <li><strong>Analyze:</strong> Why might NVI be more reliable for broad market indices than for individual micro-cap stocks?</li>
+      <li><strong>Evaluate:</strong> Do you believe Fosback's 96% success rate for NVI holds up in an era dominated by algorithmic trading? Why or why not?</li>
+      <li><strong>Create:</strong> How would you combine NVI with a price-momentum indicator like MACD to create a complete trading system?</li>
+    </ul>
+  </div>
+</div>
+  </section>
+
+  <section class="slide">
+<div class="slide-header">
+  <div class="slide-kicker">CH 14 · CLOSING ACTIONS</div>
+  <h2 class="slide-title">Deploying NVI and PVI</h2>
+</div>
+<div class="slide-content">
+  <ul class="action-list">
+    <li class="action-item">
+      <div>
+        <div class="action-headline">Chart NVI on the S&P 500 Index</div>
+        <div class="action-detail">Overlay a 252-day (1-year) Simple Moving Average on the NVI. Use it strictly as a primary trend filter.</div>
+      </div>
+    </li>
+    <li class="action-item">
+      <div>
+        <div class="action-headline">Ignore PVI for Entry Signals</div>
+        <div class="action-detail">Treat PVI as a risk-management tool. If PVI breaks below its 1-year average, tighten stop-losses on all long positions.</div>
+      </div>
+    </li>
+    <li class="action-item">
+      <div>
+        <div class="action-headline">Look for Divergence in Pullbacks</div>
+        <div class="action-detail">When price drops 5% but NVI remains flat or rises, treat it as a high-probability institutional buy-the-dip setup.</div>
+      </div>
+    </li>
+  </ul>
+</div>
+  </section>
+
+</div>
+
+<div class="nav-controls">
+  <button class="nav-btn" id="prevBtn" onclick="prevSlide()" aria-label="Previous slide">&#8592;</button>
+  <div class="counter" id="counter" aria-live="polite">1 / 1</div>
+  <button class="nav-btn" id="nextBtn" onclick="nextSlide()" aria-label="Next slide">&#8594;</button>
+</div>
+
+<script src="common.js"></script>
+</body>
+</html>

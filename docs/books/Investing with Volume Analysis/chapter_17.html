@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Investing with Volume Analysis — Chapter 17</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="common.css">
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11.10.0/dist/mermaid.min.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div class="progress-bar" id="progressBar"></div>
+
+<div class="chapter-menu">
+  <button class="menu-btn" id="chapterMenuBtn" onclick="toggleChapterMenu()" aria-haspopup="true" aria-expanded="false">Chapters &#9662;</button>
+  <div class="chapter-menu-panel" id="chapterMenuPanel" role="menu"></div>
+</div>
+
+<div class="slide-container" id="slideContainer">
+
+  <section class="slide" aria-hidden="false">
+<section class="slide" aria-hidden="false">
+  <h1>Investing with Volume Analysis</h1>
+  <p class="subtitle">Buff Dormeier — Chapter 17: The Volume Price Confirmation Indicator</p>
+  <div class="meta-grid">
+    <div class="meta-item">
+      <div class="meta-label">DEEP MODE</div>
+      <div class="meta-value">16 Slides</div>
+    </div>
+    <div class="meta-item">
+      <div class="meta-label">READING TIME</div>
+      <div class="meta-value">~15 mins</div>
+    </div>
+  </div>
+</section>
+  </section>
+
+  <section class="slide chapter-divider">
+<section class="slide chapter-divider">
+  <div class="chapter-number">Chapter 17</div>
+  <h2>The Volume Price Confirmation Indicator</h2>
+  <p class="chapter-meta">Est. reading time: 15 mins · Difficulty: Advanced · Key Concepts: VPCI, VPC, VPR, VM, Contradiction</p>
+</section>
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 17 · VISUAL SUMMARY</div>
+    <h2>The Architecture of VPCI</h2>
+<div class="mermaid">
+graph TD
+    A[Long VWMA] -->|Minus| B[Long SMA]
+    B --> C(VPC: Volume-Price Confirmation)
+    D[Short VWMA] -->|Divided by| E[Short SMA]
+    E --> F(VPR: Volume-Price Ratio)
+    G[Short Vol Avg] -->|Divided by| H[Long Vol Avg]
+    H --> I(VM: Volume Multiplier)
+    C --> J{VPCI}
+    F --> J
+    I --> J
+    J -->|Positive| K[Confirms Uptrend]
+    J -->|Negative| L[Confirms Downtrend]
+    
+    style J fill:#7C3AED,stroke:#2A2D33,color:#FFFFFF
+</div>
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 17 · THE BIG IDEA</div>
+    <h2>The Big Idea</h2>
+<div class="takeaway-hero">
+  <div class="kicker">CH 17 · THE BIG IDEA</div>
+  <div class="headline">"The VPCI reconciles volume and price, exposing the inherent asymmetry between price trends and volume-weighted price trends."</div>
+  <div class="subline">Volume validates the trend; lack of volume contradicts it, warning of a looming reversal before it happens.</div>
+</div>
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 17 · CONTEXT &amp; BACKGROUND</div>
+    <h2>The Evolution of Volume Metrics</h2>
+<div class="content-card">
+  <h3>The Evolution of Volume Metrics</h3>
+  <p><strong>Author's Lens:</strong> Buff Dormeier developed the VPCI (Volume Price Confirmation Indicator) as a proprietary method to identify securities experiencing positive price-volume characteristics over long trends. His approach relies heavily on systematic backtesting to validate concepts.</p>
+  <p><strong>Historical Context:</strong> Discovered around 2002, the VPCI successfully signaled major intermediate-term broad market bottoms (like the 2003 V-bottom and the massive March 2009 bottom). It emerged in an era where algorithmic and quantitative validations of technical indicators became essential.</p>
+  <p><strong>Intellectual Tradition:</strong> The VPCI builds upon the foundation of Joe Granville's On-Balance Volume (OBV). While OBV aggregates raw volume flows historically, VPCI creates a snapshot of volume's current proportional influence on price using volume-weighted moving averages (VWMA) versus simple moving averages (SMA).</p>
+</div>
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 17 · KEY TAKEAWAYS</div>
+    <h2>Core Insights</h2>
+<div class="content-card">
+<ul class="takeaway-list">
+  <li class="takeaway-item" style="margin-bottom: 1rem;">
+    <div>
+      <strong>VPCI Contrasts VWMAs with SMAs</strong>
+      <div class="takeaway-detail" style="margin-top: 0.5rem; font-size: 0.9em; color: var(--text-secondary);"><strong>Why it matters:</strong> While SMAs show price changes, VWMAs reflect investor participation. The difference exposes the intrinsic relationship between trend and volume.</div>
+    </div>
+  </li>
+  <li class="takeaway-item" style="margin-bottom: 1rem;">
+    <div>
+      <strong>VPCI Above Zero Confirms Uptrends</strong>
+      <div class="takeaway-detail" style="margin-top: 0.5rem; font-size: 0.9em; color: var(--text-secondary);"><strong>Application:</strong> Positive numbers confirm an uptrend. Negative numbers confirm a downtrend. A rising VPCI while prices fall signals an imminent reversal (bullish contradiction). <span class="page-ref">Ch 17, p. 185</span></div>
+    </div>
+  </li>
+  <li class="takeaway-item" style="margin-bottom: 1rem;">
+    <div>
+      <strong>Volume Leads Price Action</strong>
+      <div class="takeaway-detail" style="margin-top: 0.5rem; font-size: 0.9em; color: var(--text-secondary);"><strong>Evidence:</strong> Unlike lagging price indicators, VPCI typically gives signals prior to price breaks. The March 2009 V-bottom in VPCI signaled the exact end of the bear market. <span class="page-ref">Ch 17, p. 188</span></div>
+    </div>
+  </li>
+  <li class="takeaway-item">
+    <div>
+      <strong>VPCI Consistently Outperforms OBV</strong>
+      <div class="takeaway-detail" style="margin-top: 0.5rem; font-size: 0.9em; color: var(--text-secondary);"><strong>Evidence:</strong> Backtesting SPY (1993-2006) showed VPCI returning an 8.11% annualized return with a 0.74 Sharpe ratio, vastly outperforming OBV's -1.57% return. <span class="page-ref">Ch 17, p. 202</span></div>
+    </div>
+  </li>
+</ul>
+</div>
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 17 · MENTAL MODELS</div>
+    <h2>Proportional Imbalance</h2>
+<div class="mental-model-card">
+  <h4 class="model-name" style="color: var(--accent-purple);">Proportional Imbalance (Greed vs. Entropy)</h4>
+  <div class="model-principle">A price trend requires proportional volume fuel to sustain itself; otherwise, it is driven by complacency or apathy rather than true conviction.</div>
+  <div class="model-application" style="margin-top: 1rem;">
+    <strong>The Four States:</strong>
+    <ul>
+      <li><strong>Invigorated Greed:</strong> Uptrend + Increasing Volume (Strong Demand). Market is supported by the fuel it needs to grow.</li>
+      <li><strong>Complacency:</strong> Uptrend + Decreasing Volume (Weak Demand). Greed with entropy; the trend will break down as fuel dissipates.</li>
+      <li><strong>Fear:</strong> Downtrend + Increasing Volume (Strong Supply). Fear is fed by panic selling energy.</li>
+      <li><strong>Apathy:</strong> Downtrend + Decreasing Volume (Weak Supply). Fear with entropy; a slow, agonizing bleed.</li>
+    </ul>
+  </div>
+  <div class="model-limitations" style="margin-top: 1rem;">
+    <strong>⚠️ Limitations:</strong> Fear can be self-sustaining for long periods without volume (apathy), whereas greed requires a constant influx of new buyers (volume). <span class="page-ref">Ch 17, p. 188</span>
+  </div>
+</div>
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 17 · NOTABLE QUOTES</div>
+    <h2>Fueling the Trend</h2>
+<div class="quote-block" style="margin-bottom: 2rem;">
+  <p class="quote-text" style="font-size: 1.2em; font-style: italic; color: var(--accent-amber);">"An uptrend with increasing volume is a market characterized by greed supported by the fuel it needs to grow. An uptrend without volume is complacent; greed deprived it of the fuel needed to sustain itself."</p>
+  <p class="quote-context">— Buff Dormeier, explaining the behavioral underpinnings of the VPCI. <span class="page-ref">Ch 17, p. 186</span></p>
+</div>
+<div class="content-card">
+  <p><strong>Interpretation:</strong> Price movement alone doesn't guarantee the sustainability of a trend. Volume acts as the metabolic rate of the market. Without participation, an uptrend is hollow and vulnerable to the slightest selling pressure. Conversely, a fearful market can collapse under its own weight, but a greedy market requires fresh capital.</p>
+</div>
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 17 · SIGNAL MATRIX</div>
+    <h2>Price-Volume Relationship Matrix</h2>
+<div class="content-card">
+<table class="signal-matrix" style="width: 100%; border-collapse: collapse;">
+  <thead>
+    <tr style="border-bottom: 2px solid var(--border);">
+      <th style="padding: 10px; text-align: left;"></th>
+      <th style="padding: 10px; text-align: left;">VPCI Rising</th>
+      <th style="padding: 10px; text-align: left;">VPCI Declining</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style="border-bottom: 1px solid var(--border);">
+      <th class="row-header" style="padding: 10px; text-align: left;">Price Rising</th>
+      <td class="bullish" style="padding: 10px; color: var(--accent-emerald);"><strong>Confirmation</strong><br>Bullish: Trend supported by expanding volume.</td>
+      <td class="warning" style="padding: 10px; color: var(--accent-amber);"><strong>Contradiction</strong><br>Bearish: Price moving up, but volume participation is weak.</td>
+    </tr>
+    <tr>
+      <th class="row-header" style="padding: 10px; text-align: left;">Price Declining</th>
+      <td class="bullish" style="padding: 10px; color: var(--accent-emerald);"><strong>Contradiction</strong><br>Bullish: Price dropping, but true selling pressure is weak/buyers accumulating.</td>
+      <td class="bearish" style="padding: 10px; color: var(--accent-red);"><strong>Confirmation</strong><br>Bearish: Heavy supply driving price down.</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<div style="margin-top:20px; font-size: 0.9em; color: var(--text-secondary);">
+  <em>Note: The intersection of price trends and VPCI provides early warnings before price breaks. <span class="page-ref">Table 17.2</span></em>
+</div>
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 17 · DEEP DIVE</div>
+    <h2>The Mathematics of VPCI</h2>
+<div class="deep-section">
+  <div class="split-layout">
+    <div class="split-left">
+      <h4 style="color: var(--accent);">The 3 Pillars of VPCI</h4>
+      <ul style="line-height: 1.6;">
+        <li><strong>VPC (Volume-Price Confirmation):</strong> <code>VWMA(long) - SMA(long)</code>. The pure asymmetry between volume-weighted and simple price. Measures baseline alignment.</li>
+        <li><strong>VPR (Volume-Price Ratio):</strong> <code>VWMA(short) / SMA(short)</code>. Accentuates VPC relative to recent volume relationships. A value >1 increases the weight of the VPC.</li>
+        <li><strong>VM (Volume Multiplier):</strong> <code>AvgVol(short) / AvgVol(long)</code>. Overweights the indicator when volume is actively expanding.</li>
+      </ul>
+    </div>
+    <div class="split-right">
+      <h4 style="color: var(--accent);">Synthesis</h4>
+      <p style="font-size: 1.2em; font-weight: bold; margin-bottom: 1rem;">VPCI = VPC × VPR × VM</p>
+      <p>Instead of merely smoothing out noise, VPCI acts as an amplifying filter. It magnifies the underlying price trend <em>only</em> when sustained participation (VWMA vs SMA) and short-term intensity (Volume Multiplier) validate the move.</p>
+    </div>
+  </div>
+</div>
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 17 · READING LAYERS</div>
+    <h2>Multi-Dimensional Analysis</h2>
+<div class="content-card">
+  <ul style="list-style: none; padding-left: 0; gap: 1rem; display: flex; flex-direction: column;">
+    <li style="border-left: 4px solid var(--accent); padding-left: 1rem;">
+      <strong>Layer 1: Surface</strong><br>
+      The VPCI is a custom mathematical formula using VWMAs to validate price trends and expose divergences before they manifest in price action alone.
+    </li>
+    <li style="border-left: 4px solid var(--accent-cyan); padding-left: 1rem; margin-top: 1rem;">
+      <strong>Layer 2: Structural</strong><br>
+      Dormeier builds his case systematically: Formula definition → Behavioral interpretation (Greed/Fear) → Visual chart examples (V-bottoms) → Rigorous quantitative backtesting on 60 stocks.
+    </li>
+    <li style="border-left: 4px solid var(--accent-amber); padding-left: 1rem; margin-top: 1rem;">
+      <strong>Layer 3: Contextual</strong><br>
+      He contrasts VPCI heavily with OBV (On-Balance Volume). Since OBV was the dominant volume paradigm for decades, proving VPCI's superiority through backtesting establishes a "new generation" of volume analysis.
+    </li>
+    <li style="border-left: 4px solid var(--accent-purple); padding-left: 1rem; margin-top: 1rem;">
+      <strong>Layer 5: Generative</strong><br>
+      VPCI doesn't just have to be a standalone oscillator. It can be used as a dynamically adjusting factor for stop losses (e.g., dividing your stop-loss distance by the VPCI to tighten stops automatically when complacency sets in). <span class="page-ref">Ch 17, p. 204</span>
+    </li>
+  </ul>
+</div>
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 17 · EVIDENCE EVALUATION</div>
+    <h2>Testing the Strategy</h2>
+<div class="evidence-card">
+  <div class="evidence-header">
+    <span class="claim-text" style="font-weight: bold; font-size: 1.1em;">VPCI Significantly Outperforms Traditional Moving Average Systems</span>
+    <span class="quality-score" style="color: var(--accent-cyan);">⭐⭐⭐⭐☆ 4/5</span>
+  </div>
+  <div class="evidence-type" style="margin-top: 0.5rem; margin-bottom: 1rem;">📊 Empirical Data</div>
+  <div class="evidence-body">
+    <p><strong>The Study:</strong> Tested a 5/20-day moving average crossover system from August 1996 to June 2004 across 60 stocks (spanning 12 subgroups of capitalization, volume, and volatility).</p>
+    <p><strong>Results:</strong> Adding VPCI confirmation improved profitability in 65% of the issues (39 of 60), boosting overall profits by $211,997. The profit factor improved by 19% across the board.</p>
+    <p><strong>Strengths:</strong> A wide array of market caps and styles were tested to prevent curve-fitting. Applied systematically across long and short sides without discretionary intervention.</p>
+    <p><strong>Weaknesses:</strong> Excluded trading commissions and slippage. Tested on older data ending in 2004 (though fundamental volume principles are persistent).</p>
+  </div>
+</div>
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 17 · COMPETING VIEWS</div>
+    <h2>VPCI vs. OBV</h2>
+<div class="split-layout">
+  <div class="split-left" style="border-top: 4px solid var(--text-secondary); padding-top: 1rem;">
+    <h4>On-Balance Volume (Granville)</h4>
+    <p><strong>Philosophy:</strong> Accumulates daily volume based on close direction (+ volume on up days, - volume on down days). Uncovers hidden "coils" in trendless markets.</p>
+    <p><strong>Weakness:</strong> Accumulates historical baggage. A massive volume spike five years ago permanently skews the absolute OBV value today, making it slow to react to modern shifts.</p>
+    <p><strong>Performance (SPY 1993-2006):</strong> Annualized Return -1.57%, Sharpe Ratio -0.09.</p>
+  </div>
+  <div class="split-right" style="border-top: 4px solid var(--accent-purple); padding-top: 1rem;">
+    <h4>VPCI (Dormeier)</h4>
+    <p><strong>Philosophy:</strong> Provides a time-bound snapshot of volume's direct influence on price over specific moving averages. Evaluates trend health without holding permanent historical baggage.</p>
+    <p><strong>Strength:</strong> Dynamic, adapts to recent market structure, filters out distant historical noise, and confirms existing trends rapidly.</p>
+    <p><strong>Performance (SPY 1993-2006):</strong> Annualized Return +8.11%, Sharpe Ratio 0.74.</p>
+  </div>
+</div>
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 17 · IMPLEMENTATION GUIDE</div>
+    <h2>Systematic Implementation</h2>
+<div class="phase-progress" style="display: flex; gap: 1rem; margin-bottom: 2rem;">
+  <div class="phase active" style="font-weight: bold; color: var(--accent);">1. Set Up Averages</div>
+  <div class="phase">2. Overlay VPCI</div>
+  <div class="phase">3. Identify Divergence</div>
+  <div class="phase">4. Risk Control</div>
+</div>
+<div class="content-card">
+  <h4>Systematic Implementation Workflow</h4>
+  <ul style="line-height: 1.6;">
+    <li><strong>Averages:</strong> Establish a long-term (e.g., 20-day or 50-day) and short-term (e.g., 5-day or 10-day) VWMA and SMA baseline in your charting software.</li>
+    <li><strong>Overlay:</strong> Add VPCI, a smoothed average of VPCI, and a zero-line histogram.</li>
+    <li><strong>Signals:</strong> Look for VPCI crossing above VPCI Smoothed while below zero as an early entry signal. Wait to confirm with price breaking a trendline to prevent false starts.</li>
+    <li><strong>Risk Control:</strong> Divide your trailing stop distance by the raw VPCI. If VPCI diverges (goes negative while price is high), your stop automatically tightens, preserving capital before the drop.</li>
+  </ul>
+</div>
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 17 · REFLECTION QUESTIONS</div>
+    <h2>Deepening the Concepts</h2>
+<div class="content-card">
+  <ul style="list-style: none; padding-left: 0; line-height: 1.8;">
+    <li>🤔 <strong>Comprehension:</strong> How does the Volume Multiplier (VM) conceptually differ from the Volume-Price Ratio (VPR) in the VPCI formula?</li>
+    <li>🤔 <strong>Analysis:</strong> Why might a downtrend continue for long periods without strong volume (apathy), whereas an uptrend requires constant volume (invigorated greed) to survive?</li>
+    <li>🤔 <strong>Application:</strong> Review a recent trade where you were stopped out prematurely. Did the VPCI signal a contradiction (price rising while VPCI fell) prior to the reversal?</li>
+    <li>🤔 <strong>Synthesis:</strong> How could you combine VPCI with Bollinger Bands to identify absolute volume-exhaustion extremes (e.g., historical V-bottoms)?</li>
+    <li>🤔 <strong>Evaluation:</strong> Does VPCI's reliance on closing prices (since it is built on VWMA/SMA) introduce any blind spots compared to intraday metrics?</li>
+  </ul>
+</div>
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 17 · CLOSING ACTIONS</div>
+    <h2>Next Steps</h2>
+<ul class="action-list">
+  <li class="action-item">
+    <div style="margin-bottom: 1rem;">
+      <div class="action-headline" style="font-weight: bold; color: var(--accent); font-size: 1.1em;">Program VPCI into Your Platform</div>
+      <div class="action-detail" style="margin-top: 0.25rem;">Code the specific parameters (VPC × VPR × VM) with 5-day and 20-day averages as a baseline starting point to evaluate your watchlists.</div>
+    </div>
+  </li>
+  <li class="action-item">
+    <div style="margin-bottom: 1rem;">
+      <div class="action-headline" style="font-weight: bold; color: var(--accent); font-size: 1.1em;">Scan for "VPCI Smoothed" Crossovers</div>
+      <div class="action-detail" style="margin-top: 0.25rem;">Set up alerts for the crossover of VPCI above its smoothed average. Use this as an early momentum indication of a shifting volume-price relationship.</div>
+    </div>
+  </li>
+  <li class="action-item">
+    <div>
+      <div class="action-headline" style="font-weight: bold; color: var(--accent); font-size: 1.1em;">Dynamically Adjust Stops</div>
+      <div class="action-detail" style="margin-top: 0.25rem;">Test using VPCI as a divisor for your trailing stops. This will automatically tighten your risk when volume fails to confirm price highs, and loosen it when conviction is strong.</div>
+    </div>
+  </li>
+</ul>
+  </section>
+
+</div>
+
+<div class="nav-controls">
+  <button class="nav-btn" id="prevBtn" onclick="prevSlide()" aria-label="Previous slide">&#8592;</button>
+  <div class="counter" id="counter" aria-live="polite">1 / 1</div>
+  <button class="nav-btn" id="nextBtn" onclick="nextSlide()" aria-label="Next slide">&#8594;</button>
+</div>
+
+<script src="common.js"></script>
+</body>
+</html>

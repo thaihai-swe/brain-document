@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Investing with Volume Analysis — Chapter 22</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="common.css">
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11.10.0/dist/mermaid.min.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div class="progress-bar" id="progressBar"></div>
+
+<div class="chapter-menu">
+  <button class="menu-btn" id="chapterMenuBtn" onclick="toggleChapterMenu()" aria-haspopup="true" aria-expanded="false">Chapters &#9662;</button>
+  <div class="chapter-menu-panel" id="chapterMenuPanel" role="menu"></div>
+</div>
+
+<div class="slide-container" id="slideContainer">
+
+  <section class="slide chapter-divider">
+
+    <div class="slide-container">
+      <div class="content-card">
+        <div class="kicker">Chapter 22</div>
+        <h1 class="chapter-title">Modern Day Volume Issues</h1>
+        <div class="chapter-metadata">
+          <div class="meta-item"><strong>Reading Time:</strong> ~25 mins</div>
+          <div class="meta-item"><strong>Difficulty:</strong> Advanced</div>
+          <div class="meta-item"><strong>Key Concepts:</strong> High-Frequency Trading, Dark Pools, Market Fragmentation, Liquidity Depth, Data Reliability</div>
+        </div>
+        <div class="chapter-summary">
+          <p>An exploration of how modern market structures—driven by decimalization, algorithmic trading, and alternative trading systems—have fundamentally altered volume dynamics and data reporting, and why traditional volume analysis still holds true amidst the noise.</p>
+        </div>
+      </div>
+    </div>
+    
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 22 · VISUAL SUMMARY</div>
+    <h2>The Fragmented Market</h2>
+
+    <div class="slide-container">
+      <h2 class="slide-title">Visual Summary: The Fragmented Market</h2>
+      <div class="content-card">
+        <div class="mermaid">
+        graph TD
+            A[Investor Orders] --> B{Order Routing}
+            B -->|Lit Markets| C[Public Exchanges <br>NYSE, Nasdaq]
+            B -->|Dark Liquidity| D[Alternative Trading Systems <br>Dark Pools, Internalizers]
+            B -->|Algorithmic| E[High-Frequency Traders <br>Scalping, Stat Arb]
+            
+            C --> F[Consolidated Tape]
+            D -->|90-sec delay, no quotes| F
+            E -->|Quote Flickering / Gaming| F
+            
+            F --> G[Volume Analyst]
+            
+            style A fill:#1E293B,stroke:#94A3B8,color:#FFFFFF
+            style B fill:#334155,stroke:#94A3B8,color:#FFFFFF
+            style C fill:#059669,stroke:#6EE7B7,color:#FFFFFF
+            style D fill:#7C3AED,stroke:#C4B5FD,color:#FFFFFF
+            style E fill:#DC2626,stroke:#FCA5A5,color:#FFFFFF
+            style F fill:#2563EB,stroke:#93C5FD,color:#FFFFFF
+            style G fill:#0F172A,stroke:#475569,color:#FFFFFF
+        </div>
+        <div class="text-sm text-slate-600 mt-4 text-center">Volume data is aggregated from multiple disparate sources, creating structural noise that analysts must navigate.</div>
+      </div>
+    </div>
+    
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 22 · THE BIG IDEA</div>
+    <h2>Volume ≠ Liquidity</h2>
+
+    <div class="slide-container">
+      <div class="takeaway-hero">
+        <div class="kicker">CH 22 · THE BIG IDEA</div>
+        <div class="headline">"Higher volume does not inherently mean deeper liquidity; it often masks fragile, transient participation."</div>
+        <div class="subline">While HFT and decimalization have exploded overall share volume, the true demand driving price movement remains anchored in persistent human conviction, not algorithmic scalping.</div>
+      </div>
+    </div>
+    
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 22 · CONTEXT &amp; BACKGROUND</div>
+    <h2>Market Evolution</h2>
+
+    <div class="slide-container">
+      <h2 class="slide-title">Context & Background: Market Evolution</h2>
+      <div class="content-card">
+        <h3>1. The Traditional Floor (Pre-2000s)</h3>
+        <ul>
+          <li><strong>Structure:</strong> Centralized order books dominated by physical floor brokers and market makers.</li>
+          <li><strong>Mechanics:</strong> Wide spreads (fractions, 1/8th). Specialists had a mandate to maintain a "fair and orderly market." <span class="page-ref">Ch 22, p. 314</span></li>
+        </ul>
+        
+        <h3>2. The Modern Era (Post-Reg NMS & Decimalization)</h3>
+        <ul>
+          <li><strong>Regulatory Shift:</strong> SEC deregulated fixed commissions (1975) and mandated decimalization (2001), lowering spreads and barriers to entry. <span class="page-ref">Ch 22, p. 305</span></li>
+          <li><strong>Technological Shift:</strong> The rise of Electronic Communication Networks (ECNs) and Regulation NMS fostered an open, hyper-fast, fragmented architecture.</li>
+        </ul>
+
+        <h3>3. The Author's Stance</h3>
+        <ul>
+          <li><strong>Core View:</strong> While the market mechanics have changed drastically, the underlying purpose of volume analysis—identifying true supply and demand—remains completely valid.</li>
+        </ul>
+      </div>
+    </div>
+    
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 22 · MENTAL MODELS</div>
+    <h2>The Double-Edged Sword of Liquidity</h2>
+
+    <div class="slide-container">
+      <h2 class="slide-title">Mental Models: Liquidity vs. Volatility</h2>
+      <div class="content-card">
+        <h3>Model: The Double-Edged Sword of Liquidity</h3>
+        <p><strong>Core Principle:</strong> In modern markets, displayed liquidity is often highly conditional and can evaporate instantly during stress, leading to extreme volatility. <span class="page-ref">Ch 22, p. 320</span></p>
+        
+        <p><strong>How It Works:</strong></p>
+        <ul>
+          <li><strong>Normal Conditions:</strong> High-Frequency Traders (HFTs) act as <em>de facto</em> market makers, providing immense short-term liquidity and keeping spreads razor-thin (e.g., less than 2 cents).</li>
+          <li><strong>Stress Conditions:</strong> Unlike traditional specialists, HFTs have no mandate to maintain order. During systemic shocks, they shut down their algorithms, removing the liquidity buffer entirely.</li>
+        </ul>
+
+        <p><strong>Example from Chapter:</strong></p>
+        <ul>
+          <li>The <em>Flash Crash of May 6, 2010</em>: The Dow dropped 600 points in 5 minutes because order flow was routed to electronic markets where liquidity vanished, creating a one-sided market. <span class="page-ref">Ch 22, p. 320</span></li>
+        </ul>
+      </div>
+    </div>
+    
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 22 · COMPARISON</div>
+    <h2>Traditional vs Modern Markets</h2>
+
+    <div class="slide-container">
+      <h2 class="slide-title">Comparison: Traditional vs. Modern Market Structure</h2>
+      <div class="content-card">
+        <table>
+          <thead>
+            <tr>
+              <th>Aspect</th>
+              <th>Traditional Market (1990s)</th>
+              <th>Modern Market (2010s+)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Primary Venues</strong></td>
+              <td>Centralized (Few exchanges, ~80% volume)</td>
+              <td>Fragmented (13 exchanges, 70+ ATS/Dark Pools)</td>
+            </tr>
+            <tr>
+              <td><strong>Liquidity Providers</strong></td>
+              <td>Human specialists & market makers</td>
+              <td>Algorithms & High-Frequency Traders</td>
+            </tr>
+            <tr>
+              <td><strong>Obligations</strong></td>
+              <td>Mandated to maintain fair/orderly markets</td>
+              <td>No obligation to provide liquidity in panics</td>
+            </tr>
+            <tr>
+              <td><strong>Bid-Ask Spread</strong></td>
+              <td>Wide (Fractions, often 12.5 cents)</td>
+              <td>Tight (Pennies, often &lt; 2 cents)</td>
+            </tr>
+            <tr>
+              <td><strong>Trade Size</strong></td>
+              <td>Large (mean ~800 shares)</td>
+              <td>Small &amp; sliced (mean ~400 shares)</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="text-sm mt-4 text-slate-600">Source data from Chapter 22, pages 313-319, describing the shift in structure and trade execution.</p>
+      </div>
+    </div>
+    
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 22 · COMPETING VIEWS</div>
+    <h2>Are We Better Off?</h2>
+
+    <div class="slide-container">
+      <h2 class="slide-title">Competing Views: Are we better off?</h2>
+      <div class="content-card">
+        <p><strong>This Chapter's Position:</strong> The modern market is a trade-off. We gained cost efficiency and execution speed, but sacrificed institutional market stability and deep-book liquidity. <span class="page-ref">Ch 22, p. 317</span></p>
+
+        <hr class="my-4">
+
+        <h3>Alternative View: The HFT Optimist</h3>
+        <p><strong>Core Claim:</strong> Electronic markets are vastly superior due to frictionless trading and democratized access.</p>
+        <ul>
+          <li><strong>Why they differ:</strong> They prioritize average daily efficiency over tail-risk events. Saving long-term investors ~0.5% per year via spread reduction is seen as a massive victory.</li>
+        </ul>
+
+        <h3>Alternative View: The Traditionalist</h3>
+        <p><strong>Core Claim:</strong> Modern fragmentation has ruined price discovery and allowed algorithmic front-running.</p>
+        <ul>
+          <li><strong>Why they differ:</strong> They focus on the toxic effects of <em>quote stuffing</em>, <em>flickering</em>, and <em>dark pools</em>, arguing the tape no longer reflects true public demand.</li>
+        </ul>
+        
+        <p><strong>Synthesis:</strong> Secular volume growth exists, but it doesn't invalidate volume analysis because HFTs end the day flat. They create "noise" volume, but not the directional volume that moves long-term trends.</p>
+      </div>
+    </div>
+    
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 22 · EVIDENCE EVALUATION</div>
+    <h2>Is the Market Truly Deeper?</h2>
+
+    <div class="slide-container">
+      <h2 class="slide-title">Evidence Evaluation: Is the Market Truly Deeper?</h2>
+      <div class="content-card">
+        <p><strong>Claim:</strong> Modern markets lack true depth despite displaying massive daily volume.</p>
+        
+        <p><strong>Evidence Type:</strong> Empirical Data (Bid-Ask Spreads &amp; 6-Cents Deep Depth) <span class="page-ref">Ch 22, p. 317-318</span></p>
+        
+        <p><strong>Strengths:</strong></p>
+        <ul>
+          <li>The author distinguishes between "top-of-book" liquidity (best bid/ask) and "market depth" (shares backing the quote up to 6 cents deep).</li>
+          <li>Data shows that while S&amp;P 500 stocks saw modest depth improvements since 2003, <em>most other stocks experienced minimal improvement</em> despite total market volume doubling.</li>
+        </ul>
+
+        <p><strong>Weaknesses / Nuance:</strong></p>
+        <ul>
+          <li>Traders now use "iceberg orders" to deliberately hide their size, meaning true depth might exist but is algorithmically obscured to prevent front-running.</li>
+        </ul>
+        
+        <p><strong>Verdict:</strong> The evidence strongly supports the idea that high volume ≠ high liquidity. Liquidity is the <em>viability to orchestrate a match</em>, not just the sheer number of shares flipped.</p>
+      </div>
+    </div>
+    
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 22 · DEEP DIVE 1</div>
+    <h2>The Illusion of Secular Growth</h2>
+
+    <div class="slide-container">
+      <h2 class="slide-title">Deep Dive: The Illusion of Secular Growth</h2>
+      <div class="content-card">
+        <h3>Why is volume so high today?</h3>
+        <ul>
+          <li><strong>Economic Expansion:</strong> More shares exist due to inflation, new offerings, and capital formation.</li>
+          <li><strong>Institutionalization:</strong> The shift from pensions to 401(k)s pushed the public into high-turnover mutual funds. <span class="page-ref">Ch 22, p. 303</span></li>
+          <li><strong>Derivatives &amp; ETFs:</strong> Arbitrageurs constantly redeem/create ETF shares to exploit spreads, generating up to 30% of total market volume alone.</li>
+          <li><strong>Algorithmic Scalping:</strong> HFTs trading in milliseconds and earning exchange rebates manufacture millions of shares of volume for tiny profits. <span class="page-ref">Ch 22, p. 308</span></li>
+        </ul>
+        
+        <h3>The Impact on Volume Analysis</h3>
+        <p>Because this growth was absorbed slowly over a decade, it operates as a constantly rising baseline. Short and intermediate-term relative volume analysis (e.g., measuring a daily breakout against a 50-day average) remains untouched because the HFT "noise" cancels itself out.</p>
+      </div>
+    </div>
+    
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 22 · DEEP DIVE 2</div>
+    <h2>The Dark Pool Paradox</h2>
+
+    <div class="slide-container">
+      <h2 class="slide-title">Deep Dive: The Dark Pool Paradox</h2>
+      <div class="content-card">
+        <h3>What is a Dark Pool?</h3>
+        <p>Alternative Trading Systems (ATS) designed to match massive institutional block orders without broadcasting intentions to the "lit" exchanges. <span class="page-ref">Ch 22, p. 309</span></p>
+
+        <h3>The Paradox of Hidden Liquidity</h3>
+        <ul>
+          <li><strong>The Original Goal:</strong> Prevent market impact when mutual funds dump 1 million shares.</li>
+          <li><strong>The Modern Reality:</strong> They have become playgrounds for HFTs. The average trade size in a dark pool is now no larger than on public exchanges. <span class="page-ref">Ch 22, p. 310</span></li>
+          <li><strong>The Danger:</strong> Dark pools price off the Consolidated Tape. As more volume moves into the dark (siphoning liquidity), the public tape becomes fragile. If the public tape is thin, dark pool pricing becomes inherently unstable.</li>
+        </ul>
+        
+        <p><strong>Quote Flickering &amp; Gaming:</strong> Algorithms inject "noise" via rapid order cancellations to sniff out institutional size, creating a phantom depth that vanishes when challenged.</p>
+      </div>
+    </div>
+    
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 22 · DEEP DIVE 3</div>
+    <h2>Anatomy of a Crash (1962 vs 2010)</h2>
+
+    <div class="slide-container">
+      <h2 class="slide-title">Deep Dive: Anatomy of a Crash (1962 vs 2010)</h2>
+      <div class="content-card">
+        <p>The author draws a fascinating parallel between two systemic shocks separated by 48 years of technology. <span class="page-ref">Ch 22, p. 321</span></p>
+        
+        <div style="display: flex; gap: 1rem; margin-top: 1rem;">
+          <div style="flex: 1; padding: 1rem; border: 1px solid #e2e8f0; border-radius: 0.5rem;">
+            <h3>The Market Break of May 1962</h3>
+            <ul>
+              <li><strong>Structure:</strong> Manual, paper tickets, floor specialists.</li>
+              <li><strong>Event:</strong> Dow fell 5.7% in 20 minutes.</li>
+              <li><strong>Cause:</strong> Specialists abandoned their mandate and joined the selling; liquidity evaporated due to human panic.</li>
+            </ul>
+          </div>
+          <div style="flex: 1; padding: 1rem; border: 1px solid #e2e8f0; border-radius: 0.5rem;">
+            <h3>The Flash Crash of May 2010</h3>
+            <ul>
+              <li><strong>Structure:</strong> Fragmented, electronic, millisecond HFTs.</li>
+              <li><strong>Event:</strong> Dow lost 600 points in 5 minutes.</li>
+              <li><strong>Cause:</strong> HFT algos shut off to avoid risk; liquidity evaporated due to coded self-preservation.</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="mt-4 p-4 bg-slate-100 rounded">
+          <strong>The Conclusion:</strong> Market structures don't cause panics; fear does. Both crashes were rooted in a sudden vacuum of demand. Volume analysis thrives because it measures the <em>force of supply and demand</em>, regardless of whether a human or a server is panicking.
+        </div>
+      </div>
+    </div>
+    
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 22 · READING LAYERS</div>
+    <h2>Microstructure Meets Macro Trend</h2>
+
+    <div class="slide-container">
+      <h2 class="slide-title">Reading Layers: Microstructure Meets Macro Trend</h2>
+      <div class="content-card">
+        <ul>
+          <li><strong>Layer 1: Surface Reading</strong><br>
+          Market volume has skyrocketed due to ETFs, decimals, and algorithms. Spreads are tighter, but true depth is questionable.</li>
+          
+          <li><strong>Layer 2: Structural Reading</strong><br>
+          The author systematically uncouples "volume" from "demand." By demonstrating that HFT volume is non-directional, he protects the core thesis of the entire book: true volume analysis still works.</li>
+          
+          <li><strong>Layer 3: Critical Reading</strong><br>
+          While the author dismisses HFT noise for intermediate charting, he acknowledges that data fragmentation (Tape A/B/C discrepancies) poses a severe mechanical risk to quantitative analysts trying to build precise models.</li>
+          
+          <li><strong>Layer 4: Generative Reading</strong><br>
+          In a world of infinite, meaningless micro-volume, identifying "real" volume footprints (like block trades, capitulation spikes, or massive accumulation days) is more valuable than ever. The noise makes the signal more lucrative.</li>
+        </ul>
+      </div>
+    </div>
+    
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 22 · AUTHOR&#x27;S WARNINGS</div>
+    <h2>Navigating Modern Data</h2>
+
+    <div class="slide-container">
+      <h2 class="slide-title">Author's Warnings: Navigating Modern Data</h2>
+      <div class="warning-card">
+        <div class="warning-headline">Do NOT swap data providers mid-analysis</div>
+        <div class="warning-detail"><strong>Why:</strong> Different vendors pull from different tapes (Tape A, B, or C). Some consolidate, others don't. Switching providers will ruin your comparative volume baselines. <span class="page-ref">Ch 22, p. 324</span></div>
+      </div>
+      
+      <div class="warning-card mt-4">
+        <div class="warning-headline">Do NOT trust pre-4:15 PM volume data</div>
+        <div class="warning-detail"><strong>Why:</strong> Dark pools and after-hours settlements are reported later. Scraping data right at the bell will yield incomplete metrics. Wait for the adjusted market summary.</div>
+      </div>
+      
+      <div class="warning-card mt-4">
+        <div class="warning-headline">Do NOT confuse HFT volume with price conviction</div>
+        <div class="warning-detail"><strong>Why:</strong> An HFT trading 10 million shares to capture fractions of a cent ends the day flat. This activity generates massive volume but zero directional price pressure.</div>
+      </div>
+    </div>
+    
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 22 · KEY TAKEAWAYS</div>
+    <h2>Volume Growth &amp; Fragmentation</h2>
+
+    <div class="slide-container">
+      <h2 class="slide-title">Key Takeaways</h2>
+      <div class="content-card">
+        <ul class="takeaway-list">
+          <li class="takeaway-item">
+            <strong>Volume growth is secular, not purely speculative</strong>
+            <p><strong>Why it matters:</strong> Demographics, inflation, ETFs, and decimalization naturally push total volume higher over decades. <span class="page-ref">Ch 22, p. 302</span></p>
+          </li>
+          <li class="takeaway-item">
+            <strong>Dark Pools obscure execution, but not the final tape</strong>
+            <p><strong>Why it matters:</strong> ATS networks still must report to the consolidated tape within 90 seconds. The volume is ultimately visible, preserving the integrity of end-of-day volume analysis.</p>
+          </li>
+          <li class="takeaway-item">
+            <strong>Algorithmic "Quote Flickering" creates false depth</strong>
+            <p><strong>Why it matters:</strong> Cancellation-to-execution ratios have skyrocketed. Displayed orders are often traps or probes, meaning the order book is far less stable than it appears.</p>
+          </li>
+          <li class="takeaway-item">
+            <strong>Consistency is your only defense against fragmented data</strong>
+            <p><strong>Why it matters:</strong> With volume scattered across 13 exchanges and 70 ATS platforms, the absolute number matters less than the relative change tracked by a single consistent data feed.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 22 · REFLECTION</div>
+    <h2>Questions on Market Structure</h2>
+
+    <div class="slide-container">
+      <h2 class="slide-title">Reflection Questions</h2>
+      <div class="content-card">
+        <h3>Understand</h3>
+        <ul>
+          <li>How does decimalization (moving from fractions to pennies) inherently force volume upward?</li>
+          <li>Why does the author argue that high-frequency trading is largely irrelevant to intermediate-term volume analysis?</li>
+        </ul>
+        
+        <h3>Analyze</h3>
+        <ul>
+          <li>If a stock prints 5 million shares of volume but the price closes completely flat, what are the different scenarios (accumulation vs. algorithmic scalping) that could explain it?</li>
+          <li>How does the existence of "Iceberg Orders" complicate the reading of Level II (market depth) screens?</li>
+        </ul>
+        
+        <h3>Evaluate</h3>
+        <ul>
+          <li>Do you believe retail traders benefit more from the tight spreads of today, or the stable market-maker depth of the 1990s?</li>
+          <li>If you were building a trading algorithm, how would you filter out HFT "noise" to find genuine institutional accumulation?</li>
+        </ul>
+      </div>
+    </div>
+    
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 22 · CLOSING ACTIONS</div>
+    <h2>Audit &amp; Focus</h2>
+
+    <div class="slide-container">
+      <h2 class="slide-title">Closing Actions</h2>
+      <div class="content-card">
+        <ul class="action-list">
+          <li class="action-item">
+            <div>
+              <div class="action-headline">Audit your volume data source</div>
+              <div class="action-detail">Check your charting platform to see if they pull from a Consolidated Tape (all exchanges) or just a single exchange. Ensure you use the same source universally.</div>
+            </div>
+          </li>
+          <li class="action-item">
+            <div>
+              <div class="action-headline">Focus on Relative Volume (RVOL) over absolute</div>
+              <div class="action-detail">Because secular growth and HFT noise inflate absolute numbers, rely strictly on volume relative to a moving average (e.g., Volume > 1.5x the 50-day SMA).</div>
+            </div>
+          </li>
+          <li class="action-item">
+            <div>
+              <div class="action-headline">Ignore micro-fluctuations in the order book</div>
+              <div class="action-detail">Stop trying to read the "tape" tick-by-tick for large orders. High cancellation rates and iceberg orders make Level II screens highly deceptive for retail traders.</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+  </section>
+
+</div>
+
+<div class="nav-controls">
+  <button class="nav-btn" id="prevBtn" onclick="prevSlide()" aria-label="Previous slide">&#8592;</button>
+  <div class="counter" id="counter" aria-live="polite">1 / 1</div>
+  <button class="nav-btn" id="nextBtn" onclick="nextSlide()" aria-label="Next slide">&#8594;</button>
+</div>
+
+<script src="common.js"></script>
+</body>
+</html>

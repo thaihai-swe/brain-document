@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Investing with Volume Analysis — Chapter 13</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="common.css">
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11.10.0/dist/mermaid.min.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div class="progress-bar" id="progressBar"></div>
+
+<div class="chapter-menu">
+  <button class="menu-btn" id="chapterMenuBtn" onclick="toggleChapterMenu()" aria-haspopup="true" aria-expanded="false">Chapters &#9662;</button>
+  <div class="chapter-menu-panel" id="chapterMenuPanel" role="menu"></div>
+</div>
+
+<div class="slide-container" id="slideContainer">
+
+  <section class="slide" aria-hidden="false">
+<figure class="image-slot hero">
+  <div class="image-prompt">
+    <span class="image-prompt-label">AI Image Prompt — env doesn't have image-gen</span>
+    <p class="image-prompt-text">"Clean isometric illustration of stock market data with a glowing tape measure, grid background, #635BFF accent"</p>
+    <span class="image-prompt-hint">Paste this into ChatGPT/DALL-E/Midjourney, save as images/ch13-hero.jpg, replace this block with &lt;img src="images/ch13-hero.jpg"&gt;</span>
+  </div>
+</figure>
+<h1>Investing with Volume Analysis</h1>
+<p class="subtitle">Chapter 13: Price Range Volume Indicators</p>
+<div class="meta-grid">
+  <div class="metric-card"><div class="metric-label">Focus</div><div class="metric-value">Range & Volume</div></div>
+  <div class="metric-card"><div class="metric-label">Est. Time</div><div class="metric-value">40 mins</div></div>
+  <div class="metric-card"><div class="metric-label">Depth</div><div class="metric-value">Deep</div></div>
+</div>
+
+  </section>
+
+  <section class="slide chapter-divider">
+
+<div class="chapter-number">Chapter 13</div>
+<h2>Price Range Volume Indicators</h2>
+<p class="chapter-meta">Effort vs. Results · Tape Measures of Range Analysis · Intermediate</p>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 13 · VISUAL SUMMARY</div>
+    <h2>The Price Range Arsenal</h2>
+
+<div class="mermaid">
+graph TD
+    A[Price Range Volume Indicators<br>Measuring Effort vs Result] --> B[Market Facilitation Index]
+    A --> C[Equivolume Charting]
+    A --> D[Ease of Movement]
+    
+    B --> B1[Green: ++]
+    B --> B2[Squat: +-]
+    B --> B3[Fade: --]
+    B --> B4[Fake: -+]
+    
+    C --> C1[Power Box<br>Wide & Tall]
+    C --> C2[Visualizes volume<br>on X-axis]
+    
+    D --> D1[Midpoint]
+    D --> D2[Box Ratio]
+    
+    style A fill:#7C3AED,stroke:#E2E8F0,color:#FFFFFF
+    style B fill:#635BFF,stroke:#E2E8F0,color:#FFFFFF
+    style C fill:#635BFF,stroke:#E2E8F0,color:#FFFFFF
+    style D fill:#635BFF,stroke:#E2E8F0,color:#FFFFFF
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 13 · THE BIG IDEA</div>
+    <h2>The Big Idea</h2>
+
+<div class="takeaway-hero">
+  <div class="kicker">CH 13 · THE BIG IDEA</div>
+  <div class="headline">"Volume drives the price range; together, they reveal the market's true commitment."</div>
+  <div class="subline">Price range volume indicators act as the tape measures of market action, quantifying precisely how much volume (effort) was expended to achieve the price movement (result).</div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 13 · KEY TAKEAWAYS</div>
+    <h2>Core Insights</h2>
+
+<ul class="takeaway-list">
+  <li class="takeaway-item">
+    <div class="takeaway-badge">1</div>
+    <div>
+      <div class="takeaway-text">Range and volume are inextricably linked. <span class="page-ref">Ch 13, p. 159</span></div>
+      <div class="takeaway-detail"><strong>Why it matters:</strong> Just tracking price ignores the effort required. Volume quantifies the force pushing the price through its range.</div>
+      <div class="takeaway-detail"><strong>Application:</strong> Use MFI or Equivolume to see if a wide range is supported by high volume (conviction).</div>
+    </div>
+  </li>
+  <li class="takeaway-item">
+    <div class="takeaway-badge">2</div>
+    <div>
+      <div class="takeaway-text">Not all volume is equally productive. <span class="page-ref">Ch 13, p. 161</span></div>
+      <div class="takeaway-detail"><strong>Why it matters:</strong> A squat bar (+-) shows high volume but little price progress, hinting at hidden supply/demand friction.</div>
+      <div class="takeaway-detail"><strong>Caveat:</strong> Squat bars are predictive of reversals but timing can be tricky.</div>
+    </div>
+  </li>
+  <li class="takeaway-item">
+    <div class="takeaway-badge">3</div>
+    <div>
+      <div class="takeaway-text">Equivolume replaces time with volume. <span class="page-ref">Ch 13, p. 161</span></div>
+      <div class="takeaway-detail"><strong>Why it matters:</strong> Redefines standard charting by visually expanding high-volume bars, making support/resistance breaks blatantly obvious.</div>
+      <div class="takeaway-detail"><strong>Application:</strong> Look for "Power Boxes" during breakouts to confirm institutional backing.</div>
+    </div>
+  </li>
+</ul>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 13 · CONTEXT &amp; BACKGROUND</div>
+    <h2>Evolution of Range Indicators</h2>
+
+<div class="content-card">
+  <h3>1. Author's Lens & Evolution of Ideas</h3>
+  <p>The concepts in Chapter 13 represent a synthesis of several generations of technical thought. The author traces the lineage from <strong>Edwin S. Quinn's Trendographs</strong> in the 1930s (applauded by H.M. Gartley) to modern applications by <strong>Richard Arms</strong> and <strong>Bill Williams</strong>.</p>
+  
+  <h3>2. Historical & Intellectual Tradition</h3>
+  <ul>
+    <li><strong>The 1930s Tape Readers:</strong> Early attempts to visually integrate volume and price range without modern computing power.</li>
+    <li><strong>Richard Arms (Equivolume & EoM):</strong> Shifted the paradigm in the 1970s/80s by declaring that the market should be "divided into shares, not hours."</li>
+    <li><strong>Bill Williams (MFI - 1995):</strong> Systematized range/volume into four explicit "Profitunity Windows", adding a behavioral finance overlay.</li>
+  </ul>
+  
+  <h3>3. The 2026 Perspective</h3>
+  <p>While originally designed for daily charting and human visual processing, these mathematical relationships (like MFI and EoM) are now embedded directly into multi-factor algorithmic trading models as quantitative features.</p>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 13 · NOTABLE QUOTES</div>
+    <h2>The Market&#x27;s Wristwatch</h2>
+
+<div class="quote-block">
+  <p class="quote-text">"If the market wore a wristwatch, it would be divided into shares not hours."</p>
+  <p class="quote-context"><strong>— Richard Arms</strong>, explaining the philosophy behind Equivolume charting. <span class="page-ref">Ch 13, p. 161</span></p>
+</div>
+<div class="content-card">
+  <strong>Interpretation:</strong> Time is a constant, arbitrary human construct. Markets move based on transactions (shares). By plotting the X-axis as volume rather than time, we see the market's true rhythm.
+</div>
+<div class="quote-block">
+  <p class="quote-text">"Fundamentals do not directly determine price; they’re only as important as the emphasis placed on them by the millions of minds studying them."</p>
+  <p class="quote-context"><strong>— Richard Arms</strong>. <span class="page-ref">Ch 13, p. 163</span></p>
+</div>
+<div class="content-card">
+  <strong>Significance:</strong> A brilliant distillation of why volume (the footprint of those "millions of minds" acting) matters more than the raw fundamental data in shorter-term trading.
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 13 · DEEP DIVE</div>
+    <h2>Effort vs. Result Quantified</h2>
+
+<div class="deep-section">
+  <h3>1. Core Argument</h3>
+  <p>Price range volume indicators are the "tape measures" of the market. They don't just ask <em>what</em> happened to the price, but <em>how hard</em> it was to make it happen. They are fundamentally based on Wyckoff's law of Effort vs. Result.</p>
+  
+  <h3>2. Logical Structure: The Physics of Price</h3>
+  <p>The logic mirrors basic physics: <strong>Force = Mass × Acceleration</strong>.</p>
+  <ul>
+    <li><strong>Effort (Volume):</strong> The raw force or fuel being burned.</li>
+    <li><strong>Result (Price Range):</strong> The distance the asset traveled.</li>
+    <li><strong>Efficiency (MFI / EoM):</strong> How easily the asset moves per unit of volume. A high MFI means the market is a vacuum; price glides easily. A low MFI means high friction.</li>
+  </ul>
+  
+  <h3>3. Practical Implications</h3>
+  <p>By measuring the friction (Squat bars or low Ease of Movement), traders can anticipate exhaustion before price actually reverses. The divergence between effort and result is the leading indicator.</p>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 13 · MENTAL MODELS</div>
+    <h2>Market Facilitation Index (MFI)</h2>
+
+<div class="mental-model-card">
+  <h4 class="model-name">Market Facilitation Index (MFI)</h4>
+  <div class="model-principle">A measure of market efficiency: <code>MFI = (High - Low) / Volume</code> <span class="page-ref">Ch 13, p. 160</span></div>
+  <div class="model-application">
+    <strong>How It Works:</strong>
+    <ul>
+      <li>MFI measures how many points the price moved per unit of volume.</li>
+      <li>It is analyzed by comparing today's MFI and Volume against yesterday's, creating four "Profitunity Windows".</li>
+    </ul>
+  </div>
+  <div class="model-limitations">
+    <strong>⚠️ Limitations & Caveats:</strong>
+    <ul>
+      <li>Requires accurate volume data (can be noisy in fragmented crypto/forex markets).</li>
+      <li>Bar-to-bar analysis is short-term; not meant for long-term investing trends.</li>
+    </ul>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 13 · SIGNAL MATRIX</div>
+    <h2>MFI Profitunity Windows</h2>
+
+<table class="signal-matrix">
+  <thead>
+    <tr><th>MFI Condition</th><th>MFI (Range/Vol)</th><th>Volume</th><th>Meaning</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th class="row-header">Green (++)</th>
+      <td class="bullish">Rising</td>
+      <td class="bullish">Rising</td>
+      <td><span class="signal-label">Continue</span> Market moving smoothly; players entering. Trend continues.</td>
+    </tr>
+    <tr>
+      <th class="row-header">Fade (--)</th>
+      <td class="bearish">Falling</td>
+      <td class="bearish">Falling</td>
+      <td><span class="signal-label">Exhaustion</span> Loss of interest. Trend is likely maturing/ending.</td>
+    </tr>
+    <tr>
+      <th class="row-header">Fake (-+)</th>
+      <td class="bullish">Rising</td>
+      <td class="bearish">Falling</td>
+      <td><span class="signal-label">Warning</span> Wide range but low volume. A fake-out move driven by smart money selling into strength.</td>
+    </tr>
+    <tr>
+      <th class="row-header">Squat (+-)</th>
+      <td class="bearish">Falling</td>
+      <td class="bullish">Rising</td>
+      <td><span class="signal-label">Reversal</span> Huge volume but little price movement. A battle is raging. Reversal imminent.</td>
+    </tr>
+  </tbody>
+</table>
+<div class="callout" style="margin-top:1rem;">
+  <div class="callout-icon">💡</div>
+  <div class="callout-content">
+    Charley Wright argues the <strong>Green (++)</strong> is the most powerful signal for intraday trading, while Bill Williams prefers the <strong>Squat (+-)</strong> as a leading reversal indicator. <span class="page-ref">Ch 13, p. 160-161</span>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 13 · MENTAL MODELS</div>
+    <h2>Equivolume &amp; Ease of Movement</h2>
+
+<div class="split-layout">
+  <div class="split-left">
+    <div class="mental-model-card" style="height: 100%;">
+      <h4 class="model-name">Equivolume & The Power Box</h4>
+      <div class="model-principle">Replaces the time X-axis with volume. <span class="page-ref">Ch 13, p. 161</span></div>
+      <div class="model-application">
+        <strong>The Power Box:</strong>
+        <p>A price bar that is both exceptionally <strong>tall</strong> (wide range) and exceptionally <strong>wide</strong> (high volume).</p>
+        <p>When a Power Box breaks through support or resistance, it confirms institutional conviction. It is the visual equivalent of a Green (++) MFI.</p>
+      </div>
+    </div>
+  </div>
+  <div class="split-right">
+    <div class="mental-model-card" style="height: 100%;">
+      <h4 class="model-name">Ease of Movement (EoM)</h4>
+      <div class="model-principle">Midpoint Move / Box Ratio. <span class="page-ref">Ch 13, p. 164</span></div>
+      <div class="model-application">
+        <strong>How it works:</strong>
+        <ul>
+          <li><strong>Midpoint:</strong> Directional change of the bar's center.</li>
+          <li><strong>Box Ratio:</strong> Vol / Range.</li>
+        </ul>
+        <p>High EoM = Price moves up easily on low volume. Low EoM = Price falls easily on light volume. Near zero = Heavy volume friction.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 13 · EVIDENCE EVALUATION</div>
+    <h2>Wright&#x27;s 407% MFI Returns</h2>
+
+<div class="evidence-card">
+  <div class="evidence-header">
+    <span class="claim-text">MFI Green (++) bars generate significant intraday profits</span>
+    <span class="quality-score">⭐⭐⭐☆☆ 3/5</span>
+  </div>
+  <div class="evidence-type">📊 Backtest Data (Charley F. Wright)</div>
+  <div class="evidence-body">
+    <p><strong>The Claim:</strong> Using MFI Green ++ bars on 30-minute S&P 500 futures, Wright generated a 407% return and 1.49 profit factor between 1986 and 1988 holding overnight, and 312% with a 2.12 profit factor not holding overnight. <span class="page-ref">Ch 13, p. 161</span></p>
+    <p><strong>Weaknesses:</strong></p>
+    <ul>
+      <li><strong>Time Period:</strong> 1986-1988 is a very small, specific sample size featuring the '87 crash.</li>
+      <li><strong>Survivorship & Selection Bias:</strong> We do not have insight into the exact entry/exit stops used in this "nonoptimized" system.</li>
+    </ul>
+    <p><strong>2026 Update:</strong> While absolute returns of 400%+ over 2 years are rarely reproducible in today's high-frequency markets, the <em>Profit Factor</em> (1.49 - 2.12) is a realistic target for robust modern algo systems utilizing volume/range expansion features.</p>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 13 · COUNTERARGUMENTS</div>
+    <h2>The 2026 Algorithmic Critique</h2>
+
+<div class="deep-section critical">
+  <h3>The 2026 Algorithmic Critique</h3>
+  <p>While the logic of MFI, Equivolume, and EoM is structurally sound, modern market microstructure presents distinct counterarguments:</p>
+  
+  <strong>1. Intraday Range Compression (The Algo Effect)</strong>
+  <p>Equities today experience significant volume spikes at the Open and Close (MOC orders), with hollow midday trading. Applying MFI or EoM without normalizing for the U-shaped intraday volume curve produces massive false "Squat" and "Fake" signals.</p>
+  
+  <strong>2. Dark Pools & Hidden Volume</strong>
+  <p>In 2026, ~40-50% of equity volume can execute off-exchange (Dark Pools). The <em>Result</em> (Price Range) is printed on lit exchanges, but the <em>Effort</em> (Volume) is fragmented. This can artificially inflate MFI (making the market look more efficient than it is) because the denominator (lit volume) is under-reported.</p>
+  
+  <strong>Synthesis:</strong>
+  <p>These indicators remain powerful, but the raw inputs must be scrubbed. Volume must be normalized against a rolling time-of-day baseline, and off-exchange volume estimates should be incorporated for a true picture of "Effort".</p>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 13 · READING LAYERS</div>
+    <h2>Five Depths of Volume Analysis</h2>
+
+<div class="content-card">
+  <h3>Five Depths of Range-Volume Analysis</h3>
+  <ul class="timeline">
+    <li class="timeline-item">
+      <div class="timeline-marker" style="background: var(--accent-cyan)"></div>
+      <div class="timeline-body">
+        <strong>Layer 1: Mechanical Formula</strong>
+        <p>MFI = Range / Volume. Calculating the raw ratios.</p>
+      </div>
+    </li>
+    <li class="timeline-item">
+      <div class="timeline-marker" style="background: var(--accent-emerald)"></div>
+      <div class="timeline-body">
+        <strong>Layer 2: Signal Generation</strong>
+        <p>Categorizing the data into discrete windows (Green, Fade, Fake, Squat) or Power Boxes.</p>
+      </div>
+    </li>
+    <li class="timeline-item">
+      <div class="timeline-marker" style="background: var(--accent-amber)"></div>
+      <div class="timeline-body">
+        <strong>Layer 3: The Physics of Friction</strong>
+        <p>Understanding that these formulas are proxies for physical resistance. High volume + low range = hitting a brick wall of limit orders.</p>
+      </div>
+    </li>
+    <li class="timeline-item">
+      <div class="timeline-marker" style="background: var(--accent-purple)"></div>
+      <div class="timeline-body">
+        <strong>Layer 4: Institutional Psychology</strong>
+        <p>Recognizing the "Fake" bar (-+) as smart money distributing into retail FOMO. The wider range is bait; the low volume proves lack of institutional sponsorship.</p>
+      </div>
+    </li>
+    <li class="timeline-item">
+      <div class="timeline-marker" style="background: var(--accent-red)"></div>
+      <div class="timeline-body">
+        <strong>Layer 5: Quantitative Feature Engineering</strong>
+        <p>Transforming Arms' and Williams' visual logic into normalized, continuous data streams (z-scores of EoM) to feed machine learning models.</p>
+      </div>
+    </li>
+  </ul>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 13 · IMPLEMENTATION GUIDE</div>
+    <h2>Integrating Range Indicators</h2>
+
+<div class="phase-progress">
+  <div class="phase active">Phase 1: Setup</div>
+  <div class="phase">Phase 2: Observation</div>
+  <div class="phase">Phase 3: Integration</div>
+</div>
+<div class="content-card" style="margin-top: 1rem;">
+  <h3>Integrating Range Indicators into Your Workflow</h3>
+  <p><strong>Step 1:</strong> Change your charting software to display Equivolume candles instead of standard Japanese Candlesticks for one week. This breaks the habit of treating time as a constant.</p>
+  <p><strong>Step 2:</strong> Add the Market Facilitation Index (MFI) histogram to the bottom of your chart. Color-code the bars (Green, Blue/Fade, Pink/Fake, Red/Squat).</p>
+  <p><strong>Step 3:</strong> Screen for "Squat" bars at major support/resistance levels. When you see high volume but a compressed range, put the asset on a watchlist for an imminent breakout or sharp reversal within 3-5 periods.</p>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 13 · CLOSING ACTIONS</div>
+    <h2>Next Steps</h2>
+
+<ul class="action-list">
+  <li class="action-item">
+    <div>
+      <div class="action-headline">Identify one "Power Box" on your favorite stock chart</div>
+      <div class="action-detail">Find a day where the price broke resistance with an exceptionally wide and tall Equivolume bar. Observe how the trend behaved afterward.</div>
+    </div>
+  </li>
+  <li class="action-item">
+    <div>
+      <div class="action-headline">Apply a 14-day Moving Average to Ease of Movement</div>
+      <div class="action-detail">Instead of analyzing bar-by-bar noise, smooth EoM with a 14-period SMA to track the rolling efficiency of the prevailing trend.</div>
+    </div>
+  </li>
+  <li class="action-item">
+    <div>
+      <div class="action-headline">Hunt for the "Fake" Bar (-+)</div>
+      <div class="action-detail">Review past losing trades. Did you buy a breakout that had a wide price range but shrinking volume? Note this as a "Fake" out.</div>
+    </div>
+  </li>
+</ul>
+
+  </section>
+
+</div>
+
+<div class="nav-controls">
+  <button class="nav-btn" id="prevBtn" onclick="prevSlide()" aria-label="Previous slide">&#8592;</button>
+  <div class="counter" id="counter" aria-live="polite">1 / 1</div>
+  <button class="nav-btn" id="nextBtn" onclick="nextSlide()" aria-label="Next slide">&#8594;</button>
+</div>
+
+<script src="common.js"></script>
+</body>
+</html>

@@ -11,6 +11,9 @@ module.exports = function(eleventyConfig) {
   // Plugins
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
 
+  // Do not ignore files in .gitignore (we need it to process the auto-generated docs/library.md)
+  eleventyConfig.setUseGitIgnore(false);
+
   // Passthrough copy for assets
   eleventyConfig.addPassthroughCopy("overrides/assets");
   eleventyConfig.addPassthroughCopy("docs/**/*.html");
@@ -77,25 +80,29 @@ module.exports = function(eleventyConfig) {
     return collectionApi.getFilteredByGlob("blog/posts/**/*.md").reverse();
   });
 
-  // Grouped Navigation for Sidebar
-  eleventyConfig.addCollection("groupedNav", function(collectionApi) {
+  // Grouped Navigation for Sidebar (Recursive Folder Structure)
+  eleventyConfig.addCollection("folderTree", function(collectionApi) {
     const docs = collectionApi.getFilteredByGlob("docs/**/*.md");
-    const grouped = {};
+    
+    const tree = { name: "root", type: "folder", children: {} };
+    
     docs.forEach(page => {
       if (page.url === '/docs/') return; // Skip the index page itself
       
       const parts = page.url.split('/').filter(p => p);
-      // parts is e.g. ['docs', 'programming', 'javascript']
-      let category = "General";
-      if (parts.length >= 3) {
-        // Format category name: "web-development" -> "Web Development"
-        category = parts[1].replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
-      } else if (parts[1] === 'library') {
-        category = "Library";
-      }
+      let current = tree;
       
-      if (!grouped[category]) {
-        grouped[category] = [];
+      // parts[0] is 'docs', parts[parts.length-1] is the file
+      for (let i = 1; i < parts.length - 1; i++) {
+        const folderSlug = parts[i];
+        if (!current.children[folderSlug]) {
+          current.children[folderSlug] = {
+            name: folderSlug.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()),
+            type: "folder",
+            children: {}
+          };
+        }
+        current = current.children[folderSlug];
       }
       
       let title = page.data.title;
@@ -103,26 +110,39 @@ module.exports = function(eleventyConfig) {
         title = page.fileSlug.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
       }
       
-      grouped[category].push({
+      const pageSlug = parts[parts.length - 1];
+      
+      current.children[pageSlug] = {
+        name: title,
         title: title,
-        url: page.url
-      });
+        url: page.url,
+        type: "file"
+      };
     });
     
-    // Sort pages within categories alphabetically
-    for (const key in grouped) {
-      grouped[key].sort((a, b) => a.title.localeCompare(b.title));
+    // Sort tree recursively
+    function sortTree(node) {
+      if (node.type === "file") return node;
+      
+      node.childrenArray = Object.keys(node.children).map(k => node.children[k]);
+      node.childrenArray.sort((a, b) => {
+        // Priority for root elements
+        if (node.name === "root") {
+           if (a.name === "Library") return -1;
+           if (b.name === "Library") return 1;
+        }
+        // Folders first, then files
+        if (a.type !== b.type) {
+           return a.type === "folder" ? -1 : 1;
+        }
+        return a.name.localeCompare(b.name);
+      });
+      
+      node.childrenArray.forEach(sortTree);
+      return node;
     }
     
-    // Sort the categories themselves alphabetically, keeping "General" at the top
-    const sortedGrouped = {};
-    const keys = Object.keys(grouped).sort();
-    if (grouped["General"]) sortedGrouped["General"] = grouped["General"];
-    keys.forEach(k => {
-      if (k !== "General") sortedGrouped[k] = grouped[k];
-    });
-    
-    return sortedGrouped;
+    return sortTree(tree);
   });
 
   // Backlinks Data Structure

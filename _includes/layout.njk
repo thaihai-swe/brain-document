@@ -16,8 +16,8 @@
     
     <!-- Pagefind Search UI will mount here -->
     <div id="search" class="search-ui"></div>
-    
-    <button id="theme-toggle" class="theme-toggle">Toggle Dark Mode</button>
+        <button id="nav-toggle" class="nav-toggle">☰ Menu</button>
+      <button id="theme-toggle" class="theme-toggle">Toggle Dark Mode</button>
   </header>
 
   <div class="site-layout">
@@ -25,20 +25,28 @@
     <nav class="site-nav">
       <h3>Navigation</h3>
       
-      {% for category, pages in collections.groupedNav %}
-        <div class="nav-category">
-          <div style="font-size: 0.7rem; text-transform: uppercase; color: var(--bd-text-muted); margin-top: 1.5rem; margin-bottom: 0.5rem; letter-spacing: 0.10em; font-family: var(--bd-font-mono);">
-            {{ category }}
-          </div>
-          <ul class="nav-list" style="margin-left: 0; padding-left: 0;">
-            {% for item in pages %}
-              <li class="nav-item {% if page.url == item.url %}nav-item-active{% endif %}" style="list-style: none;">
-                <a href="{{ item.url }}">{{ item.title }}</a>
-              </li>
-            {% endfor %}
-          </ul>
-        </div>
-      {% endfor %}
+      {% macro renderNode(node, currentUrl) %}
+        {% if node.type == "folder" and node.name != "root" %}
+          <details class="nav-folder">
+            <summary class="nav-summary">{{ node.name }}</summary>
+            <ul class="nav-list">
+              {% for child in node.childrenArray %}
+                {{ renderNode(child, currentUrl) }}
+              {% endfor %}
+            </ul>
+          </details>
+        {% elif node.type == "folder" and node.name == "root" %}
+          {% for child in node.childrenArray %}
+            {{ renderNode(child, currentUrl) }}
+          {% endfor %}
+        {% elif node.type == "file" %}
+          <li class="nav-item {% if currentUrl == node.url %}nav-item-active{% endif %}" style="list-style: none;">
+            <a href="{{ node.url }}">{{ node.title }}</a>
+          </li>
+        {% endif %}
+      {% endmacro %}
+      
+      {{ renderNode(collections.folderTree, page.url) }}
     </nav>
     
     <!-- Main Content (75%) -->

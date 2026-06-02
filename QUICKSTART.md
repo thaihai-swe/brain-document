@@ -26,26 +26,6 @@
 
 That's it! Wait 2-3 minutes, then visit: https://thaihai-swe.github.io/brain-document/
 
-## 📊 Current Structure
-
-```
-docs/
-├── architecture/        (2 docs)
-├── backend/            (3 docs in api/, nodejs/)
-├── databases/          (2 docs)
-├── devops/            (5 docs in root, ci-cd/, cloud/, infrastructure/)
-├── frontend/          (3 docs in css/, frameworks/)
-├── learning/          (2 docs)
-├── notes/             (1 doc)
-├── programming/       (2 docs)
-├── security/          (2 docs in authentication/)
-├── tools/             (1 doc)
-├── web-development/   (2 docs)
-└── compare/           (1 doc)
-
-Total: 12 folders, 28 documents
-```
-
 ## 📝 How to Add Content
 
 **It's automatic! Just create files:**

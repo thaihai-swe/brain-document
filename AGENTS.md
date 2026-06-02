@@ -1,3 +1,5 @@
+Dont commit and push code
+
 # AI Agent Instructions for "My Digital Brain"
 
 This file (`AGENTS.md`) serves as the core instruction manual for any AI assistant (Gemini, Claude, Cursor, etc.) interacting with this codebase.

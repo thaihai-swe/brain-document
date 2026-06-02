@@ -97,6 +97,27 @@ body[data-theme="slate"] {
   font-weight: 500;
 }
 
+/* Collapsible navigation folder styling */
+details.nav-folder {
+  margin-top: 0.75rem;
+}
+details.nav-folder > summary {
+  cursor: pointer;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  color: var(--bd-text-muted);
+  margin-bottom: 0.3rem;
+  letter-spacing: 0.05em;
+  font-family: var(--bd-font-mono);
+}
+details.nav-folder > summary::-webkit-details-marker {
+  display: none;
+}
+details.nav-folder > ul {
+  list-style: none;
+  padding-left: 0.5rem;
+  border-left: 1px solid var(--bd-border);
+}
 .site-content {
   padding: 2rem 4rem;
   margin: 0 auto;
@@ -155,10 +176,76 @@ body[data-theme="slate"] {
   .site-layout {
     grid-template-columns: 100%;
   }
-  .site-nav { display: none; }
+  .site-nav {
+    transform: translateX(-100%); /* Hidden by default */
+    transition: transform var(--bd-motion-fast) ease;
+    position: fixed;
+    left: 0;
+    top: 64px;
+    height: calc(100vh - 64px);
+    background: var(--bd-background, #FAFAF8);
+    z-index: 200;
+    width: 15%;
+    padding: 2rem 1rem;
+    border-right: 1px solid var(--bd-border, #eaeaea);
+    overflow-y: auto;
+  }
+  .nav-open .site-nav {
+    transform: translateX(0);
+  }
 }
 
+<script>
+  const themeToggle = document.getElementById('theme-toggle');
+  const navToggle = document.getElementById('nav-toggle');
+  const body = document.body;
+
+  // Theme toggle
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme) {
+    document.body.setAttribute('data-md-color-scheme', savedTheme);
+  }
+  themeToggle.addEventListener('click', () => {
+    const currentTheme = document.body.getAttribute('data-md-color-scheme') || 'default';
+    const newTheme = currentTheme === 'default' ? 'slate' : 'default';
+    document.body.setAttribute('data-md-color-scheme', newTheme);
+    localStorage.setItem('theme', newTheme);
+  });
+
+  // Nav toggle
+  navToggle.addEventListener('click', () => {
+    body.classList.toggle('nav-open');
+  });
+</script>
+
 .theme-toggle {
+    background: transparent;
+    color: var(--bd-text-secondary);
+    border: 1px solid var(--bd-border);
+    padding: 0.5rem 1rem;
+    border-radius: var(--bd-radius-sm);
+    cursor: pointer;
+    font-family: var(--bd-font-sans);
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: transform var(--bd-motion-fast), background-color var(--bd-motion-fast);
+    margin-left: 0.5rem;
+  }
+  .nav-toggle {
+    background: transparent;
+    color: var(--bd-text-secondary);
+    border: 1px solid var(--bd-border);
+    padding: 0.5rem 0.75rem;
+    border-radius: var(--bd-radius-sm);
+    cursor: pointer;
+    font-family: var(--bd-font-sans);
+    font-size: 0.85rem;
+    margin-right: 0.5rem;
+    transition: background-color var(--bd-motion-fast);
+  }
+  .nav-toggle:hover {
+    background: var(--bd-surface-muted);
+  }
   background: transparent;
   color: var(--bd-text-secondary);
   border: 1px solid var(--bd-border);

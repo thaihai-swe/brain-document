@@ -13,6 +13,12 @@ module.exports = function(eleventyConfig) {
 
   // Passthrough copy for assets
   eleventyConfig.addPassthroughCopy("overrides/assets");
+  eleventyConfig.addPassthroughCopy("docs/**/*.html");
+  eleventyConfig.addPassthroughCopy("docs/**/*.pdf");
+  eleventyConfig.addPassthroughCopy("docs/**/*.css");
+  eleventyConfig.addPassthroughCopy("docs/**/*.js");
+  eleventyConfig.addPassthroughCopy("docs/**/*.png");
+  eleventyConfig.addPassthroughCopy("docs/**/*.jpg");
   
   // Custom Markdown Library
   const markdownLibrary = markdownIt({
@@ -84,6 +90,8 @@ module.exports = function(eleventyConfig) {
       if (parts.length >= 3) {
         // Format category name: "web-development" -> "Web Development"
         category = parts[1].replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+      } else if (parts[1] === 'library') {
+        category = "Library";
       }
       
       if (!grouped[category]) {
@@ -174,7 +182,7 @@ module.exports = function(eleventyConfig) {
       includes: "_includes",
       output: "public" // Eleventy output to public, matching our pagefind target
     },
-    templateFormats: ["md", "njk", "html"],
+    templateFormats: ["md", "njk"],
     markdownTemplateEngine: "njk",
     htmlTemplateEngine: "njk",
     dataTemplateEngine: "njk"

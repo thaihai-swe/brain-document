@@ -106,8 +106,8 @@
   --bd-ease-out:      cubic-bezier(0.16, 1, 0.3, 1);
   --bd-ease-in-out:   cubic-bezier(0.65, 0, 0.35, 1);
 
-  /* Type families (§5) — Monaspace Neon for all text */
-  --bd-font-sans: "Monaspace Neon", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  /* Type families (§5) — System fonts for readability, Monaspace for code/UI */
+  --bd-font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   --bd-font-mono: "Monaspace Neon", ui-monospace, "SF Mono", "JetBrains Mono", "Fira Code", "Cascadia Code", Menlo, Consolas, monospace;
 
   /* Content widths (§5) */
@@ -120,9 +120,9 @@
 [data-md-color-scheme="slate"] {
   --bd-background:        #0A0A0B;
   --bd-surface:            #0F1011;
-  --bd-surface-muted:      #141516;
-  --bd-surface-raised:     #18191A;
-  --bd-surface-inset:      #0D0F12;
+  --bd-surface-muted:      #18191B;
+  --bd-surface-raised:     #1A1B1E;
+  --bd-surface-inset:      #0B0C0E;
   --bd-surface-featured:   #010102;
 
   --bd-border:             #23252A;   /* hairline only (§20.2) */
@@ -151,7 +151,7 @@
   --bd-info:               #38BDF8;
   --bd-info-soft:          #07273C;
 
-  --bd-code-bg:            #0D0F12;
+  --bd-code-bg:            #121417;
   --bd-code-border:        #23252A;
   --bd-code-text:           #F7F8F8;
 
@@ -218,6 +218,8 @@ body {
   line-height: 1.55;
   color: var(--bd-text-primary);
   background-color: var(--bd-background);
+  transition: background-color var(--bd-motion-page) var(--bd-ease-standard),
+              color var(--bd-motion-page) var(--bd-ease-standard);
 }
 
 /* --------------------------------------------------------------------------
@@ -394,7 +396,9 @@ body {
   border: 1px solid var(--bd-border);
   border-radius: var(--bd-radius-md);
   box-shadow: none;
-  transition: border-color var(--bd-motion-base) var(--bd-ease-standard);
+  transition: border-color var(--bd-motion-base) var(--bd-ease-standard),
+              box-shadow var(--bd-motion-base) var(--bd-ease-standard),
+              background-color var(--bd-motion-base) var(--bd-ease-standard);
 }
 
 .md-search__form:hover {

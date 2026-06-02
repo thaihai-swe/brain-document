@@ -107,36 +107,51 @@ style.textContent = `
 .md-backlinks {
   margin-top: 48px;
   padding-top: 32px;
-  border-top: 1px solid var(--md-default-fg-color--lightest, #E6E4DE);
+  border-top: 1px solid var(--bd-border, #E6E4DE);
 }
 
 .md-backlinks-header {
   font-size: 18px;
   font-weight: 600;
-  margin-bottom: 16px;
-  color: var(--md-default-fg-color, #111111);
+  margin-bottom: 24px;
+  color: var(--bd-text-primary, #111111);
 }
 
 .md-backlinks-list {
   list-style: none;
   padding: 0;
   margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--bd-space-4, 16px);
 }
 
 .md-backlinks-item {
-  margin-bottom: 16px;
-  padding: 12px;
-  background: var(--md-code-bg-color, #F4F4F1);
-  border-radius: 6px;
-  border-left: 3px solid var(--md-accent-fg-color, #635BFF);
+  margin-bottom: 0;
+  padding: 16px;
+  background: var(--bd-surface-muted, #F4F4F1);
+  border-radius: var(--bd-radius-lg, 10px);
+  border: 1px solid var(--bd-border, #E6E4DE);
+  box-shadow: var(--bd-shadow-xs);
+  transition: transform var(--bd-motion-base, 160ms) var(--bd-ease-out, ease-out), 
+              box-shadow var(--bd-motion-base, 160ms) var(--bd-ease-out, ease-out),
+              border-color var(--bd-motion-base, 160ms) var(--bd-ease-out, ease-out);
+  display: flex;
+  flex-direction: column;
+}
+
+.md-backlinks-item:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--bd-shadow-md);
+  border-color: var(--bd-accent-soft, #EFEEFF);
 }
 
 .md-backlinks-link {
-  font-weight: 500;
-  color: var(--md-accent-fg-color, #635BFF);
+  font-weight: 600;
+  color: var(--bd-accent, #635BFF);
   text-decoration: none;
   display: block;
-  margin-bottom: 4px;
+  margin-bottom: 8px;
 }
 
 .md-backlinks-link:hover {
@@ -145,22 +160,15 @@ style.textContent = `
 
 .md-backlinks-context {
   font-size: 13px;
-  color: var(--md-default-fg-color--light, #55524C);
-  margin: 4px 0 0 0;
+  color: var(--bd-text-secondary, #55524C);
+  margin: 0;
   line-height: 1.5;
+  flex-grow: 1;
 }
 
-/* Dark mode */
-[data-md-color-scheme="slate"] .md-backlinks-item {
-  background: var(--md-code-bg-color, #181A1D);
-}
-
-[data-md-color-scheme="slate"] .md-backlinks-header {
-  color: var(--md-default-fg-color, #F7F7F5);
-}
-
-[data-md-color-scheme="slate"] .md-backlinks-context {
-  color: var(--md-default-fg-color--light, #B7B8BC);
+/* Dark mode overrides (mostly handled by tokens, but just in case) */
+[data-md-color-scheme="slate"] .md-backlinks-item:hover {
+  border-color: var(--bd-border-strong);
 }
 `;
 document.head.appendChild(style);

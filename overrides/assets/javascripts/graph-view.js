@@ -162,7 +162,7 @@ function initGraph() {
     .selectAll('line')
     .data(graphData.links)
     .enter().append('line')
-    .attr('stroke', '#999')
+    .attr('stroke', 'var(--bd-border-strong)')
     .attr('stroke-opacity', 0.6)
     .attr('stroke-width', 2);
 
@@ -172,8 +172,8 @@ function initGraph() {
     .data(graphData.nodes)
     .enter().append('circle')
     .attr('r', d => d.isCurrent ? 12 : 8)
-    .attr('fill', d => d.isCurrent ? '#635BFF' : '#06B6D4')
-    .attr('stroke', '#fff')
+    .attr('fill', d => d.isCurrent ? 'var(--bd-accent)' : 'var(--bd-info)')
+    .attr('stroke', 'var(--bd-background)')
     .attr('stroke-width', 2)
     .style('cursor', 'pointer')
     .call(d3.drag()
@@ -197,6 +197,7 @@ function initGraph() {
     .enter().append('text')
     .text(d => d.title.length > 20 ? d.title.substring(0, 20) + '...' : d.title)
     .attr('font-size', 10)
+    .attr('fill', 'var(--bd-text-primary)')
     .attr('dx', 12)
     .attr('dy', 4)
     .style('pointer-events', 'none')

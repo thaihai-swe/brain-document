@@ -72,9 +72,6 @@
         </ul>
       </section>
       {% endif %}
-
-      <!-- Graph View -->
-      {% include "graph-view.njk" ignore missing %}
     </main>
 
     <!-- Right TOC (10%) -->
@@ -177,9 +174,8 @@
     });
   </script>
 
-  <!-- Legacy Scripts (if still needed) -->
+  <!-- Legacy Scripts -->
   <script defer src="{{ '/overrides/assets/javascripts/backlinks.js' | url }}"></script>
-  <!-- <script type="module" src="{{ '/overrides/assets/javascripts/graph-view.js' | url }}"></script> -->
 
   <!-- Mermaid.js for Diagrams -->
   <script type="module">

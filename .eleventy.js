@@ -204,6 +204,7 @@ module.exports = function(eleventyConfig) {
     },
     templateFormats: ["md", "njk"],
     pathPrefix: "/brain-document",
+    markdownTemplateEngine: "njk",
     htmlTemplateEngine: "njk",
     dataTemplateEngine: "njk"
   };

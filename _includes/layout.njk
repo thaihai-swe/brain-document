@@ -6,8 +6,8 @@
   <title>{{ title | default("My Digital Brain") }}</title>
   
   <!-- CSS Design Tokens -->
-  <link rel="stylesheet" href="/overrides/assets/stylesheets/design-tokens.css">
-  <link rel="stylesheet" href="/overrides/assets/stylesheets/extra.css">
+  <link rel="stylesheet" href="{{ '/overrides/assets/stylesheets/design-tokens.css' | url }}">
+  <link rel="stylesheet" href="{{ '/overrides/assets/stylesheets/extra.css' | url }}">
 </head>
 <body data-md-color-scheme="default">
 
@@ -41,7 +41,7 @@
           {% endfor %}
         {% elif node.type == "file" %}
           <li class="nav-item {% if currentUrl == node.url %}nav-item-active{% endif %}" style="list-style: none;">
-            <a href="{{ node.url }}">{{ node.title }}</a>
+            <a href="{{ node.url | url }}">{{ node.title }}</a>
           </li>
         {% endif %}
       {% endmacro %}
@@ -63,7 +63,7 @@
         <h3>Backlinks</h3>
         <ul>
         {% for link in collections.backlinks[page.url] %}
-          <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+          <li><a href="{{ link.url | url }}">{{ link.title }}</a></li>
         {% endfor %}
         </ul>
       </section>
@@ -81,8 +81,8 @@
   </div>
 
   <!-- Pagefind Script (Added during build) -->
-  <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
-  <script src="/pagefind/pagefind-ui.js"></script>
+  <link href="{{ '/pagefind/pagefind-ui.css' | url }}" rel="stylesheet">
+  <script src="{{ '/pagefind/pagefind-ui.js' | url }}"></script>
   <script>
     window.addEventListener('DOMContentLoaded', (event) => {
       try {
@@ -150,27 +150,31 @@
     });
   </script>
 
-  <!-- Theme Toggle -->
+  <!-- Theme & Nav Toggle -->
   <script>
     const themeToggle = document.getElementById('theme-toggle');
-    
-    // Check local storage for theme
+    const navToggle   = document.getElementById('nav-toggle');
+
+    // Restore saved theme
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme) {
       document.body.setAttribute('data-md-color-scheme', savedTheme);
     }
-    
+
     themeToggle.addEventListener('click', () => {
       const currentTheme = document.body.getAttribute('data-md-color-scheme') || 'default';
       const newTheme = currentTheme === 'default' ? 'slate' : 'default';
-      
       document.body.setAttribute('data-md-color-scheme', newTheme);
       localStorage.setItem('theme', newTheme);
+    });
+
+    navToggle.addEventListener('click', () => {
+      document.body.classList.toggle('nav-open');
     });
   </script>
 
   <!-- Legacy Scripts (if still needed) -->
-  <script src="/overrides/assets/javascripts/backlinks.js"></script>
-  <!-- <script type="module" src="/overrides/assets/javascripts/graph-view.js"></script> -->
+  <script src="{{ '/overrides/assets/javascripts/backlinks.js' | url }}"></script>
+  <!-- <script type="module" src="{{ '/overrides/assets/javascripts/graph-view.js' | url }}"></script> -->
 </body>
 </html>

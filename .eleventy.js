@@ -83,6 +83,7 @@ module.exports = function(eleventyConfig) {
       }
       
       let content = "";
+      if (!page.inputPath || typeof page.inputPath !== 'string') return;
       try {
         content = fs.readFileSync(page.inputPath, 'utf8');
       } catch(e) {

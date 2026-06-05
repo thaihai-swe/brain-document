@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Phát Triển Trí Thông Minh Và Tài Năng Của Trẻ Nhỏ — Bộ Slide Bài Giảng</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    --text-primary: #1e293b;
+    --text-secondary: #475569;
+    --text-muted: #64748b;
+    --accent: #635bff;
+    --accent-glow: rgba(99, 91, 255, 0.15);
+    --surface: rgba(255, 255, 255, 0.85);
+    --border: rgba(255, 255, 255, 0.5);
+    --radius-lg: 16px;
+    --radius-xl: 24px;
+    --shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.1);
+    --ease: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--background);
+    background-attachment: fixed;
+    color: var(--text-primary);
+    min-height: 100vh;
+    padding: 4rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .container {
+    max-width: 1100px;
+    width: 100%;
+  }
+
+  header {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  h1 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 2.75rem;
+    font-weight: 700;
+    color: var(--accent);
+    letter-spacing: -0.03em;
+    line-height: 1.15;
+    margin-bottom: 1rem;
+  }
+
+  .subtitle {
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.5;
+  }
+
+  /* Grid layout */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+  }
+
+  /* Cards styling */
+  .card {
+    background: var(--surface);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 2.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.3s var(--ease);
+    box-shadow: var(--shadow);
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--accent);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s var(--ease);
+  }
+
+  .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px -15px rgba(99, 91, 255, 0.18);
+    border-color: rgba(99, 91, 255, 0.3);
+  }
+
+  .card:hover::before {
+    transform: scaleX(1);
+  }
+
+  .card-header {
+    margin-bottom: 1.5rem;
+  }
+
+  .chapter-badge {
+    font-family: 'SF Mono', 'Monaco', monospace;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+    display: inline-block;
+  }
+
+  .card h2 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.25;
+    margin-bottom: 0.75rem;
+    color: var(--text-primary);
+  }
+
+  .card p {
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+  }
+
+  .card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 2rem;
+    padding-top: 1.25rem;
+    border-top: 1px dashed rgba(0, 0, 0, 0.08);
+  }
+
+  .slides-count {
+    font-size: 0.8125rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+  }
+
+  .btn {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    transition: transform 0.2s var(--ease);
+  }
+
+  .card:hover .btn {
+    transform: translateX(4px);
+  }
+
+  /* Metadata Section */
+  .meta-section {
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-xl);
+    padding: 2.5rem;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: var(--shadow);
+  }
+
+  .meta-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: var(--text-primary);
+    text-align: center;
+  }
+
+  .meta-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .meta-item {
+    background: rgba(255, 255, 255, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: var(--radius-lg);
+    padding: 1.25rem;
+    text-align: center;
+  }
+
+  .meta-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-muted);
+    margin-bottom: 0.25rem;
+  }
+
+  .meta-value {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--accent);
+  }
+
+  footer {
+    text-align: center;
+    margin-top: 5rem;
+    font-size: 0.875rem;
+    color: var(--text-muted);
+  }
+
+  footer a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  @media (max-width: 768px) {
+    body {
+      padding: 2rem 1rem;
+    }
+    h1 {
+      font-size: 2.25rem;
+    }
+    .grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <header>
+    <h1>Phát Triển Trí Thông Minh Và Tài Năng Của Trẻ Nhỏ</h1>
+    <p class="subtitle">Giáo sư Shichida Makoto — Trọn bộ Slide Bài giảng Giáo dục sớm từ sơ sinh</p>
+  </header>
+
+  <div class="grid">
+    <!-- Chapter I & II Card -->
+    <a href="book_slides_chapter1_2.html" class="card">
+      <div class="card-header">
+        <span class="chapter-badge">Chương I & II</span>
+        <h2>Tình Yêu, Giác Quan & Lộ Trình 0-4 Tuổi</h2>
+        <p>Tìm hiểu quy luật tài năng giảm dần, tác hại của tivi, cơ chế học nguyên mảng và bảng phân chia hoạt động giáo dục giác quan theo từng độ tuổi.</p>
+      </div>
+      <div class="card-footer">
+        <span class="slides-count">📄 43 Slides bài giảng</span>
+        <span class="btn">Xem Slide &rarr;</span>
+      </div>
+    </a>
+
+    <!-- Chapter III Card -->
+    <a href="book_slides_ch3.html" class="card">
+      <div class="card-header">
+        <span class="chapter-badge">Chương III</span>
+        <h2>Khó Khăn Khi Dạy Lễ Nghĩa Cho Trẻ</h2>
+        <p>Rèn luyện ý chí tự chủ trước 3 tuổi, thiết lập đường cong nghiêm khắc Nhật-Mỹ, giải quyết khủng hoảng thoái lui (ghen tị anh em) và nghệ thuật mắng con đúng cách.</p>
+      </div>
+      <div class="card-footer">
+        <span class="slides-count">📄 22 Slides bài giảng</span>
+        <span class="btn">Xem Slide &rarr;</span>
+      </div>
+    </a>
+
+    <!-- Chapter IV Card -->
+    <a href="book_slides_ch4.html" class="card">
+      <div class="card-header">
+        <span class="chapter-badge">Chương IV</span>
+        <h2>Giáo Dục Tư Duy Cơ Bản</h2>
+        <p>Khai mở hệ tín hiệu thứ hai, quy trình 5 bước dạy đọc sớm, luật 3 tháng bọc bao Myelin thần kinh, đu sà ngang phát triển thể chất và 20 nguyên tắc vàng từ 0 tuổi.</p>
+      </div>
+      <div class="card-footer">
+        <span class="slides-count">📄 22 Slides bài giảng</span>
+        <span class="btn">Xem Slide &rarr;</span>
+      </div>
+    </a>
+  </div>
+
+  <div class="meta-section">
+    <div class="meta-title">Thông tin tổng hợp bộ tài liệu</div>
+    <div class="meta-grid">
+      <div class="meta-item">
+        <div class="meta-label">Tác giả gốc</div>
+        <div class="meta-value">Shichida Makoto</div>
+      </div>
+      <div class="meta-item">
+        <div class="meta-label">Độ sâu Phân tích</div>
+        <div class="meta-value">DEEP+ (Cực sâu)</div>
+      </div>
+      <div class="meta-item">
+        <div class="meta-label">Tổng số Slide</div>
+        <div class="meta-value">87 Slide Chi Tiết</div>
+      </div>
+      <div class="meta-item">
+        <div class="meta-label">Ảnh Minh Họa AI</div>
+        <div class="meta-value">16 Ảnh Nghệ Thuật</div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>Thiết kế bởi Đội ngũ Google DeepMind & Antigravity AI Coding Assistant &bull; 2026</p>
+  </footer>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Phát Triển Trí Thông Minh Và Tài Năng Của Trẻ Nhỏ — Chương III</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="common.css">
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11.10.0/dist/mermaid.min.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div class="progress-bar" id="progressBar"></div>
+
+<div class="chapter-menu">
+  <button class="menu-btn" id="chapterMenuBtn" onclick="toggleChapterMenu()" aria-haspopup="true" aria-expanded="false">Chapters &#9662;</button>
+  <div class="chapter-menu-panel" id="chapterMenuPanel" role="menu"></div>
+</div>
+
+<div class="slide-container" id="slideContainer">
+
+  <section class="slide" aria-hidden="false">
+<h1>Phát Triển Trí Thông Minh và Tài Năng Của Trẻ Nhỏ</h1>
+<p class="subtitle">Giáo sư Shichida Makoto — Chương III: Khó Khăn Khi Dạy Lễ Nghĩa Cho Trẻ</p>
+<figure class="image-slot hero">
+  <img src="images/ch3_title.png" alt="Sự gắn kết tình thương mẹ con là gốc rễ của sự phát triển tâm hồn lành mạnh">
+  <figcaption>Nguồn: Ảnh minh họa nghệ thuật được tạo bằng AI · Google DeepMind</figcaption>
+</figure>
+<div class="meta-grid">
+  <div class="meta-pill">
+    <div class="label">Phạm vi phân tích</div>
+    <div class="value">Chương III</div>
+  </div>
+  <div class="meta-pill">
+    <div class="label">Chế độ phân tích</div>
+    <div class="value">DEEP (DEEP+)</div>
+  </div>
+  <div class="meta-pill">
+    <div class="label">Số lượng slide</div>
+    <div class="value">22 Slide Chi Tiết</div>
+  </div>
+  <div class="meta-pill">
+    <div class="label">Phong cách học</div>
+    <div class="value">Đa dạng/Cân bằng</div>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide chapter-divider">
+<div class="chapter-number">Chương III</div>
+<h2>Khó Khăn Khi Dạy Lễ Nghĩa Cho Trẻ</h2>
+<p class="chapter-meta">
+  <strong>Thời gian đọc ước tính:</strong> ~25 phút (6,200 từ) | 
+  <strong>Độ khó:</strong> Khá cao (Đòi hỏi sự thấu hiểu tâm lý trẻ và kỷ luật tự thân của cha mẹ) <br>
+  <strong>Khái niệm cốt lõi:</strong> Sức khỏe tâm hồn sơ sinh · Phản xạ khóc đòi bú · Gắn bó da kề da & Hội chứng bám dính · Thoái lui tâm lý (Sibling Regression) · Đường cong nghiêm khắc (Nhật vs Mỹ) · 4 Sai lầm giáo dục · 3 Trụ cột lễ nghĩa · Trị liệu bằng khen ngợi
+</p>
+<figure class="image-slot hero">
+  <img src="images/ch3_divider.png" alt="Sự ôm ấp sẻ chia tình thương của mẹ giải quyết khủng hoảng tâm lý ở trẻ">
+</figure>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH III · SƠ ĐỒ KHÁI NIỆM</div>
+    <h2>Sơ đồ khái niệm Chương III</h2>
+<div class="mermaid">
+graph TD
+    Root["Chương III: Lễ Nghĩa & Tâm Hồn Trẻ"] --> Attachment["1. Gắn Bó & Sức Khỏe Tâm Hồn"]
+    Root --> Will["2. Giáo Dục Ý Chí & Kỷ Luật"]
+    Root --> Pillars["3. Ba Trụ Cột Lễ Nghĩa"]
+
+    Attachment --> Feed["Bú sữa theo nhu cầu (Tránh theo giờ)"]
+    Attachment --> Skin["Kề da áp thịt (Bế nhiều, ngủ chung)"]
+    Attachment --> Rivalry["Ghen tị anh em (Thoái lui tè dầm, giải pháp: ngủ chung/ôm ấp)"]
+
+    Will --> Curve["Đường cong nghiêm khắc (Nghiêm khắc 0-3 tuổi, nới lỏng sau đó)"]
+    Will --> Failure["4 Sai lầm giáo dục gây phạm pháp/bất tuân"]
+    Failure --> F1["Thiếu nhẫn nại (Nuông chiều)"]
+    Failure --> F2["Khắt khe (Mắng mỏ 80-90%)"]
+    Failure --> F3["Kỳ vọng quá lớn (Gây tự ti, ghét học)"]
+    Failure --> F4["Quá chăm sóc (Làm hộ hết việc)"]
+
+    Pillars --> P1["Lễ nghĩa cơ bản: Ăn (1t tự cầm thìa), Vệ sinh (2t tập), Mặc đồ (3t tự mặc)"]
+    Pillars --> P2["Lễ nghĩa tinh thần: Chịu đựng, Tốt bụng, Trung thực, Tuân thủ, Biết ơn"]
+    Pillars --> P3["Lễ nghĩa xã hội: Trách nhiệm, Lao động (không chê bai), Đối nhân (bạn tự cãi nhau)"]
+
+    style Root fill:#635BFF,stroke:#2A2D33,color:#FFF
+    style Attachment fill:#059669,stroke:#2A2D33,color:#FFF
+    style Will fill:#DC2626,stroke:#2A2D33,color:#FFF
+    style Pillars fill:#7C3AED,stroke:#2A2D33,color:#FFF
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH III · TÓM TẮT CẤU TRÚC</div>
+    <h2>Tóm tắt cấu trúc Chương III</h2>
+<div class="content-card">
+  <div class="summary-text">
+    <p><strong>Tóm tắt một câu:</strong> Sự hình thành nhân cách đạo đức và kỷ luật tự giác của trẻ từ 0-3 tuổi bắt nguồn từ mối liên kết tình cảm vững chắc giữa cha mẹ và con cái, được củng cố bằng phương pháp rèn luyện ý chí nghiêm khắc và sự khen ngợi tích cực. <span class="page-ref">Ch 3, p. 57, 61, 69</span></p>
+    
+    <p><strong>Bối cảnh đặt ra (The Setup):</strong> Sự bất ổn tâm sinh lý ở tuổi trưởng thành thường bắt nguồn từ những tổn thương trong mối quan hệ với cha mẹ ở giai đoạn 1-3 tuổi. Việc nuông chiều vô điều kiện hoặc áp đặt kỷ luật quá muộn sau 3 tuổi đều dẫn đến các hành vi lệch chuẩn, bất tuân ở trẻ. <span class="page-ref">Ch 3, p. 57, 61</span></p>
+    
+    <p><strong>Luận điểm cốt lõi (The Argument):</strong> Giáo dục lễ nghĩa thực chất là giáo dục ý chí để giúp trẻ kìm nén cảm xúc cá nhân. Quá trình này cần đi theo một đường cong nghiêm khắc: thắt chặt nghiêm khắc từ 0-3 tuổi và nới lỏng dần khi trẻ lớn lên, đối lập hoàn toàn với cách nuôi dạy sai lầm "nuông chiều thuở nhỏ, khắt khe khi lớn". <span class="page-ref">Ch 3, p. 61-62</span></p>
+    
+    <p><strong>Bằng chứng & Minh họa (The Evidence):</strong> Tác giả dẫn chứng học thuyết của giáo sư Sugita Mineyasu, trường hợp cậu bé Akihiro thi trượt đại học 4 lần để báo thù người mẹ đi làm xa từ bé, hiện tượng thoái lui của anh chị khi có em (tè dầm, đánh em), và trường hợp bé X cải tạo hành vi trộm cắp siêu thị nhờ được khen ngợi điểm tốt. <span class="page-ref">Ch 3, p. 57-60, 69</span></p>
+    
+    <p><strong>Hệ quả thực tế (The Implications):</strong> Cha mẹ cần xây dựng lòng tin cơ bản trước 8 tháng tuổi, tránh cho bú theo giờ hay xa lánh trẻ. Từ 1-3 tuổi, rèn luyện 3 nhóm lễ nghĩa (cơ bản, tinh thần, xã hội & đạo đức) bằng cách để trẻ tự lập (tự ăn, tự mặc) và tuyệt đối không can thiệp khi trẻ cãi nhau với bạn. <span class="page-ref">Ch 3, p. 59, 65, 68</span></p>
+    
+    <p><strong>Điểm gây tranh luận (The Controversy):</strong> Quan điểm "Đường cong nghiêm khắc từ sơ sinh đến 3 tuổi" đòi hỏi sự khắt khe cao độ ngay từ nhỏ, dễ bị hiểu nhầm thành bạo hành tinh thần nếu cha mẹ thiếu sự thấu hiểu, đồng thời lý thuyết "cho bú theo giờ làm tổn hại cảm nhận cơ thể" cũng đi ngược lại với một số trường phái y khoa phương Tây khuyến khích ăn ngủ theo cữ (E.A.S.Y). <span class="page-ref">Ch 3, p. 58, 61-62</span></p>
+    
+    <p><strong>Mối liên hệ hệ thống (The Connection):</strong> Chương này chuyển hóa năng lực trí tuệ và sáng tạo (đã phân tích ở Chương I & II) thành năng lực thực tiễn: hành vi xã hội, ý chí kiên định và đạo đức. Đây là mảnh ghép cuối cùng hoàn thiện một đứa trẻ phát triển toàn diện cả về Thể chất, Trí lực và Tâm hồn. <span class="page-ref">Ch 3, p. 56</span></p>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH III · Ý TƯỞNG CỐT LÕI</div>
+    <h2>Ý tưởng cốt lõi</h2>
+<div class="takeaway-hero">
+  <div class="kicker">CH III · Ý TƯỞNG CỐT LÕI</div>
+  <div class="headline">"Sự mạnh mẽ của ý chí và thói quen nhẫn nhịn của trẻ được hình thành trong 3 năm đầu đời. Sau 3 tuổi mới bắt đầu dạy con nghe lời thì đã quá muộn."</div>
+  <div class="subline">Giáo dục lễ nghĩa thực chất là giáo dục ý chí để chiến thắng nhu cầu và ích kỷ của bản thân, được xây dựng trên nền tảng lòng tin cơ bản giữa cha mẹ và con cái. <span class="page-ref">Ch 3, p. 59, 61</span></div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH III · ĐIỂM RÚT RA CHÍNH</div>
+    <h2>Năm điểm rút ra chính</h2>
+<ul class="takeaway-list">
+  <li class="takeaway-item">
+    <div class="takeaway-badge">1</div>
+    <div class="takeaway-text">
+      <strong>Sức khỏe tâm hồn & Mối liên kết sơ sinh (Giai đoạn 0-1 tuổi)</strong>
+      <div class="takeaway-detail">
+        <strong>Ý nghĩa:</strong> Sự phát triển tâm sinh lý trong 1-3 tuổi đầu đời quyết định sức khỏe tinh thần suốt đời. Lòng tin cơ bản đạt đỉnh điểm thiết lập lúc 8 tháng tuổi thông qua tình yêu thương vỗ về. <span class="page-ref">Ch 3, p. 57, 59</span><br>
+        <strong>Áp dụng:</strong> Tránh cho bú theo giờ cố định; tăng cường bế bồng, ngủ chung kề da áp thịt. <span class="page-ref">Ch 3, p. 58</span><br>
+        <strong>Lưu ý:</strong> <span class="caveat">Không ép buộc trẻ từ bỏ tật mút tay ở 8 tháng tuổi một cách cứng nhắc, vì đó là cơ chế tự bù đắp khi trẻ cảm thấy bất an khi xa mẹ.</span> <span class="page-ref">Ch 3, p. 59</span>
+      </div>
+    </div>
+  </li>
+
+  <li class="takeaway-item">
+    <div class="takeaway-badge">2</div>
+    <div class="takeaway-text">
+      <strong>Khủng hoảng ghen tị & Sự thoái lui tâm lý ở trẻ lớn</strong>
+      <div class="takeaway-detail">
+        <strong>Ý nghĩa:</strong> Khi có em bé mới sinh, trẻ lớn thường rơi vào khủng hoảng sợ mất tình yêu thương của mẹ, dẫn đến hành vi thoái lui (tè dầm, đòi bế, đánh em). <span class="page-ref">Ch 3, p. 60</span><br>
+        <strong>Áp dụng:</strong> Cho trẻ lớn ngủ chung giường với mẹ, ôm ấp nhiều hơn, khơi dậy tinh thần trách nhiệm "làm anh chị" bằng lời khen thay vì mắng mỏ "ích kỷ" hay cấm đoán. <span class="page-ref">Ch 3, p. 60</span>
+      </div>
+    </div>
+  </li>
+
+  <li class="takeaway-item">
+    <div class="takeaway-badge">3</div>
+    <div class="takeaway-text">
+      <strong>Mô hình Đường cong nghiêm khắc đảo ngược</strong>
+      <div class="takeaway-detail">
+        <strong>Ý nghĩa:</strong> Trái ngược với Nhật Bản (nuông chiều nhỏ, khắt khe khi lớn), Shichida đề xuất nghiêm khắc tối đa từ 0-3 tuổi để rèn luyện ý chí tự chủ, nới lỏng dần từ 3-6 tuổi, 6-9 tuổi và trò chuyện bình đẳng sau 9 tuổi. <span class="page-ref">Ch 3, p. 61-62</span><br>
+        <strong>Áp dụng:</strong> Rèn luyện cho trẻ biết chịu đựng, kỷ luật "không được là không được" ngay từ thuở sơ sinh. Sau 3 tuổi tính cách trẻ đã định hình, giáo dục sẽ vô cùng khó khăn. <span class="page-ref">Ch 3, p. 61</span>
+      </div>
+    </div>
+  </li>
+
+  <li class="takeaway-item">
+    <div class="takeaway-badge">4</div>
+    <div class="takeaway-text">
+      <strong>Bốn nguyên nhân phá hỏng tính nhẫn nại của trẻ</strong>
+      <div class="takeaway-detail">
+        <strong>Ý nghĩa:</strong> Hành vi phạm pháp hoặc bất tuân của thiếu niên bắt nguồn từ sai lầm nuôi dạy thuở nhỏ. <span class="page-ref">Ch 3, p. 62</span><br>
+        <strong>Các yếu tố:</strong> (1) Thiếu nhẫn nại do nuông chiều; (2) Cha mẹ quá khắt khe, cằn nhằn mắng mỏ; (3) Kỳ vọng quá lớn vượt năng lực gây mặc cảm địa ngục; (4) Quá chăm sóc (làm hộ) cản trở tính tự lập. <span class="page-ref">Ch 3, p. 62-63</span>
+      </div>
+    </div>
+  </li>
+
+  <li class="takeaway-item">
+    <div class="takeaway-badge">5</div>
+    <div class="takeaway-text">
+      <strong>Bộ ba trụ cột lễ nghĩa thực tiễn & Bí quyết cải biến hành vi</strong>
+      <div class="takeaway-detail">
+        <strong>Ý nghĩa:</strong> Lễ nghĩa phải được rèn luyện đồng thời trên 3 khía cạnh: Cơ bản (ăn, mặc, toilet), Tinh thần (kỷ luật khi ích kỷ, bắt nạt, nói dối, phản kháng), và Xã hội/Đạo đức (lao động, tôn trọng bạn bè, cha mẹ làm gương). <span class="page-ref">Ch 3, p. 65, 67-68</span><br>
+        <strong>Áp dụng:</strong> Khen ngợi điểm tốt thay vì trừng phạt hay chê bai (Ví dụ trường hợp bé X trộm siêu thị). Không can thiệp khi trẻ em tự cãi nhau khi chơi chung. <span class="page-ref">Ch 3, p. 68-69</span>
+      </div>
+    </div>
+  </li>
+</ul>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH III · MÔ HÌNH TƯ DUY</div>
+    <h2>Hai mô hình tư duy cốt lõi</h2>
+<div class="split-layout">
+  <div class="mental-model-card" style="flex: 1; min-width: 280px; background: var(--surface); padding: var(--space-6); border-radius: var(--radius-lg); border: 1px solid var(--border); box-shadow: var(--shadow-glass);">
+    <h4 class="model-name" style="color: var(--accent-purple); font-size: 1.125rem; font-weight: 600; margin-bottom: var(--space-3);">Mô Hình 1: Liên Kết Gắn Bó & Đọc Tín Hiệu Cơ Thể</h4>
+    <div class="model-principle" style="font-weight: 500; margin-bottom: var(--space-3); line-height: 1.5;">
+      Phản hồi chính xác và kịp thời nhu cầu thể chất (khóc đòi bú, ôm ấp) thiết lập lòng tin cơ bản và độ chính xác trong cảm nhận cơ thể của trẻ. <span class="page-ref">Ch 3, p. 57, 59</span>
+    </div>
+    <div class="model-application" style="margin-bottom: var(--space-3); font-size: 0.9rem; line-height: 1.5;">
+      <strong>Cách hoạt động:</strong>
+      <ul>
+        <li>Trẻ khóc đòi bú -> Mẹ cho bú -> Trẻ hiểu rằng tín hiệu cơ thể được tiếp nhận và tin tưởng thế giới. <span class="page-ref">Ch 3, p. 58</span></li>
+        <li>Bế bồng kề da áp thịt -> Thỏa mãn nhu cầu gắn bó -> Trẻ tự tin tách ra độc lập khi lớn lên. <span class="page-ref">Ch 3, p. 58-59</span></li>
+      </ul>
+      <strong>Áp dụng:</strong> Tránh nuôi con theo giờ cữ áp đặt; bế con bất cứ khi nào trẻ cần, đặc biệt trước 8 tháng tuổi. <span class="page-ref">Ch 3, p. 58</span>
+    </div>
+    <div class="model-limitations" style="font-size: 0.9rem; line-height: 1.5; color: var(--text-secondary);">
+      <strong>⚠️ Hạn chế & Sai lầm:</strong>
+      <ul>
+        <li>Gửi con quá sớm (2 tháng tuổi) hoặc làm ngơ khi khóc ("để nở phổi") gây tích tụ bực tức thầm lặng, dẫn đến phản kháng thụ động khi lớn (ví dụ Akihiro cố tình thi trượt). <span class="page-ref">Ch 3, p. 58-59</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="mental-model-card" style="flex: 1; min-width: 280px; background: var(--surface); padding: var(--space-6); border-radius: var(--radius-lg); border: 1px solid var(--border); box-shadow: var(--shadow-glass);">
+    <h4 class="model-name" style="color: var(--accent-purple); font-size: 1.125rem; font-weight: 600; margin-bottom: var(--space-3);">Mô Hình 2: Kìm Nén Xúc Cảm & Rèn Luyện Ý Chí</h4>
+    <div class="model-principle" style="font-weight: 500; margin-bottom: var(--space-3); line-height: 1.5;">
+      Ý chí mạnh mẽ thực sự không phải là ích kỷ theo ý mình, mà là năng lực tự kiểm soát, nhẫn nhịn và chiến thắng nhu cầu/cảm xúc bộc phát của bản thân. <span class="page-ref">Ch 3, p. 61</span>
+    </div>
+    <div class="model-application" style="margin-bottom: var(--space-3); font-size: 0.9rem; line-height: 1.5;">
+      <strong>Cách hoạt động:</strong>
+      <ul>
+        <li>Đáp ứng mọi yêu sách vô điều kiện -> Ý muốn ích kỷ ngùn ngụt tăng -> Bất mãn bộc phát khi không được thỏa mãn. <span class="page-ref">Ch 3, p. 62</span></li>
+        <li>Răn dạy giới hạn rõ ràng "không được là không được" -> Trẻ học cách chịu đựng và thích nghi. <span class="page-ref">Ch 3, p. 63, 67</span></li>
+      </ul>
+      <strong>Áp dụng:</strong> Rèn luyện nghiêm khắc trong giai đoạn 0-3 tuổi. Dạy trẻ biết chịu đựng trước khi các thói quen ích kỷ đóng khung lúc 3 tuổi. <span class="page-ref">Ch 3, p. 61</span>
+    </div>
+    <div class="model-limitations" style="font-size: 0.9rem; line-height: 1.5; color: var(--text-secondary);">
+      <strong>⚠️ Hạn chế & Sai lầm:</strong>
+      <ul>
+        <li>Nuông chiều quá mức (thiếu nhẫn nại) hoặc cấm đoán/mắng mỏ cực đoan đều phá hỏng ý chí tự chủ của trẻ, là mầm mống dẫn đến hành vi phạm pháp khi trưởng thành. <span class="page-ref">Ch 3, p. 62</span></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH III · GẮN BÓ SƠ SINH</div>
+    <h2>Phản bác việc cho bú theo giờ &amp; Tác hại của sự xa cách sớm</h2>
+<div class="split-layout">
+  <div class="split-left">
+    <h3 style="color: var(--accent-emerald); font-size: 1.25rem; margin-bottom: var(--space-4);">Mô Hình Bú Theo Giờ & Xa Cách Sớm (Sai lầm)</h3>
+    <ul style="padding-left: var(--space-4); margin-bottom: var(--space-4); font-size: 0.95rem; line-height: 1.6;">
+      <li><strong>Nuôi dạy máy móc:</strong> Cho bú cứng nhắc theo giờ quy định. Bỏ mặc trẻ khóc vì nghĩ "khóc cho nở phổi" hoặc "để tập chịu đựng". <span class="page-ref">Ch 3, p. 57</span></li>
+      <li><strong>Cản trở giao tiếp:</strong> Làm ngơ khi trẻ phát tín hiệu khóc làm trẻ nản lòng, đánh mất nhu cầu truyền đạt trung thực cảm giác của mình cho mẹ. <span class="page-ref">Ch 3, p. 58</span></li>
+      <li><strong>Hủy hoại thể chất:</strong> Bắt bú lúc không thèm, làm ngơ lúc muốn bú làm mất cảm nhận sinh học chính xác của cơ thể. Trẻ dễ bất mãn, nhanh chán. <span class="page-ref">Ch 3, p. 58</span></li>
+      <li><strong>Tổn thương xa cách:</strong> Gửi con đi làm từ 2 tháng tuổi, không ngủ chung, thiếu ôm ấp. Bé phản ứng bằng cách nôn mửa, tiêu chảy, còi cọc. <span class="page-ref">Ch 3, p. 58</span></li>
+    </ul>
+  </div>
+
+  <div class="split-right">
+    <h3 style="color: var(--accent-red); font-size: 1.25rem; margin-bottom: var(--space-4);">Mô Hình Gắn Bó & Đọc Tín Hiệu (Đúng đắn)</h3>
+    <ul style="padding-left: var(--space-4); margin-bottom: var(--space-4); font-size: 0.95rem; line-height: 1.6;">
+      <li><strong>Đáp ứng nhu cầu tự nhiên:</strong> Ăn, ngủ, bế bồng là nhu cầu sinh học. Mẹ đáp ứng hết mình không phiền nhiễu giúp trẻ học cách thấu hiểu người khác. <span class="page-ref">Ch 3, p. 57</span></li>
+      <li><strong>Kề da áp thịt (Skin-to-skin):</strong> Bế trẻ càng nhiều càng tốt, ngủ chung giường. Sự gần gũi xúc giác giải quyết triệt để các rối loạn tiêu hóa của trẻ. <span class="page-ref">Ch 3, p. 58</span></li>
+      <li><strong>Đọc vị tật mút tay:</strong> Mút tay lúc cai sữa (7-8 tháng) là cơ chế giảm lo âu chia tách. Mẹ cần ôm ấp vỗ về thay vì bắt ép từ bỏ cứng nhắc. <span class="page-ref">Ch 3, p. 59</span></li>
+      <li><strong>Hệ quả lâu dài:</strong> Lòng tin cơ bản xác lập đỉnh điểm ở 8 tháng tuổi, trẻ có tâm thái ổn định, tự tôn và biết thông cảm với người khác. <span class="page-ref">Ch 3, p. 59</span></li>
+    </ul>
+  </div>
+</div>
+
+<div class="quote-block">
+  <div class="quote-text">
+    "Tự lúc nào, trong đầu óc Akihiro nảy sinh sự bực tức, vì mẹ không dành trọn tình thương yêu cho cậu... cậu ta quyết định báo thù bằng hình thức cố tình thi trượt để thu hút sự chú ý của cha mẹ đến mình... tâm hồn đầy lỗ hổng trẻ lớn lên thành người không thấu hiểu cả ý chí của nhân loại."
+  </div>
+  <div class="quote-context">
+    <strong>Trường hợp cậu bé Akihiro:</strong> Thi trượt đại học 4 lần dù có thừa học lực. Lý do sâu xa là mẹ đi làm từ khi 2 tháng tuổi, gửi con cho người khác chăm sóc, tạo lỗ hổng tình cảm lớn trong lòng trẻ. <span class="page-ref">Ch 3, p. 58-59</span>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH III · TÂM LÝ ANH CHỊ</div>
+    <h2>Sự thoái lui (Regression) và giải pháp củng cố yêu thương</h2>
+<div class="split-layout">
+  <div class="split-left" style="border-left-color: var(--accent-red);">
+    <h3 style="color: var(--accent-red); font-size: 1.25rem; margin-bottom: var(--space-4);">Cơn Khủng Hoảng Ghen Tị & Biểu Hiện Thoái Lui</h3>
+    <ul style="padding-left: var(--space-4); margin-bottom: var(--space-4); font-size: 0.95rem; line-height: 1.6;">
+      <li><strong>Tâm lý mất mát:</strong> Trẻ lớn cảm thấy bị em bé tước đoạt mất tình yêu thương của mẹ, tìm mọi cách thu hút sự chú ý. <span class="page-ref">Ch 3, p. 60</span></li>
+      <li><strong>Thoái lui hành vi (Regression):</strong> Đã biết tự đi vệ sinh bỗng đái dầm, đòi làm em bé để được mẹ bế bồng, thay tã. <span class="page-ref">Ch 3, p. 60</span></li>
+      <li><strong>Hành vi phản kháng:</strong> Đánh em thật đau để em khóc. Càng bị mắng cấm đoán, trẻ càng đánh em tợn hơn vì ghen ghét tích tụ. <span class="page-ref">Ch 3, p. 60</span></li>
+      <li><strong>Sai lầm của cha mẹ:</strong> Dùng câu mắng phủ đầu: <em>"Gớm, con lớn thế rồi mà..."</em>, hoặc dán nhãn trẻ là ích kỷ. Cách này làm trẻ cuồng loạn và bất mãn sâu sắc hơn. <span class="page-ref">Ch 3, p. 60</span></li>
+    </ul>
+  </div>
+
+  <div class="split-right" style="border-left-color: var(--accent-emerald);">
+    <h3 style="color: var(--accent-emerald); font-size: 1.25rem; margin-bottom: var(--space-4);">Giải Pháp Duy Nhất: Củng Cố Tình Yêu Thương</h3>
+    <ul style="padding-left: var(--space-4); margin-bottom: var(--space-4); font-size: 0.95rem; line-height: 1.6;">
+      <li><strong>Đồng giấc ngủ:</strong> Cho anh/chị lớn ngủ chung giường cùng mẹ và em bé, tránh cách ly trẻ lớn ra phòng riêng. <span class="page-ref">Ch 3, p. 60</span></li>
+      <li><strong>Tăng cường ôm ấp:</strong> Ôm ấp trẻ vào lòng nhiều hơn bình thường, bộc lộ rõ ràng tình yêu thương của mẹ dành cho con vẫn nguyên vẹn. <span class="page-ref">Ch 3, p. 60</span></li>
+      <li><strong>Khơi gợi lòng tự hào:</strong> Chỉ khi trẻ đã an tâm với tình yêu của mẹ, mới nhẹ nhàng khuyên bảo: <em>"Con giỏi lắm, tự làm được nhiều việc rồi, em bé còn nhỏ quá chưa biết làm gì nên mẹ phải chăm..."</em>. <span class="page-ref">Ch 3, p. 60</span></li>
+      <li><strong>Đọc vị tiếng lòng:</strong> Luôn nắm bắt và thấu hiểu tín hiệu ẩn sau hành vi nghịch phá từ con tim của trẻ lớn. <span class="page-ref">Ch 3, p. 60</span></li>
+    </ul>
+  </div>
+</div>
+
+<div class="callout" style="border-left-color: var(--accent-amber);">
+  <div class="callout-icon">💡</div>
+  <div class="callout-content">
+    <strong>Bài học cốt lõi:</strong> Trẻ lớn nghịch phá hay đánh em không phải vì "bản tính xấu" hay "ích kỷ", mà là tiếng kêu cứu của một trái tim lo sợ bị bỏ rơi. Cách duy nhất để dập tắt hành vi phản kháng là đổ đầy chiếc cốc tình yêu đang cạn của trẻ. <span class="page-ref">Ch 3, p. 60</span>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH III · GIÁO DỤC Ý CHÍ</div>
+    <h2>Gốc rễ của lễ nghĩa là giáo dục ý chí trước 3 tuổi</h2>
+<div class="content-card">
+  <h3 style="color: var(--accent-amber); font-size: 1.35rem; margin-bottom: var(--space-4);">1. Định Nghĩa Thực Sự Về "Ý Chí Mạnh Mẽ"</h3>
+  <div class="summary-text" style="font-size: 1.05rem; line-height: 1.7; color: var(--text-primary);">
+    <p>Đối với trẻ nhỏ, <strong>ý chí mạnh mẽ</strong> không có nghĩa là sự bướng bỉnh, ích kỷ bám lấy đòi hỏi cá nhân. Ngược lại, đó là năng lực tự chủ tinh thần để:</p>
+    <ul style="padding-left: var(--space-6); margin-bottom: var(--space-4);">
+      <li><strong>Kiểm soát bản thân:</strong> Chiến thắng được các ham muốn tức thời, những cơn giận dữ và bất mãn bộc phát. <span class="page-ref">Ch 3, p. 61</span></li>
+      <li><strong>Chịu đựng khó khăn:</strong> Khả năng nhẫn nhịn và vượt qua gian khổ mà không chán nản hay phản kháng vô lý. <span class="page-ref">Ch 3, p. 61</span></li>
+      <li><strong>Nền tảng của sáng tạo:</strong> Chỉ những đứa trẻ có ý chí kiên định và khả năng tự kiểm soát mới phát huy được cá tính độc đáo và óc sáng tạo vượt trội. <span class="page-ref">Ch 3, p. 61</span></li>
+    </ul>
+  </div>
+</div>
+
+<div class="content-card">
+  <h3 style="color: var(--accent-red); font-size: 1.35rem; margin-bottom: var(--space-4);">2. Cột Mốc Vàng 0-3 Tuổi: Trễ Là Muộn</h3>
+  <div class="summary-text" style="font-size: 1.05rem; line-height: 1.7; color: var(--text-primary);">
+    <p>Thói quen nhẫn nhịn và ý chí tự chủ của trẻ phải được xây dựng vững chắc <strong>trước 3 tuổi</strong>:</p>
+    <ul style="padding-left: var(--space-6); margin-bottom: var(--space-4);">
+      <li><strong>Sau 3 tuổi đã muộn:</strong> Khi trẻ đã quen được đáp ứng mọi nhu cầu, tính cách ích kỷ đã định hình và ăn sâu, việc dạy nghe lời sau 3 tuổi sẽ cực kỳ khó khăn. <span class="page-ref">Ch 3, p. 61</span></li>
+      <li><strong>Mầm mống phạm pháp:</strong> Kết quả điều tra thiếu niên phạm pháp cho thấy khởi nguồn là do khả năng chịu đựng quá yếu ớt, tính nhẫn nại kém, do được nuông chiều từ nhỏ mà ra. <span class="page-ref">Ch 3, p. 61, 62</span></li>
+      <li><strong>Nguyên tắc vàng:</strong> Cha mẹ phải dạy cho trẻ biết rõ cái gì được phép và cái gì không được phép ngay từ khi trẻ còn chưa có nhận thức đầy đủ. <span class="page-ref">Ch 3, p. 61</span></li>
+    </ul>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH III · ĐƯỜNG CONG NGHIÊM KHẮC</div>
+    <h2>So sánh mô hình Nhật - Mỹ &amp; Đường cong chuẩn</h2>
+<div class="split-layout">
+  <div class="split-left" style="flex: 1.2;">
+    <ul class="timeline">
+      <li class="timeline-item">
+        <span class="timeline-marker">0 - 3 TUỔI: THẮT CHẶT TỐI ĐA</span>
+        <div class="timeline-body">
+          <strong>Nghiêm khắc toàn diện:</strong> Đặt ra các ranh giới rõ ràng "không được là không được". Không nuông chiều thỏa mãn yêu sách vô lý. Xây dựng thói quen nhẫn nhịn và ý chí tự chủ trước khi tính cách đóng khung. <span class="page-ref">Ch 3, p. 61-62</span>
+        </div>
+      </li>
+      <li class="timeline-item">
+        <span class="timeline-marker">3 - 6 TUỔI: NỚI LỎNG DẦN 1 BẬC</span>
+        <div class="timeline-body">
+          <strong>Tự lập có hướng dẫn:</strong> Bắt đầu trao quyền tự lập (tự mặc đồ, tự chọn trò chơi) nhưng vẫn giám sát chặt chẽ các giới hạn đạo đức và an toàn. <span class="page-ref">Ch 3, p. 62</span>
+        </div>
+      </li>
+      <li class="timeline-item">
+        <span class="timeline-marker">6 - 9 TUỔI: NỚI LỎNG THÊM NỮA</span>
+        <div class="timeline-body">
+          <strong>Học hỏi & Trải nghiệm:</strong> Cho phép trẻ tự chịu trách nhiệm nhiều hơn về việc học tập, sinh hoạt cá nhân và các mối quan hệ xã hội. <span class="page-ref">Ch 3, p. 62</span>
+        </div>
+      </li>
+      <li class="timeline-item">
+        <span class="timeline-marker">SAU 9 TUỔI: ĐỐI THOẠI BÌNH ĐẲNG</span>
+        <div class="timeline-body">
+          <strong>Nói chuyện như người lớn:</strong> Cha mẹ buông bỏ sự áp đặt kỷ luật, chuyển vai trò thành cố vấn, thảo luận thẳng thắn và tôn trọng ý kiến của con. <span class="page-ref">Ch 3, p. 62</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="split-right" style="flex: 0.8; border-left: 3px solid var(--accent-amber);">
+    <h4 style="margin-bottom: var(--space-4); color: var(--accent-amber);">Đối chiếu văn hóa học: Nhật Bản vs Mỹ</h4>
+    <div style="font-size: 0.95rem; line-height: 1.6;">
+      <p>Trong tác phẩm <em>"Hoa cúc và lưỡi dao"</em>, nhà nhân học Ruth Benedict chỉ ra sự khác biệt trái ngược giữa hai đường cong nghiêm khắc:</p>
+      <ul style="padding-left: var(--space-4); margin-top: var(--space-2); margin-bottom: var(--space-4);">
+        <li><strong>Kiểu Nhật Bản (Nuông chiều nhỏ, khắt khe lớn):</strong> Thuở nhỏ được nuông chiều tự do tối đa (được ví là "thiên đường của em bé"), lớn lên mới thắt chặt kỷ luật. <span class="page-ref">Ch 3, p. 61-62</span></li>
+        <li><strong>Kiểu Mỹ (Khắt khe nhỏ, tự do lớn):</strong> Thuở nhỏ dạy bảo nghiêm khắc cực kỳ sớm, lớn lên nới lỏng tự do dần. <span class="page-ref">Ch 3, p. 61-62</span></li>
+      </ul>
+      <p style="border-top: 1px solid var(--border-strong); padding-top: var(--space-3); color: var(--accent-strong);">
+        <strong>Khuyến nghị của Shichida:</strong> Trẻ cần được dạy bảo nghiêm khắc <strong>6 năm đầu đời</strong> để tạo khả năng tự khích lệ bản thân, tránh trượt chân vào lối sống vô trách nhiệm khi lớn. <span class="page-ref">Ch 3, p. 62</span>
+      </p>
+    </div>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH III · BẤT TUÂN &amp; PHẠM PHÁP</div>
+    <h2>Bốn sai lầm của cha mẹ hủy hoại tính chịu đựng của trẻ</h2>
+<div class="bullet-grid">
+  <div class="bullet-card" style="border-top: 3px solid var(--accent-red);">
+    <h4 style="color: var(--accent-red); margin-bottom: var(--space-2);">1. Thiếu Tính Nhẫn Nại (Nuông chiều)</h4>
+    <p style="font-size: 0.9rem; line-height: 1.5; color: var(--text-secondary); margin-bottom: var(--space-3);">
+      <strong>Cơ chế:</strong> Cha mẹ đáp ứng mọi đòi hỏi vô điều kiện. Sự nuông chiều không giải phóng tự do của trẻ mà chỉ làm bùng phát thêm các yêu sách vô tận. <span class="page-ref">Ch 3, p. 62</span>
+    </p>
+    <p style="font-size: 0.85rem; color: var(--text-muted);">
+      <strong>Hậu quả:</strong> Trẻ thiếu khả năng chịu đựng, dễ giận dữ, bất mãn dữ dội khi nhu cầu không được đáp ứng tức thì. <span class="page-ref">Ch 3, p. 62</span>
+    </p>
+  </div>
+
+  <div class="bullet-card" style="border-top: 3px solid var(--accent-amber);">
+    <h4 style="color: var(--accent-amber); margin-bottom: var(--space-2);">2. Cha Mẹ Quá Khắt Khe (Mắng mỏ)</h4>
+    <p style="font-size: 0.9rem; line-height: 1.5; color: var(--text-secondary); margin-bottom: var(--space-3);">
+      <strong>Cơ chế:</strong> Không nhìn nhận trẻ, cằn nhằn, mắng mỏ liên tục. Thống kê có những bà mẹ dành tới 80% - 90% lời nói hàng ngày để cằn nhằn con. <span class="page-ref">Ch 3, p. 63</span>
+    </p>
+    <p style="font-size: 0.85rem; color: var(--text-muted);">
+      <strong>Hậu quả:</strong> Đánh mất tố chất thiên bẩm, làm lệch lạc tình cảm và thúc đẩy trẻ đi vào con đường phản kháng, phạm tội. <span class="page-ref">Ch 3, p. 63</span>
+    </p>
+  </div>
+
+  <div class="bullet-card" style="border-top: 3px solid var(--accent-purple);">
+    <h4 style="color: var(--accent-purple); margin-bottom: var(--space-2);">3. Kỳ Vọng Quá Lớn (Áp lực)</h4>
+    <p style="font-size: 0.9rem; line-height: 1.5; color: var(--text-secondary); margin-bottom: var(--space-3);">
+      <strong>Cơ chế:</strong> Đặt áp lực học tập vượt quá khả năng thực tế của trẻ mà không dạy bằng trò chơi hay kiên nhẫn. Cha mẹ mặc định <em>"cái này ai chẳng làm được"</em>. <span class="page-ref">Ch 3, p. 63</span>
+    </p>
+    <p style="font-size: 0.85rem; color: var(--text-muted);">
+      <strong>Hậu quả:</strong> Trẻ rơi vào cảm giác kém cỏi như sống dưới địa ngục, phản ứng mãnh liệt, chán ghét học tập, tự hại. <span class="page-ref">Ch 3, p. 63</span>
+    </p>
+  </div>
+
+  <div class="bullet-card" style="border-top: 3px solid var(--accent-cyan);">
+    <h4 style="color: var(--accent-cyan); margin-bottom: var(--space-2);">4. Quá Chăm Sóc (Làm hộ)</h4>
+    <p style="font-size: 0.9rem; line-height: 1.5; color: var(--text-secondary); margin-bottom: var(--space-3);">
+      <strong>Cơ chế:</strong> Cha mẹ bao bọc làm thay toàn bộ các việc trẻ định tự làm (ăn, mặc, vệ sinh). Quá chú trọng dạy chữ mà bỏ quên dạy kỹ năng tự phục vụ. <span class="page-ref">Ch 3, p. 63-64</span>
+    </p>
+    <p style="font-size: 0.85rem; color: var(--text-muted);">
+      <strong>Hậu quả:</strong> Ức chế năng lực tự giác vĩnh viễn, trẻ chậm cai sữa tinh thần, khôn nhà dại chợ, ích kỷ, thiếu tính xã hội. <span class="page-ref">Ch 3, p. 63-64</span>
+    </p>
+  </div>
+</div>
+
+<div class="callout" style="border-left-color: var(--accent-red); margin-top: var(--space-4);">
+  <div class="callout-icon">⚠️</div>
+  <div class="callout-content" style="font-size: 0.95rem; line-height: 1.6;">
+    <strong>Cảnh báo của giáo sư Shichida:</strong> Trẻ em 3 tuổi biết đọc chữ nhưng không biết cách cởi, mặc quần áo rồi ngồi khóc một mình ở nhà trẻ chính là hệ quả của việc cha mẹ làm hộ quá đáng. Sự kìm hãm tính tự lập sẽ tích tụ bất mãn vô thức gây nên nổi loạn sau này. <span class="page-ref">Ch 3, p. 64</span>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH III · LỄ NGHĨA CƠ BẢN</div>
+    <h2>Tập ăn uống, vệ sinh, mặc đồ &amp; Giới hạn của sự giúp đỡ</h2>
+<div class="bullet-grid">
+  <div class="bullet-card" style="border-top: 3px solid var(--accent-emerald);">
+    <h3 style="color: var(--accent-emerald); font-size: 1.15rem; margin-bottom: var(--space-2);">1. Tập Ăn Uống (Đầy 1 tuổi)</h3>
+    <div style="font-size: 0.9rem; line-height: 1.6; color: var(--text-secondary);">
+      <p><strong>Cột mốc:</strong> Trẻ đầy năm tự cầm thìa ngồi ăn chung bàn với cả gia đình. <span class="page-ref">Ch 3, p. 65</span></p>
+      <p><strong>Bí quyết nuôi dạy:</strong> Chấp nhận cơm vung vãi bừa bộn. Tuyệt đối không giật thìa bón hộ chỉ vì sợ bẩn. <span class="page-ref">Ch 3, p. 65</span></p>
+      <p><strong>Cơ chế tự sửa:</strong> Làm vãi nhiều lần, não bộ trẻ sẽ tự căn chỉnh cơ tay để đưa thức ăn chính xác vào miệng. Đây là bước đầu của <em>tự giác và ý chí</em>. <span class="page-ref">Ch 3, p. 65</span></p>
+    </div>
+  </div>
+
+  <div class="bullet-card" style="border-top: 3px solid var(--accent-amber);">
+    <h3 style="color: var(--accent-amber); font-size: 1.15rem; margin-bottom: var(--space-2);">2. Đi Vệ Sinh (Từ 2 tuổi)</h3>
+    <div style="font-size: 0.9rem; line-height: 1.6; color: var(--text-secondary);">
+      <p><strong>Cột mốc:</strong> Bắt đầu tập ngồi bô tự chủ từ 2 tuổi. Tránh ép sớm ở 1 tuổi rưỡi. <span class="page-ref">Ch 3, p. 65</span></p>
+      <p><strong>Bí quyết nuôi dạy:</strong> Không nôn nóng bắt ép. Khi trẻ tè dầm, phải thay quần/bỉm sạch sẽ <em>càng nhanh càng tốt</em>. <span class="page-ref">Ch 3, p. 65</span></p>
+      <p><strong>Cơ chế tự sửa:</strong> Thay nhanh giúp trẻ khắc ghi cảm giác khô thoáng thoải mái và ghét cảm giác ẩm ướt khó chịu. Nếu để ướt lâu, trẻ quen bẩn và mất ý thức vệ sinh. <span class="page-ref">Ch 3, p. 65-66</span></p>
+    </div>
+  </div>
+
+  <div class="bullet-card" style="border-top: 3px solid var(--accent-purple);">
+    <h3 style="color: var(--accent-purple); font-size: 1.15rem; margin-bottom: var(--space-2);">3. Mặc Quần Áo (Từ 3 tuổi)</h3>
+    <div style="font-size: 0.9rem; line-height: 1.6; color: var(--text-secondary);">
+      <p><strong>Cột mốc:</strong> 3 tuổi tự mặc quần, cài cúc áo dù chậm chạp, vụng về. <span class="page-ref">Ch 3, p. 66</span></p>
+      <p><strong>Bí quyết nuôi dạy:</strong> Nếu con xỏ 2 chân vào một ống quần, cha mẹ cần <em>im lặng quan sát</em>, không can thiệp. <span class="page-ref">Ch 3, p. 66</span></p>
+      <p><strong>Cơ chế tự sửa:</strong> Trẻ nhận ra không đi lại được sẽ tự rút chân ra, loay hoay mặc đi mặc lại cho đến khi mặc đúng. Làm hộ sẽ ức chế năng lực phát triển của trẻ. <span class="page-ref">Ch 3, p. 66</span></p>
+    </div>
+  </div>
+</div>
+
+<div class="callout" style="border-left-color: var(--accent-emerald); margin-top: var(--space-4);">
+  <div class="callout-icon">💡</div>
+  <div class="callout-content" style="font-size: 0.95rem; line-height: 1.6;">
+    <strong>Triết lý hành động:</strong> Mục tiêu cốt lõi của lễ nghĩa cơ bản là cho phép trẻ trải nghiệm thất bại nhỏ (vương vãi cơm, mặc ngược quần, ướt tã) để tự chỉnh sửa hành vi. Sự can thiệp sớm và làm hộ của cha mẹ chính là "kẻ thù" triệt tiêu tính chủ động và tự lập của trẻ. <span class="page-ref">Ch 3, p. 65, 66</span>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH III · VỆ SINH &amp; AN TOÀN</div>
+    <h2>Thói quen rửa mặt và kỹ năng tự bảo vệ mình</h2>
+<div class="split-layout">
+  <div class="split-left" style="border-left-color: var(--accent-amber);">
+    <h3 style="color: var(--accent-amber); font-size: 1.25rem; margin-bottom: var(--space-4);">1. Giữ Vệ Sinh Cá Nhân Hàng Ngày</h3>
+    <ul style="padding-left: var(--space-4); margin-bottom: var(--space-4); font-size: 0.95rem; line-height: 1.6;">
+      <li><strong>Thói quen cốt lõi:</strong> Rửa mặt, đánh răng buổi sáng, rửa tay sạch sẽ sau khi đi vệ sinh. <span class="page-ref">Ch 3, p. 66</span></li>
+      <li><strong>Thực trạng báo động:</strong> Tại một trường tiểu học Nhật Bản, giáo viên hỏi một lớp học sinh lớp 2 xem ai đã rửa mặt sáng nay, chỉ duy nhất 1 học sinh giơ tay. Thậm chí có những em 3 ngày liên tục không rửa mặt. <span class="page-ref">Ch 3, p. 66</span></li>
+      <li><strong>Tính chất giai đoạn:</strong> Rửa mặt/răng miệng là thói quen nếu không rèn từ 0-3 tuổi, lớn lên sẽ rất khó sửa đổi hành vi lười vệ sinh. <span class="page-ref">Ch 3, p. 66</span></li>
+    </ul>
+  </div>
+
+  <div class="split-right" style="border-left-color: var(--accent-red);">
+    <h3 style="color: var(--accent-red); font-size: 1.25rem; margin-bottom: var(--space-4);">2. Kỹ Năng Tự Bảo Vệ & An Toàn</h3>
+    <ul style="padding-left: var(--space-4); margin-bottom: var(--space-4); font-size: 0.95rem; line-height: 1.6;">
+      <li><strong>Quy tắc giao thông:</strong> Đi bộ phải đi sát bên phải đường (ở Nhật Bản). Sang đường phải nhìn đèn giao thông. Tuyệt đối không chơi đùa dưới lòng đường hay chạy vụt ra ngõ. <span class="page-ref">Ch 3, p. 66</span></li>
+      <li><strong>Quy tắc vui chơi:</strong> Tránh xa khu vực nguy hiểm xung quanh xích đu (không chạy cắt ngang trước hoặc sau xích đu đang chuyển động). <span class="page-ref">Ch 3, p. 66</span></li>
+      <li><strong>Mục tiêu tối thượng:</strong> Xây dựng cho trẻ phản xạ tự ý thức bảo vệ bản thân trước nguy hiểm thay vì cha mẹ chỉ đi sau canh chừng. <span class="page-ref">Ch 3, p. 66</span></li>
+    </ul>
+  </div>
+</div>
+
+<div class="quote-block" style="border-left-color: var(--accent-purple);">
+  <div class="quote-text">
+    "Nhưng thực ra, đây lại là suy nghĩ sai lầm đến tai hại... Dạy bé có khả năng tự bảo vệ mình trước những tình huống nguy hiểm là việc làm rất quan trọng."
+  </div>
+  <div class="quote-context">
+    <strong>Bản chất của kỷ luật an toàn:</strong> Kỷ luật không phải là giam giữ trẻ trong nhà mà là trang bị cho trẻ kiến thức sinh tồn cơ bản để tự bảo vệ mình khi không có cha mẹ bên cạnh. <span class="page-ref">Ch 3, p. 66</span>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH III · LỄ NGHĨA TINH THẦN</div>
+    <h2>Năm khoản mục tinh thần &amp; Khi nào được mắng trẻ?</h2>
+<div class="split-layout">
+  <div class="split-left" style="border-left-color: var(--accent-purple); flex: 1.1;">
+    <h3 style="color: var(--accent-purple); font-size: 1.2rem; margin-bottom: var(--space-4);">Năm Khoản Mục Lễ Nghĩa Tinh Thần</h3>
+    <ul style="padding-left: var(--space-4); margin-bottom: var(--space-4); font-size: 0.9rem; line-height: 1.55;">
+      <li><strong>1. Chịu đựng (Ích kỷ):</strong> Rèn luyện trong môi trường "bất tự do". Coi môi trường nhàn nhã, nuông chiều là kẻ thù của sự trưởng thành. <span class="page-ref">Ch 3, p. 66-67</span></li>
+      <li><strong>2. Tốt bụng (Bắt nạt):</strong> Dạy trẻ giúp đỡ cha mẹ (lấy đồ giúp). Mẹ nhận đồ phải cảm ơn đàng hoàng <em>"Cho mẹ xin"</em> để trẻ cảm nhận niềm vui được giúp đỡ. <span class="page-ref">Ch 3, p. 67</span></li>
+      <li><strong>3. Trung thực (Dối trá):</strong> Không phạt khi trẻ nói dối vì tưởng tượng. Phạt nghiêm khi biết sai nhưng đổ lỗi cho người khác, lấy đồ mà không trả tiền. <span class="page-ref">Ch 3, p. 67</span></li>
+      <li><strong>4. Tuân thủ (Đối kháng):</strong> Dạy trẻ 0-3 tuổi nghe lời cha mẹ vì trẻ chưa phân biệt được thiện ác. Không nuông chiều sự phản kháng của trẻ. Cương quyết: <em>"Không được là không được"</em>. <span class="page-ref">Ch 3, p. 67</span></li>
+      <li><strong>5. Biết ơn:</strong> Dạy trẻ nói cảm ơn và chào mời trước bữa ăn (<em>"Xin được dùng cơm ạ"</em>). Dạy trẻ biết cuộc sống là sự tương trợ lẫn nhau. <span class="page-ref">Ch 3, p. 67</span></li>
+    </ul>
+  </div>
+
+  <div class="split-right" style="border-left-color: var(--accent-amber); flex: 0.9;">
+    <h3 style="color: var(--accent-amber); font-size: 1.2rem; margin-bottom: var(--space-4);">Quy Tắc Vàng Khi Mắng Con</h3>
+    <div style="font-size: 0.9rem; line-height: 1.6; color: var(--text-secondary);">
+      <p style="margin-bottom: var(--space-3);">Giáo sư Shichida nhấn mạnh ranh giới rõ ràng về việc mắng con để tránh làm tổn hại lòng tự tin và tâm hồn trẻ:</p>
+      
+      <div style="background: var(--danger-soft); border-left: 3px solid var(--accent-red); padding: var(--space-3); border-radius: var(--radius-sm); margin-bottom: var(--space-3);">
+        <strong style="color: var(--danger);">CHỈ mắng khi phạm 4 lỗi đạo đức:</strong>
+        <p style="margin-top: var(--space-1); font-size: 0.85rem; color: var(--text-primary);">Ích kỷ · Bắt nạt bạn bè · Dối trá đổ tội · Phản kháng nói láo bố mẹ. <span class="page-ref">Ch 3, p. 67-68</span></p>
+      </div>
+
+      <div style="background: var(--success-soft); border-left: 3px solid var(--accent-emerald); padding: var(--space-3); border-radius: var(--radius-sm);">
+        <strong style="color: var(--success);">TUYỆT ĐỐI KHÔNG mắng khi:</strong>
+        <p style="margin-top: var(--space-1); font-size: 0.85rem; color: var(--text-primary);">Trẻ làm vỡ đồ, chạy nhảy ầm ĩ nghịch ngợm trong nhà. Tấm lòng trẻ không xấu, đó chỉ là tai nạn vô ý hoặc hiếu động tự nhiên. <span class="page-ref">Ch 3, p. 68</span></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH III · LỄ NGHĨA XÃ HỘI</div>
+    <h2>Trách nhiệm, lao động và hành vi đối nhân xử thế</h2>
+<div class="bullet-grid">
+  <div class="bullet-card" style="border-top: 3px solid var(--accent-emerald);">
+    <h3 style="color: var(--accent-emerald); font-size: 1.15rem; margin-bottom: var(--space-2);">1. Tinh Thần Trách Nhiệm</h3>
+    <div style="font-size: 0.9rem; line-height: 1.6; color: var(--text-secondary);">
+      <p><strong>Cơ chế:</strong> Gắn liền trách nhiệm với sự tự giác cá nhân. Hãy dạy trẻ thói quen tự thu dọn đồ chơi sau khi chơi xong. <span class="page-ref">Ch 3, p. 68</span></p>
+      <p><strong>Hệ quả:</strong> Thói quen tự làm việc của mình giúp trẻ lớn lên trở thành con người biết chịu trách nhiệm về mọi hành vi của mình. <span class="page-ref">Ch 3, p. 68</span></p>
+    </div>
+  </div>
+
+  <div class="bullet-card" style="border-top: 3px solid var(--accent-amber);">
+    <h3 style="color: var(--accent-amber); font-size: 1.15rem; margin-bottom: var(--space-2);">2. Tinh Thần Lao Động</h3>
+    <div style="font-size: 0.9rem; line-height: 1.6; color: var(--text-secondary);">
+      <p><strong>Bản năng 3 tuổi:</strong> Trẻ 3 tuổi luôn tò mò và rất thích giúp mẹ làm việc nhà (quét nhà, lau bàn). <span class="page-ref">Ch 3, p. 68</span></p>
+      <p><strong>Bí quyết nuôi dạy:</strong> Chấp nhận sự vụng về của trẻ và nói lời cảm ơn vì đã giúp mẹ. <span class="page-ref">Ch 3, p. 68</span></p>
+      <p><strong>Sai lầm chí tử:</strong> Chê bai kết quả lao động của con: <em>"Xấu quá đấy, mẹ lại phải làm lại lần nữa rồi"</em>. Câu chê bai này lập tức tiêu hủy hoàn toàn ý chí giúp đỡ và tinh thần lao động của trẻ. <span class="page-ref">Ch 3, p. 68</span></p>
+    </div>
+  </div>
+
+  <div class="bullet-card" style="border-top: 3px solid var(--accent-red);">
+    <h3 style="color: var(--accent-red); font-size: 1.15rem; margin-bottom: var(--space-2);">3. Đối Nhân & Tính Xã Hội</h3>
+    <div style="font-size: 0.9rem; line-height: 1.6; color: var(--text-secondary);">
+      <p><strong>Sự ích kỷ tuổi lên 3:</strong> Việc trẻ tranh giành đồ chơi là phát triển tâm lý bình thường. <span class="page-ref">Ch 3, p. 68</span></p>
+      <p><strong>Nguyên tắc thép:</strong> Khi trẻ em cãi nhau, người lớn/cha mẹ tuyệt đối <strong>KHÔNG ĐƯỢC CAN THIỆP</strong>. <span class="page-ref">Ch 3, p. 68</span></p>
+      <p><strong>Bài học tự nhiên:</strong> Tự cọ xát với bạn bè giúp trẻ hiểu ích kỷ sẽ gây cãi cọ, không chơi được tiếp. Từ đó, trẻ tự học cách thỏa hiệp và điều chỉnh hành vi xã hội mà không ỷ lại cha mẹ. <span class="page-ref">Ch 3, p. 68</span></p>
+    </div>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH III · NGÔN NGỮ &amp; GƯƠNG MẪU</div>
+    <h2>Dạy chữ sớm qua trò chơi &amp; Vai trò gương mẫu của cha mẹ</h2>
+<div class="split-layout">
+  <div class="split-left" style="border-left-color: var(--accent-purple);">
+    <h3 style="color: var(--accent-purple); font-size: 1.25rem; margin-bottom: var(--space-4);">1. Tri Thức Ngôn Ngữ & Dạy Chữ Sớm</h3>
+    <ul style="padding-left: var(--space-4); margin-bottom: var(--space-4); font-size: 0.95rem; line-height: 1.6;">
+      <li><strong>Phát triển lý tính:</strong> Việc biết chữ sớm giúp trẻ hình thành tư duy lý tính vượt trội so với trẻ không biết chữ. Chữ cái càng nhỏ tuổi (sơ sinh) càng dễ nhớ. <span class="page-ref">Ch 3, p. 69</span></li>
+      <li><strong>Học qua chơi:</strong> Tuyệt đối không ép buộc hay tạo áp lực học tập căng thẳng cho trẻ. Hãy biến việc học chữ thành các trò chơi thú vị. <span class="page-ref">Ch 3, p. 69</span></li>
+      <li><strong>Tài năng nở rộ:</strong> Những trẻ em 3 tuổi đã biết đọc sách say sưa sẽ tích lũy được vốn từ vựng lớn và phát triển thành những người rất có tài năng khi trưởng thành. <span class="page-ref">Ch 3, p. 69</span></li>
+    </ul>
+  </div>
+
+  <div class="split-right" style="border-left-color: var(--accent-emerald);">
+    <h3 style="color: var(--accent-emerald); font-size: 1.25rem; margin-bottom: var(--space-4);">2. Đạo Đức Xã Hội & Sự Làm Gương</h3>
+    <ul style="padding-left: var(--space-4); margin-bottom: var(--space-4); font-size: 0.95rem; line-height: 1.6;">
+      <li><strong>Quy tắc công cộng:</strong> Dạy trẻ không vứt rác bừa bãi ra đường, không bẻ cành bẻ hoa trong công viên, tuân thủ các quy tắc lịch sự khi đi tàu điện hoặc xe công cộng. <span class="page-ref">Ch 3, p. 69</span></li>
+      <li><strong>Gương mẫu tuyệt đối:</strong> Bố mẹ phải tự điều chỉnh hành vi của mình chính xác trước. Trẻ em học bằng cách quan sát và bắt chước hành vi thực tế của cha mẹ chứ không nghe theo lời dạy lý thuyết suông. <span class="page-ref">Ch 3, p. 69</span></li>
+      <li><strong>Bế tắc giáo dục:</strong> Dạy con giữ vệ sinh nhưng cha mẹ lại ngang nhiên xả rác sẽ tạo ra sự mâu thuẫn nhận thức và hủy hoại niềm tin đạo đức ở trẻ. <span class="page-ref">Ch 3, p. 69</span></li>
+    </ul>
+  </div>
+</div>
+
+<div class="quote-block" style="border-left-color: var(--accent-amber);">
+  <div class="quote-text">
+    "Trẻ em hơn ai hết luôn nhìn vào hành vi của bố mẹ để học tập. Bố mẹ phải tự chỉnh mình cho chính xác mới được."
+  </div>
+  <div class="quote-context">
+    <strong>Bản chất của giáo dục gương mẫu:</strong> Cha mẹ chính là tấm gương phản chiếu nhân cách của đứa trẻ. Giáo dục đạo đức không bắt đầu từ sách vở mà từ hành vi văn minh hàng ngày của chính cha mẹ. <span class="page-ref">Ch 3, p. 69</span>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH III · NĂM LỚP ĐỌC SÁCH</div>
+    <h2>Năm lớp đọc hiểu Chương III</h2>
+<div class="content-card" style="margin-top: var(--space-2);">
+  <div class="deep-dive-text">
+    <div style="margin-bottom: var(--space-4); border-left: 3px solid var(--accent-cyan); padding-left: var(--space-3);">
+      <h4 style="color: var(--accent-cyan); margin-bottom: var(--space-1); font-size: 1.05rem;">Lớp 1: Đọc Bề Mặt (Surface Reading) — Tác giả NÓI gì?</h4>
+      <p style="font-size: 0.9rem; line-height: 1.5; color: var(--text-secondary);">
+        Giáo dục lễ nghĩa thực chất là rèn luyện ý chí tự chủ của trẻ trước 3 tuổi, dựa trên nền tảng gắn kết tình cảm mẹ con vững chắc từ sơ sinh. Lễ nghĩa cần được rèn luyện toàn diện ở 3 mặt: Cơ bản (ăn uống, vệ sinh, mặc đồ), Tinh thần (kỷ luật khi ích kỷ, bắt nạt, nói dối, phản kháng) và Xã hội/Đạo đức. <span class="page-ref">Ch 3, p. 57, 61, 65, 67-68</span>
+      </p>
+    </div>
+
+    <div style="margin-bottom: var(--space-4); border-left: 3px solid var(--accent-emerald); padding-left: var(--space-3);">
+      <h4 style="color: var(--accent-emerald); margin-bottom: var(--space-1); font-size: 1.05rem;">Lớp 2: Đọc Cấu Trúc (Structural Reading) — Tác giả TƯ DUY thế nào?</h4>
+      <p style="font-size: 0.9rem; line-height: 1.5; color: var(--text-secondary);">
+        Mạch tư duy của Shichida đi từ tâm sinh lý gắn bó sơ sinh (0-1 tuổi) &rarr; Cơ sở lý thuyết ý chí và kỷ luật nghiêm khắc (1-3 tuổi) &rarr; Các nguyên nhân gây sai lệch hành vi &rarr; Phân nhóm 3 hệ thống lễ nghĩa &rarr; Đúc kết giải pháp thực hành bằng nghệ thuật khen ngợi và làm gương. <span class="page-ref">Ch 3, p. 57, 61, 65, 69</span>
+      </p>
+    </div>
+
+    <div style="margin-bottom: var(--space-4); border-left: 3px solid var(--accent-amber); padding-left: var(--space-3);">
+      <h4 style="color: var(--accent-amber); margin-bottom: var(--space-1); font-size: 1.05rem;">Lớp 3: Đọc Bối Cảnh (Contextual Reading) — Bối cảnh gì định hình tác phẩm?</h4>
+      <p style="font-size: 0.9rem; line-height: 1.5; color: var(--text-secondary);">
+        Bối cảnh Nhật Bản nửa sau thế kỷ 20 với trào lưu đô thị hóa, cả hai vợ chồng cùng đi làm khiến trẻ nhỏ bị gửi đi sớm (2 tháng tuổi). Đồng thời, nền giáo dục truyền thống Nhật Bản vốn nuông chiều trẻ nhỏ vô điều kiện ("thiên đường em bé") và thiếu kỷ luật khoa học đầu đời dẫn tới sự phản kháng hành vi. <span class="page-ref">Ch 3, p. 58, 61</span>
+      </p>
+    </div>
+
+    <div style="margin-bottom: var(--space-4); border-left: 3px solid var(--accent-red); padding-left: var(--space-3);">
+      <h4 style="color: var(--accent-red); margin-bottom: var(--space-1); font-size: 1.05rem;">Lớp 4: Đọc Phản Biện (Critical Reading) — Tác giả ĐÚNG/SAI ở đâu?</h4>
+      <p style="font-size: 0.9rem; line-height: 1.5; color: var(--text-secondary);">
+        <strong>Đúng:</strong> Chỉ ra mối liên hệ sâu sắc giữa chấn thương xa cách mẹ thuở nhỏ với sự nổi loạn ở tuổi lớn (Akihiro). Tôn trọng tính tự giác tự lập sinh hoạt (không bón cơm, để mặc ngược tự sửa). <span class="page-ref">Ch 3, p. 58, 65-66</span>
+        <br><strong>Hạn chế:</strong> Đòi hỏi sự nghiêm khắc cao độ ngay từ nhỏ dễ biến tướng thành bạo lực nếu thiếu đồng cảm. Một số dẫn chứng (như lớp tiểu học không ai rửa mặt) mang tính chủ quan cảm tính, chưa có kiểm chứng thống kê quy mô rộng. <span class="page-ref">Ch 3, p. 61, 66</span>
+      </p>
+    </div>
+
+    <div style="border-left: 3px solid var(--accent-purple); padding-left: var(--space-3);">
+      <h4 style="color: var(--accent-purple); margin-bottom: var(--space-1); font-size: 1.05rem;">Lớp 5: Đọc Kiến Tạo (Generative Reading) — Chúng ta SÁNG TẠO được gì?</h4>
+      <p style="font-size: 0.9rem; line-height: 1.5; color: var(--text-secondary);">
+        Thiết kế mô hình <strong>"Kỷ luật tích cực dựa trên sự gắn bó (Attachment-Based Positive Discipline)"</strong>: Kết hợp chặt chẽ việc đáp ứng yêu thương xúc giác thời kỳ sơ sinh (0-1 tuổi) với việc đặt giới hạn hành vi rõ ràng (1-3 tuổi) nhưng không dùng hình phạt thể xác hay mắng mỏ cằn nhằn. Thay vào đó, áp dụng nghệ thuật khen ngợi điểm tốt và thiết lập các "môi trường tự lập an toàn" để trẻ tự do sửa sai. <span class="page-ref">Ch 3, p. 60, 65, 69</span>
+      </p>
+    </div>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH III · ĐÁNH GIÁ BẰNG CHỨNG</div>
+    <h2>Phân tích khoa học và Socratic Critiques</h2>
+<div class="split-layout">
+  <div style="flex: 1.1;">
+    <div class="evidence-card" style="border-left: 3px solid var(--accent-cyan); margin-bottom: var(--space-4); background: var(--surface); padding: var(--space-5); border-radius: var(--radius-lg); box-shadow: var(--shadow-glass);">
+      <div class="evidence-header" style="display: flex; justify-content: space-between; font-weight: 600; margin-bottom: var(--space-2);">
+        <span class="claim-text" style="font-size: 1.05rem;">1. Cáo buộc: Tác hại của cữ bú giờ & xa cách mẹ</span>
+        <span class="quality-score" style="color: var(--accent-cyan);">⭐⭐⭐⭐⭐ 5/5</span>
+      </div>
+      <div class="evidence-type" style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: var(--space-2);"> Lý thuyết Gắn bó (Attachment Theory) & Nhi khoa lâm sàng <span class="page-ref">Ch 3, p. 57-58</span></div>
+      <div class="evidence-body" style="font-size: 0.9rem; line-height: 1.6; color: var(--text-secondary);">
+        <strong>Đánh giá:</strong> Cực kỳ khớp với tâm lý học phát triển hiện đại (John Bowlby, Mary Ainsworth). Việc đáp ứng nhạy cảm với tiếng khóc sơ sinh giúp hình thành "kiểu gắn bó an toàn" (secure attachment), làm bệ phóng cho khả năng tự lập và điều chỉnh cảm xúc sau này. Việc tách mẹ sớm trước 6 tháng tăng cortisol (hormone stress) của trẻ.<br>
+        <strong>Đặc thù:</strong> Trường hợp phản kháng thụ động của Akihiro (cố tình trượt đại học) phản ánh chính xác cơ chế trả thù tâm lý vô thức do thiếu thốn tình cảm đầu đời. <span class="page-ref">Ch 3, p. 59</span>
+      </div>
+    </div>
+    
+    <div class="evidence-card" style="border-left: 3px solid var(--accent-cyan); background: var(--surface); padding: var(--space-5); border-radius: var(--radius-lg); box-shadow: var(--shadow-glass);">
+      <div class="evidence-header" style="display: flex; justify-content: space-between; font-weight: 600; margin-bottom: var(--space-2);">
+        <span class="claim-text" style="font-size: 1.05rem;">2. Cáo buộc: Đường cong nghiêm khắc & Ý chí trước 3t</span>
+        <span class="quality-score" style="color: var(--accent-red);">⭐⭐⭐☆☆ 3/5</span>
+      </div>
+      <div class="evidence-type" style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: var(--space-2);"> Giáo dục học so sánh & Lý thuyết ý chí <span class="page-ref">Ch 3, p. 61-62</span></div>
+      <div class="evidence-body" style="font-size: 0.9rem; line-height: 1.6; color: var(--text-secondary);">
+        <strong>Đánh giá:</strong> Đúng về mặt giai đoạn nhạy cảm: 0-3 tuổi là thời điểm nếp nhăn và kết nối não bộ hình thành nhanh nhất, việc xây dựng thói quen nhẫn nhịn và giới hạn đạo đức là cực kỳ thuận lợi. <span class="page-ref">Ch 3, p. 61</span><br>
+        <strong>Hạn chế:</strong> Quan điểm khắt khe "thắt chặt tối đa từ sơ sinh đến 3 tuổi" dễ bị cha mẹ hiểu sai và áp dụng thành kỷ luật sắt bạo lực, trừng phạt cảm xúc. Ngoài ra, việc khẳng định sau 3 tuổi "khó thay đổi tính cách" là quá định mệnh; trị liệu tâm lý hiện đại chứng minh hành vi con người vẫn có thể tái cấu trúc qua môi trường.
+      </div>
+    </div>
+  </div>
+
+  <div class="split-right" style="border-left-color: var(--accent-red); flex: 0.9; background: var(--surface); padding: var(--space-5); border-radius: var(--radius-lg); box-shadow: var(--shadow-glass);">
+    <h3 style="color: var(--accent-red); font-size: 1.2rem; margin-bottom: var(--space-3);">Phản Biện Đa Chiều & Đối Chiếu</h3>
+    <ul style="padding-left: var(--space-4); font-size: 0.9rem; line-height: 1.6; color: var(--text-secondary);">
+      <li style="margin-bottom: var(--space-3);">
+        <strong>Tranh luận cữ ăn/ngủ (E.A.S.Y):</strong> Y khoa phương Tây khuyến khích ăn ngủ theo cữ để mẹ hồi phục sức khỏe và giúp trẻ tự xoa dịu (self-soothe). Khuyến nghị của Shichida "cho bú bất cứ khi nào khóc" đòi hỏi người mẹ phải túc trực 24/7, dễ gây kiệt sức tinh thần (parental burnout) nếu không có sự hỗ trợ của gia đình. <span class="page-ref">Ch 3, p. 58</span>
+      </li>
+      <li style="margin-bottom: var(--space-3);">
+        <strong>Rủi ro kỷ luật áp chế:</strong> Nếu áp đặt "không được là không được" quá cứng nhắc trước 3 tuổi khi não bộ lý tính (tiền trán) chưa phát triển, trẻ có thể vâng lời vì sợ hãi chứ không phải tự giác. <span class="page-ref">Ch 3, p. 67</span>
+      </li>
+      <li>
+        <strong>Dung hòa thực tế:</strong> Đáp ứng đầy đủ nhu cầu cảm xúc (bế bồng, da kề da) và cữ sữa nhạy cảm ở giai đoạn 0-1 tuổi. Bắt đầu thiết lập các giới hạn hành vi rõ ràng, nhẹ nhàng từ 1-3 tuổi kết hợp giải thích lý do thay vì ra lệnh độc đoán. <span class="page-ref">Ch 3, p. 59, 61</span>
+      </li>
+    </ul>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH III · CẨM NANG HÀNH ĐỘNG</div>
+    <h2>Bảng kiểm thực hành lễ nghĩa cho trẻ 0-3 tuổi</h2>
+<div class="phase-progress" style="display: flex; gap: var(--space-3); margin-bottom: var(--space-6); justify-content: space-between;">
+  <div class="phase active" style="flex: 1; text-align: center; padding: var(--space-3); background: var(--accent-soft); border-radius: var(--radius-md); border-left: 3px solid var(--accent); font-weight: 600; font-size: 0.85rem;">P1: Gắn bó (0-1 tuổi)</div>
+  <div class="phase" style="flex: 1; text-align: center; padding: var(--space-3); background: var(--surface-muted); border-radius: var(--radius-md); color: var(--text-muted); font-size: 0.85rem;">P2: Ý chí (1-2 tuổi)</div>
+  <div class="phase" style="flex: 1; text-align: center; padding: var(--space-3); background: var(--surface-muted); border-radius: var(--radius-md); color: var(--text-muted); font-size: 0.85rem;">P3: Tự lập (2-3 tuổi)</div>
+  <div class="phase" style="flex: 1; text-align: center; padding: var(--space-3); background: var(--surface-muted); border-radius: var(--radius-md); color: var(--text-muted); font-size: 0.85rem;">P4: Xã hội (3 tuổi+)</div>
+</div>
+
+<div class="split-layout">
+  <div class="split-left" style="border-left-color: var(--accent); flex: 1.1;">
+    <h4 style="color: var(--accent); margin-bottom: var(--space-2);">Kế Hoạch Hành Động Chi Tiết Cho Cha Mẹ</h4>
+    <ul style="padding-left: var(--space-4); font-size: 0.85rem; line-height: 1.6; color: var(--text-secondary);">
+      <li style="margin-bottom: var(--space-2);">
+        <strong>P1: Gắn bó (0-1 tuổi):</strong> Cho bú theo nhu cầu, tránh cữ giờ. Bế ẵm kề da áp thịt tối đa. Ngủ chung giường để tạo lòng tin cơ bản trước 8 tháng. Khi có em bé, cho anh/chị lớn ngủ chung giường, tăng ôm ấp để dập tắt khủng hoảng ghen tị. <span class="page-ref">Ch 3, p. 58-60</span>
+      </li>
+      <li style="margin-bottom: var(--space-2);">
+        <strong>P2: Rèn ý chí (1-2 tuổi):</strong> Thiết lập ranh giới kỷ luật "không được là không được" đối với hành vi ích kỷ, bắt nạt, nói dối, phản kháng. Cho tự cầm thìa ăn từ 1 tuổi, chấp nhận cơm rơi vãi để trẻ tự điều chỉnh cơ tay. <span class="page-ref">Ch 3, p. 61, 65, 68</span>
+      </li>
+      <li style="margin-bottom: var(--space-2);">
+        <strong>P3: Tự lập (2-3 tuổi):</strong> Tập đi bô tự chủ từ 2 tuổi (thay tã nhanh khi bẩn để trẻ nhận biết cảm giác khó chịu). Để trẻ tự mặc quần, tự cài cúc lúc 3 tuổi. Im lặng quan sát khi con mặc ngược, mặc lỗi để trẻ tự rút ra sửa sai. <span class="page-ref">Ch 3, p. 65-66</span>
+      </li>
+      <li>
+        <strong>P4: Xã hội hóa (3 tuổi+):</strong> Dạy trẻ thu dọn đồ chơi tự giác. Cảm ơn khi trẻ giúp việc nhà, cấm chê bai kết quả. Khi trẻ cãi nhau với bạn bè, tuyệt đối <strong>không can thiệp</strong> để trẻ tự học cách thích nghi xã hội. Dạy chữ sớm qua trò chơi. <span class="page-ref">Ch 3, p. 68-69</span>
+      </li>
+    </ul>
+  </div>
+
+  <div class="split-right" style="border-left-color: var(--accent-red); flex: 0.9;">
+    <h4 style="color: var(--accent-red); margin-bottom: var(--space-2);">⚠️ Sai Lầm Cần Tránh & Chỉ Số Thành Công</h4>
+    <div style="font-size: 0.85rem; line-height: 1.6; color: var(--text-secondary);">
+      <strong>3 Sai lầm chí mạng cần tránh:</strong>
+      <ol style="padding-left: var(--space-4); margin-bottom: var(--space-3);">
+        <li>Mắng mỏ, cằn nhằn trẻ suốt ngày vì các tai nạn vô ý (vỡ đồ, làm đổ nước, chạy nghịch) hoặc dán nhãn trẻ ích kỷ khi ghen tị. <span class="page-ref">Ch 3, p. 60, 68</span></li>
+        <li>Bao bọc làm hộ toàn bộ mọi việc (bón cơm, mặc đồ, đi vệ sinh hộ) cản trở tính tự lập vĩnh viễn. <span class="page-ref">Ch 3, p. 63-64</span></li>
+        <li>Cha mẹ dạy con đạo đức nơi công cộng nhưng bản thân lại xả rác, vượt đèn đỏ hay cãi cọ trước mặt con. <span class="page-ref">Ch 3, p. 69</span></li>
+      </ol>
+      <strong>Chỉ số thành công sớm (Sau 1 tháng):</strong>
+      <ul style="padding-left: var(--space-4);">
+        <li>Trẻ lớn ngủ yên bình chung giường, bớt cáu bẳn và yêu thương em nhỏ hơn. <span class="page-ref">Ch 3, p. 60</span></li>
+        <li>Trẻ tự cầm thìa ăn vui vẻ, tự giác dọn đồ chơi sau khi chơi. <span class="page-ref">Ch 3, p. 65, 68</span></li>
+        <li>Trẻ chấp nhận lời từ chối của cha mẹ mà không quấy khóc lèo nhèo ăn vạ. <span class="page-ref">Ch 3, p. 67</span></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH III · TRÍCH DẪN ĐẮT GIÁ</div>
+    <h2>Những câu nói vàng ngọc trong Chương III</h2>
+<div class="quote-block">
+  <p class="quote-text">"Đường cong nghiêm khắc thế này thì tốt. Từ khi sơ sinh tới khi 3 tuổi, phải hết sức thắt chặt, nghiêm khắc. Từ 3 tới 6 tuổi thì nới lỏng hơn 1 chút. Từ 6 đến 9 tuổi nới lỏng hơn chút nữa, để sau đó trở đi, cha mẹ có thể dạy dỗ con bằng cách nói chuyện thẳng thắn."</p>
+  <p class="quote-context"><strong>— Giáo sư Shichida Makoto</strong>, đề xuất nguyên tắc thiết lập kỷ luật và rèn luyện ý chí cho trẻ từ sơ sinh. <span class="page-ref">Ch 3, p. 62</span></p>
+  <div style="font-size: 0.9rem; line-height: 1.6; color: var(--text-secondary); margin-top: var(--space-3); border-top: 1px solid var(--border-subtle); padding-top: var(--space-2);">
+    <strong>Ý nghĩa sâu sắc:</strong> Tác giả đảo ngược tư duy nuôi dạy truyền thống của Nhật Bản (nuông chiều khi nhỏ, nghiêm khắc khi lớn). Sự nuông chiều trước 3 tuổi làm phồng to các yêu sách ích kỷ của trẻ, khiến việc uốn nắn sau này trở nên quá muộn. Thiết lập kỷ luật nghiêm ngặt "không được là không được" ngay từ nhỏ giúp trẻ rèn luyện khả năng chịu đựng và ý chí tự chủ. Nới lỏng dần khi lớn lên giúp trẻ phát triển sự tự tin và xây dựng mối quan hệ bình đẳng, thấu hiểu với cha mẹ.
+  </div>
+</div>
+
+<div class="quote-block" style="border-left-color: var(--accent-purple);">
+  <p class="quote-text">"Bí quyết để con bạn trở thành một người con sáng lạn, giàu năng lực, đó là việc nhìn nhận và khích lệ con trẻ. Bí quyết dạy con, bí quyết giáo dục con là ở đây."</p>
+  <p class="quote-context"><strong>— Giáo sư Shichida Makoto</strong>, đúc kết triết lý cải tạo hành vi phản kháng của trẻ nhỏ. <span class="page-ref">Ch 3, p. 69</span></p>
+  <div style="font-size: 0.9rem; line-height: 1.6; color: var(--text-secondary); margin-top: var(--space-3); border-top: 1px solid var(--border-subtle); padding-top: var(--space-2);">
+    <strong>Ý nghĩa sâu sắc:</strong> Kỷ luật thực sự không bao giờ được xây dựng bằng bạo lực hay mắng mỏ cằn nhằn liên miên. Khi trẻ phạm lỗi nghiêm trọng (như trường hợp bé X ăn trộm đồ siêu thị), đó thực chất là một phản ứng tâm lý "ăn cắp tình yêu thương" để thu hút sự chú ý của cha mẹ. Thay vì chê trách đẩy con vào cảm giác kém cỏi như sống dưới địa ngục, bí quyết tối thượng là cha mẹ hãy nhẫn nại tìm kiếm những điểm tốt nhỏ bé của con để khen ngợi và động viên chân thành. Lời khen đúng đắn sẽ vực dậy nhân cách của trẻ.
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH III · BÍ QUYẾT CẢI TẠO</div>
+    <h2>Nghệ thuật khen ngợi và trường hợp bé X</h2>
+<figure class="image-slot hero">
+  <img src="images/ch3_closing.png" alt="Sự khen ngợi và động viên giúp trẻ phát triển rực rỡ và tự tin">
+</figure>
+<ul class="action-list" style="margin-top: var(--space-4); list-style: none; padding: 0;">
+  <li class="action-item" style="display: flex; gap: var(--space-4); margin-bottom: var(--space-4); align-items: flex-start; background: var(--surface); padding: var(--space-4); border-radius: var(--radius-md); box-shadow: var(--shadow-glass);">
+    <div style="font-size: 1.5rem; line-height: 1;">💖</div>
+    <div>
+      <div class="action-headline" style="font-weight: 600; font-size: 1.05rem; color: var(--text-primary);">Hóa giải khủng hoảng ghen tị bằng cách củng cố tình thương</div>
+      <div class="action-detail" style="font-size: 0.9rem; color: var(--text-secondary); margin-top: var(--space-1);">
+        Khi gia đình có thêm em bé, hãy cho anh/chị lớn ngủ chung giường cùng mẹ. Tăng cường ôm ấp và dành thời gian riêng cho trẻ lớn để xóa tan nỗi sợ bị bỏ rơi. Tuyệt đối không mắng mỏ trẻ là ích kỷ hay so sánh <em>"con lớn rồi mà"</em>. <span class="page-ref">Ch 3, p. 60</span>
+      </div>
+    </div>
+  </li>
+
+  <li class="action-item" style="display: flex; gap: var(--space-4); margin-bottom: var(--space-4); align-items: flex-start; background: var(--surface); padding: var(--space-4); border-radius: var(--radius-md); box-shadow: var(--shadow-glass);">
+    <div style="font-size: 1.5rem; line-height: 1;">🌟</div>
+    <div>
+      <div class="action-headline" style="font-weight: 600; font-size: 1.05rem; color: var(--text-primary);">Áp dụng nghệ thuật khen ngợi điểm tốt để cải biến hành vi lệch chuẩn</div>
+      <div class="action-detail" style="font-size: 0.9rem; color: var(--text-secondary); margin-top: var(--space-1);">
+        Khi trẻ quấy phá, nói dối hay trộm cắp, hãy hiểu rằng trẻ đang phát tín hiệu thu hút sự chú ý. Cha mẹ cần kiên nhẫn tìm kiếm các ưu điểm nhỏ nhất của con để khen ngợi và động viên chân thành. Lời khen ngợi đúng lúc sẽ giúp trẻ tự tin cải biến nhân cách. <span class="page-ref">Ch 3, p. 69</span>
+      </div>
+    </div>
+  </li>
+
+  <li class="action-item" style="display: flex; gap: var(--space-4); align-items: flex-start; background: var(--surface); padding: var(--space-4); border-radius: var(--radius-md); box-shadow: var(--shadow-glass);">
+    <div style="font-size: 1.5rem; line-height: 1;">🚶‍♂️</div>
+    <div>
+      <div class="action-headline" style="font-weight: 600; font-size: 1.05rem; color: var(--text-primary);">Tôn trọng quyền tự lập và tự giải quyết xung đột của con</div>
+      <div class="action-detail" style="font-size: 0.9rem; color: var(--text-secondary); margin-top: var(--space-1);">
+        Để con tự xúc ăn từ 1 tuổi, tự đi bô từ 2 tuổi, tự mặc quần cài cúc từ 3 tuổi. Im lặng quan sát khi con làm sai để con tự rút kinh nghiệm. Khi con cãi nhau tranh giành đồ chơi với bạn, tuyệt đối không can thiệp để con tự học cách thỏa hiệp xã hội. <span class="page-ref">Ch 3, p. 65, 66, 68</span>
+      </div>
+    </div>
+  </li>
+</ul>
+
+  </section>
+
+</div>
+
+<div class="nav-controls">
+  <button class="nav-btn" id="prevBtn" onclick="prevSlide()" aria-label="Previous slide">&#8592;</button>
+  <div class="counter" id="counter" aria-live="polite">1 / 1</div>
+  <button class="nav-btn" id="nextBtn" onclick="nextSlide()" aria-label="Next slide">&#8594;</button>
+</div>
+
+<script src="common.js"></script>
+</body>
+</html>

@@ -402,22 +402,22 @@ function initMermaid() {
 }
 
 // ─── Zoom + pan controls for Mermaid diagrams ───────────────────────────
-// Vanilla, no dependency. Wheel/buttons zoom, drag to pan, double-click resets.
+// Powered by @panzoom/panzoom. Drag to pan, wheel or buttons to zoom, dblclick resets.
 function attachMermaidZoom(container, svg) {
     if (container.dataset.zoomReady) return;
     container.dataset.zoomReady = '1';
 
-    let scale = 1;
-    let tx = 0, ty = 0;
-    const MIN = 0.5, MAX = 6;
-
-    function apply() {
-        svg.style.transformOrigin = '50% 50%';
-        svg.style.transform = `translate(${tx}px, ${ty}px) scale(${scale})`;
-        svg.style.transition = isPanning ? 'none' : 'transform 120ms ease-out';
+    if (typeof Panzoom === 'undefined') {
+        console.warn('Panzoom library not loaded. Zoom/pan will be disabled.');
+        return;
     }
-    function clamp(s) { return Math.max(MIN, Math.min(MAX, s)); }
-    function reset() { scale = 1; tx = 0; ty = 0; apply(); }
+
+    // Initialize Panzoom on the SVG element
+    const panzoom = Panzoom(svg, {
+        maxScale: 6,
+        minScale: 0.5,
+        canvas: true
+    });
 
     // Toolbar overlay
     const toolbar = document.createElement('div');
@@ -428,50 +428,42 @@ function attachMermaidZoom(container, svg) {
         <button type="button" data-action="zoom-in" aria-label="Zoom in">+</button>
     `;
     container.appendChild(toolbar);
+
     toolbar.addEventListener('click', (e) => {
-        const a = e.target.dataset.action;
-        if (a === 'zoom-in') { scale = clamp(scale * 1.25); apply(); }
-        else if (a === 'zoom-out') { scale = clamp(scale / 1.25); apply(); }
-        else if (a === 'reset') { reset(); }
+        const button = e.target.closest('button');
+        if (!button) return;
+        const action = button.dataset.action;
+        if (action === 'zoom-in') {
+            panzoom.zoomIn();
+        } else if (action === 'zoom-out') {
+            panzoom.zoomOut();
+        } else if (action === 'reset') {
+            panzoom.reset();
+        }
     });
 
-    // Wheel zoom — keep mouse position as zoom anchor
+    // Wheel zoom — uses Panzoom's zoomWithWheel helper
     container.addEventListener('wheel', (e) => {
-        e.preventDefault();
-        const factor = e.deltaY < 0 ? 1.15 : 1 / 1.15;
-        scale = clamp(scale * factor);
-        apply();
+        panzoom.zoomWithWheel(e);
     }, { passive: false });
 
-    // Drag to pan
-    let isPanning = false, startX = 0, startY = 0, startTx = 0, startTy = 0;
+    // Double click to reset
+    container.addEventListener('dblclick', () => {
+        panzoom.reset();
+    });
+
+    // Update cursor on grab/grabbing states
+    container.style.cursor = 'grab';
     container.addEventListener('pointerdown', (e) => {
         if (e.target.closest('.mermaid-zoom')) return;
-        isPanning = true;
-        container.setPointerCapture(e.pointerId);
-        startX = e.clientX; startY = e.clientY;
-        startTx = tx; startTy = ty;
         container.style.cursor = 'grabbing';
-        apply();
     });
-    container.addEventListener('pointermove', (e) => {
-        if (!isPanning) return;
-        tx = startTx + (e.clientX - startX);
-        ty = startTy + (e.clientY - startY);
-        apply();
-    });
-    function endPan(e) {
-        if (!isPanning) return;
-        isPanning = false;
-        try { container.releasePointerCapture(e.pointerId); } catch (_) { /* ignore */ }
+    container.addEventListener('pointerup', () => {
         container.style.cursor = 'grab';
-        apply();
-    }
-    container.addEventListener('pointerup', endPan);
-    container.addEventListener('pointercancel', endPan);
-    container.addEventListener('dblclick', reset);
-
-    container.style.cursor = 'grab';
+    });
+    container.addEventListener('pointercancel', () => {
+        container.style.cursor = 'grab';
+    });
 }
 
 // Handle window resize for responsive behavior

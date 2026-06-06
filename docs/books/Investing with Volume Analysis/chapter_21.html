@@ -1,370 +1,449 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Investing with Volume Analysis — Chapter 21</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="common.css">
-<script src="https://cdn.jsdelivr.net/npm/mermaid@11.10.0/dist/mermaid.min.js" crossorigin="anonymous"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Investing with Volume Analysis — Chapter 21</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../common.css">
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@11.10.0/dist/mermaid.min.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
 
-<div class="progress-bar" id="progressBar"></div>
+  <div class="progress-bar" id="progressBar"></div>
 
-<div class="chapter-menu">
-  <button class="menu-btn" id="chapterMenuBtn" onclick="toggleChapterMenu()" aria-haspopup="true" aria-expanded="false">Chapters &#9662;</button>
-  <div class="chapter-menu-panel" id="chapterMenuPanel" role="menu"></div>
-</div>
-
-<div class="slide-container" id="slideContainer">
-
-  <section class="slide" aria-hidden="false">
-<h1>Investing with Volume Analysis</h1>
-  <p class="subtitle">Chapter 21: Putting It All Together: Volume-Dictated Strategies</p>
-  <div class="meta-grid">
-    <div class="meta-item"><strong>Depth Mode:</strong> Deep</div>
-    <div class="meta-item"><strong>Est. Time:</strong> 40 mins</div>
+  <div class="chapter-menu">
+    <button class="menu-btn" id="chapterMenuBtn" onclick="toggleChapterMenu()" aria-haspopup="true"
+      aria-expanded="false">Chapters &#9662;</button>
+    <div class="chapter-menu-panel" id="chapterMenuPanel" role="menu"></div>
   </div>
-  <figure class="image-slot hero">
-    <div class="image-prompt">
-      <span class="image-prompt-label">AI Image Prompt — env doesn't have image-gen</span>
-      <p class="image-prompt-text">Wide cinematic landscape; a complex clockwork mechanism glowing with amber and purple light, assembling into a unified whole, high contrast.</p>
-      <span class="image-prompt-hint">Paste this into ChatGPT/DALL-E/Midjourney, save as images/ch21-hero.jpg, replace this block with &lt;img src="images/ch21-hero.jpg"&gt;</span>
-    </div>
-  </figure>
 
-  </section>
+  <div class="slide-container" id="slideContainer">
 
-  <section class="slide chapter-divider">
-<div class="chapter-number">Chapter 21</div>
-  <h2>Putting It All Together: Volume-Dictated Strategies</h2>
-  <p class="chapter-meta">Est. reading time: 40 mins · Difficulty: Advanced · Key concepts: Market Positioning System, Top-Down Analysis, 5-Step Process</p>
+    <section class="slide" aria-hidden="false">
+      <h1>Investing with Volume Analysis</h1>
+      <p class="subtitle">Chapter 21: Putting It All Together: Volume-Dictated Strategies</p>
+      <div class="meta-grid">
+        <div class="meta-item"><strong>Depth Mode:</strong> Deep</div>
+        <div class="meta-item"><strong>Est. Time:</strong> 40 mins</div>
+      </div>
+      <figure class="image-slot hero">
+        <div class="image-prompt">
+          <span class="image-prompt-label">AI Image Prompt — env doesn't have image-gen</span>
+          <p class="image-prompt-text">Wide cinematic landscape; a complex clockwork mechanism glowing with amber and
+            purple light, assembling into a unified whole, high contrast.</p>
+          <span class="image-prompt-hint">Paste this into ChatGPT/DALL-E/Midjourney, save as images/ch21-hero.jpg,
+            replace this block with &lt;img src="images/ch21-hero.jpg"&gt;</span>
+        </div>
+      </figure>
 
-  </section>
+    </section>
 
-  <section class="slide">
-    <div class="slide-kicker">CH 21 · VISUAL SUMMARY</div>
-    <h2>Visual Summary</h2>
-<div class="mermaid">
-graph TD
-    A["Step 1: Broad Market Trend"] --> B["Step 2: Trend Sustainability (VPCI Index)"]
-    B --> C["Step 3: Market Breadth (MPS)"]
-    C --> D["Step 4: Market Sectors (VW-MACD)"]
-    D --> E["Step 5: Individual Stock MPS (TTI & VPCI)"]
-    
-    E --> F["Quadrant 1: High Trend + High Volume (Buy)"]
-    E --> G["Quadrant 2: Low Trend + High Volume"]
-    E --> H["Quadrant 3: High Trend + Low Volume"]
-    E --> I["Quadrant 4: Low Trend + Low Volume (V-Bottom)"]
-    
-    style A fill:#7C3AED,stroke:#E2E8F0,color:#FFFFFF
-    style E fill:#059669,stroke:#E2E8F0,color:#FFFFFF
-    style F fill:#059669,stroke:#E2E8F0,color:#FFFFFF
-</div>
+    <section class="slide chapter-divider">
+      <div class="chapter-number">Chapter 21</div>
+      <h2>Putting It All Together: Volume-Dictated Strategies</h2>
+      <p class="chapter-meta">Est. reading time: 40 mins · Difficulty: Advanced · Key concepts: Market Positioning
+        System, Top-Down Analysis, 5-Step Process</p>
 
-  </section>
+    </section>
 
-  <section class="slide">
-    <div class="slide-kicker">CH 21 · THE BIG IDEA</div>
-    <h2>The Big Idea</h2>
-<div class="takeaway-hero">
-  <div class="kicker">CH 21 · THE BIG IDEA</div>
-  <div class="headline">"Technical knowledge without strategic integration is dangerous; volume and trend must map the market before any individual trade is placed."</div>
-  <div class="subline">A five-step top-down process creates a Market Positioning System to ensure you trade with the wind at your back.</div>
-</div>
+    <section class="slide">
+      <div class="slide-kicker">CH 21 · VISUAL SUMMARY</div>
+      <h2>Visual Summary</h2>
+      <div class="mermaid">
+        graph TD
+        A["Step 1: Broad Market Trend"] --> B["Step 2: Trend Sustainability (VPCI Index)"]
+        B --> C["Step 3: Market Breadth (MPS)"]
+        C --> D["Step 4: Market Sectors (VW-MACD)"]
+        D --> E["Step 5: Individual Stock MPS (TTI & VPCI)"]
 
-  </section>
+        E --> F["Quadrant 1: High Trend + High Volume (Buy)"]
+        E --> G["Quadrant 2: Low Trend + High Volume"]
+        E --> H["Quadrant 3: High Trend + Low Volume"]
+        E --> I["Quadrant 4: Low Trend + Low Volume (V-Bottom)"]
 
-  <section class="slide">
-    <div class="slide-kicker">CH 21 · KEY TAKEAWAYS</div>
-    <h2>Key Takeaways</h2>
-<ul class="takeaway-list">
-  <li class="takeaway-item">
-    <div class="takeaway-badge">1</div>
-    <div class="takeaway-text">Technical analysis is not performed in a vacuum. <span class="page-ref">Ch 21, p. 259</span></div>
-    <div class="takeaway-detail">
-      <strong>Why it matters:</strong> Beginners use indicators in isolation, missing the big picture and exposing themselves to unnecessary risk.
-      <br><strong>Application:</strong> Establish the broad market trend before analyzing an individual security.
-    </div>
-  </li>
-  <li class="takeaway-item">
-    <div class="takeaway-badge">2</div>
-    <div class="takeaway-text">The VPCI Index measures the sustainability of the broad market. <span class="page-ref">Ch 21, p. 261</span></div>
-    <div class="takeaway-detail">
-      <strong>Why it matters:</strong> The broad market is a collection of stocks; computing individual VPCIs prevents index-level distortions.
-      <br><strong>Application:</strong> Use the aggregated VPCI Index to confirm if broad upward price trends are truly supported by volume.
-    </div>
-  </li>
-  <li class="takeaway-item">
-    <div class="takeaway-badge">3</div>
-    <div class="takeaway-text">Direction trumps location in the MPS. <span class="page-ref">Ch 21, p. 279</span></div>
-    <div class="takeaway-detail">
-      <strong>Why it matters:</strong> While buying at the extreme (e.g., highly overbought with bullish volume) is profitable, the subsequent trajectory dictates the ultimate return.
-      <br><strong>Application:</strong> Hold stocks that maintain strong volume characteristics even if the price trend fluctuates slightly.
-    </div>
-  </li>
-  <li class="takeaway-item">
-    <div class="takeaway-badge">4</div>
-    <div class="takeaway-text">Market equilibrium is a danger zone. <span class="page-ref">Ch 21, p. 277</span></div>
-    <div class="takeaway-detail">
-      <strong>Why it matters:</strong> Stocks near the center of the MPS map (average trend, average volume) underperform the extremes.
-      <br><strong>Application:</strong> Avoid trading stocks stuck in the middle; seek out clear imbalances where volume dictates a strong trend.
-    </div>
-  </li>
-</ul>
+        style A fill:#7C3AED,stroke:#E2E8F0,color:#FFFFFF
+        style E fill:#059669,stroke:#E2E8F0,color:#FFFFFF
+        style F fill:#059669,stroke:#E2E8F0,color:#FFFFFF
+      </div>
 
-  </section>
+    </section>
 
-  <section class="slide">
-    <div class="slide-kicker">CH 21 · MENTAL MODELS</div>
-    <h2>The Market Positioning System</h2>
-<div class="mental-model-card">
-  <h4 class="model-name">The Market Positioning System (MPS)</h4>
-  <div class="model-principle">A framework to locate the exact position of the market or an individual stock based on two coordinates: Price Trend (x-axis) and Volume Breadth (y-axis).</div>
-  <div class="model-application">
-    <strong>When to Apply:</strong>
-    <ul>
-      <li>To gauge the broad market using Advance-Decline (x-axis) and Cap-Weighted Volume (y-axis).</li>
-      <li>To screen individual stocks using the Trend Thrust Indicator (TTI) (x-axis) and VPCI (y-axis).</li>
-    </ul>
+    <section class="slide">
+      <div class="slide-kicker">CH 21 · THE BIG IDEA</div>
+      <h2>The Big Idea</h2>
+      <div class="takeaway-hero">
+        <div class="kicker">CH 21 · THE BIG IDEA</div>
+        <div class="headline">"Technical knowledge without strategic integration is dangerous; volume and trend must map
+          the market before any individual trade is placed."</div>
+        <div class="subline">A five-step top-down process creates a Market Positioning System to ensure you trade with
+          the wind at your back.</div>
+      </div>
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 21 · KEY TAKEAWAYS</div>
+      <h2>Key Takeaways</h2>
+      <ul class="takeaway-list">
+        <li class="takeaway-item">
+          <div class="takeaway-badge">1</div>
+          <div class="takeaway-text">Technical analysis is not performed in a vacuum. <span class="page-ref">Ch 21, p.
+              259</span></div>
+          <div class="takeaway-detail">
+            <strong>Why it matters:</strong> Beginners use indicators in isolation, missing the big picture and exposing
+            themselves to unnecessary risk.
+            <br><strong>Application:</strong> Establish the broad market trend before analyzing an individual security.
+          </div>
+        </li>
+        <li class="takeaway-item">
+          <div class="takeaway-badge">2</div>
+          <div class="takeaway-text">The VPCI Index measures the sustainability of the broad market. <span
+              class="page-ref">Ch 21, p. 261</span></div>
+          <div class="takeaway-detail">
+            <strong>Why it matters:</strong> The broad market is a collection of stocks; computing individual VPCIs
+            prevents index-level distortions.
+            <br><strong>Application:</strong> Use the aggregated VPCI Index to confirm if broad upward price trends are
+            truly supported by volume.
+          </div>
+        </li>
+        <li class="takeaway-item">
+          <div class="takeaway-badge">3</div>
+          <div class="takeaway-text">Direction trumps location in the MPS. <span class="page-ref">Ch 21, p. 279</span>
+          </div>
+          <div class="takeaway-detail">
+            <strong>Why it matters:</strong> While buying at the extreme (e.g., highly overbought with bullish volume)
+            is profitable, the subsequent trajectory dictates the ultimate return.
+            <br><strong>Application:</strong> Hold stocks that maintain strong volume characteristics even if the price
+            trend fluctuates slightly.
+          </div>
+        </li>
+        <li class="takeaway-item">
+          <div class="takeaway-badge">4</div>
+          <div class="takeaway-text">Market equilibrium is a danger zone. <span class="page-ref">Ch 21, p. 277</span>
+          </div>
+          <div class="takeaway-detail">
+            <strong>Why it matters:</strong> Stocks near the center of the MPS map (average trend, average volume)
+            underperform the extremes.
+            <br><strong>Application:</strong> Avoid trading stocks stuck in the middle; seek out clear imbalances where
+            volume dictates a strong trend.
+          </div>
+        </li>
+      </ul>
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 21 · MENTAL MODELS</div>
+      <h2>The Market Positioning System</h2>
+      <div class="mental-model-card">
+        <h4 class="model-name">The Market Positioning System (MPS)</h4>
+        <div class="model-principle">A framework to locate the exact position of the market or an individual stock based
+          on two coordinates: Price Trend (x-axis) and Volume Breadth (y-axis).</div>
+        <div class="model-application">
+          <strong>When to Apply:</strong>
+          <ul>
+            <li>To gauge the broad market using Advance-Decline (x-axis) and Cap-Weighted Volume (y-axis).</li>
+            <li>To screen individual stocks using the Trend Thrust Indicator (TTI) (x-axis) and VPCI (y-axis).</li>
+          </ul>
+        </div>
+        <div class="model-limitations">
+          <strong>⚠️ Limitations:</strong>
+          <ul>
+            <li>It evaluates current states, not future forecasts.</li>
+            <li>Stocks at the center (equilibrium) offer poor risk/reward compared to the quadrants.</li>
+          </ul>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 21 · CONTEXT &amp; BACKGROUND</div>
+      <h2>Context &amp; Background</h2>
+      <div class="content-card">
+        <h3>1. Author's Lens</h3>
+        <ul>
+          <li><strong>Writing Position:</strong> Practitioner heavily focused on systematic, quantitative trading
+            frameworks.</li>
+          <li><strong>Core Philosophy:</strong> Dormeier treats the market like a physical entity governed by laws of
+            motion and supply/demand.</li>
+        </ul>
+
+        <h3>2. Historical & Intellectual Context</h3>
+        <ul>
+          <li><strong>Lineage:</strong> Builds on Harold M. Gartley's concept of relative volume (comparing a stock's
+            volume fluctuations to the broader market). <span class="page-ref">Ch 21, p. 269</span></li>
+          <li><strong>Era:</strong> Published post-2008 financial crisis, when "buy and hope" was completely
+            discredited, pushing traders toward dynamic, data-driven asset allocation.</li>
+        </ul>
+
+        <h3>3. Evolution of Ideas</h3>
+        <ul>
+          <li><strong>Then:</strong> Technical analysis was often critiqued as isolated chart reading.</li>
+          <li><strong>Now (2026):</strong> Dormeier's integration of broad breadth, sector rotation, and individual
+            volume screening is a precursor to modern multi-factor algorithmic trading models.</li>
+        </ul>
+      </div>
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 21 · NOTABLE QUOTES</div>
+      <h2>Notable Quotes</h2>
+      <div class="quote-block">
+        <p class="quote-text">"A little academic knowledge without practical experience can hit an investor where it
+          really hurts—the pocketbook!"</p>
+        <p class="quote-context"><strong>— Buff Dormeier</strong>, opening the chapter on strategy implementation. <span
+            class="page-ref">Ch 21, p. 259</span></p>
+      </div>
+
+      <div class="content-card">
+        <strong>Interpretation:</strong> Isolated indicators provide false confidence. You cannot apply one signal
+        without assessing the overarching macro environment.
+        <br><br>
+        <strong>Application:</strong> Always employ the full 5-step MPS process rather than cherry-picking an indicator
+        just because it flashes "buy".
+      </div>
+
+      <div class="quote-block">
+        <p class="quote-text">"Forecasting is for economists and weathercasters, not technical market analysts. The work
+          of the market analyst is to understand where the market is and to discern the driving factors that propel it
+          forward."</p>
+        <p class="quote-context"><strong>— Buff Dormeier</strong>. <span class="page-ref">Ch 21, p. 260</span></p>
+      </div>
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 21 · DEEP DIVE</div>
+      <h2>The 5-Step Process</h2>
+      <div class="deep-section practical">
+        <h3>The 5-Step Investment Process</h3>
+        <p class="summary-text">Dormeier constructs a top-down funnel that filters market noise before individual stock
+          selection.</p>
+
+        <ol>
+          <li><strong>Direction of Trend:</strong> Identify the primary secular trend of the broad market. (Is the tide
+            coming in or out?)</li>
+          <li><strong>Trend Sustainability:</strong> Verify the broad trend using the VPCI Index. Does volume confirm or
+            contradict the price?</li>
+          <li><strong>Market Breadth:</strong> Construct a macro MPS. Compare the advance-decline line against
+            cap-weighted up/down volume. Ideal state: upper-left quadrant (strong price breadth + strong volume
+            breadth).</li>
+          <li><strong>Market Sectors:</strong> Employ relative strength analysis. Rank sectors by price-volume momentum
+            (using VW-MACD) and their endurance in the top quartile.</li>
+          <li><strong>Individual Stock Selection:</strong> Drill down into specific issues using an individual stock MPS
+            (TTI vs VPCI), focusing on extreme quadrants while avoiding the equilibrium center.</li>
+        </ol>
+      </div>
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 21 · READING LAYERS</div>
+      <h2>Reading Layers</h2>
+      <div class="content-card">
+        <h3>Layer 1: Surface Reading</h3>
+        <p>The author introduces a step-by-step strategy for analyzing the market top-down. The process relies on custom
+          indicators like VPCI, TTI, and Cap-Weighted Volume to map market conditions.</p>
+
+        <h3>Layer 2: Structural Reading</h3>
+        <p>The logic is purely deductive. He establishes the macro rules (Step 1-3), narrows the scope to sectors (Step
+          4), and only then identifies the micro elements (Step 5). This prevents the common technical flaw of bottom-up
+          bias.</p>
+
+        <h3>Layer 3: Contextual Reading</h3>
+        <p>The system borrows heavily from navigation metaphors (GPS, prime meridian, equator). This makes complex
+          multi-variable analysis accessible, attempting to bridge the gap between institutional quant models and retail
+          traders.</p>
+
+        <h3>Layer 4: Critical Reading</h3>
+        <p>While the logic is sound, the reliance on proprietary or highly specific indices (like the VPCI Index and
+          TTI) makes it difficult for a layperson to implement without specialized software (like Worden's TeleChart).
+          The empirical tests presented are over a very brief window (Jan-Apr 2010).</p>
+
+        <h3>Layer 5: Generative Reading</h3>
+        <p>By conceptualizing technical indicators as geographical coordinates, we can extend the MPS to include a third
+          dimension (Z-axis), such as institutional order flow, options gamma exposure, or macroeconomic liquidity,
+          creating a 3D topographic map of modern market mechanics.</p>
+      </div>
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 21 · EVIDENCE EVALUATION</div>
+      <h2>Evidence Evaluation</h2>
+      <div class="evidence-card">
+        <div class="evidence-header">
+          <span class="claim-text">MPS Extremes Outperform the Market Equilibrium</span>
+          <span class="quality-score">⭐⭐⭐☆☆ 3/5</span>
+        </div>
+        <div class="evidence-type">📊 Empirical Data</div>
+        <div class="evidence-body">
+          <p><strong>Evidence:</strong> The author tested S&P 500 components from Jan-Apr 2010. The most bullish volume
+            index returned 10.41%, while the S&P 500 fell 2.04%. Stocks in the equilibrium center returned only 1.01%.
+            <span class="page-ref">Ch 21, p. 271</span>
+          </p>
+          <p><strong>Strengths:</strong> It clearly proves the theoretical framework using real market data and
+            quantifies exact returns for each MPS quadrant.</p>
+          <p><strong>Weaknesses:</strong> The sample size is extremely small (only a 4-month period in a specific
+            post-crash market condition). It lacks multi-year, full-cycle backtesting.</p>
+          <p><strong>2026 Update:</strong> Modern algorithmic trading heavily exploits these exact price/volume
+            extremes, confirming the validity, but also meaning retail investors may suffer from high slippage
+            attempting to manually trade these corners.</p>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 21 · COMPETING VIEWS</div>
+      <h2>Competing Views</h2>
+      <div class="split-layout">
+        <div class="split-left">
+          <h4>Dormeier's MPS View</h4>
+          <p><strong>Core Claim:</strong> Top-down, multi-factor volume and price trend mapping is essential. Only trade
+            when the macro, sector, and individual stock quadrants align.</p>
+          <p><strong>Assumption:</strong> Volume leads price, and macro breadth dictates the sustainability of
+            individual stock movements.</p>
+        </div>
+        <div class="split-right">
+          <h4>Pure Price Action (e.g., Al Brooks)</h4>
+          <p><strong>Core Claim:</strong> All necessary information is contained in the price bar itself. Broad market
+            macro analysis or sector rotation is a distraction for active traders.</p>
+          <p><strong>Assumption:</strong> The tape is the ultimate truth, and volume or breadth data often lags or
+            complicates execution unnecessarily.</p>
+        </div>
+      </div>
+
+      <div class="content-card">
+        <strong>Synthesis:</strong> The two views serve different timeframes. Dormeier's MPS is optimized for swing
+        traders and investors looking for multi-week/month trends, whereas pure price action serves intraday scalpers
+        where macro breadth shifts are too slow to matter.
+      </div>
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 21 · COUNTERARGUMENTS</div>
+      <h2>Counterarguments</h2>
+      <div class="content-card">
+        <h3>Potential Flaws in the Strategy</h3>
+
+        <strong>1. The "Small Sample Size" Critique</strong>
+        <p>The statistical validity of the 4-month study in 2010 is questionable. Markets undergo distinct regimes (high
+          volatility vs low volatility, QE vs QT). A framework validated in a brief sideways-to-down market might
+          underperform in a massive liquidity-driven bull run.</p>
+
+        <strong>2. Over-Complication</strong>
+        <p>By requiring the alignment of five separate layers (Broad trend, VPCI Index, MPS Breadth, VW-MACD Sectors,
+          TTI/VPCI Individual), the system risks <em>analysis paralysis</em>. An investor might miss entire market moves
+          waiting for the perfect alignment of all five steps.</p>
+
+        <strong>3. Data Latency</strong>
+        <p>Calculating the aggregate VPCI and TTI for every stock in the S&P 500 is computationally intensive. In modern
+          markets (2026), HFT algorithms price in these volume discrepancies in milliseconds, potentially arbitraging
+          away the edge before a retail swing trader can calculate their MPS map.</p>
+      </div>
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 21 · IMPLEMENTATION GUIDE</div>
+      <h2>Implementation Guide</h2>
+      <div class="phase-progress">
+        <div class="phase active">Phase 1: Setup</div>
+        <div class="phase">Phase 2: Broad Scan</div>
+        <div class="phase">Phase 3: Deep Scan</div>
+        <div class="phase">Phase 4: Execute</div>
+      </div>
+
+      <div class="content-card">
+        <h4>Step-by-Step Implementation</h4>
+        <ul>
+          <li><strong>Phase 1: Setup:</strong> Configure your charting software to track the Advance-Decline line,
+            Cap-Weighted Volume, VW-MACD for sectors, and VPCI/TTI for individual stocks.</li>
+          <li><strong>Phase 2: Broad Scan (Weekly):</strong> Evaluate the broad market. Plot the MPS coordinates. Are we
+            in the upper-left quadrant (bullish)? If not, size down positions or move to cash.</li>
+          <li><strong>Phase 3: Deep Scan (Daily):</strong> Identify the top 3 sectors via VW-MACD momentum. Screen
+            stocks within those sectors to find those entering the Upper-Left (Overbought + Bullish Volume) or exiting
+            the Lower-Right (Oversold V-Bottom).</li>
+          <li><strong>Phase 4: Execute:</strong> Avoid the equilibrium middle. Only initiate trades when the stock hits
+            the extreme corners of the MPS. Use the Anti-Volume Stop Loss (from Ch 20) to manage risk.</li>
+        </ul>
+      </div>
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 21 · CONCEPT DEPENDENCIES</div>
+      <h2>Concept Dependencies</h2>
+      <div class="mermaid">
+        graph TB
+        A["Ch 16: Volume-Weighted MACD"] --> D["Ch 21: Market Sectors Analysis"]
+        B["Ch 17: VPCI Indicator"] --> E["Ch 21: Trend Sustainability & Stock MPS"]
+        C["Ch 19: Cap-Weighted Volume"] --> F["Ch 21: Market Breadth MPS"]
+
+        D --> G["Integrated Volume-Dictated Strategy"]
+        E --> G
+        F --> G
+
+        style G fill:#7C3AED,stroke:#2A2D33,color:#F7F7F5
+      </div>
+
+      <div class="content-card">
+        <strong>Prerequisites:</strong> Chapter 21 is the culmination of the entire book. You absolutely must understand
+        the formulas and mechanics of VPCI, VW-MACD, and Cap-Weighted Volume to execute the 5-step strategy.
+      </div>
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 21 · CLOSING ACTIONS</div>
+      <h2>Closing Actions</h2>
+      <ul class="action-list">
+        <li class="action-item">
+          <div>
+            <div class="action-headline">Build Your MPS Dashboard</div>
+            <div class="action-detail">Open your trading platform today and create a layout specifically for the 5-step
+              top-down process. Set up the VPCI Index and Advance-Decline metrics.</div>
+          </div>
+        </li>
+        <li class="action-item">
+          <div>
+            <div class="action-headline">Map Your Current Portfolio</div>
+            <div class="action-detail">Take 5 of your current holdings and plot them on the TTI/VPCI quadrant map. Are
+              any stuck in the "equilibrium center"? Consider liquidating them.</div>
+          </div>
+        </li>
+        <li class="action-item">
+          <div>
+            <div class="action-headline">Stop Forecasting</div>
+            <div class="action-detail">Commit to trading what the market <em>is doing</em> rather than what you think it
+              <em>will do</em>. Write "Assess, Don't Predict" on a note and place it on your monitor.
+            </div>
+          </div>
+        </li>
+      </ul>
+
+    </section>
+
   </div>
-  <div class="model-limitations">
-    <strong>⚠️ Limitations:</strong>
-    <ul>
-      <li>It evaluates current states, not future forecasts.</li>
-      <li>Stocks at the center (equilibrium) offer poor risk/reward compared to the quadrants.</li>
-    </ul>
+
+  <div class="nav-controls">
+    <button class="nav-btn" id="prevBtn" onclick="prevSlide()" aria-label="Previous slide">&#8592;</button>
+    <div class="counter" id="counter" aria-live="polite">1 / 1</div>
+    <button class="nav-btn" id="nextBtn" onclick="nextSlide()" aria-label="Next slide">&#8594;</button>
   </div>
-</div>
 
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH 21 · CONTEXT &amp; BACKGROUND</div>
-    <h2>Context &amp; Background</h2>
-<div class="content-card">
-  <h3>1. Author's Lens</h3>
-  <ul>
-    <li><strong>Writing Position:</strong> Practitioner heavily focused on systematic, quantitative trading frameworks.</li>
-    <li><strong>Core Philosophy:</strong> Dormeier treats the market like a physical entity governed by laws of motion and supply/demand.</li>
-  </ul>
-  
-  <h3>2. Historical & Intellectual Context</h3>
-  <ul>
-    <li><strong>Lineage:</strong> Builds on Harold M. Gartley's concept of relative volume (comparing a stock's volume fluctuations to the broader market). <span class="page-ref">Ch 21, p. 269</span></li>
-    <li><strong>Era:</strong> Published post-2008 financial crisis, when "buy and hope" was completely discredited, pushing traders toward dynamic, data-driven asset allocation.</li>
-  </ul>
-  
-  <h3>3. Evolution of Ideas</h3>
-  <ul>
-    <li><strong>Then:</strong> Technical analysis was often critiqued as isolated chart reading.</li>
-    <li><strong>Now (2026):</strong> Dormeier's integration of broad breadth, sector rotation, and individual volume screening is a precursor to modern multi-factor algorithmic trading models.</li>
-  </ul>
-</div>
-
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH 21 · NOTABLE QUOTES</div>
-    <h2>Notable Quotes</h2>
-<div class="quote-block">
-  <p class="quote-text">"A little academic knowledge without practical experience can hit an investor where it really hurts—the pocketbook!"</p>
-  <p class="quote-context"><strong>— Buff Dormeier</strong>, opening the chapter on strategy implementation. <span class="page-ref">Ch 21, p. 259</span></p>
-</div>
-
-<div class="content-card">
-  <strong>Interpretation:</strong> Isolated indicators provide false confidence. You cannot apply one signal without assessing the overarching macro environment.
-  <br><br>
-  <strong>Application:</strong> Always employ the full 5-step MPS process rather than cherry-picking an indicator just because it flashes "buy".
-</div>
-
-<div class="quote-block">
-  <p class="quote-text">"Forecasting is for economists and weathercasters, not technical market analysts. The work of the market analyst is to understand where the market is and to discern the driving factors that propel it forward."</p>
-  <p class="quote-context"><strong>— Buff Dormeier</strong>. <span class="page-ref">Ch 21, p. 260</span></p>
-</div>
-
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH 21 · DEEP DIVE</div>
-    <h2>The 5-Step Process</h2>
-<div class="deep-section practical">
-  <h3>The 5-Step Investment Process</h3>
-  <p class="summary-text">Dormeier constructs a top-down funnel that filters market noise before individual stock selection.</p>
-  
-  <ol>
-    <li><strong>Direction of Trend:</strong> Identify the primary secular trend of the broad market. (Is the tide coming in or out?)</li>
-    <li><strong>Trend Sustainability:</strong> Verify the broad trend using the VPCI Index. Does volume confirm or contradict the price?</li>
-    <li><strong>Market Breadth:</strong> Construct a macro MPS. Compare the advance-decline line against cap-weighted up/down volume. Ideal state: upper-left quadrant (strong price breadth + strong volume breadth).</li>
-    <li><strong>Market Sectors:</strong> Employ relative strength analysis. Rank sectors by price-volume momentum (using VW-MACD) and their endurance in the top quartile.</li>
-    <li><strong>Individual Stock Selection:</strong> Drill down into specific issues using an individual stock MPS (TTI vs VPCI), focusing on extreme quadrants while avoiding the equilibrium center.</li>
-  </ol>
-</div>
-
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH 21 · READING LAYERS</div>
-    <h2>Reading Layers</h2>
-<div class="content-card">
-  <h3>Layer 1: Surface Reading</h3>
-  <p>The author introduces a step-by-step strategy for analyzing the market top-down. The process relies on custom indicators like VPCI, TTI, and Cap-Weighted Volume to map market conditions.</p>
-
-  <h3>Layer 2: Structural Reading</h3>
-  <p>The logic is purely deductive. He establishes the macro rules (Step 1-3), narrows the scope to sectors (Step 4), and only then identifies the micro elements (Step 5). This prevents the common technical flaw of bottom-up bias.</p>
-
-  <h3>Layer 3: Contextual Reading</h3>
-  <p>The system borrows heavily from navigation metaphors (GPS, prime meridian, equator). This makes complex multi-variable analysis accessible, attempting to bridge the gap between institutional quant models and retail traders.</p>
-
-  <h3>Layer 4: Critical Reading</h3>
-  <p>While the logic is sound, the reliance on proprietary or highly specific indices (like the VPCI Index and TTI) makes it difficult for a layperson to implement without specialized software (like Worden's TeleChart). The empirical tests presented are over a very brief window (Jan-Apr 2010).</p>
-
-  <h3>Layer 5: Generative Reading</h3>
-  <p>By conceptualizing technical indicators as geographical coordinates, we can extend the MPS to include a third dimension (Z-axis), such as institutional order flow, options gamma exposure, or macroeconomic liquidity, creating a 3D topographic map of modern market mechanics.</p>
-</div>
-
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH 21 · EVIDENCE EVALUATION</div>
-    <h2>Evidence Evaluation</h2>
-<div class="evidence-card">
-  <div class="evidence-header">
-    <span class="claim-text">MPS Extremes Outperform the Market Equilibrium</span>
-    <span class="quality-score">⭐⭐⭐☆☆ 3/5</span>
-  </div>
-  <div class="evidence-type">📊 Empirical Data</div>
-  <div class="evidence-body">
-    <p><strong>Evidence:</strong> The author tested S&P 500 components from Jan-Apr 2010. The most bullish volume index returned 10.41%, while the S&P 500 fell 2.04%. Stocks in the equilibrium center returned only 1.01%. <span class="page-ref">Ch 21, p. 271</span></p>
-    <p><strong>Strengths:</strong> It clearly proves the theoretical framework using real market data and quantifies exact returns for each MPS quadrant.</p>
-    <p><strong>Weaknesses:</strong> The sample size is extremely small (only a 4-month period in a specific post-crash market condition). It lacks multi-year, full-cycle backtesting.</p>
-    <p><strong>2026 Update:</strong> Modern algorithmic trading heavily exploits these exact price/volume extremes, confirming the validity, but also meaning retail investors may suffer from high slippage attempting to manually trade these corners.</p>
-  </div>
-</div>
-
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH 21 · COMPETING VIEWS</div>
-    <h2>Competing Views</h2>
-<div class="split-layout">
-  <div class="split-left">
-    <h4>Dormeier's MPS View</h4>
-    <p><strong>Core Claim:</strong> Top-down, multi-factor volume and price trend mapping is essential. Only trade when the macro, sector, and individual stock quadrants align.</p>
-    <p><strong>Assumption:</strong> Volume leads price, and macro breadth dictates the sustainability of individual stock movements.</p>
-  </div>
-  <div class="split-right">
-    <h4>Pure Price Action (e.g., Al Brooks)</h4>
-    <p><strong>Core Claim:</strong> All necessary information is contained in the price bar itself. Broad market macro analysis or sector rotation is a distraction for active traders.</p>
-    <p><strong>Assumption:</strong> The tape is the ultimate truth, and volume or breadth data often lags or complicates execution unnecessarily.</p>
-  </div>
-</div>
-
-<div class="content-card">
-  <strong>Synthesis:</strong> The two views serve different timeframes. Dormeier's MPS is optimized for swing traders and investors looking for multi-week/month trends, whereas pure price action serves intraday scalpers where macro breadth shifts are too slow to matter.
-</div>
-
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH 21 · COUNTERARGUMENTS</div>
-    <h2>Counterarguments</h2>
-<div class="content-card">
-  <h3>Potential Flaws in the Strategy</h3>
-  
-  <strong>1. The "Small Sample Size" Critique</strong>
-  <p>The statistical validity of the 4-month study in 2010 is questionable. Markets undergo distinct regimes (high volatility vs low volatility, QE vs QT). A framework validated in a brief sideways-to-down market might underperform in a massive liquidity-driven bull run.</p>
-
-  <strong>2. Over-Complication</strong>
-  <p>By requiring the alignment of five separate layers (Broad trend, VPCI Index, MPS Breadth, VW-MACD Sectors, TTI/VPCI Individual), the system risks <em>analysis paralysis</em>. An investor might miss entire market moves waiting for the perfect alignment of all five steps.</p>
-  
-  <strong>3. Data Latency</strong>
-  <p>Calculating the aggregate VPCI and TTI for every stock in the S&P 500 is computationally intensive. In modern markets (2026), HFT algorithms price in these volume discrepancies in milliseconds, potentially arbitraging away the edge before a retail swing trader can calculate their MPS map.</p>
-</div>
-
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH 21 · IMPLEMENTATION GUIDE</div>
-    <h2>Implementation Guide</h2>
-<div class="phase-progress">
-  <div class="phase active">Phase 1: Setup</div>
-  <div class="phase">Phase 2: Broad Scan</div>
-  <div class="phase">Phase 3: Deep Scan</div>
-  <div class="phase">Phase 4: Execute</div>
-</div>
-
-<div class="content-card">
-  <h4>Step-by-Step Implementation</h4>
-  <ul>
-    <li><strong>Phase 1: Setup:</strong> Configure your charting software to track the Advance-Decline line, Cap-Weighted Volume, VW-MACD for sectors, and VPCI/TTI for individual stocks.</li>
-    <li><strong>Phase 2: Broad Scan (Weekly):</strong> Evaluate the broad market. Plot the MPS coordinates. Are we in the upper-left quadrant (bullish)? If not, size down positions or move to cash.</li>
-    <li><strong>Phase 3: Deep Scan (Daily):</strong> Identify the top 3 sectors via VW-MACD momentum. Screen stocks within those sectors to find those entering the Upper-Left (Overbought + Bullish Volume) or exiting the Lower-Right (Oversold V-Bottom).</li>
-    <li><strong>Phase 4: Execute:</strong> Avoid the equilibrium middle. Only initiate trades when the stock hits the extreme corners of the MPS. Use the Anti-Volume Stop Loss (from Ch 20) to manage risk.</li>
-  </ul>
-</div>
-
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH 21 · CONCEPT DEPENDENCIES</div>
-    <h2>Concept Dependencies</h2>
-<div class="mermaid">
-graph TB
-    A["Ch 16: Volume-Weighted MACD"] --> D["Ch 21: Market Sectors Analysis"]
-    B["Ch 17: VPCI Indicator"] --> E["Ch 21: Trend Sustainability & Stock MPS"]
-    C["Ch 19: Cap-Weighted Volume"] --> F["Ch 21: Market Breadth MPS"]
-    
-    D --> G["Integrated Volume-Dictated Strategy"]
-    E --> G
-    F --> G
-    
-    style G fill:#7C3AED,stroke:#2A2D33,color:#F7F7F5
-</div>
-
-<div class="content-card">
-  <strong>Prerequisites:</strong> Chapter 21 is the culmination of the entire book. You absolutely must understand the formulas and mechanics of VPCI, VW-MACD, and Cap-Weighted Volume to execute the 5-step strategy.
-</div>
-
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH 21 · CLOSING ACTIONS</div>
-    <h2>Closing Actions</h2>
-<ul class="action-list">
-  <li class="action-item">
-    <div>
-      <div class="action-headline">Build Your MPS Dashboard</div>
-      <div class="action-detail">Open your trading platform today and create a layout specifically for the 5-step top-down process. Set up the VPCI Index and Advance-Decline metrics.</div>
-    </div>
-  </li>
-  <li class="action-item">
-    <div>
-      <div class="action-headline">Map Your Current Portfolio</div>
-      <div class="action-detail">Take 5 of your current holdings and plot them on the TTI/VPCI quadrant map. Are any stuck in the "equilibrium center"? Consider liquidating them.</div>
-    </div>
-  </li>
-  <li class="action-item">
-    <div>
-      <div class="action-headline">Stop Forecasting</div>
-      <div class="action-detail">Commit to trading what the market <em>is doing</em> rather than what you think it <em>will do</em>. Write "Assess, Don't Predict" on a note and place it on your monitor.</div>
-    </div>
-  </li>
-</ul>
-
-  </section>
-
-</div>
-
-<div class="nav-controls">
-  <button class="nav-btn" id="prevBtn" onclick="prevSlide()" aria-label="Previous slide">&#8592;</button>
-  <div class="counter" id="counter" aria-live="polite">1 / 1</div>
-  <button class="nav-btn" id="nextBtn" onclick="nextSlide()" aria-label="Next slide">&#8594;</button>
-</div>
-
-<script src="common.js"></script>
+  <script src="../common.js"></script>
 </body>
+
 </html>

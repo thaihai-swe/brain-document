@@ -1,583 +1,709 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Thiên Tài và Sự Giáo Dục Từ Sớm — Chương 1</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="common.css">
-<script src="https://cdn.jsdelivr.net/npm/@panzoom/panzoom@4.5.1/dist/panzoom.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/mermaid@11.10.0/dist/mermaid.min.js" crossorigin="anonymous"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Thiên Tài và Sự Giáo Dục Từ Sớm — Chương 1</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../common.css">
+  <script src="https://cdn.jsdelivr.net/npm/@panzoom/panzoom@4.5.1/dist/panzoom.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@11.10.0/dist/mermaid.min.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
 
-<div class="progress-bar" id="progressBar"></div>
+  <div class="progress-bar" id="progressBar"></div>
 
-<div class="chapter-menu">
-  <button class="menu-btn" id="chapterMenuBtn" onclick="toggleChapterMenu()" aria-haspopup="true" aria-expanded="false">Chapters &#9662;</button>
-  <div class="chapter-menu-panel" id="chapterMenuPanel" role="menu"></div>
-</div>
-
-<div class="slide-container" id="slideContainer">
-
-  <section class="slide" aria-hidden="false">
-<h1>Thiên Tài và Sự Giáo Dục Từ Sớm</h1>
-<p class="subtitle">Kimura Kyuichi — Đánh thức năng lực vô hạn của trẻ em từ buổi bình minh của nhận thức</p>
-
-<figure class="image-slot hero">
-  <img src="images/ch1_book_cover.png" alt="Sách giáo dục cổ điển trên bàn gỗ">
-  <figcaption>Nguồn: Unsplash (Free Stock Photo)</figcaption>
-</figure>
-
-<div class="meta-grid">
-  <div class="meta-item">
-    <div class="meta-label">Tác giả gốc</div>
-    <div class="meta-value">Kimura Kyuichi</div>
+  <div class="chapter-menu">
+    <button class="menu-btn" id="chapterMenuBtn" onclick="toggleChapterMenu()" aria-haspopup="true"
+      aria-expanded="false">Chapters &#9662;</button>
+    <div class="chapter-menu-panel" id="chapterMenuPanel" role="menu"></div>
   </div>
-  <div class="meta-item">
-    <div class="meta-label">Chương phân tích</div>
-    <div class="meta-value">Chương 1 (DEEP Mode)</div>
-  </div>
-  <div class="meta-item">
-    <div class="meta-label">Thời gian đọc chương</div>
-    <div class="meta-value">~15 phút đọc / ~60 phút phân tích</div>
-  </div>
-  <div class="meta-item">
-    <div class="meta-label">Độ sâu phân tích</div>
-    <div class="meta-value">Deep (17 slides)</div>
-  </div>
-</div>
 
-  </section>
+  <div class="slide-container" id="slideContainer">
 
-  <section class="slide chapter-divider">
-<div class="chapter-number">Chương 1</div>
-<h2>Giáo Dục Từ Sớm Là Đào Tạo Thiên Tài</h2>
-<p class="chapter-meta">Thời gian đọc: ~15 phút · Độ khó: Trung bình · Khái niệm cốt lõi: Quy luật năng lực giảm dần, Thời kỳ vàng phát triển, Thần đồng nhân tạo</p>
+    <section class="slide" aria-hidden="false">
+      <h1>Thiên Tài và Sự Giáo Dục Từ Sớm</h1>
+      <p class="subtitle">Kimura Kyuichi — Đánh thức năng lực vô hạn của trẻ em từ buổi bình minh của nhận thức</p>
 
-<figure class="image-slot hero">
-  <img src="images/ch1_early_edu.png" alt="Trẻ em chơi đùa và tò mò khám phá">
-  <figcaption>Nguồn: Unsplash (Free Stock Photo)</figcaption>
-</figure>
+      <figure class="image-slot hero">
+        <img src="images/ch1_book_cover.png" alt="Sách giáo dục cổ điển trên bàn gỗ">
+        <figcaption>Nguồn: Unsplash (Free Stock Photo)</figcaption>
+      </figure>
 
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH 1 · SƠ ĐỒ TRỰC QUAN</div>
-    <h2>Bản đồ khái niệm Chương 1</h2>
-<div class="mermaid">
-graph TD
-    A["Giáo dục từ sớm (Phương pháp Karl Witte)"] --> B["Bình minh của nhận thức"]
-    B --> C["Quy luật năng lực giảm dần"]
-    C --> D1["Bắt đầu từ sơ sinh: Phát huy 100%"]
-    C --> D2["Bắt đầu từ 5 tuổi: Tối đa 80%"]
-    C --> D3["Bắt đầu từ 10 tuổi: Tối đa 60%"]
-    B --> E["Thời kỳ then chốt (Thời điểm vàng)"]
-    E --> F1["Nhạc cụ: Piano trước 5t, Violin trước 3t"]
-    E --> F2["Ngoại ngữ: Trước 10t"]
-    E --> F3["Khả năng sinh học (Gà con theo mẹ, Chó con chôn thức ăn)"]
-    D1 & D2 & D3 & F1 & F2 & F3 --> G["Hiện thực hóa tiềm năng thiên bẩm"]
-    style A fill:#635BFF,stroke:#2A2D33,color:#F7F7F5
-    style C fill:#D97706,stroke:#2A2D33,color:#F7F7F5
-    style E fill:#059669,stroke:#2A2D33,color:#F7F7F5
-    style G fill:#8B7CFF,stroke:#2A2D33,color:#F7F7F5
-</div>
-
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH 1 · TÓM TẮT CẤU TRÚC</div>
-    <h2>Tóm tắt cốt lõi</h2>
-<div class="content-card">
-  <p class="summary-text"><strong>Ý tưởng cốt lõi:</strong> Trẻ em sinh ra có tiềm năng năng lực rất lớn (100%), nhưng tiềm năng này sẽ giảm dần theo thời gian nếu không được kích hoạt đúng lúc. Giáo dục sớm từ buổi bình minh nhận thức là con đường duy nhất để bảo toàn và phát triển trọn vẹn tiềm năng thiên phú của trẻ.</p>
-  
-  <div class="deep-section">
-    <strong>Đặt vấn đề (Setup):</strong> Tại sao có những "thần đồng" đạt thành tích kinh ngạc từ rất sớm? Liệu họ là do bẩm sinh hay do giáo dục, và liệu giáo dục sớm có làm trẻ bị suy nhược hay mất đi tuổi thơ như định kiến xã hội? <span class="page-ref">Ch 1 · §1</span>
-  </div>
-  
-  <div class="deep-section">
-    <strong>Luận điểm (Argument):</strong> Trí tuệ thần đồng không phải là ngẫu nhiên hay bẩm sinh mà là kết quả của việc giáo dục sớm đúng phương pháp. Năng lực của trẻ tuân theo quy luật giảm dần: thời điểm bắt đầu giáo dục càng muộn, năng lực tiềm ẩn bị mất đi càng nhiều. <span class="page-ref">Ch 1 · §4</span>
-  </div>
-  
-  <div class="deep-section">
-    <strong>Bằng chứng (Evidence):</strong> 
-    <ul>
-      <li>Các ca lâm sàng lịch sử: Karl Witte (tiến sĩ năm 14 tuổi), William Sidis (Harvard năm 11 tuổi), Norbert Wiener (tiến sĩ năm 18 tuổi), John Stuart Mill (đọc Plato năm 7 tuổi). <span class="page-ref">Ch 1 · §1-§3</span></li>
-      <li>Ví dụ sinh học: Thời kỳ nhạy cảm của gà con (4 ngày đầu để theo mẹ), chó con chôn thức ăn dư. <span class="page-ref">Ch 1 · §4</span></li>
-    </ul>
-  </div>
-  
-  <div class="deep-section">
-    <strong>Hệ quả (Implications):</strong> Cha mẹ và nhà giáo dục cần thay đổi tư duy: không chờ đợi trẻ "đến tuổi đi học" mới dạy, mà phải bắt đầu từ giai đoạn sơ sinh để tận dụng tối đa "thời kỳ vàng", đặc biệt là với ngôn ngữ và âm nhạc. <span class="page-ref">Ch 1 · §4</span>
-  </div>
-</div>
-
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH 1 · Ý TƯỞNG LỚN</div>
-    <h2>Triết lý giáo dục từ sớm</h2>
-<div class="takeaway-hero">
-  <div class="kicker">CH 1 · THE BIG IDEA</div>
-  <div class="headline">"Năng lực tiềm tàng của trẻ giảm dần theo thời gian: giáo dục muộn một ngày là lãng phí một phần thiên tài."</div>
-  <div class="subline">Bắt đầu từ sơ sinh giữ lại 100% tiềm năng; trì hoãn đến 5 tuổi chỉ còn tối đa 80%; trì hoãn đến 10 tuổi chỉ còn 60%. Giáo dục sớm là bảo toàn năng lực vốn có của trẻ. <span class="page-ref">Ch 1 · §4</span></div>
-</div>
-
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH 1 · KHÁI NIỆM THEN CHỐT</div>
-    <h2>Bài học rút ra</h2>
-<ul class="takeaway-list">
-  <li class="takeaway-item">
-    <div class="takeaway-badge">01</div>
-    <div class="takeaway-text">
-      <strong>Thần đồng là sản phẩm của giáo dục, không phải bẩm sinh</strong>
-      <div class="takeaway-detail">
-        <strong>Tại sao:</strong> Sự xuất sắc đồng loạt của các cặp anh chị em (Sidis, Wiener, Berle) chứng minh giáo dục gia đình có tính quyết định chứ không phải đột biến di truyền. <span class="page-ref">Ch 1 · §1</span><br>
-        <strong>Áp dụng:</strong> Xây dựng kế hoạch giáo dục gia đình nhất quán thay vì phó mặc cho năng khiếu bẩm sinh của trẻ.<br>
-        <strong>Lưu ý:</strong> Phải phân biệt rõ giáo dục sớm đúng phương pháp và việc nhồi nhét ép buộc dễ dẫn đến thoái hóa sau 20 tuổi.
+      <div class="meta-grid">
+        <div class="meta-item">
+          <div class="meta-label">Tác giả gốc</div>
+          <div class="meta-value">Kimura Kyuichi</div>
+        </div>
+        <div class="meta-item">
+          <div class="meta-label">Chương phân tích</div>
+          <div class="meta-value">Chương 1 (DEEP Mode)</div>
+        </div>
+        <div class="meta-item">
+          <div class="meta-label">Thời gian đọc chương</div>
+          <div class="meta-value">~15 phút đọc / ~60 phút phân tích</div>
+        </div>
+        <div class="meta-item">
+          <div class="meta-label">Độ sâu phân tích</div>
+          <div class="meta-value">Deep (17 slides)</div>
+        </div>
       </div>
-    </div>
-  </li>
-  <li class="takeaway-item">
-    <div class="takeaway-badge" style="background-color: var(--accent-amber)">02</div>
-    <div class="takeaway-text">
-      <strong>Quy luật năng lực giảm dần (Diminishing Potential)</strong>
-      <div class="takeaway-detail">
-        <strong>Tại sao:</strong> Tiềm năng của trẻ đạt 100% khi sinh ra và suy giảm dần (còn 80% lúc 5 tuổi, 60% lúc 10 tuổi) nếu không được kích hoạt đúng lúc. <span class="page-ref">Ch 1 · §4</span><br>
-        <strong>Áp dụng:</strong> Kích thích trí tuệ và giác quan của trẻ ngay từ buổi bình minh nhận thức bằng cách trò chuyện, đọc sách, nghe nhạc.<br>
-        <strong>Lưu ý:</strong> Giáo dục muộn không thể phục hồi 100% tiềm năng, dù có nỗ lực gấp đôi về sau.
+
+    </section>
+
+    <section class="slide chapter-divider">
+      <div class="chapter-number">Chương 1</div>
+      <h2>Giáo Dục Từ Sớm Là Đào Tạo Thiên Tài</h2>
+      <p class="chapter-meta">Thời gian đọc: ~15 phút · Độ khó: Trung bình · Khái niệm cốt lõi: Quy luật năng lực giảm
+        dần, Thời kỳ vàng phát triển, Thần đồng nhân tạo</p>
+
+      <figure class="image-slot hero">
+        <img src="images/ch1_early_edu.png" alt="Trẻ em chơi đùa và tò mò khám phá">
+        <figcaption>Nguồn: Unsplash (Free Stock Photo)</figcaption>
+      </figure>
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 1 · SƠ ĐỒ TRỰC QUAN</div>
+      <h2>Bản đồ khái niệm Chương 1</h2>
+      <div class="mermaid">
+        graph TD
+        A["Giáo dục từ sớm (Phương pháp Karl Witte)"] --> B["Bình minh của nhận thức"]
+        B --> C["Quy luật năng lực giảm dần"]
+        C --> D1["Bắt đầu từ sơ sinh: Phát huy 100%"]
+        C --> D2["Bắt đầu từ 5 tuổi: Tối đa 80%"]
+        C --> D3["Bắt đầu từ 10 tuổi: Tối đa 60%"]
+        B --> E["Thời kỳ then chốt (Thời điểm vàng)"]
+        E --> F1["Nhạc cụ: Piano trước 5t, Violin trước 3t"]
+        E --> F2["Ngoại ngữ: Trước 10t"]
+        E --> F3["Khả năng sinh học (Gà con theo mẹ, Chó con chôn thức ăn)"]
+        D1 & D2 & D3 & F1 & F2 & F3 --> G["Hiện thực hóa tiềm năng thiên bẩm"]
+        style A fill:#635BFF,stroke:#2A2D33,color:#F7F7F5
+        style C fill:#D97706,stroke:#2A2D33,color:#F7F7F5
+        style E fill:#059669,stroke:#2A2D33,color:#F7F7F5
+        style G fill:#8B7CFF,stroke:#2A2D33,color:#F7F7F5
       </div>
-    </div>
-  </li>
-  <li class="takeaway-item">
-    <div class="takeaway-badge" style="background-color: var(--accent-emerald)">03</div>
-    <div class="takeaway-text">
-      <strong>Tận dụng "Thời điểm vàng" (Critical Periods)</strong>
-      <div class="takeaway-detail">
-        <strong>Tại sao:</strong> Một số kỹ năng chỉ phát triển trong cửa sổ thời gian ngắn (tiếng mẹ đẻ trước ngoại ngữ, piano trước 5 tuổi, violin trước 3 tuổi). Quá hạn cửa sổ này, kỹ năng vĩnh viễn khó đạt mức xuất sắc. <span class="page-ref">Ch 1 · §4</span><br>
-        <strong>Áp dụng:</strong> Cho trẻ tiếp xúc sớm với âm nhạc và ngoại ngữ (nhưng tiếng mẹ đẻ phải nhuần nhuyễn trước).<br>
-        <strong>Lưu ý:</strong> <span class="caveat">Tác giả khẳng định mốc tuổi cụ thể nhưng không đưa ra nghiên cứu thực nghiệm kiểm chứng.</span>
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 1 · TÓM TẮT CẤU TRÚC</div>
+      <h2>Tóm tắt cốt lõi</h2>
+      <div class="content-card">
+        <p class="summary-text"><strong>Ý tưởng cốt lõi:</strong> Trẻ em sinh ra có tiềm năng năng lực rất lớn (100%),
+          nhưng tiềm năng này sẽ giảm dần theo thời gian nếu không được kích hoạt đúng lúc. Giáo dục sớm từ buổi bình
+          minh nhận thức là con đường duy nhất để bảo toàn và phát triển trọn vẹn tiềm năng thiên phú của trẻ.</p>
+
+        <div class="deep-section">
+          <strong>Đặt vấn đề (Setup):</strong> Tại sao có những "thần đồng" đạt thành tích kinh ngạc từ rất sớm? Liệu họ
+          là do bẩm sinh hay do giáo dục, và liệu giáo dục sớm có làm trẻ bị suy nhược hay mất đi tuổi thơ như định kiến
+          xã hội? <span class="page-ref">Ch 1 · §1</span>
+        </div>
+
+        <div class="deep-section">
+          <strong>Luận điểm (Argument):</strong> Trí tuệ thần đồng không phải là ngẫu nhiên hay bẩm sinh mà là kết quả
+          của việc giáo dục sớm đúng phương pháp. Năng lực của trẻ tuân theo quy luật giảm dần: thời điểm bắt đầu giáo
+          dục càng muộn, năng lực tiềm ẩn bị mất đi càng nhiều. <span class="page-ref">Ch 1 · §4</span>
+        </div>
+
+        <div class="deep-section">
+          <strong>Bằng chứng (Evidence):</strong>
+          <ul>
+            <li>Các ca lâm sàng lịch sử: Karl Witte (tiến sĩ năm 14 tuổi), William Sidis (Harvard năm 11 tuổi), Norbert
+              Wiener (tiến sĩ năm 18 tuổi), John Stuart Mill (đọc Plato năm 7 tuổi). <span class="page-ref">Ch 1 ·
+                §1-§3</span></li>
+            <li>Ví dụ sinh học: Thời kỳ nhạy cảm của gà con (4 ngày đầu để theo mẹ), chó con chôn thức ăn dư. <span
+                class="page-ref">Ch 1 · §4</span></li>
+          </ul>
+        </div>
+
+        <div class="deep-section">
+          <strong>Hệ quả (Implications):</strong> Cha mẹ và nhà giáo dục cần thay đổi tư duy: không chờ đợi trẻ "đến
+          tuổi đi học" mới dạy, mà phải bắt đầu từ giai đoạn sơ sinh để tận dụng tối đa "thời kỳ vàng", đặc biệt là với
+          ngôn ngữ và âm nhạc. <span class="page-ref">Ch 1 · §4</span>
+        </div>
       </div>
-    </div>
-  </li>
-  <li class="takeaway-item">
-    <div class="takeaway-badge" style="background-color: var(--accent-purple)">04</div>
-    <div class="takeaway-text">
-      <strong>Giáo dục sớm không hủy hoại sức khỏe trẻ em</strong>
-      <div class="takeaway-detail">
-        <strong>Tại sao:</strong> Những nhân chứng lịch sử như Karl Witte thọ 83 tuổi, Lord Kelvin thọ 83 tuổi, chứng minh rằng giáo dục sớm không gây hại thể chất nếu thực hiện đúng cách. <span class="page-ref">Ch 1 · §4</span><br>
-        <strong>Áp dụng:</strong> Kết hợp học tập một cách vui vẻ với phát triển thể chất và rèn luyện sự tự tin (như cách cha Goethe bắt đứng trên ghế đọc thơ). <span class="page-ref">Ch 1 · §3</span><br>
-        <strong>Lưu ý:</strong> Tránh áp lực, stress và kiệt sức ở trẻ em lẫn cha mẹ.
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 1 · Ý TƯỞNG LỚN</div>
+      <h2>Triết lý giáo dục từ sớm</h2>
+      <div class="takeaway-hero">
+        <div class="kicker">CH 1 · THE BIG IDEA</div>
+        <div class="headline">"Năng lực tiềm tàng của trẻ giảm dần theo thời gian: giáo dục muộn một ngày là lãng phí
+          một phần thiên tài."</div>
+        <div class="subline">Bắt đầu từ sơ sinh giữ lại 100% tiềm năng; trì hoãn đến 5 tuổi chỉ còn tối đa 80%; trì hoãn
+          đến 10 tuổi chỉ còn 60%. Giáo dục sớm là bảo toàn năng lực vốn có của trẻ. <span class="page-ref">Ch 1 ·
+            §4</span></div>
       </div>
-    </div>
-  </li>
-</ul>
 
-  </section>
+    </section>
 
-  <section class="slide">
-    <div class="slide-kicker">CH 1 · NGHIÊN CỨU ĐIỂN HÌNH</div>
-    <h2>Các nhân vật thần đồng tiêu biểu</h2>
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 15px; width: 100%;">
-  <div class="content-card" style="border-left: 4px solid var(--accent); padding: 15px;">
-    <h4 style="margin-top:0; color:var(--accent);">Karl Witte (1800 - 1883)</h4>
-    <p style="font-size: 0.85rem; line-height: 1.4; margin-bottom: 0;">
-      <strong>Khởi đầu:</strong> Bị coi là đần độn lúc nhỏ.<br>
-      <strong>Thành tựu:</strong> 9 tuổi vào Đại học Leipzig, 14 tuổi đỗ Tiến sĩ Triết học, 16 tuổi đỗ Tiến sĩ Luật.<br>
-      <strong>Phương pháp:</strong> Cha dạy từ sơ sinh. Viết cuốn sách đặt nền móng cho Sidis và Wiener. <span class="page-ref">Ch 1 · §2</span>
-    </p>
-  </div>
-  <div class="content-card" style="border-left: 4px solid var(--accent-amber); padding: 15px;">
-    <h4 style="margin-top:0; color:var(--accent-amber);">William J. Sidis (1898 - 1944)</h4>
-    <p style="font-size: 0.85rem; line-height: 1.4; margin-bottom: 0;">
-      <strong>Khởi đầu:</strong> Học từ 1.5 tuổi, đọc viết lúc 3 tuổi.<br>
-      <strong>Thành tựu:</strong> 9 tuổi giải đề thi Tiến sĩ MIT, 11 tuổi vào Harvard, giảng thuyết Không gian 4 chiều.<br>
-      <strong>Phương pháp:</strong> Cha là nhà tâm lý học áp dụng trực tiếp sách của Witte. <span class="page-ref">Ch 1 · §1</span>
-    </p>
-  </div>
-  <div class="content-card" style="border-left: 4px solid var(--accent-emerald); padding: 15px;">
-    <h4 style="margin-top:0; color:var(--accent-emerald);">Norbert Wiener (1894 - 1964)</h4>
-    <p style="font-size: 0.85rem; line-height: 1.4; margin-bottom: 0;">
-      <strong>Khởi đầu:</strong> Học Đại học Tufts từ 10 tuổi.<br>
-      <strong>Thành tựu:</strong> Tốt nghiệp đại học lúc 14 tuổi, đỗ Tiến sĩ Harvard lúc 18 tuổi. Cha đẻ của ngành Điều khiển học (Cybernetics).<br>
-      <strong>Phương pháp:</strong> Dựa trên sách giáo dục của Witte. <span class="page-ref">Ch 1 · §1</span>
-    </p>
-  </div>
-  <div class="content-card" style="border-left: 4px solid var(--accent-purple); padding: 15px;">
-    <h4 style="margin-top:0; color:var(--accent-purple);">Goethe & J.S. Mill</h4>
-    <p style="font-size: 0.85rem; line-height: 1.4; margin-bottom: 0;">
-      <strong>Goethe:</strong> 8 tuổi thạo 5 thứ tiếng. Cha rèn luyện sự tự tin bằng cách đọc thơ trên ghế.<br>
-      <strong>Mill:</strong> 3 tuổi học bảng chữ cái Hy Lạp, 7 tuổi đọc Plato, 8 tuổi học tiếng La-tinh.<br>
-      <strong>Ý nghĩa:</strong> Giáo dục sớm tạo lập tư duy vượt trội và bản lĩnh lãnh đạo từ trẻ. <span class="page-ref">Ch 1 · §3</span>
-    </p>
-  </div>
-</div>
+    <section class="slide">
+      <div class="slide-kicker">CH 1 · KHÁI NIỆM THEN CHỐT</div>
+      <h2>Bài học rút ra</h2>
+      <ul class="takeaway-list">
+        <li class="takeaway-item">
+          <div class="takeaway-badge">01</div>
+          <div class="takeaway-text">
+            <strong>Thần đồng là sản phẩm của giáo dục, không phải bẩm sinh</strong>
+            <div class="takeaway-detail">
+              <strong>Tại sao:</strong> Sự xuất sắc đồng loạt của các cặp anh chị em (Sidis, Wiener, Berle) chứng minh
+              giáo dục gia đình có tính quyết định chứ không phải đột biến di truyền. <span class="page-ref">Ch 1 ·
+                §1</span><br>
+              <strong>Áp dụng:</strong> Xây dựng kế hoạch giáo dục gia đình nhất quán thay vì phó mặc cho năng khiếu bẩm
+              sinh của trẻ.<br>
+              <strong>Lưu ý:</strong> Phải phân biệt rõ giáo dục sớm đúng phương pháp và việc nhồi nhét ép buộc dễ dẫn
+              đến thoái hóa sau 20 tuổi.
+            </div>
+          </div>
+        </li>
+        <li class="takeaway-item">
+          <div class="takeaway-badge" style="background-color: var(--accent-amber)">02</div>
+          <div class="takeaway-text">
+            <strong>Quy luật năng lực giảm dần (Diminishing Potential)</strong>
+            <div class="takeaway-detail">
+              <strong>Tại sao:</strong> Tiềm năng của trẻ đạt 100% khi sinh ra và suy giảm dần (còn 80% lúc 5 tuổi, 60%
+              lúc 10 tuổi) nếu không được kích hoạt đúng lúc. <span class="page-ref">Ch 1 · §4</span><br>
+              <strong>Áp dụng:</strong> Kích thích trí tuệ và giác quan của trẻ ngay từ buổi bình minh nhận thức bằng
+              cách trò chuyện, đọc sách, nghe nhạc.<br>
+              <strong>Lưu ý:</strong> Giáo dục muộn không thể phục hồi 100% tiềm năng, dù có nỗ lực gấp đôi về sau.
+            </div>
+          </div>
+        </li>
+        <li class="takeaway-item">
+          <div class="takeaway-badge" style="background-color: var(--accent-emerald)">03</div>
+          <div class="takeaway-text">
+            <strong>Tận dụng "Thời điểm vàng" (Critical Periods)</strong>
+            <div class="takeaway-detail">
+              <strong>Tại sao:</strong> Một số kỹ năng chỉ phát triển trong cửa sổ thời gian ngắn (tiếng mẹ đẻ trước
+              ngoại ngữ, piano trước 5 tuổi, violin trước 3 tuổi). Quá hạn cửa sổ này, kỹ năng vĩnh viễn khó đạt mức
+              xuất sắc. <span class="page-ref">Ch 1 · §4</span><br>
+              <strong>Áp dụng:</strong> Cho trẻ tiếp xúc sớm với âm nhạc và ngoại ngữ (nhưng tiếng mẹ đẻ phải nhuần
+              nhuyễn trước).<br>
+              <strong>Lưu ý:</strong> <span class="caveat">Tác giả khẳng định mốc tuổi cụ thể nhưng không đưa ra nghiên
+                cứu thực nghiệm kiểm chứng.</span>
+            </div>
+          </div>
+        </li>
+        <li class="takeaway-item">
+          <div class="takeaway-badge" style="background-color: var(--accent-purple)">04</div>
+          <div class="takeaway-text">
+            <strong>Giáo dục sớm không hủy hoại sức khỏe trẻ em</strong>
+            <div class="takeaway-detail">
+              <strong>Tại sao:</strong> Những nhân chứng lịch sử như Karl Witte thọ 83 tuổi, Lord Kelvin thọ 83 tuổi,
+              chứng minh rằng giáo dục sớm không gây hại thể chất nếu thực hiện đúng cách. <span class="page-ref">Ch 1 ·
+                §4</span><br>
+              <strong>Áp dụng:</strong> Kết hợp học tập một cách vui vẻ với phát triển thể chất và rèn luyện sự tự tin
+              (như cách cha Goethe bắt đứng trên ghế đọc thơ). <span class="page-ref">Ch 1 · §3</span><br>
+              <strong>Lưu ý:</strong> Tránh áp lực, stress và kiệt sức ở trẻ em lẫn cha mẹ.
+            </div>
+          </div>
+        </li>
+      </ul>
 
-  </section>
+    </section>
 
-  <section class="slide">
-    <div class="slide-kicker">CH 1 · CƠ CHẾ SINH HỌC</div>
-    <h2>Quy luật năng lực giảm dần &amp; Thời điểm vàng</h2>
-<div class="split-layout">
-  <div class="split-left" style="border-top: 4px solid var(--accent-amber); padding-top: 10px;">
-    <h3 style="color: var(--accent-amber); margin-top: 0;">Quy luật năng lực giảm dần</h3>
-    <p style="font-size: 0.9rem; line-height: 1.4;">Năng lực tiềm năng của con người tỷ lệ nghịch với độ tuổi bắt đầu giáo dục:</p>
-    <div style="margin: 15px 0;">
-      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px; font-size: 0.85rem;">
-        <span><strong>Sơ sinh:</strong></span>
-        <span style="color: var(--accent-emerald); font-weight: bold;">100% Khả năng</span>
+    <section class="slide">
+      <div class="slide-kicker">CH 1 · NGHIÊN CỨU ĐIỂN HÌNH</div>
+      <h2>Các nhân vật thần đồng tiêu biểu</h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 15px; width: 100%;">
+        <div class="content-card" style="border-left: 4px solid var(--accent); padding: 15px;">
+          <h4 style="margin-top:0; color:var(--accent);">Karl Witte (1800 - 1883)</h4>
+          <p style="font-size: 0.85rem; line-height: 1.4; margin-bottom: 0;">
+            <strong>Khởi đầu:</strong> Bị coi là đần độn lúc nhỏ.<br>
+            <strong>Thành tựu:</strong> 9 tuổi vào Đại học Leipzig, 14 tuổi đỗ Tiến sĩ Triết học, 16 tuổi đỗ Tiến sĩ
+            Luật.<br>
+            <strong>Phương pháp:</strong> Cha dạy từ sơ sinh. Viết cuốn sách đặt nền móng cho Sidis và Wiener. <span
+              class="page-ref">Ch 1 · §2</span>
+          </p>
+        </div>
+        <div class="content-card" style="border-left: 4px solid var(--accent-amber); padding: 15px;">
+          <h4 style="margin-top:0; color:var(--accent-amber);">William J. Sidis (1898 - 1944)</h4>
+          <p style="font-size: 0.85rem; line-height: 1.4; margin-bottom: 0;">
+            <strong>Khởi đầu:</strong> Học từ 1.5 tuổi, đọc viết lúc 3 tuổi.<br>
+            <strong>Thành tựu:</strong> 9 tuổi giải đề thi Tiến sĩ MIT, 11 tuổi vào Harvard, giảng thuyết Không gian 4
+            chiều.<br>
+            <strong>Phương pháp:</strong> Cha là nhà tâm lý học áp dụng trực tiếp sách của Witte. <span
+              class="page-ref">Ch 1 · §1</span>
+          </p>
+        </div>
+        <div class="content-card" style="border-left: 4px solid var(--accent-emerald); padding: 15px;">
+          <h4 style="margin-top:0; color:var(--accent-emerald);">Norbert Wiener (1894 - 1964)</h4>
+          <p style="font-size: 0.85rem; line-height: 1.4; margin-bottom: 0;">
+            <strong>Khởi đầu:</strong> Học Đại học Tufts từ 10 tuổi.<br>
+            <strong>Thành tựu:</strong> Tốt nghiệp đại học lúc 14 tuổi, đỗ Tiến sĩ Harvard lúc 18 tuổi. Cha đẻ của ngành
+            Điều khiển học (Cybernetics).<br>
+            <strong>Phương pháp:</strong> Dựa trên sách giáo dục của Witte. <span class="page-ref">Ch 1 · §1</span>
+          </p>
+        </div>
+        <div class="content-card" style="border-left: 4px solid var(--accent-purple); padding: 15px;">
+          <h4 style="margin-top:0; color:var(--accent-purple);">Goethe & J.S. Mill</h4>
+          <p style="font-size: 0.85rem; line-height: 1.4; margin-bottom: 0;">
+            <strong>Goethe:</strong> 8 tuổi thạo 5 thứ tiếng. Cha rèn luyện sự tự tin bằng cách đọc thơ trên ghế.<br>
+            <strong>Mill:</strong> 3 tuổi học bảng chữ cái Hy Lạp, 7 tuổi đọc Plato, 8 tuổi học tiếng La-tinh.<br>
+            <strong>Ý nghĩa:</strong> Giáo dục sớm tạo lập tư duy vượt trội và bản lĩnh lãnh đạo từ trẻ. <span
+              class="page-ref">Ch 1 · §3</span>
+          </p>
+        </div>
       </div>
-      <div style="background-color: var(--border); height: 8px; border-radius: 4px;">
-        <div style="background-color: var(--accent-emerald); width: 100%; height: 100%; border-radius: 4px;"></div>
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 1 · CƠ CHẾ SINH HỌC</div>
+      <h2>Quy luật năng lực giảm dần &amp; Thời điểm vàng</h2>
+      <div class="split-layout">
+        <div class="split-left" style="border-top: 4px solid var(--accent-amber); padding-top: 10px;">
+          <h3 style="color: var(--accent-amber); margin-top: 0;">Quy luật năng lực giảm dần</h3>
+          <p style="font-size: 0.9rem; line-height: 1.4;">Năng lực tiềm năng của con người tỷ lệ nghịch với độ tuổi bắt
+            đầu giáo dục:</p>
+          <div style="margin: 15px 0;">
+            <div
+              style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px; font-size: 0.85rem;">
+              <span><strong>Sơ sinh:</strong></span>
+              <span style="color: var(--accent-emerald); font-weight: bold;">100% Khả năng</span>
+            </div>
+            <div style="background-color: var(--border); height: 8px; border-radius: 4px;">
+              <div style="background-color: var(--accent-emerald); width: 100%; height: 100%; border-radius: 4px;">
+              </div>
+            </div>
+          </div>
+          <div style="margin: 15px 0;">
+            <div
+              style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px; font-size: 0.85rem;">
+              <span><strong>5 tuổi:</strong></span>
+              <span style="color: var(--accent-amber); font-weight: bold;">Tối đa 80% Khả năng</span>
+            </div>
+            <div style="background-color: var(--border); height: 8px; border-radius: 4px;">
+              <div style="background-color: var(--accent-amber); width: 80%; height: 100%; border-radius: 4px;"></div>
+            </div>
+          </div>
+          <div style="margin: 15px 0;">
+            <div
+              style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px; font-size: 0.85rem;">
+              <span><strong>10 tuổi:</strong></span>
+              <span style="color: var(--accent-red); font-weight: bold;">Tối đa 60% Khả năng</span>
+            </div>
+            <div style="background-color: var(--border); height: 8px; border-radius: 4px;">
+              <div style="background-color: var(--accent-red); width: 60%; height: 100%; border-radius: 4px;"></div>
+            </div>
+          </div>
+          <p style="font-size: 0.8rem; color: var(--text-secondary); line-height: 1.4;">
+            <em>Cơ chế giải thích:</em> Nếu không được kích hoạt sớm, các tế bào thần kinh tiềm năng sẽ không phát triển
+            và dần thoái hóa vĩnh viễn. <span class="page-ref">Ch 1 · §4</span>
+          </p>
+        </div>
+
+        <div class="split-right" style="border-top: 4px solid var(--accent-purple); padding-top: 10px;">
+          <h3 style="color: var(--accent-purple); margin-top: 0;">Thời kỳ then chốt ở động vật</h3>
+          <p style="font-size: 0.9rem; line-height: 1.4;">Các cửa sổ hành vi sinh học cực ngắn ở động vật được tác giả
+            dẫn chứng:</p>
+          <ul style="font-size: 0.85rem; line-height: 1.4; padding-left: 20px;">
+            <li style="margin-bottom: 8px;">
+              <strong>Gà con bám mẹ (4 ngày đầu):</strong> Nếu bị cô lập trong 4 ngày đầu sau sinh, gà con sẽ mất đi
+              vĩnh viễn bản năng đi theo gà mẹ.
+            </li>
+            <li style="margin-bottom: 8px;">
+              <strong>Nhận dạng âm thanh (8 ngày đầu):</strong> Nếu gà con không nghe thấy tiếng gà mẹ trong 8 ngày đầu,
+              nó sẽ vĩnh viễn không thể nhận dạng tiếng gọi của mẹ.
+            </li>
+            <li style="margin-bottom: 8px;">
+              <strong>Chó con chôn thức ăn:</strong> Bản năng chôn giấu thức ăn thừa chỉ xuất hiện ở một thời điểm nhất
+              định. Nếu bị nuôi trong môi trường không đất cát vào lúc đó, kỹ năng này sẽ biến mất hoàn toàn.
+            </li>
+          </ul>
+          <p style="font-size: 0.8rem; color: var(--text-secondary); line-height: 1.4;">
+            <em>Ý nghĩa:</em> Trẻ em cũng có những thời điểm nhạy cảm tương tự để tiếp thu ngôn ngữ, âm nhạc, vận động.
+            <span class="page-ref">Ch 1 · §4</span>
+          </p>
+        </div>
       </div>
-    </div>
-    <div style="margin: 15px 0;">
-      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px; font-size: 0.85rem;">
-        <span><strong>5 tuổi:</strong></span>
-        <span style="color: var(--accent-amber); font-weight: bold;">Tối đa 80% Khả năng</span>
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 1 · BỐI CẢNH LỊCH SỬ</div>
+      <h2>Lăng kính tác giả &amp; Sự phát triển ý tưởng</h2>
+      <div class="content-card" style="padding: 20px;">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+          <div>
+            <h4 style="color: var(--accent); margin-top: 0;">1. Lăng kính tác giả (Kimura Kyuichi)</h4>
+            <p style="font-size: 0.85rem; line-height: 1.5; margin-bottom: 0;">
+              • <strong>Vị thế:</strong> Nhà giáo dục, dịch giả nổi tiếng người Nhật đầu thế kỷ 20.<br>
+              • <strong>Động cơ viết sách:</strong> Phản đối hệ thống giáo dục công nghiệp rập khuôn, chỉ bắt đầu khi
+              trẻ đã lớn (6-7 tuổi), lãng phí thời kỳ vàng nhận thức.<br>
+              • <strong>Intellectual Lineage:</strong> Tiếp thu trực tiếp từ các tư tưởng phương Tây (Karl Witte, Boris
+              Sidis, Leo Wiener) và truyền bá lại tại Nhật Bản.<br>
+              • <strong>Thiên kiến:</strong> Quá đề cao tính "hiệu quả học thuật" (tốt nghiệp đại học sớm, đỗ tiến sĩ)
+              như một thước đo tối thượng của thành công.
+            </p>
+          </div>
+          <div>
+            <h4 style="color: var(--accent-purple); margin-top: 0;">2. Sự tiến hóa của ý tưởng (Thế kỷ 19 → 2026)</h4>
+            <p style="font-size: 0.85rem; line-height: 1.5; margin-bottom: 0;">
+              • <strong>Thời Karl Witte (1800s):</strong> Giáo dục sớm bị coi là "nuôi hoa trong nhà kính", phá hoại quy
+              luật tự nhiên và có hại cho sức khỏe.<br>
+              • <strong>Thời Kimura Kyuichi (1918):</strong> Chứng minh được sức khỏe thể chất của thần đồng vẫn tốt nhờ
+              vào Witte thọ 83 tuổi, Kelvin thọ 83 tuổi.<br>
+              • <strong>Thời điểm hiện tại (2026):</strong> Khoa học thần kinh phát triển vượt bậc, xác nhận sự tồn tại
+              của <em>"Synaptic Pruning"</em> (Cắt tỉa khớp thần kinh) và <em>"Critical Periods"</em> (Thời kỳ nhạy cảm)
+              khớp với lý luận của Witte. Tuy nhiên, sự cân bằng tâm lý và trí tuệ cảm xúc (EQ) ngày nay được coi trọng
+              ngang bằng IQ.
+            </p>
+          </div>
+        </div>
       </div>
-      <div style="background-color: var(--border); height: 8px; border-radius: 4px;">
-        <div style="background-color: var(--accent-amber); width: 80%; height: 100%; border-radius: 4px;"></div>
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 1 · CÁC LỚP ĐỌC SÁCH</div>
+      <h2>Đọc hiểu đa tầng chương 1</h2>
+      <div class="content-card" style="padding: 15px;">
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+          <div style="border-left: 3px solid var(--accent-cyan); padding-left: 10px;">
+            <strong style="color: var(--accent-cyan);">Tầng 1: Đọc bề mặt (Tác giả nói gì?)</strong>
+            <p style="font-size: 0.85rem; margin: 2px 0;">Sách giới thiệu các tấm gương thần đồng lịch sử (Witte, Sidis,
+              Wiener, Mill) được giáo dục sớm từ sơ sinh và sống khỏe mạnh, chứng minh thiên tài có thể được đào tạo
+              nhân tạo bằng cách khai thác năng lực trước khi nó giảm dần. <span class="page-ref">Ch 1 · §1-§4</span>
+            </p>
+          </div>
+          <div style="border-left: 3px solid var(--accent-emerald); padding-left: 10px;">
+            <strong style="color: var(--accent-emerald);">Tầng 2: Đọc cấu trúc (Lập luận thế nào?)</strong>
+            <p style="font-size: 0.85rem; margin: 2px 0;">Quy nạp từ các trường hợp cá biệt (N=1) để chứng minh tính
+              hiệu quả của giáo dục sớm, sau đó dùng phép so sánh tương đồng sinh học (ở gà và chó) để giải thích cơ chế
+              của "Quy luật năng lực giảm dần".</p>
+          </div>
+          <div style="border-left: 3px solid var(--accent-amber); padding-left: 10px;">
+            <strong style="color: var(--accent-amber);">Tầng 3: Đọc bối cảnh (Bối cảnh lịch sử tác động gì?)</strong>
+            <p style="font-size: 0.85rem; margin: 2px 0;">Bản dịch tiếng Việt từ tài liệu tiếng Nhật đầu thế kỷ 20 phản
+              ánh mong muốn chấn hưng quốc gia thông qua việc đào tạo nhân tài kiệt xuất, chịu ảnh hưởng từ sự trỗi dậy
+              của tâm lý học hành vi phương Tây.</p>
+          </div>
+          <div style="border-left: 3px solid var(--accent-red); padding-left: 10px;">
+            <strong style="color: var(--accent-red);">Tầng 4: Đọc phản biện (Tác giả đúng/sai chỗ nào?)</strong>
+            <p style="font-size: 0.85rem; margin: 2px 0;"><span
+                style="color: var(--accent-red); font-weight: bold;">Điểm yếu:</span> Lỗi ngụy biện anh đào
+              (cherry-picking) khi chỉ liệt kê các thần đồng thành công mà lờ đi những trẻ bị stress. Coi nhẹ vai trò
+              của gen di truyền và bỏ qua biến số về môi trường gia đình có điều kiện kinh tế/tri thức cao.</p>
+          </div>
+          <div style="border-left: 3px solid var(--accent-purple); padding-left: 10px;">
+            <strong style="color: var(--accent-purple);">Tầng 5: Đọc sáng tạo (Ứng dụng mới là gì?)</strong>
+            <p style="font-size: 0.85rem; margin: 2px 0;">Ứng dụng Quy luật năng lực giảm dần vào giáo dục số hiện đại:
+              Thiết kế các môi trường tương tác đa phương tiện (EdTech) thích ứng theo tốc độ học tập tự nhiên của trẻ
+              sơ sinh nhưng duy trì sự ấm áp từ cha mẹ, tránh phụ thuộc vào màn hình.</p>
+          </div>
+        </div>
       </div>
-    </div>
-    <div style="margin: 15px 0;">
-      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px; font-size: 0.85rem;">
-        <span><strong>10 tuổi:</strong></span>
-        <span style="color: var(--accent-red); font-weight: bold;">Tối đa 60% Khả năng</span>
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 1 · ĐÁNH GIÁ BẰNG CHỨNG</div>
+      <h2>Thẩm định luận cứ và Đối chiếu khoa học hiện đại</h2>
+      <div class="evidence-card" style="margin-bottom: 15px; padding: 15px;">
+        <div class="evidence-header">
+          <span class="claim-text"><strong>Luận điểm:</strong> Giáo dục sớm từ sơ sinh tạo ra thiên tài nhờ bảo toàn
+            100% năng lực tiềm tàng.</span>
+          <span class="quality-score" style="color: var(--accent-amber);">⭐⭐☆ 2.5/5 (Mức độ tin cậy thấp)</span>
+        </div>
+        <div class="evidence-type">📖 Lịch sử / Giai thoại cá biệt (Case Study N=1)</div>
+        <div class="evidence-body" style="font-size: 0.85rem; line-height: 1.4;">
+          • <strong>Điểm mạnh:</strong> Cuộc đời Karl Witte chứng minh một đứa trẻ bị nghi đần độn vẫn có thể đạt thành
+          tựu trí tuệ đỉnh cao nhờ giáo dục bền bỉ.<br>
+          • <strong>Điểm yếu:</strong> Cỡ mẫu cực nhỏ (chỉ vài trường hợp xuất chúng). Thiếu đối chứng (không so sánh
+          với nhóm học muộn có cùng chỉ số thông minh bẩm sinh). Không kiểm soát biến số về nền tảng tri thức ưu tú của
+          cha mẹ (Boris Sidis là nhà tâm lý học Harvard, Leo Wiener là giáo sư ngôn ngữ).
+        </div>
       </div>
-      <div style="background-color: var(--border); height: 8px; border-radius: 4px;">
-        <div style="background-color: var(--accent-red); width: 60%; height: 100%; border-radius: 4px;"></div>
+
+      <div class="callout" style="border-left: 4px solid var(--accent-cyan); padding: 15px;">
+        <div class="callout-icon">🧠</div>
+        <div class="callout-content">
+          <strong>Góc nhìn Khoa học Thần kinh hiện đại & Rủi ro tâm lý (Cập nhật 2026):</strong>
+          <p style="font-size: 0.82rem; margin: 5px 0 0 0; line-height: 1.4;">
+            1. <strong>Cắt tỉa khớp thần kinh (Synaptic Pruning):</strong> Khi sinh ra, trẻ có khoảng 100 tỷ tế bào thần
+            kinh nhưng rất ít liên kết (synapse). Đến 2-3 tuổi, mật độ liên kết tăng vọt gấp đôi người lớn. Cơ chế tự
+            nhiên sau đó sẽ "cắt tỉa" (pruning) các liên kết không được sử dụng. Điều này ủng hộ mạnh mẽ lý thuyết "suy
+            giảm năng lực tiềm tàng" nếu không được kích hoạt sớm.<br>
+            2. <strong>Cửa sổ cơ hội (Windows of Opportunity):</strong> Vùng vỏ não thính giác và ngôn ngữ đạt đỉnh nhạy
+            cảm trước 10 tuổi. Sau giai đoạn này, não bộ mất đi tính dẻo dai (neuroplasticity) cao nhất, khiến việc học
+            ngoại ngữ và nhạc cụ cực kỳ khó đạt mức độ xuất chúng.<br>
+            3. <strong>Bi kịch William James Sidis & Bài học EQ:</strong> Lịch sử ghi nhận Sidis bị khủng hoảng tâm lý
+            nghiêm trọng sau khi tốt nghiệp Harvard, sống ẩn dật, từ bỏ toán học và qua đời trong cô độc. Phương pháp ép
+            buộc học thuật cực đoan của người cha đã bỏ quên trí tuệ cảm xúc (EQ) và khả năng tương tác xã hội của
+            Sidis, gây ra hội chứng kiệt sức (burnout) nghiêm trọng.
+          </p>
+        </div>
       </div>
-    </div>
-    <p style="font-size: 0.8rem; color: var(--text-secondary); line-height: 1.4;">
-      <em>Cơ chế giải thích:</em> Nếu không được kích hoạt sớm, các tế bào thần kinh tiềm năng sẽ không phát triển và dần thoái hóa vĩnh viễn. <span class="page-ref">Ch 1 · §4</span>
-    </p>
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 1 · QUAN ĐIỂM ĐỐI LẬP</div>
+      <h2>Tranh biện: Giáo dục sớm vs. Phát triển tự nhiên</h2>
+      <div class="split-layout">
+        <div class="split-left" style="border-top: 4px solid var(--accent-emerald); padding-top: 10px;">
+          <h3 style="color: var(--accent-emerald); font-size: 1.1rem; margin-top: 0;">Trường phái Giáo dục Sớm (Kimura,
+            Witte)</h3>
+          <p style="font-size: 0.82rem; line-height: 1.4; margin-bottom: 0;">
+            • <strong>Cốt lõi:</strong> Trí tuệ phải được rèn luyện có chủ đích từ sơ sinh. Não bộ trẻ em cần được kích
+            thích học thuật sớm để tránh lãng phí năng lực tiềm năng.<br>
+            • <strong>Phương pháp:</strong> Học đọc, viết, toán, ngôn ngữ cổ điển và khoa học một cách có kế hoạch và hệ
+            thống.<br>
+            • <strong>Mục tiêu:</strong> Tối ưu hóa trí thông minh học thuật (IQ) và kiến thức bách khoa toàn thư từ
+            nhỏ.
+          </p>
+        </div>
+
+        <div class="split-right" style="border-top: 4px solid var(--accent-red); padding-top: 10px;">
+          <h3 style="color: var(--accent-red); font-size: 1.1rem; margin-top: 0;">Trường phái Kiến tạo & Tự nhiên
+            (Montessori, Piaget)</h3>
+          <p style="font-size: 0.82rem; line-height: 1.4; margin-bottom: 0;">
+            • <strong>Cốt lõi:</strong> Trẻ tự xây dựng kiến thức thông qua trải nghiệm thực tế và tương tác tự do. Ép
+            học sớm học thuật phá vỡ quy luật tự nhiên.<br>
+            • <strong>Phương pháp:</strong> Học thông qua chơi (Play-based learning), phát triển vận động thô/tinh và
+            các kỹ năng sống tự lập.<br>
+            • <strong>Mục tiêu:</strong> Trí tuệ cảm xúc (EQ), khả năng tự điều chỉnh (self-regulation), và tâm lý lành
+            mạnh.
+          </p>
+        </div>
+      </div>
+
+      <div class="callout" style="border-left: 4px solid var(--accent-purple); margin-top: 15px; padding: 15px;">
+        <div class="callout-icon">⚖️</div>
+        <div class="callout-content" style="font-size: 0.82rem; line-height: 1.4;">
+          <strong>Giải pháp dung hòa (Synthesis):</strong> Không nhồi nhét chữ viết hay toán học trừu tượng cho trẻ sơ
+          sinh. Thay vào đó, áp dụng "giáo dục sớm" bằng cách tạo môi trường phong phú về ngôn ngữ (đọc sách cùng con,
+          trò chuyện chất lượng cao) và để trẻ tự do khám phá thế giới thể chất, đảm bảo trẻ được chơi đùa vui vẻ.
+        </div>
+      </div>
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 1 · HƯỚNG DẪN ÁP DỤNG</div>
+      <h2>Lộ trình giáo dục sớm an toàn cho cha mẹ</h2>
+      <div class="phase-progress" style="margin-bottom: 15px;">
+        <div class="phase active">P1: Kết nối ấm áp (0 - 1 tuổi)</div>
+        <div class="phase">P2: Khai mở đa giác quan (1 - 3 tuổi)</div>
+        <div class="phase">P3: Ngôn ngữ & Tư duy (3 - 5 tuổi)</div>
+        <div class="phase">P4: Thử nghiệm đam mê (5 tuổi+)</div>
+      </div>
+
+      <div class="content-card" style="padding: 15px;">
+        <div
+          style="display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 15px; font-size: 0.82rem; line-height: 1.4;">
+          <div>
+            <h4 style="color: var(--accent); margin: 0 0 5px 0;">Hành động và kỹ thuật cụ thể theo từng pha:</h4>
+            <strong>• Pha 1: Trò chuyện mô tả (Self-Talk & Parallel Talk):</strong> Trò chuyện liên tục bằng từ ngữ
+            chuẩn xác, không dùng từ nói ngọng (baby talk). Mô tả mọi hành động của bạn và của con để kích hoạt thính
+            giác.<br>
+            <strong>• Pha 2: Đọc sách tương tác (Dialogic Reading):</strong> Đọc sách tranh mỗi ngày. Thay vì đọc thụ
+            động, hãy đặt câu hỏi (Cái gì đây? Ai đây?) và khích lệ trẻ chỉ tay, bắt chước âm thanh. Kích thích xúc giác
+            qua cát, nước, đất nặn.<br>
+            <strong>• Pha 3: Dạy chữ trực quan & Nhạc Suzuki:</strong> Học bảng chữ cái qua trò chơi ghép thẻ gắn vào đồ
+            vật thực tế. Tiếp cận nhạc cụ (Piano trước 5t, Violin trước 3t) theo phương pháp Suzuki: cho nghe nhạc trước
+            để thẩm âm, sau mới học nhạc lý.<br>
+            <strong>• Pha 4: Tắm ngôn ngữ & Tự định hướng:</strong> Cho trẻ tiếp xúc với ngoại ngữ thứ hai tự nhiên
+            thông qua bài hát, hoạt hình ngắn. Để trẻ tự quyết định chơi gì và hỗ trợ theo đam mê của trẻ.
+          </div>
+
+          <div>
+            <h4 style="color: var(--accent-red); margin: 0 0 5px 0;">⚠️ Nguyên tắc phòng tránh kiệt sức (Burnout
+              Prevention):</h4>
+            • <strong>Học là chơi, chơi là học:</strong> Tuyệt đối không có bài kiểm tra, không chấm điểm, không phê
+            bình hay ép buộc trẻ học khi trẻ mệt mỏi.<br>
+            • <strong>Chăm sóc bản thân:</strong> Cha mẹ không nên tự gây áp lực phải tạo ra một "thần đồng". Sự bất an
+            của cha mẹ sẽ truyền sang trẻ, hủy hoại bầu không khí gia đình.<br>
+            • <strong>Tôn trọng tốc độ của trẻ:</strong> Mỗi đứa trẻ có một chiếc đồng hồ phát triển riêng. So sánh con
+            với các thần đồng lịch sử là sai lầm nghiêm trọng nhất.
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 1 · MỐI LIÊN KẾT KHÁI NIỆM</div>
+      <h2>Sơ đồ phụ thuộc khái niệm (Concept Dependencies)</h2>
+      <div style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 20px; width: 100%;">
+        <div>
+          <div class="mermaid">
+            graph TD
+            A["Ý thức làm cha mẹ (Tiền đề)"] --> B["Bình minh nhận thức (Chương 1)"]
+            B --> C["Quy luật giảm năng lực (Chương 1)"]
+            C --> D["Kích thích giác quan (Chương 2)"]
+            C --> E["Phát triển Ngôn ngữ (Chương 3)"]
+            D & E --> F["Trí tuệ học thuật nâng cao (Chương 5)"]
+            style B fill:#635BFF,stroke:#2A2D33,color:#F7F7F5
+            style C fill:#635BFF,stroke:#2A2D33,color:#F7F7F5
+          </div>
+        </div>
+
+        <div class="content-card" style="font-size: 0.85rem; line-height: 1.4; padding: 15px;">
+          <h4 style="margin-top:0; color: var(--accent);">Kiểm tra kiến thức trước khi đi tiếp:</h4>
+          <ul class="checklist" style="list-style: none; padding-left: 0; margin-bottom: 0;">
+            <li style="margin-bottom: 8px;"><input type="checkbox" checked disabled> Bạn đã hiểu rõ sự khác biệt giữa
+              "Thần đồng nhân tạo" áp lực và "Thiên tài được giáo dục lành mạnh"?</li>
+            <li style="margin-bottom: 8px;"><input type="checkbox" checked disabled> Bạn có giải thích được cơ chế Quy
+              luật năng lực giảm dần cho người khác nghe?</li>
+            <li style="margin-bottom: 8px;"><input type="checkbox" checked disabled> Bạn có thể phân biệt được "Thời kỳ
+              vàng" của ngôn ngữ và nhạc cụ?</li>
+            <li style="margin-bottom: 8px;"><input type="checkbox" checked disabled> Bạn đã giải tỏa được nỗi lo sợ rằng
+              giáo dục sớm sẽ hủy hoại sức khỏe của trẻ?</li>
+          </ul>
+
+          <div style="margin-top: 15px; font-size: 0.8rem; color: var(--text-secondary);">
+            <strong>Khóa học mở rộng:</strong> Chương này là tiền đề lý thuyết. Chương 2 sẽ hướng dẫn cách thức kích
+            thích vật lý và giác quan cụ thể cho trẻ sơ sinh.
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 1 · PHƯƠNG PHÁP HỌC TẬP</div>
+      <h2>Chiến lược meta-learning dành cho cha mẹ</h2>
+      <div class="content-card" style="padding: 15px;">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; font-size: 0.85rem; line-height: 1.4;">
+          <div>
+            <h4 style="color: var(--accent); margin-top: 0;">1. Lộ trình ôn tập ngắt quãng (Spaced Repetition)</h4>
+            <p>Để ghi nhớ và biến lý thuyết Chương 1 thành phản xạ giáo dục:</p>
+            <table style="width: 100%; border-collapse: collapse; font-size: 0.8rem;">
+              <thead>
+                <tr style="border-bottom: 2px solid var(--border);">
+                  <th style="text-align: left; padding: 4px;">Thời điểm</th>
+                  <th style="text-align: left; padding: 4px;">Hành động của Cha mẹ</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="border-bottom: 1px solid var(--border);">
+                  <td style="padding: 4px; font-weight: bold;">Ngày 1</td>
+                  <td style="padding: 4px;">Đọc kỹ slide này và ghi lại 3 ý tưởng tâm đắc nhất.</td>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--border);">
+                  <td style="padding: 4px; font-weight: bold;">Ngày 3</td>
+                  <td style="padding: 4px;">Quan sát hành vi của con để tìm kiếm "Thời kỳ nhạy cảm".</td>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--border);">
+                  <td style="padding: 4px; font-weight: bold;">Ngày 7</td>
+                  <td style="padding: 4px;">Kể lại câu chuyện Karl Witte cho bạn đời nghe để thảo luận.</td>
+                </tr>
+                <tr>
+                  <td style="padding: 4px; font-weight: bold;">Ngày 30</td>
+                  <td style="padding: 4px;">Đánh giá xem mình có đang bị ép buộc con hay không.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div>
+            <h4 style="color: var(--accent-purple); margin-top: 0;">2. Neo giữ trí nhớ theo phong cách học tập</h4>
+            • <strong>Neo trực quan (Visual Anchor):</strong> Hãy hình dung tiềm năng của con như một mầm cây non trong
+            nhà kính cần tưới nước ấm áp đều đặn mỗi ngày, tránh bão giông áp lực.<br>
+            • <strong>Neo ngôn ngữ (Verbal Anchor):</strong> Ghi nhớ khẩu quyết: <em>"Học là chơi - Khơi gợi tự tin -
+              Bắt đầu từ sớm"</em>.<br>
+            • <strong>Neo vận động (Kinesthetic Anchor):</strong> Thực hành ngay tối nay: Khi chơi với con, hãy để con
+            đứng lên ghế (nếu đủ vững) đọc một câu thơ ngắn hoặc hát một bài hát và vỗ tay cổ vũ con nhiệt tình để rèn
+            tính tự tin giống như cha của Goethe đã làm. <span class="page-ref">Ch 1 · §3</span>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 1 · CÂU HỎI TỰ SUY NGẪM</div>
+      <h2>Bộ câu hỏi suy ngẫm sâu (Bloom&#x27;s Taxonomy)</h2>
+      <div class="content-card" style="padding: 15px; font-size: 0.85rem; line-height: 1.4;">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+          <div>
+            <h4 style="color: var(--accent); margin: 0 0 5px 0;">Cấp độ 1-3: Hiểu và Áp dụng</h4>
+            <p style="margin-bottom: 10px;">
+              <strong>1. Nhớ & Hiểu:</strong> Năng lực tiềm tàng của trẻ em tuân theo quy luật giảm dần như thế nào?
+              Điểm khác biệt cốt lõi giữa phương pháp của Karl Witte và việc "nhồi nhét học thuật" là gì?
+            </p>
+            <p style="margin-bottom: 0;">
+              <strong>2. Áp dụng:</strong> Trẻ em nhà bạn hiện đang ở độ tuổi nào? Làm thế nào bạn có thể áp dụng ý
+              tưởng "dạy trẻ từ buổi bình minh nhận thức" vào cuộc sống bận rộn hiện tại?
+            </p>
+          </div>
+
+          <div>
+            <h4 style="color: var(--accent-purple); margin: 0 0 5px 0;">Cấp độ 4-6: Phân tích, Đánh giá và Socratic</h4>
+            <p style="margin-bottom: 10px;">
+              <strong>3. Phân tích & Đánh giá:</strong> Đọc về bi kịch kiệt sức (burnout) về sau của William J. Sidis,
+              bạn thấy phương pháp của cha ông (Boris Sidis) đã mắc phải sai lầm chí mạng nào? Bạn sẽ làm gì để bảo vệ
+              con khỏi rủi ro đó?
+            </p>
+            <p style="margin-bottom: 0;">
+              <strong>4. Câu hỏi Socratic:</strong> <em>"Chúng ta muốn nuôi dạy một đứa trẻ hạnh phúc phát triển trọn
+                vẹn tiềm năng, hay một cỗ máy học thuật tốt nghiệp Harvard sớm?"</em> Làm thế nào để cân bằng giữa kích
+              thích trí tuệ sớm và quyền được có một tuổi thơ vô tư của trẻ?
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 1 · HÀNH ĐỘNG CUỐI CÙNG</div>
+      <h2>Kế hoạch hành động của cha mẹ</h2>
+      <ul class="action-list" style="margin-bottom: 15px;">
+        <li class="action-item">
+          <div>
+            <div class="action-headline">Thiết lập "Giờ trò chuyện chất lượng cao" hàng ngày</div>
+            <div class="action-detail">Dành ít nhất 30 phút mỗi ngày không điện thoại, hoàn toàn tương tác bằng mắt, trò
+              chuyện rõ ràng và giàu cảm xúc với con để kích hoạt vùng ngôn ngữ của não bộ. <span class="page-ref">Ch 1
+                · §4</span></div>
+          </div>
+        </li>
+        <li class="action-item">
+          <div>
+            <div class="action-headline">Kích hoạt âm nhạc trong phòng ngủ của con</div>
+            <div class="action-detail">Cho con nghe nhạc cổ điển không lời với âm lượng nhỏ (~40-50 dB) khoảng 20 phút
+              mỗi ngày vào một khung giờ cố định (trước khi ngủ hoặc lúc thức dậy) để kích thích tư duy không gian và
+              toán học. <span class="page-ref">Ch 1 · §4</span></div>
+          </div>
+        </li>
+        <li class="action-item">
+          <div>
+            <div class="action-headline">Đo lường mức độ "Vui vẻ khi học tập" của con</div>
+            <div class="action-detail">Mỗi tuần một lần, hãy tự hỏi: "Con có cười và hào hứng trong các hoạt động cùng
+              cha mẹ không?" Nếu câu trả lời là không, hãy giảm tải và tập trung chơi tự do để ngăn ngừa nguy cơ áp lực
+              tâm lý sớm. <span class="page-ref">Ch 1 · §4</span></div>
+          </div>
+        </li>
+      </ul>
+
+      <figure class="image-slot hero" style="max-height: 200px;">
+        <img src="images/ch1_closing.png" alt="Mầm cây xanh phát triển khỏe mạnh">
+        <figcaption>Nguồn: Unsplash (Free Stock Photo)</figcaption>
+      </figure>
+
+    </section>
+
   </div>
-  
-  <div class="split-right" style="border-top: 4px solid var(--accent-purple); padding-top: 10px;">
-    <h3 style="color: var(--accent-purple); margin-top: 0;">Thời kỳ then chốt ở động vật</h3>
-    <p style="font-size: 0.9rem; line-height: 1.4;">Các cửa sổ hành vi sinh học cực ngắn ở động vật được tác giả dẫn chứng:</p>
-    <ul style="font-size: 0.85rem; line-height: 1.4; padding-left: 20px;">
-      <li style="margin-bottom: 8px;">
-        <strong>Gà con bám mẹ (4 ngày đầu):</strong> Nếu bị cô lập trong 4 ngày đầu sau sinh, gà con sẽ mất đi vĩnh viễn bản năng đi theo gà mẹ.
-      </li>
-      <li style="margin-bottom: 8px;">
-        <strong>Nhận dạng âm thanh (8 ngày đầu):</strong> Nếu gà con không nghe thấy tiếng gà mẹ trong 8 ngày đầu, nó sẽ vĩnh viễn không thể nhận dạng tiếng gọi của mẹ.
-      </li>
-      <li style="margin-bottom: 8px;">
-        <strong>Chó con chôn thức ăn:</strong> Bản năng chôn giấu thức ăn thừa chỉ xuất hiện ở một thời điểm nhất định. Nếu bị nuôi trong môi trường không đất cát vào lúc đó, kỹ năng này sẽ biến mất hoàn toàn.
-      </li>
-    </ul>
-    <p style="font-size: 0.8rem; color: var(--text-secondary); line-height: 1.4;">
-      <em>Ý nghĩa:</em> Trẻ em cũng có những thời điểm nhạy cảm tương tự để tiếp thu ngôn ngữ, âm nhạc, vận động. <span class="page-ref">Ch 1 · §4</span>
-    </p>
+
+  <div class="nav-controls">
+    <button class="nav-btn" id="prevBtn" onclick="prevSlide()" aria-label="Previous slide">&#8592;</button>
+    <div class="counter" id="counter" aria-live="polite">1 / 1</div>
+    <button class="nav-btn" id="nextBtn" onclick="nextSlide()" aria-label="Next slide">&#8594;</button>
   </div>
-</div>
 
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH 1 · BỐI CẢNH LỊCH SỬ</div>
-    <h2>Lăng kính tác giả &amp; Sự phát triển ý tưởng</h2>
-<div class="content-card" style="padding: 20px;">
-  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-    <div>
-      <h4 style="color: var(--accent); margin-top: 0;">1. Lăng kính tác giả (Kimura Kyuichi)</h4>
-      <p style="font-size: 0.85rem; line-height: 1.5; margin-bottom: 0;">
-        • <strong>Vị thế:</strong> Nhà giáo dục, dịch giả nổi tiếng người Nhật đầu thế kỷ 20.<br>
-        • <strong>Động cơ viết sách:</strong> Phản đối hệ thống giáo dục công nghiệp rập khuôn, chỉ bắt đầu khi trẻ đã lớn (6-7 tuổi), lãng phí thời kỳ vàng nhận thức.<br>
-        • <strong>Intellectual Lineage:</strong> Tiếp thu trực tiếp từ các tư tưởng phương Tây (Karl Witte, Boris Sidis, Leo Wiener) và truyền bá lại tại Nhật Bản.<br>
-        • <strong>Thiên kiến:</strong> Quá đề cao tính "hiệu quả học thuật" (tốt nghiệp đại học sớm, đỗ tiến sĩ) như một thước đo tối thượng của thành công.
-      </p>
-    </div>
-    <div>
-      <h4 style="color: var(--accent-purple); margin-top: 0;">2. Sự tiến hóa của ý tưởng (Thế kỷ 19 → 2026)</h4>
-      <p style="font-size: 0.85rem; line-height: 1.5; margin-bottom: 0;">
-        • <strong>Thời Karl Witte (1800s):</strong> Giáo dục sớm bị coi là "nuôi hoa trong nhà kính", phá hoại quy luật tự nhiên và có hại cho sức khỏe.<br>
-        • <strong>Thời Kimura Kyuichi (1918):</strong> Chứng minh được sức khỏe thể chất của thần đồng vẫn tốt nhờ vào Witte thọ 83 tuổi, Kelvin thọ 83 tuổi.<br>
-        • <strong>Thời điểm hiện tại (2026):</strong> Khoa học thần kinh phát triển vượt bậc, xác nhận sự tồn tại của <em>"Synaptic Pruning"</em> (Cắt tỉa khớp thần kinh) và <em>"Critical Periods"</em> (Thời kỳ nhạy cảm) khớp với lý luận của Witte. Tuy nhiên, sự cân bằng tâm lý và trí tuệ cảm xúc (EQ) ngày nay được coi trọng ngang bằng IQ.
-      </p>
-    </div>
-  </div>
-</div>
-
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH 1 · CÁC LỚP ĐỌC SÁCH</div>
-    <h2>Đọc hiểu đa tầng chương 1</h2>
-<div class="content-card" style="padding: 15px;">
-  <div style="display: flex; flex-direction: column; gap: 10px;">
-    <div style="border-left: 3px solid var(--accent-cyan); padding-left: 10px;">
-      <strong style="color: var(--accent-cyan);">Tầng 1: Đọc bề mặt (Tác giả nói gì?)</strong>
-      <p style="font-size: 0.85rem; margin: 2px 0;">Sách giới thiệu các tấm gương thần đồng lịch sử (Witte, Sidis, Wiener, Mill) được giáo dục sớm từ sơ sinh và sống khỏe mạnh, chứng minh thiên tài có thể được đào tạo nhân tạo bằng cách khai thác năng lực trước khi nó giảm dần. <span class="page-ref">Ch 1 · §1-§4</span></p>
-    </div>
-    <div style="border-left: 3px solid var(--accent-emerald); padding-left: 10px;">
-      <strong style="color: var(--accent-emerald);">Tầng 2: Đọc cấu trúc (Lập luận thế nào?)</strong>
-      <p style="font-size: 0.85rem; margin: 2px 0;">Quy nạp từ các trường hợp cá biệt (N=1) để chứng minh tính hiệu quả của giáo dục sớm, sau đó dùng phép so sánh tương đồng sinh học (ở gà và chó) để giải thích cơ chế của "Quy luật năng lực giảm dần".</p>
-    </div>
-    <div style="border-left: 3px solid var(--accent-amber); padding-left: 10px;">
-      <strong style="color: var(--accent-amber);">Tầng 3: Đọc bối cảnh (Bối cảnh lịch sử tác động gì?)</strong>
-      <p style="font-size: 0.85rem; margin: 2px 0;">Bản dịch tiếng Việt từ tài liệu tiếng Nhật đầu thế kỷ 20 phản ánh mong muốn chấn hưng quốc gia thông qua việc đào tạo nhân tài kiệt xuất, chịu ảnh hưởng từ sự trỗi dậy của tâm lý học hành vi phương Tây.</p>
-    </div>
-    <div style="border-left: 3px solid var(--accent-red); padding-left: 10px;">
-      <strong style="color: var(--accent-red);">Tầng 4: Đọc phản biện (Tác giả đúng/sai chỗ nào?)</strong>
-      <p style="font-size: 0.85rem; margin: 2px 0;"><span style="color: var(--accent-red); font-weight: bold;">Điểm yếu:</span> Lỗi ngụy biện anh đào (cherry-picking) khi chỉ liệt kê các thần đồng thành công mà lờ đi những trẻ bị stress. Coi nhẹ vai trò của gen di truyền và bỏ qua biến số về môi trường gia đình có điều kiện kinh tế/tri thức cao.</p>
-    </div>
-    <div style="border-left: 3px solid var(--accent-purple); padding-left: 10px;">
-      <strong style="color: var(--accent-purple);">Tầng 5: Đọc sáng tạo (Ứng dụng mới là gì?)</strong>
-      <p style="font-size: 0.85rem; margin: 2px 0;">Ứng dụng Quy luật năng lực giảm dần vào giáo dục số hiện đại: Thiết kế các môi trường tương tác đa phương tiện (EdTech) thích ứng theo tốc độ học tập tự nhiên của trẻ sơ sinh nhưng duy trì sự ấm áp từ cha mẹ, tránh phụ thuộc vào màn hình.</p>
-    </div>
-  </div>
-</div>
-
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH 1 · ĐÁNH GIÁ BẰNG CHỨNG</div>
-    <h2>Thẩm định luận cứ và Đối chiếu khoa học hiện đại</h2>
-<div class="evidence-card" style="margin-bottom: 15px; padding: 15px;">
-  <div class="evidence-header">
-    <span class="claim-text"><strong>Luận điểm:</strong> Giáo dục sớm từ sơ sinh tạo ra thiên tài nhờ bảo toàn 100% năng lực tiềm tàng.</span>
-    <span class="quality-score" style="color: var(--accent-amber);">⭐⭐☆ 2.5/5 (Mức độ tin cậy thấp)</span>
-  </div>
-  <div class="evidence-type">📖 Lịch sử / Giai thoại cá biệt (Case Study N=1)</div>
-  <div class="evidence-body" style="font-size: 0.85rem; line-height: 1.4;">
-    • <strong>Điểm mạnh:</strong> Cuộc đời Karl Witte chứng minh một đứa trẻ bị nghi đần độn vẫn có thể đạt thành tựu trí tuệ đỉnh cao nhờ giáo dục bền bỉ.<br>
-    • <strong>Điểm yếu:</strong> Cỡ mẫu cực nhỏ (chỉ vài trường hợp xuất chúng). Thiếu đối chứng (không so sánh với nhóm học muộn có cùng chỉ số thông minh bẩm sinh). Không kiểm soát biến số về nền tảng tri thức ưu tú của cha mẹ (Boris Sidis là nhà tâm lý học Harvard, Leo Wiener là giáo sư ngôn ngữ).
-  </div>
-</div>
-
-<div class="callout" style="border-left: 4px solid var(--accent-cyan); padding: 15px;">
-  <div class="callout-icon">🧠</div>
-  <div class="callout-content">
-    <strong>Góc nhìn Khoa học Thần kinh hiện đại & Rủi ro tâm lý (Cập nhật 2026):</strong>
-    <p style="font-size: 0.82rem; margin: 5px 0 0 0; line-height: 1.4;">
-      1. <strong>Cắt tỉa khớp thần kinh (Synaptic Pruning):</strong> Khi sinh ra, trẻ có khoảng 100 tỷ tế bào thần kinh nhưng rất ít liên kết (synapse). Đến 2-3 tuổi, mật độ liên kết tăng vọt gấp đôi người lớn. Cơ chế tự nhiên sau đó sẽ "cắt tỉa" (pruning) các liên kết không được sử dụng. Điều này ủng hộ mạnh mẽ lý thuyết "suy giảm năng lực tiềm tàng" nếu không được kích hoạt sớm.<br>
-      2. <strong>Cửa sổ cơ hội (Windows of Opportunity):</strong> Vùng vỏ não thính giác và ngôn ngữ đạt đỉnh nhạy cảm trước 10 tuổi. Sau giai đoạn này, não bộ mất đi tính dẻo dai (neuroplasticity) cao nhất, khiến việc học ngoại ngữ và nhạc cụ cực kỳ khó đạt mức độ xuất chúng.<br>
-      3. <strong>Bi kịch William James Sidis & Bài học EQ:</strong> Lịch sử ghi nhận Sidis bị khủng hoảng tâm lý nghiêm trọng sau khi tốt nghiệp Harvard, sống ẩn dật, từ bỏ toán học và qua đời trong cô độc. Phương pháp ép buộc học thuật cực đoan của người cha đã bỏ quên trí tuệ cảm xúc (EQ) và khả năng tương tác xã hội của Sidis, gây ra hội chứng kiệt sức (burnout) nghiêm trọng.
-    </p>
-  </div>
-</div>
-
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH 1 · QUAN ĐIỂM ĐỐI LẬP</div>
-    <h2>Tranh biện: Giáo dục sớm vs. Phát triển tự nhiên</h2>
-<div class="split-layout">
-  <div class="split-left" style="border-top: 4px solid var(--accent-emerald); padding-top: 10px;">
-    <h3 style="color: var(--accent-emerald); font-size: 1.1rem; margin-top: 0;">Trường phái Giáo dục Sớm (Kimura, Witte)</h3>
-    <p style="font-size: 0.82rem; line-height: 1.4; margin-bottom: 0;">
-      • <strong>Cốt lõi:</strong> Trí tuệ phải được rèn luyện có chủ đích từ sơ sinh. Não bộ trẻ em cần được kích thích học thuật sớm để tránh lãng phí năng lực tiềm năng.<br>
-      • <strong>Phương pháp:</strong> Học đọc, viết, toán, ngôn ngữ cổ điển và khoa học một cách có kế hoạch và hệ thống.<br>
-      • <strong>Mục tiêu:</strong> Tối ưu hóa trí thông minh học thuật (IQ) và kiến thức bách khoa toàn thư từ nhỏ.
-    </p>
-  </div>
-  
-  <div class="split-right" style="border-top: 4px solid var(--accent-red); padding-top: 10px;">
-    <h3 style="color: var(--accent-red); font-size: 1.1rem; margin-top: 0;">Trường phái Kiến tạo & Tự nhiên (Montessori, Piaget)</h3>
-    <p style="font-size: 0.82rem; line-height: 1.4; margin-bottom: 0;">
-      • <strong>Cốt lõi:</strong> Trẻ tự xây dựng kiến thức thông qua trải nghiệm thực tế và tương tác tự do. Ép học sớm học thuật phá vỡ quy luật tự nhiên.<br>
-      • <strong>Phương pháp:</strong> Học thông qua chơi (Play-based learning), phát triển vận động thô/tinh và các kỹ năng sống tự lập.<br>
-      • <strong>Mục tiêu:</strong> Trí tuệ cảm xúc (EQ), khả năng tự điều chỉnh (self-regulation), và tâm lý lành mạnh.
-    </p>
-  </div>
-</div>
-
-<div class="callout" style="border-left: 4px solid var(--accent-purple); margin-top: 15px; padding: 15px;">
-  <div class="callout-icon">⚖️</div>
-  <div class="callout-content" style="font-size: 0.82rem; line-height: 1.4;">
-    <strong>Giải pháp dung hòa (Synthesis):</strong> Không nhồi nhét chữ viết hay toán học trừu tượng cho trẻ sơ sinh. Thay vào đó, áp dụng "giáo dục sớm" bằng cách tạo môi trường phong phú về ngôn ngữ (đọc sách cùng con, trò chuyện chất lượng cao) và để trẻ tự do khám phá thế giới thể chất, đảm bảo trẻ được chơi đùa vui vẻ.
-  </div>
-</div>
-
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH 1 · HƯỚNG DẪN ÁP DỤNG</div>
-    <h2>Lộ trình giáo dục sớm an toàn cho cha mẹ</h2>
-<div class="phase-progress" style="margin-bottom: 15px;">
-  <div class="phase active">P1: Kết nối ấm áp (0 - 1 tuổi)</div>
-  <div class="phase">P2: Khai mở đa giác quan (1 - 3 tuổi)</div>
-  <div class="phase">P3: Ngôn ngữ & Tư duy (3 - 5 tuổi)</div>
-  <div class="phase">P4: Thử nghiệm đam mê (5 tuổi+)</div>
-</div>
-
-<div class="content-card" style="padding: 15px;">
-  <div style="display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 15px; font-size: 0.82rem; line-height: 1.4;">
-    <div>
-      <h4 style="color: var(--accent); margin: 0 0 5px 0;">Hành động và kỹ thuật cụ thể theo từng pha:</h4>
-      <strong>• Pha 1: Trò chuyện mô tả (Self-Talk & Parallel Talk):</strong> Trò chuyện liên tục bằng từ ngữ chuẩn xác, không dùng từ nói ngọng (baby talk). Mô tả mọi hành động của bạn và của con để kích hoạt thính giác.<br>
-      <strong>• Pha 2: Đọc sách tương tác (Dialogic Reading):</strong> Đọc sách tranh mỗi ngày. Thay vì đọc thụ động, hãy đặt câu hỏi (Cái gì đây? Ai đây?) và khích lệ trẻ chỉ tay, bắt chước âm thanh. Kích thích xúc giác qua cát, nước, đất nặn.<br>
-      <strong>• Pha 3: Dạy chữ trực quan & Nhạc Suzuki:</strong> Học bảng chữ cái qua trò chơi ghép thẻ gắn vào đồ vật thực tế. Tiếp cận nhạc cụ (Piano trước 5t, Violin trước 3t) theo phương pháp Suzuki: cho nghe nhạc trước để thẩm âm, sau mới học nhạc lý.<br>
-      <strong>• Pha 4: Tắm ngôn ngữ & Tự định hướng:</strong> Cho trẻ tiếp xúc với ngoại ngữ thứ hai tự nhiên thông qua bài hát, hoạt hình ngắn. Để trẻ tự quyết định chơi gì và hỗ trợ theo đam mê của trẻ.
-    </div>
-    
-    <div>
-      <h4 style="color: var(--accent-red); margin: 0 0 5px 0;">⚠️ Nguyên tắc phòng tránh kiệt sức (Burnout Prevention):</h4>
-      • <strong>Học là chơi, chơi là học:</strong> Tuyệt đối không có bài kiểm tra, không chấm điểm, không phê bình hay ép buộc trẻ học khi trẻ mệt mỏi.<br>
-      • <strong>Chăm sóc bản thân:</strong> Cha mẹ không nên tự gây áp lực phải tạo ra một "thần đồng". Sự bất an của cha mẹ sẽ truyền sang trẻ, hủy hoại bầu không khí gia đình.<br>
-      • <strong>Tôn trọng tốc độ của trẻ:</strong> Mỗi đứa trẻ có một chiếc đồng hồ phát triển riêng. So sánh con với các thần đồng lịch sử là sai lầm nghiêm trọng nhất.
-    </div>
-  </div>
-</div>
-
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH 1 · MỐI LIÊN KẾT KHÁI NIỆM</div>
-    <h2>Sơ đồ phụ thuộc khái niệm (Concept Dependencies)</h2>
-<div style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 20px; width: 100%;">
-  <div>
-    <div class="mermaid">
-    graph TD
-        A["Ý thức làm cha mẹ (Tiền đề)"] --> B["Bình minh nhận thức (Chương 1)"]
-        B --> C["Quy luật giảm năng lực (Chương 1)"]
-        C --> D["Kích thích giác quan (Chương 2)"]
-        C --> E["Phát triển Ngôn ngữ (Chương 3)"]
-        D & E --> F["Trí tuệ học thuật nâng cao (Chương 5)"]
-        style B fill:#635BFF,stroke:#2A2D33,color:#F7F7F5
-        style C fill:#635BFF,stroke:#2A2D33,color:#F7F7F5
-    </div>
-  </div>
-  
-  <div class="content-card" style="font-size: 0.85rem; line-height: 1.4; padding: 15px;">
-    <h4 style="margin-top:0; color: var(--accent);">Kiểm tra kiến thức trước khi đi tiếp:</h4>
-    <ul class="checklist" style="list-style: none; padding-left: 0; margin-bottom: 0;">
-      <li style="margin-bottom: 8px;"><input type="checkbox" checked disabled> Bạn đã hiểu rõ sự khác biệt giữa "Thần đồng nhân tạo" áp lực và "Thiên tài được giáo dục lành mạnh"?</li>
-      <li style="margin-bottom: 8px;"><input type="checkbox" checked disabled> Bạn có giải thích được cơ chế Quy luật năng lực giảm dần cho người khác nghe?</li>
-      <li style="margin-bottom: 8px;"><input type="checkbox" checked disabled> Bạn có thể phân biệt được "Thời kỳ vàng" của ngôn ngữ và nhạc cụ?</li>
-      <li style="margin-bottom: 8px;"><input type="checkbox" checked disabled> Bạn đã giải tỏa được nỗi lo sợ rằng giáo dục sớm sẽ hủy hoại sức khỏe của trẻ?</li>
-    </ul>
-    
-    <div style="margin-top: 15px; font-size: 0.8rem; color: var(--text-secondary);">
-      <strong>Khóa học mở rộng:</strong> Chương này là tiền đề lý thuyết. Chương 2 sẽ hướng dẫn cách thức kích thích vật lý và giác quan cụ thể cho trẻ sơ sinh.
-    </div>
-  </div>
-</div>
-
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH 1 · PHƯƠNG PHÁP HỌC TẬP</div>
-    <h2>Chiến lược meta-learning dành cho cha mẹ</h2>
-<div class="content-card" style="padding: 15px;">
-  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; font-size: 0.85rem; line-height: 1.4;">
-    <div>
-      <h4 style="color: var(--accent); margin-top: 0;">1. Lộ trình ôn tập ngắt quãng (Spaced Repetition)</h4>
-      <p>Để ghi nhớ và biến lý thuyết Chương 1 thành phản xạ giáo dục:</p>
-      <table style="width: 100%; border-collapse: collapse; font-size: 0.8rem;">
-        <thead>
-          <tr style="border-bottom: 2px solid var(--border);">
-            <th style="text-align: left; padding: 4px;">Thời điểm</th>
-            <th style="text-align: left; padding: 4px;">Hành động của Cha mẹ</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr style="border-bottom: 1px solid var(--border);">
-            <td style="padding: 4px; font-weight: bold;">Ngày 1</td>
-            <td style="padding: 4px;">Đọc kỹ slide này và ghi lại 3 ý tưởng tâm đắc nhất.</td>
-          </tr>
-          <tr style="border-bottom: 1px solid var(--border);">
-            <td style="padding: 4px; font-weight: bold;">Ngày 3</td>
-            <td style="padding: 4px;">Quan sát hành vi của con để tìm kiếm "Thời kỳ nhạy cảm".</td>
-          </tr>
-          <tr style="border-bottom: 1px solid var(--border);">
-            <td style="padding: 4px; font-weight: bold;">Ngày 7</td>
-            <td style="padding: 4px;">Kể lại câu chuyện Karl Witte cho bạn đời nghe để thảo luận.</td>
-          </tr>
-          <tr>
-            <td style="padding: 4px; font-weight: bold;">Ngày 30</td>
-            <td style="padding: 4px;">Đánh giá xem mình có đang bị ép buộc con hay không.</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    
-    <div>
-      <h4 style="color: var(--accent-purple); margin-top: 0;">2. Neo giữ trí nhớ theo phong cách học tập</h4>
-      • <strong>Neo trực quan (Visual Anchor):</strong> Hãy hình dung tiềm năng của con như một mầm cây non trong nhà kính cần tưới nước ấm áp đều đặn mỗi ngày, tránh bão giông áp lực.<br>
-      • <strong>Neo ngôn ngữ (Verbal Anchor):</strong> Ghi nhớ khẩu quyết: <em>"Học là chơi - Khơi gợi tự tin - Bắt đầu từ sớm"</em>.<br>
-      • <strong>Neo vận động (Kinesthetic Anchor):</strong> Thực hành ngay tối nay: Khi chơi với con, hãy để con đứng lên ghế (nếu đủ vững) đọc một câu thơ ngắn hoặc hát một bài hát và vỗ tay cổ vũ con nhiệt tình để rèn tính tự tin giống như cha của Goethe đã làm. <span class="page-ref">Ch 1 · §3</span>
-    </div>
-  </div>
-</div>
-
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH 1 · CÂU HỎI TỰ SUY NGẪM</div>
-    <h2>Bộ câu hỏi suy ngẫm sâu (Bloom&#x27;s Taxonomy)</h2>
-<div class="content-card" style="padding: 15px; font-size: 0.85rem; line-height: 1.4;">
-  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
-    <div>
-      <h4 style="color: var(--accent); margin: 0 0 5px 0;">Cấp độ 1-3: Hiểu và Áp dụng</h4>
-      <p style="margin-bottom: 10px;">
-        <strong>1. Nhớ & Hiểu:</strong> Năng lực tiềm tàng của trẻ em tuân theo quy luật giảm dần như thế nào? Điểm khác biệt cốt lõi giữa phương pháp của Karl Witte và việc "nhồi nhét học thuật" là gì?
-      </p>
-      <p style="margin-bottom: 0;">
-        <strong>2. Áp dụng:</strong> Trẻ em nhà bạn hiện đang ở độ tuổi nào? Làm thế nào bạn có thể áp dụng ý tưởng "dạy trẻ từ buổi bình minh nhận thức" vào cuộc sống bận rộn hiện tại?
-      </p>
-    </div>
-    
-    <div>
-      <h4 style="color: var(--accent-purple); margin: 0 0 5px 0;">Cấp độ 4-6: Phân tích, Đánh giá và Socratic</h4>
-      <p style="margin-bottom: 10px;">
-        <strong>3. Phân tích & Đánh giá:</strong> Đọc về bi kịch kiệt sức (burnout) về sau của William J. Sidis, bạn thấy phương pháp của cha ông (Boris Sidis) đã mắc phải sai lầm chí mạng nào? Bạn sẽ làm gì để bảo vệ con khỏi rủi ro đó?
-      </p>
-      <p style="margin-bottom: 0;">
-        <strong>4. Câu hỏi Socratic:</strong> <em>"Chúng ta muốn nuôi dạy một đứa trẻ hạnh phúc phát triển trọn vẹn tiềm năng, hay một cỗ máy học thuật tốt nghiệp Harvard sớm?"</em> Làm thế nào để cân bằng giữa kích thích trí tuệ sớm và quyền được có một tuổi thơ vô tư của trẻ?
-      </p>
-    </div>
-  </div>
-</div>
-
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH 1 · HÀNH ĐỘNG CUỐI CÙNG</div>
-    <h2>Kế hoạch hành động của cha mẹ</h2>
-<ul class="action-list" style="margin-bottom: 15px;">
-  <li class="action-item">
-    <div>
-      <div class="action-headline">Thiết lập "Giờ trò chuyện chất lượng cao" hàng ngày</div>
-      <div class="action-detail">Dành ít nhất 30 phút mỗi ngày không điện thoại, hoàn toàn tương tác bằng mắt, trò chuyện rõ ràng và giàu cảm xúc với con để kích hoạt vùng ngôn ngữ của não bộ. <span class="page-ref">Ch 1 · §4</span></div>
-    </div>
-  </li>
-  <li class="action-item">
-    <div>
-      <div class="action-headline">Kích hoạt âm nhạc trong phòng ngủ của con</div>
-      <div class="action-detail">Cho con nghe nhạc cổ điển không lời với âm lượng nhỏ (~40-50 dB) khoảng 20 phút mỗi ngày vào một khung giờ cố định (trước khi ngủ hoặc lúc thức dậy) để kích thích tư duy không gian và toán học. <span class="page-ref">Ch 1 · §4</span></div>
-    </div>
-  </li>
-  <li class="action-item">
-    <div>
-      <div class="action-headline">Đo lường mức độ "Vui vẻ khi học tập" của con</div>
-      <div class="action-detail">Mỗi tuần một lần, hãy tự hỏi: "Con có cười và hào hứng trong các hoạt động cùng cha mẹ không?" Nếu câu trả lời là không, hãy giảm tải và tập trung chơi tự do để ngăn ngừa nguy cơ áp lực tâm lý sớm. <span class="page-ref">Ch 1 · §4</span></div>
-    </div>
-  </li>
-</ul>
-
-<figure class="image-slot hero" style="max-height: 200px;">
-  <img src="images/ch1_closing.png" alt="Mầm cây xanh phát triển khỏe mạnh">
-  <figcaption>Nguồn: Unsplash (Free Stock Photo)</figcaption>
-</figure>
-
-  </section>
-
-</div>
-
-<div class="nav-controls">
-  <button class="nav-btn" id="prevBtn" onclick="prevSlide()" aria-label="Previous slide">&#8592;</button>
-  <div class="counter" id="counter" aria-live="polite">1 / 1</div>
-  <button class="nav-btn" id="nextBtn" onclick="nextSlide()" aria-label="Next slide">&#8594;</button>
-</div>
-
-<script src="common.js"></script>
+  <script src="../common.js"></script>
 </body>
+
 </html>

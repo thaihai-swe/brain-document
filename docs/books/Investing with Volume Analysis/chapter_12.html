@@ -1,356 +1,428 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Investing with Volume Analysis — Chapter 12</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="common.css">
-<script src="https://cdn.jsdelivr.net/npm/mermaid@11.10.0/dist/mermaid.min.js" crossorigin="anonymous"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Investing with Volume Analysis — Chapter 12</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../common.css">
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@11.10.0/dist/mermaid.min.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
 
-<div class="progress-bar" id="progressBar"></div>
+  <div class="progress-bar" id="progressBar"></div>
 
-<div class="chapter-menu">
-  <button class="menu-btn" id="chapterMenuBtn" onclick="toggleChapterMenu()" aria-haspopup="true" aria-expanded="false">Chapters &#9662;</button>
-  <div class="chapter-menu-panel" id="chapterMenuPanel" role="menu"></div>
-</div>
-
-<div class="slide-container" id="slideContainer">
-
-  <section class="slide chapter-divider">
-<div class="chapter-divider">
-  <h1>Chapter 12</h1>
-  <h2>Intraday Volume Accumulation Oscillators</h2>
-  <div class="chapter-meta">
-    <div class="meta-item"><strong>Reading Time:</strong> ~15 mins</div>
-    <div class="meta-item"><strong>Difficulty:</strong> Advanced</div>
+  <div class="chapter-menu">
+    <button class="menu-btn" id="chapterMenuBtn" onclick="toggleChapterMenu()" aria-haspopup="true"
+      aria-expanded="false">Chapters &#9662;</button>
+    <div class="chapter-menu-panel" id="chapterMenuPanel" role="menu"></div>
   </div>
-  <div class="concept-tags">
-    <span class="tag">Intraday Intensity</span>
-    <span class="tag">Chaikin Money Flow</span>
-    <span class="tag">True Range</span>
-    <span class="tag">Twiggs' Money Flow</span>
-  </div>
-</div>
-  </section>
 
-  <section class="slide">
-    <div class="slide-kicker">CH 12 · VISUAL SUMMARY</div>
-    <h2>Evolution of Intraday Indicators</h2>
-<div class="mermaid">
-graph TD
-    A["Wyckoff's Effort vs Results"] --> B["Intraday Indicators"]
-    B --> C["Bostian 1967: Intraday Intensity"]
-    B --> D["Williams 1970s: WVAD"]
-    D --> E["Problem: Opening price data dropped in 1975"]
-    E --> F["Wilder's True Range Fix"]
-    F --> G["Williams' WAD"]
-    C --> H["Chaikin's Money Flow"]
-    G --> I["Twiggs' Money Flow"]
-    
-    style A fill:#7C3AED,stroke:#E2E8F0,color:#FFFFFF
-    style H fill:#10B981,stroke:#E2E8F0,color:#FFFFFF
-    style I fill:#10B981,stroke:#E2E8F0,color:#FFFFFF
-</div>
-  </section>
+  <div class="slide-container" id="slideContainer">
 
-  <section class="slide">
-    <div class="slide-kicker">CH 12 · THE BIG IDEA</div>
-    <h2>The Flaw of Accumulation</h2>
-<div class="takeaway-hero">
-  <div class="kicker">CH 12 · THE BIG IDEA</div>
-  <div class="headline">"Intraday indicators quantify daily buying pressure, but summing these short-term interactions over long periods can produce flawed, lagging signals."</div>
-  <div class="subline">While useful for bar-to-bar chart reading, intraday volume changes shouldn't be accumulated over time.</div>
-</div>
-  </section>
+    <section class="slide chapter-divider">
+      <div class="chapter-divider">
+        <h1>Chapter 12</h1>
+        <h2>Intraday Volume Accumulation Oscillators</h2>
+        <div class="chapter-meta">
+          <div class="meta-item"><strong>Reading Time:</strong> ~15 mins</div>
+          <div class="meta-item"><strong>Difficulty:</strong> Advanced</div>
+        </div>
+        <div class="concept-tags">
+          <span class="tag">Intraday Intensity</span>
+          <span class="tag">Chaikin Money Flow</span>
+          <span class="tag">True Range</span>
+          <span class="tag">Twiggs' Money Flow</span>
+        </div>
+      </div>
+    </section>
 
-  <section class="slide">
-    <div class="slide-kicker">CH 12 · KEY TAKEAWAYS</div>
-    <h2>Important Lessons</h2>
-<ul class="takeaway-list">
-  <li class="takeaway-item">
-    <strong>The Close Dictates Intraday Conviction</strong>
-    <div class="takeaway-detail">
-      <strong>Why it matters:</strong> The close relative to the high/low reveals whether buyers or sellers controlled the final hours and are willing to hold overnight.
-      <strong>Evidence:</strong> Bostian's Intraday Intensity Index (1967) uses the close's position to assign positive/negative volume. <span class="page-ref">Ch 12, p. 133</span>
-      <strong>Application:</strong> Prioritize closes near the daily high when looking for bullish continuation.
-      <strong>Caveat:</strong> Only useful for a few bars; accumulating this metric historically distorts the current trend.
-    </div>
-  </li>
-  <li class="takeaway-item">
-    <strong>"Tweeners" Solve the Gap Problem</strong>
-    <div class="takeaway-detail">
-      <strong>Why it matters:</strong> Standard intraday indicators ignore overnight gaps, missing huge chunks of price action.
-      <strong>Evidence:</strong> Wilder's True Range incorporates the previous day's close to account for gaps. <span class="page-ref">Ch 12, p. 134</span>
-      <strong>Application:</strong> Use Twiggs' Money Flow over Chaikin's because Twiggs uses True Range to bridge the interday/intraday gap.
-      <strong>Caveat:</strong> Even true range indicators are subject to the flaws of long-term accumulation.
-    </div>
-  </li>
-  <li class="takeaway-item">
-    <strong>Persistency of Money Flow Enhances Signals</strong>
-    <div class="takeaway-detail">
-      <strong>Why it matters:</strong> Sustained buying pressure is more reliable than a single volatile day.
-      <strong>Evidence:</strong> Chaikin noted that if Money Flow stays above zero for 9 out of 10 periods, the trend is robust. <span class="page-ref">Ch 12, p. 136</span>
-      <strong>Application:</strong> Don't just look at the raw oscillator value; measure how many days it stays positive.
-      <strong>Caveat:</strong> Overextended persistency can indicate overbought conditions ripe for reversal.
-    </div>
-  </li>
-  <li class="takeaway-item">
-    <strong>Effort vs. Results is Strictly Short-Term</strong>
-    <div class="takeaway-detail">
-      <strong>Why it matters:</strong> The core failure of intraday accumulation is extrapolating micro-forces into macro-trends.
-      <strong>Evidence:</strong> Dormeier agrees with Granville that summing intraday changes over time is conceptually flawed. <span class="page-ref">Ch 12, p. 139</span>
-      <strong>Application:</strong> Restrict intraday volume analysis to 3-5 bar forecasting rather than macro trend following.
-      <strong>Caveat:</strong> Requires distinct interday indicators for long-term investing.
-    </div>
-  </li>
-</ul>
-  </section>
+    <section class="slide">
+      <div class="slide-kicker">CH 12 · VISUAL SUMMARY</div>
+      <h2>Evolution of Intraday Indicators</h2>
+      <div class="mermaid">
+        graph TD
+        A["Wyckoff's Effort vs Results"] --> B["Intraday Indicators"]
+        B --> C["Bostian 1967: Intraday Intensity"]
+        B --> D["Williams 1970s: WVAD"]
+        D --> E["Problem: Opening price data dropped in 1975"]
+        E --> F["Wilder's True Range Fix"]
+        F --> G["Williams' WAD"]
+        C --> H["Chaikin's Money Flow"]
+        G --> I["Twiggs' Money Flow"]
 
-  <section class="slide">
-    <div class="slide-kicker">CH 12 · MENTAL MODELS</div>
-    <h2>The Tweener &amp; Persistency</h2>
-<div class="content-card">
-  <h3>Model 1: The "Tweener" Gap Bridge</h3>
-  <p><strong>Core Principle:</strong> A purely intraday indicator misses overnight news and gaps, while a purely interday indicator misses intraday volatility. The "Tweener" bridges this.</p>
-  <p><strong>How It Works:</strong> By substituting the daily High/Low with Wilder's True High/True Low (which includes yesterday's close), the indicator captures the entire price journey, including overnight gaps.</p>
-  <p><strong>When to Apply:</strong> 
-  - Evaluating earnings gap-ups<br>
-  - Markets with heavy overnight futures trading<br>
-  - Swing trading where overnight risk is a primary factor</p>
-  <p><strong>Limitations:</strong> It makes the formula mathematically heavier and blurs the strict definition of "intraday" vs "interday".</p>
-  
-  <hr>
-  
-  <h3>Model 2: Persistency of Pressure</h3>
-  <p><strong>Core Principle:</strong> The duration of money flow is more predictive than the magnitude of a single day's flow.</p>
-  <p><strong>How It Works:</strong> Count the percentage of time an oscillator remains above its zero line over a rolling window (e.g., 90% persistency over 10 days).</p>
-  <p><strong>Example from Chapter:</strong> Postulated as the secret sauce behind IBD's CANSLIM supply/demand ratings. <span class="page-ref">Ch 12, p. 137</span></p>
-</div>
-  </section>
+        style A fill:#7C3AED,stroke:#E2E8F0,color:#FFFFFF
+        style H fill:#10B981,stroke:#E2E8F0,color:#FFFFFF
+        style I fill:#10B981,stroke:#E2E8F0,color:#FFFFFF
+      </div>
+    </section>
 
-  <section class="slide">
-    <div class="slide-kicker">CH 12 · CONTEXT &amp; BACKGROUND</div>
-    <h2>The 1975 Data Crisis</h2>
-<div class="content-card">
-  <h3>1. Historical Moment & Data Evolution</h3>
-  <ul>
-    <li><strong>The 1975 Data Crisis:</strong> Larry Williams built WVAD around the "Open" price. But in 1975, financial publications stopped printing opening prices to save space.</li>
-    <li><strong>The Workaround:</strong> This forced Williams to adopt Wilder's True Range, accidentally creating a more robust "tweener" indicator out of necessity rather than design.</li>
-  </ul>
-  
-  <h3>2. Intellectual Lineage</h3>
-  <ul>
-    <li><strong>The Pioneers:</strong> David Bostian (1967) &rarr; Larry Williams (1972) &rarr; Marc Chaikin (1975) &rarr; Colin Twiggs.</li>
-    <li><strong>The Divide:</strong> Granville and Dormeier stand on the side of "Interday" accumulation (Close-to-Close). Bostian, Williams, and Chaikin championed "Intraday" accumulation.</li>
-  </ul>
-  
-  <h3>3. Modern Relevance (2026)</h3>
-  <ul>
-    <li><strong>Then:</strong> Missing the "Open" in newspapers was a severe handicap.</li>
-    <li><strong>Now:</strong> Tick-by-tick data is ubiquitous. We can calculate WVAD effortlessly, yet True Range derivatives (like Twiggs' Money Flow) remain superior because they logically account for the massive overnight gap action caused by algorithmic trading and 24-hour global news cycles.</li>
-  </ul>
-</div>
-  </section>
+    <section class="slide">
+      <div class="slide-kicker">CH 12 · THE BIG IDEA</div>
+      <h2>The Flaw of Accumulation</h2>
+      <div class="takeaway-hero">
+        <div class="kicker">CH 12 · THE BIG IDEA</div>
+        <div class="headline">"Intraday indicators quantify daily buying pressure, but summing these short-term
+          interactions over long periods can produce flawed, lagging signals."</div>
+        <div class="subline">While useful for bar-to-bar chart reading, intraday volume changes shouldn't be accumulated
+          over time.</div>
+      </div>
+    </section>
 
-  <section class="slide">
-    <div class="slide-kicker">CH 12 · NOTABLE QUOTES</div>
-    <h2>Granville&#x27;s Warning</h2>
-<div class="content-card">
-  <div class="quote-block">
-    <p class="quote-text">"When I asked Joe Granville his opinion of accumulating intraday changes as opposed to the closing changes data, he emphatically stated, 'They're dead wrong.'"</p>
-    <p class="quote-context">&mdash; Buff Dormeier recounting his conversation with Joe Granville <span class="page-ref">Ch 12, p. 139</span></p>
-  </div>
-  
-  <p><strong>Interpretation:</strong> Granville, the father of On-Balance Volume, completely dismisses the foundational premise of Chaikin and Williams. He believes that only close-to-close changes reflect true market accumulation.</p>
-  <p><strong>Significance:</strong> It highlights a major schism in technical analysis. Dormeier sides with Granville conceptually, arguing that Wyckoff's "effort vs results" is a micro-phenomenon that loses meaning when summed into a macro-indicator over months or years.</p>
-  <p><strong>Application:</strong> Stop using Chaikin Money Flow for long-term trend analysis. Relegate it to short-term, bar-to-bar tactical trading.</p>
-</div>
-  </section>
+    <section class="slide">
+      <div class="slide-kicker">CH 12 · KEY TAKEAWAYS</div>
+      <h2>Important Lessons</h2>
+      <ul class="takeaway-list">
+        <li class="takeaway-item">
+          <strong>The Close Dictates Intraday Conviction</strong>
+          <div class="takeaway-detail">
+            <strong>Why it matters:</strong> The close relative to the high/low reveals whether buyers or sellers
+            controlled the final hours and are willing to hold overnight.
+            <strong>Evidence:</strong> Bostian's Intraday Intensity Index (1967) uses the close's position to assign
+            positive/negative volume. <span class="page-ref">Ch 12, p. 133</span>
+            <strong>Application:</strong> Prioritize closes near the daily high when looking for bullish continuation.
+            <strong>Caveat:</strong> Only useful for a few bars; accumulating this metric historically distorts the
+            current trend.
+          </div>
+        </li>
+        <li class="takeaway-item">
+          <strong>"Tweeners" Solve the Gap Problem</strong>
+          <div class="takeaway-detail">
+            <strong>Why it matters:</strong> Standard intraday indicators ignore overnight gaps, missing huge chunks of
+            price action.
+            <strong>Evidence:</strong> Wilder's True Range incorporates the previous day's close to account for gaps.
+            <span class="page-ref">Ch 12, p. 134</span>
+            <strong>Application:</strong> Use Twiggs' Money Flow over Chaikin's because Twiggs uses True Range to bridge
+            the interday/intraday gap.
+            <strong>Caveat:</strong> Even true range indicators are subject to the flaws of long-term accumulation.
+          </div>
+        </li>
+        <li class="takeaway-item">
+          <strong>Persistency of Money Flow Enhances Signals</strong>
+          <div class="takeaway-detail">
+            <strong>Why it matters:</strong> Sustained buying pressure is more reliable than a single volatile day.
+            <strong>Evidence:</strong> Chaikin noted that if Money Flow stays above zero for 9 out of 10 periods, the
+            trend is robust. <span class="page-ref">Ch 12, p. 136</span>
+            <strong>Application:</strong> Don't just look at the raw oscillator value; measure how many days it stays
+            positive.
+            <strong>Caveat:</strong> Overextended persistency can indicate overbought conditions ripe for reversal.
+          </div>
+        </li>
+        <li class="takeaway-item">
+          <strong>Effort vs. Results is Strictly Short-Term</strong>
+          <div class="takeaway-detail">
+            <strong>Why it matters:</strong> The core failure of intraday accumulation is extrapolating micro-forces
+            into macro-trends.
+            <strong>Evidence:</strong> Dormeier agrees with Granville that summing intraday changes over time is
+            conceptually flawed. <span class="page-ref">Ch 12, p. 139</span>
+            <strong>Application:</strong> Restrict intraday volume analysis to 3-5 bar forecasting rather than macro
+            trend following.
+            <strong>Caveat:</strong> Requires distinct interday indicators for long-term investing.
+          </div>
+        </li>
+      </ul>
+    </section>
 
-  <section class="slide">
-    <div class="slide-kicker">CH 12 · DEEP DIVE</div>
-    <h2>The Mathematics of Intraday Pressure</h2>
-<div class="content-card">
-  <h3>Deep Dive 1: How Intraday Indicators Actually Work</h3>
-  <p><strong>1. The Close-to-Range Ratio</strong></p>
-  <p>Intraday indicators live and die by a single mathematical assumption: Where a stock closes within its daily high-low range reveals institutional intent.</p>
-  
-  <p><strong>2. Bostian's Intraday Intensity (1967)</strong></p>
-  <p>Formula: <code>(2 * Close - High - Low) / (High - Low) * Volume</code></p>
-  <p>If a stock has a range of $10, and it closes at the absolute high, the multiplier is +1. The entire day's volume is added to the running total. If it closes exactly in the middle, the multiplier is 0. No volume is added. If it closes at the low, the multiplier is -1. The volume is subtracted.</p>
-  
-  <p><strong>3. The Fatal Flaw of the Multiplier</strong></p>
-  <p>If a stock gaps down $50 on terrible earnings, but closes at the very top of its new, lower intraday range, Bostian's formula records a <strong>massive accumulation of positive volume</strong>. The indicator screams "Buy!" while the stock is crashing.</p>
-  <p>This is why Wilder's True Range (which includes the gap) became mandatory to fix these formulas.</p>
-</div>
-  </section>
+    <section class="slide">
+      <div class="slide-kicker">CH 12 · MENTAL MODELS</div>
+      <h2>The Tweener &amp; Persistency</h2>
+      <div class="content-card">
+        <h3>Model 1: The "Tweener" Gap Bridge</h3>
+        <p><strong>Core Principle:</strong> A purely intraday indicator misses overnight news and gaps, while a purely
+          interday indicator misses intraday volatility. The "Tweener" bridges this.</p>
+        <p><strong>How It Works:</strong> By substituting the daily High/Low with Wilder's True High/True Low (which
+          includes yesterday's close), the indicator captures the entire price journey, including overnight gaps.</p>
+        <p><strong>When to Apply:</strong>
+          - Evaluating earnings gap-ups<br>
+          - Markets with heavy overnight futures trading<br>
+          - Swing trading where overnight risk is a primary factor</p>
+        <p><strong>Limitations:</strong> It makes the formula mathematically heavier and blurs the strict definition of
+          "intraday" vs "interday".</p>
 
-  <section class="slide">
-    <div class="slide-kicker">CH 12 · DEEP DIVE</div>
-    <h2>Why Accumulation Breaks Down</h2>
-<div class="content-card">
-  <h3>Deep Dive 2: Why Accumulation Breaks Down</h3>
-  
-  <p><strong>1. The Core Argument</strong></p>
-  <p>Dormeier argues that intraday relationships (like a strong close) are predictive for the next 2-3 bars, but summing them into an oscillator over 21, 50, or 200 days creates a mathematically invalid indicator.</p>
-  
-  <p><strong>2. Logical Structure</strong></p>
-  <ul>
-    <li><strong>Premise 1:</strong> Intraday "effort vs results" measures micro-supply and demand.</li>
-    <li><strong>Premise 2:</strong> Micro-dynamics dictate immediate, short-term price reactions.</li>
-    <li><strong>Conclusion:</strong> Accumulating these micro-dynamics over months implies that yesterday's strong intraday close still matters 60 days later. Dormeier asserts this is logically false.</li>
-  </ul>
-  
-  <p><strong>3. The "Memory" Problem</strong></p>
-  <p>Accumulation indicators have infinite memory (or 21-period memory for oscillators). A massive volume spike 20 days ago heavily distorts Chaikin Money Flow today, even if the current trend has shifted. By focusing on the intraday location rather than the actual price change, the indicator decouples from the primary trend.</p>
-</div>
-  </section>
+        <hr>
 
-  <section class="slide">
-    <div class="slide-kicker">CH 12 · REFLECTION QUESTIONS</div>
-    <h2>Test Your Understanding</h2>
-<div class="content-card">
-  <h3>Reflection Questions</h3>
-  
-  <p><strong>Level 2: Understand</strong></p>
-  <ul>
-    <li>Why does Larry Williams' WVAD fail when a stock experiences a massive overnight gap?</li>
-    <li>What specific mathematical problem does True Range solve in Twiggs' Money Flow?</li>
-  </ul>
-  
-  <p><strong>Level 4: Analyze</strong></p>
-  <ul>
-    <li>If Chaikin Money Flow is fundamentally flawed for long-term accumulation as Dormeier suggests, why does it remain one of the most popular technical indicators in modern charting software?</li>
-    <li>How does algorithmic closing auctions (MOC orders) in 2026 distort Intraday Intensity formulas?</li>
-  </ul>
-  
-  <p><strong>Level 5: Evaluate</strong></p>
-  <ul>
-    <li>Who has the stronger argument: Granville ("they're dead wrong" to accumulate intraday) or Chaikin (Persistency of Money Flow predicts trends)?</li>
-  </ul>
-  
-  <p><strong>Level 6: Create</strong></p>
-  <ul>
-    <li>How could you build an indicator that utilizes the intraday close-to-range ratio but decays the data exponentially so it doesn't suffer from the accumulation flaw?</li>
-  </ul>
-</div>
-  </section>
+        <h3>Model 2: Persistency of Pressure</h3>
+        <p><strong>Core Principle:</strong> The duration of money flow is more predictive than the magnitude of a single
+          day's flow.</p>
+        <p><strong>How It Works:</strong> Count the percentage of time an oscillator remains above its zero line over a
+          rolling window (e.g., 90% persistency over 10 days).</p>
+        <p><strong>Example from Chapter:</strong> Postulated as the secret sauce behind IBD's CANSLIM supply/demand
+          ratings. <span class="page-ref">Ch 12, p. 137</span></p>
+      </div>
+    </section>
 
-  <section class="slide">
-    <div class="slide-kicker">CH 12 · READING LAYERS</div>
-    <h2>Decoding the Subtext</h2>
-<div class="content-card">
-  <h3>Reading Layers</h3>
-  
-  <p><strong>Layer 1: Surface Reading</strong></p>
-  <p>The chapter lists several historical volume indicators (WVAD, WAD, Chaikin, Twiggs) that use intraday price action instead of close-to-close price action, explaining their formulas and standard interpretations.</p>
-  
-  <p><strong>Layer 2: Structural Reading</strong></p>
-  <p>Dormeier deliberately structures this chapter as a historical progression of an idea he ultimately rejects. He shows the evolution from Bostian to Twiggs, acknowledges their utility for short-term trading, and then drops the hammer at the end: they shouldn't be accumulated over time.</p>
-  
-  <p><strong>Layer 4: Critical Reading</strong></p>
-  <p>Dormeier critiques the entire sub-field of intraday accumulation. However, a weakness in his critique is that he dismisses them conceptually without providing statistical backtesting to prove that Chaikin Money Flow underperforms OBV over long periods.</p>
-  
-  <p><strong>Layer 5: Generative Reading</strong></p>
-  <p>If intraday data is only good for the short term, can we use a dual-timeframe model? Use OBV for the macro trend filter, and Twiggs Money Flow strictly as a 3-day trigger mechanism for entries and exits.</p>
-</div>
-  </section>
+    <section class="slide">
+      <div class="slide-kicker">CH 12 · CONTEXT &amp; BACKGROUND</div>
+      <h2>The 1975 Data Crisis</h2>
+      <div class="content-card">
+        <h3>1. Historical Moment & Data Evolution</h3>
+        <ul>
+          <li><strong>The 1975 Data Crisis:</strong> Larry Williams built WVAD around the "Open" price. But in 1975,
+            financial publications stopped printing opening prices to save space.</li>
+          <li><strong>The Workaround:</strong> This forced Williams to adopt Wilder's True Range, accidentally creating
+            a more robust "tweener" indicator out of necessity rather than design.</li>
+        </ul>
 
-  <section class="slide">
-    <div class="slide-kicker">CH 12 · EVIDENCE EVALUATION</div>
-    <h2>Assessing the Persistency of Money Flow</h2>
-<div class="content-card">
-  <h3>Evidence Evaluation: The Persistency of Money Flow</h3>
-  
-  <p><strong>Claim:</strong> Persistency of Money Flow (staying above zero for 9 of 10 periods) is a robust indicator of supply and demand, potentially used by IBD's CANSLIM.</p>
-  
-  <p><strong>Evidence Type:</strong> 
-  Anecdotal / Historical Observation</p>
-  
-  <p><strong>Quality Score:</strong> &starf;&starf;&star;&star;&star; (2/5)</p>
-  
-  <p><strong>Strengths:</strong></p>
-  <ul>
-    <li>Logically sound: sustained buying pressure over 10 days is harder to manipulate than a single day's volume spike.</li>
-  </ul>
-  
-  <p><strong>Weaknesses:</strong></p>
-  <ul>
-    <li>Dormeier provides no statistical evidence, win rates, or broad market studies to validate that &gt;90% persistency leads to alpha.</li>
-    <li>The link to IBD's CANSLIM is stated as "postulated," meaning it is a rumor or reverse-engineering guess, not verified fact.</li>
-  </ul>
-  
-  <p><strong>2026 Context:</strong></p>
-  <p>Modern quantitative analysis easily backtests Chaikin Money Flow persistency. The consensus is that while high persistency indicates strong momentum, it often coincides with mean-reversion tops. Buying immediately after 10 days of positive CMF usually yields negative short-term expected returns due to exhaustion.</p>
-</div>
-  </section>
+        <h3>2. Intellectual Lineage</h3>
+        <ul>
+          <li><strong>The Pioneers:</strong> David Bostian (1967) &rarr; Larry Williams (1972) &rarr; Marc Chaikin
+            (1975) &rarr; Colin Twiggs.</li>
+          <li><strong>The Divide:</strong> Granville and Dormeier stand on the side of "Interday" accumulation
+            (Close-to-Close). Bostian, Williams, and Chaikin championed "Intraday" accumulation.</li>
+        </ul>
 
-  <section class="slide">
-    <div class="slide-kicker">CH 12 · COMPETING VIEWS</div>
-    <h2>Granville vs. Chaikin</h2>
-<div class="content-card">
-  <h3>Competing Views: The Accumulation Debate</h3>
-  
-  <p><strong>This Chapter's Position (Dormeier/Granville):</strong></p>
-  <p>Wyckoff's "effort vs results" (intraday price/volume action) only matters for the immediate future. Summing intraday changes into long-term accumulation indicators is a conceptual error.</p>
-  
-  <hr>
-  
-  <p><strong>Alternative View (Marc Chaikin / Larry Williams):</strong></p>
-  <p><strong>Core Claim:</strong> The close-to-close change (used by OBV) masks true institutional intent. Institutions accumulate quietly intraday, closing the stock strong while keeping interday price flat. Accumulating intraday intensity is the ONLY way to see the "smart money" footprint over time.</p>
-  
-  <p><strong>Why They Differ:</strong></p>
-  <ul>
-    <li><strong>Granville</strong> believes price dictates reality: if the stock didn't close higher than yesterday, there was no real progress, regardless of intraday games.</li>
-    <li><strong>Chaikin</strong> believes the intraday mechanics reveal hidden pressure before the price eventually breaks out.</li>
-  </ul>
-  
-  <p><strong>Synthesis:</strong></p>
-  <p>Use Chaikin/Twiggs to spot hidden accumulation in tight consolidation bases (where interday price is flat). Once the trend breaks out, switch to OBV or VPCI to measure macro trend health.</p>
-</div>
-  </section>
+        <h3>3. Modern Relevance (2026)</h3>
+        <ul>
+          <li><strong>Then:</strong> Missing the "Open" in newspapers was a severe handicap.</li>
+          <li><strong>Now:</strong> Tick-by-tick data is ubiquitous. We can calculate WVAD effortlessly, yet True Range
+            derivatives (like Twiggs' Money Flow) remain superior because they logically account for the massive
+            overnight gap action caused by algorithmic trading and 24-hour global news cycles.</li>
+        </ul>
+      </div>
+    </section>
 
-  <section class="slide">
-    <div class="slide-kicker">CH 12 · IMPLEMENTATION</div>
-    <h2>Trading the Tweener</h2>
-<div class="content-card">
-  <h3>Implementation Guide: Trading the "Tweener"</h3>
-  
-  <p><strong>Phase 1: Setup (Week 1)</strong></p>
-  <ul>
-    <li>Remove standard Chaikin Money Flow from your charts.</li>
-    <li>Replace it with <strong>Twiggs' Money Flow (21-period)</strong>, as it properly handles overnight gaps using True Range.</li>
-  </ul>
-  
-  <p><strong>Phase 2: Experimentation (Week 2-4)</strong></p>
-  <ul>
-    <li><strong>Small-scale test:</strong> Look for divergences. When price makes a new high but Twiggs' Money Flow makes a lower high, flag the stock.</li>
-    <li><strong>Track results:</strong> Do these divergences lead to short-term corrections within the next 3-5 bars?</li>
-  </ul>
-  
-  <p><strong>Phase 3: Integration (Month 2+)</strong></p>
-  <ul>
-    <li>Implement Dormeier's rule: Do not use Twiggs for long-term macro trend following.</li>
-    <li>Use it specifically for <strong>bar-to-bar chart reading</strong>. If you are entering a swing trade today, use Twiggs to confirm intraday accumulation is supporting your entry.</li>
-  </ul>
-  
-  <p><strong>Common Pitfall:</strong></p>
-  <p>Ignoring a massive gap-down because Twiggs' Money Flow ticked upward. Never let an intraday indicator override the reality of absolute price destruction.</p>
-</div>
-  </section>
+    <section class="slide">
+      <div class="slide-kicker">CH 12 · NOTABLE QUOTES</div>
+      <h2>Granville&#x27;s Warning</h2>
+      <div class="content-card">
+        <div class="quote-block">
+          <p class="quote-text">"When I asked Joe Granville his opinion of accumulating intraday changes as opposed to
+            the closing changes data, he emphatically stated, 'They're dead wrong.'"</p>
+          <p class="quote-context">&mdash; Buff Dormeier recounting his conversation with Joe Granville <span
+              class="page-ref">Ch 12, p. 139</span></p>
+        </div>
 
-  <section class="slide">
-    <div class="slide-kicker">CH 12 · DEPENDENCIES</div>
-    <h2>Concept Matrix</h2>
-<div class="content-card">
-  <h3>Concept Dependencies</h3>
-  
-  <pre><code>[Chapter 6: How to Read the Market Like a Book]
+        <p><strong>Interpretation:</strong> Granville, the father of On-Balance Volume, completely dismisses the
+          foundational premise of Chaikin and Williams. He believes that only close-to-close changes reflect true market
+          accumulation.</p>
+        <p><strong>Significance:</strong> It highlights a major schism in technical analysis. Dormeier sides with
+          Granville conceptually, arguing that Wyckoff's "effort vs results" is a micro-phenomenon that loses meaning
+          when summed into a macro-indicator over months or years.</p>
+        <p><strong>Application:</strong> Stop using Chaikin Money Flow for long-term trend analysis. Relegate it to
+          short-term, bar-to-bar tactical trading.</p>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 12 · DEEP DIVE</div>
+      <h2>The Mathematics of Intraday Pressure</h2>
+      <div class="content-card">
+        <h3>Deep Dive 1: How Intraday Indicators Actually Work</h3>
+        <p><strong>1. The Close-to-Range Ratio</strong></p>
+        <p>Intraday indicators live and die by a single mathematical assumption: Where a stock closes within its daily
+          high-low range reveals institutional intent.</p>
+
+        <p><strong>2. Bostian's Intraday Intensity (1967)</strong></p>
+        <p>Formula: <code>(2 * Close - High - Low) / (High - Low) * Volume</code></p>
+        <p>If a stock has a range of $10, and it closes at the absolute high, the multiplier is +1. The entire day's
+          volume is added to the running total. If it closes exactly in the middle, the multiplier is 0. No volume is
+          added. If it closes at the low, the multiplier is -1. The volume is subtracted.</p>
+
+        <p><strong>3. The Fatal Flaw of the Multiplier</strong></p>
+        <p>If a stock gaps down $50 on terrible earnings, but closes at the very top of its new, lower intraday range,
+          Bostian's formula records a <strong>massive accumulation of positive volume</strong>. The indicator screams
+          "Buy!" while the stock is crashing.</p>
+        <p>This is why Wilder's True Range (which includes the gap) became mandatory to fix these formulas.</p>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 12 · DEEP DIVE</div>
+      <h2>Why Accumulation Breaks Down</h2>
+      <div class="content-card">
+        <h3>Deep Dive 2: Why Accumulation Breaks Down</h3>
+
+        <p><strong>1. The Core Argument</strong></p>
+        <p>Dormeier argues that intraday relationships (like a strong close) are predictive for the next 2-3 bars, but
+          summing them into an oscillator over 21, 50, or 200 days creates a mathematically invalid indicator.</p>
+
+        <p><strong>2. Logical Structure</strong></p>
+        <ul>
+          <li><strong>Premise 1:</strong> Intraday "effort vs results" measures micro-supply and demand.</li>
+          <li><strong>Premise 2:</strong> Micro-dynamics dictate immediate, short-term price reactions.</li>
+          <li><strong>Conclusion:</strong> Accumulating these micro-dynamics over months implies that yesterday's strong
+            intraday close still matters 60 days later. Dormeier asserts this is logically false.</li>
+        </ul>
+
+        <p><strong>3. The "Memory" Problem</strong></p>
+        <p>Accumulation indicators have infinite memory (or 21-period memory for oscillators). A massive volume spike 20
+          days ago heavily distorts Chaikin Money Flow today, even if the current trend has shifted. By focusing on the
+          intraday location rather than the actual price change, the indicator decouples from the primary trend.</p>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 12 · REFLECTION QUESTIONS</div>
+      <h2>Test Your Understanding</h2>
+      <div class="content-card">
+        <h3>Reflection Questions</h3>
+
+        <p><strong>Level 2: Understand</strong></p>
+        <ul>
+          <li>Why does Larry Williams' WVAD fail when a stock experiences a massive overnight gap?</li>
+          <li>What specific mathematical problem does True Range solve in Twiggs' Money Flow?</li>
+        </ul>
+
+        <p><strong>Level 4: Analyze</strong></p>
+        <ul>
+          <li>If Chaikin Money Flow is fundamentally flawed for long-term accumulation as Dormeier suggests, why does it
+            remain one of the most popular technical indicators in modern charting software?</li>
+          <li>How does algorithmic closing auctions (MOC orders) in 2026 distort Intraday Intensity formulas?</li>
+        </ul>
+
+        <p><strong>Level 5: Evaluate</strong></p>
+        <ul>
+          <li>Who has the stronger argument: Granville ("they're dead wrong" to accumulate intraday) or Chaikin
+            (Persistency of Money Flow predicts trends)?</li>
+        </ul>
+
+        <p><strong>Level 6: Create</strong></p>
+        <ul>
+          <li>How could you build an indicator that utilizes the intraday close-to-range ratio but decays the data
+            exponentially so it doesn't suffer from the accumulation flaw?</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 12 · READING LAYERS</div>
+      <h2>Decoding the Subtext</h2>
+      <div class="content-card">
+        <h3>Reading Layers</h3>
+
+        <p><strong>Layer 1: Surface Reading</strong></p>
+        <p>The chapter lists several historical volume indicators (WVAD, WAD, Chaikin, Twiggs) that use intraday price
+          action instead of close-to-close price action, explaining their formulas and standard interpretations.</p>
+
+        <p><strong>Layer 2: Structural Reading</strong></p>
+        <p>Dormeier deliberately structures this chapter as a historical progression of an idea he ultimately rejects.
+          He shows the evolution from Bostian to Twiggs, acknowledges their utility for short-term trading, and then
+          drops the hammer at the end: they shouldn't be accumulated over time.</p>
+
+        <p><strong>Layer 4: Critical Reading</strong></p>
+        <p>Dormeier critiques the entire sub-field of intraday accumulation. However, a weakness in his critique is that
+          he dismisses them conceptually without providing statistical backtesting to prove that Chaikin Money Flow
+          underperforms OBV over long periods.</p>
+
+        <p><strong>Layer 5: Generative Reading</strong></p>
+        <p>If intraday data is only good for the short term, can we use a dual-timeframe model? Use OBV for the macro
+          trend filter, and Twiggs Money Flow strictly as a 3-day trigger mechanism for entries and exits.</p>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 12 · EVIDENCE EVALUATION</div>
+      <h2>Assessing the Persistency of Money Flow</h2>
+      <div class="content-card">
+        <h3>Evidence Evaluation: The Persistency of Money Flow</h3>
+
+        <p><strong>Claim:</strong> Persistency of Money Flow (staying above zero for 9 of 10 periods) is a robust
+          indicator of supply and demand, potentially used by IBD's CANSLIM.</p>
+
+        <p><strong>Evidence Type:</strong>
+          Anecdotal / Historical Observation</p>
+
+        <p><strong>Quality Score:</strong> &starf;&starf;&star;&star;&star; (2/5)</p>
+
+        <p><strong>Strengths:</strong></p>
+        <ul>
+          <li>Logically sound: sustained buying pressure over 10 days is harder to manipulate than a single day's volume
+            spike.</li>
+        </ul>
+
+        <p><strong>Weaknesses:</strong></p>
+        <ul>
+          <li>Dormeier provides no statistical evidence, win rates, or broad market studies to validate that &gt;90%
+            persistency leads to alpha.</li>
+          <li>The link to IBD's CANSLIM is stated as "postulated," meaning it is a rumor or reverse-engineering guess,
+            not verified fact.</li>
+        </ul>
+
+        <p><strong>2026 Context:</strong></p>
+        <p>Modern quantitative analysis easily backtests Chaikin Money Flow persistency. The consensus is that while
+          high persistency indicates strong momentum, it often coincides with mean-reversion tops. Buying immediately
+          after 10 days of positive CMF usually yields negative short-term expected returns due to exhaustion.</p>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 12 · COMPETING VIEWS</div>
+      <h2>Granville vs. Chaikin</h2>
+      <div class="content-card">
+        <h3>Competing Views: The Accumulation Debate</h3>
+
+        <p><strong>This Chapter's Position (Dormeier/Granville):</strong></p>
+        <p>Wyckoff's "effort vs results" (intraday price/volume action) only matters for the immediate future. Summing
+          intraday changes into long-term accumulation indicators is a conceptual error.</p>
+
+        <hr>
+
+        <p><strong>Alternative View (Marc Chaikin / Larry Williams):</strong></p>
+        <p><strong>Core Claim:</strong> The close-to-close change (used by OBV) masks true institutional intent.
+          Institutions accumulate quietly intraday, closing the stock strong while keeping interday price flat.
+          Accumulating intraday intensity is the ONLY way to see the "smart money" footprint over time.</p>
+
+        <p><strong>Why They Differ:</strong></p>
+        <ul>
+          <li><strong>Granville</strong> believes price dictates reality: if the stock didn't close higher than
+            yesterday, there was no real progress, regardless of intraday games.</li>
+          <li><strong>Chaikin</strong> believes the intraday mechanics reveal hidden pressure before the price
+            eventually breaks out.</li>
+        </ul>
+
+        <p><strong>Synthesis:</strong></p>
+        <p>Use Chaikin/Twiggs to spot hidden accumulation in tight consolidation bases (where interday price is flat).
+          Once the trend breaks out, switch to OBV or VPCI to measure macro trend health.</p>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 12 · IMPLEMENTATION</div>
+      <h2>Trading the Tweener</h2>
+      <div class="content-card">
+        <h3>Implementation Guide: Trading the "Tweener"</h3>
+
+        <p><strong>Phase 1: Setup (Week 1)</strong></p>
+        <ul>
+          <li>Remove standard Chaikin Money Flow from your charts.</li>
+          <li>Replace it with <strong>Twiggs' Money Flow (21-period)</strong>, as it properly handles overnight gaps
+            using True Range.</li>
+        </ul>
+
+        <p><strong>Phase 2: Experimentation (Week 2-4)</strong></p>
+        <ul>
+          <li><strong>Small-scale test:</strong> Look for divergences. When price makes a new high but Twiggs' Money
+            Flow makes a lower high, flag the stock.</li>
+          <li><strong>Track results:</strong> Do these divergences lead to short-term corrections within the next 3-5
+            bars?</li>
+        </ul>
+
+        <p><strong>Phase 3: Integration (Month 2+)</strong></p>
+        <ul>
+          <li>Implement Dormeier's rule: Do not use Twiggs for long-term macro trend following.</li>
+          <li>Use it specifically for <strong>bar-to-bar chart reading</strong>. If you are entering a swing trade
+            today, use Twiggs to confirm intraday accumulation is supporting your entry.</li>
+        </ul>
+
+        <p><strong>Common Pitfall:</strong></p>
+        <p>Ignoring a massive gap-down because Twiggs' Money Flow ticked upward. Never let an intraday indicator
+          override the reality of absolute price destruction.</p>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 12 · DEPENDENCIES</div>
+      <h2>Concept Matrix</h2>
+      <div class="content-card">
+        <h3>Concept Dependencies</h3>
+
+        <pre><code>[Chapter 6: How to Read the Market Like a Book]
         &darr;
 [Wyckoff's Effort vs Results]
         &darr;
@@ -359,52 +431,60 @@ graph TD
 [Chapter 13: Price Range Volume Indicators]
 </code></pre>
 
-  <p><strong>Prerequisites from Earlier Chapters:</strong></p>
-  <ul>
-    <li><strong>Chapter 6 (Price Range Volume Analysis):</strong> You must understand why a close near the high signifies demand and a close near the low signifies supply before you can understand Bostian's formula.</li>
-    <li><strong>OBV (On-Balance Volume):</strong> You must understand Granville's interday accumulation to grasp why Dormeier contrasts it with intraday accumulation.</li>
-  </ul>
-  
-  <p><strong>What This Chapter Unlocks:</strong></p>
-  <ul>
-    <li><strong>Chapter 13 (Price Range Volume Indicators):</strong> By concluding that intraday data is best used for bar-to-bar analysis (not accumulation), Dormeier sets up the next chapter on indicators like Equivolume and Market Facilitation Index, which don't accumulate.</li>
-  </ul>
-</div>
-  </section>
+        <p><strong>Prerequisites from Earlier Chapters:</strong></p>
+        <ul>
+          <li><strong>Chapter 6 (Price Range Volume Analysis):</strong> You must understand why a close near the high
+            signifies demand and a close near the low signifies supply before you can understand Bostian's formula.</li>
+          <li><strong>OBV (On-Balance Volume):</strong> You must understand Granville's interday accumulation to grasp
+            why Dormeier contrasts it with intraday accumulation.</li>
+        </ul>
 
-  <section class="slide">
-    <div class="slide-kicker">CH 12 · CLOSING ACTIONS</div>
-    <h2>Next Steps</h2>
-<ul class="action-list">
-  <li class="action-item">
-    <div>
-      <div class="action-headline">Upgrade to Twiggs' Money Flow</div>
-      <div class="action-detail">If you currently use Chaikin Money Flow or Intraday Intensity, switch to Twiggs' Money Flow in your charting software to properly account for overnight gap risk.</div>
-    </div>
-  </li>
-  <li class="action-item">
-    <div>
-      <div class="action-headline">Stop Accumulating Intraday Signals for Macro Trends</div>
-      <div class="action-detail">Audit your trading systems. Ensure you are not relying on 200-day moving averages of intraday volume indicators to dictate long-term portfolio allocation.</div>
-    </div>
-  </li>
-  <li class="action-item">
-    <div>
-      <div class="action-headline">Apply "Persistency" to Your Scans</div>
-      <div class="action-detail">Create a custom scanner looking for stocks where Twiggs' Money Flow has remained above zero for 9 of the last 10 days to identify hidden institutional accumulation.</div>
-    </div>
-  </li>
-</ul>
-  </section>
+        <p><strong>What This Chapter Unlocks:</strong></p>
+        <ul>
+          <li><strong>Chapter 13 (Price Range Volume Indicators):</strong> By concluding that intraday data is best used
+            for bar-to-bar analysis (not accumulation), Dormeier sets up the next chapter on indicators like Equivolume
+            and Market Facilitation Index, which don't accumulate.</li>
+        </ul>
+      </div>
+    </section>
 
-</div>
+    <section class="slide">
+      <div class="slide-kicker">CH 12 · CLOSING ACTIONS</div>
+      <h2>Next Steps</h2>
+      <ul class="action-list">
+        <li class="action-item">
+          <div>
+            <div class="action-headline">Upgrade to Twiggs' Money Flow</div>
+            <div class="action-detail">If you currently use Chaikin Money Flow or Intraday Intensity, switch to Twiggs'
+              Money Flow in your charting software to properly account for overnight gap risk.</div>
+          </div>
+        </li>
+        <li class="action-item">
+          <div>
+            <div class="action-headline">Stop Accumulating Intraday Signals for Macro Trends</div>
+            <div class="action-detail">Audit your trading systems. Ensure you are not relying on 200-day moving averages
+              of intraday volume indicators to dictate long-term portfolio allocation.</div>
+          </div>
+        </li>
+        <li class="action-item">
+          <div>
+            <div class="action-headline">Apply "Persistency" to Your Scans</div>
+            <div class="action-detail">Create a custom scanner looking for stocks where Twiggs' Money Flow has remained
+              above zero for 9 of the last 10 days to identify hidden institutional accumulation.</div>
+          </div>
+        </li>
+      </ul>
+    </section>
 
-<div class="nav-controls">
-  <button class="nav-btn" id="prevBtn" onclick="prevSlide()" aria-label="Previous slide">&#8592;</button>
-  <div class="counter" id="counter" aria-live="polite">1 / 1</div>
-  <button class="nav-btn" id="nextBtn" onclick="nextSlide()" aria-label="Next slide">&#8594;</button>
-</div>
+  </div>
 
-<script src="common.js"></script>
+  <div class="nav-controls">
+    <button class="nav-btn" id="prevBtn" onclick="prevSlide()" aria-label="Previous slide">&#8592;</button>
+    <div class="counter" id="counter" aria-live="polite">1 / 1</div>
+    <button class="nav-btn" id="nextBtn" onclick="nextSlide()" aria-label="Next slide">&#8594;</button>
+  </div>
+
+  <script src="../common.js"></script>
 </body>
+
 </html>

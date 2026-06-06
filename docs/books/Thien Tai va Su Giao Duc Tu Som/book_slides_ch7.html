@@ -1,579 +1,718 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Thiên Tài và Sự Giáo Dục Từ Sớm — Chương 7</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="common.css">
-<script src="https://cdn.jsdelivr.net/npm/@panzoom/panzoom@4.5.1/dist/panzoom.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/mermaid@11.10.0/dist/mermaid.min.js" crossorigin="anonymous"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Thiên Tài và Sự Giáo Dục Từ Sớm — Chương 7</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../common.css">
+  <script src="https://cdn.jsdelivr.net/npm/@panzoom/panzoom@4.5.1/dist/panzoom.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@11.10.0/dist/mermaid.min.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
 
-<div class="progress-bar" id="progressBar"></div>
+  <div class="progress-bar" id="progressBar"></div>
 
-<div class="chapter-menu">
-  <button class="menu-btn" id="chapterMenuBtn" onclick="toggleChapterMenu()" aria-haspopup="true" aria-expanded="false">Chapters &#9662;</button>
-  <div class="chapter-menu-panel" id="chapterMenuPanel" role="menu"></div>
-</div>
-
-<div class="slide-container" id="slideContainer">
-
-  <section class="slide" aria-hidden="false">
-<h1>Thiên Tài và Sự Giáo Dục Từ Sớm</h1>
-<p class="subtitle">Chương 7: Phương Pháp Giáo Dục Của Stoner — Giáo dục tự nhiên, phát triển toàn diện thể chất và tâm hồn</p>
-
-<figure class="image-slot hero">
-  <img src="images/ch7_book_cover.png" alt="Bé gái đang vẽ tranh và sáng tạo nghệ thuật">
-  <figcaption>Nguồn: Unsplash (Free Stock Photo)</figcaption>
-</figure>
-
-<div class="meta-grid">
-  <div class="meta-item">
-    <div class="meta-label">Nhân vật áp dụng</div>
-    <div class="meta-value">Winifred Stoner (con gái bà Stoner)</div>
+  <div class="chapter-menu">
+    <button class="menu-btn" id="chapterMenuBtn" onclick="toggleChapterMenu()" aria-haspopup="true"
+      aria-expanded="false">Chapters &#9662;</button>
+    <div class="chapter-menu-panel" id="chapterMenuPanel" role="menu"></div>
   </div>
-  <div class="meta-item">
-    <div class="meta-label">Tác phẩm tham chiếu</div>
-    <div class="meta-value">Giáo dục tự nhiên (Natural Education, 12 tuổi)</div>
-  </div>
-  <div class="meta-item">
-    <div class="meta-label">Trọng tâm thực hành</div>
-    <div class="meta-value">Ngũ quan, Ngoại ngữ/Esperanto, Toán học vui vẻ, Dã ngoại</div>
-  </div>
-  <div class="meta-item">
-    <div class="meta-label">Độ sâu phân tích</div>
-    <div class="meta-value">Deep Mode (18 slides)</div>
-  </div>
-</div>
 
-  </section>
+  <div class="slide-container" id="slideContainer">
 
-  <section class="slide chapter-divider">
-<div class="chapter-number">Chương 7</div>
-<h2>Phương Pháp Giáo Dục Của Stoner</h2>
-<p class="chapter-meta">Thời gian đọc: ~25 phút · Độ khó: Trung bình · Khái niệm cốt lõi: Giáo dục tự nhiên, Huấn luyện 5 giác quan, Ngôn ngữ Esperanto, Dạy toán qua trò chơi, Trí tưởng tượng phong phú</p>
+    <section class="slide" aria-hidden="false">
+      <h1>Thiên Tài và Sự Giáo Dục Từ Sớm</h1>
+      <p class="subtitle">Chương 7: Phương Pháp Giáo Dục Của Stoner — Giáo dục tự nhiên, phát triển toàn diện thể chất
+        và tâm hồn</p>
 
-<figure class="image-slot hero">
-  <img src="images/ch7_early_edu.png" alt="Đồ chơi gỗ màu sắc sặc sỡ và nhạc điệu cho trẻ">
-  <figcaption>Nguồn: Unsplash (Free Stock Photo)</figcaption>
-</figure>
+      <figure class="image-slot hero">
+        <img src="images/ch7_book_cover.png" alt="Bé gái đang vẽ tranh và sáng tạo nghệ thuật">
+        <figcaption>Nguồn: Unsplash (Free Stock Photo)</figcaption>
+      </figure>
 
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH 7 · SƠ ĐỒ TRỰC QUAN</div>
-    <h2>Sơ đồ khái niệm Chương 7</h2>
-<div class="mermaid">
-graph TD
-    A["Giáo dục Tự nhiên (Phu nhân Stoner)"] --> B["Phát triển Thể chất & Ngũ quan"]
-    A --> C["Phát triển Trí tuệ qua Trò chơi"]
-    A --> D["Nhân cách & Trí tưởng tượng"]
-
-    B --> B1["Huấn luyện 5 giác quan: chuông màu, lăng kính, sử thi La-tinh"]
-    B --> B2["Vận động dã ngoại: đi dạo, leo núi, cưỡi ngựa, bơi lội"]
-    B --> B3["Chăm sóc thể chất: sữa mẹ, ngủ ngoài trời, nước ấm"]
-
-    C --> C1["Ngôn ngữ: Tiếng mẹ đẻ, Đa ngoại ngữ, Esperanto quốc tế"]
-    C --> C2["Toán học trò chơi: xúc xắc, hạt đậu, mua bán tiền thật"]
-    C --> C3["Dạy viết chữ: Máy đánh chữ, bút chì đỏ, viết nhật ký từ 2t"]
-
-    D --> D1["Nuôi dưỡng trí tưởng tượng: cổ tích, kịch nghệ, đồ chơi tự làm"]
-    D --> D2["Tranh biện với Montessori: khẳng định tầm quan trọng của cổ tích"]
-    D --> D3["Kỷ luật hành vi: bảng biểu 13 cột thưởng sao vàng, phạt sao đen"]
-
-    style A fill:#635BFF,stroke:#2A2D33,color:#F7F7F5
-    style B fill:#059669,stroke:#2A2D33,color:#F7F7F5
-    style C fill:#7C3AED,stroke:#2A2D33,color:#F7F7F5
-    style D fill:#D97706,stroke:#2A2D33,color:#F7F7F5
-</div>
-
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH 7 · TÓM TẮT CẤU TRÚC</div>
-    <h2>Tóm tắt cốt lõi</h2>
-<div class="content-card">
-  <p class="summary-text"><strong>Ý tưởng cốt lõi:</strong> Phu nhân Stoner thiết lập hệ thống "Giáo dục tự nhiên" toàn diện, nhấn mạnh việc huấn luyện ngũ giác quan từ sơ sinh, học ngôn ngữ và toán học hoàn toàn thông qua trò chơi tích cực, kết nối sâu sắc với tự nhiên dã ngoại, và bảo vệ/nuôi dưỡng tối đa trí tưởng tượng của trẻ.</p>
-  
-  <div class="deep-section">
-    <strong>Huấn luyện ngũ quan & Thể chất (Sensory & Physical):</strong> Bắt đầu từ thính giác qua âm điệu sử thi Aeneis, âm nhạc qua chuông bảy màu cầu vồng. Rèn luyện thị giác bằng tranh điêu khắc, trò chơi tinh mắt. Ưu tiên thể thao (bơi, cưỡi ngựa) và vận động tự do ngoài trời từ 2 tuần tuổi. <span class="page-ref">Ch 7 · §2-§4</span>
-  </div>
-  
-  <div class="deep-section">
-    <strong>Ngôn ngữ & Toán học (Language & Math):</strong> Dạy nói từ nôi, tránh từ lóng. 5 tuổi thạo 8 thứ tiếng, sau đó học Esperanto để kết bạn quốc tế. Học chính tả bằng máy đánh chữ từ 3 tuổi. Sửa lỗi sợ toán của con bằng cách biến con số thành trò chơi đếm đậu, đổ xúc xắc, mua bán tiền thật. <span class="page-ref">Ch 7 · §3-§5, §9</span>
-  </div>
-  
-  <div class="deep-section">
-    <strong>Nhân cách & Trí tưởng tượng (Character & Imagination):</strong> Kể chuyện thần thoại, diễn kịch cùng con. Kịch liệt phản biện Montessori vì bài xích chuyện thần tiên. Rèn nhân cách bằng cách làm gương, không bạo lực roi vọt, sử dụng bảng biểu hành vi thưởng sao vàng - phạt sao đen. <span class="page-ref">Ch 7 · §11-§13</span>
-  </div>
-</div>
-
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH 7 · Ý TƯỞNG LỚN</div>
-    <h2>Cốt lõi triết lý Stoner</h2>
-<div class="takeaway-hero">
-  <div class="kicker">CH 7 · THE BIG IDEA</div>
-  <div class="headline">"Trẻ em là thực thể tự nhiên năng động. Hãy dạy con học bằng cả năm giác quan qua trò chơi sinh động, thay vì những cuốn giáo trình khô khan."</div>
-  <div class="subline">Giáo dục tự nhiên không phải là bỏ mặc trẻ, mà là chủ động kiến tạo môi trường học tập trực quan: từ bảng chữ cái trên tường, máy đánh chữ cho đến cánh rừng bãi biển. Học mà chơi, chơi mà học để giữ trọn năng lượng sống của con. <span class="page-ref">Ch 7 · §2, §4, §10</span></div>
-</div>
-
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH 7 · KHÁI NIỆM THEN CHỐT</div>
-    <h2>Các bài học then chốt</h2>
-<ul class="takeaway-list">
-  <li class="takeaway-item">
-    <div class="takeaway-badge">01</div>
-    <div class="takeaway-text">
-      <strong>Huấn luyện ngũ quan đồng bộ từ trong nôi</strong>
-      <div class="takeaway-detail">
-        <strong>Tại sao:</strong> Khả năng của trẻ nếu không dùng sẽ vĩnh viễn mất đi. Rèn luyện thính giác, thị giác, xúc giác sớm giúp xây dựng liên kết thần kinh phong phú. <span class="page-ref">Ch 7 · §2</span><br>
-        <strong>Áp dụng:</strong> Đọc sử thi/thơ có âm điệu, dùng chuông nốt nhạc 7 màu cầu vồng, cho con làm quen với các tác phẩm điêu khắc, hội họa thu nhỏ.<br>
-        <strong>Lưu ý:</strong> Bé trai có xúc giác nhạy hơn nhưng cảm nhận màu kém bé gái, cần tăng cường trò chơi màu sắc cho bé trai.
+      <div class="meta-grid">
+        <div class="meta-item">
+          <div class="meta-label">Nhân vật áp dụng</div>
+          <div class="meta-value">Winifred Stoner (con gái bà Stoner)</div>
+        </div>
+        <div class="meta-item">
+          <div class="meta-label">Tác phẩm tham chiếu</div>
+          <div class="meta-value">Giáo dục tự nhiên (Natural Education, 12 tuổi)</div>
+        </div>
+        <div class="meta-item">
+          <div class="meta-label">Trọng tâm thực hành</div>
+          <div class="meta-value">Ngũ quan, Ngoại ngữ/Esperanto, Toán học vui vẻ, Dã ngoại</div>
+        </div>
+        <div class="meta-item">
+          <div class="meta-label">Độ sâu phân tích</div>
+          <div class="meta-value">Deep Mode (18 slides)</div>
+        </div>
       </div>
-    </div>
-  </li>
-  <li class="takeaway-item">
-    <div class="takeaway-badge" style="background-color: var(--accent-amber)">02</div>
-    <div class="takeaway-text">
-      <strong>Máy đánh chữ - Công cụ dạy chính tả tối ưu</strong>
-      <div class="takeaway-detail">
-        <strong>Tại sao:</strong> Trẻ thích bắt chước người lớn. Các phím chữ trên máy giúp trẻ ghép vần, sửa lỗi chính tả trực quan và viết văn nhanh hơn cầm bút viết tay. <span class="page-ref">Ch 7 · §5</span><br>
-        <strong>Áp dụng:</strong> Cho trẻ dùng máy đánh chữ (hoặc bàn phím máy tính cơ cỡ lớn) để tập chép thơ, truyện cổ tích và viết thư từ 3 tuổi.<br>
-        <strong>Lưu ý:</strong> Không bắt con học ngữ pháp khô khan trước 8 tuổi; hãy học qua tai và miệng.
+
+    </section>
+
+    <section class="slide chapter-divider">
+      <div class="chapter-number">Chương 7</div>
+      <h2>Phương Pháp Giáo Dục Của Stoner</h2>
+      <p class="chapter-meta">Thời gian đọc: ~25 phút · Độ khó: Trung bình · Khái niệm cốt lõi: Giáo dục tự nhiên, Huấn
+        luyện 5 giác quan, Ngôn ngữ Esperanto, Dạy toán qua trò chơi, Trí tưởng tượng phong phú</p>
+
+      <figure class="image-slot hero">
+        <img src="images/ch7_early_edu.png" alt="Đồ chơi gỗ màu sắc sặc sỡ và nhạc điệu cho trẻ">
+        <figcaption>Nguồn: Unsplash (Free Stock Photo)</figcaption>
+      </figure>
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 7 · SƠ ĐỒ TRỰC QUAN</div>
+      <h2>Sơ đồ khái niệm Chương 7</h2>
+      <div class="mermaid">
+        graph TD
+        A["Giáo dục Tự nhiên (Phu nhân Stoner)"] --> B["Phát triển Thể chất & Ngũ quan"]
+        A --> C["Phát triển Trí tuệ qua Trò chơi"]
+        A --> D["Nhân cách & Trí tưởng tượng"]
+
+        B --> B1["Huấn luyện 5 giác quan: chuông màu, lăng kính, sử thi La-tinh"]
+        B --> B2["Vận động dã ngoại: đi dạo, leo núi, cưỡi ngựa, bơi lội"]
+        B --> B3["Chăm sóc thể chất: sữa mẹ, ngủ ngoài trời, nước ấm"]
+
+        C --> C1["Ngôn ngữ: Tiếng mẹ đẻ, Đa ngoại ngữ, Esperanto quốc tế"]
+        C --> C2["Toán học trò chơi: xúc xắc, hạt đậu, mua bán tiền thật"]
+        C --> C3["Dạy viết chữ: Máy đánh chữ, bút chì đỏ, viết nhật ký từ 2t"]
+
+        D --> D1["Nuôi dưỡng trí tưởng tượng: cổ tích, kịch nghệ, đồ chơi tự làm"]
+        D --> D2["Tranh biện với Montessori: khẳng định tầm quan trọng của cổ tích"]
+        D --> D3["Kỷ luật hành vi: bảng biểu 13 cột thưởng sao vàng, phạt sao đen"]
+
+        style A fill:#635BFF,stroke:#2A2D33,color:#F7F7F5
+        style B fill:#059669,stroke:#2A2D33,color:#F7F7F5
+        style C fill:#7C3AED,stroke:#2A2D33,color:#F7F7F5
+        style D fill:#D97706,stroke:#2A2D33,color:#F7F7F5
       </div>
-    </div>
-  </li>
-  <li class="takeaway-item">
-    <div class="takeaway-badge" style="background-color: var(--accent-emerald)">03</div>
-    <div class="takeaway-text">
-      <strong>Trị liệu nỗi sợ Toán bằng Trò chơi trực quan</strong>
-      <div class="takeaway-detail">
-        <strong>Tại sao:</strong> Trẻ sợ toán thường do phương pháp dạy của cha mẹ tẻ nhạt, truyền tải sự chán ghét của chính mình sang con. <span class="page-ref">Ch 7 · §9</span><br>
-        <strong>Áp dụng:</strong> Dạy bảng cửu chương qua đếm hạt đậu, đổ xúc xắc cộng điểm, chơi trò mua bán cửa hàng với tiền thật.<br>
-        <strong>Lưu ý:</strong> Trò chơi tư duy toán học đòi hỏi tập trung cao, chỉ nên chơi tối đa 15 phút mỗi lần để tránh mệt mỏi.
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 7 · TÓM TẮT CẤU TRÚC</div>
+      <h2>Tóm tắt cốt lõi</h2>
+      <div class="content-card">
+        <p class="summary-text"><strong>Ý tưởng cốt lõi:</strong> Phu nhân Stoner thiết lập hệ thống "Giáo dục tự nhiên"
+          toàn diện, nhấn mạnh việc huấn luyện ngũ giác quan từ sơ sinh, học ngôn ngữ và toán học hoàn toàn thông qua
+          trò chơi tích cực, kết nối sâu sắc với tự nhiên dã ngoại, và bảo vệ/nuôi dưỡng tối đa trí tưởng tượng của trẻ.
+        </p>
+
+        <div class="deep-section">
+          <strong>Huấn luyện ngũ quan & Thể chất (Sensory & Physical):</strong> Bắt đầu từ thính giác qua âm điệu sử thi
+          Aeneis, âm nhạc qua chuông bảy màu cầu vồng. Rèn luyện thị giác bằng tranh điêu khắc, trò chơi tinh mắt. Ưu
+          tiên thể thao (bơi, cưỡi ngựa) và vận động tự do ngoài trời từ 2 tuần tuổi. <span class="page-ref">Ch 7 ·
+            §2-§4</span>
+        </div>
+
+        <div class="deep-section">
+          <strong>Ngôn ngữ & Toán học (Language & Math):</strong> Dạy nói từ nôi, tránh từ lóng. 5 tuổi thạo 8 thứ
+          tiếng, sau đó học Esperanto để kết bạn quốc tế. Học chính tả bằng máy đánh chữ từ 3 tuổi. Sửa lỗi sợ toán của
+          con bằng cách biến con số thành trò chơi đếm đậu, đổ xúc xắc, mua bán tiền thật. <span class="page-ref">Ch 7 ·
+            §3-§5, §9</span>
+        </div>
+
+        <div class="deep-section">
+          <strong>Nhân cách & Trí tưởng tượng (Character & Imagination):</strong> Kể chuyện thần thoại, diễn kịch cùng
+          con. Kịch liệt phản biện Montessori vì bài xích chuyện thần tiên. Rèn nhân cách bằng cách làm gương, không bạo
+          lực roi vọt, sử dụng bảng biểu hành vi thưởng sao vàng - phạt sao đen. <span class="page-ref">Ch 7 ·
+            §11-§13</span>
+        </div>
       </div>
-    </div>
-  </li>
-  <li class="takeaway-item">
-    <div class="takeaway-badge" style="background-color: var(--accent-purple)">04</div>
-    <div class="takeaway-text">
-      <strong>Trí tưởng tượng là nền tảng của phát minh sáng tạo</strong>
-      <div class="takeaway-detail">
-        <strong>Tại sao:</strong> Truyện cổ tích, thần thoại bồi đắp tâm hồn hướng thiện, đạo đức và kích thích tư duy phát minh khoa học (như Fulton, anh em Wright). <span class="page-ref">Ch 7 · §11</span><br>
-        <strong>Áp dụng:</strong> Kể chuyện thần thoại, khuyến khích con tự diễn kịch, tôn trọng các mô hình đồ chơi tự chế của con.<br>
-        <strong>Lưu ý:</strong> <span class="caveat">Bà Stoner phản đối kịch liệt Montessori vì phương pháp này chỉ tập trung hiện thực và bài xích truyện cổ tích.</span>
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 7 · Ý TƯỞNG LỚN</div>
+      <h2>Cốt lõi triết lý Stoner</h2>
+      <div class="takeaway-hero">
+        <div class="kicker">CH 7 · THE BIG IDEA</div>
+        <div class="headline">"Trẻ em là thực thể tự nhiên năng động. Hãy dạy con học bằng cả năm giác quan qua trò chơi
+          sinh động, thay vì những cuốn giáo trình khô khan."</div>
+        <div class="subline">Giáo dục tự nhiên không phải là bỏ mặc trẻ, mà là chủ động kiến tạo môi trường học tập trực
+          quan: từ bảng chữ cái trên tường, máy đánh chữ cho đến cánh rừng bãi biển. Học mà chơi, chơi mà học để giữ
+          trọn năng lượng sống của con. <span class="page-ref">Ch 7 · §2, §4, §10</span></div>
       </div>
-    </div>
-  </li>
-</ul>
 
-  </section>
+    </section>
 
-  <section class="slide">
-    <div class="slide-kicker">CH 7 · HUẤN LUYỆN NGŨ QUAN</div>
-    <h2>Giác quan &amp; Nghệ thuật từ nôi</h2>
-<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; width: 100%;">
-  <div class="content-card" style="border-left: 4px solid var(--accent); padding: 20px;">
-    <h3 style="color: var(--accent); margin-bottom: 12px;">Khai Phóng Thính Giác & Âm Nhạc</h3>
-    <ul style="padding-left: 20px; font-size: 0.9rem; line-height: 1.6;">
-      <li><strong>Hát ru & Đọc thơ:</strong> Khi con 6 tuần tuổi, bà Stoner đọc sử thi La-tinh <em>Aeneis</em> của Vergilius có âm điệu du dương để dỗ ngủ. Winifred nhớ được 10 dòng thơ sử thi khi chưa đầy 1 tuổi. <span class="page-ref">Ch 7 · §2</span></li>
-      <li><strong>Chuông bảy sắc cầu vồng:</strong> Treo 7 quả chuông tương ứng 7 dải lụa cầu vồng (đỏ, cam, vàng, lục, lam, chàm, tím) đại diện 7 nốt nhạc. Hằng ngày gõ chuông giúp trẻ 6 tháng phân biệt tốt cả nốt nhạc lẫn màu sắc. <span class="page-ref">Ch 7 · §2</span></li>
-      <li><strong>Môi trường âm nhạc:</strong> Cho nghe đàn piano, trống nhỏ, khuyến khích nhún nhảy theo nhạc để rèn luyện nhịp điệu và thể lực (như người Hy Lạp cổ đại). <span class="page-ref">Ch 7 · §4</span></li>
-    </ul>
-  </div>
-
-  <div class="content-card" style="border-left: 4px solid var(--accent-emerald); padding: 20px;">
-    <h3 style="color: var(--accent-emerald); margin-bottom: 12px;">Khai Phóng Thị Giác & Thẩm Mỹ</h3>
-    <ul style="padding-left: 20px; font-size: 0.9rem; line-height: 1.6;">
-      <li><strong>Trưng bày nghệ thuật:</strong> Treo các bức họa nổi tiếng và bày các phiên bản thu nhỏ của tác phẩm điêu khắc trong phòng trẻ từ nhỏ. Bế trẻ đi quanh phòng chỉ tên và giải nghĩa. <span class="page-ref">Ch 7 · §2</span></li>
-      <li><strong>Hội họa chủ động:</strong> Vẽ tranh cho con xem, vừa vẽ vừa kể chuyện. Dùng cuộn chỉ màu và chơi trò "Thi vẽ màu" (mẹ vẽ vạch màu gì con vẽ màu đó) để rèn sự nhạy bén màu sắc. <span class="page-ref">Ch 7 · §2</span></li>
-      <li><strong>Trò chơi tinh mắt:</strong> Đi qua cửa hàng, đố con nhớ các đồ vật trưng bày. Dùng quả bóng bay đỏ buộc vào tay trẻ 6 tuần tuổi để dạy tính từ (tròn, nhẹ, bay...). <span class="page-ref">Ch 7 · §2</span></li>
-    </ul>
-  </div>
-</div>
-
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH 7 · PHÁT TRIỂN NGÔN NGỮ</div>
-    <h2>Ngoại ngữ &amp; Tiếng Esperanto</h2>
-<div class="content-card" style="border-left: 4px solid var(--accent); padding: 24px;">
-  <h3 style="color: var(--accent); margin-bottom: 15px;">Phát Triển Ngôn Ngữ & Kỳ Tích Esperanto</h3>
-  
-  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; font-size: 0.92rem; line-height: 1.6;">
-    <div>
-      <strong style="color: var(--accent-purple);">Giáo dục Ngôn ngữ Cực sớm:</strong>
-      <ul style="margin-top: 8px; padding-left: 18px; font-size: 0.85rem; line-height: 1.5;">
-        <li>Nói chuyện với trẻ như người lớn ngay từ nôi, tuyệt đối không dùng từ lóng, từ địa phương. Sửa ngay khi phát âm sai (ví dụ gọi "con chó", không gọi "gâu gâu"). <span class="page-ref">Ch 7 · §3</span></li>
-        <li>Học bằng tai và miệng, không dạy ngữ pháp trước 8 tuổi. <span class="page-ref">Ch 7 · §3</span></li>
-        <li>Học nhuần nhuyễn tiếng mẹ đẻ rồi mới học ngoại ngữ. Winifred học tiếng Tây Ban Nha đầu tiên vì đơn giản nhất. 5 tuổi nói thạo 8 thứ tiếng. <span class="page-ref">Ch 7 · §3</span></li>
+    <section class="slide">
+      <div class="slide-kicker">CH 7 · KHÁI NIỆM THEN CHỐT</div>
+      <h2>Các bài học then chốt</h2>
+      <ul class="takeaway-list">
+        <li class="takeaway-item">
+          <div class="takeaway-badge">01</div>
+          <div class="takeaway-text">
+            <strong>Huấn luyện ngũ quan đồng bộ từ trong nôi</strong>
+            <div class="takeaway-detail">
+              <strong>Tại sao:</strong> Khả năng của trẻ nếu không dùng sẽ vĩnh viễn mất đi. Rèn luyện thính giác, thị
+              giác, xúc giác sớm giúp xây dựng liên kết thần kinh phong phú. <span class="page-ref">Ch 7 · §2</span><br>
+              <strong>Áp dụng:</strong> Đọc sử thi/thơ có âm điệu, dùng chuông nốt nhạc 7 màu cầu vồng, cho con làm quen
+              với các tác phẩm điêu khắc, hội họa thu nhỏ.<br>
+              <strong>Lưu ý:</strong> Bé trai có xúc giác nhạy hơn nhưng cảm nhận màu kém bé gái, cần tăng cường trò
+              chơi màu sắc cho bé trai.
+            </div>
+          </div>
+        </li>
+        <li class="takeaway-item">
+          <div class="takeaway-badge" style="background-color: var(--accent-amber)">02</div>
+          <div class="takeaway-text">
+            <strong>Máy đánh chữ - Công cụ dạy chính tả tối ưu</strong>
+            <div class="takeaway-detail">
+              <strong>Tại sao:</strong> Trẻ thích bắt chước người lớn. Các phím chữ trên máy giúp trẻ ghép vần, sửa lỗi
+              chính tả trực quan và viết văn nhanh hơn cầm bút viết tay. <span class="page-ref">Ch 7 · §5</span><br>
+              <strong>Áp dụng:</strong> Cho trẻ dùng máy đánh chữ (hoặc bàn phím máy tính cơ cỡ lớn) để tập chép thơ,
+              truyện cổ tích và viết thư từ 3 tuổi.<br>
+              <strong>Lưu ý:</strong> Không bắt con học ngữ pháp khô khan trước 8 tuổi; hãy học qua tai và miệng.
+            </div>
+          </div>
+        </li>
+        <li class="takeaway-item">
+          <div class="takeaway-badge" style="background-color: var(--accent-emerald)">03</div>
+          <div class="takeaway-text">
+            <strong>Trị liệu nỗi sợ Toán bằng Trò chơi trực quan</strong>
+            <div class="takeaway-detail">
+              <strong>Tại sao:</strong> Trẻ sợ toán thường do phương pháp dạy của cha mẹ tẻ nhạt, truyền tải sự chán
+              ghét của chính mình sang con. <span class="page-ref">Ch 7 · §9</span><br>
+              <strong>Áp dụng:</strong> Dạy bảng cửu chương qua đếm hạt đậu, đổ xúc xắc cộng điểm, chơi trò mua bán cửa
+              hàng với tiền thật.<br>
+              <strong>Lưu ý:</strong> Trò chơi tư duy toán học đòi hỏi tập trung cao, chỉ nên chơi tối đa 15 phút mỗi
+              lần để tránh mệt mỏi.
+            </div>
+          </div>
+        </li>
+        <li class="takeaway-item">
+          <div class="takeaway-badge" style="background-color: var(--accent-purple)">04</div>
+          <div class="takeaway-text">
+            <strong>Trí tưởng tượng là nền tảng của phát minh sáng tạo</strong>
+            <div class="takeaway-detail">
+              <strong>Tại sao:</strong> Truyện cổ tích, thần thoại bồi đắp tâm hồn hướng thiện, đạo đức và kích thích tư
+              duy phát minh khoa học (như Fulton, anh em Wright). <span class="page-ref">Ch 7 · §11</span><br>
+              <strong>Áp dụng:</strong> Kể chuyện thần thoại, khuyến khích con tự diễn kịch, tôn trọng các mô hình đồ
+              chơi tự chế của con.<br>
+              <strong>Lưu ý:</strong> <span class="caveat">Bà Stoner phản đối kịch liệt Montessori vì phương pháp này
+                chỉ tập trung hiện thực và bài xích truyện cổ tích.</span>
+            </div>
+          </div>
+        </li>
       </ul>
-    </div>
 
-    <div>
-      <strong style="color: var(--accent-emerald);">Quốc Tế Ngữ Esperanto:</strong>
-      <ul style="margin-top: 8px; padding-left: 18px; font-size: 0.85rem; line-height: 1.5;">
-        <li>Bà Stoner khuyên dùng Esperanto làm ngôn ngữ thứ hai vì cấu trúc cực kỳ đơn giản (Winifred học 1 tiếng đã viết được thư). <span class="page-ref">Ch 7 · §3</span></li>
-        <li>5 tuổi Winifred đã viết kịch bằng Esperanto được trình diễn toàn quốc, tự dạy học cho trẻ khác thông qua trò chơi và bài hát. <span class="page-ref">Ch 7 · §3</span></li>
-        <li>Viết thư quốc tế (Nga, Nhật, Ấn...) bằng Esperanto để tìm hiểu địa lý thế giới và xây dựng hòa bình. <span class="page-ref">Ch 7 · §3</span></li>
-      </ul>
-    </div>
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 7 · HUẤN LUYỆN NGŨ QUAN</div>
+      <h2>Giác quan &amp; Nghệ thuật từ nôi</h2>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; width: 100%;">
+        <div class="content-card" style="border-left: 4px solid var(--accent); padding: 20px;">
+          <h3 style="color: var(--accent); margin-bottom: 12px;">Khai Phóng Thính Giác & Âm Nhạc</h3>
+          <ul style="padding-left: 20px; font-size: 0.9rem; line-height: 1.6;">
+            <li><strong>Hát ru & Đọc thơ:</strong> Khi con 6 tuần tuổi, bà Stoner đọc sử thi La-tinh <em>Aeneis</em> của
+              Vergilius có âm điệu du dương để dỗ ngủ. Winifred nhớ được 10 dòng thơ sử thi khi chưa đầy 1 tuổi. <span
+                class="page-ref">Ch 7 · §2</span></li>
+            <li><strong>Chuông bảy sắc cầu vồng:</strong> Treo 7 quả chuông tương ứng 7 dải lụa cầu vồng (đỏ, cam, vàng,
+              lục, lam, chàm, tím) đại diện 7 nốt nhạc. Hằng ngày gõ chuông giúp trẻ 6 tháng phân biệt tốt cả nốt nhạc
+              lẫn màu sắc. <span class="page-ref">Ch 7 · §2</span></li>
+            <li><strong>Môi trường âm nhạc:</strong> Cho nghe đàn piano, trống nhỏ, khuyến khích nhún nhảy theo nhạc để
+              rèn luyện nhịp điệu và thể lực (như người Hy Lạp cổ đại). <span class="page-ref">Ch 7 · §4</span></li>
+          </ul>
+        </div>
+
+        <div class="content-card" style="border-left: 4px solid var(--accent-emerald); padding: 20px;">
+          <h3 style="color: var(--accent-emerald); margin-bottom: 12px;">Khai Phóng Thị Giác & Thẩm Mỹ</h3>
+          <ul style="padding-left: 20px; font-size: 0.9rem; line-height: 1.6;">
+            <li><strong>Trưng bày nghệ thuật:</strong> Treo các bức họa nổi tiếng và bày các phiên bản thu nhỏ của tác
+              phẩm điêu khắc trong phòng trẻ từ nhỏ. Bế trẻ đi quanh phòng chỉ tên và giải nghĩa. <span
+                class="page-ref">Ch 7 · §2</span></li>
+            <li><strong>Hội họa chủ động:</strong> Vẽ tranh cho con xem, vừa vẽ vừa kể chuyện. Dùng cuộn chỉ màu và chơi
+              trò "Thi vẽ màu" (mẹ vẽ vạch màu gì con vẽ màu đó) để rèn sự nhạy bén màu sắc. <span class="page-ref">Ch 7
+                · §2</span></li>
+            <li><strong>Trò chơi tinh mắt:</strong> Đi qua cửa hàng, đố con nhớ các đồ vật trưng bày. Dùng quả bóng bay
+              đỏ buộc vào tay trẻ 6 tuần tuổi để dạy tính từ (tròn, nhẹ, bay...). <span class="page-ref">Ch 7 ·
+                §2</span></li>
+          </ul>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 7 · PHÁT TRIỂN NGÔN NGỮ</div>
+      <h2>Ngoại ngữ &amp; Tiếng Esperanto</h2>
+      <div class="content-card" style="border-left: 4px solid var(--accent); padding: 24px;">
+        <h3 style="color: var(--accent); margin-bottom: 15px;">Phát Triển Ngôn Ngữ & Kỳ Tích Esperanto</h3>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; font-size: 0.92rem; line-height: 1.6;">
+          <div>
+            <strong style="color: var(--accent-purple);">Giáo dục Ngôn ngữ Cực sớm:</strong>
+            <ul style="margin-top: 8px; padding-left: 18px; font-size: 0.85rem; line-height: 1.5;">
+              <li>Nói chuyện với trẻ như người lớn ngay từ nôi, tuyệt đối không dùng từ lóng, từ địa phương. Sửa ngay
+                khi phát âm sai (ví dụ gọi "con chó", không gọi "gâu gâu"). <span class="page-ref">Ch 7 · §3</span></li>
+              <li>Học bằng tai và miệng, không dạy ngữ pháp trước 8 tuổi. <span class="page-ref">Ch 7 · §3</span></li>
+              <li>Học nhuần nhuyễn tiếng mẹ đẻ rồi mới học ngoại ngữ. Winifred học tiếng Tây Ban Nha đầu tiên vì đơn
+                giản nhất. 5 tuổi nói thạo 8 thứ tiếng. <span class="page-ref">Ch 7 · §3</span></li>
+            </ul>
+          </div>
+
+          <div>
+            <strong style="color: var(--accent-emerald);">Quốc Tế Ngữ Esperanto:</strong>
+            <ul style="margin-top: 8px; padding-left: 18px; font-size: 0.85rem; line-height: 1.5;">
+              <li>Bà Stoner khuyên dùng Esperanto làm ngôn ngữ thứ hai vì cấu trúc cực kỳ đơn giản (Winifred học 1 tiếng
+                đã viết được thư). <span class="page-ref">Ch 7 · §3</span></li>
+              <li>5 tuổi Winifred đã viết kịch bằng Esperanto được trình diễn toàn quốc, tự dạy học cho trẻ khác thông
+                qua trò chơi và bài hát. <span class="page-ref">Ch 7 · §3</span></li>
+              <li>Viết thư quốc tế (Nga, Nhật, Ấn...) bằng Esperanto để tìm hiểu địa lý thế giới và xây dựng hòa bình.
+                <span class="page-ref">Ch 7 · §3</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 7 · DẠY HỌC CHỮ</div>
+      <h2>Đánh máy &amp; Nhật ký tuổi thơ</h2>
+      <div style="display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 24px; width: 100%;">
+        <div class="content-card" style="border-top: 4px solid var(--accent); padding: 20px;">
+          <h3 style="color: var(--accent); margin-bottom: 12px;">Máy Đánh Chữ: Máy Dạy Học Chính Tả</h3>
+          <p style="font-size: 0.9rem; line-height: 1.6;">
+            Bà Stoner ngẫu nhiên phát hiện con gái rất hứng thú khi nhìn mẹ đánh máy. Bà đã tận dụng điều này để dạy
+            Winifred học chính tả từ sớm. <span class="page-ref">Ch 7 · §5</span>
+          </p>
+          <ul style="margin-top: 10px; padding-left: 18px; font-size: 0.88rem; line-height: 1.5;">
+            <li><strong>Cách làm:</strong> Cho trẻ tự do gõ các chữ cái, sau đó hướng dẫn chép lại các bài thơ, truyện
+              cổ tích nổi tiếng.</li>
+            <li><strong>Hiệu quả vượt trội:</strong> Trực quan hóa các con chữ giúp trẻ ghi nhớ cách ghép vần cực nhanh,
+              tự viết truyện và làm thơ từ trước 3 tuổi. <span class="page-ref">Ch 7 · §5</span></li>
+          </ul>
+        </div>
+
+        <div class="content-card" style="border-top: 4px solid var(--accent-purple); padding: 20px;">
+          <h3 style="color: var(--accent-purple); margin-bottom: 12px;">Cầm Bút & Viết Nhật Ký</h3>
+          <ul style="padding-left: 18px; font-size: 0.88rem; line-height: 1.5;">
+            <li><strong>Học viết sớm:</strong> Dạy con cầm bút chì đỏ từ 17 tháng. 2 tuổi Winifred tự ký tên vào sổ đăng
+              ký khách sạn. <span class="page-ref">Ch 7 · §5</span></li>
+            <li><strong>Nhật ký từ 2 tuổi:</strong> Khuyến khích con ghi chép nhật ký hàng ngày (ghi cả những ngày mưa
+              ngồi bên cửa sổ). <span class="page-ref">Ch 7 · §5</span></li>
+            <li><strong>Món quà vô giá của mẹ:</strong> Khuyên cha mẹ tự viết nhật ký ghi lại quá trình phát triển của
+              con từng ngày để làm kỷ vật quý giá cho con sau này. <span class="page-ref">Ch 7 · §5</span></li>
+          </ul>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 7 · TRÒ CHƠI TOÁN HỌC</div>
+      <h2>Biến số học thành trò chơi vui vẻ</h2>
+      <div class="content-card" style="border-left: 4px solid var(--accent-amber); padding: 24px;">
+        <h3 style="color: var(--accent-amber); margin-bottom: 12px;">Trị Liệu Nỗi Sợ Toán: Biến Con Số Thành Trò Chơi
+        </h3>
+        <p style="font-size: 0.95rem; line-height: 1.5; margin-bottom: 15px;">
+          Dù thạo 8 thứ tiếng lúc 5 tuổi, Winifred lại cực kỳ sợ toán và không thuộc bảng cửu chương. Lý do: Mẹ không
+          thích toán nên dạy tẻ nhạt. Nhờ lời khuyên của một giáo sư toán, bà Stoner đã thay đổi phương pháp: <span
+            class="page-ref">Ch 7 · §9</span>
+        </p>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px;">
+          <div
+            style="background-color: var(--surface-muted); padding: 12px; border-radius: var(--radius-md); border-top: 3px solid var(--accent);">
+            <strong>1. Đếm hạt đậu</strong>
+            <p style="font-size: 0.8rem; line-height: 1.4; margin-top: 5px;">
+              Thi nhặt hạt đậu/nút áo từ hộp và đếm; đếm hạt lạc khi bóc. Dùng hạt đậu xếp hàng/cột trực quan để hiểu
+              bản chất bảng cửu chương (2x2, 3x3 là gì). <span class="page-ref">Ch 7 · §9</span>
+            </p>
+          </div>
+          <div
+            style="background-color: var(--surface-muted); padding: 12px; border-radius: var(--radius-md); border-top: 3px solid var(--accent-amber);">
+            <strong>2. Đổ xúc xắc</strong>
+            <p style="font-size: 0.8rem; line-height: 1.4; margin-top: 5px;">
+              Chơi đổ xúc xắc cộng điểm thi đua thắng thua. Tăng dần từ 2 viên lên 6 viên. Rèn luyện tư duy tính nhẩm
+              tốc độ cao cực kỳ hào hứng. <span class="page-ref">Ch 7 · §9</span>
+            </p>
+          </div>
+          <div
+            style="background-color: var(--surface-muted); padding: 12px; border-radius: var(--radius-md); border-top: 3px solid var(--accent-emerald);">
+            <strong>3. Trò chơi mua bán</strong>
+            <p style="font-size: 0.8rem; line-height: 1.4; margin-top: 5px;">
+              Winifred làm chủ tiệm, mẹ làm khách. Dùng tiền thật để mua bán, tính toán giá cả và trả lại tiền thừa. Gửi
+              tiền tiết kiệm ngân hàng tự tính lãi suất. <span class="page-ref">Ch 7 · §9</span>
+            </p>
+          </div>
+        </div>
+
+        <div
+          style="background-color: var(--warning-soft); padding: 10px; border-radius: var(--radius-sm); margin-top: 15px; font-size: 0.82rem; text-align: center; color: var(--warning); font-weight: 500;">
+          Lưu ý: Các trò chơi toán học đòi hỏi não bộ tập trung cao, chỉ nên chơi tối đa 15 phút mỗi lần để tránh làm
+          mệt mỏi hệ thần kinh của trẻ. <span class="page-ref">Ch 7 · §9</span>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 7 · DÃ NGOẠI THIÊN NHIÊN</div>
+      <h2>Tự nhiên là cuốn sách giáo khoa</h2>
+      <div style="display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 24px; width: 100%;">
+        <div class="content-card" style="border-left: 4px solid var(--accent-emerald); padding: 20px;">
+          <h3 style="color: var(--accent-emerald); margin-bottom: 12px;">Cánh Rừng: Cuốn Sách Giáo Khoa Vĩ Đại Nhất</h3>
+          <p style="font-size: 0.9rem; line-height: 1.6;">
+            Bà Stoner kịch liệt phản đối việc giam trẻ trong bốn bức tường. Bà tận dụng triệt để thiên nhiên để dạy các
+            môn khoa học: <span class="page-ref">Ch 7 · §6</span>
+          </p>
+          <ul style="margin-top: 10px; padding-left: 18px; font-size: 0.88rem; line-height: 1.5;">
+            <li><strong>Sinh học thực nghiệm:</strong> Ngắt hoa cỏ để "giải phẫu", đập đá quan sát địa chất, dùng kính
+              hiển vi soi côn trùng. Làm sổ tay sưu tầm mẫu thực vật. <span class="page-ref">Ch 7 · §6</span></li>
+            <li><strong>Vượt qua nỗi sợ:</strong> Sợ sâu xanh -> Giải thích vòng đời hóa bướm xinh đẹp. Cho con tự nuôi
+              ong, bướm và tự viết truyện về đời sống của chúng. <span class="page-ref">Ch 7 · §6</span></li>
+            <li><strong>Làm vườn:</strong> Mua xẻng nhỏ cho con tự gieo hạt, nhổ cỏ, tưới cây nhằm rèn luyện tính kiên
+              nhẫn, tình yêu thiên nhiên và tâm hồn hướng thiện. <span class="page-ref">Ch 7 · §6</span></li>
+            <li><strong>Địa lý biển:</strong> Nhặt sò, tảo, sao biển, sứa để giải thích về sông hồ, vịnh, đảo... Kết hợp
+              chỉ quả địa cầu khi về nhà. <span class="page-ref">Ch 7 · §6</span></li>
+          </ul>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 15px;">
+          <div class="content-card"
+            style="background-color: var(--surface-muted); padding: 15px; border-radius: var(--radius-md); border-left: 3px solid var(--accent);">
+            <h4 style="color: var(--accent); margin-bottom: 5px;">Cắm trại & Đọc thơ</h4>
+            <p style="font-size: 0.82rem; line-height: 1.4; color: var(--text-secondary);">
+              Mùa hè lên núi cắm trại, nằm dài trên cỏ ngắm mây trời, ngâm thơ về tự nhiên, chụp ảnh phong cảnh đẹp.
+              Winifred vẽ tranh và viết truyện trực tiếp giữa rừng sâu. <span class="page-ref">Ch 7 · §6</span>
+            </p>
+          </div>
+
+          <div class="content-card"
+            style="background-color: var(--surface-muted); padding: 15px; border-radius: var(--radius-md); border-left: 3px solid var(--accent-purple);">
+            <h4 style="color: var(--accent-purple); margin-bottom: 5px;">Nuôi thú cưng</h4>
+            <p style="font-size: 0.82rem; line-height: 1.4; color: var(--text-secondary);">
+              Nuôi hoàng yến (dạy nhảy múa, lật trang sách, nhắm mắt theo lệnh), nuôi chó, mèo, cá vàng để phát triển
+              tình yêu động vật và tính nhân ái. <span class="page-ref">Ch 7 · §6</span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 7 · TRÍ TƯỞNG TƯỢNG</div>
+      <h2>Sức mạnh trí tưởng tượng vs Montessori</h2>
+      <div class="content-card" style="border-left: 4px solid var(--accent); padding: 24px;">
+        <h3 style="color: var(--accent); margin-bottom: 12px;">Trí Tưởng Tượng & Cuộc Tranh Biện Montessori</h3>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; font-size: 0.92rem; line-height: 1.6;">
+          <div>
+            <strong style="color: var(--accent-purple);">Sức mạnh của Trí tưởng tượng:</strong>
+            <ul style="margin-top: 8px; padding-left: 18px; font-size: 0.85rem; line-height: 1.5;">
+              <li>"Không biết tưởng tượng thì không thể hạnh phúc thực sự." Trí tưởng tượng là nền tảng của phát minh
+                khoa học (tàu hơi nước của Fulton, máy bay của Wright) và nghệ thuật. <span class="page-ref">Ch 7 ·
+                  §11</span></li>
+              <li><strong>Phương pháp kích hoạt:</strong> Kể chuyện thần thoại, diễn kịch cùng con. Tạo ra hai người bạn
+                tưởng tượng (Neri và Rusi) để trò chuyện khi ở quê. <span class="page-ref">Ch 7 · §11</span></li>
+              <li><strong>Đồ chơi đơn giản:</strong> Khuyên dùng búp bê vải tự may đồ, mô hình gỗ tự xây thành lũy.
+                Nghiêm cấm cha mẹ vứt bỏ các mô hình con đang xây dựng dở dang. <span class="page-ref">Ch 7 · §11</span>
+              </li>
+            </ul>
+          </div>
+
+          <div
+            style="background-color: var(--warning-soft); padding: 15px; border-radius: var(--radius-md); border-top: 4px solid var(--warning);">
+            <strong style="color: var(--warning);">Tranh biện phương pháp Montessori:</strong>
+            <p style="font-size: 0.85rem; line-height: 1.5; margin-top: 8px;">
+              Bà Stoner thừa nhận Maria Montessori là nhà giáo dục vĩ đại, nhưng <strong>phương pháp Montessori không
+                thể tạo ra thiên tài</strong>. <span class="page-ref">Ch 7 · §11</span>
+            </p>
+            <ul style="margin-top: 8px; padding-left: 18px; font-size: 0.8rem; line-height: 1.4;">
+              <li><strong>Lý do:</strong> Montessori chỉ chú ý vào hiện thực khô khan, cấm đoán chuyện thần tiên và bài
+                xích thế giới tưởng tượng của trẻ. <span class="page-ref">Ch 7 · §11</span></li>
+              <li><strong>Kết luận:</strong> Phương pháp đó chỉ phù hợp với trẻ chậm phát triển cần trị liệu nhận thức,
+                còn với trẻ bình thường thì hạn chế năng lực sáng tạo dồi dào. <span class="page-ref">Ch 7 · §11</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 7 · GIÁO DỤC NHÂN CÁCH</div>
+      <h2>Tấm gương cha mẹ &amp; Nói không với đòn roi</h2>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; width: 100%;">
+        <div class="content-card" style="border-top: 4px solid var(--accent); padding: 20px;">
+          <h3 style="color: var(--accent); margin-bottom: 12px;">Cha Mẹ Là Tấm Gương Phản Chiếu</h3>
+          <p style="font-size: 0.9rem; line-height: 1.6;">
+            Goethe nói: "Con cái chỉ thành người có giáo dục khi chính cha mẹ là người có giáo dục". Trẻ con chịu ảnh
+            hưởng sâu sắc từ thói quen của cha mẹ. <span class="page-ref">Ch 7 · §12</span>
+          </p>
+          <ul style="margin-top: 8px; padding-left: 18px; font-size: 0.85rem; line-height: 1.5;">
+            <li><strong>Nuôi dưỡng tính vị tha:</strong> Khuyến khích con làm đồ chơi nhỏ tặng trẻ em nghèo, giúp mẹ và
+              hàng xóm việc vặt từ nhỏ. <span class="page-ref">Ch 7 · §12</span></li>
+            <li><strong>Dạy trẻ nghe lời:</strong> Giải thích rõ ràng nguyên nhân trước khi yêu cầu trẻ làm hoặc không
+              làm việc gì. <span class="page-ref">Ch 7 · §12</span></li>
+            <li><strong>Tự chủ & Dũng cảm:</strong> Khi trẻ ngã đau, nhanh chóng hướng sự chú ý của trẻ sang việc khác
+              để quên đau, tránh dỗ dành quá mức làm trẻ yếu đuối. <span class="page-ref">Ch 7 · §12</span></li>
+          </ul>
+        </div>
+
+        <div class="content-card" style="border-top: 4px solid var(--accent-red); padding: 20px;">
+          <h3 style="color: var(--accent-red); margin-bottom: 12px;">Tuyệt Đối Phản Đối Bạo Lực Roi Vọt</h3>
+          <p style="font-size: 0.9rem; line-height: 1.6;">
+            Bà Stoner kịch liệt lên án việc dùng roi vọt và quát mắng trong việc dạy dỗ con trẻ. <span
+              class="page-ref">Ch 7 · §12</span>
+          </p>
+          <ul style="margin-top: 8px; padding-left: 18px; font-size: 0.85rem; line-height: 1.5;">
+            <li><strong>Hậu quả của đòn roi:</strong> Trẻ bị đánh đập thường lớn lên sẽ ngoan cố, hung bạo và tàn nhẫn.
+              Nhiều cha mẹ đánh con khi giận rồi lại xót xa ôm ấp cho kẹo -> Làm hư hỏng nhân cách trẻ. <span
+                class="page-ref">Ch 7 · §12</span></li>
+            <li><strong>Hậu quả của quát mắng:</strong> Cha mẹ trút giận công việc lên đầu con làm trẻ ấm ức, phản kháng
+              và mất niềm tin. Trẻ sẽ trở thành bản sao cáu gắt của cha mẹ. <span class="page-ref">Ch 7 · §12</span>
+            </li>
+            <li><strong>Tôn trọng lòng tự trọng:</strong> Tuyệt đối không đay nghiến, nhắc lại lỗi lầm của con trước mặt
+              người khác. <span class="page-ref">Ch 7 · §12</span></li>
+          </ul>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 7 · THƯỞNG PHẠT PHÂN MINH</div>
+      <h2>Bảng biểu hành vi &amp; Thưởng phạt</h2>
+      <div class="content-card" style="border-left: 4px solid var(--accent); padding: 24px;">
+        <h3 style="color: var(--accent); margin-bottom: 12px;">Quy Tắc Thưởng Phạt & Bảng Biểu Hành Vi</h3>
+        <p style="font-size: 0.95rem; line-height: 1.5; margin-bottom: 15px;">
+          Thay vì la rầy, hãy để trẻ hiểu quy tắc "nhân - quả" hay "thưởng - phạt phân minh" trong mọi hành vi xã giao:
+          <span class="page-ref">Ch 7 · §13</span>
+        </p>
+
+        <div style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 20px;">
+          <div style="background-color: var(--surface-muted); padding: 15px; border-radius: var(--radius-md);">
+            <strong>Thưởng Phạt Tự Nhiên:</strong>
+            <ul style="margin-top: 8px; padding-left: 15px; font-size: 0.82rem; line-height: 1.5;">
+              <li><strong>Thưởng:</strong> Làm tốt -> Được Bà tiên đặt kẹo/quà trên giường sáng hôm sau. <span
+                  class="page-ref">Ch 7 · §13</span></li>
+              <li><strong>Phạt:</strong> Đi chơi về muộn 10 phút -> Hủy buổi xem kịch thứ Ba định kỳ. Vứt bừa bãi quần
+                áo -> Không được mua đồ mới. <span class="page-ref">Ch 7 · §13</span></li>
+              <li><strong>Giao tiếp xã hội:</strong> Tôn trọng sự tự nguyện, không ra lệnh thô bạo gây ức chế tâm lý.
+                <span class="page-ref">Ch 7 · §13</span>
+              </li>
+            </ul>
+          </div>
+
+          <div
+            style="background-color: var(--accent-soft); padding: 15px; border-radius: var(--radius-md); border: 1px dashed var(--accent);">
+            <strong>Bảng Biểu Hành Vi 13 Cột (Hằng Tuần):</strong>
+            <p style="font-size: 0.82rem; line-height: 1.4; margin-top: 5px;">
+              Bảng chia 13 đức tính: <em>vâng lời, lễ phép, độ lượng, tốt bụng, dũng cảm, kiên nhẫn, trung thực, vui vẻ,
+                sạch sẽ, chăm chỉ, vị tha, việc thiện...</em> <span class="page-ref">Ch 7 · §13</span>
+            </p>
+            <ul style="margin-top: 5px; padding-left: 15px; font-size: 0.8rem; line-height: 1.4;">
+              <li>Hành vi tốt -> Dán <strong>sao vàng</strong>. Chưa tốt -> Dán <strong>sao đen</strong>.</li>
+              <li>Cuối tuần tổng kết: Sao vàng nhiều hơn -> Thưởng quà. Sao đen nhiều -> Không thưởng. <span
+                  class="page-ref">Ch 7 · §13</span></li>
+              <li><strong>Bí quyết:</strong> Mỗi tuần thay bảng mới hoàn toàn để con không nản lòng bởi các sao đen cũ.
+                <span class="page-ref">Ch 7 · §13</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 7 · SỨC KHỎE THỂ CHẤT</div>
+      <h2>Dinh dưỡng, Vận động &amp; Thể thao</h2>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; width: 100%;">
+        <div class="content-card" style="border-top: 4px solid var(--accent-emerald); padding: 20px;">
+          <h3 style="color: var(--accent-emerald); margin-bottom: 12px;">Dinh Dưỡng Khoa Học Cho Trẻ</h3>
+          <ul style="padding-left: 18px; font-size: 0.88rem; line-height: 1.5;">
+            <li><strong>Khởi đầu tự nhiên:</strong> Không khí sạch, nước tinh khiết và ưu tiên hoàn toàn sữa mẹ. 4 tháng
+              tập uống nước quả, ăn súp, trứng... <span class="page-ref">Ch 7 · §14</span></li>
+            <li><strong>Không ép ăn:</strong> Tôn trọng sở thích tự nhiên của con, không ép ăn ngũ cốc nếu con không
+              thích. Thịt chỉ ăn sau 2 tuổi. <span class="page-ref">Ch 7 · §14</span></li>
+            <li><strong>Phản bác ăn chay cực đoan:</strong> Phê phán liệu pháp ăn chay phi khoa học thiếu căn cứ thực
+              chứng (như ăn khoai tây phát triển suy luận, ăn bắp cải trở nên tầm thường...). <span class="page-ref">Ch
+                7 · §14</span></li>
+            <li><strong>Bữa ăn vui vẻ:</strong> Mọi người cười nói thoải mái giúp tiêu hóa dễ dàng. Tránh ăn quá nhiều
+              gây chướng bụng. <span class="page-ref">Ch 7 · §14</span></li>
+          </ul>
+        </div>
+
+        <div class="content-card" style="border-top: 4px solid var(--accent-purple); padding: 20px;">
+          <h3 style="color: var(--accent-purple); margin-bottom: 12px;">Vận Động & Phát Triển Thể Chất</h3>
+          <ul style="padding-left: 18px; font-size: 0.88rem; line-height: 1.5;">
+            <li><strong>Vận động cực sớm:</strong> 2 - 3 tuần tuổi tập nắm gậy giơ tay lên xuống. Cho ngủ ngoài trời.
+              Tuyệt đối không quấn tã quá chặt làm hạn chế cử động tự do. <span class="page-ref">Ch 7 · §14</span></li>
+            <li><strong>Thói quen vệ sinh:</strong> Rửa tay mặt nhiều lần (rửa cho cả búp bê cao su để làm mẫu). Đánh
+              răng từ 1 tuổi. Tập hít thở sâu tốt cho phổi. <span class="page-ref">Ch 7 · §14</span></li>
+            <li><strong>Thể thao vượt trội:</strong> Winifred học cưỡi ngựa từ 3 tuổi. Cô bé bơi giỏi, chèo thuyền giỏi,
+              chơi bóng chày, quần vợt, trèo cây leo núi tốt. <span class="page-ref">Ch 7 · §14</span></li>
+            <li><strong>Tinh thần sảng khoái:</strong> Tránh lo âu, tức giận hại sức khỏe. <span class="page-ref">Ch 7 ·
+                §14</span> Nghiêm cấm la mắng con cuối ngày; trẻ cần đi ngủ với nụ cười mãn nguyện.</li>
+          </ul>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 7 · THIÊN CHỨC LÀM MẸ</div>
+      <h2>Vai trò người mẹ &amp; Thai giáo</h2>
+      <div class="content-card" style="border-left: 4px solid var(--accent); padding: 24px;">
+        <h3 style="color: var(--accent); margin-bottom: 12px;">Thiên Chức Người Mẹ & Sức Mạnh Thai Giáo</h3>
+
+        <div
+          style="display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 24px; font-size: 0.92rem; line-height: 1.6;">
+          <div>
+            <strong style="color: var(--accent-purple);">Vai trò Không thể Ủy quyền:</strong>
+            <ul style="margin-top: 8px; padding-left: 18px; font-size: 0.85rem; line-height: 1.5;">
+              <li>Số phận con người do người mẹ quyết định. Bà Stoner phản đối việc "ủy quyền" hoàn toàn cho nhũ mẫu.
+                Nhũ mẫu thường chỉ biết chăm sóc sinh hoạt và hay cấm đoán vô lý làm hạn chế năng lực của trẻ. <span
+                  class="page-ref">Ch 7 · §15</span></li>
+              <li><strong>Bài trí phòng trẻ:</strong> Cần sáng sủa, thoáng đãng, ánh sáng mặt trời đầy đủ. Tường xanh
+                dịu, sàn trắng, chăn nhẹ. Treo tranh danh họa, tượng điêu khắc (bản sao) để giáo dục thẩm mỹ từ bé.
+                <span class="page-ref">Ch 7 · §15</span>
+              </li>
+              <li>Frobel nói: <em>"Số phận của dân tộc nằm trong tay các bà mẹ."</em> <span class="page-ref">Ch 7 ·
+                  §15</span></li>
+            </ul>
+          </div>
+
+          <div
+            style="background-color: var(--success-soft); padding: 15px; border-radius: var(--radius-md); border-top: 4px solid var(--success);">
+            <strong style="color: var(--success);">Nghệ Thuật Thai Giáo Cốt Lõi:</strong>
+            <p style="font-size: 0.85rem; line-height: 1.5; margin-top: 8px;">
+              Chế độ dinh dưỡng và tinh thần của mẹ bầu ảnh hưởng trực tiếp đến sự phát triển thể chất, trí tuệ của thai
+              nhi: <span class="page-ref">Ch 7 · §15</span>
+            </p>
+            <ul style="margin-top: 5px; padding-left: 18px; font-size: 0.8rem; line-height: 1.4;">
+              <li>Giữ tinh thần luôn vui vẻ, lạc quan, dũng cảm; tuyệt đối tránh khóc lóc, u sầu khi mang thai. <span
+                  class="page-ref">Ch 7 · §15</span></li>
+              <li>Bồi dưỡng tình yêu cái đẹp, nghệ thuật và chính nghĩa bằng cách đọc sách hay, nghe nhạc nhẹ, làm việc
+                thiện. <span class="page-ref">Ch 7 · §15</span></li>
+              <li>Trang bị cho con "bộ áo giáp tình yêu" và "thanh gươm trí tuệ" ngay từ trong bụng mẹ. <span
+                  class="page-ref">Ch 7 · §15</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 7 · CÂU HỎI SUY NGẪM</div>
+      <h2>Bộ câu hỏi tự suy ngẫm cho cha mẹ</h2>
+      <div class="content-card" style="border-top: 4px solid var(--accent); padding: 24px;">
+        <h3 style="color: var(--accent); margin-bottom: 15px; text-align: center;">Bộ Câu Hỏi Suy Ngẫm Sâu Chương 7
+          (Bloom's Taxonomy)</h3>
+
+        <div
+          style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; font-size: 0.9rem; line-height: 1.5; margin-top: 15px;">
+          <div>
+            <p style="margin-bottom: 12px;">
+              <strong>1. Nhận biết & Thông hiểu:</strong><br>
+              Tại sao việc dạy toán cho Winifred thất bại ở giai đoạn đầu? Sự khác biệt cốt lõi giữa phương pháp Stoner
+              và Montessori nằm ở đâu?
+            </p>
+            <p style="margin-bottom: 12px;">
+              <strong>2. Áp dụng:</strong><br>
+              Bạn có thể ứng dụng máy đánh chữ (hoặc bàn phím máy tính) và trò chơi xúc xắc như thế nào để hỗ trợ con
+              học chữ và học toán vui vẻ?
+            </p>
+          </div>
+
+          <div>
+            <p style="margin-bottom: 12px;">
+              <strong>3. Phân tích & Đánh giá:</strong><br>
+              Phản tỉnh về cách ứng xử của bạn khi con bị ngã hoặc khi bạn bận rộn việc nhà. Bạn có đang vô tình "ủy
+              quyền" giáo dục con cho các thiết bị điện tử không?
+            </p>
+            <p style="margin-bottom: 12px;">
+              <strong>4. Sáng tạo:</strong><br>
+              Hãy lên kế hoạch thiết kế lại không gian phòng ngủ của con: sơn tường, ánh sáng, treo tranh nghệ thuật...
+              nhằm tối ưu hóa sự phát triển thẩm mỹ của trẻ.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 7 · KẾ HOẠCH HÀNH ĐỘNG</div>
+      <h2>Lộ trình thực hành phương pháp Stoner</h2>
+      <div class="content-card" style="border-left: 4px solid var(--accent-emerald); padding: 24px;">
+        <h3 style="color: var(--accent-emerald); margin-bottom: 12px;">Lộ Trình Hành Động 7 Ngày (Áp dụng Stoner)</h3>
+
+        <table style="width: 100%; border-collapse: collapse; font-size: 0.85rem; line-height: 1.4; margin-top: 10px;">
+          <thead>
+            <tr style="border-bottom: 2px solid var(--border-strong); text-align: left;">
+              <th style="padding: 8px; font-weight: bold; color: var(--accent); width: 15%;">Ngày</th>
+              <th style="padding: 8px; font-weight: bold; color: var(--accent); width: 50%;">Hành động cụ thể</th>
+              <th style="padding: 8px; font-weight: bold; color: var(--accent); width: 35%;">Mục tiêu kiểm chứng</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom: 1px solid var(--border-subtle);">
+              <td style="padding: 8px; font-weight: 500;">Ngày 1-2</td>
+              <td style="padding: 8px;">Thiết lập môi trường: Treo bảng chữ cái trên tường (độ cao dưới 1m), chuẩn bị
+                chuông 7 màu hoặc đàn đồ chơi. Treo 2 bức tranh nghệ thuật trong phòng con.</td>
+              <td style="padding: 8px; color: var(--success); font-weight: 500;">Kích hoạt thị giác & thính giác</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border-subtle);">
+              <td style="padding: 8px; font-weight: 500;">Ngày 3-4</td>
+              <td style="padding: 8px;">Toán học vui vẻ: Chơi trò chơi xúc xắc (10-15 phút mỗi tối) và trò chơi đếm hạt
+                đậu phộng/đậu đỏ trực quan cùng con.</td>
+              <td style="padding: 8px; color: var(--success); font-weight: 500;">Vượt qua nỗi sợ số học</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border-subtle);">
+              <td style="padding: 8px; font-weight: 500;">Ngày 5</td>
+              <td style="padding: 8px;">Dã ngoại thực tế: Đưa con đi công viên hoặc rừng cây. Cùng con nhặt lá, đập đá,
+                xem sâu/bướm và vẽ tranh, kể chuyện thần thoại ngoài trời.</td>
+              <td style="padding: 8px; color: var(--success); font-weight: 500;">Kết nối trực quan với tự nhiên</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border-subtle);">
+              <td style="padding: 8px; font-weight: 500;">Ngày 6</td>
+              <td style="padding: 8px;">Thiết lập kỷ luật: Vẽ bảng biểu hành vi tuần (sử dụng sao vàng - sao đen). Thống
+                nhất luật chơi thưởng phạt rõ ràng với trẻ.</td>
+              <td style="padding: 8px; color: var(--success); font-weight: 500;">Hình thành tự kỷ luật tích cực</td>
+            </tr>
+            <tr>
+              <td style="padding: 8px; font-weight: 500;">Ngày 7</td>
+              <td style="padding: 8px;">Đọc sách bỏ lửng: Kể một câu chuyện cổ tích hấp dẫn, dừng lại ở đoạn cao trào,
+                chỉ sách và khuyến khích trẻ tự đọc tiếp phần còn lại.</td>
+              <td style="padding: 8px; color: var(--success); font-weight: 500;">Kích thích thói quen tự đọc sách</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </section>
+
   </div>
-</div>
 
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH 7 · DẠY HỌC CHỮ</div>
-    <h2>Đánh máy &amp; Nhật ký tuổi thơ</h2>
-<div style="display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 24px; width: 100%;">
-  <div class="content-card" style="border-top: 4px solid var(--accent); padding: 20px;">
-    <h3 style="color: var(--accent); margin-bottom: 12px;">Máy Đánh Chữ: Máy Dạy Học Chính Tả</h3>
-    <p style="font-size: 0.9rem; line-height: 1.6;">
-      Bà Stoner ngẫu nhiên phát hiện con gái rất hứng thú khi nhìn mẹ đánh máy. Bà đã tận dụng điều này để dạy Winifred học chính tả từ sớm. <span class="page-ref">Ch 7 · §5</span>
-    </p>
-    <ul style="margin-top: 10px; padding-left: 18px; font-size: 0.88rem; line-height: 1.5;">
-      <li><strong>Cách làm:</strong> Cho trẻ tự do gõ các chữ cái, sau đó hướng dẫn chép lại các bài thơ, truyện cổ tích nổi tiếng.</li>
-      <li><strong>Hiệu quả vượt trội:</strong> Trực quan hóa các con chữ giúp trẻ ghi nhớ cách ghép vần cực nhanh, tự viết truyện và làm thơ từ trước 3 tuổi. <span class="page-ref">Ch 7 · §5</span></li>
-    </ul>
+  <div class="nav-controls">
+    <button class="nav-btn" id="prevBtn" onclick="prevSlide()" aria-label="Previous slide">&#8592;</button>
+    <div class="counter" id="counter" aria-live="polite">1 / 1</div>
+    <button class="nav-btn" id="nextBtn" onclick="nextSlide()" aria-label="Next slide">&#8594;</button>
   </div>
 
-  <div class="content-card" style="border-top: 4px solid var(--accent-purple); padding: 20px;">
-    <h3 style="color: var(--accent-purple); margin-bottom: 12px;">Cầm Bút & Viết Nhật Ký</h3>
-    <ul style="padding-left: 18px; font-size: 0.88rem; line-height: 1.5;">
-      <li><strong>Học viết sớm:</strong> Dạy con cầm bút chì đỏ từ 17 tháng. 2 tuổi Winifred tự ký tên vào sổ đăng ký khách sạn. <span class="page-ref">Ch 7 · §5</span></li>
-      <li><strong>Nhật ký từ 2 tuổi:</strong> Khuyến khích con ghi chép nhật ký hàng ngày (ghi cả những ngày mưa ngồi bên cửa sổ). <span class="page-ref">Ch 7 · §5</span></li>
-      <li><strong>Món quà vô giá của mẹ:</strong> Khuyên cha mẹ tự viết nhật ký ghi lại quá trình phát triển của con từng ngày để làm kỷ vật quý giá cho con sau này. <span class="page-ref">Ch 7 · §5</span></li>
-    </ul>
-  </div>
-</div>
-
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH 7 · TRÒ CHƠI TOÁN HỌC</div>
-    <h2>Biến số học thành trò chơi vui vẻ</h2>
-<div class="content-card" style="border-left: 4px solid var(--accent-amber); padding: 24px;">
-  <h3 style="color: var(--accent-amber); margin-bottom: 12px;">Trị Liệu Nỗi Sợ Toán: Biến Con Số Thành Trò Chơi</h3>
-  <p style="font-size: 0.95rem; line-height: 1.5; margin-bottom: 15px;">
-    Dù thạo 8 thứ tiếng lúc 5 tuổi, Winifred lại cực kỳ sợ toán và không thuộc bảng cửu chương. Lý do: Mẹ không thích toán nên dạy tẻ nhạt. Nhờ lời khuyên của một giáo sư toán, bà Stoner đã thay đổi phương pháp: <span class="page-ref">Ch 7 · §9</span>
-  </p>
-
-  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px;">
-    <div style="background-color: var(--surface-muted); padding: 12px; border-radius: var(--radius-md); border-top: 3px solid var(--accent);">
-      <strong>1. Đếm hạt đậu</strong>
-      <p style="font-size: 0.8rem; line-height: 1.4; margin-top: 5px;">
-        Thi nhặt hạt đậu/nút áo từ hộp và đếm; đếm hạt lạc khi bóc. Dùng hạt đậu xếp hàng/cột trực quan để hiểu bản chất bảng cửu chương (2x2, 3x3 là gì). <span class="page-ref">Ch 7 · §9</span>
-      </p>
-    </div>
-    <div style="background-color: var(--surface-muted); padding: 12px; border-radius: var(--radius-md); border-top: 3px solid var(--accent-amber);">
-      <strong>2. Đổ xúc xắc</strong>
-      <p style="font-size: 0.8rem; line-height: 1.4; margin-top: 5px;">
-        Chơi đổ xúc xắc cộng điểm thi đua thắng thua. Tăng dần từ 2 viên lên 6 viên. Rèn luyện tư duy tính nhẩm tốc độ cao cực kỳ hào hứng. <span class="page-ref">Ch 7 · §9</span>
-      </p>
-    </div>
-    <div style="background-color: var(--surface-muted); padding: 12px; border-radius: var(--radius-md); border-top: 3px solid var(--accent-emerald);">
-      <strong>3. Trò chơi mua bán</strong>
-      <p style="font-size: 0.8rem; line-height: 1.4; margin-top: 5px;">
-        Winifred làm chủ tiệm, mẹ làm khách. Dùng tiền thật để mua bán, tính toán giá cả và trả lại tiền thừa. Gửi tiền tiết kiệm ngân hàng tự tính lãi suất. <span class="page-ref">Ch 7 · §9</span>
-      </p>
-    </div>
-  </div>
-
-  <div style="background-color: var(--warning-soft); padding: 10px; border-radius: var(--radius-sm); margin-top: 15px; font-size: 0.82rem; text-align: center; color: var(--warning); font-weight: 500;">
-    Lưu ý: Các trò chơi toán học đòi hỏi não bộ tập trung cao, chỉ nên chơi tối đa 15 phút mỗi lần để tránh làm mệt mỏi hệ thần kinh của trẻ. <span class="page-ref">Ch 7 · §9</span>
-  </div>
-</div>
-
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH 7 · DÃ NGOẠI THIÊN NHIÊN</div>
-    <h2>Tự nhiên là cuốn sách giáo khoa</h2>
-<div style="display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 24px; width: 100%;">
-  <div class="content-card" style="border-left: 4px solid var(--accent-emerald); padding: 20px;">
-    <h3 style="color: var(--accent-emerald); margin-bottom: 12px;">Cánh Rừng: Cuốn Sách Giáo Khoa Vĩ Đại Nhất</h3>
-    <p style="font-size: 0.9rem; line-height: 1.6;">
-      Bà Stoner kịch liệt phản đối việc giam trẻ trong bốn bức tường. Bà tận dụng triệt để thiên nhiên để dạy các môn khoa học: <span class="page-ref">Ch 7 · §6</span>
-    </p>
-    <ul style="margin-top: 10px; padding-left: 18px; font-size: 0.88rem; line-height: 1.5;">
-      <li><strong>Sinh học thực nghiệm:</strong> Ngắt hoa cỏ để "giải phẫu", đập đá quan sát địa chất, dùng kính hiển vi soi côn trùng. Làm sổ tay sưu tầm mẫu thực vật. <span class="page-ref">Ch 7 · §6</span></li>
-      <li><strong>Vượt qua nỗi sợ:</strong> Sợ sâu xanh -> Giải thích vòng đời hóa bướm xinh đẹp. Cho con tự nuôi ong, bướm và tự viết truyện về đời sống của chúng. <span class="page-ref">Ch 7 · §6</span></li>
-      <li><strong>Làm vườn:</strong> Mua xẻng nhỏ cho con tự gieo hạt, nhổ cỏ, tưới cây nhằm rèn luyện tính kiên nhẫn, tình yêu thiên nhiên và tâm hồn hướng thiện. <span class="page-ref">Ch 7 · §6</span></li>
-      <li><strong>Địa lý biển:</strong> Nhặt sò, tảo, sao biển, sứa để giải thích về sông hồ, vịnh, đảo... Kết hợp chỉ quả địa cầu khi về nhà. <span class="page-ref">Ch 7 · §6</span></li>
-    </ul>
-  </div>
-
-  <div style="display: flex; flex-direction: column; gap: 15px;">
-    <div class="content-card" style="background-color: var(--surface-muted); padding: 15px; border-radius: var(--radius-md); border-left: 3px solid var(--accent);">
-      <h4 style="color: var(--accent); margin-bottom: 5px;">Cắm trại & Đọc thơ</h4>
-      <p style="font-size: 0.82rem; line-height: 1.4; color: var(--text-secondary);">
-        Mùa hè lên núi cắm trại, nằm dài trên cỏ ngắm mây trời, ngâm thơ về tự nhiên, chụp ảnh phong cảnh đẹp. Winifred vẽ tranh và viết truyện trực tiếp giữa rừng sâu. <span class="page-ref">Ch 7 · §6</span>
-      </p>
-    </div>
-    
-    <div class="content-card" style="background-color: var(--surface-muted); padding: 15px; border-radius: var(--radius-md); border-left: 3px solid var(--accent-purple);">
-      <h4 style="color: var(--accent-purple); margin-bottom: 5px;">Nuôi thú cưng</h4>
-      <p style="font-size: 0.82rem; line-height: 1.4; color: var(--text-secondary);">
-        Nuôi hoàng yến (dạy nhảy múa, lật trang sách, nhắm mắt theo lệnh), nuôi chó, mèo, cá vàng để phát triển tình yêu động vật và tính nhân ái. <span class="page-ref">Ch 7 · §6</span>
-      </p>
-    </div>
-  </div>
-</div>
-
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH 7 · TRÍ TƯỞNG TƯỢNG</div>
-    <h2>Sức mạnh trí tưởng tượng vs Montessori</h2>
-<div class="content-card" style="border-left: 4px solid var(--accent); padding: 24px;">
-  <h3 style="color: var(--accent); margin-bottom: 12px;">Trí Tưởng Tượng & Cuộc Tranh Biện Montessori</h3>
-  
-  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; font-size: 0.92rem; line-height: 1.6;">
-    <div>
-      <strong style="color: var(--accent-purple);">Sức mạnh của Trí tưởng tượng:</strong>
-      <ul style="margin-top: 8px; padding-left: 18px; font-size: 0.85rem; line-height: 1.5;">
-        <li>"Không biết tưởng tượng thì không thể hạnh phúc thực sự." Trí tưởng tượng là nền tảng của phát minh khoa học (tàu hơi nước của Fulton, máy bay của Wright) và nghệ thuật. <span class="page-ref">Ch 7 · §11</span></li>
-        <li><strong>Phương pháp kích hoạt:</strong> Kể chuyện thần thoại, diễn kịch cùng con. Tạo ra hai người bạn tưởng tượng (Neri và Rusi) để trò chuyện khi ở quê. <span class="page-ref">Ch 7 · §11</span></li>
-        <li><strong>Đồ chơi đơn giản:</strong> Khuyên dùng búp bê vải tự may đồ, mô hình gỗ tự xây thành lũy. Nghiêm cấm cha mẹ vứt bỏ các mô hình con đang xây dựng dở dang. <span class="page-ref">Ch 7 · §11</span></li>
-      </ul>
-    </div>
-
-    <div style="background-color: var(--warning-soft); padding: 15px; border-radius: var(--radius-md); border-top: 4px solid var(--warning);">
-      <strong style="color: var(--warning);">Tranh biện phương pháp Montessori:</strong>
-      <p style="font-size: 0.85rem; line-height: 1.5; margin-top: 8px;">
-        Bà Stoner thừa nhận Maria Montessori là nhà giáo dục vĩ đại, nhưng <strong>phương pháp Montessori không thể tạo ra thiên tài</strong>. <span class="page-ref">Ch 7 · §11</span>
-      </p>
-      <ul style="margin-top: 8px; padding-left: 18px; font-size: 0.8rem; line-height: 1.4;">
-        <li><strong>Lý do:</strong> Montessori chỉ chú ý vào hiện thực khô khan, cấm đoán chuyện thần tiên và bài xích thế giới tưởng tượng của trẻ. <span class="page-ref">Ch 7 · §11</span></li>
-        <li><strong>Kết luận:</strong> Phương pháp đó chỉ phù hợp với trẻ chậm phát triển cần trị liệu nhận thức, còn với trẻ bình thường thì hạn chế năng lực sáng tạo dồi dào. <span class="page-ref">Ch 7 · §11</span></li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH 7 · GIÁO DỤC NHÂN CÁCH</div>
-    <h2>Tấm gương cha mẹ &amp; Nói không với đòn roi</h2>
-<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; width: 100%;">
-  <div class="content-card" style="border-top: 4px solid var(--accent); padding: 20px;">
-    <h3 style="color: var(--accent); margin-bottom: 12px;">Cha Mẹ Là Tấm Gương Phản Chiếu</h3>
-    <p style="font-size: 0.9rem; line-height: 1.6;">
-      Goethe nói: "Con cái chỉ thành người có giáo dục khi chính cha mẹ là người có giáo dục". Trẻ con chịu ảnh hưởng sâu sắc từ thói quen của cha mẹ. <span class="page-ref">Ch 7 · §12</span>
-    </p>
-    <ul style="margin-top: 8px; padding-left: 18px; font-size: 0.85rem; line-height: 1.5;">
-      <li><strong>Nuôi dưỡng tính vị tha:</strong> Khuyến khích con làm đồ chơi nhỏ tặng trẻ em nghèo, giúp mẹ và hàng xóm việc vặt từ nhỏ. <span class="page-ref">Ch 7 · §12</span></li>
-      <li><strong>Dạy trẻ nghe lời:</strong> Giải thích rõ ràng nguyên nhân trước khi yêu cầu trẻ làm hoặc không làm việc gì. <span class="page-ref">Ch 7 · §12</span></li>
-      <li><strong>Tự chủ & Dũng cảm:</strong> Khi trẻ ngã đau, nhanh chóng hướng sự chú ý của trẻ sang việc khác để quên đau, tránh dỗ dành quá mức làm trẻ yếu đuối. <span class="page-ref">Ch 7 · §12</span></li>
-    </ul>
-  </div>
-
-  <div class="content-card" style="border-top: 4px solid var(--accent-red); padding: 20px;">
-    <h3 style="color: var(--accent-red); margin-bottom: 12px;">Tuyệt Đối Phản Đối Bạo Lực Roi Vọt</h3>
-    <p style="font-size: 0.9rem; line-height: 1.6;">
-      Bà Stoner kịch liệt lên án việc dùng roi vọt và quát mắng trong việc dạy dỗ con trẻ. <span class="page-ref">Ch 7 · §12</span>
-    </p>
-    <ul style="margin-top: 8px; padding-left: 18px; font-size: 0.85rem; line-height: 1.5;">
-      <li><strong>Hậu quả của đòn roi:</strong> Trẻ bị đánh đập thường lớn lên sẽ ngoan cố, hung bạo và tàn nhẫn. Nhiều cha mẹ đánh con khi giận rồi lại xót xa ôm ấp cho kẹo -> Làm hư hỏng nhân cách trẻ. <span class="page-ref">Ch 7 · §12</span></li>
-      <li><strong>Hậu quả của quát mắng:</strong> Cha mẹ trút giận công việc lên đầu con làm trẻ ấm ức, phản kháng và mất niềm tin. Trẻ sẽ trở thành bản sao cáu gắt của cha mẹ. <span class="page-ref">Ch 7 · §12</span></li>
-      <li><strong>Tôn trọng lòng tự trọng:</strong> Tuyệt đối không đay nghiến, nhắc lại lỗi lầm của con trước mặt người khác. <span class="page-ref">Ch 7 · §12</span></li>
-    </ul>
-  </div>
-</div>
-
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH 7 · THƯỞNG PHẠT PHÂN MINH</div>
-    <h2>Bảng biểu hành vi &amp; Thưởng phạt</h2>
-<div class="content-card" style="border-left: 4px solid var(--accent); padding: 24px;">
-  <h3 style="color: var(--accent); margin-bottom: 12px;">Quy Tắc Thưởng Phạt & Bảng Biểu Hành Vi</h3>
-  <p style="font-size: 0.95rem; line-height: 1.5; margin-bottom: 15px;">
-    Thay vì la rầy, hãy để trẻ hiểu quy tắc "nhân - quả" hay "thưởng - phạt phân minh" trong mọi hành vi xã giao: <span class="page-ref">Ch 7 · §13</span>
-  </p>
-
-  <div style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 20px;">
-    <div style="background-color: var(--surface-muted); padding: 15px; border-radius: var(--radius-md);">
-      <strong>Thưởng Phạt Tự Nhiên:</strong>
-      <ul style="margin-top: 8px; padding-left: 15px; font-size: 0.82rem; line-height: 1.5;">
-        <li><strong>Thưởng:</strong> Làm tốt -> Được Bà tiên đặt kẹo/quà trên giường sáng hôm sau. <span class="page-ref">Ch 7 · §13</span></li>
-        <li><strong>Phạt:</strong> Đi chơi về muộn 10 phút -> Hủy buổi xem kịch thứ Ba định kỳ. Vứt bừa bãi quần áo -> Không được mua đồ mới. <span class="page-ref">Ch 7 · §13</span></li>
-        <li><strong>Giao tiếp xã hội:</strong> Tôn trọng sự tự nguyện, không ra lệnh thô bạo gây ức chế tâm lý. <span class="page-ref">Ch 7 · §13</span></li>
-      </ul>
-    </div>
-
-    <div style="background-color: var(--accent-soft); padding: 15px; border-radius: var(--radius-md); border: 1px dashed var(--accent);">
-      <strong>Bảng Biểu Hành Vi 13 Cột (Hằng Tuần):</strong>
-      <p style="font-size: 0.82rem; line-height: 1.4; margin-top: 5px;">
-        Bảng chia 13 đức tính: <em>vâng lời, lễ phép, độ lượng, tốt bụng, dũng cảm, kiên nhẫn, trung thực, vui vẻ, sạch sẽ, chăm chỉ, vị tha, việc thiện...</em> <span class="page-ref">Ch 7 · §13</span>
-      </p>
-      <ul style="margin-top: 5px; padding-left: 15px; font-size: 0.8rem; line-height: 1.4;">
-        <li>Hành vi tốt -> Dán <strong>sao vàng</strong>. Chưa tốt -> Dán <strong>sao đen</strong>.</li>
-        <li>Cuối tuần tổng kết: Sao vàng nhiều hơn -> Thưởng quà. Sao đen nhiều -> Không thưởng. <span class="page-ref">Ch 7 · §13</span></li>
-        <li><strong>Bí quyết:</strong> Mỗi tuần thay bảng mới hoàn toàn để con không nản lòng bởi các sao đen cũ. <span class="page-ref">Ch 7 · §13</span></li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH 7 · SỨC KHỎE THỂ CHẤT</div>
-    <h2>Dinh dưỡng, Vận động &amp; Thể thao</h2>
-<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; width: 100%;">
-  <div class="content-card" style="border-top: 4px solid var(--accent-emerald); padding: 20px;">
-    <h3 style="color: var(--accent-emerald); margin-bottom: 12px;">Dinh Dưỡng Khoa Học Cho Trẻ</h3>
-    <ul style="padding-left: 18px; font-size: 0.88rem; line-height: 1.5;">
-      <li><strong>Khởi đầu tự nhiên:</strong> Không khí sạch, nước tinh khiết và ưu tiên hoàn toàn sữa mẹ. 4 tháng tập uống nước quả, ăn súp, trứng... <span class="page-ref">Ch 7 · §14</span></li>
-      <li><strong>Không ép ăn:</strong> Tôn trọng sở thích tự nhiên của con, không ép ăn ngũ cốc nếu con không thích. Thịt chỉ ăn sau 2 tuổi. <span class="page-ref">Ch 7 · §14</span></li>
-      <li><strong>Phản bác ăn chay cực đoan:</strong> Phê phán liệu pháp ăn chay phi khoa học thiếu căn cứ thực chứng (như ăn khoai tây phát triển suy luận, ăn bắp cải trở nên tầm thường...). <span class="page-ref">Ch 7 · §14</span></li>
-      <li><strong>Bữa ăn vui vẻ:</strong> Mọi người cười nói thoải mái giúp tiêu hóa dễ dàng. Tránh ăn quá nhiều gây chướng bụng. <span class="page-ref">Ch 7 · §14</span></li>
-    </ul>
-  </div>
-
-  <div class="content-card" style="border-top: 4px solid var(--accent-purple); padding: 20px;">
-    <h3 style="color: var(--accent-purple); margin-bottom: 12px;">Vận Động & Phát Triển Thể Chất</h3>
-    <ul style="padding-left: 18px; font-size: 0.88rem; line-height: 1.5;">
-      <li><strong>Vận động cực sớm:</strong> 2 - 3 tuần tuổi tập nắm gậy giơ tay lên xuống. Cho ngủ ngoài trời. Tuyệt đối không quấn tã quá chặt làm hạn chế cử động tự do. <span class="page-ref">Ch 7 · §14</span></li>
-      <li><strong>Thói quen vệ sinh:</strong> Rửa tay mặt nhiều lần (rửa cho cả búp bê cao su để làm mẫu). Đánh răng từ 1 tuổi. Tập hít thở sâu tốt cho phổi. <span class="page-ref">Ch 7 · §14</span></li>
-      <li><strong>Thể thao vượt trội:</strong> Winifred học cưỡi ngựa từ 3 tuổi. Cô bé bơi giỏi, chèo thuyền giỏi, chơi bóng chày, quần vợt, trèo cây leo núi tốt. <span class="page-ref">Ch 7 · §14</span></li>
-      <li><strong>Tinh thần sảng khoái:</strong> Tránh lo âu, tức giận hại sức khỏe. <span class="page-ref">Ch 7 · §14</span> Nghiêm cấm la mắng con cuối ngày; trẻ cần đi ngủ với nụ cười mãn nguyện.</li>
-    </ul>
-  </div>
-</div>
-
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH 7 · THIÊN CHỨC LÀM MẸ</div>
-    <h2>Vai trò người mẹ &amp; Thai giáo</h2>
-<div class="content-card" style="border-left: 4px solid var(--accent); padding: 24px;">
-  <h3 style="color: var(--accent); margin-bottom: 12px;">Thiên Chức Người Mẹ & Sức Mạnh Thai Giáo</h3>
-  
-  <div style="display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 24px; font-size: 0.92rem; line-height: 1.6;">
-    <div>
-      <strong style="color: var(--accent-purple);">Vai trò Không thể Ủy quyền:</strong>
-      <ul style="margin-top: 8px; padding-left: 18px; font-size: 0.85rem; line-height: 1.5;">
-        <li>Số phận con người do người mẹ quyết định. Bà Stoner phản đối việc "ủy quyền" hoàn toàn cho nhũ mẫu. Nhũ mẫu thường chỉ biết chăm sóc sinh hoạt và hay cấm đoán vô lý làm hạn chế năng lực của trẻ. <span class="page-ref">Ch 7 · §15</span></li>
-        <li><strong>Bài trí phòng trẻ:</strong> Cần sáng sủa, thoáng đãng, ánh sáng mặt trời đầy đủ. Tường xanh dịu, sàn trắng, chăn nhẹ. Treo tranh danh họa, tượng điêu khắc (bản sao) để giáo dục thẩm mỹ từ bé. <span class="page-ref">Ch 7 · §15</span></li>
-        <li>Frobel nói: <em>"Số phận của dân tộc nằm trong tay các bà mẹ."</em> <span class="page-ref">Ch 7 · §15</span></li>
-      </ul>
-    </div>
-
-    <div style="background-color: var(--success-soft); padding: 15px; border-radius: var(--radius-md); border-top: 4px solid var(--success);">
-      <strong style="color: var(--success);">Nghệ Thuật Thai Giáo Cốt Lõi:</strong>
-      <p style="font-size: 0.85rem; line-height: 1.5; margin-top: 8px;">
-        Chế độ dinh dưỡng và tinh thần của mẹ bầu ảnh hưởng trực tiếp đến sự phát triển thể chất, trí tuệ của thai nhi: <span class="page-ref">Ch 7 · §15</span>
-      </p>
-      <ul style="margin-top: 5px; padding-left: 18px; font-size: 0.8rem; line-height: 1.4;">
-        <li>Giữ tinh thần luôn vui vẻ, lạc quan, dũng cảm; tuyệt đối tránh khóc lóc, u sầu khi mang thai. <span class="page-ref">Ch 7 · §15</span></li>
-        <li>Bồi dưỡng tình yêu cái đẹp, nghệ thuật và chính nghĩa bằng cách đọc sách hay, nghe nhạc nhẹ, làm việc thiện. <span class="page-ref">Ch 7 · §15</span></li>
-        <li>Trang bị cho con "bộ áo giáp tình yêu" và "thanh gươm trí tuệ" ngay từ trong bụng mẹ. <span class="page-ref">Ch 7 · §15</span></li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH 7 · CÂU HỎI SUY NGẪM</div>
-    <h2>Bộ câu hỏi tự suy ngẫm cho cha mẹ</h2>
-<div class="content-card" style="border-top: 4px solid var(--accent); padding: 24px;">
-  <h3 style="color: var(--accent); margin-bottom: 15px; text-align: center;">Bộ Câu Hỏi Suy Ngẫm Sâu Chương 7 (Bloom's Taxonomy)</h3>
-  
-  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; font-size: 0.9rem; line-height: 1.5; margin-top: 15px;">
-    <div>
-      <p style="margin-bottom: 12px;">
-        <strong>1. Nhận biết & Thông hiểu:</strong><br>
-        Tại sao việc dạy toán cho Winifred thất bại ở giai đoạn đầu? Sự khác biệt cốt lõi giữa phương pháp Stoner và Montessori nằm ở đâu?
-      </p>
-      <p style="margin-bottom: 12px;">
-        <strong>2. Áp dụng:</strong><br>
-        Bạn có thể ứng dụng máy đánh chữ (hoặc bàn phím máy tính) và trò chơi xúc xắc như thế nào để hỗ trợ con học chữ và học toán vui vẻ?
-      </p>
-    </div>
-    
-    <div>
-      <p style="margin-bottom: 12px;">
-        <strong>3. Phân tích & Đánh giá:</strong><br>
-        Phản tỉnh về cách ứng xử của bạn khi con bị ngã hoặc khi bạn bận rộn việc nhà. Bạn có đang vô tình "ủy quyền" giáo dục con cho các thiết bị điện tử không?
-      </p>
-      <p style="margin-bottom: 12px;">
-        <strong>4. Sáng tạo:</strong><br>
-        Hãy lên kế hoạch thiết kế lại không gian phòng ngủ của con: sơn tường, ánh sáng, treo tranh nghệ thuật... nhằm tối ưu hóa sự phát triển thẩm mỹ của trẻ.
-      </p>
-    </div>
-  </div>
-</div>
-
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH 7 · KẾ HOẠCH HÀNH ĐỘNG</div>
-    <h2>Lộ trình thực hành phương pháp Stoner</h2>
-<div class="content-card" style="border-left: 4px solid var(--accent-emerald); padding: 24px;">
-  <h3 style="color: var(--accent-emerald); margin-bottom: 12px;">Lộ Trình Hành Động 7 Ngày (Áp dụng Stoner)</h3>
-  
-  <table style="width: 100%; border-collapse: collapse; font-size: 0.85rem; line-height: 1.4; margin-top: 10px;">
-    <thead>
-      <tr style="border-bottom: 2px solid var(--border-strong); text-align: left;">
-        <th style="padding: 8px; font-weight: bold; color: var(--accent); width: 15%;">Ngày</th>
-        <th style="padding: 8px; font-weight: bold; color: var(--accent); width: 50%;">Hành động cụ thể</th>
-        <th style="padding: 8px; font-weight: bold; color: var(--accent); width: 35%;">Mục tiêu kiểm chứng</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr style="border-bottom: 1px solid var(--border-subtle);">
-        <td style="padding: 8px; font-weight: 500;">Ngày 1-2</td>
-        <td style="padding: 8px;">Thiết lập môi trường: Treo bảng chữ cái trên tường (độ cao dưới 1m), chuẩn bị chuông 7 màu hoặc đàn đồ chơi. Treo 2 bức tranh nghệ thuật trong phòng con.</td>
-        <td style="padding: 8px; color: var(--success); font-weight: 500;">Kích hoạt thị giác & thính giác</td>
-      </tr>
-      <tr style="border-bottom: 1px solid var(--border-subtle);">
-        <td style="padding: 8px; font-weight: 500;">Ngày 3-4</td>
-        <td style="padding: 8px;">Toán học vui vẻ: Chơi trò chơi xúc xắc (10-15 phút mỗi tối) và trò chơi đếm hạt đậu phộng/đậu đỏ trực quan cùng con.</td>
-        <td style="padding: 8px; color: var(--success); font-weight: 500;">Vượt qua nỗi sợ số học</td>
-      </tr>
-      <tr style="border-bottom: 1px solid var(--border-subtle);">
-        <td style="padding: 8px; font-weight: 500;">Ngày 5</td>
-        <td style="padding: 8px;">Dã ngoại thực tế: Đưa con đi công viên hoặc rừng cây. Cùng con nhặt lá, đập đá, xem sâu/bướm và vẽ tranh, kể chuyện thần thoại ngoài trời.</td>
-        <td style="padding: 8px; color: var(--success); font-weight: 500;">Kết nối trực quan với tự nhiên</td>
-      </tr>
-      <tr style="border-bottom: 1px solid var(--border-subtle);">
-        <td style="padding: 8px; font-weight: 500;">Ngày 6</td>
-        <td style="padding: 8px;">Thiết lập kỷ luật: Vẽ bảng biểu hành vi tuần (sử dụng sao vàng - sao đen). Thống nhất luật chơi thưởng phạt rõ ràng với trẻ.</td>
-        <td style="padding: 8px; color: var(--success); font-weight: 500;">Hình thành tự kỷ luật tích cực</td>
-      </tr>
-      <tr>
-        <td style="padding: 8px; font-weight: 500;">Ngày 7</td>
-        <td style="padding: 8px;">Đọc sách bỏ lửng: Kể một câu chuyện cổ tích hấp dẫn, dừng lại ở đoạn cao trào, chỉ sách và khuyến khích trẻ tự đọc tiếp phần còn lại.</td>
-        <td style="padding: 8px; color: var(--success); font-weight: 500;">Kích thích thói quen tự đọc sách</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-  </section>
-
-</div>
-
-<div class="nav-controls">
-  <button class="nav-btn" id="prevBtn" onclick="prevSlide()" aria-label="Previous slide">&#8592;</button>
-  <div class="counter" id="counter" aria-live="polite">1 / 1</div>
-  <button class="nav-btn" id="nextBtn" onclick="nextSlide()" aria-label="Next slide">&#8594;</button>
-</div>
-
-<script src="common.js"></script>
+  <script src="../common.js"></script>
 </body>
+
 </html>

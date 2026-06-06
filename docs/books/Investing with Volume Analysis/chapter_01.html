@@ -1,351 +1,423 @@
 <!DOCTYPE html>
 
 <html lang="vi">
+
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>Investing with Volume Analysis — Chương 1</title>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Outfit:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="common.css" rel="stylesheet"/>
-<script crossorigin="anonymous" src="https://cdn.jsdelivr.net/npm/mermaid@11.10.0/dist/mermaid.min.js"></script>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <title>Investing with Volume Analysis — Chương 1</title>
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Outfit:wght@400;500;600;700&amp;display=swap"
+    rel="stylesheet" />
+  <link href="../common.css" rel="stylesheet" />
+  <script crossorigin="anonymous" src="https://cdn.jsdelivr.net/npm/mermaid@11.10.0/dist/mermaid.min.js"></script>
 </head>
+
 <body>
-<div class="progress-bar" id="progressBar"></div>
-<div class="chapter-menu">
-<button aria-expanded="false" aria-haspopup="true" class="menu-btn" id="chapterMenuBtn" onclick="toggleChapterMenu()">Chapters ▾</button>
-<div class="chapter-menu-panel" id="chapterMenuPanel" role="menu"></div>
-</div>
-<div class="slide-container" id="slideContainer">
-<section aria-hidden="false" class="slide">
-<h1>Investing with Volume Analysis</h1>
-<p class="subtitle">Buff Pelz Dormeier — Nhận Diện, Theo Dõi Và Kiếm Lợi Nhuận Từ Xu Hướng</p>
-<div class="meta-grid" style="margin-top: 2rem;">
-<div class="metric-card meta-pill">
-<div class="metric-value">1</div>
-<div class="metric-label">Chương</div>
-</div>
-<div class="metric-card meta-pill">
-<div class="metric-value">Deep</div>
-<div class="metric-label">Chế độ phân tích</div>
-</div>
-<div class="metric-card meta-pill">
-<div class="metric-value">~10p</div>
-<div class="metric-label">Thời gian đọc</div>
-</div>
-</div>
-</section>
-<section class="slide chapter-divider">
-<div class="chapter-number">Chương 1</div>
-<h2>Hai Góc Nhìn Về Phân Tích Thị Trường</h2>
-<p class="chapter-meta">Thời gian đọc: ~5 phút · Độ khó: Cơ bản · Các khái niệm: Phân tích cơ bản, Phân tích kỹ thuật, Cung và cầu</p>
-<figure class="image-slot hero">
-<div class="image-prompt">
-<span class="image-prompt-label">AI Image Prompt — env doesn't have image-gen</span>
-<p class="image-prompt-text">"Two diverging paths in a financial district, one showing company reports, the other showing stock charts, split lighting, amber and cyan accents"</p>
-<span class="image-prompt-hint">Paste this into ChatGPT/DALL-E/Midjourney, save as images/ch1-hero.jpg, replace this block with &lt;img src="images/ch1-hero.jpg"&gt;</span>
-</div>
-</figure>
-</section>
-<section class="slide">
-<div class="slide-kicker">CH 1 · TỔNG QUAN TRỰC QUAN</div>
-<h2>Bản Đồ Tư Duy</h2>
-<div class="mermaid">
-graph TD
-    M[Thị Trường Tài Chính] --&gt; FA[Phân Tích Cơ Bản]
-    M --&gt; TA[Phân Tích Kỹ Thuật]
-    
-    FA --&gt; V[Định giá trị thực công ty]
-    V --&gt; W[Trả lời câu hỏi: CÁI GÌ]
-    W --&gt; D[Dữ liệu công ty &amp; Báo cáo tài chính]
-    
-    TA --&gt; H[Nghiên cứu hành vi nhà đầu tư]
-    H --&gt; WH[Trả lời câu hỏi: KHI NÀO]
-    WH --&gt; SD[Lực lượng Cung &amp; Cầu]
-    
-    SD --&gt; P[Giá cả]
-    SD --&gt; VOL[Khối Lượng]
-    VOL -.-&gt; |"Cái cân đo lường"| SD
-    
-    style M fill:#f9f9f9,stroke:#333,stroke-width:2px
-    style FA fill:#ffebee,stroke:#c62828
-    style TA fill:#e8f5e9,stroke:#2e7d32
-</div>
-</section>
-<section class="slide">
-<div class="slide-kicker">CH 1 · THE BIG IDEA</div>
-<h2>The Big Idea</h2>
-<div class="takeaway-hero">
-<div class="kicker">CHƯƠNG 1 · THE BIG IDEA</div>
-<div class="headline">"Giá tăng vì cầu vượt cung. Khối lượng là cái cân đo lường các lực lượng cung và cầu này."</div>
-<div class="subline">Giá trị nội tại không trực tiếp di chuyển thị trường; hành vi của những người tham gia thị trường thông qua cung - cầu (thể hiện qua giá và khối lượng) mới là yếu tố quyết định.</div>
-</div>
-</section>
-<section class="slide">
-<div class="slide-kicker">CH 1 · TÓM TẮT</div>
-<h2>Tóm Tắt Nội Dung</h2>
-<div class="callout" style="margin-bottom: 2rem;">
-<div class="callout-icon">🎯</div>
-<div class="callout-content">
-<strong>Trong một câu:</strong> Phân tích cơ bản (FA) và phân tích kỹ thuật (TA) là hai lăng kính khác nhau nhưng bổ trợ cho nhau để hiểu thị trường, trong đó khối lượng giao dịch là chìa khóa để đo lường sức mạnh thực sự của lực cung và cầu.
+  <div class="progress-bar" id="progressBar"></div>
+  <div class="chapter-menu">
+    <button aria-expanded="false" aria-haspopup="true" class="menu-btn" id="chapterMenuBtn"
+      onclick="toggleChapterMenu()">Chapters ▾</button>
+    <div class="chapter-menu-panel" id="chapterMenuPanel" role="menu"></div>
   </div>
-</div>
-<div class="bullet-grid">
-<div class="bullet-card">
-<div class="icon">🔍</div>
-<div class="heading">Bối cảnh</div>
-<div class="body">Nhà đầu tư thường mải mê tìm kiếm chén thánh (the Holy Grail) hoặc những "bí quyết" đầu tư thay vì xây dựng một sự hiểu biết vững chắc về cốt lõi cách thị trường hoạt động.</div>
-</div>
-<div class="bullet-card">
-<div class="icon">🧠</div>
-<div class="heading">Lập luận</div>
-<div class="body">Giá cả trên thị trường được tạo ra từ <strong>hành vi của con người</strong> khi họ theo đuổi giá trị, chứ không phải được tạo ra trực tiếp từ các mô hình định giá hoàn hảo.</div>
-</div>
-<div class="bullet-card">
-<div class="icon">📉</div>
-<div class="heading">Bằng chứng</div>
-<div class="body">Câu chuyện người đồng nghiệp CFA: Cổ phiếu mua ở $3, lên $6 rồi lại rơi về $3 chỉ vì mô hình định giá (chỉ ra giá trị $9) đã che mờ mọi tín hiệu xu hướng kỹ thuật. <span class="page-ref">Ch 1, p. 7-8</span></div>
-</div>
-<div class="bullet-card" style="border-left: 3px solid var(--accent-emerald);">
-<div class="icon">✨</div>
-<div class="heading">Hệ quả</div>
-<div class="body">Sự hiểu biết về lực cung và cầu thông qua <em>phân tích khối lượng</em> mang lại cho nhà đầu tư một góc nhìn vượt trội về cấu trúc dòng tiền nội tại của thị trường.</div>
-</div>
-</div>
-</section>
-<section class="slide">
-<div class="slide-kicker">CH 1 · MÔ HÌNH TƯ DUY</div>
-<h2>Mô Hình Tư Duy</h2>
-<div class="mental-model-card">
-<h4 class="model-name">Khám Phá Ô Tô (The Automobile Inspection)</h4>
-<div class="model-principle">Hai cách tiếp cận khác biệt để đánh giá cùng một tài sản, từ đó đi đến cùng một kết luận nhưng qua các phương pháp không giống nhau.</div>
-<div class="model-application" style="margin-top: 1rem;">
-<strong>Cách hoạt động:</strong>
-<ul>
-<li><strong>Nhà Phân Tích Cơ Bản:</strong> Mở nắp capo, kiểm tra động cơ, đá vào lốp xe, soi khung gầm. Tìm kiếm các khiếm khuyết vật lý hoặc giá trị thực sự tiềm ẩn của chiếc xe.</li>
-<li><strong>Nhà Phân Tích Kỹ Thuật:</strong> Không mở nắp capo. Thay vào đó, ngồi vào ghế lái và chạy thử. Đánh giá cách chiếc xe tăng tốc, vào cua, phản hồi với người lái thông qua các đồng hồ đo (như giá và khối lượng trên thị trường).</li>
-</ul>
-</div>
-<div class="model-limitations" style="margin-top: 1rem;">
-<strong>⚠️ Ý nghĩa thực tiễn:</strong>
-<ul>
-<li>Khi các "đồng hồ đo" vượt mức giới hạn, nhà phân tích kỹ thuật cũng rút ra kết luận tương tự như chuyên gia cơ bản (người đã phát hiện lỗi động cơ), nhưng mà không cần khám xét vật lý.</li>
-<li>Sự định giá của trường phái cơ bản thường chính là nguồn gốc tạo ra lực Cầu (Support) mà trường phái kỹ thuật nhìn thấy trên biểu đồ.</li>
-</ul>
-</div>
-</div>
-</section>
-<section class="slide">
-<div class="slide-kicker">CH 1 · BỐI CẢNH</div>
-<h2>Bối Cảnh &amp; Góc Nhìn</h2>
-<div class="content-card">
-<h3>1. Góc Nhìn Của Tác Giả</h3>
-<ul>
-<li><strong>Bối cảnh:</strong> Tác giả (một CMT - Chartered Market Technician) đã từng giảng dạy phân tích kỹ thuật cho các môi giới (brokers) hàng đầu tại một công ty chứng khoán lớn.</li>
-<li><strong>Góc nhìn:</strong> Là một người thực hành thực tế trên thị trường, tác giả tôn trọng phân tích cơ bản nhưng ưu tiên phân tích kỹ thuật vì tính thời điểm (trả lời câu hỏi "Khi nào" thay vì "Cái gì").</li>
-</ul>
-<h3 style="margin-top: 1.5rem;">2. Bối Cảnh Nghề Nghiệp Trong Ngành Tài Chính</h3>
-<ul>
-<li><strong>Sự phân cực và công nhận:</strong> Lịch sử tài chính thường chứng kiến sự đối đầu giữa hai trường phái. Tuy nhiên, Cơ quan Quản lý Ngành Tài chính (FINRA) chính thức công nhận hai loại chuyên gia phân tích nghiên cứu: CFA (Tài chính cơ bản) và CMT (Kỹ thuật/Hành vi). <span class="page-ref">Ch 1, p. 6</span></li>
-<li><strong>Sự kết hợp:</strong> Mặc dù xuất phát từ những giả định cực kỳ khác nhau, cả hai có thể được sử dụng cùng nhau một cách hiệu quả để giảm thiểu điểm mù.</li>
-</ul>
-</div>
-</section>
-<section class="slide">
-<div class="slide-kicker">CH 1 · BÀI HỌC QUAN TRỌNG</div>
-<h2>Key Takeaways</h2>
-<div class="takeaway-list">
-<div class="takeaway-item content-card">
-<div class="takeaway-badge">1</div>
-<div style="flex: 1;">
-<div class="takeaway-text" style="font-size: 1.25rem; color: var(--accent); margin-bottom: 0.5rem;"><strong>Cơ bản trả lời "Cái gì", Kỹ thuật trả lời "Khi nào"</strong></div>
-<div class="takeaway-detail">
-<div style="margin-bottom: 0.5rem;"><strong>Tại sao quan trọng:</strong> Chọn đúng một công ty tốt (định giá rẻ) nhưng sai thời điểm vẫn có thể dẫn đến việc chôn vốn nhiều năm, mất đi chi phí cơ hội.</div>
-<div><strong>Bằng chứng:</strong> Câu chuyện cổ phiếu đi ngang ở mức $3 bất chấp định giá lên đến $9. Nó chỉ tăng khi xuất hiện lực mua đột biến (kỹ thuật). <span class="page-ref">Ch 1, p. 7-8</span></div>
-</div>
-</div>
-</div>
-<div class="takeaway-item content-card">
-<div class="takeaway-badge" style="background: var(--accent-amber);">2</div>
-<div style="flex: 1;">
-<div class="takeaway-text" style="font-size: 1.25rem; color: var(--accent-amber); margin-bottom: 0.5rem;"><strong>Giá là hệ quả hành vi của con người, không phải của mô hình</strong></div>
-<div class="takeaway-detail">
-<div style="margin-bottom: 0.5rem;"><strong>Tại sao quan trọng:</strong> Mô hình định giá có thể đúng hoàn hảo về mặt toán học, nhưng giá trị thị trường lại được quyết định bởi hành vi cảm xúc và logic của những người đang giao dịch.</div>
-<div><strong>Ứng dụng:</strong> Đừng "cãi" lại thị trường khi xu hướng giá đi ngược lại hoàn toàn với định giá cơ bản của bạn. Hãy đánh giá dòng tiền thật.</div>
-</div>
-</div>
-</div>
-<div class="takeaway-item content-card">
-<div class="takeaway-badge" style="background: var(--accent-purple);">3</div>
-<div style="flex: 1;">
-<div class="takeaway-text" style="font-size: 1.25rem; color: var(--accent-purple); margin-bottom: 0.5rem;"><strong>Khối lượng (Volume) là cái cân của Cung và Cầu</strong></div>
-<div class="takeaway-detail">
-<div><strong>Tại sao quan trọng:</strong> Trong khi giá chỉ cho thấy bề mặt của sự dịch chuyển, khối lượng cho thấy dòng tiền thực sự đằng sau sự dịch chuyển đó, làm lộ rõ cấu trúc nội tại của thị trường. <span class="page-ref">Ch 1, p. 11</span></div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section class="slide">
-<div class="slide-kicker">CH 1 · TRÍCH DẪN ĐÁNG CHÚ Ý</div>
-<h2>Trích Dẫn Đáng Chú Ý</h2>
-<div class="quote-block">
-<p class="quote-text">"It is the glory of God to conceal a thing, but the honor of kings is to search out a matter."</p>
-<p class="quote-context"><strong>— King Solomon</strong>, đoạn trích dẫn mở đầu phần "Hai Cách Tiếp Cận Hợp Lệ". <span class="page-ref">Ch 1, p. 6</span></p>
-</div>
-<div class="content-card" style="margin-top: 2rem;">
-<h3>Diễn giải &amp; Ý nghĩa:</h3>
-<ul>
-<li><strong>Ẩn ý:</strong> Việc tìm hiểu thị trường tài chính đòi hỏi nỗ lực khám phá những nguyên lý ẩn giấu đằng sau sự hỗn loạn của hành động giá.</li>
-<li><strong>Sự liên kết:</strong> Tác giả ví việc tìm ra các cấu trúc ẩn (thông qua phân tích khối lượng - Volume) như một nỗ lực cao quý của nhà đầu tư, giống như những vị vua đi tìm kiếm sự thật bị che khuất. Khối lượng chính là manh mối để bóc trần những gì đang bị che giấu trên thị trường.</li>
-</ul>
-</div>
-</section>
-<section class="slide">
-<div class="slide-kicker">CH 1 · PHÂN TÍCH CHUYÊN SÂU</div>
-<h2>Deep Dive</h2>
-<div class="deep-section practical">
-<div class="bullet-grid">
-<div class="bullet-card">
-<h4>1. Luận Điểm Cốt Lõi</h4>
-<p>Thị trường không chạy theo giá trị nội tại một cách cơ học. Cung và Cầu mới là hai lực lượng tối thượng thiết lập giá, và Khối lượng giao dịch (Volume) là công cụ tinh tế nhất để đo lường hai lực lượng này.</p>
-</div>
-<div class="bullet-card">
-<h4>2. Đánh Giá Bằng Chứng</h4>
-<p>Tác giả sử dụng Anecdote (Giai thoại cá nhân) về người đồng nghiệp CFA. Dù mẫu số N=1, nhưng nó minh họa cực kỳ trực quan về "Opportunity Cost" (chi phí cơ hội) khi nhà đầu tư chỉ phụ thuộc vào định giá cơ bản mà bỏ qua dòng tiền.</p>
-</div>
-<div class="bullet-card">
-<h4>3. Các Giả Định Căn Bản</h4>
-<p>Tác giả giả định rằng <strong>thị trường luôn hiệu quả trong việc phản ánh hành vi tập thể</strong>, ngay cả khi mức giá đó không phản ánh đúng giá trị nội tại theo sổ sách. Con người quyết định giá, và họ vừa có tính logic vừa có tính cảm xúc.</p>
-</div>
-<div class="bullet-card">
-<h4>4. Ý Nghĩa Thực Tiễn (So What?)</h4>
-<p>Việc định giá một tài sản là quá rẻ không đồng nghĩa với việc nó sẽ tăng ngay lập tức. Bạn cần sự xác nhận từ lực cầu thật sự trên thị trường — điều này thể hiện rõ nhất qua sự đột biến của khối lượng giao dịch.</p>
-</div>
-</div>
-</div>
-</section>
-<section class="slide">
-<div class="slide-kicker">CH 1 · CÁC TẦNG ĐỌC HIỂU</div>
-<h2>Reading Layers</h2>
-<div class="content-card">
-<div class="timeline">
-<div class="timeline-item">
-<div class="timeline-marker" style="background: var(--accent-cyan)">1</div>
-<div class="timeline-body">
-<strong>Lớp 1: Đọc Bề Mặt (Surface Reading)</strong><br/>
-        Có hai trường phái phân tích chính thống: Cơ bản (nhìn vào giá trị công ty) và Kỹ thuật (nhìn vào biểu đồ, hành vi). Chúng khác nhau nhưng có thể kết hợp.
+  <div class="slide-container" id="slideContainer">
+    <section aria-hidden="false" class="slide">
+      <h1>Investing with Volume Analysis</h1>
+      <p class="subtitle">Buff Pelz Dormeier — Nhận Diện, Theo Dõi Và Kiếm Lợi Nhuận Từ Xu Hướng</p>
+      <div class="meta-grid" style="margin-top: 2rem;">
+        <div class="metric-card meta-pill">
+          <div class="metric-value">1</div>
+          <div class="metric-label">Chương</div>
+        </div>
+        <div class="metric-card meta-pill">
+          <div class="metric-value">Deep</div>
+          <div class="metric-label">Chế độ phân tích</div>
+        </div>
+        <div class="metric-card meta-pill">
+          <div class="metric-value">~10p</div>
+          <div class="metric-label">Thời gian đọc</div>
+        </div>
       </div>
-</div>
-<div class="timeline-item">
-<div class="timeline-marker" style="background: var(--accent)">2</div>
-<div class="timeline-body">
-<strong>Lớp 2: Đọc Cấu Trúc (Structural Reading)</strong><br/>
-        Tác giả cấu trúc chương bằng một sự tương phản (CFA ôm hàng không chịu chốt lời vs CMT lướt sóng thành công) để thiết lập tính ưu việt của việc <em>định thời điểm</em> (timing) trong thực tiễn giao dịch.
+    </section>
+    <section class="slide chapter-divider">
+      <div class="chapter-number">Chương 1</div>
+      <h2>Hai Góc Nhìn Về Phân Tích Thị Trường</h2>
+      <p class="chapter-meta">Thời gian đọc: ~5 phút · Độ khó: Cơ bản · Các khái niệm: Phân tích cơ bản, Phân tích kỹ
+        thuật, Cung và cầu</p>
+      <figure class="image-slot hero">
+        <div class="image-prompt">
+          <span class="image-prompt-label">AI Image Prompt — env doesn't have image-gen</span>
+          <p class="image-prompt-text">"Two diverging paths in a financial district, one showing company reports, the
+            other showing stock charts, split lighting, amber and cyan accents"</p>
+          <span class="image-prompt-hint">Paste this into ChatGPT/DALL-E/Midjourney, save as images/ch1-hero.jpg,
+            replace this block with &lt;img src="images/ch1-hero.jpg"&gt;</span>
+        </div>
+      </figure>
+    </section>
+    <section class="slide">
+      <div class="slide-kicker">CH 1 · TỔNG QUAN TRỰC QUAN</div>
+      <h2>Bản Đồ Tư Duy</h2>
+      <div class="mermaid">
+        graph TD
+        M[Thị Trường Tài Chính] --&gt; FA[Phân Tích Cơ Bản]
+        M --&gt; TA[Phân Tích Kỹ Thuật]
+
+        FA --&gt; V[Định giá trị thực công ty]
+        V --&gt; W[Trả lời câu hỏi: CÁI GÌ]
+        W --&gt; D[Dữ liệu công ty &amp; Báo cáo tài chính]
+
+        TA --&gt; H[Nghiên cứu hành vi nhà đầu tư]
+        H --&gt; WH[Trả lời câu hỏi: KHI NÀO]
+        WH --&gt; SD[Lực lượng Cung &amp; Cầu]
+
+        SD --&gt; P[Giá cả]
+        SD --&gt; VOL[Khối Lượng]
+        VOL -.-&gt; |"Cái cân đo lường"| SD
+
+        style M fill:#f9f9f9,stroke:#333,stroke-width:2px
+        style FA fill:#ffebee,stroke:#c62828
+        style TA fill:#e8f5e9,stroke:#2e7d32
       </div>
-</div>
-<div class="timeline-item">
-<div class="timeline-marker" style="background: var(--accent-purple)">3</div>
-<div class="timeline-body">
-<strong>Lớp 3: Đọc Sâu &amp; Sáng Tạo (Generative Reading)</strong><br/>
-        Khối lượng (Volume) không chỉ là một thanh biểu đồ nhấp nhô vô tri vô giác phía dưới giá. Nó chính là <em>biểu hiện bằng con số của sự thay đổi cung - cầu thực tế</em>. Từ đây, ta mở ra một tư duy: Không mua khi thấy rẻ, <strong>chỉ mua khi thấy dòng tiền bắt đầu đổ vào mức giá rẻ đó</strong>.
+    </section>
+    <section class="slide">
+      <div class="slide-kicker">CH 1 · THE BIG IDEA</div>
+      <h2>The Big Idea</h2>
+      <div class="takeaway-hero">
+        <div class="kicker">CHƯƠNG 1 · THE BIG IDEA</div>
+        <div class="headline">"Giá tăng vì cầu vượt cung. Khối lượng là cái cân đo lường các lực lượng cung và cầu này."
+        </div>
+        <div class="subline">Giá trị nội tại không trực tiếp di chuyển thị trường; hành vi của những người tham gia thị
+          trường thông qua cung - cầu (thể hiện qua giá và khối lượng) mới là yếu tố quyết định.</div>
       </div>
-</div>
-</div>
-</div>
-</section>
-<section class="slide">
-<div class="slide-kicker">CH 1 · CÁC GÓC NHÌN ĐỐI LẬP</div>
-<h2>Competing Views</h2>
-<div class="split-layout">
-<div class="split-left" style="border-top: 4px solid var(--accent-emerald);">
-<h3 style="color: var(--accent-emerald);">Phân Tích Kỹ Thuật (Góc nhìn chương này)</h3>
-<ul>
-<li>Giá cả do con người quyết định, không phải do mô hình.</li>
-<li>Tập trung vào <strong>KHI NÀO</strong> (thời điểm giao dịch).</li>
-<li>Cực kỳ hiệu quả khi thị trường đang bị chi phối bởi xu hướng và dòng tiền mạnh.</li>
-</ul>
-</div>
-<div class="split-right" style="border-top: 4px solid var(--accent-red);">
-<h3 style="color: var(--accent-red);">Phân Tích Cơ Bản (Góc nhìn đối lập)</h3>
-<ul>
-<li>Giá cả cuối cùng rồi cũng sẽ hội tụ về Giá trị nội tại.</li>
-<li>Tập trung vào <strong>CÁI GÌ</strong> (công ty nào đáng để mua).</li>
-<li>Hiệu quả trong tầm nhìn đầu tư dài hạn.</li>
-</ul>
-</div>
-</div>
-<div class="content-card" style="margin-top: 2rem; text-align: center;">
-<strong>Sự Kết Hợp Hoàn Hảo:</strong> Điểm tối ưu là kết hợp cả hai. Dùng Phân tích cơ bản để trả lời "Cái gì" và Phân tích kỹ thuật (đặc biệt là Khối lượng) để trả lời "Khi nào". <em>Phân tích cơ bản tạo ra lực cầu, và phân tích kỹ thuật giúp phát hiện ra khoảnh khắc lực cầu đó bắt đầu hành động.</em>
-</div>
-</section>
-<section class="slide">
-<div class="slide-kicker">CH 1 · HƯỚNG DẪN THỰC HÀNH</div>
-<h2>Implementation Guide</h2>
-<div class="phase-progress">
-<div class="phase active">Giai đoạn 1: Chấp Nhận Sự Khác Biệt</div>
-<div class="phase">Giai đoạn 2: Bổ Trợ Nhau</div>
-<div class="phase">Giai đoạn 3: Đưa Khối Lượng Vào Trọng Tâm</div>
-</div>
-<div class="content-card" style="margin-top: 2rem;">
-<ul>
-<li><strong>Giai đoạn 1 (Tuần 1):</strong> Dừng ngay việc tranh cãi xem phân tích cơ bản hay kỹ thuật cái nào tốt hơn. Nhận thức rằng chúng chỉ là hai lăng kính cho cùng một vấn đề.</li>
-<li><strong>Giai đoạn 2 (Tháng 1-2):</strong> Nếu bạn là dân chuyên phân tích cơ bản, hãy bắt đầu đưa các tín hiệu kỹ thuật (ví dụ: Vùng kháng cự/hỗ trợ) vào để chọn điểm mua. Nếu bạn là trader kỹ thuật, hãy hiểu rằng mức Support cứng nhất thường đến từ việc cổ phiếu lọt vào vùng định giá quá rẻ.</li>
-<li><strong>Giai đoạn 3 (Tháng 3+):</strong> Chuyển sự chú ý lớn sang <strong>Khối lượng (Volume)</strong>. Đừng chỉ nhìn giá tăng/giảm, mà hãy luôn hỏi: <em>"Có bao nhiêu nỗ lực (dòng tiền/khối lượng) đang đứng đằng sau chuyển động giá này?"</em></li>
-</ul>
-</div>
-</section>
-<section class="slide">
-<div class="slide-kicker">CH 1 · CÂU HỎI PHẢN TƯ</div>
-<h2>Reflection Questions</h2>
-<div class="deep-section">
-<div class="bullet-grid">
-<div class="bullet-card">
-<h4>Hiểu &amp; Áp Dụng</h4>
-<p>Bạn đã bao giờ mua một tài sản vì nó "quá rẻ" (PE thấp, tài sản lớn) nhưng sau đó nó còn rẻ hơn nữa (hoặc đi ngang mãi mãi) chưa? Bạn nghĩ mình đã thiếu yếu tố gì lúc đó?</p>
-</div>
-<div class="bullet-card">
-<h4>Phân Tích</h4>
-<p>Tại sao một báo cáo tài chính rất tốt lại có thể khiến giá cổ phiếu giảm mạnh vào ngày hôm sau, nếu ta bỏ qua việc theo dõi phản ứng kỳ vọng của những người tham gia thị trường?</p>
-</div>
-<div class="bullet-card">
-<h4>Đánh Giá Thực Tế</h4>
-<p>Theo góc nhìn của bạn, trong bối cảnh thị trường chứng khoán biến động hiện nay, phân tích Cơ bản hay phân tích Kỹ thuật đang đóng vai trò chi phối sự luân chuyển của dòng tiền ngắn hạn?</p>
-</div>
-</div>
-</div>
-</section>
-<section class="slide">
-<div class="slide-kicker">CH 1 · HÀNH ĐỘNG THỰC TẾ</div>
-<h2>Closing Actions</h2>
-<ul class="action-list">
-<li class="action-item">
-<div>
-<div class="action-headline">Ngừng đánh giá thấp giá trị của góc nhìn đối lập</div>
-<div class="action-detail">Hãy chấp nhận cả hai như hai lăng kính hữu ích. Định giá cơ bản tạo ra vùng cầu (support) an toàn dài hạn, còn kỹ thuật chỉ điểm chính xác thời điểm mua.</div>
-</div>
-</li>
-<li class="action-item">
-<div>
-<div class="action-headline">Thêm chỉ báo Khối Lượng vào checklist giao dịch</div>
-<div class="action-detail">Không bao giờ đánh giá một cú bứt phá (breakout) hoặc phá vỡ (breakdown) giá mà không đối chiếu với cột khối lượng giao dịch bên dưới.</div>
-</div>
-</li>
-<li class="action-item">
-<div>
-<div class="action-headline">Chỉ hành động khi có sự xác nhận của dòng tiền</div>
-<div class="action-detail">Kể cả khi cổ phiếu có vẻ "rẻ mạt" theo các chỉ số cơ bản, hãy kiên nhẫn chờ đợi khối lượng tăng mạnh để xác nhận rằng dòng tiền lớn đã bắt đầu đồng tình với bạn.</div>
-</div>
-</li>
-</ul>
-</section>
-</div>
-<div class="nav-controls">
-<button aria-label="Previous slide" class="nav-btn" id="prevBtn" onclick="prevSlide()">←</button>
-<div aria-live="polite" class="counter" id="counter">1 / 1</div>
-<button aria-label="Next slide" class="nav-btn" id="nextBtn" onclick="nextSlide()">→</button>
-</div>
-<script src="common.js"></script>
+    </section>
+    <section class="slide">
+      <div class="slide-kicker">CH 1 · TÓM TẮT</div>
+      <h2>Tóm Tắt Nội Dung</h2>
+      <div class="callout" style="margin-bottom: 2rem;">
+        <div class="callout-icon">🎯</div>
+        <div class="callout-content">
+          <strong>Trong một câu:</strong> Phân tích cơ bản (FA) và phân tích kỹ thuật (TA) là hai lăng kính khác nhau
+          nhưng bổ trợ cho nhau để hiểu thị trường, trong đó khối lượng giao dịch là chìa khóa để đo lường sức mạnh thực
+          sự của lực cung và cầu.
+        </div>
+      </div>
+      <div class="bullet-grid">
+        <div class="bullet-card">
+          <div class="icon">🔍</div>
+          <div class="heading">Bối cảnh</div>
+          <div class="body">Nhà đầu tư thường mải mê tìm kiếm chén thánh (the Holy Grail) hoặc những "bí quyết" đầu tư
+            thay vì xây dựng một sự hiểu biết vững chắc về cốt lõi cách thị trường hoạt động.</div>
+        </div>
+        <div class="bullet-card">
+          <div class="icon">🧠</div>
+          <div class="heading">Lập luận</div>
+          <div class="body">Giá cả trên thị trường được tạo ra từ <strong>hành vi của con người</strong> khi họ theo
+            đuổi giá trị, chứ không phải được tạo ra trực tiếp từ các mô hình định giá hoàn hảo.</div>
+        </div>
+        <div class="bullet-card">
+          <div class="icon">📉</div>
+          <div class="heading">Bằng chứng</div>
+          <div class="body">Câu chuyện người đồng nghiệp CFA: Cổ phiếu mua ở $3, lên $6 rồi lại rơi về $3 chỉ vì mô hình
+            định giá (chỉ ra giá trị $9) đã che mờ mọi tín hiệu xu hướng kỹ thuật. <span class="page-ref">Ch 1, p.
+              7-8</span></div>
+        </div>
+        <div class="bullet-card" style="border-left: 3px solid var(--accent-emerald);">
+          <div class="icon">✨</div>
+          <div class="heading">Hệ quả</div>
+          <div class="body">Sự hiểu biết về lực cung và cầu thông qua <em>phân tích khối lượng</em> mang lại cho nhà đầu
+            tư một góc nhìn vượt trội về cấu trúc dòng tiền nội tại của thị trường.</div>
+        </div>
+      </div>
+    </section>
+    <section class="slide">
+      <div class="slide-kicker">CH 1 · MÔ HÌNH TƯ DUY</div>
+      <h2>Mô Hình Tư Duy</h2>
+      <div class="mental-model-card">
+        <h4 class="model-name">Khám Phá Ô Tô (The Automobile Inspection)</h4>
+        <div class="model-principle">Hai cách tiếp cận khác biệt để đánh giá cùng một tài sản, từ đó đi đến cùng một kết
+          luận nhưng qua các phương pháp không giống nhau.</div>
+        <div class="model-application" style="margin-top: 1rem;">
+          <strong>Cách hoạt động:</strong>
+          <ul>
+            <li><strong>Nhà Phân Tích Cơ Bản:</strong> Mở nắp capo, kiểm tra động cơ, đá vào lốp xe, soi khung gầm. Tìm
+              kiếm các khiếm khuyết vật lý hoặc giá trị thực sự tiềm ẩn của chiếc xe.</li>
+            <li><strong>Nhà Phân Tích Kỹ Thuật:</strong> Không mở nắp capo. Thay vào đó, ngồi vào ghế lái và chạy thử.
+              Đánh giá cách chiếc xe tăng tốc, vào cua, phản hồi với người lái thông qua các đồng hồ đo (như giá và khối
+              lượng trên thị trường).</li>
+          </ul>
+        </div>
+        <div class="model-limitations" style="margin-top: 1rem;">
+          <strong>⚠️ Ý nghĩa thực tiễn:</strong>
+          <ul>
+            <li>Khi các "đồng hồ đo" vượt mức giới hạn, nhà phân tích kỹ thuật cũng rút ra kết luận tương tự như chuyên
+              gia cơ bản (người đã phát hiện lỗi động cơ), nhưng mà không cần khám xét vật lý.</li>
+            <li>Sự định giá của trường phái cơ bản thường chính là nguồn gốc tạo ra lực Cầu (Support) mà trường phái kỹ
+              thuật nhìn thấy trên biểu đồ.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="slide">
+      <div class="slide-kicker">CH 1 · BỐI CẢNH</div>
+      <h2>Bối Cảnh &amp; Góc Nhìn</h2>
+      <div class="content-card">
+        <h3>1. Góc Nhìn Của Tác Giả</h3>
+        <ul>
+          <li><strong>Bối cảnh:</strong> Tác giả (một CMT - Chartered Market Technician) đã từng giảng dạy phân tích kỹ
+            thuật cho các môi giới (brokers) hàng đầu tại một công ty chứng khoán lớn.</li>
+          <li><strong>Góc nhìn:</strong> Là một người thực hành thực tế trên thị trường, tác giả tôn trọng phân tích cơ
+            bản nhưng ưu tiên phân tích kỹ thuật vì tính thời điểm (trả lời câu hỏi "Khi nào" thay vì "Cái gì").</li>
+        </ul>
+        <h3 style="margin-top: 1.5rem;">2. Bối Cảnh Nghề Nghiệp Trong Ngành Tài Chính</h3>
+        <ul>
+          <li><strong>Sự phân cực và công nhận:</strong> Lịch sử tài chính thường chứng kiến sự đối đầu giữa hai trường
+            phái. Tuy nhiên, Cơ quan Quản lý Ngành Tài chính (FINRA) chính thức công nhận hai loại chuyên gia phân tích
+            nghiên cứu: CFA (Tài chính cơ bản) và CMT (Kỹ thuật/Hành vi). <span class="page-ref">Ch 1, p. 6</span></li>
+          <li><strong>Sự kết hợp:</strong> Mặc dù xuất phát từ những giả định cực kỳ khác nhau, cả hai có thể được sử
+            dụng cùng nhau một cách hiệu quả để giảm thiểu điểm mù.</li>
+        </ul>
+      </div>
+    </section>
+    <section class="slide">
+      <div class="slide-kicker">CH 1 · BÀI HỌC QUAN TRỌNG</div>
+      <h2>Key Takeaways</h2>
+      <div class="takeaway-list">
+        <div class="takeaway-item content-card">
+          <div class="takeaway-badge">1</div>
+          <div style="flex: 1;">
+            <div class="takeaway-text" style="font-size: 1.25rem; color: var(--accent); margin-bottom: 0.5rem;">
+              <strong>Cơ bản trả lời "Cái gì", Kỹ thuật trả lời "Khi nào"</strong>
+            </div>
+            <div class="takeaway-detail">
+              <div style="margin-bottom: 0.5rem;"><strong>Tại sao quan trọng:</strong> Chọn đúng một công ty tốt (định
+                giá rẻ) nhưng sai thời điểm vẫn có thể dẫn đến việc chôn vốn nhiều năm, mất đi chi phí cơ hội.</div>
+              <div><strong>Bằng chứng:</strong> Câu chuyện cổ phiếu đi ngang ở mức $3 bất chấp định giá lên đến $9. Nó
+                chỉ tăng khi xuất hiện lực mua đột biến (kỹ thuật). <span class="page-ref">Ch 1, p. 7-8</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="takeaway-item content-card">
+          <div class="takeaway-badge" style="background: var(--accent-amber);">2</div>
+          <div style="flex: 1;">
+            <div class="takeaway-text" style="font-size: 1.25rem; color: var(--accent-amber); margin-bottom: 0.5rem;">
+              <strong>Giá là hệ quả hành vi của con người, không phải của mô hình</strong>
+            </div>
+            <div class="takeaway-detail">
+              <div style="margin-bottom: 0.5rem;"><strong>Tại sao quan trọng:</strong> Mô hình định giá có thể đúng hoàn
+                hảo về mặt toán học, nhưng giá trị thị trường lại được quyết định bởi hành vi cảm xúc và logic của những
+                người đang giao dịch.</div>
+              <div><strong>Ứng dụng:</strong> Đừng "cãi" lại thị trường khi xu hướng giá đi ngược lại hoàn toàn với định
+                giá cơ bản của bạn. Hãy đánh giá dòng tiền thật.</div>
+            </div>
+          </div>
+        </div>
+        <div class="takeaway-item content-card">
+          <div class="takeaway-badge" style="background: var(--accent-purple);">3</div>
+          <div style="flex: 1;">
+            <div class="takeaway-text" style="font-size: 1.25rem; color: var(--accent-purple); margin-bottom: 0.5rem;">
+              <strong>Khối lượng (Volume) là cái cân của Cung và Cầu</strong>
+            </div>
+            <div class="takeaway-detail">
+              <div><strong>Tại sao quan trọng:</strong> Trong khi giá chỉ cho thấy bề mặt của sự dịch chuyển, khối lượng
+                cho thấy dòng tiền thực sự đằng sau sự dịch chuyển đó, làm lộ rõ cấu trúc nội tại của thị trường. <span
+                  class="page-ref">Ch 1, p. 11</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="slide">
+      <div class="slide-kicker">CH 1 · TRÍCH DẪN ĐÁNG CHÚ Ý</div>
+      <h2>Trích Dẫn Đáng Chú Ý</h2>
+      <div class="quote-block">
+        <p class="quote-text">"It is the glory of God to conceal a thing, but the honor of kings is to search out a
+          matter."</p>
+        <p class="quote-context"><strong>— King Solomon</strong>, đoạn trích dẫn mở đầu phần "Hai Cách Tiếp Cận Hợp Lệ".
+          <span class="page-ref">Ch 1, p. 6</span>
+        </p>
+      </div>
+      <div class="content-card" style="margin-top: 2rem;">
+        <h3>Diễn giải &amp; Ý nghĩa:</h3>
+        <ul>
+          <li><strong>Ẩn ý:</strong> Việc tìm hiểu thị trường tài chính đòi hỏi nỗ lực khám phá những nguyên lý ẩn giấu
+            đằng sau sự hỗn loạn của hành động giá.</li>
+          <li><strong>Sự liên kết:</strong> Tác giả ví việc tìm ra các cấu trúc ẩn (thông qua phân tích khối lượng -
+            Volume) như một nỗ lực cao quý của nhà đầu tư, giống như những vị vua đi tìm kiếm sự thật bị che khuất. Khối
+            lượng chính là manh mối để bóc trần những gì đang bị che giấu trên thị trường.</li>
+        </ul>
+      </div>
+    </section>
+    <section class="slide">
+      <div class="slide-kicker">CH 1 · PHÂN TÍCH CHUYÊN SÂU</div>
+      <h2>Deep Dive</h2>
+      <div class="deep-section practical">
+        <div class="bullet-grid">
+          <div class="bullet-card">
+            <h4>1. Luận Điểm Cốt Lõi</h4>
+            <p>Thị trường không chạy theo giá trị nội tại một cách cơ học. Cung và Cầu mới là hai lực lượng tối thượng
+              thiết lập giá, và Khối lượng giao dịch (Volume) là công cụ tinh tế nhất để đo lường hai lực lượng này.</p>
+          </div>
+          <div class="bullet-card">
+            <h4>2. Đánh Giá Bằng Chứng</h4>
+            <p>Tác giả sử dụng Anecdote (Giai thoại cá nhân) về người đồng nghiệp CFA. Dù mẫu số N=1, nhưng nó minh họa
+              cực kỳ trực quan về "Opportunity Cost" (chi phí cơ hội) khi nhà đầu tư chỉ phụ thuộc vào định giá cơ bản
+              mà bỏ qua dòng tiền.</p>
+          </div>
+          <div class="bullet-card">
+            <h4>3. Các Giả Định Căn Bản</h4>
+            <p>Tác giả giả định rằng <strong>thị trường luôn hiệu quả trong việc phản ánh hành vi tập thể</strong>, ngay
+              cả khi mức giá đó không phản ánh đúng giá trị nội tại theo sổ sách. Con người quyết định giá, và họ vừa có
+              tính logic vừa có tính cảm xúc.</p>
+          </div>
+          <div class="bullet-card">
+            <h4>4. Ý Nghĩa Thực Tiễn (So What?)</h4>
+            <p>Việc định giá một tài sản là quá rẻ không đồng nghĩa với việc nó sẽ tăng ngay lập tức. Bạn cần sự xác
+              nhận từ lực cầu thật sự trên thị trường — điều này thể hiện rõ nhất qua sự đột biến của khối lượng giao
+              dịch.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="slide">
+      <div class="slide-kicker">CH 1 · CÁC TẦNG ĐỌC HIỂU</div>
+      <h2>Reading Layers</h2>
+      <div class="content-card">
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-marker" style="background: var(--accent-cyan)">1</div>
+            <div class="timeline-body">
+              <strong>Lớp 1: Đọc Bề Mặt (Surface Reading)</strong><br />
+              Có hai trường phái phân tích chính thống: Cơ bản (nhìn vào giá trị công ty) và Kỹ thuật (nhìn vào biểu đồ,
+              hành vi). Chúng khác nhau nhưng có thể kết hợp.
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-marker" style="background: var(--accent)">2</div>
+            <div class="timeline-body">
+              <strong>Lớp 2: Đọc Cấu Trúc (Structural Reading)</strong><br />
+              Tác giả cấu trúc chương bằng một sự tương phản (CFA ôm hàng không chịu chốt lời vs CMT lướt sóng thành
+              công) để thiết lập tính ưu việt của việc <em>định thời điểm</em> (timing) trong thực tiễn giao dịch.
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-marker" style="background: var(--accent-purple)">3</div>
+            <div class="timeline-body">
+              <strong>Lớp 3: Đọc Sâu &amp; Sáng Tạo (Generative Reading)</strong><br />
+              Khối lượng (Volume) không chỉ là một thanh biểu đồ nhấp nhô vô tri vô giác phía dưới giá. Nó chính là
+              <em>biểu hiện bằng con số của sự thay đổi cung - cầu thực tế</em>. Từ đây, ta mở ra một tư duy: Không mua
+              khi thấy rẻ, <strong>chỉ mua khi thấy dòng tiền bắt đầu đổ vào mức giá rẻ đó</strong>.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="slide">
+      <div class="slide-kicker">CH 1 · CÁC GÓC NHÌN ĐỐI LẬP</div>
+      <h2>Competing Views</h2>
+      <div class="split-layout">
+        <div class="split-left" style="border-top: 4px solid var(--accent-emerald);">
+          <h3 style="color: var(--accent-emerald);">Phân Tích Kỹ Thuật (Góc nhìn chương này)</h3>
+          <ul>
+            <li>Giá cả do con người quyết định, không phải do mô hình.</li>
+            <li>Tập trung vào <strong>KHI NÀO</strong> (thời điểm giao dịch).</li>
+            <li>Cực kỳ hiệu quả khi thị trường đang bị chi phối bởi xu hướng và dòng tiền mạnh.</li>
+          </ul>
+        </div>
+        <div class="split-right" style="border-top: 4px solid var(--accent-red);">
+          <h3 style="color: var(--accent-red);">Phân Tích Cơ Bản (Góc nhìn đối lập)</h3>
+          <ul>
+            <li>Giá cả cuối cùng rồi cũng sẽ hội tụ về Giá trị nội tại.</li>
+            <li>Tập trung vào <strong>CÁI GÌ</strong> (công ty nào đáng để mua).</li>
+            <li>Hiệu quả trong tầm nhìn đầu tư dài hạn.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="content-card" style="margin-top: 2rem; text-align: center;">
+        <strong>Sự Kết Hợp Hoàn Hảo:</strong> Điểm tối ưu là kết hợp cả hai. Dùng Phân tích cơ bản để trả lời "Cái gì"
+        và Phân tích kỹ thuật (đặc biệt là Khối lượng) để trả lời "Khi nào". <em>Phân tích cơ bản tạo ra lực cầu, và
+          phân tích kỹ thuật giúp phát hiện ra khoảnh khắc lực cầu đó bắt đầu hành động.</em>
+      </div>
+    </section>
+    <section class="slide">
+      <div class="slide-kicker">CH 1 · HƯỚNG DẪN THỰC HÀNH</div>
+      <h2>Implementation Guide</h2>
+      <div class="phase-progress">
+        <div class="phase active">Giai đoạn 1: Chấp Nhận Sự Khác Biệt</div>
+        <div class="phase">Giai đoạn 2: Bổ Trợ Nhau</div>
+        <div class="phase">Giai đoạn 3: Đưa Khối Lượng Vào Trọng Tâm</div>
+      </div>
+      <div class="content-card" style="margin-top: 2rem;">
+        <ul>
+          <li><strong>Giai đoạn 1 (Tuần 1):</strong> Dừng ngay việc tranh cãi xem phân tích cơ bản hay kỹ thuật cái nào
+            tốt hơn. Nhận thức rằng chúng chỉ là hai lăng kính cho cùng một vấn đề.</li>
+          <li><strong>Giai đoạn 2 (Tháng 1-2):</strong> Nếu bạn là dân chuyên phân tích cơ bản, hãy bắt đầu đưa các tín
+            hiệu kỹ thuật (ví dụ: Vùng kháng cự/hỗ trợ) vào để chọn điểm mua. Nếu bạn là trader kỹ thuật, hãy hiểu rằng
+            mức Support cứng nhất thường đến từ việc cổ phiếu lọt vào vùng định giá quá rẻ.</li>
+          <li><strong>Giai đoạn 3 (Tháng 3+):</strong> Chuyển sự chú ý lớn sang <strong>Khối lượng (Volume)</strong>.
+            Đừng chỉ nhìn giá tăng/giảm, mà hãy luôn hỏi: <em>"Có bao nhiêu nỗ lực (dòng tiền/khối lượng) đang đứng đằng
+              sau chuyển động giá này?"</em></li>
+        </ul>
+      </div>
+    </section>
+    <section class="slide">
+      <div class="slide-kicker">CH 1 · CÂU HỎI PHẢN TƯ</div>
+      <h2>Reflection Questions</h2>
+      <div class="deep-section">
+        <div class="bullet-grid">
+          <div class="bullet-card">
+            <h4>Hiểu &amp; Áp Dụng</h4>
+            <p>Bạn đã bao giờ mua một tài sản vì nó "quá rẻ" (PE thấp, tài sản lớn) nhưng sau đó nó còn rẻ hơn nữa (hoặc
+              đi ngang mãi mãi) chưa? Bạn nghĩ mình đã thiếu yếu tố gì lúc đó?</p>
+          </div>
+          <div class="bullet-card">
+            <h4>Phân Tích</h4>
+            <p>Tại sao một báo cáo tài chính rất tốt lại có thể khiến giá cổ phiếu giảm mạnh vào ngày hôm sau, nếu ta bỏ
+              qua việc theo dõi phản ứng kỳ vọng của những người tham gia thị trường?</p>
+          </div>
+          <div class="bullet-card">
+            <h4>Đánh Giá Thực Tế</h4>
+            <p>Theo góc nhìn của bạn, trong bối cảnh thị trường chứng khoán biến động hiện nay, phân tích Cơ bản hay
+              phân tích Kỹ thuật đang đóng vai trò chi phối sự luân chuyển của dòng tiền ngắn hạn?</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="slide">
+      <div class="slide-kicker">CH 1 · HÀNH ĐỘNG THỰC TẾ</div>
+      <h2>Closing Actions</h2>
+      <ul class="action-list">
+        <li class="action-item">
+          <div>
+            <div class="action-headline">Ngừng đánh giá thấp giá trị của góc nhìn đối lập</div>
+            <div class="action-detail">Hãy chấp nhận cả hai như hai lăng kính hữu ích. Định giá cơ bản tạo ra vùng cầu
+              (support) an toàn dài hạn, còn kỹ thuật chỉ điểm chính xác thời điểm mua.</div>
+          </div>
+        </li>
+        <li class="action-item">
+          <div>
+            <div class="action-headline">Thêm chỉ báo Khối Lượng vào checklist giao dịch</div>
+            <div class="action-detail">Không bao giờ đánh giá một cú bứt phá (breakout) hoặc phá vỡ (breakdown) giá mà
+              không đối chiếu với cột khối lượng giao dịch bên dưới.</div>
+          </div>
+        </li>
+        <li class="action-item">
+          <div>
+            <div class="action-headline">Chỉ hành động khi có sự xác nhận của dòng tiền</div>
+            <div class="action-detail">Kể cả khi cổ phiếu có vẻ "rẻ mạt" theo các chỉ số cơ bản, hãy kiên nhẫn chờ đợi
+              khối lượng tăng mạnh để xác nhận rằng dòng tiền lớn đã bắt đầu đồng tình với bạn.</div>
+          </div>
+        </li>
+      </ul>
+    </section>
+  </div>
+  <div class="nav-controls">
+    <button aria-label="Previous slide" class="nav-btn" id="prevBtn" onclick="prevSlide()">←</button>
+    <div aria-live="polite" class="counter" id="counter">1 / 1</div>
+    <button aria-label="Next slide" class="nav-btn" id="nextBtn" onclick="nextSlide()">→</button>
+  </div>
+  <script src="../common.js"></script>
 </body>
+
 </html>

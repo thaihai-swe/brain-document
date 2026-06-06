@@ -1,456 +1,541 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Investing with Volume Analysis — Chapter 20</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="common.css">
-<script src="https://cdn.jsdelivr.net/npm/mermaid@11.10.0/dist/mermaid.min.js" crossorigin="anonymous"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Investing with Volume Analysis — Chapter 20</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../common.css">
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@11.10.0/dist/mermaid.min.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
 
-<div class="progress-bar" id="progressBar"></div>
+  <div class="progress-bar" id="progressBar"></div>
 
-<div class="chapter-menu">
-  <button class="menu-btn" id="chapterMenuBtn" onclick="toggleChapterMenu()" aria-haspopup="true" aria-expanded="false">Chapters &#9662;</button>
-  <div class="chapter-menu-panel" id="chapterMenuPanel" role="menu"></div>
-</div>
-
-<div class="slide-container" id="slideContainer">
-
-  <section class="slide" aria-hidden="false">
-
-<h1>Investing with Volume Analysis</h1>
-<p class="subtitle">Chapter 20: Risky Business</p>
-<div class="meta-grid">
-  <div><strong>Author:</strong> Buff Pelz Dormeier</div>
-  <div><strong>Focus:</strong> Risk & Money Management</div>
-  <div><strong>Depth:</strong> Deep Mode</div>
-</div>
-<figure class="image-slot hero">
-  <div class="image-prompt">
-    <span class="image-prompt-label">AI Image Prompt</span>
-    <p class="image-prompt-text">"A solitary chess king on a polished board surrounded by protective pawns, cinematic lighting, cool blue and #7C3AED accent, highly detailed."</p>
-    <span class="image-prompt-hint">Defense and protection motif.</span>
+  <div class="chapter-menu">
+    <button class="menu-btn" id="chapterMenuBtn" onclick="toggleChapterMenu()" aria-haspopup="true"
+      aria-expanded="false">Chapters &#9662;</button>
+    <div class="chapter-menu-panel" id="chapterMenuPanel" role="menu"></div>
   </div>
-</figure>
 
-  </section>
+  <div class="slide-container" id="slideContainer">
 
-  <section class="slide chapter-divider">
+    <section class="slide" aria-hidden="false">
 
-<div class="chapter-number">Chapter 20</div>
-<h2>Risky Business</h2>
-<p class="chapter-meta">Est. reading time: 15 mins · Difficulty: ⭐⭐⭐☆☆ · Key Concepts: AVSL, 4D Allocation, Competing Risks</p>
+      <h1>Investing with Volume Analysis</h1>
+      <p class="subtitle">Chapter 20: Risky Business</p>
+      <div class="meta-grid">
+        <div><strong>Author:</strong> Buff Pelz Dormeier</div>
+        <div><strong>Focus:</strong> Risk & Money Management</div>
+        <div><strong>Depth:</strong> Deep Mode</div>
+      </div>
+      <figure class="image-slot hero">
+        <div class="image-prompt">
+          <span class="image-prompt-label">AI Image Prompt</span>
+          <p class="image-prompt-text">"A solitary chess king on a polished board surrounded by protective pawns,
+            cinematic lighting, cool blue and #7C3AED accent, highly detailed."</p>
+          <span class="image-prompt-hint">Defense and protection motif.</span>
+        </div>
+      </figure>
 
-  </section>
+    </section>
 
-  <section class="slide">
-    <div class="slide-kicker">CH 20 · VISUAL SUMMARY</div>
-    <h2>Visual Summary</h2>
+    <section class="slide chapter-divider">
 
-<div class="deep-section">
-  <p class="summary-text">A comprehensive approach to capital preservation combines <strong>Dynamic Asset Allocation</strong> (offense/diversification) with <strong>Risk Management</strong> (defense/stops). Both rely on quantitative rules to eliminate emotional biases.</p>
-</div>
-<div class="mermaid">
-graph TD
-    A[Portfolio Survival] --> B[Dynamic Allocation]
-    A --> C[Risk Management]
-    
-    B --> B1[1. Position Size]
-    B --> B2[2. Horizontal / Sector]
-    B --> B3[3. Vertical / Market Cap]
-    B --> B4[4. Performance Drivers]
-    
-    C --> C1[Control Emotions]
-    C --> C2[Cut Losers Quickly]
-    C --> C3[AVSL Trailing Stop]
-    
-    C3 -.->|Adjusts for| V1[Volatility]
-    C3 -.->|Adjusts for| V2[Volume Support]
+      <div class="chapter-number">Chapter 20</div>
+      <h2>Risky Business</h2>
+      <p class="chapter-meta">Est. reading time: 15 mins · Difficulty: ⭐⭐⭐☆☆ · Key Concepts: AVSL, 4D Allocation,
+        Competing Risks</p>
 
-    style A fill:#7C3AED,stroke:#E2E8F0,color:#FFFFFF
-    style B fill:#059669,stroke:#E2E8F0,color:#FFFFFF
-    style C fill:#D97706,stroke:#E2E8F0,color:#FFFFFF
-</div>
+    </section>
 
-  </section>
+    <section class="slide">
+      <div class="slide-kicker">CH 20 · VISUAL SUMMARY</div>
+      <h2>Visual Summary</h2>
 
-  <section class="slide">
-    <div class="slide-kicker">CH 20 · THE BIG IDEA</div>
-    <h2>The Big Idea</h2>
+      <div class="deep-section">
+        <p class="summary-text">A comprehensive approach to capital preservation combines <strong>Dynamic Asset
+            Allocation</strong> (offense/diversification) with <strong>Risk Management</strong> (defense/stops). Both
+          rely on quantitative rules to eliminate emotional biases.</p>
+      </div>
+      <div class="mermaid">
+        graph TD
+        A[Portfolio Survival] --> B[Dynamic Allocation]
+        A --> C[Risk Management]
 
-<div class="takeaway-hero">
-  <div class="kicker">CH 20 · THE BIG IDEA</div>
-  <div class="headline">"The best offense is a good defense."</div>
-  <div class="subline">Success isn't just about picking winners; it's about minimizing the mathematical devastation of losers through strict position sizing and volume-adjusted stops.</div>
-</div>
+        B --> B1[1. Position Size]
+        B --> B2[2. Horizontal / Sector]
+        B --> B3[3. Vertical / Market Cap]
+        B --> B4[4. Performance Drivers]
 
-  </section>
+        C --> C1[Control Emotions]
+        C --> C2[Cut Losers Quickly]
+        C --> C3[AVSL Trailing Stop]
 
-  <section class="slide">
-    <div class="slide-kicker">CH 20 · CONTEXT &amp; BACKGROUND</div>
-    <h2>Context &amp; Background</h2>
+        C3 -.->|Adjusts for| V1[Volatility]
+        C3 -.->|Adjusts for| V2[Volume Support]
 
-<div class="deep-section">
-  <div class="split-layout">
-    <div class="split-left">
-      <h4>Historical Moment</h4>
-      <p>Written after the "lost decade" of equities (2000-2010) where buy-and-hold failed dramatically. Dormeier cites the devastating sequence-of-returns risk for retirees who believed that standard index investing was entirely safe. <span class="page-ref">p. 246</span></p>
-      <h4>Intellectual Lineage</h4>
-      <p>Builds directly upon <strong>Harry Markowitz's Modern Portfolio Theory (1990 Nobel Prize)</strong>. Markowitz proved that inversely correlated assets reduce risk while increasing return. Dormeier extends this by incorporating volume dynamics into the asset allocation and exit rules.</p>
-    </div>
-    <div class="split-right">
-      <h4>Author's Lens</h4>
-      <p>As a risk-averse portfolio manager, Dormeier treats risk management as a structural necessity, not a theoretical abstraction. He views market losses as mathematically asymmetrical (e.g., a 50% loss requires a 100% gain to recover).</p>
-      <h4>Then vs. Now (2026)</h4>
-      <p>The critique of "buy and hope" remains fiercely relevant in modern algorithms and zero-day options trading, where drawdowns happen faster, making systematic stops (like AVSL) even more critical today.</p>
-    </div>
+        style A fill:#7C3AED,stroke:#E2E8F0,color:#FFFFFF
+        style B fill:#059669,stroke:#E2E8F0,color:#FFFFFF
+        style C fill:#D97706,stroke:#E2E8F0,color:#FFFFFF
+      </div>
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 20 · THE BIG IDEA</div>
+      <h2>The Big Idea</h2>
+
+      <div class="takeaway-hero">
+        <div class="kicker">CH 20 · THE BIG IDEA</div>
+        <div class="headline">"The best offense is a good defense."</div>
+        <div class="subline">Success isn't just about picking winners; it's about minimizing the mathematical
+          devastation of losers through strict position sizing and volume-adjusted stops.</div>
+      </div>
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 20 · CONTEXT &amp; BACKGROUND</div>
+      <h2>Context &amp; Background</h2>
+
+      <div class="deep-section">
+        <div class="split-layout">
+          <div class="split-left">
+            <h4>Historical Moment</h4>
+            <p>Written after the "lost decade" of equities (2000-2010) where buy-and-hold failed dramatically. Dormeier
+              cites the devastating sequence-of-returns risk for retirees who believed that standard index investing was
+              entirely safe. <span class="page-ref">p. 246</span></p>
+            <h4>Intellectual Lineage</h4>
+            <p>Builds directly upon <strong>Harry Markowitz's Modern Portfolio Theory (1990 Nobel Prize)</strong>.
+              Markowitz proved that inversely correlated assets reduce risk while increasing return. Dormeier extends
+              this by incorporating volume dynamics into the asset allocation and exit rules.</p>
+          </div>
+          <div class="split-right">
+            <h4>Author's Lens</h4>
+            <p>As a risk-averse portfolio manager, Dormeier treats risk management as a structural necessity, not a
+              theoretical abstraction. He views market losses as mathematically asymmetrical (e.g., a 50% loss requires
+              a 100% gain to recover).</p>
+            <h4>Then vs. Now (2026)</h4>
+            <p>The critique of "buy and hope" remains fiercely relevant in modern algorithms and zero-day options
+              trading, where drawdowns happen faster, making systematic stops (like AVSL) even more critical today.</p>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 20 · MENTAL MODELS</div>
+      <h2>Mental Models</h2>
+
+      <div class="mental-model-card">
+        <h4 class="model-name">The "Sports Team" Position Allocation</h4>
+        <div class="model-principle">Manage your portfolio's "salary cap" by categorizing assets into roles and strict
+          allocations. <span class="page-ref">p. 249</span></div>
+        <div class="model-application">
+          <strong>How It Works:</strong>
+          <ul>
+            <li><strong>All-Stars (40%):</strong> Highest conviction, reliable ideas (e.g., 5% position sizes x 8
+              stocks).</li>
+            <li><strong>Starters (30%):</strong> Core holdings (e.g., 3% x 10 stocks).</li>
+            <li><strong>Rookies (15%):</strong> Unproven but high potential (e.g., 1.5% x 10 stocks).</li>
+            <li><strong>Disabled List (15%):</strong> Underperforming stocks that are on probation.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="mental-model-card" style="margin-top: 1.5rem;">
+        <h4 class="model-name">The Gardener</h4>
+        <div class="model-principle">"A gardener begins by sowing seeds... picks the weeds and waters flowers just as
+          the savvy investor sells losers and reinvests in winning positions." <span class="page-ref">p. 256</span>
+        </div>
+        <div class="model-application">
+          <strong>Application:</strong> Realizing a loss is not an admission of ultimate defeat; it is the deliberate
+          freeing up of capital (pulling weeds) to reallocate to stronger assets (watering flowers).
+        </div>
+      </div>
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 20 · AUTHOR&#x27;S WARNINGS</div>
+      <h2>Author&#x27;s Warnings</h2>
+
+      <div class="warning-card" style="margin-bottom: 1.5rem;">
+        <div class="warning-headline">Beware the "Buy and Hope" Strategy</div>
+        <div class="warning-detail"><strong>Why:</strong> The mutual fund industry promotes "don't miss the 10 best
+          days," but deliberately ignores that missing the 10 <em>worst</em> days dramatically increases returns.
+          Passive holding without risk management exposes capital to catastrophic compounding math. <span
+            class="page-ref">p. 244-245</span></div>
+      </div>
+      <div class="warning-card" style="margin-bottom: 1.5rem;">
+        <div class="warning-headline">Do not average down to meet income needs</div>
+        <div class="warning-detail"><strong>Why:</strong> Sequence of returns risk. If a retiree takes a 5% draw during
+          a bear market, they are forced to sell more shares at lower prices. A $1M portfolio taking 5% draws from
+          2000-2010 dropped to $297k. <span class="page-ref">p. 246</span></div>
+      </div>
+      <div class="warning-card">
+        <div class="warning-headline">Do not over-weight positions based on "Luck"</div>
+        <div class="warning-detail"><strong>Why:</strong> Placing too much capital in one stock means you are placing
+          faith in <em>that stock</em> rather than your <em>process</em>. Limit position sizes so that bad luck on one
+          stock doesn't destroy the portfolio. <span class="page-ref">p. 248</span></div>
+      </div>
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 20 · NUMBERS &amp; STUDIES</div>
+      <h2>The Math of Compounding</h2>
+
+      <div class="deep-section">
+        <p class="summary-text">The mathematical realities of drawdowns reveal why capital preservation is the most
+          critical function of a portfolio manager. Losses compound downward aggressively. <span class="page-ref">p.
+            253</span></p>
+      </div>
+      <div class="metric-grid">
+        <div class="metric-card">
+          <div class="metric-value">11%</div>
+          <div class="metric-label">Gain needed</div>
+          <div class="metric-detail">To recover from a <strong>10% loss</strong>. The math is relatively symmetrical
+            early on.</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-value">25%</div>
+          <div class="metric-label">Gain needed</div>
+          <div class="metric-detail">To recover from a <strong>20% loss</strong>. The asymmetry begins to accelerate
+            rapidly.</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-value">100%</div>
+          <div class="metric-label">Gain needed</div>
+          <div class="metric-detail">To recover from a <strong>50% loss</strong>. A catastrophic drawdown requires
+            doubling your money just to break even.</div>
+        </div>
+      </div>
+      <div class="callout" style="margin-top: 2rem;">
+        <div class="callout-icon">📊</div>
+        <div class="callout-content">
+          <strong>Missing the Best vs. Worst Days (1984-1998):</strong>
+          Missing the 10 best days dropped annualized returns from 17.89% to 14.24%. But missing BOTH the 10 best AND 10
+          worst days boosted returns to over <strong>20.31%</strong>. Risk management (missing the worst) is
+          mathematically superior to buy-and-hold. <span class="page-ref">p. 244</span>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 20 · SIGNAL MATRIX</div>
+      <h2>AVSL Decision Rules</h2>
+
+      <div class="deep-section">
+        <p class="summary-text">The <strong>Anti-Volume Stop Loss (AVSL)</strong> dynamically adjusts based on a
+          security's individual volatility (Bollinger Bands) and its volume health (VPCI). <span class="page-ref">p.
+            254</span></p>
+      </div>
+      <table class="signal-matrix">
+        <thead>
+          <tr>
+            <th></th>
+            <th>Volume Confirming Trend (High VPCI)</th>
+            <th>Volume Contradicting Trend (Low VPCI)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th class="row-header">High Volatility (e.g. Tech/Growth)</th>
+            <td class="bullish"><span class="signal-label">Widest Leash</span>High volatility requires room to breathe;
+              strong volume provides confidence to allow normal fluctuations.</td>
+            <td class="warning"><span class="signal-label">Tighten Stop</span>High volatility without volume backing
+              means risk is elevated. Pull stops up to protect capital.</td>
+          </tr>
+          <tr>
+            <th class="row-header">Low Volatility (e.g. Consumer Staples)</th>
+            <td class="opportunity"><span class="signal-label">Standard Leash</span>Tight baseline stop is slightly
+              loosened to ride the confirmed low-volatility uptrend.</td>
+            <td class="bearish"><span class="signal-label">Tightest Leash</span>Stable stocks losing volume support have
+              no excuse for large drops. Stop out quickly.</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="callout" style="margin-top: 1rem;">
+        <div class="callout-icon">💡</div>
+        <div class="callout-content">
+          <strong>AVSL Formula Concept:</strong> AVSL uses the Lower Bollinger Band of the price's lows, modified by
+          Volume Price Confirmation Indicator (VPCI) and Volume Multiplier (VM).
+        </div>
+      </div>
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 20 · NOTABLE QUOTES</div>
+      <h2>On Risk Psychology</h2>
+
+      <div class="quote-block">
+        <p class="quote-text">"A loss never bothers me after I take it. I forget it overnight. But being wrong—not
+          taking the loss—that is what does damage to the pocketbook and to the soul."</p>
+        <p class="quote-context"><strong>— Jesse L. Livermore</strong>, cited on the psychology of realized vs.
+          unrealized losses. <span class="page-ref">p. 256</span></p>
+      </div>
+
+      <div class="quote-block" style="margin-top: 2rem;">
+        <p class="quote-text">"When you think that a company is too good and the earning are too strong for it to go
+          down, that's when you'll have your head handed to you."</p>
+        <p class="quote-context"><strong>— Dan Zanger</strong>, warning against replacing objective risk management with
+          blind faith in fundamentals. <span class="page-ref">p. 243</span></p>
+      </div>
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 20 · DEEP DIVE</div>
+      <h2>The 4D Allocation Process</h2>
+
+      <div class="deep-section">
+        <p class="summary-text">Dormeier's <strong>Four-Dimensional Strategic Allocation</strong> seeks to achieve
+          maximum diversification by blending structural portfolio parameters with dynamic performance catalysts. <span
+            class="page-ref">p. 248-251</span></p>
+      </div>
+      <div class="bullet-grid">
+        <div class="bullet-card">
+          <div class="bullet-icon">1</div>
+          <div class="bullet-heading">Position Allocation</div>
+          <div class="bullet-body">Sizing limits the damage any single issuer can do. Cap positions (e.g., max 5%) to
+            ensure performance relies on your process, not luck.</div>
+        </div>
+        <div class="bullet-card">
+          <div class="bullet-icon">2</div>
+          <div class="bullet-heading">Horizontal Allocation</div>
+          <div class="bullet-body">Diversifying across the 10 major S&P sectors and geographic regions. Use top-down
+            target ranges (e.g., 10-15% industrials).</div>
+        </div>
+        <div class="bullet-card">
+          <div class="bullet-icon">3</div>
+          <div class="bullet-heading">Vertical Allocation</div>
+          <div class="bullet-body">Allocating among market capitalizations (mega, large, mid, small, micro). Dynamically
+            shift weightings as macro environments change.</div>
+        </div>
+        <div class="bullet-card">
+          <div class="bullet-icon">4</div>
+          <div class="bullet-heading">Performance Drivers</div>
+          <div class="bullet-body">Fusing multiple catalysts (e.g., VARSITI relative strength + oversold condition) so
+            the portfolio doesn't rely entirely on one indicator.</div>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 20 · COMPETING VIEWS</div>
+      <h2>Passive Indexing vs. Dynamic Risk</h2>
+
+      <div class="split-layout">
+        <div class="split-left">
+          <h4>Efficient Market / Passive Indexing</h4>
+          <p><strong>Core Claim:</strong> The market is efficient and always goes up over long horizons. Active
+            management is a waste of fees.</p>
+          <p><strong>Approach:</strong> Buy index funds, hold forever, ignore volatility, "ride the rollercoaster with
+            seatbelt fastened."</p>
+          <p><strong>Fatal Flaw:</strong> Ignores "Sequence of Returns" risk. If you need income during a secular bear
+            market (like 2000-2010), forced selling near the bottom permanently destroys capital. <span
+              class="page-ref">p. 245-246</span></p>
+        </div>
+        <div class="split-right" style="border-left: 4px solid var(--accent-red); padding-left: 2rem;">
+          <h4>Dynamic Allocation & Risk Management (Dormeier)</h4>
+          <p><strong>Core Claim:</strong> Buy-and-hold is actually "Buy-and-Hope." Capital preservation is paramount
+            because mathematical drawdowns are asymmetrical.</p>
+          <p><strong>Approach:</strong> Use AVSL (Anti-Volume Stop Loss) and 4D allocation. Avoid the worst days by
+            ruthlessly stopping out of failing assets.</p>
+          <p><strong>Advantage:</strong> Ensures survival. "Good investors are good winners, while great investors are
+            great losers" (surviving to invest another day).</p>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 20 · READING LAYERS</div>
+      <h2>5 Levels of Comprehension</h2>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-marker" style="background: var(--accent-cyan)">1</div>
+          <div class="timeline-body">
+            <strong>Surface:</strong> Use stop losses to cut losers short and protect capital. Don't invest on blind
+            hope.
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-marker" style="background: var(--accent-emerald)">2</div>
+          <div class="timeline-body">
+            <strong>Structural:</strong> Portfolio survival is mathematical. Because a 50% loss requires a 100% gain to
+            recover, avoiding drawdowns is statistically more important than capturing peaks.
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-marker" style="background: var(--accent-amber)">3</div>
+          <div class="timeline-body">
+            <strong>Contextual:</strong> The chapter is a direct refutation of the 1990s Wall Street marketing myth that
+            "time in the market beats timing the market," which devastated retirees in the 2000s.
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-marker" style="background: var(--accent-red)">4</div>
+          <div class="timeline-body">
+            <strong>Critical:</strong> AVSL solves the classic stop-loss dilemma (too tight vs too loose) by dynamically
+            referencing the asset's own historical volatility (Bollinger) and current conviction (Volume).
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-marker" style="background: var(--accent-purple)">5</div>
+          <div class="timeline-body">
+            <strong>Generative:</strong> True portfolio edge doesn't just come from stock picking; it comes from
+            systematic capital preservation frameworks that strip human ego out of the exit process.
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 20 · KEY TAKEAWAYS</div>
+      <h2>Key Takeaways</h2>
+
+      <ul class="takeaway-list">
+        <li class="takeaway-item">
+          <div class="takeaway-badge">1</div>
+          <div>
+            <strong>Exits dictate investment outcomes, not entries.</strong>
+            <div class="takeaway-detail"><strong>Why:</strong> Once you buy, you lose control to the market. Your only
+              remaining control is the exit. <strong>Application:</strong> Define your AVSL or hard stop <em>before</em>
+              entering the trade. <span class="page-ref">p. 252</span></div>
+          </div>
+        </li>
+        <li class="takeaway-item">
+          <div class="takeaway-badge">2</div>
+          <div>
+            <strong>Volatility must dictate stop width.</strong>
+            <div class="takeaway-detail"><strong>Why:</strong> A flat 7% stop on Coca-Cola might take a year to hit,
+              trapping dead money. A 7% stop on Google might trigger intraday due to noise.
+              <strong>Application:</strong> Use volatility-adjusted trailing stops (like Bollinger band logic) to
+              customize the leash. <span class="page-ref">p. 254</span>
+            </div>
+          </div>
+        </li>
+        <li class="takeaway-item">
+          <div class="takeaway-badge">3</div>
+          <div>
+            <strong>The best mistakes are small and quickly realized.</strong>
+            <div class="takeaway-detail"><strong>Why:</strong> Humans are conservative with winners and aggressive with
+              losers, holding out "hope" for a rebound. <strong>Caveat:</strong> Realizing losses takes discipline; you
+              must override the ego's desire to be "right." <span class="page-ref">p. 256</span></div>
+          </div>
+        </li>
+        <li class="takeaway-item">
+          <div class="takeaway-badge">4</div>
+          <div>
+            <strong>Avoid sequence of returns risk.</strong>
+            <div class="takeaway-detail"><strong>Why:</strong> Averages lie. Earning an average 8% over 10 years means
+              nothing if you suffer a massive drawdown in year 1 while drawing income. <strong>Application:</strong>
+              Active risk management is essential for anyone supplementing income from their portfolio. <span
+                class="page-ref">p. 246</span></div>
+          </div>
+        </li>
+      </ul>
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 20 · IMPLEMENTATION GUIDE</div>
+      <h2>Applying Dynamic Defense</h2>
+
+      <div class="phase-progress">
+        <div class="phase active">Phase 1: Rules</div>
+        <div class="phase">Phase 2: Roster</div>
+        <div class="phase">Phase 3: 4D Mapping</div>
+        <div class="phase">Phase 4: Pruning</div>
+      </div>
+      <div class="content-card" style="margin-top: 2rem;">
+        <h4>Phase 1: Establish Exit Rules (Week 1)</h4>
+        <ul>
+          <li>Calculate the historical volatility for every asset in your portfolio.</li>
+          <li>Set an automated trailing stop (like AVSL or Chandelier exit) for each holding based on its volatility and
+            volume strength.</li>
+        </ul>
+        <h4>Phase 2: Build the Roster (Week 2)</h4>
+        <ul>
+          <li>Categorize your holdings: All-Stars (max 40%), Starters (max 30%), Rookies (15%), Disabled List (15%).
+          </li>
+          <li>Size positions accordingly (e.g., 5% max for All-Stars, 1.5% for Rookies).</li>
+        </ul>
+        <h4>Phase 3: Apply 4D Allocation (Month 2)</h4>
+        <ul>
+          <li>Check horizontal exposure (are you over-indexed on Tech?).</li>
+          <li>Check vertical exposure (Large vs Small cap).</li>
+        </ul>
+        <h4>Phase 4: Objective Pruning (Ongoing)</h4>
+        <ul>
+          <li>When an asset hits its AVSL stop, sell it immediately. Do not rationalize. Free up capital for new
+            "rookies" or to water the "all-stars."</li>
+        </ul>
+      </div>
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 20 · CLOSING ACTIONS</div>
+      <h2>Closing Actions</h2>
+
+      <ul class="action-list">
+        <li class="action-item">
+          <div>
+            <div class="action-headline">Calculate your mathematical recovery needs.</div>
+            <div class="action-detail">Review your current unrealized losses. If any position is down more than 20%,
+              recognize that it needs a 25% gain just to break even. Stop hoping and re-evaluate objectively.</div>
+          </div>
+        </li>
+        <li class="action-item">
+          <div>
+            <div class="action-headline">Implement hard stops on the "Disabled List."</div>
+            <div class="action-detail">Identify the bottom 15% of your portfolio's performers. Place tight,
+              non-negotiable trailing stops beneath them today to force capital reallocation if they fail to perform.
+            </div>
+          </div>
+        </li>
+        <li class="action-item">
+          <div>
+            <div class="action-headline">Cap your maximum position size.</div>
+            <div class="action-detail">No matter your conviction, determine an absolute maximum portfolio weight (e.g.,
+              5% or 8%) per issuer. Enforce this rule to protect your process from bad luck.</div>
+          </div>
+        </li>
+      </ul>
+      <figure class="image-slot" style="margin-top: 2rem;">
+        <div class="image-prompt">
+          <span class="image-prompt-label">AI Image Prompt</span>
+          <p class="image-prompt-text">"A well-tended garden where vibrant flowers thrive while a gardener clips a
+            withered weed, beautiful warm lighting, metaphorical illustration."</p>
+        </div>
+      </figure>
+
+    </section>
+
   </div>
-</div>
 
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH 20 · MENTAL MODELS</div>
-    <h2>Mental Models</h2>
-
-<div class="mental-model-card">
-  <h4 class="model-name">The "Sports Team" Position Allocation</h4>
-  <div class="model-principle">Manage your portfolio's "salary cap" by categorizing assets into roles and strict allocations. <span class="page-ref">p. 249</span></div>
-  <div class="model-application">
-    <strong>How It Works:</strong>
-    <ul>
-      <li><strong>All-Stars (40%):</strong> Highest conviction, reliable ideas (e.g., 5% position sizes x 8 stocks).</li>
-      <li><strong>Starters (30%):</strong> Core holdings (e.g., 3% x 10 stocks).</li>
-      <li><strong>Rookies (15%):</strong> Unproven but high potential (e.g., 1.5% x 10 stocks).</li>
-      <li><strong>Disabled List (15%):</strong> Underperforming stocks that are on probation.</li>
-    </ul>
+  <div class="nav-controls">
+    <button class="nav-btn" id="prevBtn" onclick="prevSlide()" aria-label="Previous slide">&#8592;</button>
+    <div class="counter" id="counter" aria-live="polite">1 / 1</div>
+    <button class="nav-btn" id="nextBtn" onclick="nextSlide()" aria-label="Next slide">&#8594;</button>
   </div>
-</div>
-<div class="mental-model-card" style="margin-top: 1.5rem;">
-  <h4 class="model-name">The Gardener</h4>
-  <div class="model-principle">"A gardener begins by sowing seeds... picks the weeds and waters flowers just as the savvy investor sells losers and reinvests in winning positions." <span class="page-ref">p. 256</span></div>
-  <div class="model-application">
-    <strong>Application:</strong> Realizing a loss is not an admission of ultimate defeat; it is the deliberate freeing up of capital (pulling weeds) to reallocate to stronger assets (watering flowers).
-  </div>
-</div>
 
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH 20 · AUTHOR&#x27;S WARNINGS</div>
-    <h2>Author&#x27;s Warnings</h2>
-
-<div class="warning-card" style="margin-bottom: 1.5rem;">
-  <div class="warning-headline">Beware the "Buy and Hope" Strategy</div>
-  <div class="warning-detail"><strong>Why:</strong> The mutual fund industry promotes "don't miss the 10 best days," but deliberately ignores that missing the 10 <em>worst</em> days dramatically increases returns. Passive holding without risk management exposes capital to catastrophic compounding math. <span class="page-ref">p. 244-245</span></div>
-</div>
-<div class="warning-card" style="margin-bottom: 1.5rem;">
-  <div class="warning-headline">Do not average down to meet income needs</div>
-  <div class="warning-detail"><strong>Why:</strong> Sequence of returns risk. If a retiree takes a 5% draw during a bear market, they are forced to sell more shares at lower prices. A $1M portfolio taking 5% draws from 2000-2010 dropped to $297k. <span class="page-ref">p. 246</span></div>
-</div>
-<div class="warning-card">
-  <div class="warning-headline">Do not over-weight positions based on "Luck"</div>
-  <div class="warning-detail"><strong>Why:</strong> Placing too much capital in one stock means you are placing faith in <em>that stock</em> rather than your <em>process</em>. Limit position sizes so that bad luck on one stock doesn't destroy the portfolio. <span class="page-ref">p. 248</span></div>
-</div>
-
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH 20 · NUMBERS &amp; STUDIES</div>
-    <h2>The Math of Compounding</h2>
-
-<div class="deep-section">
-  <p class="summary-text">The mathematical realities of drawdowns reveal why capital preservation is the most critical function of a portfolio manager. Losses compound downward aggressively. <span class="page-ref">p. 253</span></p>
-</div>
-<div class="metric-grid">
-  <div class="metric-card">
-    <div class="metric-value">11%</div>
-    <div class="metric-label">Gain needed</div>
-    <div class="metric-detail">To recover from a <strong>10% loss</strong>. The math is relatively symmetrical early on.</div>
-  </div>
-  <div class="metric-card">
-    <div class="metric-value">25%</div>
-    <div class="metric-label">Gain needed</div>
-    <div class="metric-detail">To recover from a <strong>20% loss</strong>. The asymmetry begins to accelerate rapidly.</div>
-  </div>
-  <div class="metric-card">
-    <div class="metric-value">100%</div>
-    <div class="metric-label">Gain needed</div>
-    <div class="metric-detail">To recover from a <strong>50% loss</strong>. A catastrophic drawdown requires doubling your money just to break even.</div>
-  </div>
-</div>
-<div class="callout" style="margin-top: 2rem;">
-  <div class="callout-icon">📊</div>
-  <div class="callout-content">
-    <strong>Missing the Best vs. Worst Days (1984-1998):</strong> 
-    Missing the 10 best days dropped annualized returns from 17.89% to 14.24%. But missing BOTH the 10 best AND 10 worst days boosted returns to over <strong>20.31%</strong>. Risk management (missing the worst) is mathematically superior to buy-and-hold. <span class="page-ref">p. 244</span>
-  </div>
-</div>
-
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH 20 · SIGNAL MATRIX</div>
-    <h2>AVSL Decision Rules</h2>
-
-<div class="deep-section">
-  <p class="summary-text">The <strong>Anti-Volume Stop Loss (AVSL)</strong> dynamically adjusts based on a security's individual volatility (Bollinger Bands) and its volume health (VPCI). <span class="page-ref">p. 254</span></p>
-</div>
-<table class="signal-matrix">
-  <thead>
-    <tr>
-      <th></th>
-      <th>Volume Confirming Trend (High VPCI)</th>
-      <th>Volume Contradicting Trend (Low VPCI)</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th class="row-header">High Volatility (e.g. Tech/Growth)</th>
-      <td class="bullish"><span class="signal-label">Widest Leash</span>High volatility requires room to breathe; strong volume provides confidence to allow normal fluctuations.</td>
-      <td class="warning"><span class="signal-label">Tighten Stop</span>High volatility without volume backing means risk is elevated. Pull stops up to protect capital.</td>
-    </tr>
-    <tr>
-      <th class="row-header">Low Volatility (e.g. Consumer Staples)</th>
-      <td class="opportunity"><span class="signal-label">Standard Leash</span>Tight baseline stop is slightly loosened to ride the confirmed low-volatility uptrend.</td>
-      <td class="bearish"><span class="signal-label">Tightest Leash</span>Stable stocks losing volume support have no excuse for large drops. Stop out quickly.</td>
-    </tr>
-  </tbody>
-</table>
-<div class="callout" style="margin-top: 1rem;">
-  <div class="callout-icon">💡</div>
-  <div class="callout-content">
-    <strong>AVSL Formula Concept:</strong> AVSL uses the Lower Bollinger Band of the price's lows, modified by Volume Price Confirmation Indicator (VPCI) and Volume Multiplier (VM).
-  </div>
-</div>
-
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH 20 · NOTABLE QUOTES</div>
-    <h2>On Risk Psychology</h2>
-
-<div class="quote-block">
-  <p class="quote-text">"A loss never bothers me after I take it. I forget it overnight. But being wrong—not taking the loss—that is what does damage to the pocketbook and to the soul."</p>
-  <p class="quote-context"><strong>— Jesse L. Livermore</strong>, cited on the psychology of realized vs. unrealized losses. <span class="page-ref">p. 256</span></p>
-</div>
-
-<div class="quote-block" style="margin-top: 2rem;">
-  <p class="quote-text">"When you think that a company is too good and the earning are too strong for it to go down, that's when you'll have your head handed to you."</p>
-  <p class="quote-context"><strong>— Dan Zanger</strong>, warning against replacing objective risk management with blind faith in fundamentals. <span class="page-ref">p. 243</span></p>
-</div>
-
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH 20 · DEEP DIVE</div>
-    <h2>The 4D Allocation Process</h2>
-
-<div class="deep-section">
-  <p class="summary-text">Dormeier's <strong>Four-Dimensional Strategic Allocation</strong> seeks to achieve maximum diversification by blending structural portfolio parameters with dynamic performance catalysts. <span class="page-ref">p. 248-251</span></p>
-</div>
-<div class="bullet-grid">
-  <div class="bullet-card">
-    <div class="bullet-icon">1</div>
-    <div class="bullet-heading">Position Allocation</div>
-    <div class="bullet-body">Sizing limits the damage any single issuer can do. Cap positions (e.g., max 5%) to ensure performance relies on your process, not luck.</div>
-  </div>
-  <div class="bullet-card">
-    <div class="bullet-icon">2</div>
-    <div class="bullet-heading">Horizontal Allocation</div>
-    <div class="bullet-body">Diversifying across the 10 major S&P sectors and geographic regions. Use top-down target ranges (e.g., 10-15% industrials).</div>
-  </div>
-  <div class="bullet-card">
-    <div class="bullet-icon">3</div>
-    <div class="bullet-heading">Vertical Allocation</div>
-    <div class="bullet-body">Allocating among market capitalizations (mega, large, mid, small, micro). Dynamically shift weightings as macro environments change.</div>
-  </div>
-  <div class="bullet-card">
-    <div class="bullet-icon">4</div>
-    <div class="bullet-heading">Performance Drivers</div>
-    <div class="bullet-body">Fusing multiple catalysts (e.g., VARSITI relative strength + oversold condition) so the portfolio doesn't rely entirely on one indicator.</div>
-  </div>
-</div>
-
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH 20 · COMPETING VIEWS</div>
-    <h2>Passive Indexing vs. Dynamic Risk</h2>
-
-<div class="split-layout">
-  <div class="split-left">
-    <h4>Efficient Market / Passive Indexing</h4>
-    <p><strong>Core Claim:</strong> The market is efficient and always goes up over long horizons. Active management is a waste of fees.</p>
-    <p><strong>Approach:</strong> Buy index funds, hold forever, ignore volatility, "ride the rollercoaster with seatbelt fastened."</p>
-    <p><strong>Fatal Flaw:</strong> Ignores "Sequence of Returns" risk. If you need income during a secular bear market (like 2000-2010), forced selling near the bottom permanently destroys capital. <span class="page-ref">p. 245-246</span></p>
-  </div>
-  <div class="split-right" style="border-left: 4px solid var(--accent-red); padding-left: 2rem;">
-    <h4>Dynamic Allocation & Risk Management (Dormeier)</h4>
-    <p><strong>Core Claim:</strong> Buy-and-hold is actually "Buy-and-Hope." Capital preservation is paramount because mathematical drawdowns are asymmetrical.</p>
-    <p><strong>Approach:</strong> Use AVSL (Anti-Volume Stop Loss) and 4D allocation. Avoid the worst days by ruthlessly stopping out of failing assets.</p>
-    <p><strong>Advantage:</strong> Ensures survival. "Good investors are good winners, while great investors are great losers" (surviving to invest another day).</p>
-  </div>
-</div>
-
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH 20 · READING LAYERS</div>
-    <h2>5 Levels of Comprehension</h2>
-
-<div class="timeline">
-  <div class="timeline-item">
-    <div class="timeline-marker" style="background: var(--accent-cyan)">1</div>
-    <div class="timeline-body">
-      <strong>Surface:</strong> Use stop losses to cut losers short and protect capital. Don't invest on blind hope.
-    </div>
-  </div>
-  <div class="timeline-item">
-    <div class="timeline-marker" style="background: var(--accent-emerald)">2</div>
-    <div class="timeline-body">
-      <strong>Structural:</strong> Portfolio survival is mathematical. Because a 50% loss requires a 100% gain to recover, avoiding drawdowns is statistically more important than capturing peaks.
-    </div>
-  </div>
-  <div class="timeline-item">
-    <div class="timeline-marker" style="background: var(--accent-amber)">3</div>
-    <div class="timeline-body">
-      <strong>Contextual:</strong> The chapter is a direct refutation of the 1990s Wall Street marketing myth that "time in the market beats timing the market," which devastated retirees in the 2000s.
-    </div>
-  </div>
-  <div class="timeline-item">
-    <div class="timeline-marker" style="background: var(--accent-red)">4</div>
-    <div class="timeline-body">
-      <strong>Critical:</strong> AVSL solves the classic stop-loss dilemma (too tight vs too loose) by dynamically referencing the asset's own historical volatility (Bollinger) and current conviction (Volume).
-    </div>
-  </div>
-  <div class="timeline-item">
-    <div class="timeline-marker" style="background: var(--accent-purple)">5</div>
-    <div class="timeline-body">
-      <strong>Generative:</strong> True portfolio edge doesn't just come from stock picking; it comes from systematic capital preservation frameworks that strip human ego out of the exit process.
-    </div>
-  </div>
-</div>
-
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH 20 · KEY TAKEAWAYS</div>
-    <h2>Key Takeaways</h2>
-
-<ul class="takeaway-list">
-  <li class="takeaway-item">
-    <div class="takeaway-badge">1</div>
-    <div>
-      <strong>Exits dictate investment outcomes, not entries.</strong>
-      <div class="takeaway-detail"><strong>Why:</strong> Once you buy, you lose control to the market. Your only remaining control is the exit. <strong>Application:</strong> Define your AVSL or hard stop <em>before</em> entering the trade. <span class="page-ref">p. 252</span></div>
-    </div>
-  </li>
-  <li class="takeaway-item">
-    <div class="takeaway-badge">2</div>
-    <div>
-      <strong>Volatility must dictate stop width.</strong>
-      <div class="takeaway-detail"><strong>Why:</strong> A flat 7% stop on Coca-Cola might take a year to hit, trapping dead money. A 7% stop on Google might trigger intraday due to noise. <strong>Application:</strong> Use volatility-adjusted trailing stops (like Bollinger band logic) to customize the leash. <span class="page-ref">p. 254</span></div>
-    </div>
-  </li>
-  <li class="takeaway-item">
-    <div class="takeaway-badge">3</div>
-    <div>
-      <strong>The best mistakes are small and quickly realized.</strong>
-      <div class="takeaway-detail"><strong>Why:</strong> Humans are conservative with winners and aggressive with losers, holding out "hope" for a rebound. <strong>Caveat:</strong> Realizing losses takes discipline; you must override the ego's desire to be "right." <span class="page-ref">p. 256</span></div>
-    </div>
-  </li>
-  <li class="takeaway-item">
-    <div class="takeaway-badge">4</div>
-    <div>
-      <strong>Avoid sequence of returns risk.</strong>
-      <div class="takeaway-detail"><strong>Why:</strong> Averages lie. Earning an average 8% over 10 years means nothing if you suffer a massive drawdown in year 1 while drawing income. <strong>Application:</strong> Active risk management is essential for anyone supplementing income from their portfolio. <span class="page-ref">p. 246</span></div>
-    </div>
-  </li>
-</ul>
-
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH 20 · IMPLEMENTATION GUIDE</div>
-    <h2>Applying Dynamic Defense</h2>
-
-<div class="phase-progress">
-  <div class="phase active">Phase 1: Rules</div>
-  <div class="phase">Phase 2: Roster</div>
-  <div class="phase">Phase 3: 4D Mapping</div>
-  <div class="phase">Phase 4: Pruning</div>
-</div>
-<div class="content-card" style="margin-top: 2rem;">
-  <h4>Phase 1: Establish Exit Rules (Week 1)</h4>
-  <ul>
-    <li>Calculate the historical volatility for every asset in your portfolio.</li>
-    <li>Set an automated trailing stop (like AVSL or Chandelier exit) for each holding based on its volatility and volume strength.</li>
-  </ul>
-  <h4>Phase 2: Build the Roster (Week 2)</h4>
-  <ul>
-    <li>Categorize your holdings: All-Stars (max 40%), Starters (max 30%), Rookies (15%), Disabled List (15%).</li>
-    <li>Size positions accordingly (e.g., 5% max for All-Stars, 1.5% for Rookies).</li>
-  </ul>
-  <h4>Phase 3: Apply 4D Allocation (Month 2)</h4>
-  <ul>
-    <li>Check horizontal exposure (are you over-indexed on Tech?).</li>
-    <li>Check vertical exposure (Large vs Small cap).</li>
-  </ul>
-  <h4>Phase 4: Objective Pruning (Ongoing)</h4>
-  <ul>
-    <li>When an asset hits its AVSL stop, sell it immediately. Do not rationalize. Free up capital for new "rookies" or to water the "all-stars."</li>
-  </ul>
-</div>
-
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH 20 · CLOSING ACTIONS</div>
-    <h2>Closing Actions</h2>
-
-<ul class="action-list">
-  <li class="action-item">
-    <div>
-      <div class="action-headline">Calculate your mathematical recovery needs.</div>
-      <div class="action-detail">Review your current unrealized losses. If any position is down more than 20%, recognize that it needs a 25% gain just to break even. Stop hoping and re-evaluate objectively.</div>
-    </div>
-  </li>
-  <li class="action-item">
-    <div>
-      <div class="action-headline">Implement hard stops on the "Disabled List."</div>
-      <div class="action-detail">Identify the bottom 15% of your portfolio's performers. Place tight, non-negotiable trailing stops beneath them today to force capital reallocation if they fail to perform.</div>
-    </div>
-  </li>
-  <li class="action-item">
-    <div>
-      <div class="action-headline">Cap your maximum position size.</div>
-      <div class="action-detail">No matter your conviction, determine an absolute maximum portfolio weight (e.g., 5% or 8%) per issuer. Enforce this rule to protect your process from bad luck.</div>
-    </div>
-  </li>
-</ul>
-<figure class="image-slot" style="margin-top: 2rem;">
-  <div class="image-prompt">
-    <span class="image-prompt-label">AI Image Prompt</span>
-    <p class="image-prompt-text">"A well-tended garden where vibrant flowers thrive while a gardener clips a withered weed, beautiful warm lighting, metaphorical illustration."</p>
-  </div>
-</figure>
-
-  </section>
-
-</div>
-
-<div class="nav-controls">
-  <button class="nav-btn" id="prevBtn" onclick="prevSlide()" aria-label="Previous slide">&#8592;</button>
-  <div class="counter" id="counter" aria-live="polite">1 / 1</div>
-  <button class="nav-btn" id="nextBtn" onclick="nextSlide()" aria-label="Next slide">&#8594;</button>
-</div>
-
-<script src="common.js"></script>
+  <script src="../common.js"></script>
 </body>
+
 </html>

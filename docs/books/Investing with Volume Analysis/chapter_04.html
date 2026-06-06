@@ -1,389 +1,663 @@
 <!DOCTYPE html>
 
 <html lang="vi">
+
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>Investing with Volume Analysis — Chapter 4</title>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Merriweather:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="common.css" rel="stylesheet"/>
-<script crossorigin="anonymous" src="https://cdn.jsdelivr.net/npm/mermaid@11.10.0/dist/mermaid.min.js"></script>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>Investing with Volume Analysis — Chapter 4</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Merriweather:wght@400;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link href="../common.css" rel="stylesheet" />
+    <script crossorigin="anonymous" src="https://cdn.jsdelivr.net/npm/mermaid@11.10.0/dist/mermaid.min.js"></script>
 </head>
+
 <body>
-<div class="progress-bar" id="progressBar"></div>
-<div class="chapter-menu">
-<button aria-expanded="false" aria-haspopup="true" class="menu-btn" id="chapterMenuBtn" onclick="toggleChapterMenu()">Chapters ▾</button>
-<div class="chapter-menu-panel" id="chapterMenuPanel" role="menu"></div>
-</div>
-<div class="slide-container" id="slideContainer">
-<section aria-hidden="false" class="slide">
-<h1>Investing with Volume Analysis</h1>
-<p class="subtitle">Buff Pelz Dormeier · FT Press 2011 — Chương 4: <em>Volume Analysis</em></p>
-<div class="meta-grid">
-<div class="meta-pill">
-<div class="label">Trang gốc</div>
-<div class="value">32-38</div>
-</div>
-<div class="meta-pill">
-<div class="label">Thời gian đọc gốc</div>
-<div class="value">~9 phút</div>
-</div>
-<div class="meta-pill">
-<div class="label">Độ sâu</div>
-<div class="value">Deep</div>
-</div>
-<div class="meta-pill">
-<div class="label">Đối tượng</div>
-<div class="value">Business / Pro</div>
-</div>
-</div>
-</section>
-<section class="slide chapter-divider">
-<div class="chapter-number">Chapter 4</div>
-<h2>Volume Analysis</h2>
-<p class="chapter-meta">~9 phút · Deep · Business/Pro · Volume = ballot box · 9 vai trò: validate price · liberate liquidity · substantiate info · reveal conviction · express interest · denote disparity · fuel · expose truth · cause &amp; velocity · B=S=T formula · Wharton 1.75% premium · 41 countries</p>
-</section>
-<section class="slide">
-<div class="slide-kicker">CH 4 · VISUAL SUMMARY</div>
-<h2>Volume Analysis Framework</h2>
-<div class="mermaid">
-graph TD
-    P["Một giao dịch<br/>= 2 mảnh dữ liệu"] --&gt; PR["PRICE<br/>(Ch 3: điểm đồng thuận)"]
-    P --&gt; V["VOLUME<br/>(người anh em bị bỏ quên)"]
-    V --&gt; R1["1. Validates price<br/>(càng nhiều vote → càng tin)"]
-    V --&gt; R2["2. Liberates liquidity<br/>(quyền thoát hàng)"]
-    V --&gt; R3["3. Substantiates info<br/>(thị trường có nuốt tin không?)"]
-    V --&gt; R4["4. Reveals convictions<br/>(buy 100 hay 1M cổ?)"]
-    V --&gt; R5["5. Expresses interest<br/>(rising = enthusiasm)"]
-    V --&gt; R6["6. Denotes disparity<br/>(volume cao = bất đồng cao)"]
-    V --&gt; R7["7. Fuel of market<br/>(rocket fuel)"]
-    V --&gt; R8["8. Exposes truth<br/>(institution không giấu được)"]
-    V --&gt; R9["9. Cause<br/>(Wyckoff: cause × effect)"]
-    V --&gt; R10["10. Velocity<br/>(volume → acceleration price)"]
-    style V fill:#EFEEFF,stroke:#635BFF,color:#111111
-    style R7 fill:#FEF3C7,stroke:#D97706,color:#111111
-    style R8 fill:#FEF3C7,stroke:#D97706,color:#111111
-</div>
-<p class="caveat" style="margin-top:var(--space-6)">10 vai trò Dormeier liệt kê — không phải checklist, mà là 10 lăng kính khác nhau cùng trỏ về 1 ý: volume là tín hiệu thông tin mà price không tự cấp được. Hai vai trò vàng (fuel, expose truth) là điểm thực dụng nhất cho retail. <span class="page-ref">Ch 4, p. 33-38</span></p>
-</section>
-<section class="slide">
-<div class="slide-kicker">CH 4 · THE BIG IDEA</div>
-<h2>Một câu cốt lõi</h2>
-<div class="takeaway-hero">
-<div class="kicker">CH 4 · THE BIG IDEA</div>
-<div class="headline">"Nếu Graham gọi thị trường là <em>voting machine</em>, thì volume là <em>ballot box</em> — không có volume, mọi tín hiệu price chỉ là một phiếu bầu không xác nhận được."</div>
-<div class="subline">Volume validate price, liberate liquidity, expose institution — và Dow tin volume <em>dẫn</em> price; nhiều nghiên cứu hàn lâm đã xác nhận.</div>
-</div>
-</section>
-<section class="slide">
-<div class="slide-kicker">CH 4 · KEY TAKEAWAYS</div>
-<h2>Sáu vai trò của Volume</h2>
-<div class="takeaway-list"><div class="takeaway-item content-card"><div class="takeaway-badge">1</div><div style="flex: 1;"><div class="takeaway-text" style="font-size: 1.25rem; color: var(--accent); margin-bottom: 0.5rem;"><strong>Volume Validates Price — càng nhiều shares giao dịch ở một mức giá, price đó càng được "bỏ phiếu" mạnh mẽ. Low volume = nghi ngờ về tính hợp lý của price. <span class="page-ref">Ch 4, p. 34</span></strong></div><div class="takeaway-detail"><strong>Why it matters:</strong> Volume là minh chứng vật chất của consensus — không phải lời nói, mà là tiền thật. Ví dụ eBay: 1 seller khó tin, nhưng thousands of transactions ở similar price = fair value. <strong>Apply:</strong> Khi breakout, check volume — high volume validates move, low volume casts doubt. <strong>Caveat:</strong> Volume có thể cao do liquidity events (index rebalance, options expiry) — không phải genuine conviction.</div></div></div><div class="takeaway-item content-card"><div class="takeaway-badge" style="background: var(--accent-amber);">2</div><div style="flex: 1;"><div class="takeaway-text" style="font-size: 1.25rem; color: var(--accent-amber); margin-bottom: 0.5rem;"><strong>Volume Liberates Liquidity — high volume = high liquidity, khả năng chuyển đổi thành cash nhanh chóng ở fair price. Jones &amp; Dalton: "Volume is the truest indicator of the market's ability to facilitate trade." <span class="page-ref">Ch 4, p. 35</span></strong></div><div class="takeaway-detail"><strong>Why:</strong> Market không facilitate trade sẽ không survive long. Low volume = risk thanh khoản cao, khó exit ở desired price. <strong>Apply:</strong> Before entering position, check average volume — avoid illiquid stocks với wide spreads. <strong>Caveat:</strong> Flash crashes show liquidity có thể evaporate instantly ngay cả trong large-cap stocks.</div></div></div><div class="takeaway-item content-card"><div class="takeaway-badge" style="background: var(--accent-purple);">3</div><div style="flex: 1;"><div class="takeaway-text" style="font-size: 1.25rem; color: var(--accent-purple); margin-bottom: 0.5rem;"><strong>Volume Substantiates Information — volume tăng khi new info released = info có impact lớn. Volume không đổi = info ít significance với market. <span class="page-ref">Ch 4, p. 35-36</span></strong></div><div class="takeaway-detail"><strong>Why:</strong> Volume reveals information diffusion flow — how quickly facts absorbed by participants. <strong>Apply:</strong> After earnings/news, watch volume — surge confirms surprise, flat volume = already priced in. <strong>Caveat:</strong> Some news (regulatory changes) có delayed impact — volume lag không mean irrelevant.</div></div></div><div class="takeaway-item content-card"><div class="takeaway-badge" style="background: var(--accent-emerald);">4</div><div style="flex: 1;"><div class="takeaway-text" style="font-size: 1.25rem; color: var(--accent-emerald); margin-bottom: 0.5rem;"><strong>Volume Reveals Convictions &amp; Interest — volume cao = conviction mạnh (tiền thật, quyết định thật). Rising volume = interest/enthusiasm tăng hoặc diverging opinions. Light volume = equilibrium. <span class="page-ref">Ch 4, p. 36-37</span></strong></div><div class="takeaway-detail"><strong>Why:</strong> Ví dụ: famous investor mua 100 shares (không 1M shares expected) = weak conviction. Volume = reality check của rhetoric. <strong>Apply:</strong> Follow institutional volume, không chỉ institutional holdings — size matters. <strong>Caveat:</strong> Dark pools hide ~30-40% institutional volume — public data incomplete.</div></div></div><div class="takeaway-item content-card"><div class="takeaway-badge" style="background: var(--accent-cyan);">5</div><div style="flex: 1;"><div class="takeaway-text" style="font-size: 1.25rem; color: var(--accent-cyan); margin-bottom: 0.5rem;"><strong>Volume Is the Fuel &amp; Cause — Billy Williams: "Volume is rocket fuel to stocks." Wyckoff's Law of Cause &amp; Effect: extent của market move proportional to amount of cause (volume imbalance). <span class="page-ref">Ch 4, p. 36-37</span></strong></div><div class="takeaway-detail"><strong>Why:</strong> Volume = supply + demand, fuel enabling markets to move. Space shuttle analogy: majority of fuel spent getting to orbit (breakout), then small portion maintains mission (trend). <strong>Apply:</strong> Measure accumulation volume during base-building — larger "cause" predicts larger "effect" (subsequent move). <strong>Caveat:</strong> Cause-effect proportionality không linear — diminishing returns exist.</div></div></div><div class="takeaway-item content-card"><div class="takeaway-badge" style="background: var(--accent);">6</div><div style="flex: 1;"><div class="takeaway-text" style="font-size: 1.25rem; color: var(--accent); margin-bottom: 0.5rem;"><strong>B = S = T Formula — In auction market, Buyers volume = Sellers volume = Total volume. Debunk myth "market lên vì nhiều buyers hơn sellers." Price = net của demand - supply (uptick vs downtick). <span class="page-ref">Ch 4, p. 41-43</span></strong></div><div class="takeaway-detail"><strong>Why:</strong> Hiểu auction mechanics phá vỡ misconception phổ biến. Price lên = demand &gt; supply (more upticks), không phải "more buyers." <strong>Apply:</strong> Analyze uptick/downtick sequences, không đếm "số người mua vs bán." <strong>Caveat:</strong> Quiz trong sách (1,000 shares market order vs 10,000 shares limit order) — không có "correct" answer, chỉ có net demand/supply outcome.</div></div></div></div>
-</section>
-<section class="slide">
-<div class="slide-kicker">CH 4 · MENTAL MODEL</div>
-<h2>B = S = T Formula</h2>
-<div class="mental-model-card">
-<h4 class="model-name">B = S = T Formula — Auction Market Mechanics</h4>
-<div class="model-principle">Trong auction market, số shares <strong>Bought</strong> luôn bằng số shares <strong>Sold</strong>, và bằng <strong>Total</strong> shares traded. Debunk myth "market lên vì nhiều buyers hơn sellers" — thực tế price lên do <em>demand &gt; supply</em> (net của upticks &gt; downticks). <span class="page-ref">Ch 4, p. 41-43</span></div>
-<div class="model-application">
-<strong>Công thức cốt lõi &amp; ý nghĩa:</strong>
-<ul>
-<li><strong>B = S = T</strong> — Every share bought phải có counterparty seller. Volume không measure "số người mua" hay "số người bán" mà measure <em>intensity of exchange</em>.</li>
-<li><strong>Price movement</strong> — Khi trade fills on <em>uptick</em>, demand &gt; supply. Khi fills on <em>downtick</em>, supply &gt; demand. Add up all ticks over time → uptrend (demand line) hoặc downtrend (supply line).</li>
-<li><strong>Quiz từ sách</strong> — Buyer market order 1,000 shares vs Seller limit order 10,000 shares at $50. Who controls: demand hay supply? Answer: depends on execution — uptick = demand wins, downtick = supply wins. Not about order size alone.</li>
-</ul>
-</div>
-<div class="model-application">
-<strong>When to apply — Volume Analysis framework:</strong>
-<ul>
-<li><strong>Uptrend analysis</strong> — Connect significant lows (rising support line = demand line). String of higher lows = demand overwhelming supply, security being accumulated. <span class="page-ref">Ch 4, p. 44</span></li>
-<li><strong>Downtrend analysis</strong> — Connect significant highs (falling resistance line = supply line). Each high lower than previous = sellers accepting lower prices, security in distribution. <span class="page-ref">Ch 4, p. 45-46</span></li>
-<li><strong>Decode price-volume relationship</strong> — Examine intrinsic relationship giữa price trends và corresponding volume. Confirm whether volume supports price action hay contradicts it, giving notice of future movements. <span class="page-ref">Ch 4, p. 43</span></li>
-</ul>
-</div>
-<div class="model-limitations">
-<strong>⚠️ Limitations &amp; Caveats:</strong>
-<ul>
-<li><strong>Misconception phổ biến</strong> — Financial commentators thường nói "market up vì more buyers than sellers" hoặc "down vì more sellers than buyers." <em>Ils ne comprendent pas</em> — they don't understand auction mechanics.</li>
-<li><strong>Net demand/supply ambiguity</strong> — Trong real-time, khó distinguish uptick vs downtick without tick data. Most retail platforms chỉ show bar volume, không show directional flow.</li>
-<li><strong>Modern market structure</strong> — HFT, dark pools, internalization complicate interpretation. Public volume data = incomplete picture của true supply-demand dynamics.</li>
-</ul>
-</div>
-</div>
-</section>
-<section class="slide">
-<div class="slide-kicker">CH 4 · NUMBERS &amp; STUDIES</div>
-<h2>Wharton &amp; Academic Evidence</h2>
-<div class="metric-grid">
-<div class="metric-card">
-<div class="metric-value">1.75%</div>
-<div class="metric-label">High-volume return premium</div>
-<div class="metric-detail">Stocks với unusually large volume trong 1 day/week có subsequent return cao hơn ~1.75% so với normal/low volume stocks trong 20 trading days tiếp theo. <span class="page-ref">Ch 4, p. 40 (Figure 5.1)</span> · <span class="source-ref">Gervais, Kaniel, Mingelgrin, Wharton 33-year study</span></div>
-</div>
-<div class="metric-card">
-<div class="metric-value">41</div>
-<div class="metric-label">Countries confirmed globally</div>
-<div class="metric-detail">"Strikingly pervasive global phenomenon" — high-volume premium confirmed in 41 countries, cả developed &amp; emerging markets. <span class="page-ref">Ch 4, p. 40</span> · <span class="source-ref">Kaniel, Li, Starks, U. Texas</span></div>
-</div>
-<div class="metric-card">
-<div class="metric-value">B = S = T</div>
-<div class="metric-label">Auction market law</div>
-<div class="metric-detail">Buyers volume luôn bằng Sellers volume, bằng Total volume traded. Debunk myth "market lên vì nhiều buyers." Price = net demand - supply qua upticks/downticks. <span class="page-ref">Ch 4, p. 41-43</span></div>
-</div>
-</div>
-<div class="quote-block" style="margin-top:var(--space-6)">
-<p class="quote-text">"If [the market is] a 'voting machine,' then volume is the ballot box. Volume is a literal illustration of the power behind the forces of supply and demand."</p>
-<p class="quote-context"><strong>— Benjamin Graham's metaphor + tác giả.</strong> Volume là minh chứng vật chất của supply/demand — không phải lời nói, mà là hành động thật (tiền thật). <span class="page-ref">Ch 4, p. 34</span></p>
-</div>
-<div class="quote-block" style="margin-top:var(--space-6)">
-<p class="quote-text">"Volume provides information on information quality that cannot be produced by the price static... traders who use information contained in market statistics do better than those who do not."</p>
-<p class="quote-context"><strong>— Blume, Easley, O'Hara (1994), Journal of Finance.</strong> Volume reveals precision của private signals mà price alone không thể. Technical analysis = natural component của learning process. <span class="page-ref">Ch 4, p. 41</span> · <span class="source-ref">Blume, Easley, O'Hara (1994)</span></p>
-</div>
-<div class="quote-block" style="margin-top:var(--space-6)">
-<p class="quote-text">"Price and volume of sales in the stock market are joint products of a single market mechanism; any model that attempts to isolate prices from volumes or vice versa will inevitably yield incomplete if not erroneous results."</p>
-<p class="quote-context"><strong>— Ying (1966), groundbreaking work on price-volume correlations.</strong> Price và volume không thể tách rời — cùng output của exchange mechanism. Volume analysis = study relationship, không phải volume in isolation. <span class="page-ref">Ch 4, p. 41</span> · <span class="source-ref">Ying (1966)</span></p>
-</div>
-</section>
-<section class="slide">
-<div class="slide-kicker">CH 4 · NOTABLE QUOTES</div>
-<h2>Bốn câu đáng giữ</h2>
-<div class="quote-block">
-<p class="quote-text">"If [the market is] a 'voting machine,' then volume is the ballot box. Volume is a literal illustration of the power behind the forces of supply and demand."</p>
-<p class="quote-context"><strong>— Benjamin Graham's metaphor + tác giả.</strong> Volume là minh chứng vật chất của supply/demand — không phải lời nói, mà là hành động thật (tiền thật). Nếu market = voting machine (Graham), volume = ballot box nơi votes được cast. <span class="page-ref">Ch 4, p. 34</span></p>
-</div>
-<div class="quote-block" style="margin-top:var(--space-6)">
-<p class="quote-text">"Volume is literally the fuel for stock values. Like the space shuttle... the majority of fuel is spent just to get to orbit. Volume is to stocks what rocket fuel is to the space shuttle."</p>
-<p class="quote-context"><strong>— Trader Billy Williams.</strong> Volume = nhiên liệu — explosive force để đẩy price lên "new heights," sau đó chỉ cần ít fuel để duy trì. Analogy minh họa Wyckoff's cause-effect: large volume (fuel) during accumulation → large subsequent move (orbit). <span class="page-ref">Ch 4, p. 36-37</span></p>
-</div>
-<div class="quote-block" style="margin-top:var(--space-6)">
-<p class="quote-text">"Volume is the truest and most reliable indicator of the market's ability to facilitate a trade... A market that is not facilitating trade will not survive long."</p>
-<p class="quote-context"><strong>— Eric Jones, James &amp; Robert Dalton, Mind over Markets.</strong> Volume = liquidity = khả năng exchange nhanh ở fair price. Low volume = risk thanh khoản cao, market không bền vững. This is survival test của markets. <span class="page-ref">Ch 4, p. 35</span> · <span class="source-ref">Jones &amp; Dalton, Mind over Markets</span></p>
-</div>
-<div class="quote-block" style="margin-top:var(--space-6)">
-<p class="quote-text">"The extent of a market move is directly proportional to the amount of its cause."</p>
-<p class="quote-context"><strong>— Richard Wyckoff's Law of Cause &amp; Effect.</strong> Gap giữa sellers' offer và buyers' bid (= volume imbalance) là <em>cause</em> của price change. Cause lớn → effect lớn. Volume during accumulation/distribution phase = measure của "cause." <span class="page-ref">Ch 4, p. 37</span></p>
-</div></section>
-<section class="slide">
-<div class="slide-kicker">CH 4 · CONTEXT &amp; BACKGROUND</div>
-<h2>Lăng kính tác giả &amp; thời điểm</h2>
-<div class="context-panel">
-<div class="context-section">
-<div class="context-label">Tác giả &amp; góc nhìn</div>
-<div class="context-content">
-<strong>Buff Pelz Dormeier</strong> — practitioner + researcher, kết hợp kinh nghiệm trading thực tế với nghiên cứu hàn lâm. Góc nhìn: <em>volume is neglected sibling of price</em> — bị underutilized bởi technician, bị ignore bởi fundamental analyst.
+    <div class="progress-bar" id="progressBar"></div>
+    <div class="chapter-menu">
+        <button aria-expanded="false" aria-haspopup="true" class="menu-btn" id="chapterMenuBtn"
+            onclick="toggleChapterMenu()">Chapters ▾</button>
+        <div class="chapter-menu-panel" id="chapterMenuPanel" role="menu"></div>
     </div>
-</div>
-<div class="context-section">
-<div class="context-label">Thời điểm &amp; bối cảnh</div>
-<div class="context-content">
-      Chương 4 đặt nền móng terminology &amp; rationale cho volume analysis. Viết sau 2008 crisis — thời kỳ high volatility, liquidity concerns nổi bật. Tác giả dẫn nghiên cứu từ 1960s (Ying) đến 2000s (Wharton, U. Texas) để chứng minh volume không chỉ là "nice-to-have" mà là <em>essential</em>.
+    <div class="slide-container" id="slideContainer">
+        <section aria-hidden="false" class="slide">
+            <h1>Investing with Volume Analysis</h1>
+            <p class="subtitle">Buff Pelz Dormeier · FT Press 2011 — Chương 4: <em>Volume Analysis</em></p>
+            <div class="meta-grid">
+                <div class="meta-pill">
+                    <div class="label">Trang gốc</div>
+                    <div class="value">32-38</div>
+                </div>
+                <div class="meta-pill">
+                    <div class="label">Thời gian đọc gốc</div>
+                    <div class="value">~9 phút</div>
+                </div>
+                <div class="meta-pill">
+                    <div class="label">Độ sâu</div>
+                    <div class="value">Deep</div>
+                </div>
+                <div class="meta-pill">
+                    <div class="label">Đối tượng</div>
+                    <div class="value">Business / Pro</div>
+                </div>
+            </div>
+        </section>
+        <section class="slide chapter-divider">
+            <div class="chapter-number">Chapter 4</div>
+            <h2>Volume Analysis</h2>
+            <p class="chapter-meta">~9 phút · Deep · Business/Pro · Volume = ballot box · 9 vai trò: validate price ·
+                liberate liquidity · substantiate info · reveal conviction · express interest · denote disparity · fuel
+                · expose truth · cause &amp; velocity · B=S=T formula · Wharton 1.75% premium · 41 countries</p>
+        </section>
+        <section class="slide">
+            <div class="slide-kicker">CH 4 · VISUAL SUMMARY</div>
+            <h2>Volume Analysis Framework</h2>
+            <div class="mermaid">
+                graph TD
+                P["Một giao dịch<br />= 2 mảnh dữ liệu"] --&gt; PR["PRICE<br />(Ch 3: điểm đồng thuận)"]
+                P --&gt; V["VOLUME<br />(người anh em bị bỏ quên)"]
+                V --&gt; R1["1. Validates price<br />(càng nhiều vote → càng tin)"]
+                V --&gt; R2["2. Liberates liquidity<br />(quyền thoát hàng)"]
+                V --&gt; R3["3. Substantiates info<br />(thị trường có nuốt tin không?)"]
+                V --&gt; R4["4. Reveals convictions<br />(buy 100 hay 1M cổ?)"]
+                V --&gt; R5["5. Expresses interest<br />(rising = enthusiasm)"]
+                V --&gt; R6["6. Denotes disparity<br />(volume cao = bất đồng cao)"]
+                V --&gt; R7["7. Fuel of market<br />(rocket fuel)"]
+                V --&gt; R8["8. Exposes truth<br />(institution không giấu được)"]
+                V --&gt; R9["9. Cause<br />(Wyckoff: cause × effect)"]
+                V --&gt; R10["10. Velocity<br />(volume → acceleration price)"]
+                style V fill:#EFEEFF,stroke:#635BFF,color:#111111
+                style R7 fill:#FEF3C7,stroke:#D97706,color:#111111
+                style R8 fill:#FEF3C7,stroke:#D97706,color:#111111
+            </div>
+            <p class="caveat" style="margin-top:var(--space-6)">10 vai trò Dormeier liệt kê — không phải checklist, mà
+                là 10 lăng kính khác nhau cùng trỏ về 1 ý: volume là tín hiệu thông tin mà price không tự cấp được. Hai
+                vai trò vàng (fuel, expose truth) là điểm thực dụng nhất cho retail. <span class="page-ref">Ch 4, p.
+                    33-38</span></p>
+        </section>
+        <section class="slide">
+            <div class="slide-kicker">CH 4 · THE BIG IDEA</div>
+            <h2>Một câu cốt lõi</h2>
+            <div class="takeaway-hero">
+                <div class="kicker">CH 4 · THE BIG IDEA</div>
+                <div class="headline">"Nếu Graham gọi thị trường là <em>voting machine</em>, thì volume là <em>ballot
+                        box</em> — không có volume, mọi tín hiệu price chỉ là một phiếu bầu không xác nhận được."</div>
+                <div class="subline">Volume validate price, liberate liquidity, expose institution — và Dow tin volume
+                    <em>dẫn</em> price; nhiều nghiên cứu hàn lâm đã xác nhận.
+                </div>
+            </div>
+        </section>
+        <section class="slide">
+            <div class="slide-kicker">CH 4 · KEY TAKEAWAYS</div>
+            <h2>Sáu vai trò của Volume</h2>
+            <div class="takeaway-list">
+                <div class="takeaway-item content-card">
+                    <div class="takeaway-badge">1</div>
+                    <div style="flex: 1;">
+                        <div class="takeaway-text"
+                            style="font-size: 1.25rem; color: var(--accent); margin-bottom: 0.5rem;"><strong>Volume
+                                Validates Price — càng nhiều shares giao dịch ở một mức giá, price đó càng được "bỏ
+                                phiếu" mạnh mẽ. Low volume = nghi ngờ về tính hợp lý của price. <span
+                                    class="page-ref">Ch 4, p. 34</span></strong></div>
+                        <div class="takeaway-detail"><strong>Why it matters:</strong> Volume là minh chứng vật chất của
+                            consensus — không phải lời nói, mà là tiền thật. Ví dụ eBay: 1 seller khó tin, nhưng
+                            thousands of transactions ở similar price = fair value. <strong>Apply:</strong> Khi
+                            breakout, check volume — high volume validates move, low volume casts doubt.
+                            <strong>Caveat:</strong> Volume có thể cao do liquidity events (index rebalance, options
+                            expiry) — không phải genuine conviction.
+                        </div>
+                    </div>
+                </div>
+                <div class="takeaway-item content-card">
+                    <div class="takeaway-badge" style="background: var(--accent-amber);">2</div>
+                    <div style="flex: 1;">
+                        <div class="takeaway-text"
+                            style="font-size: 1.25rem; color: var(--accent-amber); margin-bottom: 0.5rem;">
+                            <strong>Volume Liberates Liquidity — high volume = high liquidity, khả năng chuyển đổi thành
+                                cash nhanh chóng ở fair price. Jones &amp; Dalton: "Volume is the truest indicator of
+                                the market's ability to facilitate trade." <span class="page-ref">Ch 4, p.
+                                    35</span></strong>
+                        </div>
+                        <div class="takeaway-detail"><strong>Why:</strong> Market không facilitate trade sẽ không
+                            survive long. Low volume = risk thanh khoản cao, khó exit ở desired price.
+                            <strong>Apply:</strong> Before entering position, check average volume — avoid illiquid
+                            stocks với wide spreads. <strong>Caveat:</strong> Flash crashes show liquidity có thể
+                            evaporate instantly ngay cả trong large-cap stocks.
+                        </div>
+                    </div>
+                </div>
+                <div class="takeaway-item content-card">
+                    <div class="takeaway-badge" style="background: var(--accent-purple);">3</div>
+                    <div style="flex: 1;">
+                        <div class="takeaway-text"
+                            style="font-size: 1.25rem; color: var(--accent-purple); margin-bottom: 0.5rem;">
+                            <strong>Volume Substantiates Information — volume tăng khi new info released = info có
+                                impact lớn. Volume không đổi = info ít significance với market. <span
+                                    class="page-ref">Ch 4, p. 35-36</span></strong>
+                        </div>
+                        <div class="takeaway-detail"><strong>Why:</strong> Volume reveals information diffusion flow —
+                            how quickly facts absorbed by participants. <strong>Apply:</strong> After earnings/news,
+                            watch volume — surge confirms surprise, flat volume = already priced in.
+                            <strong>Caveat:</strong> Some news (regulatory changes) có delayed impact — volume lag không
+                            mean irrelevant.
+                        </div>
+                    </div>
+                </div>
+                <div class="takeaway-item content-card">
+                    <div class="takeaway-badge" style="background: var(--accent-emerald);">4</div>
+                    <div style="flex: 1;">
+                        <div class="takeaway-text"
+                            style="font-size: 1.25rem; color: var(--accent-emerald); margin-bottom: 0.5rem;">
+                            <strong>Volume Reveals Convictions &amp; Interest — volume cao = conviction mạnh (tiền thật,
+                                quyết định thật). Rising volume = interest/enthusiasm tăng hoặc diverging opinions.
+                                Light volume = equilibrium. <span class="page-ref">Ch 4, p. 36-37</span></strong>
+                        </div>
+                        <div class="takeaway-detail"><strong>Why:</strong> Ví dụ: famous investor mua 100 shares (không
+                            1M shares expected) = weak conviction. Volume = reality check của rhetoric.
+                            <strong>Apply:</strong> Follow institutional volume, không chỉ institutional holdings — size
+                            matters. <strong>Caveat:</strong> Dark pools hide ~30-40% institutional volume — public data
+                            incomplete.
+                        </div>
+                    </div>
+                </div>
+                <div class="takeaway-item content-card">
+                    <div class="takeaway-badge" style="background: var(--accent-cyan);">5</div>
+                    <div style="flex: 1;">
+                        <div class="takeaway-text"
+                            style="font-size: 1.25rem; color: var(--accent-cyan); margin-bottom: 0.5rem;"><strong>Volume
+                                Is the Fuel &amp; Cause — Billy Williams: "Volume is rocket fuel to stocks." Wyckoff's
+                                Law of Cause &amp; Effect: extent của market move proportional to amount of cause
+                                (volume imbalance). <span class="page-ref">Ch 4, p. 36-37</span></strong></div>
+                        <div class="takeaway-detail"><strong>Why:</strong> Volume = supply + demand, fuel enabling
+                            markets to move. Space shuttle analogy: majority of fuel spent getting to orbit (breakout),
+                            then small portion maintains mission (trend). <strong>Apply:</strong> Measure accumulation
+                            volume during base-building — larger "cause" predicts larger "effect" (subsequent move).
+                            <strong>Caveat:</strong> Cause-effect proportionality không linear — diminishing returns
+                            exist.
+                        </div>
+                    </div>
+                </div>
+                <div class="takeaway-item content-card">
+                    <div class="takeaway-badge" style="background: var(--accent);">6</div>
+                    <div style="flex: 1;">
+                        <div class="takeaway-text"
+                            style="font-size: 1.25rem; color: var(--accent); margin-bottom: 0.5rem;"><strong>B = S = T
+                                Formula — In auction market, Buyers volume = Sellers volume = Total volume. Debunk myth
+                                "market lên vì nhiều buyers hơn sellers." Price = net của demand - supply (uptick vs
+                                downtick). <span class="page-ref">Ch 4, p. 41-43</span></strong></div>
+                        <div class="takeaway-detail"><strong>Why:</strong> Hiểu auction mechanics phá vỡ misconception
+                            phổ biến. Price lên = demand &gt; supply (more upticks), không phải "more buyers."
+                            <strong>Apply:</strong> Analyze uptick/downtick sequences, không đếm "số người mua vs bán."
+                            <strong>Caveat:</strong> Quiz trong sách (1,000 shares market order vs 10,000 shares limit
+                            order) — không có "correct" answer, chỉ có net demand/supply outcome.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="slide">
+            <div class="slide-kicker">CH 4 · MENTAL MODEL</div>
+            <h2>B = S = T Formula</h2>
+            <div class="mental-model-card">
+                <h4 class="model-name">B = S = T Formula — Auction Market Mechanics</h4>
+                <div class="model-principle">Trong auction market, số shares <strong>Bought</strong> luôn bằng số shares
+                    <strong>Sold</strong>, và bằng <strong>Total</strong> shares traded. Debunk myth "market lên vì
+                    nhiều buyers hơn sellers" — thực tế price lên do <em>demand &gt; supply</em> (net của upticks &gt;
+                    downticks). <span class="page-ref">Ch 4, p. 41-43</span>
+                </div>
+                <div class="model-application">
+                    <strong>Công thức cốt lõi &amp; ý nghĩa:</strong>
+                    <ul>
+                        <li><strong>B = S = T</strong> — Every share bought phải có counterparty seller. Volume không
+                            measure "số người mua" hay "số người bán" mà measure <em>intensity of exchange</em>.</li>
+                        <li><strong>Price movement</strong> — Khi trade fills on <em>uptick</em>, demand &gt; supply.
+                            Khi fills on <em>downtick</em>, supply &gt; demand. Add up all ticks over time → uptrend
+                            (demand line) hoặc downtrend (supply line).</li>
+                        <li><strong>Quiz từ sách</strong> — Buyer market order 1,000 shares vs Seller limit order 10,000
+                            shares at $50. Who controls: demand hay supply? Answer: depends on execution — uptick =
+                            demand wins, downtick = supply wins. Not about order size alone.</li>
+                    </ul>
+                </div>
+                <div class="model-application">
+                    <strong>When to apply — Volume Analysis framework:</strong>
+                    <ul>
+                        <li><strong>Uptrend analysis</strong> — Connect significant lows (rising support line = demand
+                            line). String of higher lows = demand overwhelming supply, security being accumulated. <span
+                                class="page-ref">Ch 4, p. 44</span></li>
+                        <li><strong>Downtrend analysis</strong> — Connect significant highs (falling resistance line =
+                            supply line). Each high lower than previous = sellers accepting lower prices, security in
+                            distribution. <span class="page-ref">Ch 4, p. 45-46</span></li>
+                        <li><strong>Decode price-volume relationship</strong> — Examine intrinsic relationship giữa
+                            price trends và corresponding volume. Confirm whether volume supports price action hay
+                            contradicts it, giving notice of future movements. <span class="page-ref">Ch 4, p. 43</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="model-limitations">
+                    <strong>⚠️ Limitations &amp; Caveats:</strong>
+                    <ul>
+                        <li><strong>Misconception phổ biến</strong> — Financial commentators thường nói "market up vì
+                            more buyers than sellers" hoặc "down vì more sellers than buyers." <em>Ils ne comprendent
+                                pas</em> — they don't understand auction mechanics.</li>
+                        <li><strong>Net demand/supply ambiguity</strong> — Trong real-time, khó distinguish uptick vs
+                            downtick without tick data. Most retail platforms chỉ show bar volume, không show
+                            directional flow.</li>
+                        <li><strong>Modern market structure</strong> — HFT, dark pools, internalization complicate
+                            interpretation. Public volume data = incomplete picture của true supply-demand dynamics.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="slide">
+            <div class="slide-kicker">CH 4 · NUMBERS &amp; STUDIES</div>
+            <h2>Wharton &amp; Academic Evidence</h2>
+            <div class="metric-grid">
+                <div class="metric-card">
+                    <div class="metric-value">1.75%</div>
+                    <div class="metric-label">High-volume return premium</div>
+                    <div class="metric-detail">Stocks với unusually large volume trong 1 day/week có subsequent return
+                        cao hơn ~1.75% so với normal/low volume stocks trong 20 trading days tiếp theo. <span
+                            class="page-ref">Ch 4, p. 40 (Figure 5.1)</span> · <span class="source-ref">Gervais, Kaniel,
+                            Mingelgrin, Wharton 33-year study</span></div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">41</div>
+                    <div class="metric-label">Countries confirmed globally</div>
+                    <div class="metric-detail">"Strikingly pervasive global phenomenon" — high-volume premium confirmed
+                        in 41 countries, cả developed &amp; emerging markets. <span class="page-ref">Ch 4, p. 40</span>
+                        · <span class="source-ref">Kaniel, Li, Starks, U. Texas</span></div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">B = S = T</div>
+                    <div class="metric-label">Auction market law</div>
+                    <div class="metric-detail">Buyers volume luôn bằng Sellers volume, bằng Total volume traded. Debunk
+                        myth "market lên vì nhiều buyers." Price = net demand - supply qua upticks/downticks. <span
+                            class="page-ref">Ch 4, p. 41-43</span></div>
+                </div>
+            </div>
+            <div class="quote-block" style="margin-top:var(--space-6)">
+                <p class="quote-text">"If [the market is] a 'voting machine,' then volume is the ballot box. Volume is a
+                    literal illustration of the power behind the forces of supply and demand."</p>
+                <p class="quote-context"><strong>— Benjamin Graham's metaphor + tác giả.</strong> Volume là minh chứng
+                    vật chất của supply/demand — không phải lời nói, mà là hành động thật (tiền thật). <span
+                        class="page-ref">Ch 4, p. 34</span></p>
+            </div>
+            <div class="quote-block" style="margin-top:var(--space-6)">
+                <p class="quote-text">"Volume provides information on information quality that cannot be produced by the
+                    price static... traders who use information contained in market statistics do better than those who
+                    do not."</p>
+                <p class="quote-context"><strong>— Blume, Easley, O'Hara (1994), Journal of Finance.</strong> Volume
+                    reveals precision của private signals mà price alone không thể. Technical analysis = natural
+                    component của learning process. <span class="page-ref">Ch 4, p. 41</span> · <span
+                        class="source-ref">Blume, Easley, O'Hara (1994)</span></p>
+            </div>
+            <div class="quote-block" style="margin-top:var(--space-6)">
+                <p class="quote-text">"Price and volume of sales in the stock market are joint products of a single
+                    market mechanism; any model that attempts to isolate prices from volumes or vice versa will
+                    inevitably yield incomplete if not erroneous results."</p>
+                <p class="quote-context"><strong>— Ying (1966), groundbreaking work on price-volume
+                        correlations.</strong> Price và volume không thể tách rời — cùng output của exchange mechanism.
+                    Volume analysis = study relationship, không phải volume in isolation. <span class="page-ref">Ch 4,
+                        p. 41</span> · <span class="source-ref">Ying (1966)</span></p>
+            </div>
+        </section>
+        <section class="slide">
+            <div class="slide-kicker">CH 4 · NOTABLE QUOTES</div>
+            <h2>Bốn câu đáng giữ</h2>
+            <div class="quote-block">
+                <p class="quote-text">"If [the market is] a 'voting machine,' then volume is the ballot box. Volume is a
+                    literal illustration of the power behind the forces of supply and demand."</p>
+                <p class="quote-context"><strong>— Benjamin Graham's metaphor + tác giả.</strong> Volume là minh chứng
+                    vật chất của supply/demand — không phải lời nói, mà là hành động thật (tiền thật). Nếu market =
+                    voting machine (Graham), volume = ballot box nơi votes được cast. <span class="page-ref">Ch 4, p.
+                        34</span></p>
+            </div>
+            <div class="quote-block" style="margin-top:var(--space-6)">
+                <p class="quote-text">"Volume is literally the fuel for stock values. Like the space shuttle... the
+                    majority of fuel is spent just to get to orbit. Volume is to stocks what rocket fuel is to the space
+                    shuttle."</p>
+                <p class="quote-context"><strong>— Trader Billy Williams.</strong> Volume = nhiên liệu — explosive force
+                    để đẩy price lên "new heights," sau đó chỉ cần ít fuel để duy trì. Analogy minh họa Wyckoff's
+                    cause-effect: large volume (fuel) during accumulation → large subsequent move (orbit). <span
+                        class="page-ref">Ch 4, p. 36-37</span></p>
+            </div>
+            <div class="quote-block" style="margin-top:var(--space-6)">
+                <p class="quote-text">"Volume is the truest and most reliable indicator of the market's ability to
+                    facilitate a trade... A market that is not facilitating trade will not survive long."</p>
+                <p class="quote-context"><strong>— Eric Jones, James &amp; Robert Dalton, Mind over Markets.</strong>
+                    Volume = liquidity = khả năng exchange nhanh ở fair price. Low volume = risk thanh khoản cao, market
+                    không bền vững. This is survival test của markets. <span class="page-ref">Ch 4, p. 35</span> · <span
+                        class="source-ref">Jones &amp; Dalton, Mind over Markets</span></p>
+            </div>
+            <div class="quote-block" style="margin-top:var(--space-6)">
+                <p class="quote-text">"The extent of a market move is directly proportional to the amount of its cause."
+                </p>
+                <p class="quote-context"><strong>— Richard Wyckoff's Law of Cause &amp; Effect.</strong> Gap giữa
+                    sellers' offer và buyers' bid (= volume imbalance) là <em>cause</em> của price change. Cause lớn →
+                    effect lớn. Volume during accumulation/distribution phase = measure của "cause." <span
+                        class="page-ref">Ch 4, p. 37</span></p>
+            </div>
+        </section>
+        <section class="slide">
+            <div class="slide-kicker">CH 4 · CONTEXT &amp; BACKGROUND</div>
+            <h2>Lăng kính tác giả &amp; thời điểm</h2>
+            <div class="context-panel">
+                <div class="context-section">
+                    <div class="context-label">Tác giả &amp; góc nhìn</div>
+                    <div class="context-content">
+                        <strong>Buff Pelz Dormeier</strong> — practitioner + researcher, kết hợp kinh nghiệm trading
+                        thực tế với nghiên cứu hàn lâm. Góc nhìn: <em>volume is neglected sibling of price</em> — bị
+                        underutilized bởi technician, bị ignore bởi fundamental analyst.
+                    </div>
+                </div>
+                <div class="context-section">
+                    <div class="context-label">Thời điểm &amp; bối cảnh</div>
+                    <div class="context-content">
+                        Chương 4 đặt nền móng terminology &amp; rationale cho volume analysis. Viết sau 2008 crisis —
+                        thời kỳ high volatility, liquidity concerns nổi bật. Tác giả dẫn nghiên cứu từ 1960s (Ying) đến
+                        2000s (Wharton, U. Texas) để chứng minh volume không chỉ là "nice-to-have" mà là
+                        <em>essential</em>.
+                    </div>
+                </div>
+                <div class="context-section">
+                    <div class="context-label">Đối tượng độc giả</div>
+                    <div class="context-content">
+                        <strong>Technical analysts</strong> muốn nâng cao kỹ năng, <strong>fundamental analysts</strong>
+                        muốn thêm công cụ, <strong>institutional traders</strong> cần hiểu market mechanics sâu hơn. Yêu
+                        cầu: mindset cởi mở với quantitative evidence + sẵn sàng challenge conventional wisdom ("market
+                        lên vì nhiều buyers").
+                    </div>
+                </div>
+                <div class="context-section">
+                    <div class="context-label">Vị trí trong cuốn sách</div>
+                    <div class="context-content">
+                        Chapter 4 là <em>foundation chapter</em> — định nghĩa terms (market volume, total volume, index
+                        volume, float, average volume), giải thích <em>why volume matters</em> (9 vai trò), và debunk
+                        misconceptions (B = S = T). Các chương sau sẽ build tools cụ thể trên nền tảng này.
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="slide">
+            <div class="slide-kicker">CH 4 · COMPARISON</div>
+            <h2>Volume-centric vs Price-only view</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Khía cạnh</th>
+                        <th>Volume-centric view (Dow, Wyckoff, Dormeier)</th>
+                        <th>Price-only / Fundamental view</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>Vai trò volume</th>
+                        <td><em>Essential &amp; leading</em> — volume <strong>leads</strong> price (Dow), là
+                            <strong>cause</strong> của price change (Wyckoff), validate/substantiate price. Volume không
+                            phải "nice-to-have" mà là core component. <span class="page-ref">Ch 4, p. 34-38</span>
+                        </td>
+                        <td><em>Secondary hoặc ignored</em> — price là king, volume chỉ là "confirmation" hoặc bị bỏ qua
+                            hoàn toàn (fundamentalist). Traditional TA dùng volume nhưng underutilize.</td>
+                    </tr>
+                    <tr>
+                        <th>Thông tin volume cung cấp</th>
+                        <td>9 vai trò systematic: validate price, liberate liquidity, substantiate info, reveal
+                            conviction, express interest, denote disparity, fuel market, expose truth, give rise to
+                            velocity. Framework toàn diện. <span class="page-ref">Ch 4, p. 34-38</span></td>
+                        <td>Volume chỉ là "confirmation" của breakout/breakdown — không có framework hệ thống để
+                            interpret. Mainly "high volume = good, low volume = suspect."</td>
+                    </tr>
+                    <tr>
+                        <th>Market mechanics</th>
+                        <td><strong>B = S = T</strong> — thị trường lên/xuống do net của demand - supply (uptick vs
+                            downtick), không phải "nhiều buyers hơn sellers." Hiểu auction mechanics. <span
+                                class="page-ref">Ch 4, p. 41-43</span></td>
+                        <td>Thường nói "market lên vì nhiều buyers" — misconception phổ biến, thiếu hiểu biết về auction
+                            mechanics. Financial commentators repeat myth.</td>
+                    </tr>
+                    <tr>
+                        <th>Evidence base</th>
+                        <td><strong>Academic backing:</strong> Wharton 33-year study (1.75% premium), U. Texas
+                            41-country study (global phenomenon), Blume-Easley-O'Hara (1994), Ying (1966) — volume
+                            premium là empirical fact. <span class="page-ref">Ch 4, p. 40-41</span></td>
+                        <td>Ít nghiên cứu hàn lâm về pure price patterns; EMH camp thường skeptical về TA nói chung (bao
+                            gồm volume). Price-action-only traders rely on practitioner experience.</td>
+                    </tr>
+                    <tr>
+                        <th>Institutional footprint</th>
+                        <td>Volume exposes institutional activity — large institutions cannot hide. Significant volume
+                            increase = clear sign big institution at table, ngay cả khi price subdued. <span
+                                class="page-ref">Ch 4, p. 37</span></td>
+                        <td>Institutional holdings disclosed quarterly (13F filings) — data lag 45 days. Price-only
+                            không detect real-time institutional accumulation/distribution.</td>
+                    </tr>
+                    <tr>
+                        <th>Predictive power</th>
+                        <td>Volume at extreme levels offers "far superior information than price alone could ever
+                            provide" — leading indicator của price change. <span class="page-ref">Ch 4, p. 39-40</span>
+                        </td>
+                        <td>Price patterns có predictive value, nhưng without volume context, higher false-positive
+                            rate. Volume adds precision.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="caveat" style="margin-top:var(--space-6)">Volume-centric view không deny price importance —
+                "volume cannot be properly understood without price any more than price can be adequately assessed
+                without volume" (Ying 1966). Independently, both price và volume convey only vague information.
+                Together, they provide indications of supply-demand that neither could provide independently. <span
+                    class="page-ref">Ch 4, p. 41</span></p>
+        </section>
+        <section class="slide">
+            <div class="slide-kicker">CH 4 · COMPETING VIEWS</div>
+            <h2>Volume Analysis vs Skeptics/EMH</h2>
+            <div class="competing-views-layout">
+                <div class="view-card pro">
+                    <div class="view-header">Volume Analysis Camp</div>
+                    <div class="view-proponents">Dow, Wyckoff, Dormeier, Wharton researchers, U. Texas team</div>
+                    <div class="view-claims">
+                        <strong>Core claims:</strong>
+                        <ul>
+                            <li><strong>Volume leads price</strong> — high volume surge → subsequent return premium
+                                ~1.75% (33-year study)</li>
+                            <li><strong>Volume + price = joint products</strong> — isolate một trong hai → "incomplete
+                                if not erroneous results" (Ying 1966)</li>
+                            <li><strong>Information quality</strong> — volume reveals precision của private signals mà
+                                price alone không thể (Blume et al. 1994)</li>
+                            <li><strong>Global phenomenon</strong> — high-volume premium confirmed in 41 countries
+                                (Kaniel et al.)</li>
+                        </ul>
+                    </div>
+                    <div class="view-strength">
+                        <strong>Điểm mạnh:</strong> Academic evidence mạnh (multiple studies, global scope), practical
+                        applicability (volume data dễ access), aligns với market mechanics (auction theory).
+                    </div>
+                </div>
+                <div class="view-card con">
+                    <div class="view-header">Skeptics &amp; Fundamental Camp</div>
+                    <div class="view-proponents">EMH advocates, pure fundamentalists, some quant traders</div>
+                    <div class="view-claims">
+                        <strong>Core claims:</strong>
+                        <ul>
+                            <li><strong>Volume = noise</strong> — không predict future returns reliably, chỉ là
+                                by-product của price discovery</li>
+                            <li><strong>Price reflects all info</strong> — EMH: price đã incorporate mọi thông tin,
+                                volume chỉ là "echo"</li>
+                            <li><strong>Liquidity confound</strong> — high volume có thể do liquidity event (index
+                                rebalance, forced selling), không phải conviction</li>
+                            <li><strong>Data mining risk</strong> — volume patterns có thể là artifact của data
+                                snooping, không stable qua thời gian</li>
+                        </ul>
+                    </div>
+                    <div class="view-strength">
+                        <strong>Điểm mạnh:</strong> Caution về overfitting, nhắc nhở rằng volume không phải magic
+                        bullet, highlight liquidity complexities.
+                    </div>
+                </div>
+                <div class="synthesis-box">
+                    <strong>Synthesis:</strong> Volume analysis không contradict EMH hoàn toàn — nó exploit
+                    <em>information diffusion lag</em> và <em>heterogeneous beliefs</em>. Academic evidence (Wharton, U.
+                    Texas) cho thấy volume premium tồn tại &amp; persistent, nhưng practitioners cần combine với price
+                    context &amp; risk management.
+                </div>
+            </div>
+        </section>
+        <section class="slide">
+            <div class="slide-kicker">CH 4 · COUNTERARGUMENTS</div>
+            <h2>Noise, EMH, Overfitting, Context</h2>
+            <div class="counterargs-layout">
+                <div class="arg-section">
+                    <div class="arg-header">Counterargument 1: Volume = Noise, Not Signal</div>
+                    <div class="arg-claim">
+                        <strong>Claim:</strong> Volume spikes thường do technical factors (index rebalance, options
+                        expiry, ETF flows) — không reflect genuine conviction hay information.
+                    </div>
+                    <div class="arg-response">
+                        <strong>Response:</strong> Wharton study filtered ra liquidity events &amp; corporate actions —
+                        volume premium vẫn tồn tại. Hơn nữa, "technical flows" cũng là real supply/demand, impact price
+                        thật. Volume analysis không claim mọi spike đều có ý nghĩa — mà teach practitioners <em>how to
+                            distinguish</em> signal vs noise qua price-volume relationship.
+                    </div>
+                </div>
+                <div class="arg-section">
+                    <div class="arg-header">Counterargument 2: EMH — Price Already Reflects Everything</div>
+                    <div class="arg-claim">
+                        <strong>Claim:</strong> Nếu price đã incorporate all information (EMH semi-strong form), thì
+                        volume chỉ là "echo" — không thêm edge nào.
+                    </div>
+                    <div class="arg-response">
+                        <strong>Response:</strong> EMH assume <em>instant</em> information diffusion &amp;
+                        <em>homogeneous</em> beliefs — thực tế không đúng. Blume et al. (1994) show volume reveals
+                        <em>information precision</em> mà price static không thể. Volume premium (1.75% subsequent
+                        return) là empirical evidence rằng market không perfectly efficient — information diffusion mất
+                        thời gian, volume là leading indicator của process đó.
+                    </div>
+                </div>
+                <div class="arg-section">
+                    <div class="arg-header">Counterargument 3: Data Mining &amp; Overfitting Risk</div>
+                    <div class="arg-claim">
+                        <strong>Claim:</strong> Volume patterns có thể là artifact của backtesting — in-sample work,
+                        out-of-sample fail. Không stable across regimes.
+                    </div>
+                    <div class="arg-response">
+                        <strong>Response:</strong> Kaniel et al. confirmed volume premium in <strong>41
+                            countries</strong> — không phải single market data mining. 33-year Wharton study spans
+                        multiple regimes (bull, bear, crisis). Global + multi-decade evidence giảm thiểu overfitting
+                        risk. Tuy nhiên, practitioners vẫn cần <em>adapt</em> — volume thresholds, timeframes cần adjust
+                        theo market structure changes (HFT, dark pools).
+                    </div>
+                </div>
+                <div class="arg-section">
+                    <div class="arg-header">Counterargument 4: Volume Không Đủ — Cần Thêm Context</div>
+                    <div class="arg-claim">
+                        <strong>Claim:</strong> Volume surge alone không actionable — cần biết WHO (retail vs
+                        institution), WHERE (price level), WHEN (cycle phase). Thiếu context → false signals.
+                    </div>
+                    <div class="arg-response">
+                        <strong>Response:</strong> <strong>Đúng!</strong> Tác giả explicitly state: "volume cannot be
+                        properly understood without price." Volume analysis = <em>price-volume relationship</em>, không
+                        phải volume in isolation. Các chương sau (5-8) sẽ teach các tools để decode WHO/WHERE/WHEN —
+                        Order Flow, Climax patterns, VSA. Counterargument này không refute volume analysis, mà reinforce
+                        nhu cầu về systematic framework (mà cuốn sách đang provide).
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="slide">
+            <div class="slide-kicker">CH 4 · REFLECTION</div>
+            <h2>Câu hỏi suy ngẫm theo Bloom</h2>
+            <div class="reflection-questions">
+                <div class="bloom-level">
+                    <div class="bloom-label">Remember &amp; Understand</div>
+                    <div class="question">Giải thích công thức B = S = T và tại sao nó debunk myth "market lên vì nhiều
+                        buyers hơn sellers"?</div>
+                </div>
+                <div class="bloom-level">
+                    <div class="bloom-label">Apply</div>
+                    <div class="question">Một stock A có average volume 1M shares/day, hôm nay volume 5M với price +3%.
+                        Stock B cùng +3% nhưng volume 0.5M (vs avg 1M). Bạn tin stock nào hơn, và tại sao theo 9 vai trò
+                        của volume?</div>
+                </div>
+                <div class="bloom-level">
+                    <div class="bloom-label">Analyze</div>
+                    <div class="question">Wharton study cho thấy high-volume stocks có subsequent return premium 1.75%.
+                        Phân tích: mechanism nào tạo ra premium này — information diffusion, institutional accumulation,
+                        hay momentum effect? Evidence nào support/refute từng hypothesis?</div>
+                </div>
+                <div class="bloom-level">
+                    <div class="bloom-label">Evaluate</div>
+                    <div class="question">So sánh độ tin cậy của volume analysis trong 3 bối cảnh: (1) large-cap liquid
+                        stocks, (2) small-cap illiquid stocks, (3) crypto markets với 24/7 trading &amp; varying
+                        liquidity. Trong context nào volume analysis mạnh nhất/yếu nhất, và tại sao?</div>
+                </div>
+                <div class="bloom-level">
+                    <div class="bloom-label">Create</div>
+                    <div class="question">Design một framework kết hợp volume analysis với 2 disciplines khác (VD:
+                        fundamental analysis, sentiment analysis, macro indicators). Làm sao để 3 lenses này complement
+                        nhau mà không redundant? Trong điều kiện thị trường nào thì volume analysis được weight cao
+                        nhất?</div>
+                </div>
+                <div class="meta-question">
+                    <strong>Meta-reflection:</strong> Tác giả claim "volume is neglected sibling of price" — bạn có đồng
+                    ý không? Sau khi đọc chương 4, mindset của bạn về volume đã thay đổi như thế nào? Bạn sẽ incorporate
+                    volume vào decision-making process ra sao?
+                </div>
+            </div>
+        </section>
+        <section class="slide">
+            <div class="slide-kicker">CH 4 · CLOSING ACTIONS</div>
+            <h2>Ba việc làm tiếp theo</h2>
+            <ul class="action-list">
+                <li class="action-item">
+                    <div>
+                        <div class="action-headline">Audit Current Volume Usage — 10 phút ngay bây giờ</div>
+                        <div class="action-detail">Mở charting platform của bạn — bạn có track volume không? Nếu có, bạn
+                            dùng nó như thế nào? Review 3 trades gần nhất — bạn có xem xét volume trước khi entry/exit
+                            không? Nếu không, liệu volume có thể change decision? Identify: trong 9 vai trò volume
+                            (validate, liquidity, substantiate, conviction, interest, disparity, fuel, truth, velocity),
+                            bạn đã exploit vai trò nào? Vai trò nào bị bỏ qua? <strong>Output:</strong> List 2-3 blind
+                            spots trong volume analysis hiện tại của bạn. <span class="page-ref">Ch 4, p. 33-38</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="action-item">
+                    <div>
+                        <div class="action-headline">Backtest Volume Premium Hypothesis — làm trong tuần này</div>
+                        <div class="action-detail">Chọn 10-20 stocks trong watchlist — track daily volume vs 20-day
+                            average volume. Flag days khi volume &gt; 2x average (Wharton threshold) — theo dõi
+                            subsequent 5-day return. So sánh với control group (normal volume days) — có thấy ~1.75%
+                            premium như Wharton study không? Document: trong điều kiện nào volume surge lead to premium
+                            (price context, sector, market regime)? <strong>Output:</strong> Personal dataset của
+                            volume-return relationship trong universe bạn trade. Validate/refute academic finding. <span
+                                class="page-ref">Ch 4, p. 40 (Figure 5.1)</span></div>
+                    </div>
+                </li>
+                <li class="action-item">
+                    <div>
+                        <div class="action-headline">Build Volume-Price Checklist — integrate vào workflow ongoing</div>
+                        <div class="action-detail">Tạo pre-trade checklist: "Volume có validate price move này không?" —
+                            áp dụng B = S = T logic (uptick vs downtick analysis). Add volume screen vào scanning
+                            process: filter stocks với unusual volume + favorable price-volume relationship. Read
+                            Chapter 5 để học <em>how volume leads price</em> &amp; <em>interprets price</em> — prepare
+                            cho các tools cụ thể (Effort vs Result, Support/Resistance as force fields).
+                            <strong>Output:</strong> Integrated volume analysis vào trading workflow — không phải
+                            "add-on" mà là core component. Volume becomes second nature, như checking price. <span
+                                class="page-ref">Ch 4, p. 33-43</span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </section>
     </div>
-</div>
-<div class="context-section">
-<div class="context-label">Đối tượng độc giả</div>
-<div class="context-content">
-<strong>Technical analysts</strong> muốn nâng cao kỹ năng, <strong>fundamental analysts</strong> muốn thêm công cụ, <strong>institutional traders</strong> cần hiểu market mechanics sâu hơn. Yêu cầu: mindset cởi mở với quantitative evidence + sẵn sàng challenge conventional wisdom ("market lên vì nhiều buyers").
+    <div class="nav-controls">
+        <button aria-label="Previous slide" class="nav-btn" id="prevBtn" onclick="prevSlide()">←</button>
+        <div aria-live="polite" class="counter" id="counter">1 / 1</div>
+        <button aria-label="Next slide" class="nav-btn" id="nextBtn" onclick="nextSlide()">→</button>
     </div>
-</div>
-<div class="context-section">
-<div class="context-label">Vị trí trong cuốn sách</div>
-<div class="context-content">
-      Chapter 4 là <em>foundation chapter</em> — định nghĩa terms (market volume, total volume, index volume, float, average volume), giải thích <em>why volume matters</em> (9 vai trò), và debunk misconceptions (B = S = T). Các chương sau sẽ build tools cụ thể trên nền tảng này.
-    </div>
-</div>
-</div>
-</section>
-<section class="slide">
-<div class="slide-kicker">CH 4 · COMPARISON</div>
-<h2>Volume-centric vs Price-only view</h2>
-<table>
-<thead>
-<tr>
-<th>Khía cạnh</th>
-<th>Volume-centric view (Dow, Wyckoff, Dormeier)</th>
-<th>Price-only / Fundamental view</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th>Vai trò volume</th>
-<td><em>Essential &amp; leading</em> — volume <strong>leads</strong> price (Dow), là <strong>cause</strong> của price change (Wyckoff), validate/substantiate price. Volume không phải "nice-to-have" mà là core component. <span class="page-ref">Ch 4, p. 34-38</span></td>
-<td><em>Secondary hoặc ignored</em> — price là king, volume chỉ là "confirmation" hoặc bị bỏ qua hoàn toàn (fundamentalist). Traditional TA dùng volume nhưng underutilize.</td>
-</tr>
-<tr>
-<th>Thông tin volume cung cấp</th>
-<td>9 vai trò systematic: validate price, liberate liquidity, substantiate info, reveal conviction, express interest, denote disparity, fuel market, expose truth, give rise to velocity. Framework toàn diện. <span class="page-ref">Ch 4, p. 34-38</span></td>
-<td>Volume chỉ là "confirmation" của breakout/breakdown — không có framework hệ thống để interpret. Mainly "high volume = good, low volume = suspect."</td>
-</tr>
-<tr>
-<th>Market mechanics</th>
-<td><strong>B = S = T</strong> — thị trường lên/xuống do net của demand - supply (uptick vs downtick), không phải "nhiều buyers hơn sellers." Hiểu auction mechanics. <span class="page-ref">Ch 4, p. 41-43</span></td>
-<td>Thường nói "market lên vì nhiều buyers" — misconception phổ biến, thiếu hiểu biết về auction mechanics. Financial commentators repeat myth.</td>
-</tr>
-<tr>
-<th>Evidence base</th>
-<td><strong>Academic backing:</strong> Wharton 33-year study (1.75% premium), U. Texas 41-country study (global phenomenon), Blume-Easley-O'Hara (1994), Ying (1966) — volume premium là empirical fact. <span class="page-ref">Ch 4, p. 40-41</span></td>
-<td>Ít nghiên cứu hàn lâm về pure price patterns; EMH camp thường skeptical về TA nói chung (bao gồm volume). Price-action-only traders rely on practitioner experience.</td>
-</tr>
-<tr>
-<th>Institutional footprint</th>
-<td>Volume exposes institutional activity — large institutions cannot hide. Significant volume increase = clear sign big institution at table, ngay cả khi price subdued. <span class="page-ref">Ch 4, p. 37</span></td>
-<td>Institutional holdings disclosed quarterly (13F filings) — data lag 45 days. Price-only không detect real-time institutional accumulation/distribution.</td>
-</tr>
-<tr>
-<th>Predictive power</th>
-<td>Volume at extreme levels offers "far superior information than price alone could ever provide" — leading indicator của price change. <span class="page-ref">Ch 4, p. 39-40</span></td>
-<td>Price patterns có predictive value, nhưng without volume context, higher false-positive rate. Volume adds precision.</td>
-</tr>
-</tbody>
-</table>
-<p class="caveat" style="margin-top:var(--space-6)">Volume-centric view không deny price importance — "volume cannot be properly understood without price any more than price can be adequately assessed without volume" (Ying 1966). Independently, both price và volume convey only vague information. Together, they provide indications of supply-demand that neither could provide independently. <span class="page-ref">Ch 4, p. 41</span></p>
-</section>
-<section class="slide">
-<div class="slide-kicker">CH 4 · COMPETING VIEWS</div>
-<h2>Volume Analysis vs Skeptics/EMH</h2>
-<div class="competing-views-layout">
-<div class="view-card pro">
-<div class="view-header">Volume Analysis Camp</div>
-<div class="view-proponents">Dow, Wyckoff, Dormeier, Wharton researchers, U. Texas team</div>
-<div class="view-claims">
-<strong>Core claims:</strong>
-<ul>
-<li><strong>Volume leads price</strong> — high volume surge → subsequent return premium ~1.75% (33-year study)</li>
-<li><strong>Volume + price = joint products</strong> — isolate một trong hai → "incomplete if not erroneous results" (Ying 1966)</li>
-<li><strong>Information quality</strong> — volume reveals precision của private signals mà price alone không thể (Blume et al. 1994)</li>
-<li><strong>Global phenomenon</strong> — high-volume premium confirmed in 41 countries (Kaniel et al.)</li>
-</ul>
-</div>
-<div class="view-strength">
-<strong>Điểm mạnh:</strong> Academic evidence mạnh (multiple studies, global scope), practical applicability (volume data dễ access), aligns với market mechanics (auction theory).
-    </div>
-</div>
-<div class="view-card con">
-<div class="view-header">Skeptics &amp; Fundamental Camp</div>
-<div class="view-proponents">EMH advocates, pure fundamentalists, some quant traders</div>
-<div class="view-claims">
-<strong>Core claims:</strong>
-<ul>
-<li><strong>Volume = noise</strong> — không predict future returns reliably, chỉ là by-product của price discovery</li>
-<li><strong>Price reflects all info</strong> — EMH: price đã incorporate mọi thông tin, volume chỉ là "echo"</li>
-<li><strong>Liquidity confound</strong> — high volume có thể do liquidity event (index rebalance, forced selling), không phải conviction</li>
-<li><strong>Data mining risk</strong> — volume patterns có thể là artifact của data snooping, không stable qua thời gian</li>
-</ul>
-</div>
-<div class="view-strength">
-<strong>Điểm mạnh:</strong> Caution về overfitting, nhắc nhở rằng volume không phải magic bullet, highlight liquidity complexities.
-    </div>
-</div>
-<div class="synthesis-box">
-<strong>Synthesis:</strong> Volume analysis không contradict EMH hoàn toàn — nó exploit <em>information diffusion lag</em> và <em>heterogeneous beliefs</em>. Academic evidence (Wharton, U. Texas) cho thấy volume premium tồn tại &amp; persistent, nhưng practitioners cần combine với price context &amp; risk management.
-  </div>
-</div>
-</section>
-<section class="slide">
-<div class="slide-kicker">CH 4 · COUNTERARGUMENTS</div>
-<h2>Noise, EMH, Overfitting, Context</h2>
-<div class="counterargs-layout">
-<div class="arg-section">
-<div class="arg-header">Counterargument 1: Volume = Noise, Not Signal</div>
-<div class="arg-claim">
-<strong>Claim:</strong> Volume spikes thường do technical factors (index rebalance, options expiry, ETF flows) — không reflect genuine conviction hay information.
-    </div>
-<div class="arg-response">
-<strong>Response:</strong> Wharton study filtered ra liquidity events &amp; corporate actions — volume premium vẫn tồn tại. Hơn nữa, "technical flows" cũng là real supply/demand, impact price thật. Volume analysis không claim mọi spike đều có ý nghĩa — mà teach practitioners <em>how to distinguish</em> signal vs noise qua price-volume relationship.
-    </div>
-</div>
-<div class="arg-section">
-<div class="arg-header">Counterargument 2: EMH — Price Already Reflects Everything</div>
-<div class="arg-claim">
-<strong>Claim:</strong> Nếu price đã incorporate all information (EMH semi-strong form), thì volume chỉ là "echo" — không thêm edge nào.
-    </div>
-<div class="arg-response">
-<strong>Response:</strong> EMH assume <em>instant</em> information diffusion &amp; <em>homogeneous</em> beliefs — thực tế không đúng. Blume et al. (1994) show volume reveals <em>information precision</em> mà price static không thể. Volume premium (1.75% subsequent return) là empirical evidence rằng market không perfectly efficient — information diffusion mất thời gian, volume là leading indicator của process đó.
-    </div>
-</div>
-<div class="arg-section">
-<div class="arg-header">Counterargument 3: Data Mining &amp; Overfitting Risk</div>
-<div class="arg-claim">
-<strong>Claim:</strong> Volume patterns có thể là artifact của backtesting — in-sample work, out-of-sample fail. Không stable across regimes.
-    </div>
-<div class="arg-response">
-<strong>Response:</strong> Kaniel et al. confirmed volume premium in <strong>41 countries</strong> — không phải single market data mining. 33-year Wharton study spans multiple regimes (bull, bear, crisis). Global + multi-decade evidence giảm thiểu overfitting risk. Tuy nhiên, practitioners vẫn cần <em>adapt</em> — volume thresholds, timeframes cần adjust theo market structure changes (HFT, dark pools).
-    </div>
-</div>
-<div class="arg-section">
-<div class="arg-header">Counterargument 4: Volume Không Đủ — Cần Thêm Context</div>
-<div class="arg-claim">
-<strong>Claim:</strong> Volume surge alone không actionable — cần biết WHO (retail vs institution), WHERE (price level), WHEN (cycle phase). Thiếu context → false signals.
-    </div>
-<div class="arg-response">
-<strong>Response:</strong> <strong>Đúng!</strong> Tác giả explicitly state: "volume cannot be properly understood without price." Volume analysis = <em>price-volume relationship</em>, không phải volume in isolation. Các chương sau (5-8) sẽ teach các tools để decode WHO/WHERE/WHEN — Order Flow, Climax patterns, VSA. Counterargument này không refute volume analysis, mà reinforce nhu cầu về systematic framework (mà cuốn sách đang provide).
-    </div>
-</div>
-</div>
-</section>
-<section class="slide">
-<div class="slide-kicker">CH 4 · REFLECTION</div>
-<h2>Câu hỏi suy ngẫm theo Bloom</h2>
-<div class="reflection-questions">
-<div class="bloom-level">
-<div class="bloom-label">Remember &amp; Understand</div>
-<div class="question">Giải thích công thức B = S = T và tại sao nó debunk myth "market lên vì nhiều buyers hơn sellers"?</div>
-</div>
-<div class="bloom-level">
-<div class="bloom-label">Apply</div>
-<div class="question">Một stock A có average volume 1M shares/day, hôm nay volume 5M với price +3%. Stock B cùng +3% nhưng volume 0.5M (vs avg 1M). Bạn tin stock nào hơn, và tại sao theo 9 vai trò của volume?</div>
-</div>
-<div class="bloom-level">
-<div class="bloom-label">Analyze</div>
-<div class="question">Wharton study cho thấy high-volume stocks có subsequent return premium 1.75%. Phân tích: mechanism nào tạo ra premium này — information diffusion, institutional accumulation, hay momentum effect? Evidence nào support/refute từng hypothesis?</div>
-</div>
-<div class="bloom-level">
-<div class="bloom-label">Evaluate</div>
-<div class="question">So sánh độ tin cậy của volume analysis trong 3 bối cảnh: (1) large-cap liquid stocks, (2) small-cap illiquid stocks, (3) crypto markets với 24/7 trading &amp; varying liquidity. Trong context nào volume analysis mạnh nhất/yếu nhất, và tại sao?</div>
-</div>
-<div class="bloom-level">
-<div class="bloom-label">Create</div>
-<div class="question">Design một framework kết hợp volume analysis với 2 disciplines khác (VD: fundamental analysis, sentiment analysis, macro indicators). Làm sao để 3 lenses này complement nhau mà không redundant? Trong điều kiện thị trường nào thì volume analysis được weight cao nhất?</div>
-</div>
-<div class="meta-question">
-<strong>Meta-reflection:</strong> Tác giả claim "volume is neglected sibling of price" — bạn có đồng ý không? Sau khi đọc chương 4, mindset của bạn về volume đã thay đổi như thế nào? Bạn sẽ incorporate volume vào decision-making process ra sao?
-  </div>
-</div>
-</section>
-<section class="slide">
-<div class="slide-kicker">CH 4 · CLOSING ACTIONS</div>
-<h2>Ba việc làm tiếp theo</h2>
-<ul class="action-list">
-<li class="action-item">
-<div>
-<div class="action-headline">Audit Current Volume Usage — 10 phút ngay bây giờ</div>
-<div class="action-detail">Mở charting platform của bạn — bạn có track volume không? Nếu có, bạn dùng nó như thế nào? Review 3 trades gần nhất — bạn có xem xét volume trước khi entry/exit không? Nếu không, liệu volume có thể change decision? Identify: trong 9 vai trò volume (validate, liquidity, substantiate, conviction, interest, disparity, fuel, truth, velocity), bạn đã exploit vai trò nào? Vai trò nào bị bỏ qua? <strong>Output:</strong> List 2-3 blind spots trong volume analysis hiện tại của bạn. <span class="page-ref">Ch 4, p. 33-38</span></div>
-</div>
-</li>
-<li class="action-item">
-<div>
-<div class="action-headline">Backtest Volume Premium Hypothesis — làm trong tuần này</div>
-<div class="action-detail">Chọn 10-20 stocks trong watchlist — track daily volume vs 20-day average volume. Flag days khi volume &gt; 2x average (Wharton threshold) — theo dõi subsequent 5-day return. So sánh với control group (normal volume days) — có thấy ~1.75% premium như Wharton study không? Document: trong điều kiện nào volume surge lead to premium (price context, sector, market regime)? <strong>Output:</strong> Personal dataset của volume-return relationship trong universe bạn trade. Validate/refute academic finding. <span class="page-ref">Ch 4, p. 40 (Figure 5.1)</span></div>
-</div>
-</li>
-<li class="action-item">
-<div>
-<div class="action-headline">Build Volume-Price Checklist — integrate vào workflow ongoing</div>
-<div class="action-detail">Tạo pre-trade checklist: "Volume có validate price move này không?" — áp dụng B = S = T logic (uptick vs downtick analysis). Add volume screen vào scanning process: filter stocks với unusual volume + favorable price-volume relationship. Read Chapter 5 để học <em>how volume leads price</em> &amp; <em>interprets price</em> — prepare cho các tools cụ thể (Effort vs Result, Support/Resistance as force fields). <strong>Output:</strong> Integrated volume analysis vào trading workflow — không phải "add-on" mà là core component. Volume becomes second nature, như checking price. <span class="page-ref">Ch 4, p. 33-43</span></div>
-</div>
-</li>
-</ul>
-</section>
-</div>
-<div class="nav-controls">
-<button aria-label="Previous slide" class="nav-btn" id="prevBtn" onclick="prevSlide()">←</button>
-<div aria-live="polite" class="counter" id="counter">1 / 1</div>
-<button aria-label="Next slide" class="nav-btn" id="nextBtn" onclick="nextSlide()">→</button>
-</div>
-<script src="common.js"></script>
+    <script src="../common.js"></script>
 </body>
+
 </html>

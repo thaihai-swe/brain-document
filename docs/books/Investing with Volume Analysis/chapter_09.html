@@ -1,410 +1,492 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Investing with Volume Analysis — Chapter 9</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="common.css">
-<script src="https://cdn.jsdelivr.net/npm/mermaid@11.10.0/dist/mermaid.min.js" crossorigin="anonymous"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Investing with Volume Analysis — Chapter 9</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../common.css">
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@11.10.0/dist/mermaid.min.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
 
-<div class="progress-bar" id="progressBar"></div>
+  <div class="progress-bar" id="progressBar"></div>
 
-<div class="chapter-menu">
-  <button class="menu-btn" id="chapterMenuBtn" onclick="toggleChapterMenu()" aria-haspopup="true" aria-expanded="false">Chapters &#9662;</button>
-  <div class="chapter-menu-panel" id="chapterMenuPanel" role="menu"></div>
-</div>
+  <div class="chapter-menu">
+    <button class="menu-btn" id="chapterMenuBtn" onclick="toggleChapterMenu()" aria-haspopup="true"
+      aria-expanded="false">Chapters &#9662;</button>
+    <div class="chapter-menu-panel" id="chapterMenuPanel" role="menu"></div>
+  </div>
 
-<div class="slide-container" id="slideContainer">
+  <div class="slide-container" id="slideContainer">
 
-  <section class="slide" aria-hidden="false">
-<h1>Investing with Volume Analysis</h1>
-<p class="subtitle">Buff Pelz Dormeier · FT Press 2011 — Chương 9: <em>Measuring Volume Information</em></p>
-<div class="meta-grid">
-  <div class="meta-pill">
-    <div class="label">Trang gốc</div>
-    <div class="value">132-137</div>
-  </div>
-  <div class="meta-pill">
-    <div class="label">Thời gian đọc gốc</div>
-    <div class="value">~6 phút</div>
-  </div>
-  <div class="meta-pill">
-    <div class="label">Độ sâu</div>
-    <div class="value">Deep</div>
-  </div>
-  <div class="meta-pill">
-    <div class="label">Đối tượng</div>
-    <div class="value">Pro</div>
-  </div>
-</div>
-<figure class="image-slot hero">
-  <div class="image-prompt">
-    <span class="image-prompt-label">AI Image Prompt — env doesn't have image-gen</span>
-    <p class="image-prompt-text">"vintage brass measuring instruments on blueprints, soft editorial lighting, cool palette with #059669 emerald accents"</p>
-    <span class="image-prompt-hint">Paste this into ChatGPT/DALL-E/Midjourney, save as images/ch9-hero.jpg, replace this block with &lt;img src="images/ch9-hero.jpg"&gt;</span>
-  </div>
-</figure>
-  </section>
+    <section class="slide" aria-hidden="false">
+      <h1>Investing with Volume Analysis</h1>
+      <p class="subtitle">Buff Pelz Dormeier · FT Press 2011 — Chương 9: <em>Measuring Volume Information</em></p>
+      <div class="meta-grid">
+        <div class="meta-pill">
+          <div class="label">Trang gốc</div>
+          <div class="value">132-137</div>
+        </div>
+        <div class="meta-pill">
+          <div class="label">Thời gian đọc gốc</div>
+          <div class="value">~6 phút</div>
+        </div>
+        <div class="meta-pill">
+          <div class="label">Độ sâu</div>
+          <div class="value">Deep</div>
+        </div>
+        <div class="meta-pill">
+          <div class="label">Đối tượng</div>
+          <div class="value">Pro</div>
+        </div>
+      </div>
+      <figure class="image-slot hero">
+        <div class="image-prompt">
+          <span class="image-prompt-label">AI Image Prompt — env doesn't have image-gen</span>
+          <p class="image-prompt-text">"vintage brass measuring instruments on blueprints, soft editorial lighting, cool
+            palette with #059669 emerald accents"</p>
+          <span class="image-prompt-hint">Paste this into ChatGPT/DALL-E/Midjourney, save as images/ch9-hero.jpg,
+            replace this block with &lt;img src="images/ch9-hero.jpg"&gt;</span>
+        </div>
+      </figure>
+    </section>
 
-  <section class="slide chapter-divider">
-<div class="chapter-number">Chapter 9</div>
-<h2>Measuring Volume Information</h2>
-<p class="chapter-meta">~6 phút · Intermediate/Pro · 7 Types of Indicators · The danger of Optimization</p>
-  </section>
+    <section class="slide chapter-divider">
+      <div class="chapter-number">Chapter 9</div>
+      <h2>Measuring Volume Information</h2>
+      <p class="chapter-meta">~6 phút · Intermediate/Pro · 7 Types of Indicators · The danger of Optimization</p>
+    </section>
 
-  <section class="slide">
-    <div class="slide-kicker">CH 9 · TÓM TẮT TRỰC QUAN</div>
-    <h2>Phân Loại Chỉ Báo Khối Lượng</h2>
-<div class="mermaid">
-graph TD
-    A[Chỉ Báo Khối Lượng<br>Volume Indicators] --> B[Dựa trên Giá Trị Nội Hàng Ngày<br>Intraday Price]
-    A --> C[Dựa trên Thay Đổi Giá Giữa Các Ngày<br>Interday Price]
-    A --> D[Thuần Khối Lượng<br>Pure Volume]
-    A --> E[Dựa trên Biên Độ Giá<br>Price Range]
-    A --> F[Dựa trên Tích Lũy Giá<br>Price Accumulation]
-    A --> G[Khối Lượng Theo Tick<br>Tick Volume]
-    A --> H[Giá Điều Chỉnh Theo Khối Lượng<br>Volume-Adjusted Price]
-    
-    style A fill:#7C3AED,stroke:#E2E8F0,color:#FFFFFF
-</div>
-<br>
-<div class="content-card">
-  <table>
-    <thead>
-      <tr><th>Mục Tiêu Chỉ Báo</th><th>Đặc Điểm Chính</th></tr>
-    </thead>
-    <tbody>
-      <tr><td><strong>Định lượng Dòng Tiền</strong></td><td>Phân biệt trạng thái Tích lũy (Accumulation) và Phân phối (Distribution)</td></tr>
-      <tr><td><strong>Dẫn dắt Giá (Lead)</strong></td><td>Cảnh báo sớm sự đảo chiều trước khi giá thực sự thay đổi</td></tr>
-      <tr><td><strong>Xác nhận Giá (Confirm)</strong></td><td>Bảo chứng cho xu hướng giá hiện tại khi hai bên đồng thuận</td></tr>
-    </tbody>
-  </table>
-</div>
-  </section>
+    <section class="slide">
+      <div class="slide-kicker">CH 9 · TÓM TẮT TRỰC QUAN</div>
+      <h2>Phân Loại Chỉ Báo Khối Lượng</h2>
+      <div class="mermaid">
+        graph TD
+        A[Chỉ Báo Khối Lượng<br>Volume Indicators] --> B[Dựa trên Giá Trị Nội Hàng Ngày<br>Intraday Price]
+        A --> C[Dựa trên Thay Đổi Giá Giữa Các Ngày<br>Interday Price]
+        A --> D[Thuần Khối Lượng<br>Pure Volume]
+        A --> E[Dựa trên Biên Độ Giá<br>Price Range]
+        A --> F[Dựa trên Tích Lũy Giá<br>Price Accumulation]
+        A --> G[Khối Lượng Theo Tick<br>Tick Volume]
+        A --> H[Giá Điều Chỉnh Theo Khối Lượng<br>Volume-Adjusted Price]
 
-  <section class="slide">
-    <div class="slide-kicker">CH 9 · Ý TƯỞNG CỐT LÕI</div>
-    <h2>Đo Lường Thay Vì Cảm Tính</h2>
-<div class="takeaway-hero">
-  <div class="kicker">CH 9 · Ý TƯỞNG CỐT LÕI</div>
-  <div class="headline">"Bạn không thể thiết kế nhà mà không có thước cuộn. Đừng giao dịch mà không có thước đo khối lượng."</div>
-  <div class="subline">Chỉ báo kỹ thuật biến cảm giác chủ quan thành dữ liệu có thể kiểm chứng.</div>
-</div>
-  </section>
+        style A fill:#7C3AED,stroke:#E2E8F0,color:#FFFFFF
+      </div>
+      <br>
+      <div class="content-card">
+        <table>
+          <thead>
+            <tr>
+              <th>Mục Tiêu Chỉ Báo</th>
+              <th>Đặc Điểm Chính</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Định lượng Dòng Tiền</strong></td>
+              <td>Phân biệt trạng thái Tích lũy (Accumulation) và Phân phối (Distribution)</td>
+            </tr>
+            <tr>
+              <td><strong>Dẫn dắt Giá (Lead)</strong></td>
+              <td>Cảnh báo sớm sự đảo chiều trước khi giá thực sự thay đổi</td>
+            </tr>
+            <tr>
+              <td><strong>Xác nhận Giá (Confirm)</strong></td>
+              <td>Bảo chứng cho xu hướng giá hiện tại khi hai bên đồng thuận</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
 
-  <section class="slide">
-    <div class="slide-kicker">CH 9 · TỔNG QUAN</div>
-    <h2>Tại Sao Phải Lượng Hóa Khối Lượng?</h2>
-<div class="callout" style="margin-bottom: 2rem;">
-  <div class="callout-icon">🎯</div>
-  <div class="callout-content">
-    <strong>Trong một câu:</strong> Các chỉ báo khối lượng cung cấp một phương pháp định lượng để đo lường áp lực cung cầu thay vì chỉ dựa vào cảm tính cá nhân, nhưng chúng không được sinh ra từ việc tối ưu hóa vô tội vạ dữ liệu quá khứ.
-  </div>
-</div>
+    <section class="slide">
+      <div class="slide-kicker">CH 9 · Ý TƯỞNG CỐT LÕI</div>
+      <h2>Đo Lường Thay Vì Cảm Tính</h2>
+      <div class="takeaway-hero">
+        <div class="kicker">CH 9 · Ý TƯỞNG CỐT LÕI</div>
+        <div class="headline">"Bạn không thể thiết kế nhà mà không có thước cuộn. Đừng giao dịch mà không có thước đo
+          khối lượng."</div>
+        <div class="subline">Chỉ báo kỹ thuật biến cảm giác chủ quan thành dữ liệu có thể kiểm chứng.</div>
+      </div>
+    </section>
 
-<div class="bullet-grid">
-  <div class="bullet-card">
-    <div class="icon">🔍</div>
-    <div class="heading">Bối cảnh (The Setup)</div>
-    <div class="body">Mặc dù có những trader kỳ cựu giao dịch bằng "cảm giác", nhưng trong thị trường hiện đại, cảm giác là không đủ. Chúng ta cần những công cụ đo lường chính xác, giống như cái thước cuộn của người thợ mộc.</div>
-  </div>
-  <div class="bullet-card">
-    <div class="icon">🧠</div>
-    <div class="heading">Lập luận (The Argument)</div>
-    <div class="body">Các chỉ báo khối lượng ghi lại điểm số của cuộc chiến cung cầu. Không giống như các chỉ báo giá (tất cả đều phái sinh từ 5 biến số giống nhau), chỉ báo khối lượng mang lại góc nhìn độc lập, không tương quan và dẫn dắt giá.</div>
-  </div>
-  <div class="bullet-card">
-    <div class="icon">⚠️</div>
-    <div class="heading">Cảnh báo (The Controversy)</div>
-    <div class="body">Việc liên tục tinh chỉnh thông số (optimization/curve-fitting) để tìm ra một chuỗi lệnh thắng trong quá khứ là một sai lầm chết người. Chỉ báo cần được xây dựng dựa trên nguyên lý, chứ không phải một sự trùng hợp ngẫu nhiên.</div>
-  </div>
-</div>
-  </section>
+    <section class="slide">
+      <div class="slide-kicker">CH 9 · TỔNG QUAN</div>
+      <h2>Tại Sao Phải Lượng Hóa Khối Lượng?</h2>
+      <div class="callout" style="margin-bottom: 2rem;">
+        <div class="callout-icon">🎯</div>
+        <div class="callout-content">
+          <strong>Trong một câu:</strong> Các chỉ báo khối lượng cung cấp một phương pháp định lượng để đo lường áp lực
+          cung cầu thay vì chỉ dựa vào cảm tính cá nhân, nhưng chúng không được sinh ra từ việc tối ưu hóa vô tội vạ dữ
+          liệu quá khứ.
+        </div>
+      </div>
 
-  <section class="slide">
-    <div class="slide-kicker">CH 9 · BỐI CẢNH</div>
-    <h2>Sự Tiến Hóa Của Các Chỉ Báo</h2>
-<div class="content-card">
-  <h3 style="color: var(--accent-cyan);">Bối Cảnh & Sự Phân Nhánh</h3>
-  <div class="bullet-grid" style="margin-top: 1rem;">
-    <div class="bullet-card">
-      <div class="heading">1. Bối Cảnh Lịch Sử</div>
-      <div class="body">Trước kỷ nguyên máy tính, các nhà giao dịch cổ điển (như Wyckoff) chỉ dùng biểu đồ giấy và tape reading. Việc phân tích mang nặng tính nghệ thuật.</div>
-    </div>
-    <div class="bullet-card">
-      <div class="heading">2. Sự Tiến Hóa</div>
-      <div class="body">Khi phần mềm phân tích kỹ thuật ra đời, nhu cầu biến các quan sát cảm tính thành số liệu tuyệt đối (quantifiable) đã sinh ra hàng loạt chỉ báo như OBV, VWAP, Chaikin Money Flow.</div>
-    </div>
-    <div class="bullet-card">
-      <div class="heading">3. Sự Hỗn Loạn Của Thị Trường</div>
-      <div class="body">Do có quá nhiều thuật toán, các chỉ báo khối lượng hiện nay thường trùng tên nhưng lại đo lường Dòng Tiền (Accumulation/Distribution) theo những cách hoàn toàn khác nhau.</div>
-    </div>
-    <div class="bullet-card">
-      <div class="heading">4. Hiện Tại & Tương Lai</div>
-      <div class="body">Đến năm 2026, AI và Machine Learning đã tự động hóa hoàn toàn việc đọc Tape, biến các chỉ báo tĩnh trở thành điểm tựa căn bản thay vì công cụ giao dịch thần thánh.</div>
-    </div>
-  </div>
-</div>
-  </section>
+      <div class="bullet-grid">
+        <div class="bullet-card">
+          <div class="icon">🔍</div>
+          <div class="heading">Bối cảnh (The Setup)</div>
+          <div class="body">Mặc dù có những trader kỳ cựu giao dịch bằng "cảm giác", nhưng trong thị trường hiện đại,
+            cảm giác là không đủ. Chúng ta cần những công cụ đo lường chính xác, giống như cái thước cuộn của người thợ
+            mộc.</div>
+        </div>
+        <div class="bullet-card">
+          <div class="icon">🧠</div>
+          <div class="heading">Lập luận (The Argument)</div>
+          <div class="body">Các chỉ báo khối lượng ghi lại điểm số của cuộc chiến cung cầu. Không giống như các chỉ báo
+            giá (tất cả đều phái sinh từ 5 biến số giống nhau), chỉ báo khối lượng mang lại góc nhìn độc lập, không
+            tương quan và dẫn dắt giá.</div>
+        </div>
+        <div class="bullet-card">
+          <div class="icon">⚠️</div>
+          <div class="heading">Cảnh báo (The Controversy)</div>
+          <div class="body">Việc liên tục tinh chỉnh thông số (optimization/curve-fitting) để tìm ra một chuỗi lệnh
+            thắng trong quá khứ là một sai lầm chết người. Chỉ báo cần được xây dựng dựa trên nguyên lý, chứ không phải
+            một sự trùng hợp ngẫu nhiên.</div>
+        </div>
+      </div>
+    </section>
 
-  <section class="slide">
-    <div class="slide-kicker">CH 9 · MÔ HÌNH TƯ DUY</div>
-    <h2>Thước Đo Của Người Thợ Mộc</h2>
-<div class="content-card">
-  <h3 style="color: var(--accent-purple); margin-bottom: 1rem;">Mô Hình Tư Duy: "Cái Thước Cuộn" (The Tape Measure)</h3>
-  
-  <div class="split-layout">
-    <div class="split-left" style="border-top: 4px solid var(--accent-purple);">
-      <h4 style="color: var(--accent-purple);">Nguyên lý cốt lõi</h4>
-      <p>Cảm giác và trực giác là quan trọng đối với một thợ mộc giỏi, nhưng không ai xây một ngôi nhà vững chãi mà không dùng đến thước đo. Chỉ báo khối lượng chính là chiếc thước đó trong giao dịch.</p>
-      
-      <h4 style="margin-top: 1rem;">Cách hoạt động</h4>
-      <ul>
-        <li>Thay vì "cảm thấy" khối lượng đang cao.</li>
-        <li>Chỉ báo xác định chính xác sự thay đổi tỷ lệ % so với trung bình.</li>
+    <section class="slide">
+      <div class="slide-kicker">CH 9 · BỐI CẢNH</div>
+      <h2>Sự Tiến Hóa Của Các Chỉ Báo</h2>
+      <div class="content-card">
+        <h3 style="color: var(--accent-cyan);">Bối Cảnh & Sự Phân Nhánh</h3>
+        <div class="bullet-grid" style="margin-top: 1rem;">
+          <div class="bullet-card">
+            <div class="heading">1. Bối Cảnh Lịch Sử</div>
+            <div class="body">Trước kỷ nguyên máy tính, các nhà giao dịch cổ điển (như Wyckoff) chỉ dùng biểu đồ giấy và
+              tape reading. Việc phân tích mang nặng tính nghệ thuật.</div>
+          </div>
+          <div class="bullet-card">
+            <div class="heading">2. Sự Tiến Hóa</div>
+            <div class="body">Khi phần mềm phân tích kỹ thuật ra đời, nhu cầu biến các quan sát cảm tính thành số liệu
+              tuyệt đối (quantifiable) đã sinh ra hàng loạt chỉ báo như OBV, VWAP, Chaikin Money Flow.</div>
+          </div>
+          <div class="bullet-card">
+            <div class="heading">3. Sự Hỗn Loạn Của Thị Trường</div>
+            <div class="body">Do có quá nhiều thuật toán, các chỉ báo khối lượng hiện nay thường trùng tên nhưng lại đo
+              lường Dòng Tiền (Accumulation/Distribution) theo những cách hoàn toàn khác nhau.</div>
+          </div>
+          <div class="bullet-card">
+            <div class="heading">4. Hiện Tại & Tương Lai</div>
+            <div class="body">Đến năm 2026, AI và Machine Learning đã tự động hóa hoàn toàn việc đọc Tape, biến các chỉ
+              báo tĩnh trở thành điểm tựa căn bản thay vì công cụ giao dịch thần thánh.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 9 · MÔ HÌNH TƯ DUY</div>
+      <h2>Thước Đo Của Người Thợ Mộc</h2>
+      <div class="content-card">
+        <h3 style="color: var(--accent-purple); margin-bottom: 1rem;">Mô Hình Tư Duy: "Cái Thước Cuộn" (The Tape
+          Measure)</h3>
+
+        <div class="split-layout">
+          <div class="split-left" style="border-top: 4px solid var(--accent-purple);">
+            <h4 style="color: var(--accent-purple);">Nguyên lý cốt lõi</h4>
+            <p>Cảm giác và trực giác là quan trọng đối với một thợ mộc giỏi, nhưng không ai xây một ngôi nhà vững chãi
+              mà không dùng đến thước đo. Chỉ báo khối lượng chính là chiếc thước đó trong giao dịch.</p>
+
+            <h4 style="margin-top: 1rem;">Cách hoạt động</h4>
+            <ul>
+              <li>Thay vì "cảm thấy" khối lượng đang cao.</li>
+              <li>Chỉ báo xác định chính xác sự thay đổi tỷ lệ % so với trung bình.</li>
+            </ul>
+          </div>
+
+          <div class="split-right" style="border-top: 4px solid var(--accent-emerald);">
+            <h4 style="color: var(--accent-emerald);">Ứng dụng & Hạn chế</h4>
+            <p><strong>Khi nào áp dụng:</strong> Dùng để xác nhận tính chính xác của một đợt Breakout (Phá vỡ).</p>
+            <p><strong>Ví dụ thực tế:</strong> Khối lượng tăng đột biến gấp đôi đường MA 50 ngày tại điểm phá vỡ.</p>
+            <p><strong>⚠️ Cạm bẫy:</strong> Không được dùng thước để dự đoán ngôi nhà tự xây thế nào. Chỉ báo chỉ đo đạc
+              hiện tại, không phải là quả cầu pha lê.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 9 · TRÍCH DẪN</div>
+      <h2>Góc Nhìn Của William J. O&#x27;Neil</h2>
+      <div class="content-card">
+        <p class="quote-text">"Most people look at the price of their stock and don't pay much attention to volume. But
+          volume is a crucial component of the measure of supply and demand. When you have major volume coming into a
+          stock, it tells you there are important players involved. So, yes, we look at volume very carefully."</p>
+        <p class="quote-context">— William J. O'Neil, <span class="page-ref">Ch 10, p. 137</span></p>
+
+        <div class="bullet-grid" style="margin-top: 1.5rem;">
+          <div class="bullet-card">
+            <div class="heading">Ý Nghĩa (Interpretation)</div>
+            <div class="body">O'Neil (huyền thoại tạo ra phương pháp CAN SLIM) khẳng định khối lượng là "Dấu chân của
+              người khổng lồ". Không có dòng tiền lớn, cổ phiếu không thể đi xa.</div>
+          </div>
+          <div class="bullet-card">
+            <div class="heading">Ứng Dụng (Application)</div>
+            <div class="body">Mọi tín hiệu mua dựa trên giá ĐỀU PHẢI được xác nhận bằng dòng tiền. Bỏ qua khối lượng là
+              bỏ qua động lực đằng sau biểu đồ giá.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 9 · ĐÚC KẾT</div>
+      <h2>Những Bài Học Quan Trọng</h2>
+      <div class="takeaway-list">
+        <div class="takeaway-item content-card">
+          <div class="takeaway-badge">1</div>
+          <div style="flex: 1;">
+            <div class="takeaway-text" style="font-size: 1.25rem; color: var(--accent); margin-bottom: 0.5rem;">
+              <strong>Chỉ báo khối lượng cung cấp thông tin "không tương quan" (noncorrelating).</strong>
+            </div>
+            <div class="takeaway-detail">
+              <div style="margin-bottom: 0.5rem;"><strong>Tại sao quan trọng:</strong> Hàng trăm chỉ báo giá đều được
+                tính toán từ một bộ 5 dữ liệu giống hệt nhau (open, high, low, close, time). Khối lượng là biến số độc
+                lập mang lại thông tin hoàn toàn mới.</div>
+              <div style="margin-bottom: 0.5rem;"><strong>Bằng chứng:</strong> "Volume indicators offer a fresh and
+                noncorrelating alternative to price-only analysis." <span class="page-ref">Ch 9, p. 133</span></div>
+              <div style="margin-bottom: 0.5rem;"><strong>Ứng dụng:</strong> Đừng dùng 5 chỉ báo giá cùng lúc. Hãy kết
+                hợp 1 chỉ báo giá và 1 chỉ báo khối lượng để có hai góc nhìn độc lập.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="takeaway-item content-card">
+          <div class="takeaway-badge" style="background: var(--accent-amber);">2</div>
+          <div style="flex: 1;">
+            <div class="takeaway-text" style="font-size: 1.25rem; color: var(--accent-amber); margin-bottom: 0.5rem;">
+              <strong>Sự phân kỳ khối lượng là cảnh báo kết thúc xu hướng.</strong>
+            </div>
+            <div class="takeaway-detail">
+              <div style="margin-bottom: 0.5rem;"><strong>Tại sao quan trọng:</strong> Khi giá tiếp tục lập đỉnh mới
+                nhưng chỉ báo khối lượng đi ngang hoặc giảm, xu hướng đã mất đi động lượng thực sự.</div>
+              <div style="margin-bottom: 0.5rem;"><strong>Bằng chứng:</strong> "When the volume indicator makes new
+                highs or lows while the stock price does not yet change, volume indicates which direction the price
+                might go." <span class="page-ref">Ch 9, p. 133</span></div>
+              <div style="margin-bottom: 0.5rem;"><strong>Ứng dụng:</strong> Sử dụng sự phân kỳ (divergence) giữa giá và
+                OBV (hoặc các chỉ báo tương tự) làm tín hiệu chốt lời sớm.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 9 · PHÂN TÍCH ĐA TẦNG</div>
+      <h2>Đọc Hiểu Sâu Sắc</h2>
+      <div class="content-card">
+        <h3 style="color: var(--accent-cyan);">Phân Tích Đa Tầng (Reading Layers)</h3>
+        <div class="timeline" style="margin-top: 1.5rem;">
+          <div class="timeline-item">
+            <div class="timeline-marker" style="background: var(--accent-cyan)">1</div>
+            <div class="timeline-body">
+              <strong>Tầng Mặt (Surface):</strong> Tác giả phân loại 7 nhóm chỉ báo khối lượng và phản đối việc tối ưu
+              hóa thông số.
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-marker" style="background: var(--accent-amber)">2</div>
+            <div class="timeline-body">
+              <strong>Tầng Cấu trúc (Structural):</strong> Chương này làm cầu nối giữa lý thuyết trừu tượng (chương 1-8)
+              và thực hành tính toán cụ thể (chương 10 trở đi).
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-marker" style="background: var(--accent-red)">4</div>
+            <div class="timeline-body">
+              <strong>Tầng Phê bình (Critical):</strong> Việc bác bỏ hoàn toàn "Optimization" có phần cực đoan trong kỷ
+              nguyên hiện đại, nơi Data Science và Walk-Forward Testing có thể ngăn chặn curve-fitting hiệu quả.
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-marker" style="background: var(--accent-purple)">5</div>
+            <div class="timeline-body">
+              <strong>Tầng Mở rộng (Generative):</strong> Kết hợp triết lý "Cố định chu kỳ tự nhiên" của Dormeier với
+              Machine Learning hiện đại để tạo ra hệ thống AI phân tích dòng tiền không bị overfitting.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 9 · CẢNH BÁO</div>
+      <h2>Cạm Bẫy Của Việc Tối Ưu Hóa (Optimization)</h2>
+      <div class="warning-card">
+        <div class="warning-headline">Tránh xa cái bẫy "Tối Ưu Hóa" (Optimization / Curve-fitting)</div>
+        <div class="warning-detail">
+          <strong>Tại sao:</strong> Tối ưu hóa bằng cách test hàng chục ngàn bộ thông số (ví dụ: cắt nhau giữa đường MA
+          7 và MA 13) chỉ để tìm ra bộ thông số sinh lời nhiều nhất trong quá khứ là phi logic. Nó chỉ chứng minh rằng
+          sự trùng hợp ngẫu nhiên đó đã đúng trong quá khứ, không có gì đảm bảo cho tương lai.<br><br>
+          <strong>Giải pháp của tác giả:</strong> Sử dụng thông số gắn với lịch (calendar-based). Ví dụ: 5 ngày cho 1
+          tuần, 20 ngày cho 1 tháng. <em>"Nếu một chỉ báo không hoạt động ở một khung thời gian cụ thể nhưng lại được
+            cho là hoạt động ở khung khác, bản thân chỉ báo đó đã có vấn đề."</em> <span class="page-ref">Ch 9, p.
+            136-137</span>
+        </div>
+      </div>
+      <br>
+      <div class="warning-card" style="border-left-color: var(--accent-purple);">
+        <div class="warning-headline" style="color: var(--accent-purple);">Chỉ báo tạo ra "thông tin", không phải sự màu
+          nhiệm.</div>
+        <div class="warning-detail">
+          <strong>Tại sao:</strong> Đừng coi chỉ báo như một pháp thuật. Khi hai đường cắt nhau, không có nghĩa là thị
+          trường "bắt buộc" phải đảo chiều. Chỉ báo chỉ tính toán và trình bày dữ liệu về sức ép cung/cầu.
+        </div>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 9 · GÓC NHÌN ĐỐI LẬP</div>
+      <h2>Tối Ưu Hóa: Xấu Hay Tốt?</h2>
+      <div class="split-layout">
+        <div class="split-left" style="border-top: 4px solid var(--accent-emerald);">
+          <h3 style="color: var(--accent-emerald);">Góc nhìn của Dormeier</h3>
+          <p>Tuyệt đối không được Tối ưu hóa (Optimization). Chỉ báo phải được thiết kế một cách có chủ đích (mindful
+            creation) sử dụng các khung thời gian gắn liền với tự nhiên hoặc lịch (5 ngày, 20 ngày). Tối ưu hóa chỉ là
+            khớp dữ liệu quá khứ (curve-fitting).</p>
+        </div>
+
+        <div class="split-right" style="border-top: 4px solid var(--accent-amber);">
+          <h3 style="color: var(--accent-amber);">Góc nhìn đối lập: Quantitative Finance</h3>
+          <p><strong>Lập luận:</strong> Thị trường liên tục thay đổi (Regime shift). Chu kỳ 20 ngày của thập niên 90 có
+            thể không còn phù hợp vào năm 2026. Tối ưu hóa thích ứng (Adaptive Optimization) kết hợp Out-of-Sample
+            testing là bắt buộc.</p>
+          <p><strong>Vì sao khác biệt:</strong> Dormeier đại diện cho trường phái Discretionary (ra quyết định thủ
+            công). Quants đại diện cho Systems trading.</p>
+        </div>
+      </div>
+
+      <div class="content-card" style="margin-top: 1rem; border: 1px solid var(--accent-purple);">
+        <h4 style="color: var(--accent-purple);">Tổng hợp (Synthesis)</h4>
+        <p>Cả hai đều đúng ở bối cảnh của họ. Với nhà giao dịch cá nhân nhỏ lẻ thiếu công cụ kiểm định chéo
+          (Cross-validation), lời khuyên của Dormeier là liều thuốc giải độc hoàn hảo để chống lại sự ảo tưởng về những
+          thông số "thần thánh".</p>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 9 · PHÂN TÍCH SÂU</div>
+      <h2>Bản Chất Của Một Chỉ Báo Tốt</h2>
+      <div class="deep-section">
+        <h3 style="text-align: center; margin-bottom: 1.5rem;">Deep Dive: Tại sao Optimization lại nguy hiểm?</h3>
+        <div class="bullet-grid">
+          <div class="bullet-card">
+            <div class="heading" style="color: var(--accent-amber);">1. Cốt Lõi Vấn Đề</div>
+            <div class="body">Hầu hết các trader nhỏ lẻ mắc kẹt trong vòng lặp: Test công thức -> Tinh chỉnh (Optimize)
+              -> Lãi giả lập -> Thua lỗ thực tế -> Lại tinh chỉnh. Tác giả gọi đây là sự "tiến hóa" (evolution) mù quáng
+              thay vì "sáng tạo có chủ ý" (mindful creation).</div>
+          </div>
+          <div class="bullet-card">
+            <div class="heading" style="color: var(--accent-cyan);">2. Lập luận Logic</div>
+            <div class="body">Các thị trường tài chính là một cấu trúc cực kỳ phức tạp và hỗn loạn. Một bộ thông số ngẫu
+              nhiên được khai thác dữ liệu (data mined) thành công trong quá khứ không có cơ sở lý thuyết để hoạt động
+              trong tương lai (Curve-fitting).</div>
+          </div>
+          <div class="bullet-card">
+            <div class="heading" style="color: var(--accent-purple);">3. Giả định của Tác giả</div>
+            <div class="body">Ông giả định rằng các khung thời gian mang tính chu kỳ con người (5 ngày làm việc = 1
+              tuần, 20 ngày = 1 tháng) có ý nghĩa về mặt tâm lý và dòng tiền, và nên được cố định làm quy chuẩn đo lường
+              thay vì những con số lẻ ngẫu nhiên (ví dụ 17 hay 23 ngày).</div>
+          </div>
+          <div class="bullet-card">
+            <div class="heading" style="color: var(--accent-emerald);">4. Đánh Giá Khách Quan</div>
+            <div class="body">Dù lập luận của tác giả về "lịch" rất cứng rắn, các quỹ định lượng hiện đại (Quant Funds)
+              với năng lực máy học (Machine Learning) vẫn thường xuyên tối ưu hóa thông số liên tục để thích nghi
+              (adaptive parameters). Góc nhìn của Dormeier mang tính kinh điển và phù hợp hơn với discretionary trader
+              (giao dịch thủ công).</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 9 · THỰC HÀNH</div>
+      <h2>Tích Hợp Chỉ Báo Vào Hệ Thống</h2>
+      <div class="content-card">
+        <h3>Lộ Trình Tích Hợp (Implementation Guide)</h3>
+        <br>
+        <div class="phase-progress">
+          <div class="phase active">Tuần 1: Dọn Dẹp</div>
+          <div class="phase">Tuần 2: Thử Nghiệm</div>
+          <div class="phase">Tháng 2: Kết Hợp</div>
+          <div class="phase">Tháng 6: Tinh Thông</div>
+        </div>
+
+        <div style="margin-top: 2rem;">
+          <p><strong>Giai đoạn 1 - Dọn Dẹp Biểu Đồ:</strong></p>
+          <ul style="margin-bottom: 1.5rem; margin-left: 1.5rem; list-style-type: disc;">
+            <li>Xóa bỏ tất cả các chỉ báo giá dư thừa đang cung cấp thông tin trùng lặp (vd: giữ lại RSI, xóa Stochastic
+              và MACD).</li>
+            <li>Thiết lập khung thời gian cố định theo lịch chuẩn (MA 5 ngày, 20 ngày, 50 ngày).</li>
+          </ul>
+
+          <p><strong>Cạm bẫy cần tránh (Pitfalls):</strong></p>
+          <ul style="margin-left: 1.5rem; list-style-type: disc;">
+            <li>Mở biểu đồ và bắt đầu điều chỉnh thông số từ 20 ngày thành 17 ngày chỉ vì nó "khớp" với một cú trade
+              đỉnh đáy tuần trước.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 9 · SUY NGẪM</div>
+      <h2>Kiểm Định Tư Duy</h2>
+      <div class="content-card">
+        <h3>Câu Hỏi Suy Ngẫm</h3>
+        <br>
+        <ul>
+          <li><strong>Nhớ & Hiểu:</strong> 7 loại chỉ báo khối lượng khác nhau như thế nào về mục đích đo lường?</li>
+          <li><strong>Áp Dụng:</strong> Mở biểu đồ của bạn lên, hiện tại bạn đang dùng bao nhiêu chỉ báo dẫn xuất hoàn
+            toàn từ giá? Bao nhiêu từ khối lượng?</li>
+          <li><strong>Phân Tích & Đánh Giá:</strong> Bạn đã bao giờ rơi vào "bẫy tối ưu hóa", tinh chỉnh các đường MA
+            cho đến khi nó dự báo chính xác một diễn biến đã xảy ra trong quá khứ chưa?</li>
+          <li><strong>Mở Rộng:</strong> Nếu thị trường tiền điện tử hoạt động 24/7 (không có tuần làm việc 5 ngày), làm
+            thế nào để áp dụng nguyên lý "khung thời gian theo lịch" của tác giả?</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 9 · HÀNH ĐỘNG</div>
+      <h2>Kế Hoạch Triển Khai</h2>
+      <ul class="action-list">
+        <li class="action-item">
+          <div>
+            <div class="action-headline">Ngừng tinh chỉnh thông số (parameters) của chỉ báo khối lượng.</div>
+            <div class="action-detail">Trở về với các chu kỳ chuẩn của thị trường: 5 ngày (ngắn hạn), 20 ngày (trung
+              hạn), 60 ngày (dài hạn).</div>
+          </div>
+        </li>
+        <li class="action-item">
+          <div>
+            <div class="action-headline">Bổ sung chỉ báo khối lượng như một nguồn xác nhận độc lập.</div>
+            <div class="action-detail">Loại bỏ bớt các chỉ báo giá (như RSI, MACD, Stochastic) đang bị trùng lặp, thêm
+              một chỉ báo khối lượng (như OBV, VWAP) vào hệ thống hiện tại.</div>
+          </div>
+        </li>
       </ul>
-    </div>
-    
-    <div class="split-right" style="border-top: 4px solid var(--accent-emerald);">
-      <h4 style="color: var(--accent-emerald);">Ứng dụng & Hạn chế</h4>
-      <p><strong>Khi nào áp dụng:</strong> Dùng để xác nhận tính chính xác của một đợt Breakout (Phá vỡ).</p>
-      <p><strong>Ví dụ thực tế:</strong> Khối lượng tăng đột biến gấp đôi đường MA 50 ngày tại điểm phá vỡ.</p>
-      <p><strong>⚠️ Cạm bẫy:</strong> Không được dùng thước để dự đoán ngôi nhà tự xây thế nào. Chỉ báo chỉ đo đạc hiện tại, không phải là quả cầu pha lê.</p>
-    </div>
+    </section>
+
   </div>
-</div>
-  </section>
 
-  <section class="slide">
-    <div class="slide-kicker">CH 9 · TRÍCH DẪN</div>
-    <h2>Góc Nhìn Của William J. O&#x27;Neil</h2>
-<div class="content-card">
-  <p class="quote-text">"Most people look at the price of their stock and don't pay much attention to volume. But volume is a crucial component of the measure of supply and demand. When you have major volume coming into a stock, it tells you there are important players involved. So, yes, we look at volume very carefully."</p>
-  <p class="quote-context">— William J. O'Neil, <span class="page-ref">Ch 10, p. 137</span></p>
-  
-  <div class="bullet-grid" style="margin-top: 1.5rem;">
-    <div class="bullet-card">
-      <div class="heading">Ý Nghĩa (Interpretation)</div>
-      <div class="body">O'Neil (huyền thoại tạo ra phương pháp CAN SLIM) khẳng định khối lượng là "Dấu chân của người khổng lồ". Không có dòng tiền lớn, cổ phiếu không thể đi xa.</div>
-    </div>
-    <div class="bullet-card">
-      <div class="heading">Ứng Dụng (Application)</div>
-      <div class="body">Mọi tín hiệu mua dựa trên giá ĐỀU PHẢI được xác nhận bằng dòng tiền. Bỏ qua khối lượng là bỏ qua động lực đằng sau biểu đồ giá.</div>
-    </div>
+  <div class="nav-controls">
+    <button class="nav-btn" id="prevBtn" onclick="prevSlide()" aria-label="Previous slide">&#8592;</button>
+    <div class="counter" id="counter" aria-live="polite">1 / 1</div>
+    <button class="nav-btn" id="nextBtn" onclick="nextSlide()" aria-label="Next slide">&#8594;</button>
   </div>
-</div>
-  </section>
 
-  <section class="slide">
-    <div class="slide-kicker">CH 9 · ĐÚC KẾT</div>
-    <h2>Những Bài Học Quan Trọng</h2>
-<div class="takeaway-list">
-  <div class="takeaway-item content-card">
-    <div class="takeaway-badge">1</div>
-    <div style="flex: 1;">
-      <div class="takeaway-text" style="font-size: 1.25rem; color: var(--accent); margin-bottom: 0.5rem;">
-        <strong>Chỉ báo khối lượng cung cấp thông tin "không tương quan" (noncorrelating).</strong>
-      </div>
-      <div class="takeaway-detail">
-        <div style="margin-bottom: 0.5rem;"><strong>Tại sao quan trọng:</strong> Hàng trăm chỉ báo giá đều được tính toán từ một bộ 5 dữ liệu giống hệt nhau (open, high, low, close, time). Khối lượng là biến số độc lập mang lại thông tin hoàn toàn mới.</div>
-        <div style="margin-bottom: 0.5rem;"><strong>Bằng chứng:</strong> "Volume indicators offer a fresh and noncorrelating alternative to price-only analysis." <span class="page-ref">Ch 9, p. 133</span></div>
-        <div style="margin-bottom: 0.5rem;"><strong>Ứng dụng:</strong> Đừng dùng 5 chỉ báo giá cùng lúc. Hãy kết hợp 1 chỉ báo giá và 1 chỉ báo khối lượng để có hai góc nhìn độc lập.</div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="takeaway-item content-card">
-    <div class="takeaway-badge" style="background: var(--accent-amber);">2</div>
-    <div style="flex: 1;">
-      <div class="takeaway-text" style="font-size: 1.25rem; color: var(--accent-amber); margin-bottom: 0.5rem;">
-        <strong>Sự phân kỳ khối lượng là cảnh báo kết thúc xu hướng.</strong>
-      </div>
-      <div class="takeaway-detail">
-        <div style="margin-bottom: 0.5rem;"><strong>Tại sao quan trọng:</strong> Khi giá tiếp tục lập đỉnh mới nhưng chỉ báo khối lượng đi ngang hoặc giảm, xu hướng đã mất đi động lượng thực sự.</div>
-        <div style="margin-bottom: 0.5rem;"><strong>Bằng chứng:</strong> "When the volume indicator makes new highs or lows while the stock price does not yet change, volume indicates which direction the price might go." <span class="page-ref">Ch 9, p. 133</span></div>
-        <div style="margin-bottom: 0.5rem;"><strong>Ứng dụng:</strong> Sử dụng sự phân kỳ (divergence) giữa giá và OBV (hoặc các chỉ báo tương tự) làm tín hiệu chốt lời sớm.</div>
-      </div>
-    </div>
-  </div>
-</div>
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH 9 · PHÂN TÍCH ĐA TẦNG</div>
-    <h2>Đọc Hiểu Sâu Sắc</h2>
-<div class="content-card">
-  <h3 style="color: var(--accent-cyan);">Phân Tích Đa Tầng (Reading Layers)</h3>
-  <div class="timeline" style="margin-top: 1.5rem;">
-    <div class="timeline-item">
-      <div class="timeline-marker" style="background: var(--accent-cyan)">1</div>
-      <div class="timeline-body">
-        <strong>Tầng Mặt (Surface):</strong> Tác giả phân loại 7 nhóm chỉ báo khối lượng và phản đối việc tối ưu hóa thông số.
-      </div>
-    </div>
-    <div class="timeline-item">
-      <div class="timeline-marker" style="background: var(--accent-amber)">2</div>
-      <div class="timeline-body">
-        <strong>Tầng Cấu trúc (Structural):</strong> Chương này làm cầu nối giữa lý thuyết trừu tượng (chương 1-8) và thực hành tính toán cụ thể (chương 10 trở đi).
-      </div>
-    </div>
-    <div class="timeline-item">
-      <div class="timeline-marker" style="background: var(--accent-red)">4</div>
-      <div class="timeline-body">
-        <strong>Tầng Phê bình (Critical):</strong> Việc bác bỏ hoàn toàn "Optimization" có phần cực đoan trong kỷ nguyên hiện đại, nơi Data Science và Walk-Forward Testing có thể ngăn chặn curve-fitting hiệu quả.
-      </div>
-    </div>
-    <div class="timeline-item">
-      <div class="timeline-marker" style="background: var(--accent-purple)">5</div>
-      <div class="timeline-body">
-        <strong>Tầng Mở rộng (Generative):</strong> Kết hợp triết lý "Cố định chu kỳ tự nhiên" của Dormeier với Machine Learning hiện đại để tạo ra hệ thống AI phân tích dòng tiền không bị overfitting.
-      </div>
-    </div>
-  </div>
-</div>
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH 9 · CẢNH BÁO</div>
-    <h2>Cạm Bẫy Của Việc Tối Ưu Hóa (Optimization)</h2>
-<div class="warning-card">
-  <div class="warning-headline">Tránh xa cái bẫy "Tối Ưu Hóa" (Optimization / Curve-fitting)</div>
-  <div class="warning-detail">
-    <strong>Tại sao:</strong> Tối ưu hóa bằng cách test hàng chục ngàn bộ thông số (ví dụ: cắt nhau giữa đường MA 7 và MA 13) chỉ để tìm ra bộ thông số sinh lời nhiều nhất trong quá khứ là phi logic. Nó chỉ chứng minh rằng sự trùng hợp ngẫu nhiên đó đã đúng trong quá khứ, không có gì đảm bảo cho tương lai.<br><br>
-    <strong>Giải pháp của tác giả:</strong> Sử dụng thông số gắn với lịch (calendar-based). Ví dụ: 5 ngày cho 1 tuần, 20 ngày cho 1 tháng. <em>"Nếu một chỉ báo không hoạt động ở một khung thời gian cụ thể nhưng lại được cho là hoạt động ở khung khác, bản thân chỉ báo đó đã có vấn đề."</em> <span class="page-ref">Ch 9, p. 136-137</span>
-  </div>
-</div>
-<br>
-<div class="warning-card" style="border-left-color: var(--accent-purple);">
-  <div class="warning-headline" style="color: var(--accent-purple);">Chỉ báo tạo ra "thông tin", không phải sự màu nhiệm.</div>
-  <div class="warning-detail">
-    <strong>Tại sao:</strong> Đừng coi chỉ báo như một pháp thuật. Khi hai đường cắt nhau, không có nghĩa là thị trường "bắt buộc" phải đảo chiều. Chỉ báo chỉ tính toán và trình bày dữ liệu về sức ép cung/cầu.
-  </div>
-</div>
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH 9 · GÓC NHÌN ĐỐI LẬP</div>
-    <h2>Tối Ưu Hóa: Xấu Hay Tốt?</h2>
-<div class="split-layout">
-  <div class="split-left" style="border-top: 4px solid var(--accent-emerald);">
-    <h3 style="color: var(--accent-emerald);">Góc nhìn của Dormeier</h3>
-    <p>Tuyệt đối không được Tối ưu hóa (Optimization). Chỉ báo phải được thiết kế một cách có chủ đích (mindful creation) sử dụng các khung thời gian gắn liền với tự nhiên hoặc lịch (5 ngày, 20 ngày). Tối ưu hóa chỉ là khớp dữ liệu quá khứ (curve-fitting).</p>
-  </div>
-  
-  <div class="split-right" style="border-top: 4px solid var(--accent-amber);">
-    <h3 style="color: var(--accent-amber);">Góc nhìn đối lập: Quantitative Finance</h3>
-    <p><strong>Lập luận:</strong> Thị trường liên tục thay đổi (Regime shift). Chu kỳ 20 ngày của thập niên 90 có thể không còn phù hợp vào năm 2026. Tối ưu hóa thích ứng (Adaptive Optimization) kết hợp Out-of-Sample testing là bắt buộc.</p>
-    <p><strong>Vì sao khác biệt:</strong> Dormeier đại diện cho trường phái Discretionary (ra quyết định thủ công). Quants đại diện cho Systems trading.</p>
-  </div>
-</div>
-
-<div class="content-card" style="margin-top: 1rem; border: 1px solid var(--accent-purple);">
-  <h4 style="color: var(--accent-purple);">Tổng hợp (Synthesis)</h4>
-  <p>Cả hai đều đúng ở bối cảnh của họ. Với nhà giao dịch cá nhân nhỏ lẻ thiếu công cụ kiểm định chéo (Cross-validation), lời khuyên của Dormeier là liều thuốc giải độc hoàn hảo để chống lại sự ảo tưởng về những thông số "thần thánh".</p>
-</div>
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH 9 · PHÂN TÍCH SÂU</div>
-    <h2>Bản Chất Của Một Chỉ Báo Tốt</h2>
-<div class="deep-section">
-  <h3 style="text-align: center; margin-bottom: 1.5rem;">Deep Dive: Tại sao Optimization lại nguy hiểm?</h3>
-  <div class="bullet-grid">
-    <div class="bullet-card">
-      <div class="heading" style="color: var(--accent-amber);">1. Cốt Lõi Vấn Đề</div>
-      <div class="body">Hầu hết các trader nhỏ lẻ mắc kẹt trong vòng lặp: Test công thức -> Tinh chỉnh (Optimize) -> Lãi giả lập -> Thua lỗ thực tế -> Lại tinh chỉnh. Tác giả gọi đây là sự "tiến hóa" (evolution) mù quáng thay vì "sáng tạo có chủ ý" (mindful creation).</div>
-    </div>
-    <div class="bullet-card">
-      <div class="heading" style="color: var(--accent-cyan);">2. Lập luận Logic</div>
-      <div class="body">Các thị trường tài chính là một cấu trúc cực kỳ phức tạp và hỗn loạn. Một bộ thông số ngẫu nhiên được khai thác dữ liệu (data mined) thành công trong quá khứ không có cơ sở lý thuyết để hoạt động trong tương lai (Curve-fitting).</div>
-    </div>
-    <div class="bullet-card">
-      <div class="heading" style="color: var(--accent-purple);">3. Giả định của Tác giả</div>
-      <div class="body">Ông giả định rằng các khung thời gian mang tính chu kỳ con người (5 ngày làm việc = 1 tuần, 20 ngày = 1 tháng) có ý nghĩa về mặt tâm lý và dòng tiền, và nên được cố định làm quy chuẩn đo lường thay vì những con số lẻ ngẫu nhiên (ví dụ 17 hay 23 ngày).</div>
-    </div>
-    <div class="bullet-card">
-      <div class="heading" style="color: var(--accent-emerald);">4. Đánh Giá Khách Quan</div>
-      <div class="body">Dù lập luận của tác giả về "lịch" rất cứng rắn, các quỹ định lượng hiện đại (Quant Funds) với năng lực máy học (Machine Learning) vẫn thường xuyên tối ưu hóa thông số liên tục để thích nghi (adaptive parameters). Góc nhìn của Dormeier mang tính kinh điển và phù hợp hơn với discretionary trader (giao dịch thủ công).</div>
-    </div>
-  </div>
-</div>
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH 9 · THỰC HÀNH</div>
-    <h2>Tích Hợp Chỉ Báo Vào Hệ Thống</h2>
-<div class="content-card">
-  <h3>Lộ Trình Tích Hợp (Implementation Guide)</h3>
-  <br>
-  <div class="phase-progress">
-    <div class="phase active">Tuần 1: Dọn Dẹp</div>
-    <div class="phase">Tuần 2: Thử Nghiệm</div>
-    <div class="phase">Tháng 2: Kết Hợp</div>
-    <div class="phase">Tháng 6: Tinh Thông</div>
-  </div>
-  
-  <div style="margin-top: 2rem;">
-    <p><strong>Giai đoạn 1 - Dọn Dẹp Biểu Đồ:</strong></p>
-    <ul style="margin-bottom: 1.5rem; margin-left: 1.5rem; list-style-type: disc;">
-      <li>Xóa bỏ tất cả các chỉ báo giá dư thừa đang cung cấp thông tin trùng lặp (vd: giữ lại RSI, xóa Stochastic và MACD).</li>
-      <li>Thiết lập khung thời gian cố định theo lịch chuẩn (MA 5 ngày, 20 ngày, 50 ngày).</li>
-    </ul>
-
-    <p><strong>Cạm bẫy cần tránh (Pitfalls):</strong></p>
-    <ul style="margin-left: 1.5rem; list-style-type: disc;">
-      <li>Mở biểu đồ và bắt đầu điều chỉnh thông số từ 20 ngày thành 17 ngày chỉ vì nó "khớp" với một cú trade đỉnh đáy tuần trước.</li>
-    </ul>
-  </div>
-</div>
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH 9 · SUY NGẪM</div>
-    <h2>Kiểm Định Tư Duy</h2>
-<div class="content-card">
-  <h3>Câu Hỏi Suy Ngẫm</h3>
-  <br>
-  <ul>
-    <li><strong>Nhớ & Hiểu:</strong> 7 loại chỉ báo khối lượng khác nhau như thế nào về mục đích đo lường?</li>
-    <li><strong>Áp Dụng:</strong> Mở biểu đồ của bạn lên, hiện tại bạn đang dùng bao nhiêu chỉ báo dẫn xuất hoàn toàn từ giá? Bao nhiêu từ khối lượng?</li>
-    <li><strong>Phân Tích & Đánh Giá:</strong> Bạn đã bao giờ rơi vào "bẫy tối ưu hóa", tinh chỉnh các đường MA cho đến khi nó dự báo chính xác một diễn biến đã xảy ra trong quá khứ chưa?</li>
-    <li><strong>Mở Rộng:</strong> Nếu thị trường tiền điện tử hoạt động 24/7 (không có tuần làm việc 5 ngày), làm thế nào để áp dụng nguyên lý "khung thời gian theo lịch" của tác giả?</li>
-  </ul>
-</div>
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH 9 · HÀNH ĐỘNG</div>
-    <h2>Kế Hoạch Triển Khai</h2>
-<ul class="action-list">
-  <li class="action-item">
-    <div>
-      <div class="action-headline">Ngừng tinh chỉnh thông số (parameters) của chỉ báo khối lượng.</div>
-      <div class="action-detail">Trở về với các chu kỳ chuẩn của thị trường: 5 ngày (ngắn hạn), 20 ngày (trung hạn), 60 ngày (dài hạn).</div>
-    </div>
-  </li>
-  <li class="action-item">
-    <div>
-      <div class="action-headline">Bổ sung chỉ báo khối lượng như một nguồn xác nhận độc lập.</div>
-      <div class="action-detail">Loại bỏ bớt các chỉ báo giá (như RSI, MACD, Stochastic) đang bị trùng lặp, thêm một chỉ báo khối lượng (như OBV, VWAP) vào hệ thống hiện tại.</div>
-    </div>
-  </li>
-</ul>
-  </section>
-
-</div>
-
-<div class="nav-controls">
-  <button class="nav-btn" id="prevBtn" onclick="prevSlide()" aria-label="Previous slide">&#8592;</button>
-  <div class="counter" id="counter" aria-live="polite">1 / 1</div>
-  <button class="nav-btn" id="nextBtn" onclick="nextSlide()" aria-label="Next slide">&#8594;</button>
-</div>
-
-<script src="common.js"></script>
+  <script src="../common.js"></script>
 </body>
+
 </html>

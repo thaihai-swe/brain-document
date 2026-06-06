@@ -1,355 +1,608 @@
 <!DOCTYPE html>
 
 <html lang="vi">
+
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>Investing with Volume Analysis — Chapter 2</title>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Merriweather:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="common.css" rel="stylesheet"/>
-<script crossorigin="anonymous" src="https://cdn.jsdelivr.net/npm/mermaid@11.10.0/dist/mermaid.min.js"></script>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>Investing with Volume Analysis — Chapter 2</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Merriweather:wght@400;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link href="../common.css" rel="stylesheet" />
+    <script crossorigin="anonymous" src="https://cdn.jsdelivr.net/npm/mermaid@11.10.0/dist/mermaid.min.js"></script>
 </head>
+
 <body>
-<div class="progress-bar" id="progressBar"></div>
-<div class="chapter-menu">
-<button aria-expanded="false" aria-haspopup="true" class="menu-btn" id="chapterMenuBtn" onclick="toggleChapterMenu()">Chapters ▾</button>
-<div class="chapter-menu-panel" id="chapterMenuPanel" role="menu"></div>
-</div>
-<div class="slide-container" id="slideContainer">
-<section aria-hidden="false" class="slide">
-<h1>Investing with Volume Analysis</h1>
-<p class="subtitle">Buff Pelz Dormeier · FT Press 2011 — Chương 2: <em>The History of Technical Analysis</em></p>
-<div class="meta-grid">
-<div class="meta-pill">
-<div class="label">Trang gốc</div>
-<div class="value">12-26</div>
-</div>
-<div class="meta-pill">
-<div class="label">Thời gian đọc gốc</div>
-<div class="value">~16 phút</div>
-</div>
-<div class="meta-pill">
-<div class="label">Độ sâu</div>
-<div class="value">Deep</div>
-</div>
-<div class="meta-pill">
-<div class="label">Đối tượng</div>
-<div class="value">Business / Pro</div>
-</div>
-</div>
-</section>
-<section class="slide chapter-divider">
-<div class="chapter-number">Chapter 2</div>
-<h2>The History of Technical Analysis</h2>
-<p class="chapter-meta">~16 phút · Beginner–Intermediate · Lineage Dow → Hamilton → Rhea → Wyckoff → Schabacker → Edwards/Magee · Cowles 1932 vs Brown-Goetzmann-Kumar 1998 · Wyckoff's three laws · Reg FD &amp; flash crash</p>
-</section>
-<section class="slide">
-<div class="slide-kicker">CH 2 · VISUAL SUMMARY</div>
-<h2>Trục thời gian Technical Analysis</h2>
-<div class="mermaid">
-graph LR
-    A["Genesis<br/>~2000 BC<br/>'Fill or be killed' order"] --&gt; B["Babylon<br/>7th c. BC<br/>Commodity logs"]
-    B --&gt; C["Homma<br/>Japan 1755<br/>Candlestick + psychology"]
-    C --&gt; D["Dow<br/>1880s-1902<br/>WSJ + first index"]
-    D --&gt; E["Hamilton<br/>1903-1929<br/>Dow Theory editor"]
-    E --&gt; F["Rhea<br/>1932<br/>Dow Theory book"]
-    D --&gt; G["Wyckoff<br/>1907-1930s<br/>Three laws + volume"]
-    D --&gt; H["Schabacker<br/>1932<br/>Tech Analysis &amp; Stock Profits"]
-    H --&gt; I["Edwards &amp; Magee<br/>1948<br/>'Bible' of TA"]
-    F --&gt; J["Cowles 1932<br/>Attacks Hamilton"]
-    J --&gt; K["SEC 1934<br/>+ Graham/Dodd<br/>Fundamentals win"]
-    K --&gt; L["Brown-Goetzmann-Kumar<br/>1998<br/>Hamilton vindicated"]
-    L --&gt; M["Reg FD 2000 +<br/>Flash crash 2010<br/>Pendulum swings back"]
-    style D fill:#EFEEFF,stroke:#635BFF,color:#111111
-    style G fill:#EFEEFF,stroke:#635BFF,color:#111111
-    style L fill:#DCFCE7,stroke:#059669,color:#111111
-    style J fill:#FEE2E2,stroke:#DC2626,color:#111111
-</div>
-<p class="caveat" style="margin-top:var(--space-6)">Trục thời gian các nhân vật &amp; sự kiện hình thành Technical Analysis (TA) hiện đại. Nhánh xanh = thế hệ kế thừa Dow; nhánh đỏ = đợt tấn công Cowles 1932 chuyển trọng tâm về fundamentals; nhánh xanh lá = nghiên cứu Yale 1998 phục hồi Hamilton. <span class="page-ref">Ch 2, p. 12-26</span></p>
-</section>
-<section class="slide">
-<div class="slide-kicker">CH 2 · THE BIG IDEA</div>
-<h2>Một câu cốt lõi</h2>
-<div class="takeaway-hero">
-<div class="kicker">CH 2 · THE BIG IDEA</div>
-<div class="headline">"Technical analysis có gốc rễ sâu hơn fundamentals — và sau khi Cowles bị Yale 1998 phản bác, Dow Theory không chỉ sống sót mà còn ăn fundamentals về tỷ suất lợi nhuận điều chỉnh rủi ro."</div>
-<div class="subline">Lịch sử TA không phải phụ lục — nó là bằng chứng phương pháp này tồn tại trước, bị bóp nghẹt vì regulation chứ không vì kém hiệu quả, và đang quay lại đúng bối cảnh thị trường ngày nay.</div>
-</div>
-</section>
-<section class="slide">
-<div class="slide-kicker">CH 2 · KEY TAKEAWAYS</div>
-<h2>Sáu takeaway chính</h2>
-<div class="takeaway-list"><div class="takeaway-item content-card"><div class="takeaway-badge">1</div><div style="flex: 1;"><div class="takeaway-text" style="font-size: 1.25rem; color: var(--accent); margin-bottom: 0.5rem;">TA xuất hiện <strong>trước</strong> fundamentals — giao dịch đầu tiên ghi lại (Genesis: Abimelech trả Abraham 1.000 miếng bạc) đã dựa trên đánh giá hành vi chứ không phải intrinsic value. <span class="page-ref">Ch 2, p. 12-13</span></div><div class="takeaway-detail"><strong>Why it matters:</strong> Lập luận "fundamentals có trước, TA chỉ là tô vẽ chart" là sai về mặt lịch sử — price luôn chứa cả psychology lẫn value. <strong>Apply:</strong> Khi đối thoại với người bài xích TA, có thể dẫn lineage để hợp thức hoá phương pháp. <strong>Caveat:</strong> Đây là lập luận lịch sử/triết học, không phải bằng chứng định lượng cho lợi nhuận.</div></div></div><div class="takeaway-item content-card"><div class="takeaway-badge" style="background: var(--accent-amber);">2</div><div style="flex: 1;"><div class="takeaway-text" style="font-size: 1.25rem; color: var(--accent-amber); margin-bottom: 0.5rem;"><strong>Charles Dow là cha đẻ TA hiện đại — chỉ số gồm 11 cổ phiếu (1884) là phát kiến cho phép theo dõi <em>thị trường</em> thay vì từng cổ phiếu rời rạc. <span class="page-ref">Ch 2, p. 16</span></strong></div><div class="takeaway-detail"><strong>Why:</strong> Toàn bộ ngành index investing (Cowles → S&amp;P → ETF) sinh ra từ cùng ý tưởng này. <strong>Apply:</strong> Dùng index như benchmark cho mọi kết quả TA. <strong>Caveat:</strong> Dow tự không viết sách hệ thống — Dow Theory được Nelson, Hamilton, Rhea hệ thống hoá sau khi ông mất 1902.</div></div></div><div class="takeaway-item content-card"><div class="takeaway-badge" style="background: var(--accent-purple);">3</div><div style="flex: 1;"><div class="takeaway-text" style="font-size: 1.25rem; color: var(--accent-purple); margin-bottom: 0.5rem;"><strong>Wyckoff đặt nền cho phân tích volume: ông tin <em>"prices could be temporarily manipulated, volume data could not"</em> và phát triển ba định luật (supply/demand · cause/effect · effort/results). <span class="page-ref">Ch 2, p. 18, 20</span></strong></div><div class="takeaway-detail"><strong>Why:</strong> Đây là khung lý thuyết cốt lõi của toàn bộ cuốn sách — chương này là nguồn gốc, các chương sau là khai triển. <strong>Apply:</strong> Khi đọc chart, luôn hỏi: dòng tiền lớn (effort) có tương xứng với di chuyển giá (result) không? <strong>Caveat:</strong> Volume có thể manipulate trong micro-cap thanh khoản kém — Wyckoff giả định thị trường có chiều rộng người tham gia.</div></div></div><div class="takeaway-item content-card"><div class="takeaway-badge" style="background: var(--accent-emerald);">4</div><div style="flex: 1;"><div class="takeaway-text" style="font-size: 1.25rem; color: var(--accent-emerald); margin-bottom: 0.5rem;"><strong>SEC 1934 + Graham/Dodd "Security Analysis" 1934 + bài tấn công của Cowles 1932 đã khiến TA bị gạt khỏi hàn lâm — không vì TA kém, mà vì regulation cần "rooted in sound fundamental principles". <span class="page-ref">Ch 2, p. 20-22</span></strong></div><div class="takeaway-detail"><strong>Why:</strong> Hiểu lý do TA bị stigma giúp đánh giá lại evidence một cách khách quan. <strong>Apply:</strong> Khi hàn lâm phản bác TA, kiểm tra: phản bác về phương pháp luận hay về di sản 1949 SEC rule? <strong>Caveat:</strong> Một số phản bác hàn lâm hậu-1970 (random walk, EMH) có lập luận riêng — không thể quy hết về 1934.</div></div></div><div class="takeaway-item content-card"><div class="takeaway-badge" style="background: var(--accent-cyan);">5</div><div style="flex: 1;"><div class="takeaway-text" style="font-size: 1.25rem; color: var(--accent-cyan); margin-bottom: 0.5rem;">Brown-Goetzmann-Kumar (1998) phục hồi Hamilton: trên cơ sở điều chỉnh rủi ro, danh mục Dow Theory có <strong>Sharpe 0.559</strong> vs 0.456 và Jensen's α dương <strong>4.04%/năm</strong> so với S&amp;P 500. <span class="page-ref">Ch 2, p. 24-25</span></div><div class="takeaway-detail"><strong>Why:</strong> Đây là bằng chứng định lượng từ tổ chức cấp Yale/NYU — không phải narrative. <strong>Apply:</strong> Là benchmark "TA đã từng hoạt động" để mọi cải tiến volume-based phải vượt qua. <strong>Caveat:</strong> Nghiên cứu kết thúc trong bull market mạnh → có lợi cho danh mục fully invested của Cowles; Hamilton vẫn beat tới 1926.</div></div></div><div class="takeaway-item content-card"><div class="takeaway-badge" style="background: var(--accent);">6</div><div style="flex: 1;"><div class="takeaway-text" style="font-size: 1.25rem; color: var(--accent); margin-bottom: 0.5rem;"><strong>Bối cảnh thị trường 2026 giống Dow time hơn giống thập niên 1950-1990 — Reg FD (2000) làm thông tin bị "khoá", flash crash (2010) bốc hơi $1 nghìn tỷ trong vài phút. <span class="page-ref">Ch 2, p. 23-24</span></strong></div><div class="takeaway-detail"><strong>Why:</strong> Khi fundamentals bị che giấu và market disorderly, TA + volume trở lại vai trò risk-management thay vì stock-picking thuần. <strong>Apply:</strong> Coi volume signal như tripwire phát hiện disorder, không phải crystal ball. <strong>Caveat:</strong> Flash crash là sự kiện hiếm — không thể neo cả phương pháp luận vào một ngày 6/5/2010.</div></div></div></div>
-</section>
-<section class="slide">
-<div class="slide-kicker">CH 2 · MENTAL MODEL</div>
-<h2>Wyckoff's Three Laws</h2>
-<div class="mental-model-card">
-<h4 class="model-name">Wyckoff's Three Laws</h4>
-<div class="model-principle">Wyckoff đọc thị trường qua ba định luật cùng tác động lên price-volume — không phải checklist mà là bộ ba lăng kính kiểm tra chéo lẫn nhau. <span class="page-ref">Ch 2, p. 18</span></div>
-<div class="model-application">
-<strong>Ba định luật &amp; cách áp dụng:</strong>
-<ul>
-<li><strong>Supply &amp; Demand</strong> — khi cầu &gt; cung, giá tăng và ngược lại; nhưng cần volume để xác nhận đó là "real" demand chứ không phải vài lệnh thưa.</li>
-<li><strong>Cause &amp; Effect</strong> — giai đoạn tích luỹ (cause) càng dài thì biên độ trend kế tiếp (effect) càng lớn; volume range trong vùng tích luỹ là proxy đo "cause".</li>
-<li><strong>Effort vs Results</strong> — khi volume (effort) tăng mạnh nhưng giá (result) không đi xa hoặc đảo chiều → tín hiệu phân kỳ, smart money đang phía đối lập.</li>
-</ul>
-</div>
-<div class="model-application">
-<strong>When to apply:</strong>
-<ul>
-<li>Phân tích breakout — kiểm tra effort/result để loại false-break</li>
-<li>Đọc giai đoạn sideway — đo "cause" để dự phóng độ lớn move kế tiếp</li>
-<li>Xác định smart-money operations — Wyckoff tin lớn hơn cả là nhận diện accumulation/distribution của large operators <span class="page-ref">Ch 2, p. 18</span></li>
-</ul>
-</div>
-<div class="model-limitations">
-<strong>⚠️ Limitations:</strong>
-<ul>
-<li>Giả định thị trường có nhiều người tham gia — cổ phiếu micro-cap thanh khoản kém có thể bị manipulate cả volume</li>
-<li>Khung định tính — không cho ngưỡng số cụ thể; cần kết hợp indicator (sẽ xuất hiện ở chương 9-19)</li>
-<li>Hiệu lực giảm khi spread quá nhỏ &amp; HFT chiếm tỷ trọng lớn order flow (vấn đề của thị trường hậu-2010)</li>
-</ul>
-</div>
-</div>
-</section>
-<section class="slide">
-<div class="slide-kicker">CH 2 · NUMBERS &amp; STUDIES</div>
-<h2>Hamilton vs Cowles — số liệu</h2>
-<div class="metric-grid">
-<div class="metric-card">
-<div class="metric-value">0.559</div>
-<div class="metric-label">Hamilton's Sharpe Ratio</div>
-<div class="metric-detail">vs <strong>0.456</strong> cho danh mục Cowles. Cao hơn ~22% theo độ đo lợi nhuận điều chỉnh rủi ro. <span class="page-ref">Ch 2, p. 25</span></div>
-</div>
-<div class="metric-card">
-<div class="metric-value">+4.04%</div>
-<div class="metric-label">Jensen's α / năm</div>
-<div class="metric-detail">"More than 400 basis points per year" — alpha dương sau khi điều chỉnh beta với S&amp;P 500. <span class="page-ref">Ch 2, p. 25</span></div>
-</div>
-<div class="metric-card">
-<div class="metric-value">0.326</div>
-<div class="metric-label">Beta vs S&amp;P 500</div>
-<div class="metric-detail">Hamilton chỉ chịu ~1/3 systematic risk — mà alpha vẫn dương. Đây là điểm Cowles 1932 bỏ qua khi so sánh fully-invested vs market-timed. <span class="page-ref">Ch 2, p. 25</span></div>
-</div>
-<div class="metric-card">
-<div class="metric-value">10.73 vs 10.75%</div>
-<div class="metric-label">Annual return — same instruments</div>
-<div class="metric-detail">Khi Brown et al. cho Hamilton dùng đúng tập cổ phiếu của Cowles, return hai bên gần như bằng nhau. Khoảng cách Cowles tạo ra là do <em>chọn rổ khác</em>, không phải do TA fail. <span class="page-ref">Ch 2, p. 25</span></div>
-</div>
-<div class="metric-card">
-<div class="metric-value">55 / 29 / 16%</div>
-<div class="metric-label">Long / cash / short time</div>
-<div class="metric-detail">Hamilton chỉ long 55% thời gian, đứng ngoài 29%, short 16%. Đây là lý do beta 0.326 — bài so sánh fully-invested của Cowles bỏ qua factor risk. <span class="page-ref">Ch 2, p. 25</span></div>
-</div>
-<div class="metric-card">
-<div class="metric-value">$1 nghìn tỷ</div>
-<div class="metric-label">Bốc hơi trong flash crash 6/5/2010</div>
-<div class="metric-detail">Wealth "temporarily vaporized" khi order flow một chiều và digital exchanges fill ở "lightning speed" — bằng chứng thị trường ngày nay vẫn có thể disorderly. <span class="page-ref">Ch 2, p. 24</span></div>
-</div>
-</div>
-<p class="caveat" style="margin-top:var(--space-6)"><strong>Source:</strong> <span class="source-ref">Brown, Goetzmann &amp; Kumar (1998), "The Dow Theory: William Peter Hamilton's Track Record Reconsidered"</span> — NYU Stern + Yale School of Management. Nghiên cứu kết thúc trong bull market mạnh, có lợi cho Cowles; Hamilton beat Cowles cho đến khi thị trường "excessively bullish in 1926". <span class="page-ref">Ch 2, p. 25-26</span></p>
-</section>
-<section class="slide">
-<div class="slide-kicker">CH 2 · NOTABLE QUOTES</div>
-<h2>Ba câu đáng giữ</h2>
-<div class="quote-block">
-<p class="quote-text">"The market is people in action, acting like people."</p>
-<p class="quote-context"><strong>— Bernard Baruch</strong>, chapter epigraph. Câu mở chương — đặt khung "thị trường = hành vi", một lập luận trung tâm hợp thức hoá việc đọc price/volume thay vì chỉ value. <span class="page-ref">Ch 2, p. 12</span></p>
-</div>
-<div class="quote-block" style="margin-top:var(--space-6)">
-<p class="quote-text">"a review of the evidence against William Peter Hamilton's timing abilities suggests just the opposite—his application of the Dow Theory appears to have yielded positive risk-adjusted returns."</p>
-<p class="quote-context"><strong>— Brown, Goetzmann &amp; Kumar (1998)</strong>, kết luận nghiên cứu Yale/NYU phản bác Cowles 1932. Đây là quote định lượng quan trọng nhất chương — Yale "finally got it right" sau 66 năm. <span class="page-ref">Ch 2, p. 24-25</span> · <span class="source-ref">Brown, Goetzmann &amp; Kumar (1998) NYU/Yale</span></p>
-</div>
-<div class="quote-block" style="margin-top:var(--space-6)">
-<p class="quote-text">"I am no longer an advocate of elaborate techniques of security analysis in order to find superior value opportunities. … in the light of the enormous amount of research now being carried on, I doubt whether in most cases such extensive efforts will generate sufficient superior selections to justify their cost. To that very limited extent, I'm on the side of the efficient market school of thought."</p>
-<p class="quote-context"><strong>— Benjamin Graham</strong> tại Donaldson &amp; Lufkin seminar 1976 (năm ông mất). Cha đẻ fundamental analysis tự thừa nhận limit của chính phương pháp ông dựng nên — bối cảnh Dormeier dùng để cho thấy <em>cả</em> hai trường phái đều phải tự đánh giá lại. <span class="page-ref">Ch 2, p. 22</span></p>
-</div>
-</section>
-<section class="slide">
-<div class="slide-kicker">CH 2 · CONTEXT &amp; BACKGROUND</div>
-<h2>Lăng kính tác giả &amp; thời điểm</h2>
-<div class="callout" style="margin-bottom: 2rem;"><div class="callout-icon">🎯</div><div class="callout-content"><strong>Author's lens.</strong> Buff Pelz Dormeier là <em>practitioner</em> (Senior Vice President &amp; Investments tại Wells Fargo Advisors khi viết sách 2011), CMT — không phải academic. Góc nhìn lịch sử của ông thiên về việc <em>hợp thức hoá</em> volume analysis bằng cách trở về nguồn gốc Wyckoff/Dow. Bias rõ: ông đã chọn nghề TA, nên kể câu chuyện theo hướng "TA bị xử oan, sự thật là TA hoạt động". Blind spot: chương ít đề cập tới các nghiên cứu hậu-1998 phản bác lại Brown et al. hoặc tài liệu academic về underperformance của TA newsletter (vd. Metcalf &amp; Malkiel).</div></div><div class="bullet-grid"><div class="bullet-card"><div class="icon">🔍</div><div class="heading">Historical moment — sách viết 2011</div><div class="body"> Nửa năm sau flash crash 6/5/2010 ($1T bốc hơi), thị trường vẫn đang hồi phục từ khủng hoảng 2008-2009. Reg FD đã có 11 năm. Thuật toán/HFT đã chiếm tỷ trọng lớn order flow. Đây là bối cảnh khiến Dormeier tin "the pendulum has swung back" — thị trường disorderly trở lại, đúng môi trường TA cần. <span class="page-ref">Ch 2, p. 24</span></div></div><div class="bullet-card"><div class="icon">🧠</div><div class="heading">Intellectual lineage</div><div class="body"> Dormeier tự đặt mình vào dòng <em>practitioner-volume</em>: Wyckoff (1907) → Granville (volume pioneer) → Arms (Equivolume) → Dormeier. Phản ứng chống lại trường phái Cowles → EMH (Fama 1970) → academic-fundamentals. Bối cảnh học thuật đối thủ: Efficient Market Hypothesis vẫn là dominant paradigm trong 2011, mặc dù behavioral finance (Kahneman-Tversky → Thaler) đã làm xói mòn nó.</div></div><div class="bullet-card"><div class="icon">📉</div><div class="heading">Then vs now (đọc 2026)</div><div class="body"> Hậu-2011: Reg NMS thay đổi market microstructure tiếp, ETF chiếm trên 50% volume một số ngày, T+1 settlement (2024), retail trading (Robinhood, 2020-2021 meme stocks) làm cấu trúc người tham gia thay đổi căn bản. Wyckoff's three laws còn hiệu lực <em>về nguyên lý</em>, nhưng các indicator cụ thể (OBV, A/D) cần xét lại trong môi trường HFT/dark-pool/internalization che dấu volume thực.</div></div></div>
-</section>
-<section class="slide">
-<div class="slide-kicker">CH 2 · COMPARISON</div>
-<h2>Dow's era vs Today</h2>
-<table>
-<thead>
-<tr>
-<th>Khía cạnh</th>
-<th>Dow's era (~1880-1930)</th>
-<th>Today (2011 → 2026)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th>Regulation</th>
-<td><em>Under-regulated</em> — thông tin bị giữ kín, manipulation phổ biến (Dormeier mô tả "information being held closely"). <span class="page-ref">Ch 2, p. 24</span></td>
-<td><em>Over-regulated</em> — Reg FD (2000) khiến thông tin "closely held for fear of punishment". <span class="page-ref">Ch 2, p. 24</span></td>
-</tr>
-<tr>
-<th>Information flow</th>
-<td>Insider biết trước, retail mù mờ; báo chí mới nổi (WSJ 1889).</td>
-<td>"Complete surprises" — CFA Institute member: lack of information → "increases the risk perception of the entire market". <span class="page-ref">Ch 2, p. 23</span></td>
-</tr>
-<tr>
-<th>Bid-ask spread</th>
-<td>Lớn (1/8 dollar) → specialist có biên đệm để hấp thụ rủi ro.</td>
-<td>1 cent → specialist không còn được trả công đủ để "absorb the risk of potential losses". <span class="page-ref">Ch 2, p. 23-24</span></td>
-</tr>
-<tr>
-<th>Market disorder risk</th>
-<td>Bizarre runs, panics — trước SEC.</td>
-<td>Flash crash 6/5/2010: $1T tan trong vài phút. <span class="page-ref">Ch 2, p. 24</span></td>
-</tr>
-<tr>
-<th>Dominant paradigm</th>
-<td>TA (early days) — Dow, Hamilton, Wyckoff công khai dùng.</td>
-<td>Fundamentals + index investing — TA bị stigma từ SEC 1949 rule.</td>
-</tr>
-<tr>
-<th>Investor edge</th>
-<td>Tìm value (theo Graham 1976 đó là "a rewarding activity, say, 40 years ago"). <span class="page-ref">Ch 2, p. 22</span></td>
-<td>Theo Graham 1976: "doubt whether… extensive efforts will generate sufficient superior selections" → climate cho <em>technical risk-management</em>. <span class="page-ref">Ch 2, p. 22, 25</span></td>
-</tr>
-</tbody>
-</table>
-<p class="caveat" style="margin-top:var(--space-6)">Lập luận của Dormeier: hai era khác nhau ở <em>hướng</em> regulation (under vs over) nhưng giống nhau ở <em>kết cục</em> — disorderly market + asymmetric information. Đó là lý do TA có thể relevant trở lại.</p>
-</section>
-<section class="slide">
-<div class="slide-kicker">CH 2 · COMPETING VIEWS</div>
-<h2>Dow/Wyckoff vs Cowles/Graham/EMH</h2>
-<div class="split-layout">
-<div class="split-left">
-<h3>Trường phái Dow / Wyckoff (TA)</h3>
-<p><strong>Core claim:</strong> Price + volume hành vi chứa đủ thông tin để đoán hướng có lợi thế thống kê. Market vận hành theo 3 luật Wyckoff (supply/demand · cause/effect · effort/results).</p>
-<p style="margin-top:var(--space-4)"><strong>Evidence:</strong></p>
-<ul>
-<li>Hamilton's 252 editorials trên WSJ + Barron's, beat market trên risk-adjusted basis (Brown-Goetzmann-Kumar 1998).</li>
-<li>Wyckoff: $200,000+ subscribers, fortune lớn từ áp dụng three laws.</li>
-<li>Lineage thực tiễn liên tục Dow → Schabacker → Edwards/Magee 1948.</li>
-</ul>
-<p style="margin-top:var(--space-4)"><strong>Right when:</strong> Thị trường disorderly, information asymmetric, có chu kỳ tâm lý rõ — <em>chính bối cảnh hiện tại</em> theo Dormeier. <span class="page-ref">Ch 2, p. 24-25</span></p>
-</div>
-<div class="split-right">
-<h3>Trường phái Cowles / Graham / EMH</h3>
-<p><strong>Core claim:</strong> Price phản ánh thông tin nhanh và chính xác đến mức không ai có thể beat market một cách hệ thống — TA forecasters không tốt hơn flip coin (Cowles 1932), value investing chỉ hoạt động khi market còn inefficient (Graham 1976).</p>
-<p style="margin-top:var(--space-4)"><strong>Evidence:</strong></p>
-<ul>
-<li>Cowles 1932: tái dựng 255 dự đoán Hamilton, kết luận underperform full-invested index.</li>
-<li>Graham/Dodd <em>Security Analysis</em> 1934 đặt nền cho phương pháp định lượng intrinsic value.</li>
-<li>Graham 1976 tự thừa nhận methods cũ không còn alpha vì "enormous amount of research now being carried on".</li>
-</ul>
-<p style="margin-top:var(--space-4)"><strong>Right when:</strong> Thị trường efficient với rất nhiều analyst cạnh tranh, regulation tốt, information đối xứng — bối cảnh 1950s-1990s. <span class="page-ref">Ch 2, p. 21-22</span></p>
-</div>
-</div>
-<div class="callout" style="margin-top:var(--space-6)">
-<div class="callout-icon">🔀</div>
-<div class="callout-content">
-<strong>Synthesis của Dormeier:</strong> Hai trường phái không loại trừ — chúng đúng trong <em>regimes</em> khác nhau. Khi thị trường ổn định &amp; information đối xứng → fundamentals dẫn. Khi disorderly &amp; information bị bóp méo (Reg FD + flash crash + HFT) → TA + volume làm risk-management. Cả Graham 1976 lẫn Hamilton 1929 đều đã "tự thừa nhận" giới hạn phương pháp mình.
-  </div>
-</div>
-</section>
-<section class="slide">
-<div class="slide-kicker">CH 2 · COUNTERARGUMENTS</div>
-<h2>Cowles 1932 → Brown-Goetzmann-Kumar 1998</h2>
-<div class="deep-section critical">
-<h3>Cowles 1932 — đòn tấn công gốc</h3>
-<p>Alfred Cowles (Yale) công bố paper "Can Stock Market Forecasters Forecast?" — tái dựng 255 dự đoán của Hamilton, kết luận chiến lược Hamilton <em>underperform</em> một danh mục fully-invested do chính Cowles tự xây. Tác động: paper cùng với Securities Exchange Act 1934 + Graham/Dodd 1934 đẩy TA khỏi vị trí được kính trọng. Đến 1949, SEC buộc "all research on Wall Street has to be rooted in sound fundamental principles" → John Magee (tác giả "Bible" TA 1948) bị truy tố vì khuyến nghị stocks "weren't fundamental". <span class="page-ref">Ch 2, p. 20-22</span></p>
-</div>
-<div class="deep-section practical" style="margin-top:var(--space-5)">
-<h3>Brown-Goetzmann-Kumar 1998 — phản đòn quyết định</h3>
-<p>Yale + NYU Stern điểm lại đúng dataset Cowles, phát hiện ba lỗi lớn:</p>
-<ol style="margin-top:var(--space-3); padding-left:var(--space-6)">
-<li><strong>Cherry-picked benchmark.</strong> Cowles so Hamilton với một index <em>khác tập cổ phiếu</em>. Khi cho Hamilton dùng đúng tập của Cowles: 10.73% vs 10.75%/năm — gần như đồng hạng. <span class="page-ref">Ch 2, p. 25</span></li>
-<li><strong>Bỏ qua factor risk.</strong> Hamilton long 55% / cash 29% / short 16% → beta 0.326 với S&amp;P 500. Cowles so fully-invested với market-timed như nhau, vi phạm cơ bản về risk-adjusted comparison.</li>
-<li><strong>Risk-adjusted Hamilton thắng rõ.</strong> Sharpe 0.559 vs 0.456; Jensen's α +4.04%/năm. "Hamilton's portfolio took significantly less risk in producing its returns." <span class="page-ref">Ch 2, p. 25</span></li>
-</ol>
-</div>
-<div class="callout" style="margin-top:var(--space-5)">
-<div class="callout-icon">⚖️</div>
-<div class="callout-content">
-<strong>Đánh giá khách quan:</strong> Phản đòn 1998 mạnh nhưng <em>không phải kết luận tuyệt đối</em>:
-    <ul style="margin-top:var(--space-2)">
-<li>Nghiên cứu kết thúc trong bull market mạnh cuối 1990s — có lợi cho danh mục fully-invested của Cowles. Hamilton chỉ rõ ràng beat tới 1926; sau đó thị trường "excessively bullish" trước Crash. <span class="page-ref">Ch 2, p. 25-26</span></li>
-<li>n=1: chỉ một forecaster (Hamilton) trên một period (~30 năm). Không phải bằng chứng TA tổng quát hoạt động — chỉ chứng minh <em>cú đánh Cowles cụ thể</em> bị lỗi.</li>
-<li>Dormeier không trích đối-phản-bác từ phía EMH (vd. Malkiel, Fama responses) — selection bias trong cách kể chuyện.</li>
-<li>Kết luận khả dụng: "TA đã từng có alpha rủi-ro-điều-chỉnh trong một regime cụ thể", không phải "TA luôn beat market".</li>
-</ul>
-</div>
-</div>
-</section>
-<section class="slide">
-<div class="slide-kicker">CH 2 · REFLECTION</div>
-<h2>Câu hỏi suy ngẫm theo Bloom</h2>
-<ul class="reflection-list">
-<li class="reflection-item">
-<span class="reflection-cat">Remember</span>
-<p class="reflection-question">Liệt kê ba định luật của Wyckoff. Định luật nào dùng để kiểm tra một breakout có "thật" hay không?</p>
-</li>
-<li class="reflection-item">
-<span class="reflection-cat">Understand</span>
-<p class="reflection-question">Vì sao Dormeier lập luận rằng thị trường 2010s gần với thời Dow hơn là thời 1960s? Hai cơ chế nào (regulation + microstructure) ông đưa ra?</p>
-</li>
-<li class="reflection-item">
-<span class="reflection-cat">Apply</span>
-<p class="reflection-question">Trong 5 lệnh giao dịch gần nhất của bạn, có lệnh nào volume (effort) lớn nhưng price (result) đi rất ít? Wyckoff sẽ đọc tín hiệu đó thế nào?</p>
-</li>
-<li class="reflection-item">
-<span class="reflection-cat">Analyze</span>
-<p class="reflection-question">Ba lỗi của Cowles 1932 mà Brown-Goetzmann-Kumar chỉ ra (cherry-picked benchmark · bỏ qua factor risk · risk-adjusted Hamilton thắng) — lỗi nào nghiêm trọng nhất về methodology, và vì sao?</p>
-</li>
-<li class="reflection-item">
-<span class="reflection-cat">Evaluate</span>
-<p class="reflection-question">Brown-Goetzmann-Kumar 1998 chứng minh Hamilton có alpha trên risk-adjusted basis. Bằng chứng này có đủ để kết luận "TA hoạt động trên thị trường ngày nay" không? Bạn cần thêm gì để mở rộng kết luận?</p>
-</li>
-<li class="reflection-item">
-<span class="reflection-cat">Create</span>
-<p class="reflection-question">Nếu bạn phải thiết kế một bài replication study cho Wyckoff's three laws trên thị trường Việt Nam 2020-2026, bạn sẽ chọn benchmark nào, biên độ rủi ro nào, và làm sao tránh đúng những lỗi Cowles?</p>
-</li>
-<li class="reflection-item">
-<span class="reflection-cat">Socratic</span>
-<p class="reflection-question">Dormeier kể câu chuyện theo hướng "TA bị xử oan, nay đã được phục hồi". Nếu bạn là nhà nghiên cứu EMH, bạn sẽ phản bác chương này như thế nào — bằng dữ liệu nào, lập luận nào?</p>
-</li>
-<li class="reflection-item">
-<span class="reflection-cat">Personal</span>
-<p class="reflection-question">Trước chương này, niềm tin "fundamentals quan trọng hơn technicals" của bạn là 1-10 ở đâu? Sau chương, di chuyển thế nào? Cụ thể: dữ kiện nào trong chương đã làm bạn dịch chuyển (hoặc không)?</p>
-</li>
-</ul>
-</section>
-<section class="slide">
-<div class="slide-kicker">CH 2 · CLOSING ACTIONS</div>
-<h2>Ba việc làm tiếp theo</h2>
-<ul class="action-list">
-<li class="action-item">
-<div>
-<div class="action-headline">Ghi vào sổ tay 3 luật Wyckoff &amp; mỗi tuần áp 1 lệnh test</div>
-<div class="action-detail">In/dán bảng <em>Supply-Demand · Cause-Effect · Effort-Results</em> cạnh chart workspace. Mỗi tuần chọn 1 setup gần đây và viết: tín hiệu nào ủng hộ luật nào, tín hiệu nào mâu thuẫn. Sau 8 tuần review để xem luật nào hay false-positive nhất với phong cách của bạn.</div>
-</div>
-</li>
-<li class="action-item">
-<div>
-<div class="action-headline">Đọc paper Brown-Goetzmann-Kumar (1998) bản gốc trước khi đọc tiếp Chương 4-5</div>
-<div class="action-detail">"The Dow Theory: William Peter Hamilton's Track Record Reconsidered" — Yale ICF Working Paper. Mục tiêu: thấy methodology risk-adjusted comparison cụ thể, vì các chương sau Dormeier sẽ dùng cùng kiểu lập luận để bảo vệ chỉ báo volume.</div>
-</div>
-</li>
-<li class="action-item">
-<div>
-<div class="action-headline">Khi đọc bất kỳ phản bác TA nào, hỏi 2 câu chẩn đoán</div>
-<div class="action-detail">(1) Phản bác đang dùng <em>cùng tập cổ phiếu</em> hay <em>khác benchmark</em>? (2) Phản bác có điều chỉnh <em>risk-adjusted</em> (Sharpe, Jensen) hay chỉ so absolute return? Cowles 1932 trượt cả hai — câu hỏi này đủ lọc nhiều bài viết phổ thông.</div>
-</div>
-</li>
-</ul>
-</section>
-</div>
-<div class="nav-controls">
-<button aria-label="Previous slide" class="nav-btn" id="prevBtn" onclick="prevSlide()">←</button>
-<div aria-live="polite" class="counter" id="counter">1 / 1</div>
-<button aria-label="Next slide" class="nav-btn" id="nextBtn" onclick="nextSlide()">→</button>
-</div>
-<script src="common.js"></script>
+    <div class="progress-bar" id="progressBar"></div>
+    <div class="chapter-menu">
+        <button aria-expanded="false" aria-haspopup="true" class="menu-btn" id="chapterMenuBtn"
+            onclick="toggleChapterMenu()">Chapters ▾</button>
+        <div class="chapter-menu-panel" id="chapterMenuPanel" role="menu"></div>
+    </div>
+    <div class="slide-container" id="slideContainer">
+        <section aria-hidden="false" class="slide">
+            <h1>Investing with Volume Analysis</h1>
+            <p class="subtitle">Buff Pelz Dormeier · FT Press 2011 — Chương 2: <em>The History of Technical
+                    Analysis</em></p>
+            <div class="meta-grid">
+                <div class="meta-pill">
+                    <div class="label">Trang gốc</div>
+                    <div class="value">12-26</div>
+                </div>
+                <div class="meta-pill">
+                    <div class="label">Thời gian đọc gốc</div>
+                    <div class="value">~16 phút</div>
+                </div>
+                <div class="meta-pill">
+                    <div class="label">Độ sâu</div>
+                    <div class="value">Deep</div>
+                </div>
+                <div class="meta-pill">
+                    <div class="label">Đối tượng</div>
+                    <div class="value">Business / Pro</div>
+                </div>
+            </div>
+        </section>
+        <section class="slide chapter-divider">
+            <div class="chapter-number">Chapter 2</div>
+            <h2>The History of Technical Analysis</h2>
+            <p class="chapter-meta">~16 phút · Beginner–Intermediate · Lineage Dow → Hamilton → Rhea → Wyckoff →
+                Schabacker → Edwards/Magee · Cowles 1932 vs Brown-Goetzmann-Kumar 1998 · Wyckoff's three laws · Reg FD
+                &amp; flash crash</p>
+        </section>
+        <section class="slide">
+            <div class="slide-kicker">CH 2 · VISUAL SUMMARY</div>
+            <h2>Trục thời gian Technical Analysis</h2>
+            <div class="mermaid">
+                graph LR
+                A["Genesis<br />~2000 BC<br />'Fill or be killed' order"] --&gt; B["Babylon<br />7th c.
+                BC<br />Commodity logs"]
+                B --&gt; C["Homma<br />Japan 1755<br />Candlestick + psychology"]
+                C --&gt; D["Dow<br />1880s-1902<br />WSJ + first index"]
+                D --&gt; E["Hamilton<br />1903-1929<br />Dow Theory editor"]
+                E --&gt; F["Rhea<br />1932<br />Dow Theory book"]
+                D --&gt; G["Wyckoff<br />1907-1930s<br />Three laws + volume"]
+                D --&gt; H["Schabacker<br />1932<br />Tech Analysis &amp; Stock Profits"]
+                H --&gt; I["Edwards &amp; Magee<br />1948<br />'Bible' of TA"]
+                F --&gt; J["Cowles 1932<br />Attacks Hamilton"]
+                J --&gt; K["SEC 1934<br />+ Graham/Dodd<br />Fundamentals win"]
+                K --&gt; L["Brown-Goetzmann-Kumar<br />1998<br />Hamilton vindicated"]
+                L --&gt; M["Reg FD 2000 +<br />Flash crash 2010<br />Pendulum swings back"]
+                style D fill:#EFEEFF,stroke:#635BFF,color:#111111
+                style G fill:#EFEEFF,stroke:#635BFF,color:#111111
+                style L fill:#DCFCE7,stroke:#059669,color:#111111
+                style J fill:#FEE2E2,stroke:#DC2626,color:#111111
+            </div>
+            <p class="caveat" style="margin-top:var(--space-6)">Trục thời gian các nhân vật &amp; sự kiện hình thành
+                Technical Analysis (TA) hiện đại. Nhánh xanh = thế hệ kế thừa Dow; nhánh đỏ = đợt tấn công Cowles 1932
+                chuyển trọng tâm về fundamentals; nhánh xanh lá = nghiên cứu Yale 1998 phục hồi Hamilton. <span
+                    class="page-ref">Ch 2, p. 12-26</span></p>
+        </section>
+        <section class="slide">
+            <div class="slide-kicker">CH 2 · THE BIG IDEA</div>
+            <h2>Một câu cốt lõi</h2>
+            <div class="takeaway-hero">
+                <div class="kicker">CH 2 · THE BIG IDEA</div>
+                <div class="headline">"Technical analysis có gốc rễ sâu hơn fundamentals — và sau khi Cowles bị Yale
+                    1998 phản bác, Dow Theory không chỉ sống sót mà còn ăn fundamentals về tỷ suất lợi nhuận điều chỉnh
+                    rủi ro."</div>
+                <div class="subline">Lịch sử TA không phải phụ lục — nó là bằng chứng phương pháp này tồn tại trước, bị
+                    bóp nghẹt vì regulation chứ không vì kém hiệu quả, và đang quay lại đúng bối cảnh thị trường ngày
+                    nay.</div>
+            </div>
+        </section>
+        <section class="slide">
+            <div class="slide-kicker">CH 2 · KEY TAKEAWAYS</div>
+            <h2>Sáu takeaway chính</h2>
+            <div class="takeaway-list">
+                <div class="takeaway-item content-card">
+                    <div class="takeaway-badge">1</div>
+                    <div style="flex: 1;">
+                        <div class="takeaway-text"
+                            style="font-size: 1.25rem; color: var(--accent); margin-bottom: 0.5rem;">TA xuất hiện
+                            <strong>trước</strong> fundamentals — giao dịch đầu tiên ghi lại (Genesis: Abimelech trả
+                            Abraham 1.000 miếng bạc) đã dựa trên đánh giá hành vi chứ không phải intrinsic value. <span
+                                class="page-ref">Ch 2, p. 12-13</span>
+                        </div>
+                        <div class="takeaway-detail"><strong>Why it matters:</strong> Lập luận "fundamentals có trước,
+                            TA chỉ là tô vẽ chart" là sai về mặt lịch sử — price luôn chứa cả psychology lẫn value.
+                            <strong>Apply:</strong> Khi đối thoại với người bài xích TA, có thể dẫn lineage để hợp thức
+                            hoá phương pháp. <strong>Caveat:</strong> Đây là lập luận lịch sử/triết học, không phải bằng
+                            chứng định lượng cho lợi nhuận.
+                        </div>
+                    </div>
+                </div>
+                <div class="takeaway-item content-card">
+                    <div class="takeaway-badge" style="background: var(--accent-amber);">2</div>
+                    <div style="flex: 1;">
+                        <div class="takeaway-text"
+                            style="font-size: 1.25rem; color: var(--accent-amber); margin-bottom: 0.5rem;">
+                            <strong>Charles Dow là cha đẻ TA hiện đại — chỉ số gồm 11 cổ phiếu (1884) là phát kiến cho
+                                phép theo dõi <em>thị trường</em> thay vì từng cổ phiếu rời rạc. <span
+                                    class="page-ref">Ch 2, p. 16</span></strong>
+                        </div>
+                        <div class="takeaway-detail"><strong>Why:</strong> Toàn bộ ngành index investing (Cowles →
+                            S&amp;P → ETF) sinh ra từ cùng ý tưởng này. <strong>Apply:</strong> Dùng index như benchmark
+                            cho mọi kết quả TA. <strong>Caveat:</strong> Dow tự không viết sách hệ thống — Dow Theory
+                            được Nelson, Hamilton, Rhea hệ thống hoá sau khi ông mất 1902.</div>
+                    </div>
+                </div>
+                <div class="takeaway-item content-card">
+                    <div class="takeaway-badge" style="background: var(--accent-purple);">3</div>
+                    <div style="flex: 1;">
+                        <div class="takeaway-text"
+                            style="font-size: 1.25rem; color: var(--accent-purple); margin-bottom: 0.5rem;">
+                            <strong>Wyckoff đặt nền cho phân tích volume: ông tin <em>"prices could be temporarily
+                                    manipulated, volume data could not"</em> và phát triển ba định luật (supply/demand ·
+                                cause/effect · effort/results). <span class="page-ref">Ch 2, p. 18, 20</span></strong>
+                        </div>
+                        <div class="takeaway-detail"><strong>Why:</strong> Đây là khung lý thuyết cốt lõi của toàn bộ
+                            cuốn sách — chương này là nguồn gốc, các chương sau là khai triển. <strong>Apply:</strong>
+                            Khi đọc chart, luôn hỏi: dòng tiền lớn (effort) có tương xứng với di chuyển giá (result)
+                            không? <strong>Caveat:</strong> Volume có thể manipulate trong micro-cap thanh khoản kém —
+                            Wyckoff giả định thị trường có chiều rộng người tham gia.</div>
+                    </div>
+                </div>
+                <div class="takeaway-item content-card">
+                    <div class="takeaway-badge" style="background: var(--accent-emerald);">4</div>
+                    <div style="flex: 1;">
+                        <div class="takeaway-text"
+                            style="font-size: 1.25rem; color: var(--accent-emerald); margin-bottom: 0.5rem;"><strong>SEC
+                                1934 + Graham/Dodd "Security Analysis" 1934 + bài tấn công của Cowles 1932 đã khiến TA
+                                bị gạt khỏi hàn lâm — không vì TA kém, mà vì regulation cần "rooted in sound fundamental
+                                principles". <span class="page-ref">Ch 2, p. 20-22</span></strong></div>
+                        <div class="takeaway-detail"><strong>Why:</strong> Hiểu lý do TA bị stigma giúp đánh giá lại
+                            evidence một cách khách quan. <strong>Apply:</strong> Khi hàn lâm phản bác TA, kiểm tra:
+                            phản bác về phương pháp luận hay về di sản 1949 SEC rule? <strong>Caveat:</strong> Một số
+                            phản bác hàn lâm hậu-1970 (random walk, EMH) có lập luận riêng — không thể quy hết về 1934.
+                        </div>
+                    </div>
+                </div>
+                <div class="takeaway-item content-card">
+                    <div class="takeaway-badge" style="background: var(--accent-cyan);">5</div>
+                    <div style="flex: 1;">
+                        <div class="takeaway-text"
+                            style="font-size: 1.25rem; color: var(--accent-cyan); margin-bottom: 0.5rem;">
+                            Brown-Goetzmann-Kumar (1998) phục hồi Hamilton: trên cơ sở điều chỉnh rủi ro, danh mục Dow
+                            Theory có <strong>Sharpe 0.559</strong> vs 0.456 và Jensen's α dương
+                            <strong>4.04%/năm</strong> so với S&amp;P 500. <span class="page-ref">Ch 2, p. 24-25</span>
+                        </div>
+                        <div class="takeaway-detail"><strong>Why:</strong> Đây là bằng chứng định lượng từ tổ chức cấp
+                            Yale/NYU — không phải narrative. <strong>Apply:</strong> Là benchmark "TA đã từng hoạt động"
+                            để mọi cải tiến volume-based phải vượt qua. <strong>Caveat:</strong> Nghiên cứu kết thúc
+                            trong bull market mạnh → có lợi cho danh mục fully invested của Cowles; Hamilton vẫn beat
+                            tới 1926.</div>
+                    </div>
+                </div>
+                <div class="takeaway-item content-card">
+                    <div class="takeaway-badge" style="background: var(--accent);">6</div>
+                    <div style="flex: 1;">
+                        <div class="takeaway-text"
+                            style="font-size: 1.25rem; color: var(--accent); margin-bottom: 0.5rem;"><strong>Bối cảnh
+                                thị trường 2026 giống Dow time hơn giống thập niên 1950-1990 — Reg FD (2000) làm thông
+                                tin bị "khoá", flash crash (2010) bốc hơi $1 nghìn tỷ trong vài phút. <span
+                                    class="page-ref">Ch 2, p. 23-24</span></strong></div>
+                        <div class="takeaway-detail"><strong>Why:</strong> Khi fundamentals bị che giấu và market
+                            disorderly, TA + volume trở lại vai trò risk-management thay vì stock-picking thuần.
+                            <strong>Apply:</strong> Coi volume signal như tripwire phát hiện disorder, không phải
+                            crystal ball. <strong>Caveat:</strong> Flash crash là sự kiện hiếm — không thể neo cả phương
+                            pháp luận vào một ngày 6/5/2010.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="slide">
+            <div class="slide-kicker">CH 2 · MENTAL MODEL</div>
+            <h2>Wyckoff's Three Laws</h2>
+            <div class="mental-model-card">
+                <h4 class="model-name">Wyckoff's Three Laws</h4>
+                <div class="model-principle">Wyckoff đọc thị trường qua ba định luật cùng tác động lên price-volume —
+                    không phải checklist mà là bộ ba lăng kính kiểm tra chéo lẫn nhau. <span class="page-ref">Ch 2, p.
+                        18</span></div>
+                <div class="model-application">
+                    <strong>Ba định luật &amp; cách áp dụng:</strong>
+                    <ul>
+                        <li><strong>Supply &amp; Demand</strong> — khi cầu &gt; cung, giá tăng và ngược lại; nhưng cần
+                            volume để xác nhận đó là "real" demand chứ không phải vài lệnh thưa.</li>
+                        <li><strong>Cause &amp; Effect</strong> — giai đoạn tích luỹ (cause) càng dài thì biên độ trend
+                            kế tiếp (effect) càng lớn; volume range trong vùng tích luỹ là proxy đo "cause".</li>
+                        <li><strong>Effort vs Results</strong> — khi volume (effort) tăng mạnh nhưng giá (result) không
+                            đi xa hoặc đảo chiều → tín hiệu phân kỳ, smart money đang phía đối lập.</li>
+                    </ul>
+                </div>
+                <div class="model-application">
+                    <strong>When to apply:</strong>
+                    <ul>
+                        <li>Phân tích breakout — kiểm tra effort/result để loại false-break</li>
+                        <li>Đọc giai đoạn sideway — đo "cause" để dự phóng độ lớn move kế tiếp</li>
+                        <li>Xác định smart-money operations — Wyckoff tin lớn hơn cả là nhận diện
+                            accumulation/distribution của large operators <span class="page-ref">Ch 2, p. 18</span></li>
+                    </ul>
+                </div>
+                <div class="model-limitations">
+                    <strong>⚠️ Limitations:</strong>
+                    <ul>
+                        <li>Giả định thị trường có nhiều người tham gia — cổ phiếu micro-cap thanh khoản kém có thể bị
+                            manipulate cả volume</li>
+                        <li>Khung định tính — không cho ngưỡng số cụ thể; cần kết hợp indicator (sẽ xuất hiện ở chương
+                            9-19)</li>
+                        <li>Hiệu lực giảm khi spread quá nhỏ &amp; HFT chiếm tỷ trọng lớn order flow (vấn đề của thị
+                            trường hậu-2010)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="slide">
+            <div class="slide-kicker">CH 2 · NUMBERS &amp; STUDIES</div>
+            <h2>Hamilton vs Cowles — số liệu</h2>
+            <div class="metric-grid">
+                <div class="metric-card">
+                    <div class="metric-value">0.559</div>
+                    <div class="metric-label">Hamilton's Sharpe Ratio</div>
+                    <div class="metric-detail">vs <strong>0.456</strong> cho danh mục Cowles. Cao hơn ~22% theo độ đo
+                        lợi nhuận điều chỉnh rủi ro. <span class="page-ref">Ch 2, p. 25</span></div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">+4.04%</div>
+                    <div class="metric-label">Jensen's α / năm</div>
+                    <div class="metric-detail">"More than 400 basis points per year" — alpha dương sau khi điều chỉnh
+                        beta với S&amp;P 500. <span class="page-ref">Ch 2, p. 25</span></div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">0.326</div>
+                    <div class="metric-label">Beta vs S&amp;P 500</div>
+                    <div class="metric-detail">Hamilton chỉ chịu ~1/3 systematic risk — mà alpha vẫn dương. Đây là điểm
+                        Cowles 1932 bỏ qua khi so sánh fully-invested vs market-timed. <span class="page-ref">Ch 2, p.
+                            25</span></div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">10.73 vs 10.75%</div>
+                    <div class="metric-label">Annual return — same instruments</div>
+                    <div class="metric-detail">Khi Brown et al. cho Hamilton dùng đúng tập cổ phiếu của Cowles, return
+                        hai bên gần như bằng nhau. Khoảng cách Cowles tạo ra là do <em>chọn rổ khác</em>, không phải do
+                        TA fail. <span class="page-ref">Ch 2, p. 25</span></div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">55 / 29 / 16%</div>
+                    <div class="metric-label">Long / cash / short time</div>
+                    <div class="metric-detail">Hamilton chỉ long 55% thời gian, đứng ngoài 29%, short 16%. Đây là lý do
+                        beta 0.326 — bài so sánh fully-invested của Cowles bỏ qua factor risk. <span class="page-ref">Ch
+                            2, p. 25</span></div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">$1 nghìn tỷ</div>
+                    <div class="metric-label">Bốc hơi trong flash crash 6/5/2010</div>
+                    <div class="metric-detail">Wealth "temporarily vaporized" khi order flow một chiều và digital
+                        exchanges fill ở "lightning speed" — bằng chứng thị trường ngày nay vẫn có thể disorderly. <span
+                            class="page-ref">Ch 2, p. 24</span></div>
+                </div>
+            </div>
+            <p class="caveat" style="margin-top:var(--space-6)"><strong>Source:</strong> <span class="source-ref">Brown,
+                    Goetzmann &amp; Kumar (1998), "The Dow Theory: William Peter Hamilton's Track Record
+                    Reconsidered"</span> — NYU Stern + Yale School of Management. Nghiên cứu kết thúc trong bull market
+                mạnh, có lợi cho Cowles; Hamilton beat Cowles cho đến khi thị trường "excessively bullish in 1926".
+                <span class="page-ref">Ch 2, p. 25-26</span>
+            </p>
+        </section>
+        <section class="slide">
+            <div class="slide-kicker">CH 2 · NOTABLE QUOTES</div>
+            <h2>Ba câu đáng giữ</h2>
+            <div class="quote-block">
+                <p class="quote-text">"The market is people in action, acting like people."</p>
+                <p class="quote-context"><strong>— Bernard Baruch</strong>, chapter epigraph. Câu mở chương — đặt khung
+                    "thị trường = hành vi", một lập luận trung tâm hợp thức hoá việc đọc price/volume thay vì chỉ value.
+                    <span class="page-ref">Ch 2, p. 12</span>
+                </p>
+            </div>
+            <div class="quote-block" style="margin-top:var(--space-6)">
+                <p class="quote-text">"a review of the evidence against William Peter Hamilton's timing abilities
+                    suggests just the opposite—his application of the Dow Theory appears to have yielded positive
+                    risk-adjusted returns."</p>
+                <p class="quote-context"><strong>— Brown, Goetzmann &amp; Kumar (1998)</strong>, kết luận nghiên cứu
+                    Yale/NYU phản bác Cowles 1932. Đây là quote định lượng quan trọng nhất chương — Yale "finally got it
+                    right" sau 66 năm. <span class="page-ref">Ch 2, p. 24-25</span> · <span class="source-ref">Brown,
+                        Goetzmann &amp; Kumar (1998) NYU/Yale</span></p>
+            </div>
+            <div class="quote-block" style="margin-top:var(--space-6)">
+                <p class="quote-text">"I am no longer an advocate of elaborate techniques of security analysis in order
+                    to find superior value opportunities. … in the light of the enormous amount of research now being
+                    carried on, I doubt whether in most cases such extensive efforts will generate sufficient superior
+                    selections to justify their cost. To that very limited extent, I'm on the side of the efficient
+                    market school of thought."</p>
+                <p class="quote-context"><strong>— Benjamin Graham</strong> tại Donaldson &amp; Lufkin seminar 1976 (năm
+                    ông mất). Cha đẻ fundamental analysis tự thừa nhận limit của chính phương pháp ông dựng nên — bối
+                    cảnh Dormeier dùng để cho thấy <em>cả</em> hai trường phái đều phải tự đánh giá lại. <span
+                        class="page-ref">Ch 2, p. 22</span></p>
+            </div>
+        </section>
+        <section class="slide">
+            <div class="slide-kicker">CH 2 · CONTEXT &amp; BACKGROUND</div>
+            <h2>Lăng kính tác giả &amp; thời điểm</h2>
+            <div class="callout" style="margin-bottom: 2rem;">
+                <div class="callout-icon">🎯</div>
+                <div class="callout-content"><strong>Author's lens.</strong> Buff Pelz Dormeier là <em>practitioner</em>
+                    (Senior Vice President &amp; Investments tại Wells Fargo Advisors khi viết sách 2011), CMT — không
+                    phải academic. Góc nhìn lịch sử của ông thiên về việc <em>hợp thức hoá</em> volume analysis bằng
+                    cách trở về nguồn gốc Wyckoff/Dow. Bias rõ: ông đã chọn nghề TA, nên kể câu chuyện theo hướng "TA bị
+                    xử oan, sự thật là TA hoạt động". Blind spot: chương ít đề cập tới các nghiên cứu hậu-1998 phản bác
+                    lại Brown et al. hoặc tài liệu academic về underperformance của TA newsletter (vd. Metcalf &amp;
+                    Malkiel).</div>
+            </div>
+            <div class="bullet-grid">
+                <div class="bullet-card">
+                    <div class="icon">🔍</div>
+                    <div class="heading">Historical moment — sách viết 2011</div>
+                    <div class="body"> Nửa năm sau flash crash 6/5/2010 ($1T bốc hơi), thị trường vẫn đang hồi phục từ
+                        khủng hoảng 2008-2009. Reg FD đã có 11 năm. Thuật toán/HFT đã chiếm tỷ trọng lớn order flow. Đây
+                        là bối cảnh khiến Dormeier tin "the pendulum has swung back" — thị trường disorderly trở lại,
+                        đúng môi trường TA cần. <span class="page-ref">Ch 2, p. 24</span></div>
+                </div>
+                <div class="bullet-card">
+                    <div class="icon">🧠</div>
+                    <div class="heading">Intellectual lineage</div>
+                    <div class="body"> Dormeier tự đặt mình vào dòng <em>practitioner-volume</em>: Wyckoff (1907) →
+                        Granville (volume pioneer) → Arms (Equivolume) → Dormeier. Phản ứng chống lại trường phái Cowles
+                        → EMH (Fama 1970) → academic-fundamentals. Bối cảnh học thuật đối thủ: Efficient Market
+                        Hypothesis vẫn là dominant paradigm trong 2011, mặc dù behavioral finance (Kahneman-Tversky →
+                        Thaler) đã làm xói mòn nó.</div>
+                </div>
+                <div class="bullet-card">
+                    <div class="icon">📉</div>
+                    <div class="heading">Then vs now (đọc 2026)</div>
+                    <div class="body"> Hậu-2011: Reg NMS thay đổi market microstructure tiếp, ETF chiếm trên 50% volume
+                        một số ngày, T+1 settlement (2024), retail trading (Robinhood, 2020-2021 meme stocks) làm cấu
+                        trúc người tham gia thay đổi căn bản. Wyckoff's three laws còn hiệu lực <em>về nguyên lý</em>,
+                        nhưng các indicator cụ thể (OBV, A/D) cần xét lại trong môi trường HFT/dark-pool/internalization
+                        che dấu volume thực.</div>
+                </div>
+            </div>
+        </section>
+        <section class="slide">
+            <div class="slide-kicker">CH 2 · COMPARISON</div>
+            <h2>Dow's era vs Today</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Khía cạnh</th>
+                        <th>Dow's era (~1880-1930)</th>
+                        <th>Today (2011 → 2026)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>Regulation</th>
+                        <td><em>Under-regulated</em> — thông tin bị giữ kín, manipulation phổ biến (Dormeier mô tả
+                            "information being held closely"). <span class="page-ref">Ch 2, p. 24</span></td>
+                        <td><em>Over-regulated</em> — Reg FD (2000) khiến thông tin "closely held for fear of
+                            punishment". <span class="page-ref">Ch 2, p. 24</span></td>
+                    </tr>
+                    <tr>
+                        <th>Information flow</th>
+                        <td>Insider biết trước, retail mù mờ; báo chí mới nổi (WSJ 1889).</td>
+                        <td>"Complete surprises" — CFA Institute member: lack of information → "increases the risk
+                            perception of the entire market". <span class="page-ref">Ch 2, p. 23</span></td>
+                    </tr>
+                    <tr>
+                        <th>Bid-ask spread</th>
+                        <td>Lớn (1/8 dollar) → specialist có biên đệm để hấp thụ rủi ro.</td>
+                        <td>1 cent → specialist không còn được trả công đủ để "absorb the risk of potential losses".
+                            <span class="page-ref">Ch 2, p. 23-24</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Market disorder risk</th>
+                        <td>Bizarre runs, panics — trước SEC.</td>
+                        <td>Flash crash 6/5/2010: $1T tan trong vài phút. <span class="page-ref">Ch 2, p. 24</span></td>
+                    </tr>
+                    <tr>
+                        <th>Dominant paradigm</th>
+                        <td>TA (early days) — Dow, Hamilton, Wyckoff công khai dùng.</td>
+                        <td>Fundamentals + index investing — TA bị stigma từ SEC 1949 rule.</td>
+                    </tr>
+                    <tr>
+                        <th>Investor edge</th>
+                        <td>Tìm value (theo Graham 1976 đó là "a rewarding activity, say, 40 years ago"). <span
+                                class="page-ref">Ch 2, p. 22</span></td>
+                        <td>Theo Graham 1976: "doubt whether… extensive efforts will generate sufficient superior
+                            selections" → climate cho <em>technical risk-management</em>. <span class="page-ref">Ch 2,
+                                p. 22, 25</span></td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="caveat" style="margin-top:var(--space-6)">Lập luận của Dormeier: hai era khác nhau ở
+                <em>hướng</em> regulation (under vs over) nhưng giống nhau ở <em>kết cục</em> — disorderly market +
+                asymmetric information. Đó là lý do TA có thể relevant trở lại.
+            </p>
+        </section>
+        <section class="slide">
+            <div class="slide-kicker">CH 2 · COMPETING VIEWS</div>
+            <h2>Dow/Wyckoff vs Cowles/Graham/EMH</h2>
+            <div class="split-layout">
+                <div class="split-left">
+                    <h3>Trường phái Dow / Wyckoff (TA)</h3>
+                    <p><strong>Core claim:</strong> Price + volume hành vi chứa đủ thông tin để đoán hướng có lợi thế
+                        thống kê. Market vận hành theo 3 luật Wyckoff (supply/demand · cause/effect · effort/results).
+                    </p>
+                    <p style="margin-top:var(--space-4)"><strong>Evidence:</strong></p>
+                    <ul>
+                        <li>Hamilton's 252 editorials trên WSJ + Barron's, beat market trên risk-adjusted basis
+                            (Brown-Goetzmann-Kumar 1998).</li>
+                        <li>Wyckoff: $200,000+ subscribers, fortune lớn từ áp dụng three laws.</li>
+                        <li>Lineage thực tiễn liên tục Dow → Schabacker → Edwards/Magee 1948.</li>
+                    </ul>
+                    <p style="margin-top:var(--space-4)"><strong>Right when:</strong> Thị trường disorderly, information
+                        asymmetric, có chu kỳ tâm lý rõ — <em>chính bối cảnh hiện tại</em> theo Dormeier. <span
+                            class="page-ref">Ch 2, p. 24-25</span></p>
+                </div>
+                <div class="split-right">
+                    <h3>Trường phái Cowles / Graham / EMH</h3>
+                    <p><strong>Core claim:</strong> Price phản ánh thông tin nhanh và chính xác đến mức không ai có thể
+                        beat market một cách hệ thống — TA forecasters không tốt hơn flip coin (Cowles 1932), value
+                        investing chỉ hoạt động khi market còn inefficient (Graham 1976).</p>
+                    <p style="margin-top:var(--space-4)"><strong>Evidence:</strong></p>
+                    <ul>
+                        <li>Cowles 1932: tái dựng 255 dự đoán Hamilton, kết luận underperform full-invested index.</li>
+                        <li>Graham/Dodd <em>Security Analysis</em> 1934 đặt nền cho phương pháp định lượng intrinsic
+                            value.</li>
+                        <li>Graham 1976 tự thừa nhận methods cũ không còn alpha vì "enormous amount of research now
+                            being carried on".</li>
+                    </ul>
+                    <p style="margin-top:var(--space-4)"><strong>Right when:</strong> Thị trường efficient với rất nhiều
+                        analyst cạnh tranh, regulation tốt, information đối xứng — bối cảnh 1950s-1990s. <span
+                            class="page-ref">Ch 2, p. 21-22</span></p>
+                </div>
+            </div>
+            <div class="callout" style="margin-top:var(--space-6)">
+                <div class="callout-icon">🔀</div>
+                <div class="callout-content">
+                    <strong>Synthesis của Dormeier:</strong> Hai trường phái không loại trừ — chúng đúng trong
+                    <em>regimes</em> khác nhau. Khi thị trường ổn định &amp; information đối xứng → fundamentals dẫn.
+                    Khi disorderly &amp; information bị bóp méo (Reg FD + flash crash + HFT) → TA + volume làm
+                    risk-management. Cả Graham 1976 lẫn Hamilton 1929 đều đã "tự thừa nhận" giới hạn phương pháp mình.
+                </div>
+            </div>
+        </section>
+        <section class="slide">
+            <div class="slide-kicker">CH 2 · COUNTERARGUMENTS</div>
+            <h2>Cowles 1932 → Brown-Goetzmann-Kumar 1998</h2>
+            <div class="deep-section critical">
+                <h3>Cowles 1932 — đòn tấn công gốc</h3>
+                <p>Alfred Cowles (Yale) công bố paper "Can Stock Market Forecasters Forecast?" — tái dựng 255 dự đoán
+                    của Hamilton, kết luận chiến lược Hamilton <em>underperform</em> một danh mục fully-invested do
+                    chính Cowles tự xây. Tác động: paper cùng với Securities Exchange Act 1934 + Graham/Dodd 1934 đẩy TA
+                    khỏi vị trí được kính trọng. Đến 1949, SEC buộc "all research on Wall Street has to be rooted in
+                    sound fundamental principles" → John Magee (tác giả "Bible" TA 1948) bị truy tố vì khuyến nghị
+                    stocks "weren't fundamental". <span class="page-ref">Ch 2, p. 20-22</span></p>
+            </div>
+            <div class="deep-section practical" style="margin-top:var(--space-5)">
+                <h3>Brown-Goetzmann-Kumar 1998 — phản đòn quyết định</h3>
+                <p>Yale + NYU Stern điểm lại đúng dataset Cowles, phát hiện ba lỗi lớn:</p>
+                <ol style="margin-top:var(--space-3); padding-left:var(--space-6)">
+                    <li><strong>Cherry-picked benchmark.</strong> Cowles so Hamilton với một index <em>khác tập cổ
+                            phiếu</em>. Khi cho Hamilton dùng đúng tập của Cowles: 10.73% vs 10.75%/năm — gần như đồng
+                        hạng. <span class="page-ref">Ch 2, p. 25</span></li>
+                    <li><strong>Bỏ qua factor risk.</strong> Hamilton long 55% / cash 29% / short 16% → beta 0.326 với
+                        S&amp;P 500. Cowles so fully-invested với market-timed như nhau, vi phạm cơ bản về risk-adjusted
+                        comparison.</li>
+                    <li><strong>Risk-adjusted Hamilton thắng rõ.</strong> Sharpe 0.559 vs 0.456; Jensen's α +4.04%/năm.
+                        "Hamilton's portfolio took significantly less risk in producing its returns." <span
+                            class="page-ref">Ch 2, p. 25</span></li>
+                </ol>
+            </div>
+            <div class="callout" style="margin-top:var(--space-5)">
+                <div class="callout-icon">⚖️</div>
+                <div class="callout-content">
+                    <strong>Đánh giá khách quan:</strong> Phản đòn 1998 mạnh nhưng <em>không phải kết luận tuyệt
+                        đối</em>:
+                    <ul style="margin-top:var(--space-2)">
+                        <li>Nghiên cứu kết thúc trong bull market mạnh cuối 1990s — có lợi cho danh mục fully-invested
+                            của Cowles. Hamilton chỉ rõ ràng beat tới 1926; sau đó thị trường "excessively bullish"
+                            trước Crash. <span class="page-ref">Ch 2, p. 25-26</span></li>
+                        <li>n=1: chỉ một forecaster (Hamilton) trên một period (~30 năm). Không phải bằng chứng TA tổng
+                            quát hoạt động — chỉ chứng minh <em>cú đánh Cowles cụ thể</em> bị lỗi.</li>
+                        <li>Dormeier không trích đối-phản-bác từ phía EMH (vd. Malkiel, Fama responses) — selection bias
+                            trong cách kể chuyện.</li>
+                        <li>Kết luận khả dụng: "TA đã từng có alpha rủi-ro-điều-chỉnh trong một regime cụ thể", không
+                            phải "TA luôn beat market".</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="slide">
+            <div class="slide-kicker">CH 2 · REFLECTION</div>
+            <h2>Câu hỏi suy ngẫm theo Bloom</h2>
+            <ul class="reflection-list">
+                <li class="reflection-item">
+                    <span class="reflection-cat">Remember</span>
+                    <p class="reflection-question">Liệt kê ba định luật của Wyckoff. Định luật nào dùng để kiểm tra một
+                        breakout có "thật" hay không?</p>
+                </li>
+                <li class="reflection-item">
+                    <span class="reflection-cat">Understand</span>
+                    <p class="reflection-question">Vì sao Dormeier lập luận rằng thị trường 2010s gần với thời Dow hơn
+                        là thời 1960s? Hai cơ chế nào (regulation + microstructure) ông đưa ra?</p>
+                </li>
+                <li class="reflection-item">
+                    <span class="reflection-cat">Apply</span>
+                    <p class="reflection-question">Trong 5 lệnh giao dịch gần nhất của bạn, có lệnh nào volume (effort)
+                        lớn nhưng price (result) đi rất ít? Wyckoff sẽ đọc tín hiệu đó thế nào?</p>
+                </li>
+                <li class="reflection-item">
+                    <span class="reflection-cat">Analyze</span>
+                    <p class="reflection-question">Ba lỗi của Cowles 1932 mà Brown-Goetzmann-Kumar chỉ ra (cherry-picked
+                        benchmark · bỏ qua factor risk · risk-adjusted Hamilton thắng) — lỗi nào nghiêm trọng nhất về
+                        methodology, và vì sao?</p>
+                </li>
+                <li class="reflection-item">
+                    <span class="reflection-cat">Evaluate</span>
+                    <p class="reflection-question">Brown-Goetzmann-Kumar 1998 chứng minh Hamilton có alpha trên
+                        risk-adjusted basis. Bằng chứng này có đủ để kết luận "TA hoạt động trên thị trường ngày nay"
+                        không? Bạn cần thêm gì để mở rộng kết luận?</p>
+                </li>
+                <li class="reflection-item">
+                    <span class="reflection-cat">Create</span>
+                    <p class="reflection-question">Nếu bạn phải thiết kế một bài replication study cho Wyckoff's three
+                        laws trên thị trường Việt Nam 2020-2026, bạn sẽ chọn benchmark nào, biên độ rủi ro nào, và làm
+                        sao tránh đúng những lỗi Cowles?</p>
+                </li>
+                <li class="reflection-item">
+                    <span class="reflection-cat">Socratic</span>
+                    <p class="reflection-question">Dormeier kể câu chuyện theo hướng "TA bị xử oan, nay đã được phục
+                        hồi". Nếu bạn là nhà nghiên cứu EMH, bạn sẽ phản bác chương này như thế nào — bằng dữ liệu nào,
+                        lập luận nào?</p>
+                </li>
+                <li class="reflection-item">
+                    <span class="reflection-cat">Personal</span>
+                    <p class="reflection-question">Trước chương này, niềm tin "fundamentals quan trọng hơn technicals"
+                        của bạn là 1-10 ở đâu? Sau chương, di chuyển thế nào? Cụ thể: dữ kiện nào trong chương đã làm
+                        bạn dịch chuyển (hoặc không)?</p>
+                </li>
+            </ul>
+        </section>
+        <section class="slide">
+            <div class="slide-kicker">CH 2 · CLOSING ACTIONS</div>
+            <h2>Ba việc làm tiếp theo</h2>
+            <ul class="action-list">
+                <li class="action-item">
+                    <div>
+                        <div class="action-headline">Ghi vào sổ tay 3 luật Wyckoff &amp; mỗi tuần áp 1 lệnh test</div>
+                        <div class="action-detail">In/dán bảng <em>Supply-Demand · Cause-Effect · Effort-Results</em>
+                            cạnh chart workspace. Mỗi tuần chọn 1 setup gần đây và viết: tín hiệu nào ủng hộ luật nào,
+                            tín hiệu nào mâu thuẫn. Sau 8 tuần review để xem luật nào hay false-positive nhất với phong
+                            cách của bạn.</div>
+                    </div>
+                </li>
+                <li class="action-item">
+                    <div>
+                        <div class="action-headline">Đọc paper Brown-Goetzmann-Kumar (1998) bản gốc trước khi đọc tiếp
+                            Chương 4-5</div>
+                        <div class="action-detail">"The Dow Theory: William Peter Hamilton's Track Record Reconsidered"
+                            — Yale ICF Working Paper. Mục tiêu: thấy methodology risk-adjusted comparison cụ thể, vì các
+                            chương sau Dormeier sẽ dùng cùng kiểu lập luận để bảo vệ chỉ báo volume.</div>
+                    </div>
+                </li>
+                <li class="action-item">
+                    <div>
+                        <div class="action-headline">Khi đọc bất kỳ phản bác TA nào, hỏi 2 câu chẩn đoán</div>
+                        <div class="action-detail">(1) Phản bác đang dùng <em>cùng tập cổ phiếu</em> hay <em>khác
+                                benchmark</em>? (2) Phản bác có điều chỉnh <em>risk-adjusted</em> (Sharpe, Jensen) hay
+                            chỉ so absolute return? Cowles 1932 trượt cả hai — câu hỏi này đủ lọc nhiều bài viết phổ
+                            thông.</div>
+                    </div>
+                </li>
+            </ul>
+        </section>
+    </div>
+    <div class="nav-controls">
+        <button aria-label="Previous slide" class="nav-btn" id="prevBtn" onclick="prevSlide()">←</button>
+        <div aria-live="polite" class="counter" id="counter">1 / 1</div>
+        <button aria-label="Next slide" class="nav-btn" id="nextBtn" onclick="nextSlide()">→</button>
+    </div>
+    <script src="../common.js"></script>
 </body>
+
 </html>

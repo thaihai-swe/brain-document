@@ -1,757 +1,1079 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Phát Triển Trí Thông Minh Và Tài Năng Của Trẻ Nhỏ — Chương IV</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="common.css">
-<script src="https://cdn.jsdelivr.net/npm/@panzoom/panzoom@4.5.1/dist/panzoom.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/mermaid@11.10.0/dist/mermaid.min.js" crossorigin="anonymous"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Phát Triển Trí Thông Minh Và Tài Năng Của Trẻ Nhỏ — Chương IV</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../common.css">
+  <script src="https://cdn.jsdelivr.net/npm/@panzoom/panzoom@4.5.1/dist/panzoom.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@11.10.0/dist/mermaid.min.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
 
-<div class="progress-bar" id="progressBar"></div>
+  <div class="progress-bar" id="progressBar"></div>
 
-<div class="chapter-menu">
-  <button class="menu-btn" id="chapterMenuBtn" onclick="toggleChapterMenu()" aria-haspopup="true" aria-expanded="false">Chapters &#9662;</button>
-  <div class="chapter-menu-panel" id="chapterMenuPanel" role="menu"></div>
-</div>
-
-<div class="slide-container" id="slideContainer">
-
-  <section class="slide" aria-hidden="false">
-<h1>Phát Triển Trí Thông Minh và Tài Năng Của Trẻ Nhỏ</h1>
-<p class="subtitle">Giáo sư Shichida Makoto — Chương IV: Giáo Dục Tư Duy Cơ Bản</p>
-<figure class="image-slot hero">
-  <img src="images/ch4_title.png" alt="Đọc sách và rèn luyện ngôn ngữ mở rộng thế giới tư duy của trẻ">
-  <figcaption>Nguồn: Ảnh minh họa nghệ thuật được tạo bằng AI · Google DeepMind</figcaption>
-</figure>
-<div class="meta-grid">
-  <div class="meta-pill">
-    <div class="label">Phạm vi phân tích</div>
-    <div class="value">Chương IV</div>
+  <div class="chapter-menu">
+    <button class="menu-btn" id="chapterMenuBtn" onclick="toggleChapterMenu()" aria-haspopup="true"
+      aria-expanded="false">Chapters &#9662;</button>
+    <div class="chapter-menu-panel" id="chapterMenuPanel" role="menu"></div>
   </div>
-  <div class="meta-pill">
-    <div class="label">Chế độ phân tích</div>
-    <div class="value">DEEP (DEEP+)</div>
-  </div>
-  <div class="meta-pill">
-    <div class="label">Số lượng slide</div>
-    <div class="value">22 Slide Chi Tiết</div>
-  </div>
-  <div class="meta-pill">
-    <div class="label">Phong cách học</div>
-    <div class="value">Đa dạng/Cân bằng</div>
-  </div>
-</div>
 
-  </section>
+  <div class="slide-container" id="slideContainer">
 
-  <section class="slide chapter-divider">
-<div class="chapter-number">Chương IV</div>
-<h2>Giáo Dục Tư Duy Cơ Bản</h2>
-<p class="chapter-meta">
-  <strong>Thời gian đọc ước tính:</strong> ~25 phút (6,100 từ) | 
-  <strong>Độ khó:</strong> Khá cao (Đòi hỏi sự nhẫn nại rèn luyện thói quen hàng ngày của cha mẹ) <br>
-  <strong>Khái niệm cốt lõi:</strong> Hệ tín hiệu thứ hai · Trực quan từ vựng (Glenn Doman) · Thực nghiệm Steinberg (Hawaii) · Quy trình 5 bước đọc chữ · Bao Myelin thần kinh (Luật 3 tháng) · Thùy trước trán & Trò chơi đố vui · 20 Nguyên tắc vàng nuôi dạy từ 0 tuổi
-</p>
-<figure class="image-slot hero">
-  <img src="images/ch4_divider.png" alt="Rèn luyện sức chịu đựng và thể chất cho trẻ qua vận động xà ngang">
-</figure>
-
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH IV · SƠ ĐỒ KHÁI NIỆM</div>
-    <h2>Sơ đồ khái niệm Chương IV</h2>
-<div class="mermaid">
-graph TD
-    Root["Chương IV: Tư Duy Cơ Bản"] --> Lang["1. Giáo Dục Ngôn Ngữ (0 tuổi)"]
-    Root --> Logic["2. Dạy Chữ & Tư Duy Hệ Thống"]
-    Root --> Rules["3. 20 Nguyên Tắc Vàng Nuôi Dạy"]
-
-    Lang --> Doman["Glenn Doman: Kỹ năng quyết định cấu tạo (nở sọ)"]
-    Lang --> Sign2["Hệ tín hiệu thứ hai: Ký tự, ngôn từ phân biệt người-vật"]
-    Lang --> Stein["Thực nghiệm Steinberg: Đọc trước nói (K đỗ lớp 12 lúc 10 tuổi)"]
-
-    Logic --> Step5["5 Bước: Chuẩn bị -> Từ đơn -> Chữ hàng -> Câu ngắn -> Đoạn dài"]
-    Logic --> Myelin["Bao Myelin (Luật 3 tháng): 100 lần kích ứng tạo phản xạ vô thức"]
-    Logic --> Tools["Vở từ vựng (ABC) & Sổ đọc sách & Tra từ điển"]
-
-    Rules --> ThreeNo["Ba Không: Không dọa dẫm, Không cấm đoán, Không phủ nhận con"]
-    Rules --> Praise["Khen ngợi HÀNH ĐỘNG/Nỗ lực cụ thể (Tránh tự cao)"]
-    Rules --> AntiTV["Không TV: Hại thùy trán, nguy cơ tự kỷ/máu trắng"]
-    Rules --> BrainPhys["Thùy trước trán (Tư duy) vs Thùy đỉnh (Trí nhớ) & Đu sà ngang"]
-
-    style Root fill:#635BFF,stroke:#2A2D33,color:#FFF
-    style Lang fill:#059669,stroke:#2A2D33,color:#FFF
-    style Logic fill:#7C3AED,stroke:#2A2D33,color:#FFF
-    style Rules fill:#DC2626,stroke:#2A2D33,color:#FFF
-</div>
-
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH IV · TÓM TẮT CẤU TRÚC</div>
-    <h2>Tóm tắt cấu trúc Chương IV</h2>
-<div class="content-card">
-  <div class="summary-text">
-    <p><strong>Tóm tắt một câu:</strong> Giáo dục ngôn ngữ là nền tảng cốt lõi của giáo dục sớm, kích hoạt hệ tín hiệu thứ hai giúp định hình cấu trúc não bộ và khai mở khả năng tư duy trừu tượng sâu sắc cho trẻ trước 6 tuổi. <span class="page-ref">Ch 4, p. 70, 74</span></p>
-    
-    <p><strong>Bối cảnh đặt ra (The Setup):</strong> Trào lưu giáo dục anh tài tại Nhật Bản tập trung lệch lạc vào các bài tập suy luận và trò chơi trí năng (IQ), trong khi bỏ quên giáo dục ngôn ngữ - con đường duy nhất để xây dựng tư duy tinh thần sâu sắc và tình cảm lành mạnh. <span class="page-ref">Ch 4, p. 74</span></p>
-    
-    <p><strong>Luận điểm cốt lõi (The Argument):</strong> "Chức năng quyết định cấu tạo". Việc dạy chữ sớm cho trẻ từ sơ sinh (khi tính mềm dẻo của não bộ cao nhất) không chỉ mở rộng vốn từ mà còn trực tiếp tái cấu trúc các liên kết thần kinh (đường phản hồi thị giác), kích hoạt thùy trước trán phát triển vượt bậc. <span class="page-ref">Ch 4, p. 70, 71</span></p>
-    
-    <p><strong>Bằng chứng & Minh họa (The Evidence):</strong> Thí nghiệm trị liệu trẻ tổn thương não của Glenn Doman, thực nghiệm dạy đọc chữ từ sơ sinh cho con trai K của GS. Steinberg (K đạt trình độ đọc lớp 12 lúc 10 tuổi), nghiên cứu dạy chữ trẻ Down của Belas, và 20 nguyên tắc vàng được đúc rút từ phương pháp Karl Witte và Goethe. <span class="page-ref">Ch 4, p. 70, 71-73, 79</span></p>
-    
-    <p><strong>Hệ quả thực tế (The Implications):</strong> Cha mẹ cần dạy đọc chữ sớm bằng thẻ từ (flashcard) kết hợp trải nghiệm thực tế; rèn luyện thùy trước trán qua trò đố vui và đu sà ngang; thực hiện nguyên tắc "3 Không" (không dọa, không cấm, không phủ nhận) và kiên trì lặp lại ít nhất 3 tháng để bao myelin thần kinh hoàn thiện phản xạ. <span class="page-ref">Ch 4, p. 73, 77-79</span></p>
-    
-    <p><strong>Điểm gây tranh luận (The Controversy):</strong> Một số luận điểm y học của tác giả đã lỗi thời như: cảnh báo tivi 220V phóng tia âm cực gây máu trắng, hoặc lý thuyết của Doman về việc "dạy chữ làm hộp sọ nở to gấp 3-4 lần" vốn không có cơ sở nhi khoa hiện đại. Tuy nhiên, khuyến cáo hạn chế màn hình và lợi ích của tương tác ngôn ngữ trực tiếp vẫn hoàn toàn chính xác. <span class="page-ref">Ch 4, p. 70, 78</span></p>
-    
-    <p><strong>Mối liên hệ hệ thống (The Connection):</strong> Chương này đúc kết toàn bộ phương pháp kích ứng của ba chương trước (Chương I: Tình yêu, Chương II: Giác quan/Vận động, Chương III: Lễ nghĩa/Ý chí) thành một cẩm nang hành động thực tiễn toàn diện nhất, chỉ ra các công cụ cụ thể (Sổ từ vựng, Nhật ký đọc, Từ điển) để cha mẹ đồng hành cùng con. <span class="page-ref">Ch 4, p. 80-81</span></p>
-  </div>
-</div>
-
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH IV · Ý TƯỞNG CỐT LÕI</div>
-    <h2>Ý tưởng cốt lõi</h2>
-<div class="takeaway-hero">
-  <div class="kicker">CH IV · Ý TƯỞNG CỐT LÕI</div>
-  <div class="headline">"Trụ cột của phương pháp giáo dục trẻ nhỏ là giáo dục ngôn ngữ. Thiếu ngôn ngữ, trẻ không thể đạt được sự sâu sắc về tư duy tinh thần."</div>
-  <div class="subline">Trí năng đích thực của trẻ không được xây dựng bởi các trò chơi logic hay IQ suông, mà tự ngấm vào tâm hồn thông qua việc đọc sách và kích hoạt hệ tín hiệu chữ viết. <span class="page-ref">Ch 4, p. 74</span></div>
-</div>
-
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH IV · ĐIỂM RÚT RA CHÍNH</div>
-    <h2>Năm điểm rút ra chính</h2>
-<ul class="takeaway-list">
-  <li class="takeaway-item">
-    <div class="takeaway-badge">1</div>
-    <div class="takeaway-text">
-      <strong>Nguyên lý "Chức năng quyết định cấu tạo" (Doman)</strong>
-      <div class="takeaway-detail">
-        <strong>Ý nghĩa:</strong> Kích ứng chức năng (dạy đọc chữ sớm) tạo ra đường phản hồi thị giác tốt, trực tiếp thúc đẩy sự phát triển vật chất và cấu trúc của toàn bộ đại não. Trẻ càng nhỏ, cơ chế này hoạt động càng mạnh mẽ và dễ dàng. <span class="page-ref">Ch 4, p. 70</span><br>
-        <strong>Minh chứng:</strong> Trẻ khuyết tật não của Glenn Doman biết đọc từ 1.5 tuổi và trẻ Down của Belas đọc sách 3 nước trước 3 tuổi. <span class="page-ref">Ch 4, p. 70</span>
+    <section class="slide" aria-hidden="false">
+      <h1>Phát Triển Trí Thông Minh và Tài Năng Của Trẻ Nhỏ</h1>
+      <p class="subtitle">Giáo sư Shichida Makoto — Chương IV: Giáo Dục Tư Duy Cơ Bản</p>
+      <figure class="image-slot hero">
+        <img src="images/ch4_title.png" alt="Đọc sách và rèn luyện ngôn ngữ mở rộng thế giới tư duy của trẻ">
+        <figcaption>Nguồn: Ảnh minh họa nghệ thuật được tạo bằng AI · Google DeepMind</figcaption>
+      </figure>
+      <div class="meta-grid">
+        <div class="meta-pill">
+          <div class="label">Phạm vi phân tích</div>
+          <div class="value">Chương IV</div>
+        </div>
+        <div class="meta-pill">
+          <div class="label">Chế độ phân tích</div>
+          <div class="value">DEEP (DEEP+)</div>
+        </div>
+        <div class="meta-pill">
+          <div class="label">Số lượng slide</div>
+          <div class="value">22 Slide Chi Tiết</div>
+        </div>
+        <div class="meta-pill">
+          <div class="label">Phong cách học</div>
+          <div class="value">Đa dạng/Cân bằng</div>
+        </div>
       </div>
-    </div>
-  </li>
 
-  <li class="takeaway-item">
-    <div class="takeaway-badge">2</div>
-    <div class="takeaway-text">
-      <strong>Dạy đọc chữ từ sơ sinh trước khi biết nói (Steinberg)</strong>
-      <div class="takeaway-detail">
-        <strong>Ý nghĩa:</strong> Đọc và nói là hai tiến trình hoàn toàn độc lập. Đọc là sự lý giải ký tự qua thị giác, không cần phải nói được mới đọc được. Dạy đọc sớm giúp mở rộng thế giới tư duy của trẻ vượt bậc. <span class="page-ref">Ch 4, p. 71, 73</span><br>
-        <strong>Áp dụng:</strong> Dùng thẻ từ (flashcard) kết hợp trải nghiệm thực tế từ 6 tháng tuổi. Cho trẻ xem sách tranh to từ 4-5 tháng. <span class="page-ref">Ch 4, p. 71, 76</span>
+    </section>
+
+    <section class="slide chapter-divider">
+      <div class="chapter-number">Chương IV</div>
+      <h2>Giáo Dục Tư Duy Cơ Bản</h2>
+      <p class="chapter-meta">
+        <strong>Thời gian đọc ước tính:</strong> ~25 phút (6,100 từ) |
+        <strong>Độ khó:</strong> Khá cao (Đòi hỏi sự nhẫn nại rèn luyện thói quen hàng ngày của cha mẹ) <br>
+        <strong>Khái niệm cốt lõi:</strong> Hệ tín hiệu thứ hai · Trực quan từ vựng (Glenn Doman) · Thực nghiệm
+        Steinberg (Hawaii) · Quy trình 5 bước đọc chữ · Bao Myelin thần kinh (Luật 3 tháng) · Thùy trước trán & Trò chơi
+        đố vui · 20 Nguyên tắc vàng nuôi dạy từ 0 tuổi
+      </p>
+      <figure class="image-slot hero">
+        <img src="images/ch4_divider.png" alt="Rèn luyện sức chịu đựng và thể chất cho trẻ qua vận động xà ngang">
+      </figure>
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH IV · SƠ ĐỒ KHÁI NIỆM</div>
+      <h2>Sơ đồ khái niệm Chương IV</h2>
+      <div class="mermaid">
+        graph TD
+        Root["Chương IV: Tư Duy Cơ Bản"] --> Lang["1. Giáo Dục Ngôn Ngữ (0 tuổi)"]
+        Root --> Logic["2. Dạy Chữ & Tư Duy Hệ Thống"]
+        Root --> Rules["3. 20 Nguyên Tắc Vàng Nuôi Dạy"]
+
+        Lang --> Doman["Glenn Doman: Kỹ năng quyết định cấu tạo (nở sọ)"]
+        Lang --> Sign2["Hệ tín hiệu thứ hai: Ký tự, ngôn từ phân biệt người-vật"]
+        Lang --> Stein["Thực nghiệm Steinberg: Đọc trước nói (K đỗ lớp 12 lúc 10 tuổi)"]
+
+        Logic --> Step5["5 Bước: Chuẩn bị -> Từ đơn -> Chữ hàng -> Câu ngắn -> Đoạn dài"]
+        Logic --> Myelin["Bao Myelin (Luật 3 tháng): 100 lần kích ứng tạo phản xạ vô thức"]
+        Logic --> Tools["Vở từ vựng (ABC) & Sổ đọc sách & Tra từ điển"]
+
+        Rules --> ThreeNo["Ba Không: Không dọa dẫm, Không cấm đoán, Không phủ nhận con"]
+        Rules --> Praise["Khen ngợi HÀNH ĐỘNG/Nỗ lực cụ thể (Tránh tự cao)"]
+        Rules --> AntiTV["Không TV: Hại thùy trán, nguy cơ tự kỷ/máu trắng"]
+        Rules --> BrainPhys["Thùy trước trán (Tư duy) vs Thùy đỉnh (Trí nhớ) & Đu sà ngang"]
+
+        style Root fill:#635BFF,stroke:#2A2D33,color:#FFF
+        style Lang fill:#059669,stroke:#2A2D33,color:#FFF
+        style Logic fill:#7C3AED,stroke:#2A2D33,color:#FFF
+        style Rules fill:#DC2626,stroke:#2A2D33,color:#FFF
       </div>
-    </div>
-  </li>
 
-  <li class="takeaway-item">
-    <div class="takeaway-badge">3</div>
-    <strong>Quy luật 3 tháng & Cơ chế bao Myelin bọc thần kinh</strong>
-    <div class="takeaway-detail">
-      <strong>Ý nghĩa:</strong> Để tế bào thần kinh liên kết đan chéo thành mạng lưới chặt chẽ và bọc màng chất béo myelin bảo vệ (giúp phản xạ trở nên tự động và vô thức), não bộ cần ít nhất 3 tháng với khoảng 100 lần kích ứng lặp lại. <span class="page-ref">Ch 4, p. 79</span><br>
-      <strong>Áp dụng:</strong> Kiên trì dạy bảng chữ cái, cửu chương hay thói quen sinh hoạt lặp đi lặp lại hàng ngày trong ít nhất 3 tháng. Không nôn nóng từ bỏ sớm. <span class="page-ref">Ch 4, p. 79</span>
-    </div>
-  </li>
+    </section>
 
-  <li class="takeaway-item">
-    <div class="takeaway-badge">4</div>
-    <div class="takeaway-text">
-      <strong>Nguyên tắc vàng Ba Không: Không Dọa, Không Cấm, Không Phủ Nhận</strong>
-      <div class="takeaway-detail">
-        <strong>Ý nghĩa:</strong> (1) Không dọa dẫm quỷ thần làm tổn thương tâm lý; (2) Không dùng từ cấm đoán ("cấm xé giấy", "cấm dùng kéo") làm cụt mầm tích cực, hãy ngồi giám sát an toàn; (3) Không phủ nhận con trước mặt người khác vì trẻ sẽ lớn lên đúng như lời chê đó. <span class="page-ref">Ch 4, p. 77-78</span>
+    <section class="slide">
+      <div class="slide-kicker">CH IV · TÓM TẮT CẤU TRÚC</div>
+      <h2>Tóm tắt cấu trúc Chương IV</h2>
+      <div class="content-card">
+        <div class="summary-text">
+          <p><strong>Tóm tắt một câu:</strong> Giáo dục ngôn ngữ là nền tảng cốt lõi của giáo dục sớm, kích hoạt hệ tín
+            hiệu thứ hai giúp định hình cấu trúc não bộ và khai mở khả năng tư duy trừu tượng sâu sắc cho trẻ trước 6
+            tuổi. <span class="page-ref">Ch 4, p. 70, 74</span></p>
+
+          <p><strong>Bối cảnh đặt ra (The Setup):</strong> Trào lưu giáo dục anh tài tại Nhật Bản tập trung lệch lạc vào
+            các bài tập suy luận và trò chơi trí năng (IQ), trong khi bỏ quên giáo dục ngôn ngữ - con đường duy nhất để
+            xây dựng tư duy tinh thần sâu sắc và tình cảm lành mạnh. <span class="page-ref">Ch 4, p. 74</span></p>
+
+          <p><strong>Luận điểm cốt lõi (The Argument):</strong> "Chức năng quyết định cấu tạo". Việc dạy chữ sớm cho trẻ
+            từ sơ sinh (khi tính mềm dẻo của não bộ cao nhất) không chỉ mở rộng vốn từ mà còn trực tiếp tái cấu trúc các
+            liên kết thần kinh (đường phản hồi thị giác), kích hoạt thùy trước trán phát triển vượt bậc. <span
+              class="page-ref">Ch 4, p. 70, 71</span></p>
+
+          <p><strong>Bằng chứng & Minh họa (The Evidence):</strong> Thí nghiệm trị liệu trẻ tổn thương não của Glenn
+            Doman, thực nghiệm dạy đọc chữ từ sơ sinh cho con trai K của GS. Steinberg (K đạt trình độ đọc lớp 12 lúc 10
+            tuổi), nghiên cứu dạy chữ trẻ Down của Belas, và 20 nguyên tắc vàng được đúc rút từ phương pháp Karl Witte
+            và Goethe. <span class="page-ref">Ch 4, p. 70, 71-73, 79</span></p>
+
+          <p><strong>Hệ quả thực tế (The Implications):</strong> Cha mẹ cần dạy đọc chữ sớm bằng thẻ từ (flashcard) kết
+            hợp trải nghiệm thực tế; rèn luyện thùy trước trán qua trò đố vui và đu sà ngang; thực hiện nguyên tắc "3
+            Không" (không dọa, không cấm, không phủ nhận) và kiên trì lặp lại ít nhất 3 tháng để bao myelin thần kinh
+            hoàn thiện phản xạ. <span class="page-ref">Ch 4, p. 73, 77-79</span></p>
+
+          <p><strong>Điểm gây tranh luận (The Controversy):</strong> Một số luận điểm y học của tác giả đã lỗi thời như:
+            cảnh báo tivi 220V phóng tia âm cực gây máu trắng, hoặc lý thuyết của Doman về việc "dạy chữ làm hộp sọ nở
+            to gấp 3-4 lần" vốn không có cơ sở nhi khoa hiện đại. Tuy nhiên, khuyến cáo hạn chế màn hình và lợi ích của
+            tương tác ngôn ngữ trực tiếp vẫn hoàn toàn chính xác. <span class="page-ref">Ch 4, p. 70, 78</span></p>
+
+          <p><strong>Mối liên hệ hệ thống (The Connection):</strong> Chương này đúc kết toàn bộ phương pháp kích ứng của
+            ba chương trước (Chương I: Tình yêu, Chương II: Giác quan/Vận động, Chương III: Lễ nghĩa/Ý chí) thành một
+            cẩm nang hành động thực tiễn toàn diện nhất, chỉ ra các công cụ cụ thể (Sổ từ vựng, Nhật ký đọc, Từ điển) để
+            cha mẹ đồng hành cùng con. <span class="page-ref">Ch 4, p. 80-81</span></p>
+        </div>
       </div>
-    </div>
-  </li>
 
-  <li class="takeaway-item">
-    <div class="takeaway-badge">5</div>
-    <div class="takeaway-text">
-      <strong>Rèn thùy trước trán (suy nghĩ) vs thùy đỉnh (ghi nhớ)</strong>
-      <div class="takeaway-detail">
-        <strong>Ý nghĩa:</strong> Trí nhớ (nằm ở thùy đỉnh/lá cạnh) đạt đỉnh thiên tài lúc 2-3 tuổi (học đồng dao, thuộc cửu chương). Tư duy/Suy nghĩ (nằm ở thùy trước trán) cần rèn luyện tích cực sau 3 tuổi qua trò đố vui để IQ tăng trưởng. <span class="page-ref">Ch 4, p. 79-80</span><br>
-        <strong>Áp dụng:</strong> Tránh chỉ học thuộc lòng vô hồn. Cho trẻ tập tóm tắt câu chuyện lúc 2-3 tuổi và rèn vận động đu sà ngang tăng khả năng chịu đựng. <span class="page-ref">Ch 4, p. 78, 80</span>
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH IV · Ý TƯỞNG CỐT LÕI</div>
+      <h2>Ý tưởng cốt lõi</h2>
+      <div class="takeaway-hero">
+        <div class="kicker">CH IV · Ý TƯỞNG CỐT LÕI</div>
+        <div class="headline">"Trụ cột của phương pháp giáo dục trẻ nhỏ là giáo dục ngôn ngữ. Thiếu ngôn ngữ, trẻ không
+          thể đạt được sự sâu sắc về tư duy tinh thần."</div>
+        <div class="subline">Trí năng đích thực của trẻ không được xây dựng bởi các trò chơi logic hay IQ suông, mà tự
+          ngấm vào tâm hồn thông qua việc đọc sách và kích hoạt hệ tín hiệu chữ viết. <span class="page-ref">Ch 4, p.
+            74</span></div>
       </div>
-    </div>
-  </li>
-</ul>
 
-  </section>
+    </section>
 
-  <section class="slide">
-    <div class="slide-kicker">CH IV · MÔ HÌNH TƯ DUY</div>
-    <h2>Hai mô hình tư duy cốt lõi</h2>
-<div class="split-layout">
-  <div class="mental-model-card" style="flex: 1; min-width: 280px; background: var(--surface); padding: var(--space-6); border-radius: var(--radius-lg); border: 1px solid var(--border); box-shadow: var(--shadow-glass);">
-    <h4 class="model-name" style="color: var(--accent-purple); font-size: 1.125rem; font-weight: 600; margin-bottom: var(--space-3);">Mô Hình 1: Cấu Trúc Quyết Định Bởi Chức Năng (Doman)</h4>
-    <div class="model-principle" style="font-weight: 500; margin-bottom: var(--space-3); line-height: 1.5;">
-      Việc kích hoạt liên tục chức năng của não bộ (nhập dữ liệu hình ảnh, ký tự) sẽ trực tiếp thúc đẩy sự phát triển vật lý và tái cấu trúc liên kết đại não. <span class="page-ref">Ch 4, p. 70</span>
-    </div>
-    <div class="model-application" style="margin-bottom: var(--space-3); font-size: 0.9rem; line-height: 1.5;">
-      <strong>Cách hoạt động:</strong>
-      <ul>
-        <li>Dạy chữ sớm -> Kích thích đường phản hồi thị giác phát triển vượt bậc -> Não bộ tăng trưởng khớp thần kinh -> Cấu trúc hộp sọ giãn nở theo chiều hướng tốt hơn. <span class="page-ref">Ch 4, p. 70</span></li>
-        <li>Học chữ làm thay đổi chất lượng vỏ não của cả trẻ Down hay trẻ suy nhược tinh thần. <span class="page-ref">Ch 4, p. 70-71</span></li>
+    <section class="slide">
+      <div class="slide-kicker">CH IV · ĐIỂM RÚT RA CHÍNH</div>
+      <h2>Năm điểm rút ra chính</h2>
+      <ul class="takeaway-list">
+        <li class="takeaway-item">
+          <div class="takeaway-badge">1</div>
+          <div class="takeaway-text">
+            <strong>Nguyên lý "Chức năng quyết định cấu tạo" (Doman)</strong>
+            <div class="takeaway-detail">
+              <strong>Ý nghĩa:</strong> Kích ứng chức năng (dạy đọc chữ sớm) tạo ra đường phản hồi thị giác tốt, trực
+              tiếp thúc đẩy sự phát triển vật chất và cấu trúc của toàn bộ đại não. Trẻ càng nhỏ, cơ chế này hoạt động
+              càng mạnh mẽ và dễ dàng. <span class="page-ref">Ch 4, p. 70</span><br>
+              <strong>Minh chứng:</strong> Trẻ khuyết tật não của Glenn Doman biết đọc từ 1.5 tuổi và trẻ Down của Belas
+              đọc sách 3 nước trước 3 tuổi. <span class="page-ref">Ch 4, p. 70</span>
+            </div>
+          </div>
+        </li>
+
+        <li class="takeaway-item">
+          <div class="takeaway-badge">2</div>
+          <div class="takeaway-text">
+            <strong>Dạy đọc chữ từ sơ sinh trước khi biết nói (Steinberg)</strong>
+            <div class="takeaway-detail">
+              <strong>Ý nghĩa:</strong> Đọc và nói là hai tiến trình hoàn toàn độc lập. Đọc là sự lý giải ký tự qua thị
+              giác, không cần phải nói được mới đọc được. Dạy đọc sớm giúp mở rộng thế giới tư duy của trẻ vượt bậc.
+              <span class="page-ref">Ch 4, p. 71, 73</span><br>
+              <strong>Áp dụng:</strong> Dùng thẻ từ (flashcard) kết hợp trải nghiệm thực tế từ 6 tháng tuổi. Cho trẻ xem
+              sách tranh to từ 4-5 tháng. <span class="page-ref">Ch 4, p. 71, 76</span>
+            </div>
+          </div>
+        </li>
+
+        <li class="takeaway-item">
+          <div class="takeaway-badge">3</div>
+          <strong>Quy luật 3 tháng & Cơ chế bao Myelin bọc thần kinh</strong>
+          <div class="takeaway-detail">
+            <strong>Ý nghĩa:</strong> Để tế bào thần kinh liên kết đan chéo thành mạng lưới chặt chẽ và bọc màng chất
+            béo myelin bảo vệ (giúp phản xạ trở nên tự động và vô thức), não bộ cần ít nhất 3 tháng với khoảng 100 lần
+            kích ứng lặp lại. <span class="page-ref">Ch 4, p. 79</span><br>
+            <strong>Áp dụng:</strong> Kiên trì dạy bảng chữ cái, cửu chương hay thói quen sinh hoạt lặp đi lặp lại hàng
+            ngày trong ít nhất 3 tháng. Không nôn nóng từ bỏ sớm. <span class="page-ref">Ch 4, p. 79</span>
+          </div>
+        </li>
+
+        <li class="takeaway-item">
+          <div class="takeaway-badge">4</div>
+          <div class="takeaway-text">
+            <strong>Nguyên tắc vàng Ba Không: Không Dọa, Không Cấm, Không Phủ Nhận</strong>
+            <div class="takeaway-detail">
+              <strong>Ý nghĩa:</strong> (1) Không dọa dẫm quỷ thần làm tổn thương tâm lý; (2) Không dùng từ cấm đoán
+              ("cấm xé giấy", "cấm dùng kéo") làm cụt mầm tích cực, hãy ngồi giám sát an toàn; (3) Không phủ nhận con
+              trước mặt người khác vì trẻ sẽ lớn lên đúng như lời chê đó. <span class="page-ref">Ch 4, p. 77-78</span>
+            </div>
+          </div>
+        </li>
+
+        <li class="takeaway-item">
+          <div class="takeaway-badge">5</div>
+          <div class="takeaway-text">
+            <strong>Rèn thùy trước trán (suy nghĩ) vs thùy đỉnh (ghi nhớ)</strong>
+            <div class="takeaway-detail">
+              <strong>Ý nghĩa:</strong> Trí nhớ (nằm ở thùy đỉnh/lá cạnh) đạt đỉnh thiên tài lúc 2-3 tuổi (học đồng dao,
+              thuộc cửu chương). Tư duy/Suy nghĩ (nằm ở thùy trước trán) cần rèn luyện tích cực sau 3 tuổi qua trò đố
+              vui để IQ tăng trưởng. <span class="page-ref">Ch 4, p. 79-80</span><br>
+              <strong>Áp dụng:</strong> Tránh chỉ học thuộc lòng vô hồn. Cho trẻ tập tóm tắt câu chuyện lúc 2-3 tuổi và
+              rèn vận động đu sà ngang tăng khả năng chịu đựng. <span class="page-ref">Ch 4, p. 78, 80</span>
+            </div>
+          </div>
+        </li>
       </ul>
-      <strong>Áp dụng:</strong> Trẻ càng nhỏ càng dễ tiếp thu. Bắt đầu kích ứng ngôn ngữ bằng hình ảnh và mặt chữ ngay từ khi chào đời. <span class="page-ref">Ch 4, p. 70</span>
-    </div>
-  </div>
 
-  <div class="mental-model-card" style="flex: 1; min-width: 280px; background: var(--surface); padding: var(--space-6); border-radius: var(--radius-lg); border: 1px solid var(--border); box-shadow: var(--shadow-glass);">
-    <h4 class="model-name" style="color: var(--accent-purple); font-size: 1.125rem; font-weight: 600; margin-bottom: var(--space-3);">Mô Hình 2: Hệ Tín Hiệu Thứ Hai (Pavlov/Shichida)</h4>
-    <div class="model-principle" style="font-weight: 500; margin-bottom: var(--space-3); line-height: 1.5;">
-      Con người vượt lên trên động vật nhờ năng lực sử dụng hệ thống ký hiệu trung gian (chữ viết, chữ số) để tư duy, phán đoán và lý giải thế giới. <span class="page-ref">Ch 4, p. 70</span>
-    </div>
-    <div class="model-application" style="margin-bottom: var(--space-3); font-size: 0.9rem; line-height: 1.5;">
-      <strong>Cách hoạt động:</strong>
-      <ul>
-        <li>Hệ tín hiệu thứ nhất: Các phản xạ sinh học giác quan thông thường (người và động vật đều có). <span class="page-ref">Ch 4, p. 70</span></li>
-        <li>Hệ tín hiệu thứ hai: Sử dụng ký tự để mã hóa thông tin, giúp tư duy trừu tượng phát triển sâu sắc. <span class="page-ref">Ch 4, p. 70, 74</span></li>
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH IV · MÔ HÌNH TƯ DUY</div>
+      <h2>Hai mô hình tư duy cốt lõi</h2>
+      <div class="split-layout">
+        <div class="mental-model-card"
+          style="flex: 1; min-width: 280px; background: var(--surface); padding: var(--space-6); border-radius: var(--radius-lg); border: 1px solid var(--border); box-shadow: var(--shadow-glass);">
+          <h4 class="model-name"
+            style="color: var(--accent-purple); font-size: 1.125rem; font-weight: 600; margin-bottom: var(--space-3);">
+            Mô Hình 1: Cấu Trúc Quyết Định Bởi Chức Năng (Doman)</h4>
+          <div class="model-principle" style="font-weight: 500; margin-bottom: var(--space-3); line-height: 1.5;">
+            Việc kích hoạt liên tục chức năng của não bộ (nhập dữ liệu hình ảnh, ký tự) sẽ trực tiếp thúc đẩy sự phát
+            triển vật lý và tái cấu trúc liên kết đại não. <span class="page-ref">Ch 4, p. 70</span>
+          </div>
+          <div class="model-application" style="margin-bottom: var(--space-3); font-size: 0.9rem; line-height: 1.5;">
+            <strong>Cách hoạt động:</strong>
+            <ul>
+              <li>Dạy chữ sớm -> Kích thích đường phản hồi thị giác phát triển vượt bậc -> Não bộ tăng trưởng khớp thần
+                kinh -> Cấu trúc hộp sọ giãn nở theo chiều hướng tốt hơn. <span class="page-ref">Ch 4, p. 70</span></li>
+              <li>Học chữ làm thay đổi chất lượng vỏ não của cả trẻ Down hay trẻ suy nhược tinh thần. <span
+                  class="page-ref">Ch 4, p. 70-71</span></li>
+            </ul>
+            <strong>Áp dụng:</strong> Trẻ càng nhỏ càng dễ tiếp thu. Bắt đầu kích ứng ngôn ngữ bằng hình ảnh và mặt chữ
+            ngay từ khi chào đời. <span class="page-ref">Ch 4, p. 70</span>
+          </div>
+        </div>
+
+        <div class="mental-model-card"
+          style="flex: 1; min-width: 280px; background: var(--surface); padding: var(--space-6); border-radius: var(--radius-lg); border: 1px solid var(--border); box-shadow: var(--shadow-glass);">
+          <h4 class="model-name"
+            style="color: var(--accent-purple); font-size: 1.125rem; font-weight: 600; margin-bottom: var(--space-3);">
+            Mô Hình 2: Hệ Tín Hiệu Thứ Hai (Pavlov/Shichida)</h4>
+          <div class="model-principle" style="font-weight: 500; margin-bottom: var(--space-3); line-height: 1.5;">
+            Con người vượt lên trên động vật nhờ năng lực sử dụng hệ thống ký hiệu trung gian (chữ viết, chữ số) để tư
+            duy, phán đoán và lý giải thế giới. <span class="page-ref">Ch 4, p. 70</span>
+          </div>
+          <div class="model-application" style="margin-bottom: var(--space-3); font-size: 0.9rem; line-height: 1.5;">
+            <strong>Cách hoạt động:</strong>
+            <ul>
+              <li>Hệ tín hiệu thứ nhất: Các phản xạ sinh học giác quan thông thường (người và động vật đều có). <span
+                  class="page-ref">Ch 4, p. 70</span></li>
+              <li>Hệ tín hiệu thứ hai: Sử dụng ký tự để mã hóa thông tin, giúp tư duy trừu tượng phát triển sâu sắc.
+                <span class="page-ref">Ch 4, p. 70, 74</span>
+              </li>
+            </ul>
+            <strong>Áp dụng:</strong> Kích hoạt hệ tín hiệu thứ hai trước khi nếp nhăn vỏ não đóng khung 60-80% lúc 6
+            tuổi. Dạy đọc sách sớm để tạo ra trí tuệ lý tính. <span class="page-ref">Ch 4, p. 70, 74</span>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH IV · THỰC NGHIỆM ĐỌC</div>
+      <h2>Dạy đọc trước khi biết nói &amp; Nghiên cứu Steinberg</h2>
+      <div class="split-layout">
+        <div class="split-left" style="border-left-color: var(--accent-emerald); flex: 1;">
+          <h3 style="color: var(--accent-emerald); font-size: 1.2rem; margin-bottom: var(--space-3);">Thực Nghiệm Dạy
+            Đọc Từ Sơ Sinh</h3>
+          <ul
+            style="padding-left: var(--space-4); margin-bottom: var(--space-4); font-size: 0.9rem; line-height: 1.6; color: var(--text-secondary);">
+            <li><strong>Nguyên lý:</strong> Đọc và Nói là hai tiến trình độc lập. Trẻ chưa biết nói vẫn hiểu lời nói, do
+              đó hoàn toàn có thể hiểu ký tự thị giác. <span class="page-ref">Ch 4, p. 71</span></li>
+            <li><strong>Kích ứng từ nôi:</strong> Dán tranh cừu, ngựa quanh cũi ngay khi xuất viện. 6 tháng dán thẻ chữ
+              cái in màu đỏ nét đậm (rộng 7.5cm, dài 60cm). <span class="page-ref">Ch 4, p. 71</span></li>
+            <li><strong>Tích hợp sinh hoạt:</strong> Mỗi khi thay tã hoặc bế bé, bố mẹ lấy ngón tay chỉ vào chữ cái và
+              đọc to (mỗi ngày 4-5 lần, mỗi lần vài phút). <span class="page-ref">Ch 4, p. 71</span></li>
+            <li><strong>Phương pháp thẻ từ:</strong> Viết từ đơn dán tường. Dùng thẻ card từ mới gắn liền với trải
+              nghiệm thực tế (Ví dụ: khi nghe tiếng máy bay ồn, bế bé ra xem máy bay và viết ngay chữ "máy bay" lên
+              card). <span class="page-ref">Ch 4, p. 72</span></li>
+          </ul>
+        </div>
+
+        <div class="split-right" style="border-left-color: var(--accent-red); flex: 1;">
+          <h3 style="color: var(--accent-red); font-size: 1.2rem; margin-bottom: var(--space-3);">Cột Mốc Phát Triển Của
+            Bé K</h3>
+          <ul
+            style="padding-left: var(--space-4); margin-bottom: var(--space-4); font-size: 0.9rem; line-height: 1.6; color: var(--text-secondary);">
+            <li><strong>10 tháng tuổi:</strong> Hiểu cấu trúc định vị không gian (nhìn ngay ra chỗ bố khi được hỏi
+              <em>"bố đâu?"</em>). <span class="page-ref">Ch 4, p. 71</span>
+            </li>
+            <li><strong>2 tuổi:</strong> Chậm biết nói (chưa nói sõi tên mình) nhưng đã đọc hiểu và chỉ đúng 48 từ trên
+              card. 2.5 tuổi đọc được 181 từ. <span class="page-ref">Ch 4, p. 72</span></li>
+            <li><strong>2 tuổi 8 tháng:</strong> Đi thư viện mượn 20 cuốn sách/tuần, mẹ đọc con đọc lại luân phiên. 3
+              tuổi 7 tháng đọc hết 3/4 series Beginner's Book. <span class="page-ref">Ch 4, p. 72</span></li>
+            <li><strong>Cột mốc đọc hiểu siêu việt:</strong>
+              <br>- 4 tuổi 11 tháng: Trình độ tương đương học sinh lớp 3-4 tiểu học.
+              <br>- 7 tuổi 11 tháng: Trình độ tương đương học sinh lớp 6.
+              <br>- 10 tuổi 10 tháng: Trình độ tương đương học sinh lớp 12. Đọc xong cuốn tiểu thuyết 200 trang trong
+              vòng 2 tiếng. <span class="page-ref">Ch 4, p. 72</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <figure class="image-slot hero" style="margin-top: var(--space-4);">
+        <img src="images/ch4_steinberg.png"
+          alt="Thực nghiệm dạy trẻ đọc chữ từ sơ sinh qua thẻ từ của giáo sư Steinberg">
+      </figure>
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH IV · 9 LƯU Ý DẠY CHỮ</div>
+      <h2>Chín nguyên tắc vàng trong giáo dục ngôn ngữ</h2>
+      <div class="bullet-grid">
+        <div class="bullet-card" style="border-top: 3px solid var(--accent-emerald);">
+          <h4 style="color: var(--accent-emerald); margin-bottom: var(--space-2);">Nhóm I: Bản Chất Của Đọc & Sự Phát
+            Triển Cơ Thể</h4>
+          <div style="font-size: 0.85rem; line-height: 1.5; color: var(--text-secondary);">
+            <p style="margin-bottom: var(--space-2);"><strong>1. Trẻ 2-3 tuổi học nhanh hơn trẻ 6 tuổi:</strong> Càng
+              nhỏ tuổi càng hào hứng với chữ; trẻ lớn học chữ thường lười và ngại. <span class="page-ref">Ch 4, p.
+                73</span></p>
+            <p style="margin-bottom: var(--space-2);"><strong>2. Nói và Biết là khác nhau:</strong> Nghe hiểu ý nghĩa là
+              cốt lõi của ngôn ngữ, không cần nói ra tiếng mới là biết (tránh học nói vẹt không hiểu gì). <span
+                class="page-ref">Ch 4, p. 73</span></p>
+            <p style="margin-bottom: var(--space-2);"><strong>3. Đọc khác Viết:</strong> Viết cần phát triển cơ ngón tay
+              (thường phải 4-5 tuổi). Đọc chỉ cần thị giác nên có thể dạy từ sơ sinh. <span class="page-ref">Ch 4, p.
+                73</span></p>
+          </div>
+        </div>
+
+        <div class="bullet-card" style="border-top: 3px solid var(--accent-amber);">
+          <h4 style="color: var(--accent-amber); margin-bottom: var(--space-2);">Nhóm II: Phương Pháp Gắn Kết & Trải
+            Nghiệm Thực Tế</h4>
+          <div style="font-size: 0.85rem; line-height: 1.5; color: var(--text-secondary);">
+            <p style="margin-bottom: var(--space-2);"><strong>4. Dạy chữ gắn liền với trải nghiệm:</strong> Dạy từ ngữ
+              tương ứng với đồ vật trẻ vừa nhìn thấy hoặc chạm vào. Học từ không có nghĩa rất chán. <span
+                class="page-ref">Ch 4, p. 73</span></p>
+            <p style="margin-bottom: var(--space-2);"><strong>5. Nghe hiểu & Đọc ngay:</strong> Khi trẻ đã hiểu nghĩa
+              của từ khi nghe, lập tức cho trẻ tiếp xúc với mặt chữ của từ đó. <span class="page-ref">Ch 4, p. 73</span>
+            </p>
+            <p style="margin-bottom: var(--space-2);"><strong>6. Trò chơi ghép cặp:</strong> Dạy trẻ chơi trò ghép đồ
+              vật - chữ, tranh - chữ để tạo mối liên kết trực quan bền vững. <span class="page-ref">Ch 4, p.
+                73-74</span></p>
+          </div>
+        </div>
+
+        <div class="bullet-card" style="border-top: 3px solid var(--accent-purple);">
+          <h4 style="color: var(--accent-purple); margin-bottom: var(--space-2);">Nhóm III: Tổ Chức Thời Gian & Cấu Trúc
+            Ngôn Ngữ</h4>
+          <div style="font-size: 0.85rem; line-height: 1.5; color: var(--text-secondary);">
+            <p style="margin-bottom: var(--space-2);"><strong>7. Tránh ngữ pháp trừu tượng:</strong> Không phân tích ngữ
+              pháp, trợ từ. Tập trung dạy từ đơn và các câu văn ngắn hoàn chỉnh để trẻ hấp thụ nguyên mảng. <span
+                class="page-ref">Ch 4, p. 74</span></p>
+            <p style="margin-bottom: var(--space-2);"><strong>8. Chia nhỏ thời gian học:</strong> Mỗi cữ học chỉ kéo dài
+              2-3 phút, tổng cộng 10 phút mỗi ngày. Chia thành nhiều lần chơi game thẻ từ để trẻ không chán. <span
+                class="page-ref">Ch 4, p. 74</span></p>
+            <p style="margin-top: var(--space-3); color: var(--accent-strong); font-weight: 500;">
+              <strong>Phê phán của Shichida:</strong> Trí năng đích thực của trẻ chỉ có được bằng cách đọc sách và tự
+              ngấm. Các bài tập suy luận hay trò chơi IQ suông mà thiếu ngôn ngữ sẽ không thể tạo ra chiều sâu tinh
+              thần. <span class="page-ref">Ch 4, p. 74</span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH IV · 5 BƯỚC DẠY ĐỌC</div>
+      <h2>Quy trình năm bước dạy chữ gắn liền với suy nghĩ</h2>
+      <ul class="timeline" style="margin-top: var(--space-4);">
+        <li class="timeline-item">
+          <span class="timeline-marker">GIAI ĐOẠN CHUẨN BỊ (SỚM NHẤT TỪ 6 THÁNG TUỔI)</span>
+          <div class="timeline-body">
+            <strong>Kích ứng thị giác & Làm quen sách tranh:</strong> Dán bảng chữ cái lên tường phòng bé, lấy ngón tay
+            chỉ và phát âm rõ ràng (4-5 lần/ngày, &lt;1 phút/lần). Đọc sách tranh chữ to, ít chữ; luôn chỉ tay vào chữ
+            khi đọc chậm rãi để trẻ tạo đường phản hồi thích đọc sách và khả năng tập trung. <span class="page-ref">Ch
+              4, p. 75</span>
+          </div>
+        </li>
+        <li class="timeline-item">
+          <span class="timeline-marker">BƯỚC 1: ĐỌC ĐƠN TỪ (TỪ 6 THÁNG - 1 TUỔI)</span>
+          <div class="timeline-body">
+            <strong>Mã hóa sự vật xung quanh:</strong> Dán các thẻ từ đơn như "em bé", "xe ô tô", "bé trai" lên tường
+            hoặc dùng thẻ từ (flashcard). Vừa chỉ tay vào chữ vừa đọc to. Dạy từ mới ngay khi trẻ có trải nghiệm thực tế
+            (như tiếng còi máy bay) để ghi nhớ tức thì. <span class="page-ref">Ch 4, p. 72</span>
+          </div>
+        </li>
+        <li class="timeline-item">
+          <span class="timeline-marker">BƯỚC 2 & 3: ĐỌC CHỮ THEO HÀNG & CÂU VĂN NGẮN (1 - 2 TUỔI)</span>
+          <div class="timeline-body">
+            <strong>Liên kết cấu trúc ngôn ngữ:</strong> Cho trẻ ghép các danh từ và động từ thành câu đơn giản. Cho trẻ
+            nhận biết và đọc các câu ngắn như: <em>"Bé A chạy"</em>, <em>"Bố ngắm sao"</em>, <em>"Con gấu đứng"</em>.
+            Chơi trò chơi đố từ bằng card. <span class="page-ref">Ch 4, p. 73</span>
+          </div>
+        </li>
+        <li class="timeline-item">
+          <span class="timeline-marker">BƯỚC 4: ĐỌC ĐOẠN VĂN DÀI & SÁCH TRANH (TỪ 2 TUỔI RƯỠI)</span>
+          <div class="timeline-body">
+            <strong>Phương pháp đọc luân phiên:</strong> Mẹ chỉ tay đọc trước một dòng hoặc đoạn ngắn, sau đó bé bắt
+            chước đọc lại phần mẹ vừa đọc. Thường xuyên mượn sách thư viện (20 cuốn/lần) để tăng cường vốn từ vựng phong
+            phú. <span class="page-ref">Ch 4, p. 72</span>
+          </div>
+        </li>
+        <li class="timeline-item">
+          <span class="timeline-marker">BƯỚC 5: ĐỌC THẦM & TÓM TẮT (4 - 5 TUỔI)</span>
+          <div class="timeline-body">
+            <strong>Tư duy sâu sắc:</strong> Dạy trẻ đọc nhẩm (đọc thầm bằng mắt) lúc 4-5 tuổi để tăng tốc độ tiếp thu.
+            Đồng thời, luyện cho trẻ tập kể tóm tắt lại câu chuyện từ 2-3 tuổi để xây dựng khả năng tư duy logic và kỹ
+            năng viết văn xuất sắc khi lớn. <span class="page-ref">Ch 4, p. 78</span>
+          </div>
+        </li>
       </ul>
-      <strong>Áp dụng:</strong> Kích hoạt hệ tín hiệu thứ hai trước khi nếp nhăn vỏ não đóng khung 60-80% lúc 6 tuổi. Dạy đọc sách sớm để tạo ra trí tuệ lý tính. <span class="page-ref">Ch 4, p. 70, 74</span>
-    </div>
-  </div>
-</div>
 
-  </section>
+    </section>
 
-  <section class="slide">
-    <div class="slide-kicker">CH IV · THỰC NGHIỆM ĐỌC</div>
-    <h2>Dạy đọc trước khi biết nói &amp; Nghiên cứu Steinberg</h2>
-<div class="split-layout">
-  <div class="split-left" style="border-left-color: var(--accent-emerald); flex: 1;">
-    <h3 style="color: var(--accent-emerald); font-size: 1.2rem; margin-bottom: var(--space-3);">Thực Nghiệm Dạy Đọc Từ Sơ Sinh</h3>
-    <ul style="padding-left: var(--space-4); margin-bottom: var(--space-4); font-size: 0.9rem; line-height: 1.6; color: var(--text-secondary);">
-      <li><strong>Nguyên lý:</strong> Đọc và Nói là hai tiến trình độc lập. Trẻ chưa biết nói vẫn hiểu lời nói, do đó hoàn toàn có thể hiểu ký tự thị giác. <span class="page-ref">Ch 4, p. 71</span></li>
-      <li><strong>Kích ứng từ nôi:</strong> Dán tranh cừu, ngựa quanh cũi ngay khi xuất viện. 6 tháng dán thẻ chữ cái in màu đỏ nét đậm (rộng 7.5cm, dài 60cm). <span class="page-ref">Ch 4, p. 71</span></li>
-      <li><strong>Tích hợp sinh hoạt:</strong> Mỗi khi thay tã hoặc bế bé, bố mẹ lấy ngón tay chỉ vào chữ cái và đọc to (mỗi ngày 4-5 lần, mỗi lần vài phút). <span class="page-ref">Ch 4, p. 71</span></li>
-      <li><strong>Phương pháp thẻ từ:</strong> Viết từ đơn dán tường. Dùng thẻ card từ mới gắn liền với trải nghiệm thực tế (Ví dụ: khi nghe tiếng máy bay ồn, bế bé ra xem máy bay và viết ngay chữ "máy bay" lên card). <span class="page-ref">Ch 4, p. 72</span></li>
-    </ul>
-  </div>
+    <section class="slide">
+      <div class="slide-kicker">CH IV · LUẬT 3 THÁNG</div>
+      <h2>Quy luật 3 tháng &amp; Cơ chế bao myelin thần kinh</h2>
+      <div class="split-layout">
+        <div class="split-left" style="border-left-color: var(--accent-purple); flex: 1.1;">
+          <h3 style="color: var(--accent-purple); font-size: 1.25rem; margin-bottom: var(--space-4);">Cơ Chế Sinh Học
+            Thần Kinh</h3>
+          <ul
+            style="padding-left: var(--space-4); margin-bottom: var(--space-4); font-size: 0.95rem; line-height: 1.6; color: var(--text-secondary);">
+            <li><strong>Mạng lưới liên kết tế bào:</strong> Để trẻ ghi nhớ hay thực hiện một kỹ năng một cách vô thức và
+              trôi chảy, các tế bào thần kinh đại não phải liên kết đan chéo thành một mạng lưới thống nhất. <span
+                class="page-ref">Ch 4, p. 79</span></li>
+            <li><strong>Bao Myelin (Màng chất béo):</strong> Nhóm dây liên kết thần kinh này cần được bao bọc bởi một
+              màng chất béo (myelin sheath) để dẫn truyền tín hiệu điện cực nhanh và chống làm rối với các dây khác.
+              <span class="page-ref">Ch 4, p. 79</span>
+            </li>
+            <li><strong>Ngưỡng 100 lần kích ứng:</strong> Cần khoảng 100 lần kích thích xung thần kinh lặp đi lặp lại để
+              kích hoạt tế bào Schwann tạo ra lớp bao myelin vững chắc xung quanh sợi trục. <span class="page-ref">Ch 4,
+                p. 79</span></li>
+            <li><strong>Ranh giới thời gian 3 tháng:</strong> Tiến trình sinh hóa bọc bao myelin cần thời gian phát
+              triển tự nhiên của cơ thể, tối thiểu là 3 tháng (không thể nhồi nhét kích ứng liên tục 100 lần trong một
+              ngày). <span class="page-ref">Ch 4, p. 79</span></li>
+          </ul>
+        </div>
 
-  <div class="split-right" style="border-left-color: var(--accent-red); flex: 1;">
-    <h3 style="color: var(--accent-red); font-size: 1.2rem; margin-bottom: var(--space-3);">Cột Mốc Phát Triển Của Bé K</h3>
-    <ul style="padding-left: var(--space-4); margin-bottom: var(--space-4); font-size: 0.9rem; line-height: 1.6; color: var(--text-secondary);">
-      <li><strong>10 tháng tuổi:</strong> Hiểu cấu trúc định vị không gian (nhìn ngay ra chỗ bố khi được hỏi <em>"bố đâu?"</em>). <span class="page-ref">Ch 4, p. 71</span></li>
-      <li><strong>2 tuổi:</strong> Chậm biết nói (chưa nói sõi tên mình) nhưng đã đọc hiểu và chỉ đúng 48 từ trên card. 2.5 tuổi đọc được 181 từ. <span class="page-ref">Ch 4, p. 72</span></li>
-      <li><strong>2 tuổi 8 tháng:</strong> Đi thư viện mượn 20 cuốn sách/tuần, mẹ đọc con đọc lại luân phiên. 3 tuổi 7 tháng đọc hết 3/4 series Beginner's Book. <span class="page-ref">Ch 4, p. 72</span></li>
-      <li><strong>Cột mốc đọc hiểu siêu việt:</strong>
-        <br>- 4 tuổi 11 tháng: Trình độ tương đương học sinh lớp 3-4 tiểu học.
-        <br>- 7 tuổi 11 tháng: Trình độ tương đương học sinh lớp 6.
-        <br>- 10 tuổi 10 tháng: Trình độ tương đương học sinh lớp 12. Đọc xong cuốn tiểu thuyết 200 trang trong vòng 2 tiếng. <span class="page-ref">Ch 4, p. 72</span>
-      </li>
-    </ul>
-  </div>
-</div>
+        <div class="split-right" style="border-left-color: var(--accent-emerald); flex: 0.9;">
+          <h3 style="color: var(--accent-emerald); font-size: 1.25rem; margin-bottom: var(--space-4);">Cẩm Nang Kỷ Luật
+            3 Tháng</h3>
+          <ul
+            style="padding-left: var(--space-4); margin-bottom: var(--space-4); font-size: 0.95rem; line-height: 1.6; color: var(--text-secondary);">
+            <li><strong>Kiên trì không nôn nóng:</strong> Cha mẹ cần hiểu rằng việc nhớ 49 chữ cái, thuộc bảng cửu
+              chương, hay tập đi vệ sinh... đều cần ít nhất 3 tháng lặp lại đều đặn mỗi ngày mới có thể thành phản xạ vô
+              thức. <span class="page-ref">Ch 4, p. 79</span></li>
+            <li><strong>Đường cong ẩn lúc đầu:</strong> Ở giai đoạn sơ sinh (gần 0 tuổi), thành quả giáo dục sớm hầu như
+              không biểu hiện ra bên ngoài ở tháng đầu tiên. Cha mẹ cần nhẫn nại duy trì cữ học thẻ từ đều đặn. <span
+                class="page-ref">Ch 4, p. 78</span></li>
+            <li><strong>Ví dụ vận động:</strong> Luyện lộn sà ngang, đánh bóng bàn chính xác hướng, hay học bảng cửu
+              chương đều mất đúng 3 tháng để chuyển hóa từ hành động cố gắng sang thói quen tự động. <span
+                class="page-ref">Ch 4, p. 79</span></li>
+          </ul>
+        </div>
+      </div>
 
-<figure class="image-slot hero" style="margin-top: var(--space-4);">
-  <img src="images/ch4_steinberg.png" alt="Thực nghiệm dạy trẻ đọc chữ từ sơ sinh qua thẻ từ của giáo sư Steinberg">
-</figure>
+      <div class="callout" style="border-left-color: var(--accent-amber); margin-top: var(--space-4);">
+        <div class="callout-icon">💡</div>
+        <div class="callout-content" style="font-size: 0.95rem; line-height: 1.6;">
+          <strong>Bài học hành động:</strong> Mọi chương trình rèn luyện giáo dục sớm chỉ thực sự bắt đầu có kết quả sau
+          90 ngày. Việc thay đổi giáo trình liên tục hoặc bỏ cuộc sau một vài tuần vì nghĩ "con không có năng khiếu" chỉ
+          chứng tỏ cha mẹ thiếu hiểu biết về cơ chế vận hành vật lý của não bộ. <span class="page-ref">Ch 4, p.
+            79-80</span>
+        </div>
+      </div>
 
-  </section>
+    </section>
 
-  <section class="slide">
-    <div class="slide-kicker">CH IV · 9 LƯU Ý DẠY CHỮ</div>
-    <h2>Chín nguyên tắc vàng trong giáo dục ngôn ngữ</h2>
-<div class="bullet-grid">
-  <div class="bullet-card" style="border-top: 3px solid var(--accent-emerald);">
-    <h4 style="color: var(--accent-emerald); margin-bottom: var(--space-2);">Nhóm I: Bản Chất Của Đọc & Sự Phát Triển Cơ Thể</h4>
-    <div style="font-size: 0.85rem; line-height: 1.5; color: var(--text-secondary);">
-      <p style="margin-bottom: var(--space-2);"><strong>1. Trẻ 2-3 tuổi học nhanh hơn trẻ 6 tuổi:</strong> Càng nhỏ tuổi càng hào hứng với chữ; trẻ lớn học chữ thường lười và ngại. <span class="page-ref">Ch 4, p. 73</span></p>
-      <p style="margin-bottom: var(--space-2);"><strong>2. Nói và Biết là khác nhau:</strong> Nghe hiểu ý nghĩa là cốt lõi của ngôn ngữ, không cần nói ra tiếng mới là biết (tránh học nói vẹt không hiểu gì). <span class="page-ref">Ch 4, p. 73</span></p>
-      <p style="margin-bottom: var(--space-2);"><strong>3. Đọc khác Viết:</strong> Viết cần phát triển cơ ngón tay (thường phải 4-5 tuổi). Đọc chỉ cần thị giác nên có thể dạy từ sơ sinh. <span class="page-ref">Ch 4, p. 73</span></p>
-    </div>
-  </div>
+    <section class="slide">
+      <div class="slide-kicker">CH IV · TRUYỆN CỔ TÍCH</div>
+      <h2>Giá trị của truyện cổ tích phi thực tế đối với sáng tạo</h2>
+      <div class="content-card">
+        <h3 style="color: var(--accent-amber); font-size: 1.35rem; margin-bottom: var(--space-4);">1. Mở Rộng Thế Giới
+          Trừu Tượng & Sức Sáng Tạo</h3>
+        <div class="summary-text" style="font-size: 1.05rem; line-height: 1.7; color: var(--text-primary);">
+          <p>Nhiều bậc phụ huynh thực dụng từ chối kể truyện cổ tích vì cho rằng chúng thiếu thực tế và nói dối (cậu bé
+            sinh ra từ quả đào, vãi tro hoa nở). Shichida khẳng định đây là sai lầm nghiêm trọng:</p>
+          <ul style="padding-left: var(--space-6); margin-bottom: var(--space-4);">
+            <li><strong>Kích hoạt trí tưởng tượng:</strong> Các tình tiết phi hiện thực buộc não bộ trẻ phải hoạt động
+              để lý giải và dựng lên thế giới hư cấu, không tưởng trong tâm trí. <span class="page-ref">Ch 4, p.
+                76</span></li>
+            <li><strong>Cội nguồn nghệ thuật & phát minh:</strong> Mọi tác phẩm văn học, hội họa hay phát minh khoa học
+              đều xuất phát từ trí tưởng tượng phi hiện thực. Người quá trần tục, thực tế sẽ không thể cảm thụ nghệ
+              thuật và nghèo nàn óc sáng tạo. <span class="page-ref">Ch 4, p. 76</span></li>
+          </ul>
+        </div>
+      </div>
 
-  <div class="bullet-card" style="border-top: 3px solid var(--accent-amber);">
-    <h4 style="color: var(--accent-amber); margin-bottom: var(--space-2);">Nhóm II: Phương Pháp Gắn Kết & Trải Nghiệm Thực Tế</h4>
-    <div style="font-size: 0.85rem; line-height: 1.5; color: var(--text-secondary);">
-      <p style="margin-bottom: var(--space-2);"><strong>4. Dạy chữ gắn liền với trải nghiệm:</strong> Dạy từ ngữ tương ứng với đồ vật trẻ vừa nhìn thấy hoặc chạm vào. Học từ không có nghĩa rất chán. <span class="page-ref">Ch 4, p. 73</span></p>
-      <p style="margin-bottom: var(--space-2);"><strong>5. Nghe hiểu & Đọc ngay:</strong> Khi trẻ đã hiểu nghĩa của từ khi nghe, lập tức cho trẻ tiếp xúc với mặt chữ của từ đó. <span class="page-ref">Ch 4, p. 73</span></p>
-      <p style="margin-bottom: var(--space-2);"><strong>6. Trò chơi ghép cặp:</strong> Dạy trẻ chơi trò ghép đồ vật - chữ, tranh - chữ để tạo mối liên kết trực quan bền vững. <span class="page-ref">Ch 4, p. 73-74</span></p>
-    </div>
-  </div>
+      <div class="content-card">
+        <h3 style="color: var(--accent-purple); font-size: 1.35rem; margin-bottom: var(--space-4);">2. Nuôi Dưỡng Trí
+          Tuệ Cảm Xúc (EQ) & Kỹ Năng Lắng Nghe</h3>
+        <div class="summary-text" style="font-size: 1.05rem; line-height: 1.7; color: var(--text-primary);">
+          <p>Truyện cổ tích do mẹ kể trực tiếp mang lại hai lợi ích tinh thần to lớn:</p>
+          <ul style="padding-left: var(--space-6); margin-bottom: var(--space-4);">
+            <li><strong>Nuôi dưỡng tấm lòng cảm nhận:</strong> Nghe mẹ kể chuyện diễn cảm giúp trẻ đồng cảm với nhân vật
+              - biết lo lắng, xúc động, hồi hộp hay khóc cười. Trí tuệ cảm xúc (EQ) của trẻ được lớn dần lên từ đó.
+              <span class="page-ref">Ch 4, p. 76</span>
+            </li>
+            <li><strong>Rèn luyện thói quen tập trung lắng nghe:</strong> Trẻ được rèn luyện thói quen lắng nghe người
+              khác nói từ nhỏ. Khi đi học tiểu học, những trẻ này sẽ biết chú ý lắng nghe lời thầy cô giảng bài trên lớp
+              thay vì xao nhãng. <span class="page-ref">Ch 4, p. 76</span></li>
+          </ul>
+        </div>
+      </div>
 
-  <div class="bullet-card" style="border-top: 3px solid var(--accent-purple);">
-    <h4 style="color: var(--accent-purple); margin-bottom: var(--space-2);">Nhóm III: Tổ Chức Thời Gian & Cấu Trúc Ngôn Ngữ</h4>
-    <div style="font-size: 0.85rem; line-height: 1.5; color: var(--text-secondary);">
-      <p style="margin-bottom: var(--space-2);"><strong>7. Tránh ngữ pháp trừu tượng:</strong> Không phân tích ngữ pháp, trợ từ. Tập trung dạy từ đơn và các câu văn ngắn hoàn chỉnh để trẻ hấp thụ nguyên mảng. <span class="page-ref">Ch 4, p. 74</span></p>
-      <p style="margin-bottom: var(--space-2);"><strong>8. Chia nhỏ thời gian học:</strong> Mỗi cữ học chỉ kéo dài 2-3 phút, tổng cộng 10 phút mỗi ngày. Chia thành nhiều lần chơi game thẻ từ để trẻ không chán. <span class="page-ref">Ch 4, p. 74</span></p>
-      <p style="margin-top: var(--space-3); color: var(--accent-strong); font-weight: 500;">
-        <strong>Phê phán của Shichida:</strong> Trí năng đích thực của trẻ chỉ có được bằng cách đọc sách và tự ngấm. Các bài tập suy luận hay trò chơi IQ suông mà thiếu ngôn ngữ sẽ không thể tạo ra chiều sâu tinh thần. <span class="page-ref">Ch 4, p. 74</span>
-      </p>
-    </div>
-  </div>
-</div>
+    </section>
 
-  </section>
+    <section class="slide">
+      <div class="slide-kicker">CH IV · BA KHÔNG GIÁO DỤC</div>
+      <h2>Nguyên tắc Ba Không: Không dọa dẫm, cấm đoán, phủ nhận</h2>
+      <div class="bullet-grid">
+        <div class="bullet-card" style="border-top: 3px solid var(--accent-red);">
+          <h3 style="color: var(--accent-red); font-size: 1.15rem; margin-bottom: var(--space-2);">1. Không Dọa Dẫm</h3>
+          <div style="font-size: 0.9rem; line-height: 1.6; color: var(--text-secondary);">
+            <p><strong>Hành vi cần tránh:</strong> Dọa dẫm trẻ bằng ông ba bị, quỷ thần hoặc mẹ mìn bắt đi (<em>"không
+                ngoan quỷ nó đến bắt đấy!"</em>). <span class="page-ref">Ch 4, p. 77</span></p>
+            <p><strong>Hậu quả tâm lý:</strong> Gây vết thương sâu sắc trong lòng trẻ. Trẻ lớn lên nhút nhát, sợ hãi vô
+              cớ, học lớp 3-4 vẫn không dám tự đi toilet một mình. <span class="page-ref">Ch 4, p. 77</span></p>
+          </div>
+        </div>
 
-  <section class="slide">
-    <div class="slide-kicker">CH IV · 5 BƯỚC DẠY ĐỌC</div>
-    <h2>Quy trình năm bước dạy chữ gắn liền với suy nghĩ</h2>
-<ul class="timeline" style="margin-top: var(--space-4);">
-  <li class="timeline-item">
-    <span class="timeline-marker">GIAI ĐOẠN CHUẨN BỊ (SỚM NHẤT TỪ 6 THÁNG TUỔI)</span>
-    <div class="timeline-body">
-      <strong>Kích ứng thị giác & Làm quen sách tranh:</strong> Dán bảng chữ cái lên tường phòng bé, lấy ngón tay chỉ và phát âm rõ ràng (4-5 lần/ngày, &lt;1 phút/lần). Đọc sách tranh chữ to, ít chữ; luôn chỉ tay vào chữ khi đọc chậm rãi để trẻ tạo đường phản hồi thích đọc sách và khả năng tập trung. <span class="page-ref">Ch 4, p. 75</span>
-    </div>
-  </li>
-  <li class="timeline-item">
-    <span class="timeline-marker">BƯỚC 1: ĐỌC ĐƠN TỪ (TỪ 6 THÁNG - 1 TUỔI)</span>
-    <div class="timeline-body">
-      <strong>Mã hóa sự vật xung quanh:</strong> Dán các thẻ từ đơn như "em bé", "xe ô tô", "bé trai" lên tường hoặc dùng thẻ từ (flashcard). Vừa chỉ tay vào chữ vừa đọc to. Dạy từ mới ngay khi trẻ có trải nghiệm thực tế (như tiếng còi máy bay) để ghi nhớ tức thì. <span class="page-ref">Ch 4, p. 72</span>
-    </div>
-  </li>
-  <li class="timeline-item">
-    <span class="timeline-marker">BƯỚC 2 & 3: ĐỌC CHỮ THEO HÀNG & CÂU VĂN NGẮN (1 - 2 TUỔI)</span>
-    <div class="timeline-body">
-      <strong>Liên kết cấu trúc ngôn ngữ:</strong> Cho trẻ ghép các danh từ và động từ thành câu đơn giản. Cho trẻ nhận biết và đọc các câu ngắn như: <em>"Bé A chạy"</em>, <em>"Bố ngắm sao"</em>, <em>"Con gấu đứng"</em>. Chơi trò chơi đố từ bằng card. <span class="page-ref">Ch 4, p. 73</span>
-    </div>
-  </li>
-  <li class="timeline-item">
-    <span class="timeline-marker">BƯỚC 4: ĐỌC ĐOẠN VĂN DÀI & SÁCH TRANH (TỪ 2 TUỔI RƯỠI)</span>
-    <div class="timeline-body">
-      <strong>Phương pháp đọc luân phiên:</strong> Mẹ chỉ tay đọc trước một dòng hoặc đoạn ngắn, sau đó bé bắt chước đọc lại phần mẹ vừa đọc. Thường xuyên mượn sách thư viện (20 cuốn/lần) để tăng cường vốn từ vựng phong phú. <span class="page-ref">Ch 4, p. 72</span>
-    </div>
-  </li>
-  <li class="timeline-item">
-    <span class="timeline-marker">BƯỚC 5: ĐỌC THẦM & TÓM TẮT (4 - 5 TUỔI)</span>
-    <div class="timeline-body">
-      <strong>Tư duy sâu sắc:</strong> Dạy trẻ đọc nhẩm (đọc thầm bằng mắt) lúc 4-5 tuổi để tăng tốc độ tiếp thu. Đồng thời, luyện cho trẻ tập kể tóm tắt lại câu chuyện từ 2-3 tuổi để xây dựng khả năng tư duy logic và kỹ năng viết văn xuất sắc khi lớn. <span class="page-ref">Ch 4, p. 78</span>
-    </div>
-  </li>
-</ul>
+        <div class="bullet-card" style="border-top: 3px solid var(--accent-red);">
+          <h3 style="color: var(--accent-red); font-size: 1.15rem; margin-bottom: var(--space-2);">2. Không Cấm Đoán
+          </h3>
+          <div style="font-size: 0.9rem; line-height: 1.6; color: var(--text-secondary);">
+            <p><strong>Hành vi cần tránh:</strong> Vô thức ngăn cấm trẻ khám phá (<em>"Nguy hiểm lắm, cấm dùng
+                kéo!"</em>, <em>"không được xé giấy!"</em>). <span class="page-ref">Ch 4, p. 77</span></p>
+            <p><strong>Hậu quả tâm lý:</strong> Triệt hạ mầm mống tích cực, tò mò của trẻ. Trẻ lên tiểu học thụ động,
+              vụng về, rời mắt cha mẹ là gặp lo lắng. <span class="page-ref">Ch 4, p. 77</span></p>
+            <p><strong>Giải pháp:</strong> Ngồi bên cạnh giám sát chặt chẽ khi con cắt giấy bằng kéo. Cho con tự trải
+              nghiệm các nguy cơ nhỏ để tự học. <span class="page-ref">Ch 4, p. 77</span></p>
+          </div>
+        </div>
 
-  </section>
+        <div class="bullet-card" style="border-top: 3px solid var(--accent-red);">
+          <h3 style="color: var(--accent-red); font-size: 1.15rem; margin-bottom: var(--space-2);">3. Không Phủ Nhận
+          </h3>
+          <div style="font-size: 0.9rem; line-height: 1.6; color: var(--text-secondary);">
+            <p><strong>Hành vi cần tránh:</strong> Than vãn, phủ nhận con trước mặt người khác (<em>"Nó chả nghe
+                lời"</em>, <em>"con tôi chả chịu ngồi yên"</em>). <span class="page-ref">Ch 4, p. 78</span></p>
+            <p><strong>Hậu quả tâm lý:</strong> Trẻ nghe thấy sẽ bị tự kỷ ám thị. Trẻ tự động điều chỉnh nhân cách và
+              lớn lên trở thành đứa bé đúng hệt như lời phủ nhận của mẹ. <span class="page-ref">Ch 4, p. 78</span></p>
+          </div>
+        </div>
+      </div>
 
-  <section class="slide">
-    <div class="slide-kicker">CH IV · LUẬT 3 THÁNG</div>
-    <h2>Quy luật 3 tháng &amp; Cơ chế bao myelin thần kinh</h2>
-<div class="split-layout">
-  <div class="split-left" style="border-left-color: var(--accent-purple); flex: 1.1;">
-    <h3 style="color: var(--accent-purple); font-size: 1.25rem; margin-bottom: var(--space-4);">Cơ Chế Sinh Học Thần Kinh</h3>
-    <ul style="padding-left: var(--space-4); margin-bottom: var(--space-4); font-size: 0.95rem; line-height: 1.6; color: var(--text-secondary);">
-      <li><strong>Mạng lưới liên kết tế bào:</strong> Để trẻ ghi nhớ hay thực hiện một kỹ năng một cách vô thức và trôi chảy, các tế bào thần kinh đại não phải liên kết đan chéo thành một mạng lưới thống nhất. <span class="page-ref">Ch 4, p. 79</span></li>
-      <li><strong>Bao Myelin (Màng chất béo):</strong> Nhóm dây liên kết thần kinh này cần được bao bọc bởi một màng chất béo (myelin sheath) để dẫn truyền tín hiệu điện cực nhanh và chống làm rối với các dây khác. <span class="page-ref">Ch 4, p. 79</span></li>
-      <li><strong>Ngưỡng 100 lần kích ứng:</strong> Cần khoảng 100 lần kích thích xung thần kinh lặp đi lặp lại để kích hoạt tế bào Schwann tạo ra lớp bao myelin vững chắc xung quanh sợi trục. <span class="page-ref">Ch 4, p. 79</span></li>
-      <li><strong>Ranh giới thời gian 3 tháng:</strong> Tiến trình sinh hóa bọc bao myelin cần thời gian phát triển tự nhiên của cơ thể, tối thiểu là 3 tháng (không thể nhồi nhét kích ứng liên tục 100 lần trong một ngày). <span class="page-ref">Ch 4, p. 79</span></li>
-    </ul>
-  </div>
+      <div class="callout" style="border-left-color: var(--accent-red); margin-top: var(--space-4);">
+        <div class="callout-icon">⚠️</div>
+        <div class="callout-content" style="font-size: 0.95rem; line-height: 1.6;">
+          <strong>Thông điệp cốt lõi:</strong> Hãy tôn trọng nhu cầu trải nghiệm và sự tự tôn của trẻ. Kỷ luật tích cực
+          đòi hỏi cha mẹ thay thế từ cấm đoán bằng sự đồng hành giám sát, thay thế lời dọa dẫm bằng giải thích, và loại
+          bỏ hoàn toàn việc nói xấu con trước mặt người ngoài. <span class="page-ref">Ch 4, p. 77, 78</span>
+        </div>
+      </div>
 
-  <div class="split-right" style="border-left-color: var(--accent-emerald); flex: 0.9;">
-    <h3 style="color: var(--accent-emerald); font-size: 1.25rem; margin-bottom: var(--space-4);">Cẩm Nang Kỷ Luật 3 Tháng</h3>
-    <ul style="padding-left: var(--space-4); margin-bottom: var(--space-4); font-size: 0.95rem; line-height: 1.6; color: var(--text-secondary);">
-      <li><strong>Kiên trì không nôn nóng:</strong> Cha mẹ cần hiểu rằng việc nhớ 49 chữ cái, thuộc bảng cửu chương, hay tập đi vệ sinh... đều cần ít nhất 3 tháng lặp lại đều đặn mỗi ngày mới có thể thành phản xạ vô thức. <span class="page-ref">Ch 4, p. 79</span></li>
-      <li><strong>Đường cong ẩn lúc đầu:</strong> Ở giai đoạn sơ sinh (gần 0 tuổi), thành quả giáo dục sớm hầu như không biểu hiện ra bên ngoài ở tháng đầu tiên. Cha mẹ cần nhẫn nại duy trì cữ học thẻ từ đều đặn. <span class="page-ref">Ch 4, p. 78</span></li>
-      <li><strong>Ví dụ vận động:</strong> Luyện lộn sà ngang, đánh bóng bàn chính xác hướng, hay học bảng cửu chương đều mất đúng 3 tháng để chuyển hóa từ hành động cố gắng sang thói quen tự động. <span class="page-ref">Ch 4, p. 79</span></li>
-    </ul>
-  </div>
-</div>
+    </section>
 
-<div class="callout" style="border-left-color: var(--accent-amber); margin-top: var(--space-4);">
-  <div class="callout-icon">💡</div>
-  <div class="callout-content" style="font-size: 0.95rem; line-height: 1.6;">
-    <strong>Bài học hành động:</strong> Mọi chương trình rèn luyện giáo dục sớm chỉ thực sự bắt đầu có kết quả sau 90 ngày. Việc thay đổi giáo trình liên tục hoặc bỏ cuộc sau một vài tuần vì nghĩ "con không có năng khiếu" chỉ chứng tỏ cha mẹ thiếu hiểu biết về cơ chế vận hành vật lý của não bộ. <span class="page-ref">Ch 4, p. 79-80</span>
-  </div>
-</div>
+    <section class="slide">
+      <div class="slide-kicker">CH IV · KHEN NGỢI ĐÚNG CÁCH</div>
+      <h2>Nghệ thuật khen ngợi hành động cụ thể</h2>
+      <div class="split-layout">
+        <div class="split-left" style="border-left-color: var(--accent-red);">
+          <h3 style="color: var(--accent-red); font-size: 1.25rem; margin-bottom: var(--space-4);">Khen Ngợi Tư Chất
+            (Sai lầm)</h3>
+          <ul
+            style="padding-left: var(--space-4); margin-bottom: var(--space-4); font-size: 0.95rem; line-height: 1.6; color: var(--text-secondary);">
+            <li><strong>Cách nói phổ biến:</strong> Khen ngợi hời hợt, chung chung về tư chất của trẻ: <em>"Con nhà tôi
+                cừ khôi thế!"</em>, <em>"Con thông minh quá!"</em>. <span class="page-ref">Ch 4, p. 78</span></li>
+            <li><strong>Cơ chế tác động:</strong> Trẻ tin rằng tài năng của mình là mặc định, không cần cố gắng. <span
+                class="page-ref">Ch 4, p. 78</span></li>
+            <li><strong>Hệ quả tiêu cực:</strong> Trẻ sinh ra tự cao tự đại, kiêu ngạo, sợ đối mặt với thất bại (vì sợ
+              mất nhãn "thông minh"), lười biếng và thiếu kiên trì. <span class="page-ref">Ch 4, p. 78</span></li>
+          </ul>
+        </div>
 
-  </section>
+        <div class="split-right" style="border-left-color: var(--accent-emerald);">
+          <h3 style="color: var(--accent-emerald); font-size: 1.25rem; margin-bottom: var(--space-4);">Khen Ngợi Hành
+            Động & Nỗ Lực (Đúng đắn)</h3>
+          <ul
+            style="padding-left: var(--space-4); margin-bottom: var(--space-4); font-size: 0.95rem; line-height: 1.6; color: var(--text-secondary);">
+            <li><strong>Cách nói khuyến nghị:</strong> Khen ngợi hành động cụ thể và quá trình kiên trì: <em>"Con đã làm
+                rất tốt đấy! Cố gắng ghê cơ!"</em>. <span class="page-ref">Ch 4, p. 78</span></li>
+            <li><strong>Cơ chế tác động:</strong> Ghi nhận công sức, sự kiên nhẫn và nỗ lực thực tế vượt qua khó khăn
+              của con. <span class="page-ref">Ch 4, p. 78</span></li>
+            <li><strong>Hệ quả tích cực:</strong> Trẻ hiểu rằng nỗ lực mang lại thành quả. Lớn lên trẻ tự tin thử thách
+              cái mới, kiên định và biết công nhận, tôn trọng nỗ lực của người khác. <span class="page-ref">Ch 4, p.
+                78</span></li>
+          </ul>
+        </div>
+      </div>
 
-  <section class="slide">
-    <div class="slide-kicker">CH IV · TRUYỆN CỔ TÍCH</div>
-    <h2>Giá trị của truyện cổ tích phi thực tế đối với sáng tạo</h2>
-<div class="content-card">
-  <h3 style="color: var(--accent-amber); font-size: 1.35rem; margin-bottom: var(--space-4);">1. Mở Rộng Thế Giới Trừu Tượng & Sức Sáng Tạo</h3>
-  <div class="summary-text" style="font-size: 1.05rem; line-height: 1.7; color: var(--text-primary);">
-    <p>Nhiều bậc phụ huynh thực dụng từ chối kể truyện cổ tích vì cho rằng chúng thiếu thực tế và nói dối (cậu bé sinh ra từ quả đào, vãi tro hoa nở). Shichida khẳng định đây là sai lầm nghiêm trọng:</p>
-    <ul style="padding-left: var(--space-6); margin-bottom: var(--space-4);">
-      <li><strong>Kích hoạt trí tưởng tượng:</strong> Các tình tiết phi hiện thực buộc não bộ trẻ phải hoạt động để lý giải và dựng lên thế giới hư cấu, không tưởng trong tâm trí. <span class="page-ref">Ch 4, p. 76</span></li>
-      <li><strong>Cội nguồn nghệ thuật & phát minh:</strong> Mọi tác phẩm văn học, hội họa hay phát minh khoa học đều xuất phát từ trí tưởng tượng phi hiện thực. Người quá trần tục, thực tế sẽ không thể cảm thụ nghệ thuật và nghèo nàn óc sáng tạo. <span class="page-ref">Ch 4, p. 76</span></li>
-    </ul>
-  </div>
-</div>
+      <div class="quote-block" style="border-left-color: var(--accent-amber); margin-top: var(--space-4);">
+        <div class="quote-text">
+          "Chúng ta không khen các con, mà khen hành động/ việc làm mà các con làm được... trẻ lớn lên cũng biết công
+          nhận nỗ lực cố gắng của người khác."
+        </div>
+        <div class="quote-context">
+          <strong>Bản chất của lời khen ngợi:</strong> Khen ngợi là công cụ định hình tư duy phát triển (growth
+          mindset). Cha mẹ thông thái khen ngợi con đường con đi, chứ không khen ngợi điểm xuất phát bẩm sinh. <span
+            class="page-ref">Ch 4, p. 78</span>
+        </div>
+      </div>
 
-<div class="content-card">
-  <h3 style="color: var(--accent-purple); font-size: 1.35rem; margin-bottom: var(--space-4);">2. Nuôi Dưỡng Trí Tuệ Cảm Xúc (EQ) & Kỹ Năng Lắng Nghe</h3>
-  <div class="summary-text" style="font-size: 1.05rem; line-height: 1.7; color: var(--text-primary);">
-    <p>Truyện cổ tích do mẹ kể trực tiếp mang lại hai lợi ích tinh thần to lớn:</p>
-    <ul style="padding-left: var(--space-6); margin-bottom: var(--space-4);">
-      <li><strong>Nuôi dưỡng tấm lòng cảm nhận:</strong> Nghe mẹ kể chuyện diễn cảm giúp trẻ đồng cảm với nhân vật - biết lo lắng, xúc động, hồi hộp hay khóc cười. Trí tuệ cảm xúc (EQ) của trẻ được lớn dần lên từ đó. <span class="page-ref">Ch 4, p. 76</span></li>
-      <li><strong>Rèn luyện thói quen tập trung lắng nghe:</strong> Trẻ được rèn luyện thói quen lắng nghe người khác nói từ nhỏ. Khi đi học tiểu học, những trẻ này sẽ biết chú ý lắng nghe lời thầy cô giảng bài trên lớp thay vì xao nhãng. <span class="page-ref">Ch 4, p. 76</span></li>
-    </ul>
-  </div>
-</div>
+    </section>
 
-  </section>
+    <section class="slide">
+      <div class="slide-kicker">CH IV · NGUY HẠI TỪ TV</div>
+      <h2>Tác hại sinh học và suy nhược thùy trán của Tivi</h2>
+      <div class="content-card" style="border-left: 4px solid var(--accent-red); margin-top: var(--space-2);">
+        <h3 style="color: var(--accent-red); font-size: 1.35rem; margin-bottom: var(--space-4);">Cảnh Báo Đanh Thép:
+          "Xin Đừng Gửi Con Cho Tivi!"</h3>
+        <div class="summary-text" style="font-size: 1.05rem; line-height: 1.7; color: var(--text-primary);">
+          <p>Giáo sư Shichida Makoto dẫn chứng các cảnh báo khoa học thời bấy giờ để kịch liệt phản đối việc cho trẻ sơ
+            sinh tiếp xúc với màn hình tivi:</p>
 
-  <section class="slide">
-    <div class="slide-kicker">CH IV · BA KHÔNG GIÁO DỤC</div>
-    <h2>Nguyên tắc Ba Không: Không dọa dẫm, cấm đoán, phủ nhận</h2>
-<div class="bullet-grid">
-  <div class="bullet-card" style="border-top: 3px solid var(--accent-red);">
-    <h3 style="color: var(--accent-red); font-size: 1.15rem; margin-bottom: var(--space-2);">1. Không Dọa Dẫm</h3>
-    <div style="font-size: 0.9rem; line-height: 1.6; color: var(--text-secondary);">
-      <p><strong>Hành vi cần tránh:</strong> Dọa dẫm trẻ bằng ông ba bị, quỷ thần hoặc mẹ mìn bắt đi (<em>"không ngoan quỷ nó đến bắt đấy!"</em>). <span class="page-ref">Ch 4, p. 77</span></p>
-      <p><strong>Hậu quả tâm lý:</strong> Gây vết thương sâu sắc trong lòng trẻ. Trẻ lớn lên nhút nhát, sợ hãi vô cớ, học lớp 3-4 vẫn không dám tự đi toilet một mình. <span class="page-ref">Ch 4, p. 77</span></p>
-    </div>
-  </div>
+          <div
+            style="background: var(--danger-soft); padding: var(--space-4); border-radius: var(--radius-md); margin-bottom: var(--space-4);">
+            <strong style="color: var(--danger);">Tác hại thần kinh sinh học cụ thể:</strong>
+            <ul
+              style="padding-left: var(--space-5); margin-top: var(--space-2); font-size: 0.95rem; color: var(--text-primary);">
+              <li style="margin-bottom: var(--space-1);"><strong>Hủy hoại cấu trúc đại não:</strong> Nghiên cứu của Hiệp
+                hội Giáo sư Đại học Quốc gia Úc khẳng định việc cho trẻ sơ sinh xem TV phá hoại cấu trúc não bộ non nớt.
+                <span class="page-ref">Ch 4, p. 78</span>
+              </li>
+              <li style="margin-bottom: var(--space-1);"><strong>Hại thùy trước trán:</strong> Tia âm cực từ màn hình TV
+                phóng ra làm suy yếu chức năng thùy trước trán (trung tâm tư duy và ý chí của con người). <span
+                  class="page-ref">Ch 4, p. 78</span></li>
+              <li style="margin-bottom: var(--space-1);"><strong>Nguy cơ bệnh máu trắng:</strong> Tích tụ tia bức xạ từ
+                TV 220V trong nhiều năm có thể làm tăng nguy cơ mắc bệnh máu trắng khi lớn. <span class="page-ref">Ch 4,
+                  p. 78</span></li>
+              <li><strong>Nguy cơ tự kỷ & chậm nói:</strong> Nghiên cứu tại Nhật chỉ ra mối tương quan trực tiếp giữa
+                thời gian xem TV thời sơ sinh với xu hướng tự kỷ và chậm phản xạ giao tiếp ở trẻ. <span
+                  class="page-ref">Ch 4, p. 78</span></li>
+            </ul>
+          </div>
 
-  <div class="bullet-card" style="border-top: 3px solid var(--accent-red);">
-    <h3 style="color: var(--accent-red); font-size: 1.15rem; margin-bottom: var(--space-2);">2. Không Cấm Đoán</h3>
-    <div style="font-size: 0.9rem; line-height: 1.6; color: var(--text-secondary);">
-      <p><strong>Hành vi cần tránh:</strong> Vô thức ngăn cấm trẻ khám phá (<em>"Nguy hiểm lắm, cấm dùng kéo!"</em>, <em>"không được xé giấy!"</em>). <span class="page-ref">Ch 4, p. 77</span></p>
-      <p><strong>Hậu quả tâm lý:</strong> Triệt hạ mầm mống tích cực, tò mò của trẻ. Trẻ lên tiểu học thụ động, vụng về, rời mắt cha mẹ là gặp lo lắng. <span class="page-ref">Ch 4, p. 77</span></p>
-      <p><strong>Giải pháp:</strong> Ngồi bên cạnh giám sát chặt chẽ khi con cắt giấy bằng kéo. Cho con tự trải nghiệm các nguy cơ nhỏ để tự học. <span class="page-ref">Ch 4, p. 77</span></p>
-    </div>
-  </div>
+          <div
+            style="border-top: 1px solid var(--border-strong); padding-top: var(--space-3); font-size: 0.95rem; color: var(--text-secondary);">
+            <strong>Góc nhìn hiện đại (Năm 2026):</strong> Dù lý thuyết về "tia âm cực gây bệnh máu trắng" đã lỗi thời
+            (do màn hình CRT đã được thay bằng LCD/OLED phát xạ thấp), nhưng các cảnh báo về **tác hại tâm lý thần
+            kinh** (tự kỷ giả, chậm ngôn ngữ, giảm chú ý ADHD) do tiếp xúc màn hình một chiều thụ động dưới 2 tuổi vẫn
+            hoàn toàn chính xác theo khuyến nghị của WHO và Viện Nhi khoa Hoa Kỳ (AAP).
+          </div>
+        </div>
+      </div>
 
-  <div class="bullet-card" style="border-top: 3px solid var(--accent-red);">
-    <h3 style="color: var(--accent-red); font-size: 1.15rem; margin-bottom: var(--space-2);">3. Không Phủ Nhận</h3>
-    <div style="font-size: 0.9rem; line-height: 1.6; color: var(--text-secondary);">
-      <p><strong>Hành vi cần tránh:</strong> Than vãn, phủ nhận con trước mặt người khác (<em>"Nó chả nghe lời"</em>, <em>"con tôi chả chịu ngồi yên"</em>). <span class="page-ref">Ch 4, p. 78</span></p>
-      <p><strong>Hậu quả tâm lý:</strong> Trẻ nghe thấy sẽ bị tự kỷ ám thị. Trẻ tự động điều chỉnh nhân cách và lớn lên trở thành đứa bé đúng hệt như lời phủ nhận của mẹ. <span class="page-ref">Ch 4, p. 78</span></p>
-    </div>
-  </div>
-</div>
+    </section>
 
-<div class="callout" style="border-left-color: var(--accent-red); margin-top: var(--space-4);">
-  <div class="callout-icon">⚠️</div>
-  <div class="callout-content" style="font-size: 0.95rem; line-height: 1.6;">
-    <strong>Thông điệp cốt lõi:</strong> Hãy tôn trọng nhu cầu trải nghiệm và sự tự tôn của trẻ. Kỷ luật tích cực đòi hỏi cha mẹ thay thế từ cấm đoán bằng sự đồng hành giám sát, thay thế lời dọa dẫm bằng giải thích, và loại bỏ hoàn toàn việc nói xấu con trước mặt người ngoài. <span class="page-ref">Ch 4, p. 77, 78</span>
-  </div>
-</div>
+    <section class="slide">
+      <div class="slide-kicker">CH IV · CÔNG CỤ TỰ HỌC</div>
+      <h2>Thiết lập sổ từ vựng và nhật ký đọc sách cho trẻ</h2>
+      <div class="bullet-grid">
+        <div class="bullet-card" style="border-top: 3px solid var(--accent-emerald);">
+          <h3 style="color: var(--accent-emerald); font-size: 1.15rem; margin-bottom: var(--space-2);">1. Vở Từ Vựng Của
+            Bé (Sổ Từ Điển Cá Nhân)</h3>
+          <div style="font-size: 0.9rem; line-height: 1.6; color: var(--text-secondary);">
+            <p><strong>Cách thiết lập:</strong> Chuẩn bị một cuốn vở, chia các trang theo thứ tự bảng chữ cái (lề ghi
+              ABC...). <span class="page-ref">Ch 4, p. 80</span></p>
+            <p><strong>Cách sử dụng:</strong> Hướng dẫn bé ghi chép lại các từ mới học được vào đúng trang chữ cái bắt
+              đầu. Dạy trẻ phân loại từ theo cột: danh từ, động từ, tính từ. <span class="page-ref">Ch 4, p. 80</span>
+            </p>
+            <p><strong>Mục tiêu:</strong> Tích lũy vốn từ khổng lồ, rèn luyện tư duy phân loại khoa học và chính xác.
+              <span class="page-ref">Ch 4, p. 80</span>
+            </p>
+          </div>
+        </div>
 
-  </section>
+        <div class="bullet-card" style="border-top: 3px solid var(--accent-amber);">
+          <h3 style="color: var(--accent-amber); font-size: 1.15rem; margin-bottom: var(--space-2);">2. Nhật Ký Đọc Sách
+            (Ghi Nhận Trưởng Thành)</h3>
+          <div style="font-size: 0.9rem; line-height: 1.6; color: var(--text-secondary);">
+            <p><strong>Cách thiết lập:</strong> Cuốn sổ ghi lại tất cả các tựa sách trẻ đã đọc/nghe đọc từ lúc 2 tuổi.
+              <span class="page-ref">Ch 4, p. 80</span>
+            </p>
+            <p><strong>Thông số ghi chép:</strong> Tên sách, tác giả, ngày đọc, số lượng trang sách và tổng số cuốn đã
+              hoàn thành. <span class="page-ref">Ch 4, p. 80</span></p>
+            <p><strong>Mục tiêu:</strong> Lưu giữ kỷ lục phát triển quý giá của con. Việc nhìn số trang tăng dần khích
+              lệ mạnh mẽ tinh thần tự hào và động lực đọc sách của trẻ. <span class="page-ref">Ch 4, p. 80-81</span></p>
+          </div>
+        </div>
 
-  <section class="slide">
-    <div class="slide-kicker">CH IV · KHEN NGỢI ĐÚNG CÁCH</div>
-    <h2>Nghệ thuật khen ngợi hành động cụ thể</h2>
-<div class="split-layout">
-  <div class="split-left" style="border-left-color: var(--accent-red);">
-    <h3 style="color: var(--accent-red); font-size: 1.25rem; margin-bottom: var(--space-4);">Khen Ngợi Tư Chất (Sai lầm)</h3>
-    <ul style="padding-left: var(--space-4); margin-bottom: var(--space-4); font-size: 0.95rem; line-height: 1.6; color: var(--text-secondary);">
-      <li><strong>Cách nói phổ biến:</strong> Khen ngợi hời hợt, chung chung về tư chất của trẻ: <em>"Con nhà tôi cừ khôi thế!"</em>, <em>"Con thông minh quá!"</em>. <span class="page-ref">Ch 4, p. 78</span></li>
-      <li><strong>Cơ chế tác động:</strong> Trẻ tin rằng tài năng của mình là mặc định, không cần cố gắng. <span class="page-ref">Ch 4, p. 78</span></li>
-      <li><strong>Hệ quả tiêu cực:</strong> Trẻ sinh ra tự cao tự đại, kiêu ngạo, sợ đối mặt với thất bại (vì sợ mất nhãn "thông minh"), lười biếng và thiếu kiên trì. <span class="page-ref">Ch 4, p. 78</span></li>
-    </ul>
-  </div>
+        <div class="bullet-card" style="border-top: 3px solid var(--accent-purple);">
+          <h3 style="color: var(--accent-purple); font-size: 1.15rem; margin-bottom: var(--space-2);">3. Học Phát Minh
+            Qua Tự Tra Từ Điển</h3>
+          <div style="font-size: 0.9rem; line-height: 1.6; color: var(--text-secondary);">
+            <p><strong>Cách thiết lập:</strong> Mua từ điển trẻ em có hình ảnh minh họa sinh động và dễ tra cứu. <span
+                class="page-ref">Ch 4, p. 80</span></p>
+            <p><strong>Cách sử dụng:</strong> Khi trẻ hỏi nghĩa hoặc cách viết một từ (ví dụ: "hanaji" - chảy máu cam),
+              hướng dẫn con tự lật từ điển để tra cứu thay vì trả lời ngay. <span class="page-ref">Ch 4, p. 80</span>
+            </p>
+            <p><strong>Mô hình bản đồ:</strong> Người ngồi trên xe được chở đi sẽ không bao giờ nhớ đường. Người tự đi
+              bộ với bản đồ trong tay sẽ tự biết hỏi đường, xem bản đồ và thuộc đường rất lâu. <span class="page-ref">Ch
+                4, p. 80</span></p>
+          </div>
+        </div>
+      </div>
 
-  <div class="split-right" style="border-left-color: var(--accent-emerald);">
-    <h3 style="color: var(--accent-emerald); font-size: 1.25rem; margin-bottom: var(--space-4);">Khen Ngợi Hành Động & Nỗ Lực (Đúng đắn)</h3>
-    <ul style="padding-left: var(--space-4); margin-bottom: var(--space-4); font-size: 0.95rem; line-height: 1.6; color: var(--text-secondary);">
-      <li><strong>Cách nói khuyến nghị:</strong> Khen ngợi hành động cụ thể và quá trình kiên trì: <em>"Con đã làm rất tốt đấy! Cố gắng ghê cơ!"</em>. <span class="page-ref">Ch 4, p. 78</span></li>
-      <li><strong>Cơ chế tác động:</strong> Ghi nhận công sức, sự kiên nhẫn và nỗ lực thực tế vượt qua khó khăn của con. <span class="page-ref">Ch 4, p. 78</span></li>
-      <li><strong>Hệ quả tích cực:</strong> Trẻ hiểu rằng nỗ lực mang lại thành quả. Lớn lên trẻ tự tin thử thách cái mới, kiên định và biết công nhận, tôn trọng nỗ lực của người khác. <span class="page-ref">Ch 4, p. 78</span></li>
-    </ul>
-  </div>
-</div>
+    </section>
 
-<div class="quote-block" style="border-left-color: var(--accent-amber); margin-top: var(--space-4);">
-  <div class="quote-text">
-    "Chúng ta không khen các con, mà khen hành động/ việc làm mà các con làm được... trẻ lớn lên cũng biết công nhận nỗ lực cố gắng của người khác."
-  </div>
-  <div class="quote-context">
-    <strong>Bản chất của lời khen ngợi:</strong> Khen ngợi là công cụ định hình tư duy phát triển (growth mindset). Cha mẹ thông thái khen ngợi con đường con đi, chứ không khen ngợi điểm xuất phát bẩm sinh. <span class="page-ref">Ch 4, p. 78</span>
-  </div>
-</div>
+    <section class="slide">
+      <div class="slide-kicker">CH IV · TƯ DUY &amp; VẬN ĐỘNG</div>
+      <h2>Rèn luyện thùy trước trán và phát triển thể chất toàn diện</h2>
+      <div class="split-layout">
+        <div class="split-left" style="border-left-color: var(--accent-purple);">
+          <h3 style="color: var(--accent-purple); font-size: 1.25rem; margin-bottom: var(--space-4);">Thùy Trước Trán
+            (Tư duy) vs Thùy Đỉnh (Trí nhớ)</h3>
+          <ul
+            style="padding-left: var(--space-4); margin-bottom: var(--space-4); font-size: 0.95rem; line-height: 1.6; color: var(--text-secondary);">
+            <li><strong>Thùy đỉnh / Lá cạnh (Trí nhớ):</strong> Đạt đỉnh thiên tài vào tuổi 2-3. Luyện trí nhớ bằng cách
+              đọc thơ đồng dao (giúp vốn từ phong phú như Goethe) hoặc thuộc cửu chương từ 3 tuổi. Cần liên tục đổi mới
+              bài tập để tránh suy giảm. <span class="page-ref">Ch 4, p. 79-80</span></li>
+            <li><strong>Thùy trước trán / Lá trước (Tư duy):</strong> Chịu trách nhiệm suy nghĩ, lập luận lý tính. Cần
+              tập trung kích hoạt từ sau 3 tuổi. Nếu không kích ứng, vùng thùy trán sẽ thoái hóa dần. <span
+                class="page-ref">Ch 4, p. 80</span></li>
+            <li><strong>Bài tập tư duy:</strong> Cho trẻ chơi trò "đố vui, đố vui" để tăng cường phản xạ suy luận, giúp
+              chỉ số IQ tăng trưởng bền vững thay vì chỉ học thuộc lòng vô hồn. <span class="page-ref">Ch 4, p.
+                80</span></li>
+          </ul>
+        </div>
 
-  </section>
+        <div class="split-right" style="border-left-color: var(--accent-emerald);">
+          <h3 style="color: var(--accent-emerald); font-size: 1.25rem; margin-bottom: var(--space-4);">Kỷ Luật Vận Động
+            & Đu Sà Ngang</h3>
+          <ul
+            style="padding-left: var(--space-4); margin-bottom: var(--space-4); font-size: 0.95rem; line-height: 1.6; color: var(--text-secondary);">
+            <li><strong>Giáo dục toàn diện:</strong> Phát triển đồng đều: sức khỏe, vận động, đạo đức, tình cảm. Bé 2
+              tuổi dắt đi bộ hàng ngày, vạch sẵn vệt chạy 10m - 20m để tập luyện cơ bắp. <span class="page-ref">Ch 4, p.
+                80</span></li>
+            <li><strong>Đu sà ngang (Glenn Doman):</strong> Hướng dẫn trẻ đu gióng/sà ngang giữ người trong vòng 1 phút.
+              Phương pháp này rèn luyện thể chất và kích ứng khả năng chịu đựng của trẻ tuyệt vời. <span
+                class="page-ref">Ch 4, p. 80</span></li>
+            <li><strong>Nâng cao thể lực:</strong> Cho trẻ dùng 2 tay bám sà di chuyển từ đầu này sang đầu kia, tập nâng
+              đẩy người, lộn xuôi lộn ngược trên sà để tối đa hóa độ linh hoạt của xương và cơ. <span
+                class="page-ref">Ch 4, p. 80</span></li>
+          </ul>
+        </div>
+      </div>
 
-  <section class="slide">
-    <div class="slide-kicker">CH IV · NGUY HẠI TỪ TV</div>
-    <h2>Tác hại sinh học và suy nhược thùy trán của Tivi</h2>
-<div class="content-card" style="border-left: 4px solid var(--accent-red); margin-top: var(--space-2);">
-  <h3 style="color: var(--accent-red); font-size: 1.35rem; margin-bottom: var(--space-4);">Cảnh Báo Đanh Thép: "Xin Đừng Gửi Con Cho Tivi!"</h3>
-  <div class="summary-text" style="font-size: 1.05rem; line-height: 1.7; color: var(--text-primary);">
-    <p>Giáo sư Shichida Makoto dẫn chứng các cảnh báo khoa học thời bấy giờ để kịch liệt phản đối việc cho trẻ sơ sinh tiếp xúc với màn hình tivi:</p>
-    
-    <div style="background: var(--danger-soft); padding: var(--space-4); border-radius: var(--radius-md); margin-bottom: var(--space-4);">
-      <strong style="color: var(--danger);">Tác hại thần kinh sinh học cụ thể:</strong>
-      <ul style="padding-left: var(--space-5); margin-top: var(--space-2); font-size: 0.95rem; color: var(--text-primary);">
-        <li style="margin-bottom: var(--space-1);"><strong>Hủy hoại cấu trúc đại não:</strong> Nghiên cứu của Hiệp hội Giáo sư Đại học Quốc gia Úc khẳng định việc cho trẻ sơ sinh xem TV phá hoại cấu trúc não bộ non nớt. <span class="page-ref">Ch 4, p. 78</span></li>
-        <li style="margin-bottom: var(--space-1);"><strong>Hại thùy trước trán:</strong> Tia âm cực từ màn hình TV phóng ra làm suy yếu chức năng thùy trước trán (trung tâm tư duy và ý chí của con người). <span class="page-ref">Ch 4, p. 78</span></li>
-        <li style="margin-bottom: var(--space-1);"><strong>Nguy cơ bệnh máu trắng:</strong> Tích tụ tia bức xạ từ TV 220V trong nhiều năm có thể làm tăng nguy cơ mắc bệnh máu trắng khi lớn. <span class="page-ref">Ch 4, p. 78</span></li>
-        <li><strong>Nguy cơ tự kỷ & chậm nói:</strong> Nghiên cứu tại Nhật chỉ ra mối tương quan trực tiếp giữa thời gian xem TV thời sơ sinh với xu hướng tự kỷ và chậm phản xạ giao tiếp ở trẻ. <span class="page-ref">Ch 4, p. 78</span></li>
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH IV · 4 BÀN TAY YÊU THƯƠNG</div>
+      <h2>Nuôi dạy con từ 4 bàn tay (4 Te) để phòng tự kỷ</h2>
+      <div class="content-card" style="margin-top: var(--space-2);">
+        <h3 style="color: var(--accent-emerald); font-size: 1.35rem; margin-bottom: var(--space-4);">Bốn Bàn Tay Nuôi
+          Dưỡng Nhân Cách (4 Te)</h3>
+        <div class="summary-text"
+          style="font-size: 1.05rem; line-height: 1.7; color: var(--text-primary); margin-bottom: var(--space-4);">
+          <p>Giáo sư Shichida sử dụng nghệ thuật chơi chữ trong tiếng Nhật (chữ <em>"Te"</em> có nghĩa là Bàn Tay, đồng
+            thời là hậu tố của 4 hành động nuôi dạy) để đúc kết phương châm nuôi dạy trẻ toàn diện trước 1 tuổi:</p>
+        </div>
+
+        <div
+          style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--space-4); margin-bottom: var(--space-4);">
+          <div
+            style="background: var(--surface-muted); padding: var(--space-4); border-radius: var(--radius-md); border-top: 3px solid var(--accent-red);">
+            <strong
+              style="color: var(--accent-red); font-size: 1.1rem; display: block; margin-bottom: var(--space-2);">1. Tay
+              Yêu Thương (Love)</strong>
+            <p style="font-size: 0.9rem; line-height: 1.5; color: var(--text-secondary);">Sự âu yếm, ôm ấp kề da áp
+              thịt, dập tắt bất an và gieo mầm lòng tin cơ bản cho con. <span class="page-ref">Ch 4, p. 81</span></p>
+          </div>
+
+          <div
+            style="background: var(--surface-muted); padding: var(--space-4); border-radius: var(--radius-md); border-top: 3px solid var(--accent-amber);">
+            <strong
+              style="color: var(--accent-amber); font-size: 1.1rem; display: block; margin-bottom: var(--space-2);">2.
+              Tay Chăm Sóc (Care)</strong>
+            <p style="font-size: 0.9rem; line-height: 1.5; color: var(--text-secondary);">Đảm bảo dinh dưỡng và vệ sinh,
+              nhanh chóng giải quyết sự khó chịu của cơ thể trẻ. <span class="page-ref">Ch 4, p. 81</span></p>
+          </div>
+
+          <div
+            style="background: var(--surface-muted); padding: var(--space-4); border-radius: var(--radius-md); border-top: 3px solid var(--accent-cyan);">
+            <strong
+              style="color: var(--accent-cyan); font-size: 1.1rem; display: block; margin-bottom: var(--space-2);">3.
+              Tay Từ Ngữ (Words)</strong>
+            <p style="font-size: 0.9rem; line-height: 1.5; color: var(--text-secondary);">Trò chuyện liên tục, kể chuyện
+              cổ tích hư cấu và đọc sách tranh để xây dựng hệ ngôn ngữ lý tính. <span class="page-ref">Ch 4, p.
+                81</span></p>
+          </div>
+
+          <div
+            style="background: var(--surface-muted); padding: var(--space-4); border-radius: var(--radius-md); border-top: 3px solid var(--accent-emerald);">
+            <strong
+              style="color: var(--accent-emerald); font-size: 1.1rem; display: block; margin-bottom: var(--space-2);">4.
+              Tay Khen Ngợi (Praise)</strong>
+            <p style="font-size: 0.9rem; line-height: 1.5; color: var(--text-secondary);">Động viên nỗ lực của con, nhìn
+              nhận và khích lệ hành động cụ thể để vực dậy tự tin. <span class="page-ref">Ch 4, p. 81</span></p>
+          </div>
+        </div>
+
+        <div
+          style="border-top: 1px solid var(--border-strong); padding-top: var(--space-3); font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6;">
+          <p><strong>⚠️ Cảnh báo tự kỷ:</strong> Trẻ sinh ra khỏe mạnh bình thường nhưng nếu thiếu sự kết nối trực tiếp
+            của "4 bàn tay" này (như bị bỏ mặc xem TV hoặc xa lánh tình cảm) sẽ rất dễ rơi vào trạng thái tự kỷ. <span
+              class="page-ref">Ch 4, p. 81</span></p>
+          <p style="margin-top: var(--space-2);"><strong>🤰 Thai giáo tình thương:</strong> Thai nhi từ trong bụng mẹ đã
+            thấu hiểu lời nói của cha mẹ. Trẻ được lớn lên trong tình yêu thương tràn đầy từ khi là thai nhi sẽ có tâm
+            hồn và khả năng tiếp thu vượt trội sau sinh. <span class="page-ref">Ch 4, p. 81</span></p>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH IV · NĂM LỚP ĐỌC SÁCH</div>
+      <h2>Năm lớp đọc hiểu Chương IV</h2>
+      <div class="content-card" style="margin-top: var(--space-2);">
+        <div class="deep-dive-text">
+          <div
+            style="margin-bottom: var(--space-4); border-left: 3px solid var(--accent-cyan); padding-left: var(--space-3);">
+            <h4 style="color: var(--accent-cyan); margin-bottom: var(--space-1); font-size: 1.05rem;">Lớp 1: Đọc Bề Mặt
+              (Surface Reading) — Tác giả NÓI gì?</h4>
+            <p style="font-size: 0.9rem; line-height: 1.5; color: var(--text-secondary);">
+              Giáo dục ngôn ngữ là nền tảng cốt lõi của giáo dục sớm từ sơ sinh, giúp kích hoạt hệ tín hiệu thứ hai và
+              tái cấu trúc vật lý đại não. Cha mẹ cần áp dụng quy trình dạy đọc 5 bước, thực hiện quy tắc "3 Không"
+              (không dọa, không cấm, không phủ nhận), rèn luyện thùy trước trán (suy nghĩ) song song với vận động thể
+              chất (đu sà ngang), và nuôi dưỡng con bằng "4 bàn tay" để phòng tự kỷ. <span class="page-ref">Ch 4, p. 70,
+                75, 77, 80-81</span>
+            </p>
+          </div>
+
+          <div
+            style="margin-bottom: var(--space-4); border-left: 3px solid var(--accent-emerald); padding-left: var(--space-3);">
+            <h4 style="color: var(--accent-emerald); margin-bottom: var(--space-1); font-size: 1.05rem;">Lớp 2: Đọc Cấu
+              Trúc (Structural Reading) — Tác giả TƯ DUY thế nào?</h4>
+            <p style="font-size: 0.9rem; line-height: 1.5; color: var(--text-secondary);">
+              Mạch tư duy của Shichida trong chương này có tính thực tiễn cao: giới thiệu cơ sở khoa học thần kinh
+              (Doman, hệ tín hiệu thứ hai) &rarr; dẫn chứng thực nghiệm lâm sàng thành công (Hawaii, Hiroshima) &rarr;
+              thiết lập quy trình từng bước &rarr; đúc kết 20 nguyên tắc vàng &rarr; xây dựng các công cụ tự học thực tế
+              (sổ từ vựng, từ điển, sà ngang). <span class="page-ref">Ch 4, p. 70, 72, 75, 80</span>
+            </p>
+          </div>
+
+          <div
+            style="margin-bottom: var(--space-4); border-left: 3px solid var(--accent-amber); padding-left: var(--space-3);">
+            <h4 style="color: var(--accent-amber); margin-bottom: var(--space-1); font-size: 1.05rem;">Lớp 3: Đọc Bối
+              Cảnh (Contextual Reading) — Bối cảnh gì định hình tác phẩm?</h4>
+            <p style="font-size: 0.9rem; line-height: 1.6; color: var(--text-secondary);">
+              Tác phẩm được viết trong bối cảnh nước Nhật những năm cuối thế kỷ 20, khi các lớp học "kiểu anh tài" tập
+              trung thái quá vào luyện IQ và suy luận logic khô khan bùng nổ, đồng thời công nghệ tivi gia đình phát
+              triển nhanh chóng gây lo ngại về sức khỏe tâm lý trẻ nhỏ. <span class="page-ref">Ch 4, p. 74, 78</span>
+            </p>
+          </div>
+
+          <div
+            style="margin-bottom: var(--space-4); border-left: 3px solid var(--accent-red); padding-left: var(--space-3);">
+            <h4 style="color: var(--accent-red); margin-bottom: var(--space-1); font-size: 1.05rem;">Lớp 4: Đọc Phản
+              Biện (Critical Reading) — Tác giả ĐÚNG/SAI ở đâu?</h4>
+            <p style="font-size: 0.9rem; line-height: 1.5; color: var(--text-secondary);">
+              <strong>Đúng:</strong> Khẳng định tầm quan trọng vượt trội của ngôn ngữ đối với tư duy. Nhấn mạnh việc
+              khen ngợi nỗ lực thay vì tư chất. Khuyên khích tự tra từ điển để học chủ động. <span class="page-ref">Ch
+                4, p. 74, 78, 80</span>
+              <br><strong>Sai sót khoa học:</strong> Cường điệu quá mức các lý thuyết của Glenn Doman (như việc sọ trẻ
+              nở gấp 3-4 lần). Cảnh báo về tivi phóng tia âm cực gây máu trắng mang tính định kiến thời đại hơn là bằng
+              chứng y khoa hiện đại. <span class="page-ref">Ch 4, p. 70, 78</span>
+            </p>
+          </div>
+
+          <div style="border-left: 3px solid var(--accent-purple); padding-left: var(--space-3);">
+            <h4 style="color: var(--accent-purple); margin-bottom: var(--space-1); font-size: 1.05rem;">Lớp 5: Đọc Kiến
+              Tạo (Generative Reading) — Chúng ta SÁNG TẠO được gì?</h4>
+            <p style="font-size: 0.9rem; line-height: 1.5; color: var(--text-secondary);">
+              Kiến tạo mô hình <strong>"Tự Học Ngôn Ngữ Chủ Động Kép (Active Bilingual Self-Learning Model)"</strong>:
+              Sử dụng sổ từ vựng và nhật ký đọc sách kết hợp với công nghệ số hiện đại (tự tra cứu từ điển số an toàn).
+              Thay thế hoàn toàn tivi/màn hình thụ động bằng các tương tác giọng nói hai chiều trực tiếp, kể chuyện cổ
+              tích nhập vai, và các bài tập vận động thăng bằng sà ngang tại nhà để kích hoạt thùy trước trán tối đa mà
+              không gây áp lực học tập tiêu cực cho con. <span class="page-ref">Ch 4, p. 76, 80</span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH IV · ĐÁNH GIÁ KHOA HỌC</div>
+      <h2>Đối chiếu khoa học và Phản biện Socratic</h2>
+      <div class="split-layout">
+        <div style="flex: 1.1;">
+          <div class="evidence-card"
+            style="border-left: 3px solid var(--accent-cyan); margin-bottom: var(--space-4); background: var(--surface); padding: var(--space-5); border-radius: var(--radius-lg); box-shadow: var(--shadow-glass);">
+            <div class="evidence-header"
+              style="display: flex; justify-content: space-between; font-weight: 600; margin-bottom: var(--space-2);">
+              <span class="claim-text" style="font-size: 1.05rem;">1. Cáo buộc: Glenn Doman & Cấu trúc sọ não nở 3-4
+                lần</span>
+              <span class="quality-score" style="color: var(--accent-red);">⭐⭐☆☆☆ 2/5</span>
+            </div>
+            <div class="evidence-type"
+              style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: var(--space-2);"> Trị liệu lâm sàng &
+              Giáo dục sớm đặc biệt <span class="page-ref">Ch 4, p. 70</span></div>
+            <div class="evidence-body" style="font-size: 0.9rem; line-height: 1.6; color: var(--text-secondary);">
+              <strong>Đánh giá:</strong> Cực kỳ cường điệu. Khoa học thần kinh đồng ý rằng kích ứng ngôn ngữ làm tăng
+              mật độ khớp thần kinh (synapse). Tuy nhiên, việc khẳng định sọ trẻ nở to gấp 3-4 lần bình thường do học
+              chữ là không có căn cứ sinh học nhi khoa. <br>
+              <strong>Phản biện y khoa:</strong> Hiệp hội Nhi khoa Hoa Kỳ (AAP) từng ra cảnh báo chính thức về phương
+              pháp của Glenn Doman (như kỹ thuật "patterning") vì thiếu bằng chứng thực nghiệm đối chứng khoa học và gây
+              kỳ vọng ảo, căng thẳng cực độ cho gia đình.
+            </div>
+          </div>
+
+          <div class="evidence-card"
+            style="border-left: 3px solid var(--accent-cyan); background: var(--surface); padding: var(--space-5); border-radius: var(--radius-lg); box-shadow: var(--shadow-glass);">
+            <div class="evidence-header"
+              style="display: flex; justify-content: space-between; font-weight: 600; margin-bottom: var(--space-2);">
+              <span class="claim-text" style="font-size: 1.05rem;">2. Cáo buộc: Bức xạ tivi gây bệnh máu trắng</span>
+              <span class="quality-score" style="color: var(--accent-red);">⭐⭐☆☆☆ 2/5</span>
+            </div>
+            <div class="evidence-type"
+              style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: var(--space-2);"> Cảnh báo sinh học
+              phóng xạ <span class="page-ref">Ch 4, p. 78</span></div>
+            <div class="evidence-body" style="font-size: 0.9rem; line-height: 1.6; color: var(--text-secondary);">
+              <strong>Đánh giá:</strong> Mang tính định kiến và lo âu công nghệ thời đại cũ. Tivi màn hình CRT cổ điển
+              phát xạ tia X cực nhẹ dưới ngưỡng gây hại; màn hình LCD/OLED hiện đại không sử dụng tia âm cực. Không có
+              bằng chứng tivi gây bệnh máu trắng trực tiếp.<br>
+              <strong>Điểm đúng:</strong> Cảnh báo về mặt hành vi tâm lý là hoàn toàn chính xác. Xem tivi làm giảm tương
+              tác ngôn ngữ trực tiếp hai chiều, gây nguy cơ tự kỷ chức năng (tự kỷ giả) và giảm khả năng chú ý.
+            </div>
+          </div>
+        </div>
+
+        <div class="split-right"
+          style="border-left-color: var(--accent-red); flex: 0.9; background: var(--surface); padding: var(--space-5); border-radius: var(--radius-lg); box-shadow: var(--shadow-glass);">
+          <h3 style="color: var(--accent-red); font-size: 1.2rem; margin-bottom: var(--space-3);">Phân Tích Rủi Ro &
+            Dung Hòa</h3>
+          <ul style="padding-left: var(--space-4); font-size: 0.9rem; line-height: 1.6; color: var(--text-secondary);">
+            <li style="margin-bottom: var(--space-3);">
+              <strong>Rủi ro Đọc vẹt (Hyperlexia):</strong> Việc ép học thẻ từ quá mức có thể khiến trẻ 1-2 tuổi nhận
+              dạng được mặt chữ nhưng không hiểu ý nghĩa khái niệm (đọc không đi kèm lý giải). Điều này triệt tiêu tư
+              duy sâu sắc. <span class="page-ref">Ch 4, p. 73</span>
+            </li>
+            <li style="margin-bottom: var(--space-3);">
+              <strong>Quá tải hệ thần kinh (Overstimulation):</strong> Tráo thẻ từ liên tục ở trẻ sơ sinh có thể gây rối
+              loạn giấc ngủ, cáu gắt do quá tải giác quan.
+            </li>
+            <li>
+              <strong>Dung hòa thực hành:</strong> Hãy coi thẻ từ là trò chơi giải trí vui vẻ ngắn (2-3 phút), không
+              kiểm tra hay ép trẻ. Luôn gắn chữ với trải nghiệm thực tế sinh động (chạm, ngửi, nhìn sự vật thật). Tập
+              trung vào kể chuyện cổ tích, hội thoại giàu cảm xúc để nuôi dưỡng tâm hồn trẻ. <span class="page-ref">Ch
+                4, p. 74, 76</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH IV · TRÍCH DẪN VÀNG NGỌC</div>
+      <h2>Những trích dẫn đắt giá nhất trong Chương IV</h2>
+      <div class="quote-block">
+        <p class="quote-text">"Trụ cột phương pháp giáo dục trẻ nhỏ là việc giáo dục ngôn ngữ. Nếu không, chắc chắn trẻ
+          không đạt được sự sâu sắc về tinh thần. Giả sử có tài liệu giáo trình trí năng, chỉ số IQ đạt tới 180 hay 200
+          thì không có nghĩa là trẻ đã có khả năng tư duy mang tính tinh thần sâu sắc. Trí năng, chỉ có thể đạt được
+          bằng cách đọc sách và tự ngấm vào mỗi con người trẻ nhỏ mà thôi."</p>
+        <p class="quote-context"><strong>— Giáo sư Shichida Makoto</strong>, phê phán các phương pháp giáo dục sớm lệch
+          lạc chỉ tập trung vào luyện IQ suông. <span class="page-ref">Ch 4, p. 74</span></p>
+        <div
+          style="font-size: 0.9rem; line-height: 1.6; color: var(--text-secondary); margin-top: var(--space-3); border-top: 1px solid var(--border-subtle); padding-top: var(--space-2);">
+          <strong>Ý nghĩa sâu sắc:</strong> Tác giả nhấn mạnh ngôn ngữ là xương sống của mọi năng lực tư duy lý tính và
+          đạo đức. Các bài tập rèn luyện IQ hay suy luận logic chỉ là các kỹ năng bề mặt. Chiều sâu tinh thần, sự thấu
+          cảm và trí năng thực sự của một con người chỉ có thể được bồi đắp thông qua thói quen đọc sách tự thân, tích
+          lũy trường từ vựng phong phú để tự ngấm vào nội tâm của trẻ.
+        </div>
+      </div>
+
+      <div class="quote-block" style="border-left-color: var(--accent-purple);">
+        <p class="quote-text">"Chúng ta hãy cố gắng nuôi dạy trẻ mà không dùng đến các từ phủ nhận, cấm đoán trẻ. Bố mẹ
+          thường hay nói một cách vô thức với con 'Nguy hiểm lắm, cấm dùng kéo' hay 'không được xé giấy'... Cách nói đó
+          là cách cấu ngắt đi những cái mầm tích cực của trẻ."</p>
+        <p class="quote-context"><strong>— Giáo sư Shichida Makoto</strong>, cảnh báo về thói quen cấm đoán vô thức của
+          cha mẹ hủy hoại tính chủ động của trẻ. <span class="page-ref">Ch 4, p. 77</span></p>
+        <div
+          style="font-size: 0.9rem; line-height: 1.6; color: var(--text-secondary); margin-top: var(--space-3); border-top: 1px solid var(--border-subtle); padding-top: var(--space-2);">
+          <strong>Ý nghĩa sâu sắc:</strong> Mỗi đứa trẻ sinh ra đều có bản năng tò mò và khao khát tự lập mạnh mẽ. Sự lo
+          lắng quá mức của cha mẹ dẫn đến việc liên tục cấm cản, dán nhãn nguy hiểm. Việc này gián tiếp bóp chết lòng tự
+          tin, biến trẻ thành người thụ động, yếu ớt khi lớn lên. Thay vì ngăn cấm, cha mẹ hãy là người đồng hành, giám
+          sát an toàn và cho phép trẻ trải nghiệm các nguy cơ nhỏ để tự rút ra bài học sinh tồn.
+        </div>
+      </div>
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH IV · CẨM NANG HÀNH ĐỘNG</div>
+      <h2>Kế hoạch hành động tổng lực cho cha mẹ</h2>
+      <figure class="image-slot hero">
+        <img src="images/ch4_closing.png"
+          alt="Sự gắn kết ngôn ngữ và tình yêu của cha mẹ mở ra thế giới tươi sáng cho trẻ">
+      </figure>
+      <ul class="action-list" style="margin-top: var(--space-4); list-style: none; padding: 0;">
+        <li class="action-item"
+          style="display: flex; gap: var(--space-4); margin-bottom: var(--space-4); align-items: flex-start; background: var(--surface); padding: var(--space-4); border-radius: var(--radius-md); box-shadow: var(--shadow-glass);">
+          <div style="font-size: 1.5rem; line-height: 1;">📵</div>
+          <div>
+            <div class="action-headline" style="font-weight: 600; font-size: 1.05rem; color: var(--text-primary);">Cách
+              ly hoàn toàn các màn hình điện tử một chiều đối với trẻ sơ sinh</div>
+            <div class="action-detail"
+              style="font-size: 0.9rem; color: var(--text-secondary); margin-top: var(--space-1);">
+              Tuyệt đối không dùng Tivi hay điện thoại để dỗ dành trẻ. Sự thụ động của màn hình ngăn cản giao tiếp hai
+              chiều, hủy hoại thùy trước trán và tăng cao nguy cơ tự kỷ. Thay thế bằng giọng nói thật, đọc sách tranh
+              diễn cảm và kể chuyện cổ tích. <span class="page-ref">Ch 4, p. 78</span>
+            </div>
+          </div>
+        </li>
+
+        <li class="action-item"
+          style="display: flex; gap: var(--space-4); margin-bottom: var(--space-4); align-items: flex-start; background: var(--surface); padding: var(--space-4); border-radius: var(--radius-md); box-shadow: var(--shadow-glass);">
+          <div style="font-size: 1.5rem; line-height: 1;">📚</div>
+          <div>
+            <div class="action-headline" style="font-weight: 600; font-size: 1.05rem; color: var(--text-primary);">Thiết
+              lập hệ thống tự học ngôn ngữ chủ động cho con</div>
+            <div class="action-detail"
+              style="font-size: 0.9rem; color: var(--text-secondary); margin-top: var(--space-1);">
+              Dạy chữ từ 6 tháng bằng thẻ từ gắn liền với trải nghiệm thực tế. Rèn thói quen mượn sách thư viện, luân
+              phiên đọc và tập cho trẻ tóm tắt lại cốt truyện từ 2-3 tuổi. Hướng dẫn trẻ tự tra từ điển hình ảnh thay vì
+              bố mẹ giải thích hộ ngay. <span class="page-ref">Ch 4, p. 72, 75, 78, 80</span>
+            </div>
+          </div>
+        </li>
+
+        <li class="action-item"
+          style="display: flex; gap: var(--space-4); align-items: flex-start; background: var(--surface); padding: var(--space-4); border-radius: var(--radius-md); box-shadow: var(--shadow-glass);">
+          <div style="font-size: 1.5rem; line-height: 1;">🤸‍♂️</div>
+          <div>
+            <div class="action-headline" style="font-weight: 600; font-size: 1.05rem; color: var(--text-primary);">Phát
+              triển cân bằng Thể chất (Đu sà ngang) & Trí não (Đố vui)</div>
+            <div class="action-detail"
+              style="font-size: 0.9rem; color: var(--text-secondary); margin-top: var(--space-1);">
+              Tập trung kích hoạt thùy trước trán (suy nghĩ) sau 3 tuổi qua trò chơi đố vui. Dắt trẻ đi bộ dạo chơi
+              thiên nhiên hàng ngày, trò chuyện về sự vật. Rèn thể lực và khả năng chịu đựng cho trẻ bằng cách đu sà
+              ngang/sà sắt liên tục trong 1 phút. <span class="page-ref">Ch 4, p. 80</span>
+            </div>
+          </div>
+        </li>
       </ul>
-    </div>
 
-    <div style="border-top: 1px solid var(--border-strong); padding-top: var(--space-3); font-size: 0.95rem; color: var(--text-secondary);">
-      <strong>Góc nhìn hiện đại (Năm 2026):</strong> Dù lý thuyết về "tia âm cực gây bệnh máu trắng" đã lỗi thời (do màn hình CRT đã được thay bằng LCD/OLED phát xạ thấp), nhưng các cảnh báo về **tác hại tâm lý thần kinh** (tự kỷ giả, chậm ngôn ngữ, giảm chú ý ADHD) do tiếp xúc màn hình một chiều thụ động dưới 2 tuổi vẫn hoàn toàn chính xác theo khuyến nghị của WHO và Viện Nhi khoa Hoa Kỳ (AAP).
-    </div>
-  </div>
-</div>
+    </section>
 
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH IV · CÔNG CỤ TỰ HỌC</div>
-    <h2>Thiết lập sổ từ vựng và nhật ký đọc sách cho trẻ</h2>
-<div class="bullet-grid">
-  <div class="bullet-card" style="border-top: 3px solid var(--accent-emerald);">
-    <h3 style="color: var(--accent-emerald); font-size: 1.15rem; margin-bottom: var(--space-2);">1. Vở Từ Vựng Của Bé (Sổ Từ Điển Cá Nhân)</h3>
-    <div style="font-size: 0.9rem; line-height: 1.6; color: var(--text-secondary);">
-      <p><strong>Cách thiết lập:</strong> Chuẩn bị một cuốn vở, chia các trang theo thứ tự bảng chữ cái (lề ghi ABC...). <span class="page-ref">Ch 4, p. 80</span></p>
-      <p><strong>Cách sử dụng:</strong> Hướng dẫn bé ghi chép lại các từ mới học được vào đúng trang chữ cái bắt đầu. Dạy trẻ phân loại từ theo cột: danh từ, động từ, tính từ. <span class="page-ref">Ch 4, p. 80</span></p>
-      <p><strong>Mục tiêu:</strong> Tích lũy vốn từ khổng lồ, rèn luyện tư duy phân loại khoa học và chính xác. <span class="page-ref">Ch 4, p. 80</span></p>
-    </div>
   </div>
 
-  <div class="bullet-card" style="border-top: 3px solid var(--accent-amber);">
-    <h3 style="color: var(--accent-amber); font-size: 1.15rem; margin-bottom: var(--space-2);">2. Nhật Ký Đọc Sách (Ghi Nhận Trưởng Thành)</h3>
-    <div style="font-size: 0.9rem; line-height: 1.6; color: var(--text-secondary);">
-      <p><strong>Cách thiết lập:</strong> Cuốn sổ ghi lại tất cả các tựa sách trẻ đã đọc/nghe đọc từ lúc 2 tuổi. <span class="page-ref">Ch 4, p. 80</span></p>
-      <p><strong>Thông số ghi chép:</strong> Tên sách, tác giả, ngày đọc, số lượng trang sách và tổng số cuốn đã hoàn thành. <span class="page-ref">Ch 4, p. 80</span></p>
-      <p><strong>Mục tiêu:</strong> Lưu giữ kỷ lục phát triển quý giá của con. Việc nhìn số trang tăng dần khích lệ mạnh mẽ tinh thần tự hào và động lực đọc sách của trẻ. <span class="page-ref">Ch 4, p. 80-81</span></p>
-    </div>
+  <div class="nav-controls">
+    <button class="nav-btn" id="prevBtn" onclick="prevSlide()" aria-label="Previous slide">&#8592;</button>
+    <div class="counter" id="counter" aria-live="polite">1 / 1</div>
+    <button class="nav-btn" id="nextBtn" onclick="nextSlide()" aria-label="Next slide">&#8594;</button>
   </div>
 
-  <div class="bullet-card" style="border-top: 3px solid var(--accent-purple);">
-    <h3 style="color: var(--accent-purple); font-size: 1.15rem; margin-bottom: var(--space-2);">3. Học Phát Minh Qua Tự Tra Từ Điển</h3>
-    <div style="font-size: 0.9rem; line-height: 1.6; color: var(--text-secondary);">
-      <p><strong>Cách thiết lập:</strong> Mua từ điển trẻ em có hình ảnh minh họa sinh động và dễ tra cứu. <span class="page-ref">Ch 4, p. 80</span></p>
-      <p><strong>Cách sử dụng:</strong> Khi trẻ hỏi nghĩa hoặc cách viết một từ (ví dụ: "hanaji" - chảy máu cam), hướng dẫn con tự lật từ điển để tra cứu thay vì trả lời ngay. <span class="page-ref">Ch 4, p. 80</span></p>
-      <p><strong>Mô hình bản đồ:</strong> Người ngồi trên xe được chở đi sẽ không bao giờ nhớ đường. Người tự đi bộ với bản đồ trong tay sẽ tự biết hỏi đường, xem bản đồ và thuộc đường rất lâu. <span class="page-ref">Ch 4, p. 80</span></p>
-    </div>
-  </div>
-</div>
-
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH IV · TƯ DUY &amp; VẬN ĐỘNG</div>
-    <h2>Rèn luyện thùy trước trán và phát triển thể chất toàn diện</h2>
-<div class="split-layout">
-  <div class="split-left" style="border-left-color: var(--accent-purple);">
-    <h3 style="color: var(--accent-purple); font-size: 1.25rem; margin-bottom: var(--space-4);">Thùy Trước Trán (Tư duy) vs Thùy Đỉnh (Trí nhớ)</h3>
-    <ul style="padding-left: var(--space-4); margin-bottom: var(--space-4); font-size: 0.95rem; line-height: 1.6; color: var(--text-secondary);">
-      <li><strong>Thùy đỉnh / Lá cạnh (Trí nhớ):</strong> Đạt đỉnh thiên tài vào tuổi 2-3. Luyện trí nhớ bằng cách đọc thơ đồng dao (giúp vốn từ phong phú như Goethe) hoặc thuộc cửu chương từ 3 tuổi. Cần liên tục đổi mới bài tập để tránh suy giảm. <span class="page-ref">Ch 4, p. 79-80</span></li>
-      <li><strong>Thùy trước trán / Lá trước (Tư duy):</strong> Chịu trách nhiệm suy nghĩ, lập luận lý tính. Cần tập trung kích hoạt từ sau 3 tuổi. Nếu không kích ứng, vùng thùy trán sẽ thoái hóa dần. <span class="page-ref">Ch 4, p. 80</span></li>
-      <li><strong>Bài tập tư duy:</strong> Cho trẻ chơi trò "đố vui, đố vui" để tăng cường phản xạ suy luận, giúp chỉ số IQ tăng trưởng bền vững thay vì chỉ học thuộc lòng vô hồn. <span class="page-ref">Ch 4, p. 80</span></li>
-    </ul>
-  </div>
-
-  <div class="split-right" style="border-left-color: var(--accent-emerald);">
-    <h3 style="color: var(--accent-emerald); font-size: 1.25rem; margin-bottom: var(--space-4);">Kỷ Luật Vận Động & Đu Sà Ngang</h3>
-    <ul style="padding-left: var(--space-4); margin-bottom: var(--space-4); font-size: 0.95rem; line-height: 1.6; color: var(--text-secondary);">
-      <li><strong>Giáo dục toàn diện:</strong> Phát triển đồng đều: sức khỏe, vận động, đạo đức, tình cảm. Bé 2 tuổi dắt đi bộ hàng ngày, vạch sẵn vệt chạy 10m - 20m để tập luyện cơ bắp. <span class="page-ref">Ch 4, p. 80</span></li>
-      <li><strong>Đu sà ngang (Glenn Doman):</strong> Hướng dẫn trẻ đu gióng/sà ngang giữ người trong vòng 1 phút. Phương pháp này rèn luyện thể chất và kích ứng khả năng chịu đựng của trẻ tuyệt vời. <span class="page-ref">Ch 4, p. 80</span></li>
-      <li><strong>Nâng cao thể lực:</strong> Cho trẻ dùng 2 tay bám sà di chuyển từ đầu này sang đầu kia, tập nâng đẩy người, lộn xuôi lộn ngược trên sà để tối đa hóa độ linh hoạt của xương và cơ. <span class="page-ref">Ch 4, p. 80</span></li>
-    </ul>
-  </div>
-</div>
-
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH IV · 4 BÀN TAY YÊU THƯƠNG</div>
-    <h2>Nuôi dạy con từ 4 bàn tay (4 Te) để phòng tự kỷ</h2>
-<div class="content-card" style="margin-top: var(--space-2);">
-  <h3 style="color: var(--accent-emerald); font-size: 1.35rem; margin-bottom: var(--space-4);">Bốn Bàn Tay Nuôi Dưỡng Nhân Cách (4 Te)</h3>
-  <div class="summary-text" style="font-size: 1.05rem; line-height: 1.7; color: var(--text-primary); margin-bottom: var(--space-4);">
-    <p>Giáo sư Shichida sử dụng nghệ thuật chơi chữ trong tiếng Nhật (chữ <em>"Te"</em> có nghĩa là Bàn Tay, đồng thời là hậu tố của 4 hành động nuôi dạy) để đúc kết phương châm nuôi dạy trẻ toàn diện trước 1 tuổi:</p>
-  </div>
-  
-  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--space-4); margin-bottom: var(--space-4);">
-    <div style="background: var(--surface-muted); padding: var(--space-4); border-radius: var(--radius-md); border-top: 3px solid var(--accent-red);">
-      <strong style="color: var(--accent-red); font-size: 1.1rem; display: block; margin-bottom: var(--space-2);">1. Tay Yêu Thương (Love)</strong>
-      <p style="font-size: 0.9rem; line-height: 1.5; color: var(--text-secondary);">Sự âu yếm, ôm ấp kề da áp thịt, dập tắt bất an và gieo mầm lòng tin cơ bản cho con. <span class="page-ref">Ch 4, p. 81</span></p>
-    </div>
-
-    <div style="background: var(--surface-muted); padding: var(--space-4); border-radius: var(--radius-md); border-top: 3px solid var(--accent-amber);">
-      <strong style="color: var(--accent-amber); font-size: 1.1rem; display: block; margin-bottom: var(--space-2);">2. Tay Chăm Sóc (Care)</strong>
-      <p style="font-size: 0.9rem; line-height: 1.5; color: var(--text-secondary);">Đảm bảo dinh dưỡng và vệ sinh, nhanh chóng giải quyết sự khó chịu của cơ thể trẻ. <span class="page-ref">Ch 4, p. 81</span></p>
-    </div>
-
-    <div style="background: var(--surface-muted); padding: var(--space-4); border-radius: var(--radius-md); border-top: 3px solid var(--accent-cyan);">
-      <strong style="color: var(--accent-cyan); font-size: 1.1rem; display: block; margin-bottom: var(--space-2);">3. Tay Từ Ngữ (Words)</strong>
-      <p style="font-size: 0.9rem; line-height: 1.5; color: var(--text-secondary);">Trò chuyện liên tục, kể chuyện cổ tích hư cấu và đọc sách tranh để xây dựng hệ ngôn ngữ lý tính. <span class="page-ref">Ch 4, p. 81</span></p>
-    </div>
-
-    <div style="background: var(--surface-muted); padding: var(--space-4); border-radius: var(--radius-md); border-top: 3px solid var(--accent-emerald);">
-      <strong style="color: var(--accent-emerald); font-size: 1.1rem; display: block; margin-bottom: var(--space-2);">4. Tay Khen Ngợi (Praise)</strong>
-      <p style="font-size: 0.9rem; line-height: 1.5; color: var(--text-secondary);">Động viên nỗ lực của con, nhìn nhận và khích lệ hành động cụ thể để vực dậy tự tin. <span class="page-ref">Ch 4, p. 81</span></p>
-    </div>
-  </div>
-
-  <div style="border-top: 1px solid var(--border-strong); padding-top: var(--space-3); font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6;">
-    <p><strong>⚠️ Cảnh báo tự kỷ:</strong> Trẻ sinh ra khỏe mạnh bình thường nhưng nếu thiếu sự kết nối trực tiếp của "4 bàn tay" này (như bị bỏ mặc xem TV hoặc xa lánh tình cảm) sẽ rất dễ rơi vào trạng thái tự kỷ. <span class="page-ref">Ch 4, p. 81</span></p>
-    <p style="margin-top: var(--space-2);"><strong>🤰 Thai giáo tình thương:</strong> Thai nhi từ trong bụng mẹ đã thấu hiểu lời nói của cha mẹ. Trẻ được lớn lên trong tình yêu thương tràn đầy từ khi là thai nhi sẽ có tâm hồn và khả năng tiếp thu vượt trội sau sinh. <span class="page-ref">Ch 4, p. 81</span></p>
-  </div>
-</div>
-
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH IV · NĂM LỚP ĐỌC SÁCH</div>
-    <h2>Năm lớp đọc hiểu Chương IV</h2>
-<div class="content-card" style="margin-top: var(--space-2);">
-  <div class="deep-dive-text">
-    <div style="margin-bottom: var(--space-4); border-left: 3px solid var(--accent-cyan); padding-left: var(--space-3);">
-      <h4 style="color: var(--accent-cyan); margin-bottom: var(--space-1); font-size: 1.05rem;">Lớp 1: Đọc Bề Mặt (Surface Reading) — Tác giả NÓI gì?</h4>
-      <p style="font-size: 0.9rem; line-height: 1.5; color: var(--text-secondary);">
-        Giáo dục ngôn ngữ là nền tảng cốt lõi của giáo dục sớm từ sơ sinh, giúp kích hoạt hệ tín hiệu thứ hai và tái cấu trúc vật lý đại não. Cha mẹ cần áp dụng quy trình dạy đọc 5 bước, thực hiện quy tắc "3 Không" (không dọa, không cấm, không phủ nhận), rèn luyện thùy trước trán (suy nghĩ) song song với vận động thể chất (đu sà ngang), và nuôi dưỡng con bằng "4 bàn tay" để phòng tự kỷ. <span class="page-ref">Ch 4, p. 70, 75, 77, 80-81</span>
-      </p>
-    </div>
-
-    <div style="margin-bottom: var(--space-4); border-left: 3px solid var(--accent-emerald); padding-left: var(--space-3);">
-      <h4 style="color: var(--accent-emerald); margin-bottom: var(--space-1); font-size: 1.05rem;">Lớp 2: Đọc Cấu Trúc (Structural Reading) — Tác giả TƯ DUY thế nào?</h4>
-      <p style="font-size: 0.9rem; line-height: 1.5; color: var(--text-secondary);">
-        Mạch tư duy của Shichida trong chương này có tính thực tiễn cao: giới thiệu cơ sở khoa học thần kinh (Doman, hệ tín hiệu thứ hai) &rarr; dẫn chứng thực nghiệm lâm sàng thành công (Hawaii, Hiroshima) &rarr; thiết lập quy trình từng bước &rarr; đúc kết 20 nguyên tắc vàng &rarr; xây dựng các công cụ tự học thực tế (sổ từ vựng, từ điển, sà ngang). <span class="page-ref">Ch 4, p. 70, 72, 75, 80</span>
-      </p>
-    </div>
-
-    <div style="margin-bottom: var(--space-4); border-left: 3px solid var(--accent-amber); padding-left: var(--space-3);">
-      <h4 style="color: var(--accent-amber); margin-bottom: var(--space-1); font-size: 1.05rem;">Lớp 3: Đọc Bối Cảnh (Contextual Reading) — Bối cảnh gì định hình tác phẩm?</h4>
-      <p style="font-size: 0.9rem; line-height: 1.6; color: var(--text-secondary);">
-        Tác phẩm được viết trong bối cảnh nước Nhật những năm cuối thế kỷ 20, khi các lớp học "kiểu anh tài" tập trung thái quá vào luyện IQ và suy luận logic khô khan bùng nổ, đồng thời công nghệ tivi gia đình phát triển nhanh chóng gây lo ngại về sức khỏe tâm lý trẻ nhỏ. <span class="page-ref">Ch 4, p. 74, 78</span>
-      </p>
-    </div>
-
-    <div style="margin-bottom: var(--space-4); border-left: 3px solid var(--accent-red); padding-left: var(--space-3);">
-      <h4 style="color: var(--accent-red); margin-bottom: var(--space-1); font-size: 1.05rem;">Lớp 4: Đọc Phản Biện (Critical Reading) — Tác giả ĐÚNG/SAI ở đâu?</h4>
-      <p style="font-size: 0.9rem; line-height: 1.5; color: var(--text-secondary);">
-        <strong>Đúng:</strong> Khẳng định tầm quan trọng vượt trội của ngôn ngữ đối với tư duy. Nhấn mạnh việc khen ngợi nỗ lực thay vì tư chất. Khuyên khích tự tra từ điển để học chủ động. <span class="page-ref">Ch 4, p. 74, 78, 80</span>
-        <br><strong>Sai sót khoa học:</strong> Cường điệu quá mức các lý thuyết của Glenn Doman (như việc sọ trẻ nở gấp 3-4 lần). Cảnh báo về tivi phóng tia âm cực gây máu trắng mang tính định kiến thời đại hơn là bằng chứng y khoa hiện đại. <span class="page-ref">Ch 4, p. 70, 78</span>
-      </p>
-    </div>
-
-    <div style="border-left: 3px solid var(--accent-purple); padding-left: var(--space-3);">
-      <h4 style="color: var(--accent-purple); margin-bottom: var(--space-1); font-size: 1.05rem;">Lớp 5: Đọc Kiến Tạo (Generative Reading) — Chúng ta SÁNG TẠO được gì?</h4>
-      <p style="font-size: 0.9rem; line-height: 1.5; color: var(--text-secondary);">
-        Kiến tạo mô hình <strong>"Tự Học Ngôn Ngữ Chủ Động Kép (Active Bilingual Self-Learning Model)"</strong>: Sử dụng sổ từ vựng và nhật ký đọc sách kết hợp với công nghệ số hiện đại (tự tra cứu từ điển số an toàn). Thay thế hoàn toàn tivi/màn hình thụ động bằng các tương tác giọng nói hai chiều trực tiếp, kể chuyện cổ tích nhập vai, và các bài tập vận động thăng bằng sà ngang tại nhà để kích hoạt thùy trước trán tối đa mà không gây áp lực học tập tiêu cực cho con. <span class="page-ref">Ch 4, p. 76, 80</span>
-      </p>
-    </div>
-  </div>
-</div>
-
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH IV · ĐÁNH GIÁ KHOA HỌC</div>
-    <h2>Đối chiếu khoa học và Phản biện Socratic</h2>
-<div class="split-layout">
-  <div style="flex: 1.1;">
-    <div class="evidence-card" style="border-left: 3px solid var(--accent-cyan); margin-bottom: var(--space-4); background: var(--surface); padding: var(--space-5); border-radius: var(--radius-lg); box-shadow: var(--shadow-glass);">
-      <div class="evidence-header" style="display: flex; justify-content: space-between; font-weight: 600; margin-bottom: var(--space-2);">
-        <span class="claim-text" style="font-size: 1.05rem;">1. Cáo buộc: Glenn Doman & Cấu trúc sọ não nở 3-4 lần</span>
-        <span class="quality-score" style="color: var(--accent-red);">⭐⭐☆☆☆ 2/5</span>
-      </div>
-      <div class="evidence-type" style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: var(--space-2);"> Trị liệu lâm sàng & Giáo dục sớm đặc biệt <span class="page-ref">Ch 4, p. 70</span></div>
-      <div class="evidence-body" style="font-size: 0.9rem; line-height: 1.6; color: var(--text-secondary);">
-        <strong>Đánh giá:</strong> Cực kỳ cường điệu. Khoa học thần kinh đồng ý rằng kích ứng ngôn ngữ làm tăng mật độ khớp thần kinh (synapse). Tuy nhiên, việc khẳng định sọ trẻ nở to gấp 3-4 lần bình thường do học chữ là không có căn cứ sinh học nhi khoa. <br>
-        <strong>Phản biện y khoa:</strong> Hiệp hội Nhi khoa Hoa Kỳ (AAP) từng ra cảnh báo chính thức về phương pháp của Glenn Doman (như kỹ thuật "patterning") vì thiếu bằng chứng thực nghiệm đối chứng khoa học và gây kỳ vọng ảo, căng thẳng cực độ cho gia đình.
-      </div>
-    </div>
-    
-    <div class="evidence-card" style="border-left: 3px solid var(--accent-cyan); background: var(--surface); padding: var(--space-5); border-radius: var(--radius-lg); box-shadow: var(--shadow-glass);">
-      <div class="evidence-header" style="display: flex; justify-content: space-between; font-weight: 600; margin-bottom: var(--space-2);">
-        <span class="claim-text" style="font-size: 1.05rem;">2. Cáo buộc: Bức xạ tivi gây bệnh máu trắng</span>
-        <span class="quality-score" style="color: var(--accent-red);">⭐⭐☆☆☆ 2/5</span>
-      </div>
-      <div class="evidence-type" style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: var(--space-2);"> Cảnh báo sinh học phóng xạ <span class="page-ref">Ch 4, p. 78</span></div>
-      <div class="evidence-body" style="font-size: 0.9rem; line-height: 1.6; color: var(--text-secondary);">
-        <strong>Đánh giá:</strong> Mang tính định kiến và lo âu công nghệ thời đại cũ. Tivi màn hình CRT cổ điển phát xạ tia X cực nhẹ dưới ngưỡng gây hại; màn hình LCD/OLED hiện đại không sử dụng tia âm cực. Không có bằng chứng tivi gây bệnh máu trắng trực tiếp.<br>
-        <strong>Điểm đúng:</strong> Cảnh báo về mặt hành vi tâm lý là hoàn toàn chính xác. Xem tivi làm giảm tương tác ngôn ngữ trực tiếp hai chiều, gây nguy cơ tự kỷ chức năng (tự kỷ giả) và giảm khả năng chú ý.
-      </div>
-    </div>
-  </div>
-
-  <div class="split-right" style="border-left-color: var(--accent-red); flex: 0.9; background: var(--surface); padding: var(--space-5); border-radius: var(--radius-lg); box-shadow: var(--shadow-glass);">
-    <h3 style="color: var(--accent-red); font-size: 1.2rem; margin-bottom: var(--space-3);">Phân Tích Rủi Ro & Dung Hòa</h3>
-    <ul style="padding-left: var(--space-4); font-size: 0.9rem; line-height: 1.6; color: var(--text-secondary);">
-      <li style="margin-bottom: var(--space-3);">
-        <strong>Rủi ro Đọc vẹt (Hyperlexia):</strong> Việc ép học thẻ từ quá mức có thể khiến trẻ 1-2 tuổi nhận dạng được mặt chữ nhưng không hiểu ý nghĩa khái niệm (đọc không đi kèm lý giải). Điều này triệt tiêu tư duy sâu sắc. <span class="page-ref">Ch 4, p. 73</span>
-      </li>
-      <li style="margin-bottom: var(--space-3);">
-        <strong>Quá tải hệ thần kinh (Overstimulation):</strong> Tráo thẻ từ liên tục ở trẻ sơ sinh có thể gây rối loạn giấc ngủ, cáu gắt do quá tải giác quan.
-      </li>
-      <li>
-        <strong>Dung hòa thực hành:</strong> Hãy coi thẻ từ là trò chơi giải trí vui vẻ ngắn (2-3 phút), không kiểm tra hay ép trẻ. Luôn gắn chữ với trải nghiệm thực tế sinh động (chạm, ngửi, nhìn sự vật thật). Tập trung vào kể chuyện cổ tích, hội thoại giàu cảm xúc để nuôi dưỡng tâm hồn trẻ. <span class="page-ref">Ch 4, p. 74, 76</span>
-      </li>
-    </ul>
-  </div>
-</div>
-
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH IV · TRÍCH DẪN VÀNG NGỌC</div>
-    <h2>Những trích dẫn đắt giá nhất trong Chương IV</h2>
-<div class="quote-block">
-  <p class="quote-text">"Trụ cột phương pháp giáo dục trẻ nhỏ là việc giáo dục ngôn ngữ. Nếu không, chắc chắn trẻ không đạt được sự sâu sắc về tinh thần. Giả sử có tài liệu giáo trình trí năng, chỉ số IQ đạt tới 180 hay 200 thì không có nghĩa là trẻ đã có khả năng tư duy mang tính tinh thần sâu sắc. Trí năng, chỉ có thể đạt được bằng cách đọc sách và tự ngấm vào mỗi con người trẻ nhỏ mà thôi."</p>
-  <p class="quote-context"><strong>— Giáo sư Shichida Makoto</strong>, phê phán các phương pháp giáo dục sớm lệch lạc chỉ tập trung vào luyện IQ suông. <span class="page-ref">Ch 4, p. 74</span></p>
-  <div style="font-size: 0.9rem; line-height: 1.6; color: var(--text-secondary); margin-top: var(--space-3); border-top: 1px solid var(--border-subtle); padding-top: var(--space-2);">
-    <strong>Ý nghĩa sâu sắc:</strong> Tác giả nhấn mạnh ngôn ngữ là xương sống của mọi năng lực tư duy lý tính và đạo đức. Các bài tập rèn luyện IQ hay suy luận logic chỉ là các kỹ năng bề mặt. Chiều sâu tinh thần, sự thấu cảm và trí năng thực sự của một con người chỉ có thể được bồi đắp thông qua thói quen đọc sách tự thân, tích lũy trường từ vựng phong phú để tự ngấm vào nội tâm của trẻ.
-  </div>
-</div>
-
-<div class="quote-block" style="border-left-color: var(--accent-purple);">
-  <p class="quote-text">"Chúng ta hãy cố gắng nuôi dạy trẻ mà không dùng đến các từ phủ nhận, cấm đoán trẻ. Bố mẹ thường hay nói một cách vô thức với con 'Nguy hiểm lắm, cấm dùng kéo' hay 'không được xé giấy'... Cách nói đó là cách cấu ngắt đi những cái mầm tích cực của trẻ."</p>
-  <p class="quote-context"><strong>— Giáo sư Shichida Makoto</strong>, cảnh báo về thói quen cấm đoán vô thức của cha mẹ hủy hoại tính chủ động của trẻ. <span class="page-ref">Ch 4, p. 77</span></p>
-  <div style="font-size: 0.9rem; line-height: 1.6; color: var(--text-secondary); margin-top: var(--space-3); border-top: 1px solid var(--border-subtle); padding-top: var(--space-2);">
-    <strong>Ý nghĩa sâu sắc:</strong> Mỗi đứa trẻ sinh ra đều có bản năng tò mò và khao khát tự lập mạnh mẽ. Sự lo lắng quá mức của cha mẹ dẫn đến việc liên tục cấm cản, dán nhãn nguy hiểm. Việc này gián tiếp bóp chết lòng tự tin, biến trẻ thành người thụ động, yếu ớt khi lớn lên. Thay vì ngăn cấm, cha mẹ hãy là người đồng hành, giám sát an toàn và cho phép trẻ trải nghiệm các nguy cơ nhỏ để tự rút ra bài học sinh tồn.
-  </div>
-</div>
-
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH IV · CẨM NANG HÀNH ĐỘNG</div>
-    <h2>Kế hoạch hành động tổng lực cho cha mẹ</h2>
-<figure class="image-slot hero">
-  <img src="images/ch4_closing.png" alt="Sự gắn kết ngôn ngữ và tình yêu của cha mẹ mở ra thế giới tươi sáng cho trẻ">
-</figure>
-<ul class="action-list" style="margin-top: var(--space-4); list-style: none; padding: 0;">
-  <li class="action-item" style="display: flex; gap: var(--space-4); margin-bottom: var(--space-4); align-items: flex-start; background: var(--surface); padding: var(--space-4); border-radius: var(--radius-md); box-shadow: var(--shadow-glass);">
-    <div style="font-size: 1.5rem; line-height: 1;">📵</div>
-    <div>
-      <div class="action-headline" style="font-weight: 600; font-size: 1.05rem; color: var(--text-primary);">Cách ly hoàn toàn các màn hình điện tử một chiều đối với trẻ sơ sinh</div>
-      <div class="action-detail" style="font-size: 0.9rem; color: var(--text-secondary); margin-top: var(--space-1);">
-        Tuyệt đối không dùng Tivi hay điện thoại để dỗ dành trẻ. Sự thụ động của màn hình ngăn cản giao tiếp hai chiều, hủy hoại thùy trước trán và tăng cao nguy cơ tự kỷ. Thay thế bằng giọng nói thật, đọc sách tranh diễn cảm và kể chuyện cổ tích. <span class="page-ref">Ch 4, p. 78</span>
-      </div>
-    </div>
-  </li>
-
-  <li class="action-item" style="display: flex; gap: var(--space-4); margin-bottom: var(--space-4); align-items: flex-start; background: var(--surface); padding: var(--space-4); border-radius: var(--radius-md); box-shadow: var(--shadow-glass);">
-    <div style="font-size: 1.5rem; line-height: 1;">📚</div>
-    <div>
-      <div class="action-headline" style="font-weight: 600; font-size: 1.05rem; color: var(--text-primary);">Thiết lập hệ thống tự học ngôn ngữ chủ động cho con</div>
-      <div class="action-detail" style="font-size: 0.9rem; color: var(--text-secondary); margin-top: var(--space-1);">
-        Dạy chữ từ 6 tháng bằng thẻ từ gắn liền với trải nghiệm thực tế. Rèn thói quen mượn sách thư viện, luân phiên đọc và tập cho trẻ tóm tắt lại cốt truyện từ 2-3 tuổi. Hướng dẫn trẻ tự tra từ điển hình ảnh thay vì bố mẹ giải thích hộ ngay. <span class="page-ref">Ch 4, p. 72, 75, 78, 80</span>
-      </div>
-    </div>
-  </li>
-
-  <li class="action-item" style="display: flex; gap: var(--space-4); align-items: flex-start; background: var(--surface); padding: var(--space-4); border-radius: var(--radius-md); box-shadow: var(--shadow-glass);">
-    <div style="font-size: 1.5rem; line-height: 1;">🤸‍♂️</div>
-    <div>
-      <div class="action-headline" style="font-weight: 600; font-size: 1.05rem; color: var(--text-primary);">Phát triển cân bằng Thể chất (Đu sà ngang) & Trí não (Đố vui)</div>
-      <div class="action-detail" style="font-size: 0.9rem; color: var(--text-secondary); margin-top: var(--space-1);">
-        Tập trung kích hoạt thùy trước trán (suy nghĩ) sau 3 tuổi qua trò chơi đố vui. Dắt trẻ đi bộ dạo chơi thiên nhiên hàng ngày, trò chuyện về sự vật. Rèn thể lực và khả năng chịu đựng cho trẻ bằng cách đu sà ngang/sà sắt liên tục trong 1 phút. <span class="page-ref">Ch 4, p. 80</span>
-      </div>
-    </div>
-  </li>
-</ul>
-
-  </section>
-
-</div>
-
-<div class="nav-controls">
-  <button class="nav-btn" id="prevBtn" onclick="prevSlide()" aria-label="Previous slide">&#8592;</button>
-  <div class="counter" id="counter" aria-live="polite">1 / 1</div>
-  <button class="nav-btn" id="nextBtn" onclick="nextSlide()" aria-label="Next slide">&#8594;</button>
-</div>
-
-<script src="common.js"></script>
+  <script src="../common.js"></script>
 </body>
+
 </html>

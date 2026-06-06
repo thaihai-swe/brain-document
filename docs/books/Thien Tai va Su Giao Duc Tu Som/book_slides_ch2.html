@@ -1,589 +1,794 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Thiên Tài và Sự Giáo Dục Từ Sớm — Chương 2</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="common.css">
-<script src="https://cdn.jsdelivr.net/npm/@panzoom/panzoom@4.5.1/dist/panzoom.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/mermaid@11.10.0/dist/mermaid.min.js" crossorigin="anonymous"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Thiên Tài và Sự Giáo Dục Từ Sớm — Chương 2</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../common.css">
+  <script src="https://cdn.jsdelivr.net/npm/@panzoom/panzoom@4.5.1/dist/panzoom.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@11.10.0/dist/mermaid.min.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
 
-<div class="progress-bar" id="progressBar"></div>
+  <div class="progress-bar" id="progressBar"></div>
 
-<div class="chapter-menu">
-  <button class="menu-btn" id="chapterMenuBtn" onclick="toggleChapterMenu()" aria-haspopup="true" aria-expanded="false">Chapters &#9662;</button>
-  <div class="chapter-menu-panel" id="chapterMenuPanel" role="menu"></div>
-</div>
-
-<div class="slide-container" id="slideContainer">
-
-  <section class="slide" aria-hidden="false">
-<h1>Phương Pháp Giáo Dục Của Witte</h1>
-<p class="subtitle">Chương 2 — Phân tích chi tiết và hệ thống hóa phương pháp giáo dục sớm của cha con Karl Witte</p>
-
-<figure class="image-slot hero">
-  <img src="images/ch2_book_cover.png" alt="Sách giáo dục và kính đọc sách trên bàn">
-  <figcaption>Nguồn: Unsplash (Free Stock Photo)</figcaption>
-</figure>
-
-<div class="meta-grid">
-  <div class="meta-item">
-    <div class="meta-label">Nhân vật trọng tâm</div>
-    <div class="meta-value">Karl Witte & Cha (Mục sư Witte)</div>
+  <div class="chapter-menu">
+    <button class="menu-btn" id="chapterMenuBtn" onclick="toggleChapterMenu()" aria-haspopup="true"
+      aria-expanded="false">Chapters &#9662;</button>
+    <div class="chapter-menu-panel" id="chapterMenuPanel" role="menu"></div>
   </div>
-  <div class="meta-item">
-    <div class="meta-label">Bối cảnh lịch sử</div>
-    <div class="meta-value">Năm 1818, Đức (Magdeburg / Lochau)</div>
-  </div>
-  <div class="meta-item">
-    <div class="meta-label">Chương phân tích</div>
-    <div class="meta-value">Chương 2 (DEEP Mode)</div>
-  </div>
-  <div class="meta-item">
-    <div class="meta-label">Độ sâu phân tích</div>
-    <div class="meta-value">Deep (18 slides)</div>
-  </div>
-</div>
 
-  </section>
+  <div class="slide-container" id="slideContainer">
 
-  <section class="slide chapter-divider">
-<div class="chapter-number">Chương 2</div>
-<h2>Phương Pháp Giáo Dục Của Witte</h2>
-<p class="chapter-meta">Thời gian đọc: ~25 phút · Độ khó: Trung bình · Khái niệm cốt lõi: Ngôn ngữ chuẩn mực, Kích thích giác quan, Trò chơi đóng vai, Kiểm soát chế độ ăn, Kỷ luật lý tính, Phòng ngừa tự phụ</p>
-
-<figure class="image-slot hero">
-  <img src="images/ch2_early_edu.png" alt="Trẻ em chơi đùa và tò mò khám phá học tập">
-  <figcaption>Nguồn: Unsplash (Free Stock Photo)</figcaption>
-</figure>
-
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH 2 · BẢN ĐỒ KHÁI NIỆM</div>
-    <h2>Hệ thống hóa Phương pháp Karl Witte</h2>
-<div class="mermaid">
-graph TD
-    A["Hệ thống Giáo dục của Cha Witte"] --> B["Giáo dục Trí tuệ (Intellectual)"]
-    A --> C["Giáo dục Đức dục (Moral)"]
-    A --> D["Giáo dục Thể chất & Dinh dưỡng"]
-    
-    B --> B1["Ngôn ngữ làm gốc: Dạy từ chuẩn, tránh nói ngọng, 6 ngoại ngữ"]
-    B --> B2["Trải nghiệm thực tế: Đi dạo vẽ bản đồ, tham quan bảo tàng"]
-    B --> B3["Rèn luyện tư duy: Tập trung cao độ, hỏi đáp, tự học"]
-
-    C --> C1["Đạo đức & Đức tin: Lòng nhân ái, sùng đạo qua điển tích"]
-    C --> C2["Tự kiểm soát bản thân: Kỷ luật tự giác (Ví dụ: Đổ sữa)"]
-    C --> C3["Kiềm chế tự phụ: Bảo vệ khỏi lời khen ngợi ngoài xã hội"]
-
-    D --> D1["Dinh dưỡng lý tính: Ăn uống điều độ, tránh tinh lực dồn dạ dày"]
-    D --> D2["Vận động tự nhiên: Đi bộ 2 tiếng/ngày, leo núi, dạo vườn sỏi"]
-
-    style A fill:#635BFF,stroke:#2A2D33,color:#F7F7F5
-    style B fill:#059669,stroke:#2A2D33,color:#F7F7F5
-    style C fill:#D97706,stroke:#2A2D33,color:#F7F7F5
-    style D fill:#0891B2,stroke:#2A2D33,color:#F7F7F5
-</div>
-
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH 2 · TÓM TẮT CẤU TRÚC</div>
-    <h2>Tóm tắt cốt lõi</h2>
-<div class="content-card">
-  <p class="summary-text"><strong>Tóm tắt cốt lõi:</strong> Chương 2 mô tả chi tiết phương pháp giáo dục mà cha của Karl Witte áp dụng để chứng minh cam kết lịch sử: giáo dục sớm đúng cách có thể biến một đứa trẻ bình thường thành nhân tài kiệt xuất, phát triển toàn diện cả trí tuệ, đức hạnh lẫn thể chất.</p>
-  
-  <div class="deep-section">
-    <strong>Đặt vấn đề (Setup):</strong> Cha Witte cam kết trước hội nghiên cứu giáo dục Magdeburg rằng ông sẽ dạy con mình thành tài năng phi phàm, bất kể tư chất ban đầu như thế nào, nhằm phản bác quan điểm chuyên chế của thời đại cho rằng "tài năng hoàn toàn do bẩm sinh". <span class="page-ref">Ch 2 · §1</span>
-  </div>
-  
-  <div class="deep-section">
-    <strong>Luận điểm (Argument):</strong> Trẻ lớn lên thành nhân tài hay người bình thường phụ thuộc phần lớn vào giáo dục từ sơ sinh đến 5, 6 tuổi. Giáo dục sớm cần phát triển toàn diện: ngôn ngữ là chìa khóa mở cửa tri thức, kết hợp rèn luyện thể chất, kiểm soát dinh dưỡng để giữ sự minh mẫn cho não bộ, rèn luyện đạo đức lý tính và ngăn ngừa thói tự phụ. <span class="page-ref">Ch 2 · §1, §8, §10, §15</span>
-  </div>
-  
-  <div class="deep-section">
-    <strong>Bằng chứng (Evidence):</strong> Karl Witte nói sõi từ sớm, 5 tuổi thuộc 30.000 từ, 8 tuổi thông thạo 6 thứ tiếng và đọc tác phẩm kinh điển. Cậu bé có thể tự vẽ bản đồ vùng lân cận, giải đố toán học hóc búa của Euler, tự kiểm soát thói thèm ăn (sự kiện đổ sữa) và đậu đại học lúc 10 tuổi, nhận bằng Tiến sĩ Triết học lúc 14 tuổi mà không bị suy nhược cơ thể. <span class="page-ref">Ch 2 · §3, §4, §5, §11, §16, §18</span>
-  </div>
-  
-  <div class="deep-section">
-    <strong>Hệ quả (Implications):</strong> Cha mẹ cần vượt qua định kiến "sợ giáo dục sớm làm hại trẻ", phối hợp nhất quán trong gia đình, dạy con từ buổi bình minh nhận thức bằng phương pháp học mà chơi, tôn trọng lý trí của trẻ và rèn luyện tính khiêm tốn. <span class="page-ref">Ch 2 · §9, §11, §12, §15</span>
-  </div>
-</div>
-
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH 2 · Ý TƯỞNG LỚN</div>
-    <h2>Tố chất vs Giáo dục (Helvetius vs Cha Witte)</h2>
-<div class="split-layout">
-  <div class="split-left" style="border-top: 4px solid var(--accent-cyan); padding-top: 10px;">
-    <h3 style="color: var(--accent-cyan); margin-top: 0;">Lý thuyết gốc của Helvetius</h3>
-    <p style="font-size: 0.9rem; line-height: 1.4;">Nhà triết học Pháp Claude-Adrien Helvetius khẳng định:</p>
-    <ul style="font-size: 0.85rem; line-height: 1.4; padding-left: 20px; margin-top: 10px;">
-      <li style="margin-bottom: 8px;"><strong>Phủ nhận bẩm sinh:</strong> Trẻ em sinh ra hoàn toàn giống nhau về tư chất, không có sự khác biệt thiên phú.</li>
-      <li style="margin-bottom: 8px;"><strong>Giáo dục vạn năng:</strong> Môi trường sống và giáo dục quyết định hoàn toàn sự khác biệt giữa thiên tài và người bình thường.</li>
-      <li style="margin-bottom: 8px;"><strong>Cam kết 10/10:</strong> Nếu 10 đứa trẻ nhận được nền giáo dục hoàn hảo như nhau thì cả 10 sẽ trở thành vĩ nhân xuất chúng. <span class="page-ref">Ch 2 · §1</span></li>
-    </ul>
-  </div>
-  
-  <div class="split-right" style="border-top: 4px solid var(--accent-purple); padding-top: 10px;">
-    <h3 style="color: var(--accent-purple); margin-top: 0;">Lý thuyết cải tiến của Cha Witte</h3>
-    <p style="font-size: 0.9rem; line-height: 1.4;">Cha Witte tin tưởng Helvetius nhưng đưa ra góc nhìn thực tế hơn:</p>
-    <ul style="font-size: 0.85rem; line-height: 1.4; padding-left: 20px; margin-top: 10px;">
-      <li style="margin-bottom: 8px;"><strong>Thừa nhận tư chất khác biệt:</strong> Có đứa trẻ sinh ra được trời ban 100 phần, có đứa chỉ 10 phần, trung bình là 50 phần. <span class="page-ref">Ch 2 · §2</span></li>
-      <li style="margin-bottom: 8px;"><strong>Giáo dục bảo toàn tiềm năng:</strong> Đứa trẻ bẩm sinh 80 nếu giáo dục tồi chỉ phát huy được 40. Đứa trẻ bẩm sinh 50 nếu giáo dục tốt có thể đạt tới 80. <span class="page-ref">Ch 2 · §2</span></li>
-      <li style="margin-bottom: 8px;"><strong>Mục tiêu thực tế:</strong> Giáo dục sớm không phải để ép buộc tạo thần đồng, mà là nắm bắt thời cơ để tránh năng lực tiềm tàng bị mai một theo quy luật giảm dần. <span class="page-ref">Ch 2 · §3</span></li>
-    </ul>
-  </div>
-</div>
-
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH 2 · PHÁT TRIỂN NGÔN NGỮ</div>
-    <h2>Ngôn ngữ là nền tảng tư duy</h2>
-<div class="content-card">
-  <p style="font-size: 1.05rem; line-height: 1.5; margin-bottom: 20px;">
-    <strong>Ngôn ngữ là công cụ của tư duy:</strong> Con người tiến bộ hơn động vật nhờ ngôn ngữ. Với trẻ con, không có sự bắt đầu ngôn ngữ nào là quá sớm. Cha Witte bắt đầu dạy ngay từ khi Witte biết cảm nhận sự vật. <span class="page-ref">Ch 2 · §3</span>
-  </p>
-  
-  <div class="split-layout">
-    <div class="split-left" style="border-right: 1px solid var(--border-strong); padding-right: 15px;">
-      <h4 style="color: var(--accent-emerald); margin-top: 0;">Quy trình dạy từ vựng của cha Witte</h4>
-      <ul style="font-size: 0.85rem; line-height: 1.4; padding-left: 20px; margin-top: 10px;">
-        <li style="margin-bottom: 8px;"><strong>Phát âm gắn liền với vật thật:</strong> Đưa ngón tay trước mặt trẻ, đợi trẻ nắm lấy, cảm nhận niềm vui rồi lặp lại "ngón tay, ngón tay" thật rõ ràng. <span class="page-ref">Ch 2 · §3</span></li>
-        <li style="margin-bottom: 8px;"><strong>Phân cấp vốn từ:</strong> Bắt đầu bằng danh từ xung quanh (bàn ăn, cơ thể, quần áo), sau đó đến động từ, tính từ và kể chuyện liên quan để giải thích nghĩa. <span class="page-ref">Ch 2 · §3</span></li>
-        <li style="margin-bottom: 8px;"><strong>Lặp đi lặp lại:</strong> Trẻ con nghe kể chuyện nhiều lần không chán. Cha mẹ cần kiên trì lặp lại các câu chuyện với từ mới. <span class="page-ref">Ch 2 · §3, §4</span></li>
-      </ul>
-    </div>
-    
-    <div class="split-right" style="padding-left: 15px;">
-      <h4 style="color: var(--accent-red); margin-top: 0;">Nguyên tắc loại bỏ "ngôn ngữ trẻ con"</h4>
-      <ul style="font-size: 0.85rem; line-height: 1.4; padding-left: 20px; margin-top: 10px;">
-        <li style="margin-bottom: 8px;"><strong>Không dùng từ mô phỏng:</strong> Tuyệt đối không dạy trẻ những từ ngây ngô dễ phát âm như "gâu gâu", "meo meo", "cạp cạp". Dạy thẳng từ chuẩn: "con chó", "con mèo". <span class="page-ref">Ch 2 · §3</span></li>
-        <li style="margin-bottom: 8px;"><strong>Không nói ngọng, nói lắp:</strong> Cha mẹ phải nói chuẩn, phát âm chậm, mạch lạc, không dùng từ địa phương, tạo môi trường ngôn ngữ trong sáng. <span class="page-ref">Ch 2 · §3</span></li>
-        <li style="margin-bottom: 8px;"><strong>Thành quả vượt bậc:</strong> Lên 5 tuổi, Karl Witte tích lũy được <strong>30.000 từ vựng</strong> (gấp 6 lần một học sinh trung học học ngoại ngữ trong 5 năm). <span class="page-ref">Ch 2 · §3</span></li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH 2 · ĐỌC &amp; ĐA NGÔN NGỮ</div>
-    <h2>Hành trình dạy đọc và 6 ngoại ngữ</h2>
-<div class="content-card">
-  <div class="split-layout">
-    <div class="split-left" style="border-right: 1px solid var(--border-strong); padding-right: 15px;">
-      <h3 style="color: var(--accent-purple); margin-top: 0;">Phương pháp dạy đọc từ 3 tuổi</h3>
-      <p style="font-size: 0.85rem; line-height: 1.4; margin-bottom: 10px;">
-        <strong>Tạo động lực trước, dạy chữ sau:</strong> Mua sách tranh về, kích thích tò mò: <em>"Con không biết chữ thì làm sao tự hiểu những câu chuyện hay này?"</em> Khi trẻ khao khát học, mới bắt đầu dạy. <span class="page-ref">Ch 2 · §4</span>
+    <section class="slide" aria-hidden="false">
+      <h1>Phương Pháp Giáo Dục Của Witte</h1>
+      <p class="subtitle">Chương 2 — Phân tích chi tiết và hệ thống hóa phương pháp giáo dục sớm của cha con Karl Witte
       </p>
-      <p style="font-size: 0.85rem; line-height: 1.4; margin-bottom: 10px;">
-        <strong>Học thông qua vận động giác quan:</strong> Dùng các con chữ in cỡ 10 cm dán trên bảng gỗ nhỏ để chơi trò ghép vần (đi trước phương pháp Montessori hơn một thế kỷ). <span class="page-ref">Ch 2 · §4</span>
-      </p>
-      <p style="font-size: 0.85rem; line-height: 1.4;">
-        <strong>"Nghe quen rồi sẽ nhớ":</strong> Không bắt học ngữ pháp khô khan khi còn nhỏ. Cho nghe cùng một câu chuyện ngụ ngôn Aesop bằng nhiều ngôn ngữ khác nhau (Đức, Pháp, Ý, La-tinh) để tự so sánh và thẩm thấu. <span class="page-ref">Ch 2 · §4</span>
-      </p>
-    </div>
-    
-    <div class="split-right" style="padding-left: 15px;">
-      <h3 style="color: var(--accent-amber); margin-top: 0;">Lộ trình học ngoại ngữ khoa học</h3>
-      <div style="font-size: 0.85rem; line-height: 1.4;">
-        <ol style="padding-left: 20px;">
-          <li style="margin-bottom: 8px;"><strong>Tiếng Đức (Mẹ đẻ):</strong> Đọc thông viết thạo trước khi học ngoại ngữ khác.</li>
-          <li style="margin-bottom: 8px;"><strong>Tiếng Pháp:</strong> Ngôn ngữ cùng ngữ hệ gần gũi nhất, bắt đầu học từ 6 tuổi.</li>
-          <li style="margin-bottom: 8px;"><strong>Tiếng Ý:</strong> Chỉ mất 6 tháng để nắm vững nhờ nền tảng tiếng Pháp.</li>
-          <li style="margin-bottom: 8px;"><strong>Tiếng La-tinh (7 tuổi):</strong> Khơi gợi hứng thú bằng truyện anh hùng thành Troy trước khi học. Mất 9 tháng để thành thạo.</li>
-          <li style="margin-bottom: 8px;"><strong>Tiếng Anh & Hy Lạp (8 tuổi):</strong> Tiếng Anh mất 3 tháng, tiếng Hy Lạp mất 6 tháng.</li>
-        </ol>
-        <p style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 10px;">
-          <strong>Kết quả:</strong> 8 tuổi tự đọc các tác phẩm của Homer, Plutarchus, Virgil, Cicero bằng nguyên bản ngôn ngữ gốc. <span class="page-ref">Ch 2 · §4</span>
-        </p>
+
+      <figure class="image-slot hero">
+        <img src="images/ch2_book_cover.png" alt="Sách giáo dục và kính đọc sách trên bàn">
+        <figcaption>Nguồn: Unsplash (Free Stock Photo)</figcaption>
+      </figure>
+
+      <div class="meta-grid">
+        <div class="meta-item">
+          <div class="meta-label">Nhân vật trọng tâm</div>
+          <div class="meta-value">Karl Witte & Cha (Mục sư Witte)</div>
+        </div>
+        <div class="meta-item">
+          <div class="meta-label">Bối cảnh lịch sử</div>
+          <div class="meta-value">Năm 1818, Đức (Magdeburg / Lochau)</div>
+        </div>
+        <div class="meta-item">
+          <div class="meta-label">Chương phân tích</div>
+          <div class="meta-value">Chương 2 (DEEP Mode)</div>
+        </div>
+        <div class="meta-item">
+          <div class="meta-label">Độ sâu phân tích</div>
+          <div class="meta-value">Deep (18 slides)</div>
+        </div>
       </div>
-    </div>
+
+    </section>
+
+    <section class="slide chapter-divider">
+      <div class="chapter-number">Chương 2</div>
+      <h2>Phương Pháp Giáo Dục Của Witte</h2>
+      <p class="chapter-meta">Thời gian đọc: ~25 phút · Độ khó: Trung bình · Khái niệm cốt lõi: Ngôn ngữ chuẩn mực, Kích
+        thích giác quan, Trò chơi đóng vai, Kiểm soát chế độ ăn, Kỷ luật lý tính, Phòng ngừa tự phụ</p>
+
+      <figure class="image-slot hero">
+        <img src="images/ch2_early_edu.png" alt="Trẻ em chơi đùa và tò mò khám phá học tập">
+        <figcaption>Nguồn: Unsplash (Free Stock Photo)</figcaption>
+      </figure>
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 2 · BẢN ĐỒ KHÁI NIỆM</div>
+      <h2>Hệ thống hóa Phương pháp Karl Witte</h2>
+      <div class="mermaid">
+        graph TD
+        A["Hệ thống Giáo dục của Cha Witte"] --> B["Giáo dục Trí tuệ (Intellectual)"]
+        A --> C["Giáo dục Đức dục (Moral)"]
+        A --> D["Giáo dục Thể chất & Dinh dưỡng"]
+
+        B --> B1["Ngôn ngữ làm gốc: Dạy từ chuẩn, tránh nói ngọng, 6 ngoại ngữ"]
+        B --> B2["Trải nghiệm thực tế: Đi dạo vẽ bản đồ, tham quan bảo tàng"]
+        B --> B3["Rèn luyện tư duy: Tập trung cao độ, hỏi đáp, tự học"]
+
+        C --> C1["Đạo đức & Đức tin: Lòng nhân ái, sùng đạo qua điển tích"]
+        C --> C2["Tự kiểm soát bản thân: Kỷ luật tự giác (Ví dụ: Đổ sữa)"]
+        C --> C3["Kiềm chế tự phụ: Bảo vệ khỏi lời khen ngợi ngoài xã hội"]
+
+        D --> D1["Dinh dưỡng lý tính: Ăn uống điều độ, tránh tinh lực dồn dạ dày"]
+        D --> D2["Vận động tự nhiên: Đi bộ 2 tiếng/ngày, leo núi, dạo vườn sỏi"]
+
+        style A fill:#635BFF,stroke:#2A2D33,color:#F7F7F5
+        style B fill:#059669,stroke:#2A2D33,color:#F7F7F5
+        style C fill:#D97706,stroke:#2A2D33,color:#F7F7F5
+        style D fill:#0891B2,stroke:#2A2D33,color:#F7F7F5
+      </div>
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 2 · TÓM TẮT CẤU TRÚC</div>
+      <h2>Tóm tắt cốt lõi</h2>
+      <div class="content-card">
+        <p class="summary-text"><strong>Tóm tắt cốt lõi:</strong> Chương 2 mô tả chi tiết phương pháp giáo dục mà cha
+          của Karl Witte áp dụng để chứng minh cam kết lịch sử: giáo dục sớm đúng cách có thể biến một đứa trẻ bình
+          thường thành nhân tài kiệt xuất, phát triển toàn diện cả trí tuệ, đức hạnh lẫn thể chất.</p>
+
+        <div class="deep-section">
+          <strong>Đặt vấn đề (Setup):</strong> Cha Witte cam kết trước hội nghiên cứu giáo dục Magdeburg rằng ông sẽ dạy
+          con mình thành tài năng phi phàm, bất kể tư chất ban đầu như thế nào, nhằm phản bác quan điểm chuyên chế của
+          thời đại cho rằng "tài năng hoàn toàn do bẩm sinh". <span class="page-ref">Ch 2 · §1</span>
+        </div>
+
+        <div class="deep-section">
+          <strong>Luận điểm (Argument):</strong> Trẻ lớn lên thành nhân tài hay người bình thường phụ thuộc phần lớn vào
+          giáo dục từ sơ sinh đến 5, 6 tuổi. Giáo dục sớm cần phát triển toàn diện: ngôn ngữ là chìa khóa mở cửa tri
+          thức, kết hợp rèn luyện thể chất, kiểm soát dinh dưỡng để giữ sự minh mẫn cho não bộ, rèn luyện đạo đức lý
+          tính và ngăn ngừa thói tự phụ. <span class="page-ref">Ch 2 · §1, §8, §10, §15</span>
+        </div>
+
+        <div class="deep-section">
+          <strong>Bằng chứng (Evidence):</strong> Karl Witte nói sõi từ sớm, 5 tuổi thuộc 30.000 từ, 8 tuổi thông thạo 6
+          thứ tiếng và đọc tác phẩm kinh điển. Cậu bé có thể tự vẽ bản đồ vùng lân cận, giải đố toán học hóc búa của
+          Euler, tự kiểm soát thói thèm ăn (sự kiện đổ sữa) và đậu đại học lúc 10 tuổi, nhận bằng Tiến sĩ Triết học lúc
+          14 tuổi mà không bị suy nhược cơ thể. <span class="page-ref">Ch 2 · §3, §4, §5, §11, §16, §18</span>
+        </div>
+
+        <div class="deep-section">
+          <strong>Hệ quả (Implications):</strong> Cha mẹ cần vượt qua định kiến "sợ giáo dục sớm làm hại trẻ", phối hợp
+          nhất quán trong gia đình, dạy con từ buổi bình minh nhận thức bằng phương pháp học mà chơi, tôn trọng lý trí
+          của trẻ và rèn luyện tính khiêm tốn. <span class="page-ref">Ch 2 · §9, §11, §12, §15</span>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 2 · Ý TƯỞNG LỚN</div>
+      <h2>Tố chất vs Giáo dục (Helvetius vs Cha Witte)</h2>
+      <div class="split-layout">
+        <div class="split-left" style="border-top: 4px solid var(--accent-cyan); padding-top: 10px;">
+          <h3 style="color: var(--accent-cyan); margin-top: 0;">Lý thuyết gốc của Helvetius</h3>
+          <p style="font-size: 0.9rem; line-height: 1.4;">Nhà triết học Pháp Claude-Adrien Helvetius khẳng định:</p>
+          <ul style="font-size: 0.85rem; line-height: 1.4; padding-left: 20px; margin-top: 10px;">
+            <li style="margin-bottom: 8px;"><strong>Phủ nhận bẩm sinh:</strong> Trẻ em sinh ra hoàn toàn giống nhau về
+              tư chất, không có sự khác biệt thiên phú.</li>
+            <li style="margin-bottom: 8px;"><strong>Giáo dục vạn năng:</strong> Môi trường sống và giáo dục quyết định
+              hoàn toàn sự khác biệt giữa thiên tài và người bình thường.</li>
+            <li style="margin-bottom: 8px;"><strong>Cam kết 10/10:</strong> Nếu 10 đứa trẻ nhận được nền giáo dục hoàn
+              hảo như nhau thì cả 10 sẽ trở thành vĩ nhân xuất chúng. <span class="page-ref">Ch 2 · §1</span></li>
+          </ul>
+        </div>
+
+        <div class="split-right" style="border-top: 4px solid var(--accent-purple); padding-top: 10px;">
+          <h3 style="color: var(--accent-purple); margin-top: 0;">Lý thuyết cải tiến của Cha Witte</h3>
+          <p style="font-size: 0.9rem; line-height: 1.4;">Cha Witte tin tưởng Helvetius nhưng đưa ra góc nhìn thực tế
+            hơn:</p>
+          <ul style="font-size: 0.85rem; line-height: 1.4; padding-left: 20px; margin-top: 10px;">
+            <li style="margin-bottom: 8px;"><strong>Thừa nhận tư chất khác biệt:</strong> Có đứa trẻ sinh ra được trời
+              ban 100 phần, có đứa chỉ 10 phần, trung bình là 50 phần. <span class="page-ref">Ch 2 · §2</span></li>
+            <li style="margin-bottom: 8px;"><strong>Giáo dục bảo toàn tiềm năng:</strong> Đứa trẻ bẩm sinh 80 nếu giáo
+              dục tồi chỉ phát huy được 40. Đứa trẻ bẩm sinh 50 nếu giáo dục tốt có thể đạt tới 80. <span
+                class="page-ref">Ch 2 · §2</span></li>
+            <li style="margin-bottom: 8px;"><strong>Mục tiêu thực tế:</strong> Giáo dục sớm không phải để ép buộc tạo
+              thần đồng, mà là nắm bắt thời cơ để tránh năng lực tiềm tàng bị mai một theo quy luật giảm dần. <span
+                class="page-ref">Ch 2 · §3</span></li>
+          </ul>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 2 · PHÁT TRIỂN NGÔN NGỮ</div>
+      <h2>Ngôn ngữ là nền tảng tư duy</h2>
+      <div class="content-card">
+        <p style="font-size: 1.05rem; line-height: 1.5; margin-bottom: 20px;">
+          <strong>Ngôn ngữ là công cụ của tư duy:</strong> Con người tiến bộ hơn động vật nhờ ngôn ngữ. Với trẻ con,
+          không có sự bắt đầu ngôn ngữ nào là quá sớm. Cha Witte bắt đầu dạy ngay từ khi Witte biết cảm nhận sự vật.
+          <span class="page-ref">Ch 2 · §3</span>
+        </p>
+
+        <div class="split-layout">
+          <div class="split-left" style="border-right: 1px solid var(--border-strong); padding-right: 15px;">
+            <h4 style="color: var(--accent-emerald); margin-top: 0;">Quy trình dạy từ vựng của cha Witte</h4>
+            <ul style="font-size: 0.85rem; line-height: 1.4; padding-left: 20px; margin-top: 10px;">
+              <li style="margin-bottom: 8px;"><strong>Phát âm gắn liền với vật thật:</strong> Đưa ngón tay trước mặt
+                trẻ, đợi trẻ nắm lấy, cảm nhận niềm vui rồi lặp lại "ngón tay, ngón tay" thật rõ ràng. <span
+                  class="page-ref">Ch 2 · §3</span></li>
+              <li style="margin-bottom: 8px;"><strong>Phân cấp vốn từ:</strong> Bắt đầu bằng danh từ xung quanh (bàn ăn,
+                cơ thể, quần áo), sau đó đến động từ, tính từ và kể chuyện liên quan để giải thích nghĩa. <span
+                  class="page-ref">Ch 2 · §3</span></li>
+              <li style="margin-bottom: 8px;"><strong>Lặp đi lặp lại:</strong> Trẻ con nghe kể chuyện nhiều lần không
+                chán. Cha mẹ cần kiên trì lặp lại các câu chuyện với từ mới. <span class="page-ref">Ch 2 · §3, §4</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="split-right" style="padding-left: 15px;">
+            <h4 style="color: var(--accent-red); margin-top: 0;">Nguyên tắc loại bỏ "ngôn ngữ trẻ con"</h4>
+            <ul style="font-size: 0.85rem; line-height: 1.4; padding-left: 20px; margin-top: 10px;">
+              <li style="margin-bottom: 8px;"><strong>Không dùng từ mô phỏng:</strong> Tuyệt đối không dạy trẻ những từ
+                ngây ngô dễ phát âm như "gâu gâu", "meo meo", "cạp cạp". Dạy thẳng từ chuẩn: "con chó", "con mèo". <span
+                  class="page-ref">Ch 2 · §3</span></li>
+              <li style="margin-bottom: 8px;"><strong>Không nói ngọng, nói lắp:</strong> Cha mẹ phải nói chuẩn, phát âm
+                chậm, mạch lạc, không dùng từ địa phương, tạo môi trường ngôn ngữ trong sáng. <span class="page-ref">Ch
+                  2 · §3</span></li>
+              <li style="margin-bottom: 8px;"><strong>Thành quả vượt bậc:</strong> Lên 5 tuổi, Karl Witte tích lũy được
+                <strong>30.000 từ vựng</strong> (gấp 6 lần một học sinh trung học học ngoại ngữ trong 5 năm). <span
+                  class="page-ref">Ch 2 · §3</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 2 · ĐỌC &amp; ĐA NGÔN NGỮ</div>
+      <h2>Hành trình dạy đọc và 6 ngoại ngữ</h2>
+      <div class="content-card">
+        <div class="split-layout">
+          <div class="split-left" style="border-right: 1px solid var(--border-strong); padding-right: 15px;">
+            <h3 style="color: var(--accent-purple); margin-top: 0;">Phương pháp dạy đọc từ 3 tuổi</h3>
+            <p style="font-size: 0.85rem; line-height: 1.4; margin-bottom: 10px;">
+              <strong>Tạo động lực trước, dạy chữ sau:</strong> Mua sách tranh về, kích thích tò mò: <em>"Con không biết
+                chữ thì làm sao tự hiểu những câu chuyện hay này?"</em> Khi trẻ khao khát học, mới bắt đầu dạy. <span
+                class="page-ref">Ch 2 · §4</span>
+            </p>
+            <p style="font-size: 0.85rem; line-height: 1.4; margin-bottom: 10px;">
+              <strong>Học thông qua vận động giác quan:</strong> Dùng các con chữ in cỡ 10 cm dán trên bảng gỗ nhỏ để
+              chơi trò ghép vần (đi trước phương pháp Montessori hơn một thế kỷ). <span class="page-ref">Ch 2 ·
+                §4</span>
+            </p>
+            <p style="font-size: 0.85rem; line-height: 1.4;">
+              <strong>"Nghe quen rồi sẽ nhớ":</strong> Không bắt học ngữ pháp khô khan khi còn nhỏ. Cho nghe cùng một
+              câu chuyện ngụ ngôn Aesop bằng nhiều ngôn ngữ khác nhau (Đức, Pháp, Ý, La-tinh) để tự so sánh và thẩm
+              thấu. <span class="page-ref">Ch 2 · §4</span>
+            </p>
+          </div>
+
+          <div class="split-right" style="padding-left: 15px;">
+            <h3 style="color: var(--accent-amber); margin-top: 0;">Lộ trình học ngoại ngữ khoa học</h3>
+            <div style="font-size: 0.85rem; line-height: 1.4;">
+              <ol style="padding-left: 20px;">
+                <li style="margin-bottom: 8px;"><strong>Tiếng Đức (Mẹ đẻ):</strong> Đọc thông viết thạo trước khi học
+                  ngoại ngữ khác.</li>
+                <li style="margin-bottom: 8px;"><strong>Tiếng Pháp:</strong> Ngôn ngữ cùng ngữ hệ gần gũi nhất, bắt đầu
+                  học từ 6 tuổi.</li>
+                <li style="margin-bottom: 8px;"><strong>Tiếng Ý:</strong> Chỉ mất 6 tháng để nắm vững nhờ nền tảng tiếng
+                  Pháp.</li>
+                <li style="margin-bottom: 8px;"><strong>Tiếng La-tinh (7 tuổi):</strong> Khơi gợi hứng thú bằng truyện
+                  anh hùng thành Troy trước khi học. Mất 9 tháng để thành thạo.</li>
+                <li style="margin-bottom: 8px;"><strong>Tiếng Anh & Hy Lạp (8 tuổi):</strong> Tiếng Anh mất 3 tháng,
+                  tiếng Hy Lạp mất 6 tháng.</li>
+              </ol>
+              <p style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 10px;">
+                <strong>Kết quả:</strong> 8 tuổi tự đọc các tác phẩm của Homer, Plutarchus, Virgil, Cicero bằng nguyên
+                bản ngôn ngữ gốc. <span class="page-ref">Ch 2 · §4</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 2 · HỌC QUA THIÊN NHIÊN</div>
+      <h2>Đi dạo khám phá &amp; Phương pháp học Địa lý</h2>
+      <div class="content-card">
+        <p style="font-size: 1.05rem; line-height: 1.5; margin-bottom: 20px;">
+          <strong>Tự nhiên là cuốn sách giáo khoa vĩ đại nhất:</strong> Từ 3 tuổi, Karl Witte được đi dạo ít nhất 2
+          tiếng/ngày. Cha ông không nhồi nhét lý thuyết khô khan mà biến mọi cọng cỏ, viên đá, côn trùng trên đường
+          thành tư liệu học tập sống động. <span class="page-ref">Ch 2 · §5</span>
+        </p>
+
+        <div class="split-layout">
+          <div class="split-left" style="border-right: 1px solid var(--border-strong); padding-right: 15px;">
+            <h4 style="color: var(--accent-cyan); margin-top: 0;">Khơi gợi tò mò & Tìm kiếm sự chính xác</h4>
+            <ul style="font-size: 0.85rem; line-height: 1.4; padding-left: 20px;">
+              <li style="margin-bottom: 8px;"><strong>Tôn trọng câu hỏi của con:</strong> Không bao giờ gạt đi hay trả
+                lời qua loa cho xong chuyện. Nuôi dưỡng ngọn lửa tò mò từ 2, 3 tuổi. <span class="page-ref">Ch 2 ·
+                  §5</span></li>
+              <li style="margin-bottom: 8px;"><strong>Cùng nhau tìm câu trả lời:</strong> Nếu gặp câu hỏi khó, cha Witte
+                thẳng thắn thừa nhận <em>"Cha chưa rõ"</em> và cùng con lên thư viện tra cứu, loại bỏ thói quen học tập
+                đại khái. <span class="page-ref">Ch 2 · §5</span></li>
+              <li style="margin-bottom: 8px;"><strong>Thiên văn & Hóa học:</strong> Tận dụng kính viễn vọng và phòng thí
+                nghiệm của học giả Zekkendoruf để khơi gợi tình yêu khoa học thực nghiệm. <span class="page-ref">Ch 2 ·
+                  §5</span></li>
+            </ul>
+          </div>
+
+          <div class="split-right" style="padding-left: 15px;">
+            <h4 style="color: var(--accent-emerald); margin-top: 0;">Phương pháp học Địa lý bằng trải nghiệm</h4>
+            <ol style="font-size: 0.85rem; line-height: 1.4; padding-left: 20px;">
+              <li style="margin-bottom: 8px;"><strong>Quan sát tổng thể:</strong> Trèo lên tháp chuông cao nhất làng để
+                ngắm nhìn toàn cảnh bốn phía. <span class="page-ref">Ch 2 · §5</span></li>
+              <li style="margin-bottom: 8px;"><strong>Phác thảo sơ lược:</strong> Hai cha con cùng vẽ một bản đồ sơ đồ
+                phác thảo về các hướng, đường sá nhìn thấy từ trên cao. <span class="page-ref">Ch 2 · §5</span></li>
+              <li style="margin-bottom: 8px;"><strong>Đi thực địa kiểm chứng:</strong> Đi dạo quanh làng, bổ sung chi
+                tiết về rừng núi, sông ngòi, cây cối vào bản vẽ. <span class="page-ref">Ch 2 · §5</span></li>
+              <li style="margin-bottom: 8px;"><strong>Đối chiếu thực tế:</strong> Mua bản đồ địa lý chuẩn để đối chiếu,
+                phát hiện lỗi sai và sửa lại, giúp hình thành khái niệm không gian chính xác. <span class="page-ref">Ch
+                  2 · §5</span></li>
+            </ol>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 2 · GIÁO DỤC TRẢI NGHIỆM</div>
+      <h2>Mở rộng thế giới quan qua những chuyến đi</h2>
+      <div class="content-card">
+        <h3 style="color: var(--accent-purple); margin-top: 0; margin-bottom: 15px;">Mở rộng thế giới quan bằng trải
+          nghiệm thực tế</h3>
+        <p style="font-size: 0.95rem; line-height: 1.5; margin-bottom: 20px;">
+          Cha Witte coi trọng việc <strong>mở rộng tầm nhìn</strong> hơn là nhồi nhét lý thuyết. Ông tin rằng kiến thức
+          phải được tích lũy từ thế giới thực, giúp trẻ liên kết lý thuyết trong sách với thực tế cuộc sống. <span
+            class="page-ref">Ch 2 · §6</span>
+        </p>
+
+        <div class="split-layout">
+          <div class="split-left" style="border-right: 1px solid var(--border-strong); padding-right: 15px;">
+            <h4 style="color: var(--accent-purple); margin-top: 0;">Trường học cuộc đời đa dạng</h4>
+            <ul style="font-size: 0.85rem; line-height: 1.4; padding-left: 20px;">
+              <li style="margin-bottom: 10px;"><strong>Tham quan mọi ngóc ngách xã hội:</strong> Đưa trẻ đi mua sắm, xem
+                vũ kịch, bảo tàng mỹ thuật, vườn bách thảo, và cả công trường hầm mỏ, bệnh viện, nhà dưỡng lão... để
+                thấu hiểu các mặt của cuộc sống. <span class="page-ref">Ch 2 · §6</span></li>
+              <li style="margin-bottom: 10px;"><strong>Lịch sử sống động:</strong> Đứng trước một thành cổ, lâu đài hay
+                tòa nhà cổ kính, cha ông sẽ kể lại câu chuyện lịch sử hào hùng gắn liền với nó thay vì bắt học thuộc
+                niên đại. <span class="page-ref">Ch 2 · §6</span></li>
+              <li style="margin-bottom: 10px;"><strong>Đi một ngày đàng:</strong> Lên 3 tuổi bắt đầu đi du lịch, đến 5
+                tuổi Karl Witte đã đi hầu hết các thành phố lớn của nước Đức. <span class="page-ref">Ch 2 · §6</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="split-right" style="padding-left: 15px;">
+            <h4 style="color: var(--accent-amber); margin-top: 0;">Kỹ thuật củng cố và lưu giữ ký ức</h4>
+            <ul style="font-size: 0.85rem; line-height: 1.4; padding-left: 20px;">
+              <li style="margin-bottom: 10px;"><strong>Quan sát chủ động:</strong> Biết rằng sau khi về sẽ phải kể lại,
+                Karl luôn tập trung cao độ khi quan sát thực tế và lắng nghe thuyết minh. <span class="page-ref">Ch 2 ·
+                  §6</span></li>
+              <li style="margin-bottom: 10px;"><strong>Tái hiện thông tin (Retelling):</strong> Trở về nhà, cậu bé tự kể
+                lại chi tiết cho mẹ nghe, hoặc viết thư mô tả hành trình cho người thân. Việc này giúp chuyển hóa trí
+                nhớ ngắn hạn thành dài hạn. <span class="page-ref">Ch 2 · §6</span></li>
+              <li style="margin-bottom: 10px;"><strong>Đầu tư cho đam mê:</strong> Cha sẵn sàng chi tiền lớn để trả cho
+                nhà ảo thuật nhằm giải mã các tiết mục biểu diễn mà con yêu thích. <span class="page-ref">Ch 2 ·
+                  §6</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 2 · TRÒ CHƠI ĐÓNG VAI</div>
+      <h2>Hạn chế đồ chơi &amp; Trò chơi đóng vai</h2>
+      <div class="content-card">
+        <div class="split-layout">
+          <div class="split-left" style="border-right: 1px solid var(--border-strong); padding-right: 15px;">
+            <h3 style="color: var(--accent-emerald); margin-top: 0;">Triết lý hạn chế đồ chơi thông thường</h3>
+            <p style="font-size: 0.85rem; line-height: 1.4; margin-bottom: 10px;">
+              <strong>Hậu quả của thừa thãi đồ chơi:</strong> Mua quá nhiều đồ chơi khiến trẻ mau chán, dễ ném phá, hình
+              thành thói bực bội và phá hoại đồ đạc về sau. <span class="page-ref">Ch 2 · §7</span>
+            </p>
+            <p style="font-size: 0.85rem; line-height: 1.4; margin-bottom: 10px;">
+              <strong>Đồ chơi tự nhiên:</strong> Khu vườn rải sỏi với các loài hoa và côn trùng là sân chơi lý tưởng.
+              Sỏi giúp thoát nước nhanh, trẻ có thể ngồi chơi sạch sẽ ngay sau mưa. <span class="page-ref">Ch 2 ·
+                §7</span>
+            </p>
+            <p style="font-size: 0.85rem; line-height: 1.4;">
+              <strong>"Nhàn cư vi bất thiện":</strong> Trò chơi của trẻ con phải giúp chúng vận dụng trí não. Khi trí
+              não bận rộn khám phá thế giới thực, trẻ sẽ luôn vui vẻ và không bao giờ mè nheo, quấy khóc. <span
+                class="page-ref">Ch 2 · §7</span>
+            </p>
+          </div>
+
+          <div class="split-right" style="padding-left: 15px;">
+            <h3 style="color: var(--accent-purple); margin-top: 0;">Nghệ thuật trò chơi đóng vai (Role-play)</h3>
+            <ul style="font-size: 0.85rem; line-height: 1.4; padding-left: 20px;">
+              <li style="margin-bottom: 8px;"><strong>Trò chơi nhà bếp:</strong> Con đóng vai chủ nhà ra lệnh, mẹ đóng
+                vai người làm bếp. Nếu ra lệnh sai luật, con phải đổi vai làm bếp. Giúp con hiểu các công việc gia đình
+                một cách vui vẻ. <span class="page-ref">Ch 2 · §7</span></li>
+              <li style="margin-bottom: 8px;"><strong>Củng cố lịch sử & địa lý:</strong> Diễn lại các sự kiện lịch sử đã
+                học hoặc mô phỏng lại các chuyến hành trình du lịch hai mẹ con đã đi qua. <span class="page-ref">Ch 2 ·
+                  §7</span></li>
+              <li style="margin-bottom: 8px;"><strong>Trò chơi "Tấm gương ngược" để sửa lỗi:</strong> Witte làm giáo
+                viên, mẹ làm học sinh. Mẹ cố tình mắc những lỗi mà Witte thường phạm phải trong đời sống. Khi Witte
+                nghiêm khắc nhắc nhở mẹ, cậu tự ý thức được lỗi sai của chính mình và sửa đổi hành vi một cách tự
+                nguyện. <span class="page-ref">Ch 2 · §7</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 2 · THỂ CHẤT &amp; DINH DƯỠNG</div>
+      <h2>Dinh dưỡng lý tính và năng lượng não bộ</h2>
+      <div class="content-card">
+        <h3 style="color: var(--accent-amber); margin-top: 0; margin-bottom: 15px;">Dinh dưỡng lý tính & Năng lượng não
+          bộ</h3>
+        <p style="font-size: 0.95rem; line-height: 1.5; margin-bottom: 20px;">
+          <strong>Triết lý Edison & Franklin:</strong> <em>"Ăn quá nhiều khiến tinh lực dồn xuống dạ dày để tiêu hóa
+            thay vì cung cấp cho não bộ làm việc"</em>. Người có cái bụng luôn no căng sẽ có xu hướng trì trệ. Cha Witte
+          áp dụng triệt để nguyên lý này để bảo toàn năng lượng phát triển não bộ cho con. <span class="page-ref">Ch 2 ·
+            §8</span>
+        </p>
+
+        <div class="split-layout">
+          <div class="split-left" style="border-right: 1px solid var(--border-strong); padding-right: 15px;">
+            <h4 style="color: var(--accent-red); margin-top: 0;">Sai lầm phổ biến của cha mẹ</h4>
+            <ul style="font-size: 0.85rem; line-height: 1.4; padding-left: 20px; margin-top: 10px;">
+              <li style="margin-bottom: 10px;"><strong>Nuông chiều bừa bãi:</strong> Cho trẻ ăn uống không có quy tắc,
+                không có giới hạn, chiều theo mọi sở thích ăn ngọt/ăn vặt.</li>
+              <li style="margin-bottom: 10px;"><strong>Hệ quả:</strong> Làm giảm sút tinh thần và trí lực của trẻ. Mọi
+                nỗ lực giáo dục về sau đều không đạt hiệu quả do bộ não thiếu năng lượng tối ưu. <span
+                  class="page-ref">Ch 2 · §8</span></li>
+            </ul>
+          </div>
+
+          <div class="split-right" style="padding-left: 15px;">
+            <h4 style="color: var(--accent-emerald); margin-top: 0;">Cách rèn luyện tính tự chủ của cha Witte</h4>
+            <ul style="font-size: 0.85rem; line-height: 1.4; padding-left: 20px; margin-top: 10px;">
+              <li style="margin-bottom: 10px;"><strong>Giải thích nguyên nhân:</strong> Dạy con hiểu ăn quá nhiều gây
+                khó chịu, đau ốm, ảnh hưởng đến cả việc học lẫn việc chơi và làm cha mẹ lo lắng. <span
+                  class="page-ref">Ch 2 · §8</span></li>
+              <li style="margin-bottom: 10px;"><strong>Trực quan hóa hậu quả:</strong> Dẫn con đi thăm một đứa trẻ bị ốm
+                rên rỉ vì đau bụng sau lễ Giáng sinh do ăn uống quá độ để trẻ tự cảm nhận và rút ra bài học. <span
+                  class="page-ref">Ch 2 · §8</span></li>
+              <li style="margin-bottom: 10px;"><strong>Kết quả:</strong> Khi đi chơi được mời kẹo bánh hấp dẫn, Witte
+                kiên quyết từ chối mà không cần cha nhắc nhở hay ép buộc. Sự tự chủ này hoàn toàn tự nguyện nhờ thói
+                quen từ nhỏ. <span class="page-ref">Ch 2 · §8</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 2 · THÓI QUEN HỌC TẬP</div>
+      <h2>Tập trung cực độ, nhanh nhẹn &amp; Tự học</h2>
+      <div class="content-card">
+        <div class="split-layout">
+          <div class="split-left" style="border-right: 1px solid var(--border-strong); padding-right: 15px;">
+            <h3 style="color: var(--accent-purple); margin-top: 0;">Rèn luyện sự tập trung cực độ (Deep Focus)</h3>
+            <p style="font-size: 0.85rem; line-height: 1.4; margin-bottom: 10px;">
+              <strong>Phân biệt rõ ràng học và chơi:</strong> Khi đã ngồi vào bàn học, phải toàn tâm toàn ý. Học tiếng
+              Pháp lúc 6 tuổi chỉ bắt đầu với <strong>15 phút mỗi ngày</strong> nhưng yêu cầu sự tập trung tuyệt đối.
+              <span class="page-ref">Ch 2 · §9</span>
+            </p>
+            <p style="font-size: 0.85rem; line-height: 1.4; margin-bottom: 10px;">
+              <strong>Bảo vệ không gian học tập:</strong> Cha Witte nghiêm cấm mọi sự ngắt quãng. Mẹ hay người hầu có
+              việc cũng phải đợi, thậm chí khách đến nhà chơi cha cũng yêu cầu chờ cho đến khi kết thúc giờ học của con.
+              <span class="page-ref">Ch 2 · §9</span>
+            </p>
+            <p style="font-size: 0.85rem; line-height: 1.4;">
+              <strong>Chất lượng hơn số lượng:</strong> Nhờ thói quen tập trung cao độ này, Karl Witte tiếp thu kiến
+              thức cực nhanh và không bị mệt mỏi. <span class="page-ref">Ch 2 · §9</span>
+            </p>
+          </div>
+
+          <div class="split-right" style="padding-left: 15px;">
+            <h3 style="color: var(--accent-emerald); margin-top: 0;">Hiệu suất nhanh nhẹn & Tự học</h3>
+            <ul style="font-size: 0.85rem; line-height: 1.4; padding-left: 20px;">
+              <li style="margin-bottom: 8px;"><strong>Rèn tác phong nhanh nhẹn:</strong> Yêu cầu làm việc gì cũng phải
+                nhanh nhẹn, hoạt bát. Không ủng hộ sự chậm chạp, ù lì. Nhờ giải quyết nhanh bài vở, Karl có rất nhiều
+                thời gian để dạo chơi ngoài trời. <span class="page-ref">Ch 2 · §9</span></li>
+              <li style="margin-bottom: 8px;"><strong>Học triệt để, tường tận:</strong> So sánh việc học như xây tường
+                gạch, từng viên gạch phải thật vững chắc. Nghiêm cấm kiểu học đại khái, nửa vời. <span
+                  class="page-ref">Ch 2 · §9</span></li>
+              <li style="margin-bottom: 8px;"><strong>Hiệu quả giáo dục tại nhà:</strong> Cha Witte chỉ dạy trực tiếp từ
+                <strong>1 đến 2 tiếng mỗi ngày</strong>. Phần lớn kiến thức còn lại do Karl tự đọc sách và tự nghiên
+                cứu. Đến 8, 9 tuổi, kiến thức của Karl đã vượt qua cả cha mình. <span class="page-ref">Ch 2 · §9</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 2 · GIÁO DỤC ĐỨC DỤC</div>
+      <h2>Kỷ luật nhất quán &amp; Sự kiện đổ sữa</h2>
+      <div class="content-card">
+        <h3 style="color: var(--accent-purple); margin-top: 0; margin-bottom: 15px;">Giáo dục Đức dục & Kỷ luật nhất
+          quán</h3>
+        <p style="font-size: 0.95rem; line-height: 1.5; margin-bottom: 20px;">
+          Mục tiêu lớn nhất của cha Witte không phải là tạo ra một "mọt sách khô khan" chỉ biết chuyên môn, mà là một
+          con người toàn diện, khỏe mạnh, hạnh phúc và nhân ái. Ông chú trọng bồi đắp đức hạnh nhiều hơn là rèn luyện
+          trí tuệ. <span class="page-ref">Ch 2 · §10</span>
+        </p>
+
+        <div class="split-layout">
+          <div class="split-left" style="border-right: 1px solid var(--border-strong); padding-right: 15px;">
+            <h4 style="color: var(--accent-purple); margin-top: 0;">Sự kiện Đổ sữa & Kỷ luật tự giác</h4>
+            <p style="font-size: 0.85rem; line-height: 1.4; margin-bottom: 8px;">
+              <strong>Bối cảnh (6 tuổi):</strong> Karl làm đổ sữa tại nhà mục sư khác. Theo giao kèo gia đình, làm đổ vỡ
+              sẽ bị phạt không ăn bánh kẹo. <span class="page-ref">Ch 2 · §11</span>
+            </p>
+            <p style="font-size: 0.85rem; line-height: 1.4; margin-bottom: 8px;">
+              <strong>Thử thách:</strong> Cha giả vờ đi ra ngoài phòng, những người khác ra sức dỗ dành Karl uống sữa và
+              ăn bánh vì <em>"cha không biết đâu"</em>. <span class="page-ref">Ch 2 · §11</span>
+            </p>
+            <p style="font-size: 0.85rem; line-height: 1.4;">
+              <strong>Phản ứng:</strong> Karl kiên quyết từ chối: <em>"Cho dù cha cháu không biết, nhưng Thần thánh
+                biết, cháu không thể làm thế được."</em> Trẻ tự tuân thủ kỷ luật vì lương tâm tự giác, không phải vì sợ
+              đòn roi. <span class="page-ref">Ch 2 · §11</span>
+            </p>
+          </div>
+
+          <div class="split-right" style="padding-left: 15px;">
+            <h4 style="color: var(--accent-amber); margin-top: 0;">Nguyên tắc nhất quán của cha mẹ</h4>
+            <ul style="font-size: 0.85rem; line-height: 1.4; padding-left: 20px; margin-top: 10px;">
+              <li style="margin-bottom: 10px;"><strong>Đã nói không là không:</strong> Tránh thái độ bất nhất khi dạy
+                trẻ. Lúc vui thì cho làm, lúc bực thì cấm đoán sẽ khiến trẻ bối rối và mất phương hướng. <span
+                  class="page-ref">Ch 2 · §11</span></li>
+              <li style="margin-bottom: 10px;"><strong>Bài trừ "Mẹ hiền cha nghiêm":</strong> Dạy con đòi hỏi sự đồng
+                thuận tuyệt đối của cha và mẹ. Một người quá nghiêm khắc, một người quá nuông chiều sẽ phá hỏng kết quả
+                giáo dục. <span class="page-ref">Ch 2 · §11</span></li>
+              <li style="margin-bottom: 10px;"><strong>"Cái gì không có sẽ không cảm thấy thiếu":</strong> Định hình các
+                ranh giới hành vi cho trẻ ngay từ trước 1 tuổi để trẻ tiếp nhận một cách tự nhiên. <span
+                  class="page-ref">Ch 2 · §11</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 2 · KỶ LUẬT LÝ TÍNH</div>
+      <h2>Tôn trọng lý trí của con &amp; Ứng xử tinh tế</h2>
+      <div class="content-card">
+        <div class="split-layout">
+          <div class="split-left" style="border-right: 1px solid var(--border-strong); padding-right: 15px;">
+            <h3 style="color: var(--accent-cyan); margin-top: 0;">Kỷ luật dựa trên lý tính (Rational Discipline)</h3>
+            <p style="font-size: 0.85rem; line-height: 1.4; margin-bottom: 10px;">
+              <strong>Không bắt phục tùng mù quáng:</strong> Tôn trọng trí tuệ của trẻ. Tránh che lấp lý trí hay làm rối
+              loạn năng lực phán xét tự nhiên của con bằng những hình phạt áp đặt vô lý. <span class="page-ref">Ch 2 ·
+                §12</span>
+            </p>
+            <p style="font-size: 0.85rem; line-height: 1.4; margin-bottom: 10px;">
+              <strong>Giải thích rõ nguyên nhân:</strong> Nhiều cha mẹ cấm đoán con chỉ bằng mệnh lệnh <em>"Không được
+                làm thế!"</em> mà không giải thích vì sao. Cha Witte khẳng định đây là sự chuyên chế độc tài, làm tổn
+              thương năng lực phán phán đoán độc lập của con sau này. <span class="page-ref">Ch 2 · §12</span>
+            </p>
+            <p style="font-size: 0.85rem; line-height: 1.4;">
+              <strong>Vai trò của ngôn ngữ:</strong> Để dạy con bằng lý tính, cha mẹ phải làm phong phú vốn từ của con
+              ngay từ đầu để con có đủ khả năng hiểu được các giải thích mang tính logic. <span class="page-ref">Ch 2 ·
+                §12</span>
+            </p>
+          </div>
+
+          <div class="split-right" style="padding-left: 15px;">
+            <h3 style="color: var(--accent-amber); margin-top: 0;">Case Study: Ranh giới giữa Sự thật & Tế nhị</h3>
+            <p style="font-size: 0.85rem; line-height: 1.4; margin-bottom: 10px;">
+              <strong>Tình huống:</strong> Karl phát ngôn một sự thật gây mất mặt người khác trước đám đông. <span
+                class="page-ref">Ch 2 · §12</span>
+            </p>
+            <ul style="font-size: 0.82rem; line-height: 1.4; padding-left: 20px;">
+              <li style="margin-bottom: 8px;"><strong>Không dùng đòn roi:</strong> Cha ôn tồn giải thích: <em>"Điều con
+                  nói là sự thật, nhưng không phải sự thật nào cũng bắt buộc phải nói ra làm người khác xấu hổ."</em>
+                <span class="page-ref">Ch 2 · §12</span>
+              </li>
+              <li style="margin-bottom: 8px;"><strong>Đặt câu hỏi thấu cảm:</strong> <em>"Nếu người khác vạch lỗi của
+                  con trước mọi người, con có buồn không? Người ta biết lỗi của con nhưng im lặng vì họ tốt bụng."</em>
+                <span class="page-ref">Ch 2 · §12</span>
+              </li>
+              <li style="margin-bottom: 8px;"><strong>Định nghĩa "Lịch sự" vs "Nói dối":</strong> Dạy con hiểu rằng giữ
+                im lặng tế nhị không phải là nói dối, mà là sự tôn trọng cần thiết để giữ gìn các mối quan hệ hòa thuận.
+                <span class="page-ref">Ch 2 · §12</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 2 · BẠN BÈ &amp; XÃ HỘI HÓA</div>
+      <h2>Nguyên tắc chọn bạn và xã hội hóa có giám sát</h2>
+      <div class="content-card">
+        <h3 style="color: var(--accent-purple); margin-top: 0; margin-bottom: 15px;">Nguyên tắc chọn bạn & Xã hội hóa có
+          định hướng</h3>
+        <p style="font-size: 0.95rem; line-height: 1.5; margin-bottom: 20px;">
+          Cha Witte rất nghiêm khắc trong việc để con ra ngoài chơi tự do. Ông phản đối quan điểm cho rằng <em>"trẻ con
+            phải chơi với trẻ con mới vui và phát triển"</em>, đồng thời cảnh báo về những nguy cơ nhiễm thói xấu khi
+          thiếu sự giám sát của người lớn. <span class="page-ref">Ch 2 · §13</span>
+        </p>
+
+        <div class="split-layout">
+          <div class="split-left" style="border-right: 1px solid var(--border-strong); padding-right: 15px;">
+            <h4 style="color: var(--accent-red); margin-top: 0;">Cảnh giác trước sự lây lan của thói xấu</h4>
+            <ul style="font-size: 0.85rem; line-height: 1.4; padding-left: 20px; margin-top: 10px;">
+              <li style="margin-bottom: 10px;"><strong>Quy luật lây lan:</strong> Đức tính tốt cần nỗ lực tự chủ và rèn
+                luyện gian khổ để có được. Ngược lại, thói xấu (ích kỷ, dối trá, cãi cọ) không cần tốn công học nên lây
+                lan cực nhanh. Trẻ ngoan ít khi cải thiện được trẻ hư, nhưng trẻ hư rất dễ kéo trẻ ngoan đi xuống. <span
+                  class="page-ref">Ch 2 · §13</span></li>
+              <li style="margin-bottom: 10px;"><strong>Bài học thực tế:</strong> Cho Karl chơi với 2 bé gái ngoan nhất
+                vùng. Do được chiều chuộng không ai phản đối, Karl bắt đầu bướng bỉnh, ích kỷ và nói dối. Cha Witte lập
+                tức điều chỉnh. <span class="page-ref">Ch 2 · §13</span></li>
+            </ul>
+          </div>
+
+          <div class="split-right" style="padding-left: 15px;">
+            <h4 style="color: var(--accent-emerald); margin-top: 0;">Phương pháp "Xã hội hóa có giám sát"</h4>
+            <ul style="font-size: 0.85rem; line-height: 1.4; padding-left: 20px; margin-top: 10px;">
+              <li style="margin-bottom: 10px;"><strong>Đồng hành cùng con:</strong> Người lớn hãy mang trái tim trẻ thơ
+                để cùng chơi với trẻ. Trò chơi sẽ vừa vui vẻ vừa có định hướng giáo dục lành mạnh. <span
+                  class="page-ref">Ch 2 · §13</span></li>
+              <li style="margin-bottom: 10px;"><strong>Giám sát chặt chẽ:</strong> Đương nhiên không cách ly hoàn toàn,
+                vẫn cho trẻ gặp gỡ giao lưu dưới sự quan sát của cha mẹ để kịp thời chấn chỉnh hành vi sai lệch. <span
+                  class="page-ref">Ch 2 · §13</span></li>
+              <li style="margin-bottom: 10px;"><strong>Kết quả lâu dài:</strong> Karl lớn lên ôn hòa, chân thành, không
+                bao giờ cãi cọ, đánh nhau. Khi học đại học dù nhỏ tuổi hơn các bạn rất nhiều nhưng vẫn được mọi người
+                quý mến và có nhiều bạn thân thiết. <span class="page-ref">Ch 2 · §13</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 2 · KIỂM SOÁT LỜI KHEN</div>
+      <h2>Phòng ngừa kiêu ngạo &amp; Thách thức Euler</h2>
+      <div class="content-card">
+        <div class="split-layout">
+          <div class="split-left" style="border-right: 1px solid var(--border-strong); padding-right: 15px;">
+            <h3 style="color: var(--accent-red); margin-top: 0;">Kiểm soát lời khen & Phòng ngừa tự phụ</h3>
+            <p style="font-size: 0.85rem; line-height: 1.4; margin-bottom: 10px;">
+              <strong>Bệnh kiêu căng phá hủy thần đồng:</strong> Nhiều đứa trẻ thông minh thui chột khi lớn lên vì thói
+              tự mãn và lơ đãng. Cha Witte lao tâm khổ tứ để giữ con luôn khiêm tốn. <span class="page-ref">Ch 2 · §15,
+                §16</span>
+            </p>
+            <ul style="font-size: 0.82rem; line-height: 1.4; padding-left: 20px;">
+              <li style="margin-bottom: 8px;"><strong>Hạn chế khen ngợi việc học:</strong> Khi Karl học tốt, cha chỉ nói
+                <em>"Con làm tốt đấy"</em>. Chỉ khen ngợi nhiều và ghi vào sổ lưu niệm khi con làm việc thiện. Ôm hôn
+                con là phần thưởng cực kỳ hiếm hoi và vô giá. <span class="page-ref">Ch 2 · §15</span>
+              </li>
+              <li style="margin-bottom: 8px;"><strong>Cách ly khỏi lời tán dương:</strong> Khi khách khen Karl, cha lập
+                tức dẫn con ra khỏi phòng. Nếu khách cố tình khen, ông sẽ cắt đứt mối quan hệ để bảo vệ tâm hồn trong
+                sáng của con. <span class="page-ref">Ch 2 · §15</span></li>
+              <li style="margin-bottom: 8px;"><strong>Lăng kính tri thức vô hạn:</strong> Dạy con hiểu kiến thức nhân
+                loại chỉ như muối bỏ bể so với tự nhiên. Người hài lòng với hiểu biết của mình là người đáng thương
+                nhất. <span class="page-ref">Ch 2 · §15</span></li>
+            </ul>
+          </div>
+
+          <div class="split-right" style="padding-left: 15px;">
+            <h3 style="color: var(--accent-purple); margin-top: 0;">Cuộc kiểm tra của Giám sát viên H</h3>
+            <p style="font-size: 0.85rem; line-height: 1.4; margin-bottom: 10px;">
+              <strong>Bối cảnh:</strong> Ông H thử tài toán học của Karl với điều kiện nghiêm ngặt: <em>"Không được khen
+                ngợi đứa trẻ trước mặt nó"</em>. <span class="page-ref">Ch 2 · §16</span>
+            </p>
+            <p style="font-size: 0.85rem; line-height: 1.4; margin-bottom: 10px;">
+              <strong>Câu đố Euler (Chia đất chữ L):</strong> Chia một mảnh đất hình chữ L thành 3 phần có diện tích
+              bằng nhau và hình dáng giống hệt nhau (Euler mất 3 ngày mới giải được). <span class="page-ref">Ch 2 ·
+                §16</span>
+            </p>
+            <p style="font-size: 0.85rem; line-height: 1.4;">
+              <strong>Phản ứng của cha Witte:</strong> Khi Karl reo lên đã tìm ra đáp án và ông H trầm trồ <em>"Cậu bé
+                giỏi hơn Euler rồi"</em>, cha Witte lập tức gạt đi để ngăn kiêu ngạo: <em>"Chỉ là do may mắn
+                thôi!"</em>. Cậu bé Karl hoàn toàn không biết mình tài giỏi, chỉ vui vì có thêm một người bạn lớn tuổi
+              cùng chung chí hướng. <span class="page-ref">Ch 2 · §16</span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 2 · THÀNH TỰU HỌC THUẬT</div>
+      <h2>Con đường học vị &amp; Cuộc sống cân bằng</h2>
+      <div class="content-card">
+        <div class="split-layout">
+          <div class="split-left" style="border-right: 1px solid var(--border-strong); padding-right: 15px;">
+            <h3 style="color: var(--accent-cyan); margin-top: 0;">Biên niên sử thành tựu của Karl Witte</h3>
+            <ul style="font-size: 0.82rem; line-height: 1.4; padding-left: 20px;">
+              <li style="margin-bottom: 8px;"><strong>7 tuổi 9 tháng:</strong> Được thử tài ngôn ngữ và toán học trước
+                toàn bộ học sinh trung học, làm chấn động giới giáo dục đương thời. <span class="page-ref">Ch 2 ·
+                  §18</span></li>
+              <li style="margin-bottom: 8px;"><strong>9 tuổi:</strong> Đạt trình độ tương đương thanh niên 18, 19 tuổi.
+                Được Tiến sĩ Loster cấp chứng nhận và viết bài báo kêu gọi quyên góp học bổng. <span class="page-ref">Ch
+                  2 · §18</span></li>
+              <li style="margin-bottom: 8px;"><strong>10 tuổi:</strong> Nhập học Đại học Gottingen danh giá với học bổng
+                tài trợ của hoàng gia. <span class="page-ref">Ch 2 · §19</span></li>
+              <li style="margin-bottom: 8px;"><strong>12 tuổi:</strong> Viết luận văn toán học xuất sắc về các đường
+                xoáy ốc. <span class="page-ref">Ch 2 · §19</span></li>
+              <li style="margin-bottom: 8px;"><strong>14 tuổi:</strong> Nhận bằng <strong>Tiến sĩ Triết học</strong> tại
+                Đại học Giessen. Thuyết trình xuất sắc về số học trước giảng đường lớn. <span class="page-ref">Ch 2 ·
+                  §19</span></li>
+              <li style="margin-bottom: 8px;"><strong>16 tuổi:</strong> Nhận bằng <strong>Tiến sĩ Luật học</strong> tại
+                Đại học Heidelberg. <span class="page-ref">Ch 2 · §19</span></li>
+              <li style="margin-bottom: 8px;"><strong>18 tuổi:</strong> Sang Ý du học, trở thành chuyên gia nghiên cứu
+                Dante lỗi lạc. Sống khỏe mạnh đến năm 83 tuổi. <span class="page-ref">Ch 2 · §19, §20</span></li>
+            </ul>
+          </div>
+
+          <div class="split-right" style="padding-left: 15px;">
+            <h3 style="color: var(--accent-emerald); margin-top: 0;">Triết lý sống cân bằng & Thư nhàn</h3>
+            <p style="font-size: 0.85rem; line-height: 1.4; margin-bottom: 10px;">
+              <strong>Học đại học thư nhàn:</strong> Karl Witte học cùng thanh niên 20 tuổi nhưng cuộc sống của cậu rất
+              thong thả, không hề bị quá tải hay "suốt ngày chúi mũi vào sách vở". <span class="page-ref">Ch 2 ·
+                §19</span>
+            </p>
+            <ul style="font-size: 0.82rem; line-height: 1.4; padding-left: 20px;">
+              <li style="margin-bottom: 6px;"><strong>Không làm "con rối" học thuật:</strong> Vào kỳ nghỉ lễ Phục sinh,
+                cha đưa Karl đi du lịch thay vì bắt ngồi trong thư viện ôn bài. Cha tuyên bố: <em>"Sức khỏe và tầm nhìn
+                  quan trọng hơn học vấn"</em>. <span class="page-ref">Ch 2 · §19</span></li>
+              <li style="margin-bottom: 6px;"><strong>Nghệ thuật & Vận động:</strong> Dành thời gian vẽ tranh, chơi
+                piano, học khiêu vũ, đi dạo và sưu tập mẫu động thực vật ngoài tự nhiên. <span class="page-ref">Ch 2 ·
+                  §19</span></li>
+              <li style="margin-bottom: 6px;"><strong>Khỏe mạnh dẻo dai:</strong> Duy trì đi dạo ngoài trời ngay cả
+                trong mùa đông tuyết rơi nhẹ để rèn luyện thể lực bền bỉ. <span class="page-ref">Ch 2 · §19, §20</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 2 · HÀNH ĐỘNG CỦA CHA MẸ</div>
+      <h2>Kế hoạch hành động chi tiết</h2>
+      <ul class="action-list" style="margin-bottom: 15px;">
+        <li class="action-item">
+          <div>
+            <div class="action-headline">Chuẩn hóa giao tiếp và loại bỏ "ngôn ngữ trẻ con"</div>
+            <div class="action-detail">Nói chuyện với con bằng ngôn ngữ chuẩn mực ngay từ sơ sinh. Phát âm chậm, rõ ràng
+              danh từ chỉ vật thật. Tuyệt đối loại bỏ các từ mô phỏng như "gâu gâu", "meo meo", thay bằng "con chó",
+              "con mèo". <span class="page-ref">Ch 2 · §3</span></div>
+          </div>
+        </li>
+        <li class="action-item">
+          <div>
+            <div class="action-headline">Thiết lập kỷ luật nhất quán trong ăn uống và học tập</div>
+            <div class="action-detail">Xây dựng chế độ dinh dưỡng hợp lý, tránh nuông chiều cho con ăn vặt bừa bãi để
+              giữ não bộ hoạt bát. Rèn sự tập trung tối đa trong thời gian ngắn (bắt đầu từ 15 phút) và nhất quán giữa
+              cha và mẹ. <span class="page-ref">Ch 2 · §8, §9, §11</span></div>
+          </div>
+        </li>
+        <li class="action-item">
+          <div>
+            <div class="action-headline">Học Địa lý - Khoa học qua những buổi đi dạo thực địa</div>
+            <div class="action-detail">Dành ít nhất 1-2 tiếng mỗi ngày đưa con ra ngoài thiên nhiên. Quan sát sự vật,
+              hướng dẫn con vẽ bản đồ đơn giản nơi mình đi qua và đối chiếu bản đồ thực tế. Luôn kiên nhẫn trả lời câu
+              hỏi và cùng tra cứu nếu chưa rõ. <span class="page-ref">Ch 2 · §5</span></div>
+          </div>
+        </li>
+        <li class="action-item">
+          <div>
+            <div class="action-headline">Ứng dụng trò chơi đóng vai để tự chấn chỉnh hành vi</div>
+            <div class="action-detail">Dùng trò chơi đóng vai (mẹ làm học sinh mắc lỗi, con làm giáo viên sửa lỗi) để
+              con tự phát hiện và chấn chỉnh các thói quen xấu của bản thân mà không cần dùng đến hình phạt chuyên chế,
+              đòn roi. <span class="page-ref">Ch 2 · §7, §12</span></div>
+          </div>
+        </li>
+      </ul>
+
+      <figure class="image-slot hero" style="max-height: 200px;">
+        <img src="images/ch2_closing.png" alt="Trẻ em vui vẻ chơi đùa ngoài thiên nhiên sạch sẽ">
+        <figcaption>Nguồn: Unsplash (Free Stock Photo)</figcaption>
+      </figure>
+
+    </section>
+
   </div>
-</div>
 
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH 2 · HỌC QUA THIÊN NHIÊN</div>
-    <h2>Đi dạo khám phá &amp; Phương pháp học Địa lý</h2>
-<div class="content-card">
-  <p style="font-size: 1.05rem; line-height: 1.5; margin-bottom: 20px;">
-    <strong>Tự nhiên là cuốn sách giáo khoa vĩ đại nhất:</strong> Từ 3 tuổi, Karl Witte được đi dạo ít nhất 2 tiếng/ngày. Cha ông không nhồi nhét lý thuyết khô khan mà biến mọi cọng cỏ, viên đá, côn trùng trên đường thành tư liệu học tập sống động. <span class="page-ref">Ch 2 · §5</span>
-  </p>
-  
-  <div class="split-layout">
-    <div class="split-left" style="border-right: 1px solid var(--border-strong); padding-right: 15px;">
-      <h4 style="color: var(--accent-cyan); margin-top: 0;">Khơi gợi tò mò & Tìm kiếm sự chính xác</h4>
-      <ul style="font-size: 0.85rem; line-height: 1.4; padding-left: 20px;">
-        <li style="margin-bottom: 8px;"><strong>Tôn trọng câu hỏi của con:</strong> Không bao giờ gạt đi hay trả lời qua loa cho xong chuyện. Nuôi dưỡng ngọn lửa tò mò từ 2, 3 tuổi. <span class="page-ref">Ch 2 · §5</span></li>
-        <li style="margin-bottom: 8px;"><strong>Cùng nhau tìm câu trả lời:</strong> Nếu gặp câu hỏi khó, cha Witte thẳng thắn thừa nhận <em>"Cha chưa rõ"</em> và cùng con lên thư viện tra cứu, loại bỏ thói quen học tập đại khái. <span class="page-ref">Ch 2 · §5</span></li>
-        <li style="margin-bottom: 8px;"><strong>Thiên văn & Hóa học:</strong> Tận dụng kính viễn vọng và phòng thí nghiệm của học giả Zekkendoruf để khơi gợi tình yêu khoa học thực nghiệm. <span class="page-ref">Ch 2 · §5</span></li>
-      </ul>
-    </div>
-    
-    <div class="split-right" style="padding-left: 15px;">
-      <h4 style="color: var(--accent-emerald); margin-top: 0;">Phương pháp học Địa lý bằng trải nghiệm</h4>
-      <ol style="font-size: 0.85rem; line-height: 1.4; padding-left: 20px;">
-        <li style="margin-bottom: 8px;"><strong>Quan sát tổng thể:</strong> Trèo lên tháp chuông cao nhất làng để ngắm nhìn toàn cảnh bốn phía. <span class="page-ref">Ch 2 · §5</span></li>
-        <li style="margin-bottom: 8px;"><strong>Phác thảo sơ lược:</strong> Hai cha con cùng vẽ một bản đồ sơ đồ phác thảo về các hướng, đường sá nhìn thấy từ trên cao. <span class="page-ref">Ch 2 · §5</span></li>
-        <li style="margin-bottom: 8px;"><strong>Đi thực địa kiểm chứng:</strong> Đi dạo quanh làng, bổ sung chi tiết về rừng núi, sông ngòi, cây cối vào bản vẽ. <span class="page-ref">Ch 2 · §5</span></li>
-        <li style="margin-bottom: 8px;"><strong>Đối chiếu thực tế:</strong> Mua bản đồ địa lý chuẩn để đối chiếu, phát hiện lỗi sai và sửa lại, giúp hình thành khái niệm không gian chính xác. <span class="page-ref">Ch 2 · §5</span></li>
-      </ol>
-    </div>
+  <div class="nav-controls">
+    <button class="nav-btn" id="prevBtn" onclick="prevSlide()" aria-label="Previous slide">&#8592;</button>
+    <div class="counter" id="counter" aria-live="polite">1 / 1</div>
+    <button class="nav-btn" id="nextBtn" onclick="nextSlide()" aria-label="Next slide">&#8594;</button>
   </div>
-</div>
 
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH 2 · GIÁO DỤC TRẢI NGHIỆM</div>
-    <h2>Mở rộng thế giới quan qua những chuyến đi</h2>
-<div class="content-card">
-  <h3 style="color: var(--accent-purple); margin-top: 0; margin-bottom: 15px;">Mở rộng thế giới quan bằng trải nghiệm thực tế</h3>
-  <p style="font-size: 0.95rem; line-height: 1.5; margin-bottom: 20px;">
-    Cha Witte coi trọng việc <strong>mở rộng tầm nhìn</strong> hơn là nhồi nhét lý thuyết. Ông tin rằng kiến thức phải được tích lũy từ thế giới thực, giúp trẻ liên kết lý thuyết trong sách với thực tế cuộc sống. <span class="page-ref">Ch 2 · §6</span>
-  </p>
-
-  <div class="split-layout">
-    <div class="split-left" style="border-right: 1px solid var(--border-strong); padding-right: 15px;">
-      <h4 style="color: var(--accent-purple); margin-top: 0;">Trường học cuộc đời đa dạng</h4>
-      <ul style="font-size: 0.85rem; line-height: 1.4; padding-left: 20px;">
-        <li style="margin-bottom: 10px;"><strong>Tham quan mọi ngóc ngách xã hội:</strong> Đưa trẻ đi mua sắm, xem vũ kịch, bảo tàng mỹ thuật, vườn bách thảo, và cả công trường hầm mỏ, bệnh viện, nhà dưỡng lão... để thấu hiểu các mặt của cuộc sống. <span class="page-ref">Ch 2 · §6</span></li>
-        <li style="margin-bottom: 10px;"><strong>Lịch sử sống động:</strong> Đứng trước một thành cổ, lâu đài hay tòa nhà cổ kính, cha ông sẽ kể lại câu chuyện lịch sử hào hùng gắn liền với nó thay vì bắt học thuộc niên đại. <span class="page-ref">Ch 2 · §6</span></li>
-        <li style="margin-bottom: 10px;"><strong>Đi một ngày đàng:</strong> Lên 3 tuổi bắt đầu đi du lịch, đến 5 tuổi Karl Witte đã đi hầu hết các thành phố lớn của nước Đức. <span class="page-ref">Ch 2 · §6</span></li>
-      </ul>
-    </div>
-
-    <div class="split-right" style="padding-left: 15px;">
-      <h4 style="color: var(--accent-amber); margin-top: 0;">Kỹ thuật củng cố và lưu giữ ký ức</h4>
-      <ul style="font-size: 0.85rem; line-height: 1.4; padding-left: 20px;">
-        <li style="margin-bottom: 10px;"><strong>Quan sát chủ động:</strong> Biết rằng sau khi về sẽ phải kể lại, Karl luôn tập trung cao độ khi quan sát thực tế và lắng nghe thuyết minh. <span class="page-ref">Ch 2 · §6</span></li>
-        <li style="margin-bottom: 10px;"><strong>Tái hiện thông tin (Retelling):</strong> Trở về nhà, cậu bé tự kể lại chi tiết cho mẹ nghe, hoặc viết thư mô tả hành trình cho người thân. Việc này giúp chuyển hóa trí nhớ ngắn hạn thành dài hạn. <span class="page-ref">Ch 2 · §6</span></li>
-        <li style="margin-bottom: 10px;"><strong>Đầu tư cho đam mê:</strong> Cha sẵn sàng chi tiền lớn để trả cho nhà ảo thuật nhằm giải mã các tiết mục biểu diễn mà con yêu thích. <span class="page-ref">Ch 2 · §6</span></li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH 2 · TRÒ CHƠI ĐÓNG VAI</div>
-    <h2>Hạn chế đồ chơi &amp; Trò chơi đóng vai</h2>
-<div class="content-card">
-  <div class="split-layout">
-    <div class="split-left" style="border-right: 1px solid var(--border-strong); padding-right: 15px;">
-      <h3 style="color: var(--accent-emerald); margin-top: 0;">Triết lý hạn chế đồ chơi thông thường</h3>
-      <p style="font-size: 0.85rem; line-height: 1.4; margin-bottom: 10px;">
-        <strong>Hậu quả của thừa thãi đồ chơi:</strong> Mua quá nhiều đồ chơi khiến trẻ mau chán, dễ ném phá, hình thành thói bực bội và phá hoại đồ đạc về sau. <span class="page-ref">Ch 2 · §7</span>
-      </p>
-      <p style="font-size: 0.85rem; line-height: 1.4; margin-bottom: 10px;">
-        <strong>Đồ chơi tự nhiên:</strong> Khu vườn rải sỏi với các loài hoa và côn trùng là sân chơi lý tưởng. Sỏi giúp thoát nước nhanh, trẻ có thể ngồi chơi sạch sẽ ngay sau mưa. <span class="page-ref">Ch 2 · §7</span>
-      </p>
-      <p style="font-size: 0.85rem; line-height: 1.4;">
-        <strong>"Nhàn cư vi bất thiện":</strong> Trò chơi của trẻ con phải giúp chúng vận dụng trí não. Khi trí não bận rộn khám phá thế giới thực, trẻ sẽ luôn vui vẻ và không bao giờ mè nheo, quấy khóc. <span class="page-ref">Ch 2 · §7</span>
-      </p>
-    </div>
-    
-    <div class="split-right" style="padding-left: 15px;">
-      <h3 style="color: var(--accent-purple); margin-top: 0;">Nghệ thuật trò chơi đóng vai (Role-play)</h3>
-      <ul style="font-size: 0.85rem; line-height: 1.4; padding-left: 20px;">
-        <li style="margin-bottom: 8px;"><strong>Trò chơi nhà bếp:</strong> Con đóng vai chủ nhà ra lệnh, mẹ đóng vai người làm bếp. Nếu ra lệnh sai luật, con phải đổi vai làm bếp. Giúp con hiểu các công việc gia đình một cách vui vẻ. <span class="page-ref">Ch 2 · §7</span></li>
-        <li style="margin-bottom: 8px;"><strong>Củng cố lịch sử & địa lý:</strong> Diễn lại các sự kiện lịch sử đã học hoặc mô phỏng lại các chuyến hành trình du lịch hai mẹ con đã đi qua. <span class="page-ref">Ch 2 · §7</span></li>
-        <li style="margin-bottom: 8px;"><strong>Trò chơi "Tấm gương ngược" để sửa lỗi:</strong> Witte làm giáo viên, mẹ làm học sinh. Mẹ cố tình mắc những lỗi mà Witte thường phạm phải trong đời sống. Khi Witte nghiêm khắc nhắc nhở mẹ, cậu tự ý thức được lỗi sai của chính mình và sửa đổi hành vi một cách tự nguyện. <span class="page-ref">Ch 2 · §7</span></li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH 2 · THỂ CHẤT &amp; DINH DƯỠNG</div>
-    <h2>Dinh dưỡng lý tính và năng lượng não bộ</h2>
-<div class="content-card">
-  <h3 style="color: var(--accent-amber); margin-top: 0; margin-bottom: 15px;">Dinh dưỡng lý tính & Năng lượng não bộ</h3>
-  <p style="font-size: 0.95rem; line-height: 1.5; margin-bottom: 20px;">
-    <strong>Triết lý Edison & Franklin:</strong> <em>"Ăn quá nhiều khiến tinh lực dồn xuống dạ dày để tiêu hóa thay vì cung cấp cho não bộ làm việc"</em>. Người có cái bụng luôn no căng sẽ có xu hướng trì trệ. Cha Witte áp dụng triệt để nguyên lý này để bảo toàn năng lượng phát triển não bộ cho con. <span class="page-ref">Ch 2 · §8</span>
-  </p>
-
-  <div class="split-layout">
-    <div class="split-left" style="border-right: 1px solid var(--border-strong); padding-right: 15px;">
-      <h4 style="color: var(--accent-red); margin-top: 0;">Sai lầm phổ biến của cha mẹ</h4>
-      <ul style="font-size: 0.85rem; line-height: 1.4; padding-left: 20px; margin-top: 10px;">
-        <li style="margin-bottom: 10px;"><strong>Nuông chiều bừa bãi:</strong> Cho trẻ ăn uống không có quy tắc, không có giới hạn, chiều theo mọi sở thích ăn ngọt/ăn vặt.</li>
-        <li style="margin-bottom: 10px;"><strong>Hệ quả:</strong> Làm giảm sút tinh thần và trí lực của trẻ. Mọi nỗ lực giáo dục về sau đều không đạt hiệu quả do bộ não thiếu năng lượng tối ưu. <span class="page-ref">Ch 2 · §8</span></li>
-      </ul>
-    </div>
-
-    <div class="split-right" style="padding-left: 15px;">
-      <h4 style="color: var(--accent-emerald); margin-top: 0;">Cách rèn luyện tính tự chủ của cha Witte</h4>
-      <ul style="font-size: 0.85rem; line-height: 1.4; padding-left: 20px; margin-top: 10px;">
-        <li style="margin-bottom: 10px;"><strong>Giải thích nguyên nhân:</strong> Dạy con hiểu ăn quá nhiều gây khó chịu, đau ốm, ảnh hưởng đến cả việc học lẫn việc chơi và làm cha mẹ lo lắng. <span class="page-ref">Ch 2 · §8</span></li>
-        <li style="margin-bottom: 10px;"><strong>Trực quan hóa hậu quả:</strong> Dẫn con đi thăm một đứa trẻ bị ốm rên rỉ vì đau bụng sau lễ Giáng sinh do ăn uống quá độ để trẻ tự cảm nhận và rút ra bài học. <span class="page-ref">Ch 2 · §8</span></li>
-        <li style="margin-bottom: 10px;"><strong>Kết quả:</strong> Khi đi chơi được mời kẹo bánh hấp dẫn, Witte kiên quyết từ chối mà không cần cha nhắc nhở hay ép buộc. Sự tự chủ này hoàn toàn tự nguyện nhờ thói quen từ nhỏ. <span class="page-ref">Ch 2 · §8</span></li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH 2 · THÓI QUEN HỌC TẬP</div>
-    <h2>Tập trung cực độ, nhanh nhẹn &amp; Tự học</h2>
-<div class="content-card">
-  <div class="split-layout">
-    <div class="split-left" style="border-right: 1px solid var(--border-strong); padding-right: 15px;">
-      <h3 style="color: var(--accent-purple); margin-top: 0;">Rèn luyện sự tập trung cực độ (Deep Focus)</h3>
-      <p style="font-size: 0.85rem; line-height: 1.4; margin-bottom: 10px;">
-        <strong>Phân biệt rõ ràng học và chơi:</strong> Khi đã ngồi vào bàn học, phải toàn tâm toàn ý. Học tiếng Pháp lúc 6 tuổi chỉ bắt đầu với <strong>15 phút mỗi ngày</strong> nhưng yêu cầu sự tập trung tuyệt đối. <span class="page-ref">Ch 2 · §9</span>
-      </p>
-      <p style="font-size: 0.85rem; line-height: 1.4; margin-bottom: 10px;">
-        <strong>Bảo vệ không gian học tập:</strong> Cha Witte nghiêm cấm mọi sự ngắt quãng. Mẹ hay người hầu có việc cũng phải đợi, thậm chí khách đến nhà chơi cha cũng yêu cầu chờ cho đến khi kết thúc giờ học của con. <span class="page-ref">Ch 2 · §9</span>
-      </p>
-      <p style="font-size: 0.85rem; line-height: 1.4;">
-        <strong>Chất lượng hơn số lượng:</strong> Nhờ thói quen tập trung cao độ này, Karl Witte tiếp thu kiến thức cực nhanh và không bị mệt mỏi. <span class="page-ref">Ch 2 · §9</span>
-      </p>
-    </div>
-    
-    <div class="split-right" style="padding-left: 15px;">
-      <h3 style="color: var(--accent-emerald); margin-top: 0;">Hiệu suất nhanh nhẹn & Tự học</h3>
-      <ul style="font-size: 0.85rem; line-height: 1.4; padding-left: 20px;">
-        <li style="margin-bottom: 8px;"><strong>Rèn tác phong nhanh nhẹn:</strong> Yêu cầu làm việc gì cũng phải nhanh nhẹn, hoạt bát. Không ủng hộ sự chậm chạp, ù lì. Nhờ giải quyết nhanh bài vở, Karl có rất nhiều thời gian để dạo chơi ngoài trời. <span class="page-ref">Ch 2 · §9</span></li>
-        <li style="margin-bottom: 8px;"><strong>Học triệt để, tường tận:</strong> So sánh việc học như xây tường gạch, từng viên gạch phải thật vững chắc. Nghiêm cấm kiểu học đại khái, nửa vời. <span class="page-ref">Ch 2 · §9</span></li>
-        <li style="margin-bottom: 8px;"><strong>Hiệu quả giáo dục tại nhà:</strong> Cha Witte chỉ dạy trực tiếp từ <strong>1 đến 2 tiếng mỗi ngày</strong>. Phần lớn kiến thức còn lại do Karl tự đọc sách và tự nghiên cứu. Đến 8, 9 tuổi, kiến thức của Karl đã vượt qua cả cha mình. <span class="page-ref">Ch 2 · §9</span></li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH 2 · GIÁO DỤC ĐỨC DỤC</div>
-    <h2>Kỷ luật nhất quán &amp; Sự kiện đổ sữa</h2>
-<div class="content-card">
-  <h3 style="color: var(--accent-purple); margin-top: 0; margin-bottom: 15px;">Giáo dục Đức dục & Kỷ luật nhất quán</h3>
-  <p style="font-size: 0.95rem; line-height: 1.5; margin-bottom: 20px;">
-    Mục tiêu lớn nhất của cha Witte không phải là tạo ra một "mọt sách khô khan" chỉ biết chuyên môn, mà là một con người toàn diện, khỏe mạnh, hạnh phúc và nhân ái. Ông chú trọng bồi đắp đức hạnh nhiều hơn là rèn luyện trí tuệ. <span class="page-ref">Ch 2 · §10</span>
-  </p>
-
-  <div class="split-layout">
-    <div class="split-left" style="border-right: 1px solid var(--border-strong); padding-right: 15px;">
-      <h4 style="color: var(--accent-purple); margin-top: 0;">Sự kiện Đổ sữa & Kỷ luật tự giác</h4>
-      <p style="font-size: 0.85rem; line-height: 1.4; margin-bottom: 8px;">
-        <strong>Bối cảnh (6 tuổi):</strong> Karl làm đổ sữa tại nhà mục sư khác. Theo giao kèo gia đình, làm đổ vỡ sẽ bị phạt không ăn bánh kẹo. <span class="page-ref">Ch 2 · §11</span>
-      </p>
-      <p style="font-size: 0.85rem; line-height: 1.4; margin-bottom: 8px;">
-        <strong>Thử thách:</strong> Cha giả vờ đi ra ngoài phòng, những người khác ra sức dỗ dành Karl uống sữa và ăn bánh vì <em>"cha không biết đâu"</em>. <span class="page-ref">Ch 2 · §11</span>
-      </p>
-      <p style="font-size: 0.85rem; line-height: 1.4;">
-        <strong>Phản ứng:</strong> Karl kiên quyết từ chối: <em>"Cho dù cha cháu không biết, nhưng Thần thánh biết, cháu không thể làm thế được."</em> Trẻ tự tuân thủ kỷ luật vì lương tâm tự giác, không phải vì sợ đòn roi. <span class="page-ref">Ch 2 · §11</span>
-      </p>
-    </div>
-
-    <div class="split-right" style="padding-left: 15px;">
-      <h4 style="color: var(--accent-amber); margin-top: 0;">Nguyên tắc nhất quán của cha mẹ</h4>
-      <ul style="font-size: 0.85rem; line-height: 1.4; padding-left: 20px; margin-top: 10px;">
-        <li style="margin-bottom: 10px;"><strong>Đã nói không là không:</strong> Tránh thái độ bất nhất khi dạy trẻ. Lúc vui thì cho làm, lúc bực thì cấm đoán sẽ khiến trẻ bối rối và mất phương hướng. <span class="page-ref">Ch 2 · §11</span></li>
-        <li style="margin-bottom: 10px;"><strong>Bài trừ "Mẹ hiền cha nghiêm":</strong> Dạy con đòi hỏi sự đồng thuận tuyệt đối của cha và mẹ. Một người quá nghiêm khắc, một người quá nuông chiều sẽ phá hỏng kết quả giáo dục. <span class="page-ref">Ch 2 · §11</span></li>
-        <li style="margin-bottom: 10px;"><strong>"Cái gì không có sẽ không cảm thấy thiếu":</strong> Định hình các ranh giới hành vi cho trẻ ngay từ trước 1 tuổi để trẻ tiếp nhận một cách tự nhiên. <span class="page-ref">Ch 2 · §11</span></li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH 2 · KỶ LUẬT LÝ TÍNH</div>
-    <h2>Tôn trọng lý trí của con &amp; Ứng xử tinh tế</h2>
-<div class="content-card">
-  <div class="split-layout">
-    <div class="split-left" style="border-right: 1px solid var(--border-strong); padding-right: 15px;">
-      <h3 style="color: var(--accent-cyan); margin-top: 0;">Kỷ luật dựa trên lý tính (Rational Discipline)</h3>
-      <p style="font-size: 0.85rem; line-height: 1.4; margin-bottom: 10px;">
-        <strong>Không bắt phục tùng mù quáng:</strong> Tôn trọng trí tuệ của trẻ. Tránh che lấp lý trí hay làm rối loạn năng lực phán xét tự nhiên của con bằng những hình phạt áp đặt vô lý. <span class="page-ref">Ch 2 · §12</span>
-      </p>
-      <p style="font-size: 0.85rem; line-height: 1.4; margin-bottom: 10px;">
-        <strong>Giải thích rõ nguyên nhân:</strong> Nhiều cha mẹ cấm đoán con chỉ bằng mệnh lệnh <em>"Không được làm thế!"</em> mà không giải thích vì sao. Cha Witte khẳng định đây là sự chuyên chế độc tài, làm tổn thương năng lực phán phán đoán độc lập của con sau này. <span class="page-ref">Ch 2 · §12</span>
-      </p>
-      <p style="font-size: 0.85rem; line-height: 1.4;">
-        <strong>Vai trò của ngôn ngữ:</strong> Để dạy con bằng lý tính, cha mẹ phải làm phong phú vốn từ của con ngay từ đầu để con có đủ khả năng hiểu được các giải thích mang tính logic. <span class="page-ref">Ch 2 · §12</span>
-      </p>
-    </div>
-    
-    <div class="split-right" style="padding-left: 15px;">
-      <h3 style="color: var(--accent-amber); margin-top: 0;">Case Study: Ranh giới giữa Sự thật & Tế nhị</h3>
-      <p style="font-size: 0.85rem; line-height: 1.4; margin-bottom: 10px;">
-        <strong>Tình huống:</strong> Karl phát ngôn một sự thật gây mất mặt người khác trước đám đông. <span class="page-ref">Ch 2 · §12</span>
-      </p>
-      <ul style="font-size: 0.82rem; line-height: 1.4; padding-left: 20px;">
-        <li style="margin-bottom: 8px;"><strong>Không dùng đòn roi:</strong> Cha ôn tồn giải thích: <em>"Điều con nói là sự thật, nhưng không phải sự thật nào cũng bắt buộc phải nói ra làm người khác xấu hổ."</em> <span class="page-ref">Ch 2 · §12</span></li>
-        <li style="margin-bottom: 8px;"><strong>Đặt câu hỏi thấu cảm:</strong> <em>"Nếu người khác vạch lỗi của con trước mọi người, con có buồn không? Người ta biết lỗi của con nhưng im lặng vì họ tốt bụng."</em> <span class="page-ref">Ch 2 · §12</span></li>
-        <li style="margin-bottom: 8px;"><strong>Định nghĩa "Lịch sự" vs "Nói dối":</strong> Dạy con hiểu rằng giữ im lặng tế nhị không phải là nói dối, mà là sự tôn trọng cần thiết để giữ gìn các mối quan hệ hòa thuận. <span class="page-ref">Ch 2 · §12</span></li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH 2 · BẠN BÈ &amp; XÃ HỘI HÓA</div>
-    <h2>Nguyên tắc chọn bạn và xã hội hóa có giám sát</h2>
-<div class="content-card">
-  <h3 style="color: var(--accent-purple); margin-top: 0; margin-bottom: 15px;">Nguyên tắc chọn bạn & Xã hội hóa có định hướng</h3>
-  <p style="font-size: 0.95rem; line-height: 1.5; margin-bottom: 20px;">
-    Cha Witte rất nghiêm khắc trong việc để con ra ngoài chơi tự do. Ông phản đối quan điểm cho rằng <em>"trẻ con phải chơi với trẻ con mới vui và phát triển"</em>, đồng thời cảnh báo về những nguy cơ nhiễm thói xấu khi thiếu sự giám sát của người lớn. <span class="page-ref">Ch 2 · §13</span>
-  </p>
-
-  <div class="split-layout">
-    <div class="split-left" style="border-right: 1px solid var(--border-strong); padding-right: 15px;">
-      <h4 style="color: var(--accent-red); margin-top: 0;">Cảnh giác trước sự lây lan của thói xấu</h4>
-      <ul style="font-size: 0.85rem; line-height: 1.4; padding-left: 20px; margin-top: 10px;">
-        <li style="margin-bottom: 10px;"><strong>Quy luật lây lan:</strong> Đức tính tốt cần nỗ lực tự chủ và rèn luyện gian khổ để có được. Ngược lại, thói xấu (ích kỷ, dối trá, cãi cọ) không cần tốn công học nên lây lan cực nhanh. Trẻ ngoan ít khi cải thiện được trẻ hư, nhưng trẻ hư rất dễ kéo trẻ ngoan đi xuống. <span class="page-ref">Ch 2 · §13</span></li>
-        <li style="margin-bottom: 10px;"><strong>Bài học thực tế:</strong> Cho Karl chơi với 2 bé gái ngoan nhất vùng. Do được chiều chuộng không ai phản đối, Karl bắt đầu bướng bỉnh, ích kỷ và nói dối. Cha Witte lập tức điều chỉnh. <span class="page-ref">Ch 2 · §13</span></li>
-      </ul>
-    </div>
-
-    <div class="split-right" style="padding-left: 15px;">
-      <h4 style="color: var(--accent-emerald); margin-top: 0;">Phương pháp "Xã hội hóa có giám sát"</h4>
-      <ul style="font-size: 0.85rem; line-height: 1.4; padding-left: 20px; margin-top: 10px;">
-        <li style="margin-bottom: 10px;"><strong>Đồng hành cùng con:</strong> Người lớn hãy mang trái tim trẻ thơ để cùng chơi với trẻ. Trò chơi sẽ vừa vui vẻ vừa có định hướng giáo dục lành mạnh. <span class="page-ref">Ch 2 · §13</span></li>
-        <li style="margin-bottom: 10px;"><strong>Giám sát chặt chẽ:</strong> Đương nhiên không cách ly hoàn toàn, vẫn cho trẻ gặp gỡ giao lưu dưới sự quan sát của cha mẹ để kịp thời chấn chỉnh hành vi sai lệch. <span class="page-ref">Ch 2 · §13</span></li>
-        <li style="margin-bottom: 10px;"><strong>Kết quả lâu dài:</strong> Karl lớn lên ôn hòa, chân thành, không bao giờ cãi cọ, đánh nhau. Khi học đại học dù nhỏ tuổi hơn các bạn rất nhiều nhưng vẫn được mọi người quý mến và có nhiều bạn thân thiết. <span class="page-ref">Ch 2 · §13</span></li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH 2 · KIỂM SOÁT LỜI KHEN</div>
-    <h2>Phòng ngừa kiêu ngạo &amp; Thách thức Euler</h2>
-<div class="content-card">
-  <div class="split-layout">
-    <div class="split-left" style="border-right: 1px solid var(--border-strong); padding-right: 15px;">
-      <h3 style="color: var(--accent-red); margin-top: 0;">Kiểm soát lời khen & Phòng ngừa tự phụ</h3>
-      <p style="font-size: 0.85rem; line-height: 1.4; margin-bottom: 10px;">
-        <strong>Bệnh kiêu căng phá hủy thần đồng:</strong> Nhiều đứa trẻ thông minh thui chột khi lớn lên vì thói tự mãn và lơ đãng. Cha Witte lao tâm khổ tứ để giữ con luôn khiêm tốn. <span class="page-ref">Ch 2 · §15, §16</span>
-      </p>
-      <ul style="font-size: 0.82rem; line-height: 1.4; padding-left: 20px;">
-        <li style="margin-bottom: 8px;"><strong>Hạn chế khen ngợi việc học:</strong> Khi Karl học tốt, cha chỉ nói <em>"Con làm tốt đấy"</em>. Chỉ khen ngợi nhiều và ghi vào sổ lưu niệm khi con làm việc thiện. Ôm hôn con là phần thưởng cực kỳ hiếm hoi và vô giá. <span class="page-ref">Ch 2 · §15</span></li>
-        <li style="margin-bottom: 8px;"><strong>Cách ly khỏi lời tán dương:</strong> Khi khách khen Karl, cha lập tức dẫn con ra khỏi phòng. Nếu khách cố tình khen, ông sẽ cắt đứt mối quan hệ để bảo vệ tâm hồn trong sáng của con. <span class="page-ref">Ch 2 · §15</span></li>
-        <li style="margin-bottom: 8px;"><strong>Lăng kính tri thức vô hạn:</strong> Dạy con hiểu kiến thức nhân loại chỉ như muối bỏ bể so với tự nhiên. Người hài lòng với hiểu biết của mình là người đáng thương nhất. <span class="page-ref">Ch 2 · §15</span></li>
-      </ul>
-    </div>
-    
-    <div class="split-right" style="padding-left: 15px;">
-      <h3 style="color: var(--accent-purple); margin-top: 0;">Cuộc kiểm tra của Giám sát viên H</h3>
-      <p style="font-size: 0.85rem; line-height: 1.4; margin-bottom: 10px;">
-        <strong>Bối cảnh:</strong> Ông H thử tài toán học của Karl với điều kiện nghiêm ngặt: <em>"Không được khen ngợi đứa trẻ trước mặt nó"</em>. <span class="page-ref">Ch 2 · §16</span>
-      </p>
-      <p style="font-size: 0.85rem; line-height: 1.4; margin-bottom: 10px;">
-        <strong>Câu đố Euler (Chia đất chữ L):</strong> Chia một mảnh đất hình chữ L thành 3 phần có diện tích bằng nhau và hình dáng giống hệt nhau (Euler mất 3 ngày mới giải được). <span class="page-ref">Ch 2 · §16</span>
-      </p>
-      <p style="font-size: 0.85rem; line-height: 1.4;">
-        <strong>Phản ứng của cha Witte:</strong> Khi Karl reo lên đã tìm ra đáp án và ông H trầm trồ <em>"Cậu bé giỏi hơn Euler rồi"</em>, cha Witte lập tức gạt đi để ngăn kiêu ngạo: <em>"Chỉ là do may mắn thôi!"</em>. Cậu bé Karl hoàn toàn không biết mình tài giỏi, chỉ vui vì có thêm một người bạn lớn tuổi cùng chung chí hướng. <span class="page-ref">Ch 2 · §16</span>
-      </p>
-    </div>
-  </div>
-</div>
-
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH 2 · THÀNH TỰU HỌC THUẬT</div>
-    <h2>Con đường học vị &amp; Cuộc sống cân bằng</h2>
-<div class="content-card">
-  <div class="split-layout">
-    <div class="split-left" style="border-right: 1px solid var(--border-strong); padding-right: 15px;">
-      <h3 style="color: var(--accent-cyan); margin-top: 0;">Biên niên sử thành tựu của Karl Witte</h3>
-      <ul style="font-size: 0.82rem; line-height: 1.4; padding-left: 20px;">
-        <li style="margin-bottom: 8px;"><strong>7 tuổi 9 tháng:</strong> Được thử tài ngôn ngữ và toán học trước toàn bộ học sinh trung học, làm chấn động giới giáo dục đương thời. <span class="page-ref">Ch 2 · §18</span></li>
-        <li style="margin-bottom: 8px;"><strong>9 tuổi:</strong> Đạt trình độ tương đương thanh niên 18, 19 tuổi. Được Tiến sĩ Loster cấp chứng nhận và viết bài báo kêu gọi quyên góp học bổng. <span class="page-ref">Ch 2 · §18</span></li>
-        <li style="margin-bottom: 8px;"><strong>10 tuổi:</strong> Nhập học Đại học Gottingen danh giá với học bổng tài trợ của hoàng gia. <span class="page-ref">Ch 2 · §19</span></li>
-        <li style="margin-bottom: 8px;"><strong>12 tuổi:</strong> Viết luận văn toán học xuất sắc về các đường xoáy ốc. <span class="page-ref">Ch 2 · §19</span></li>
-        <li style="margin-bottom: 8px;"><strong>14 tuổi:</strong> Nhận bằng <strong>Tiến sĩ Triết học</strong> tại Đại học Giessen. Thuyết trình xuất sắc về số học trước giảng đường lớn. <span class="page-ref">Ch 2 · §19</span></li>
-        <li style="margin-bottom: 8px;"><strong>16 tuổi:</strong> Nhận bằng <strong>Tiến sĩ Luật học</strong> tại Đại học Heidelberg. <span class="page-ref">Ch 2 · §19</span></li>
-        <li style="margin-bottom: 8px;"><strong>18 tuổi:</strong> Sang Ý du học, trở thành chuyên gia nghiên cứu Dante lỗi lạc. Sống khỏe mạnh đến năm 83 tuổi. <span class="page-ref">Ch 2 · §19, §20</span></li>
-      </ul>
-    </div>
-    
-    <div class="split-right" style="padding-left: 15px;">
-      <h3 style="color: var(--accent-emerald); margin-top: 0;">Triết lý sống cân bằng & Thư nhàn</h3>
-      <p style="font-size: 0.85rem; line-height: 1.4; margin-bottom: 10px;">
-        <strong>Học đại học thư nhàn:</strong> Karl Witte học cùng thanh niên 20 tuổi nhưng cuộc sống của cậu rất thong thả, không hề bị quá tải hay "suốt ngày chúi mũi vào sách vở". <span class="page-ref">Ch 2 · §19</span>
-      </p>
-      <ul style="font-size: 0.82rem; line-height: 1.4; padding-left: 20px;">
-        <li style="margin-bottom: 6px;"><strong>Không làm "con rối" học thuật:</strong> Vào kỳ nghỉ lễ Phục sinh, cha đưa Karl đi du lịch thay vì bắt ngồi trong thư viện ôn bài. Cha tuyên bố: <em>"Sức khỏe và tầm nhìn quan trọng hơn học vấn"</em>. <span class="page-ref">Ch 2 · §19</span></li>
-        <li style="margin-bottom: 6px;"><strong>Nghệ thuật & Vận động:</strong> Dành thời gian vẽ tranh, chơi piano, học khiêu vũ, đi dạo và sưu tập mẫu động thực vật ngoài tự nhiên. <span class="page-ref">Ch 2 · §19</span></li>
-        <li style="margin-bottom: 6px;"><strong>Khỏe mạnh dẻo dai:</strong> Duy trì đi dạo ngoài trời ngay cả trong mùa đông tuyết rơi nhẹ để rèn luyện thể lực bền bỉ. <span class="page-ref">Ch 2 · §19, §20</span></li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH 2 · HÀNH ĐỘNG CỦA CHA MẸ</div>
-    <h2>Kế hoạch hành động chi tiết</h2>
-<ul class="action-list" style="margin-bottom: 15px;">
-  <li class="action-item">
-    <div>
-      <div class="action-headline">Chuẩn hóa giao tiếp và loại bỏ "ngôn ngữ trẻ con"</div>
-      <div class="action-detail">Nói chuyện với con bằng ngôn ngữ chuẩn mực ngay từ sơ sinh. Phát âm chậm, rõ ràng danh từ chỉ vật thật. Tuyệt đối loại bỏ các từ mô phỏng như "gâu gâu", "meo meo", thay bằng "con chó", "con mèo". <span class="page-ref">Ch 2 · §3</span></div>
-    </div>
-  </li>
-  <li class="action-item">
-    <div>
-      <div class="action-headline">Thiết lập kỷ luật nhất quán trong ăn uống và học tập</div>
-      <div class="action-detail">Xây dựng chế độ dinh dưỡng hợp lý, tránh nuông chiều cho con ăn vặt bừa bãi để giữ não bộ hoạt bát. Rèn sự tập trung tối đa trong thời gian ngắn (bắt đầu từ 15 phút) và nhất quán giữa cha và mẹ. <span class="page-ref">Ch 2 · §8, §9, §11</span></div>
-    </div>
-  </li>
-  <li class="action-item">
-    <div>
-      <div class="action-headline">Học Địa lý - Khoa học qua những buổi đi dạo thực địa</div>
-      <div class="action-detail">Dành ít nhất 1-2 tiếng mỗi ngày đưa con ra ngoài thiên nhiên. Quan sát sự vật, hướng dẫn con vẽ bản đồ đơn giản nơi mình đi qua và đối chiếu bản đồ thực tế. Luôn kiên nhẫn trả lời câu hỏi và cùng tra cứu nếu chưa rõ. <span class="page-ref">Ch 2 · §5</span></div>
-    </div>
-  </li>
-  <li class="action-item">
-    <div>
-      <div class="action-headline">Ứng dụng trò chơi đóng vai để tự chấn chỉnh hành vi</div>
-      <div class="action-detail">Dùng trò chơi đóng vai (mẹ làm học sinh mắc lỗi, con làm giáo viên sửa lỗi) để con tự phát hiện và chấn chỉnh các thói quen xấu của bản thân mà không cần dùng đến hình phạt chuyên chế, đòn roi. <span class="page-ref">Ch 2 · §7, §12</span></div>
-    </div>
-  </li>
-</ul>
-
-<figure class="image-slot hero" style="max-height: 200px;">
-  <img src="images/ch2_closing.png" alt="Trẻ em vui vẻ chơi đùa ngoài thiên nhiên sạch sẽ">
-  <figcaption>Nguồn: Unsplash (Free Stock Photo)</figcaption>
-</figure>
-
-  </section>
-
-</div>
-
-<div class="nav-controls">
-  <button class="nav-btn" id="prevBtn" onclick="prevSlide()" aria-label="Previous slide">&#8592;</button>
-  <div class="counter" id="counter" aria-live="polite">1 / 1</div>
-  <button class="nav-btn" id="nextBtn" onclick="nextSlide()" aria-label="Next slide">&#8594;</button>
-</div>
-
-<script src="common.js"></script>
+  <script src="../common.js"></script>
 </body>
+
 </html>

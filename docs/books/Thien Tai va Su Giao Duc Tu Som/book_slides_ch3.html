@@ -1,589 +1,777 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Thiên Tài và Sự Giáo Dục Từ Sớm — Chương 3</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="common.css">
-<script src="https://cdn.jsdelivr.net/npm/@panzoom/panzoom@4.5.1/dist/panzoom.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/mermaid@11.10.0/dist/mermaid.min.js" crossorigin="anonymous"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Thiên Tài và Sự Giáo Dục Từ Sớm — Chương 3</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../common.css">
+  <script src="https://cdn.jsdelivr.net/npm/@panzoom/panzoom@4.5.1/dist/panzoom.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@11.10.0/dist/mermaid.min.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
 
-<div class="progress-bar" id="progressBar"></div>
+  <div class="progress-bar" id="progressBar"></div>
 
-<div class="chapter-menu">
-  <button class="menu-btn" id="chapterMenuBtn" onclick="toggleChapterMenu()" aria-haspopup="true" aria-expanded="false">Chapters &#9662;</button>
-  <div class="chapter-menu-panel" id="chapterMenuPanel" role="menu"></div>
-</div>
-
-<div class="slide-container" id="slideContainer">
-
-  <section class="slide" aria-hidden="false">
-<h1>Giáo Dục Sớm Qua Các Điển Hình Lịch Sử</h1>
-<p class="subtitle">Chương 3 — Phân tích phương pháp dạy con của cha mẹ anh em Thomson, John Stuart Mill và Goethe</p>
-
-<figure class="image-slot hero">
-  <img src="images/ch3_book_cover.png" alt="Giá sách cổ điển trong thư viện">
-  <figcaption>Nguồn: Unsplash (Free Stock Photo)</figcaption>
-</figure>
-
-<div class="meta-grid">
-  <div class="meta-item">
-    <div class="meta-label">Nhân vật so sánh</div>
-    <div class="meta-value">Bố con nhà Thomson, Mill và Goethe</div>
+  <div class="chapter-menu">
+    <button class="menu-btn" id="chapterMenuBtn" onclick="toggleChapterMenu()" aria-haspopup="true"
+      aria-expanded="false">Chapters &#9662;</button>
+    <div class="chapter-menu-panel" id="chapterMenuPanel" role="menu"></div>
   </div>
-  <div class="meta-item">
-    <div class="meta-label">Đóng góp lịch sử</div>
-    <div class="meta-value">Các triết gia, nhà bác học, đại thi hào vĩ đại nhất nhân loại</div>
-  </div>
-  <div class="meta-item">
-    <div class="meta-label">Chương phân tích</div>
-    <div class="meta-value">Chương 3 (DEEP Mode)</div>
-  </div>
-  <div class="meta-item">
-    <div class="meta-label">Độ sâu phân tích</div>
-    <div class="meta-value">Deep (17 slides)</div>
-  </div>
-</div>
 
-  </section>
+  <div class="slide-container" id="slideContainer">
 
-  <section class="slide chapter-divider">
-<div class="chapter-number">Chương 3</div>
-<h2>Anh em Thomson, Mill, Goethe được giáo dục như thế nào?</h2>
-<p class="chapter-meta">Thời gian đọc: ~15 phút · Độ khó: Trung bình · Khái niệm cốt lõi: Kích thích trí tưởng tượng, Đọc chủ động, Dạy cách tư duy, Phòng ngừa kiêu ngạo, Giáo dục gia đình toàn diện</p>
-
-<figure class="image-slot hero">
-  <img src="images/ch3_early_edu.png" alt="Trẻ em cùng cha học tập và đọc sách vui vẻ">
-  <figcaption>Nguồn: Unsplash (Free Stock Photo)</figcaption>
-</figure>
-
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH 3 · SƠ ĐỒ TRỰC QUAN</div>
-    <h2>Bản đồ so sánh mô hình giáo dục sớm</h2>
-<div class="mermaid">
-graph TD
-    A["So sánh 3 mô hình Giáo dục từ sớm (Chương 3)"] --> B["Anh em Thomson<br>(Thế giới quan sống động)"]
-    A --> C["John Stuart Mill<br>(Học thuật & Lý tính)"]
-    A --> D["Johann Wolfgang von Goethe<br>(Kỷ luật & Trí tưởng tượng)"]
-
-    B --> B1["Cha: Giáo sư James Thomson"]
-    B --> B2["Phương pháp: Kể chuyện phiêu lưu, tương tác đa chiều"]
-    B --> B3["Dạy học trong bữa ăn gia đình"]
-
-    C --> C1["Cha: Triết gia James Mill"]
-    C --> C2["Phương pháp: 'Cha truyền con nhận', dạy cách tư duy"]
-    C --> C3["Đi bộ chất vấn sách đọc, Hyde Park rèn khiêm tốn"]
-
-    D --> D1["Cha: Quân nhân (Kỷ luật) · Mẹ: Kể chuyện"]
-    D --> D2["Phương pháp: Đồng dao tăng từ vựng, đi dạo thực tế"]
-    D --> D3["Mẹ kể chuyện ngắt quãng kích thích óc sáng tạo"]
-
-    style A fill:#635BFF,stroke:#2A2D33,color:#F7F7F5
-    style B fill:#0891B2,stroke:#2A2D33,color:#F7F7F5
-    style C fill:#059669,stroke:#2A2D33,color:#F7F7F5
-    style D fill:#D97706,stroke:#2A2D33,color:#F7F7F5
-</div>
-
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH 3 · TÓM TẮT CẤU TRÚC</div>
-    <h2>Tóm tắt cốt lõi</h2>
-<div class="content-card">
-  <p class="summary-text"><strong>Tóm tắt cốt lõi:</strong> Chương 3 củng cố lý thuyết giáo dục sớm bằng cách phân tích ba trường hợp thần đồng lịch sử khác: Anh em Thomson (vật lý/toán), John Stuart Mill (triết học/kinh tế) và Goethe (văn học/khoa học). Các mô hình này chứng minh giáo dục gia đình từ sớm, dù có sự khác biệt về phong cách (học qua thiên nhiên, sách vở hay nghệ thuật), đều đem lại sự phát triển vượt bậc.</p>
-  
-  <div class="deep-section">
-    <strong>Đặt vấn đề (Setup):</strong> Cha của Witte ghi chép phương pháp chi tiết, nhưng cha của anh em Thomson và J.S. Mill thì không. Dù vậy, qua tự truyện và lời kể của người thân, ta vẫn tái dựng được những mảnh ghép giáo dục sớm độc đáo của họ. <span class="page-ref">Ch 3 · §1, §2</span>
-  </div>
-  
-  <div class="deep-section">
-    <strong>Luận điểm (Argument):</strong> Giáo dục sớm tiết kiệm thời gian thơ ấu bị bỏ phí vô ích của trẻ. Dù phong cách dạy có thể khác nhau (nhà Thomson chú trọng phiêu lưu, nhà Mill chú trọng sách vở và cách tư duy, nhà Goethe chú trọng kỷ luật và óc tưởng tượng), điểm chung cốt lõi là bắt đầu từ buổi bình minh nhận thức và có sự tham gia sâu sắc của cha mẹ. <span class="page-ref">Ch 3 · §1, §2, §4, §5</span>
-  </div>
-  
-  <div class="deep-section">
-    <strong>Bằng chứng (Evidence):</strong> 
-    <ul>
-      <li>Anh em Thomson thích học qua chuyện vượt biển của cha, lớn lên trở thành Giáo sư và Huân tước Kelvin vĩ đại. <span class="page-ref">Ch 3 · §1</span></li>
-      <li>J.S. Mill học tiếng Hy Lạp lúc 3 tuổi, Latin lúc 8 tuổi, học Giải tích lúc 12 tuổi, có kiến thức vượt trước bạn bè 25 năm dù tự nhận là người tiếp thu chậm. <span class="page-ref">Ch 3 · §2, §3</span></li>
-      <li>Goethe nói thạo 5 thứ tiếng lúc 8 tuổi nhờ mẹ kể chuyện kích thích trí tưởng tượng mỗi ngày từ năm 2 tuổi. <span class="page-ref">Ch 3 · §5</span></li>
-    </ul>
-  </div>
-  
-  <div class="deep-section">
-    <strong>Hệ quả (Implications):</strong> Đừng lãng phí thời kỳ thơ ấu vàng ngọc của trẻ. Cha mẹ nên chọn phương pháp giáo dục phù hợp với gia đình, kết hợp "học mà chơi, chơi mà học", dạy trẻ cách tự tư duy, bảo vệ trẻ khỏi thói tự mãn và nuông chiều. <span class="page-ref">Ch 3 · §3, §4, §5</span>
-  </div>
-</div>
-
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH 3 · ANH EM THOMSON</div>
-    <h2>Giáo dục qua thế giới truyện kể tương tác</h2>
-<div class="content-card">
-  <h3 style="color: var(--accent-cyan); margin-top: 0; margin-bottom: 15px;">Anh em nhà Thomson & Giáo dục qua truyện kể tương tác</h3>
-  <p style="font-size: 0.95rem; line-height: 1.5; margin-bottom: 20px;">
-    Cha của anh em nhà Thomson (trong đó William Thomson sau này trở thành Huân tước Kelvin lừng danh) là một giáo sư toán học ở Belfast. Ông đã áp dụng phương pháp dạy học sinh động thông qua thế giới của những câu chuyện phiêu lưu kỳ thú. <span class="page-ref">Ch 3 · §1</span>
-  </p>
-
-  <div class="split-layout">
-    <div class="split-left" style="border-right: 1px solid var(--border-strong); padding-right: 15px;">
-      <h4 style="color: var(--accent-cyan); margin-top: 0;">Kho tàng truyện kể phiêu lưu sống động</h4>
-      <p style="font-size: 0.85rem; line-height: 1.4; margin-bottom: 10px;">
-        Thay vì bắt con ghi nhớ từ ngữ khô khan, ông James Thomson dẫn dắt các con du hành qua không gian và thời gian bằng lời kể:
+    <section class="slide" aria-hidden="false">
+      <h1>Giáo Dục Sớm Qua Các Điển Hình Lịch Sử</h1>
+      <p class="subtitle">Chương 3 — Phân tích phương pháp dạy con của cha mẹ anh em Thomson, John Stuart Mill và Goethe
       </p>
-      <ul style="font-size: 0.82rem; line-height: 1.4; padding-left: 20px;">
-        <li style="margin-bottom: 6px;">Vượt biển xa xôi đến Ấn Độ, Trung Quốc.</li>
-        <li style="margin-bottom: 6px;">Ngược dòng sông Nile gặp gỡ người da đen.</li>
-        <li style="margin-bottom: 6px;">Thám hiểm rừng rậm châu Phi đầy sư tử, voi.</li>
-        <li style="margin-bottom: 6px;">Băng qua sa mạc trên lưng lạc đà hay phiêu bạt vùng băng tuyết Bắc Cực.</li>
-        <li style="margin-bottom: 6px;">Quay về quá khứ cùng quân Spartan tấn công Troy, lên tàu Odysseus hay theo gót Alexander viễn chinh. <span class="page-ref">Ch 3 · §1</span></li>
+
+      <figure class="image-slot hero">
+        <img src="images/ch3_book_cover.png" alt="Giá sách cổ điển trong thư viện">
+        <figcaption>Nguồn: Unsplash (Free Stock Photo)</figcaption>
+      </figure>
+
+      <div class="meta-grid">
+        <div class="meta-item">
+          <div class="meta-label">Nhân vật so sánh</div>
+          <div class="meta-value">Bố con nhà Thomson, Mill và Goethe</div>
+        </div>
+        <div class="meta-item">
+          <div class="meta-label">Đóng góp lịch sử</div>
+          <div class="meta-value">Các triết gia, nhà bác học, đại thi hào vĩ đại nhất nhân loại</div>
+        </div>
+        <div class="meta-item">
+          <div class="meta-label">Chương phân tích</div>
+          <div class="meta-value">Chương 3 (DEEP Mode)</div>
+        </div>
+        <div class="meta-item">
+          <div class="meta-label">Độ sâu phân tích</div>
+          <div class="meta-value">Deep (17 slides)</div>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="slide chapter-divider">
+      <div class="chapter-number">Chương 3</div>
+      <h2>Anh em Thomson, Mill, Goethe được giáo dục như thế nào?</h2>
+      <p class="chapter-meta">Thời gian đọc: ~15 phút · Độ khó: Trung bình · Khái niệm cốt lõi: Kích thích trí tưởng
+        tượng, Đọc chủ động, Dạy cách tư duy, Phòng ngừa kiêu ngạo, Giáo dục gia đình toàn diện</p>
+
+      <figure class="image-slot hero">
+        <img src="images/ch3_early_edu.png" alt="Trẻ em cùng cha học tập và đọc sách vui vẻ">
+        <figcaption>Nguồn: Unsplash (Free Stock Photo)</figcaption>
+      </figure>
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 3 · SƠ ĐỒ TRỰC QUAN</div>
+      <h2>Bản đồ so sánh mô hình giáo dục sớm</h2>
+      <div class="mermaid">
+        graph TD
+        A["So sánh 3 mô hình Giáo dục từ sớm (Chương 3)"] --> B["Anh em Thomson<br>(Thế giới quan sống động)"]
+        A --> C["John Stuart Mill<br>(Học thuật & Lý tính)"]
+        A --> D["Johann Wolfgang von Goethe<br>(Kỷ luật & Trí tưởng tượng)"]
+
+        B --> B1["Cha: Giáo sư James Thomson"]
+        B --> B2["Phương pháp: Kể chuyện phiêu lưu, tương tác đa chiều"]
+        B --> B3["Dạy học trong bữa ăn gia đình"]
+
+        C --> C1["Cha: Triết gia James Mill"]
+        C --> C2["Phương pháp: 'Cha truyền con nhận', dạy cách tư duy"]
+        C --> C3["Đi bộ chất vấn sách đọc, Hyde Park rèn khiêm tốn"]
+
+        D --> D1["Cha: Quân nhân (Kỷ luật) · Mẹ: Kể chuyện"]
+        D --> D2["Phương pháp: Đồng dao tăng từ vựng, đi dạo thực tế"]
+        D --> D3["Mẹ kể chuyện ngắt quãng kích thích óc sáng tạo"]
+
+        style A fill:#635BFF,stroke:#2A2D33,color:#F7F7F5
+        style B fill:#0891B2,stroke:#2A2D33,color:#F7F7F5
+        style C fill:#059669,stroke:#2A2D33,color:#F7F7F5
+        style D fill:#D97706,stroke:#2A2D33,color:#F7F7F5
+      </div>
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 3 · TÓM TẮT CẤU TRÚC</div>
+      <h2>Tóm tắt cốt lõi</h2>
+      <div class="content-card">
+        <p class="summary-text"><strong>Tóm tắt cốt lõi:</strong> Chương 3 củng cố lý thuyết giáo dục sớm bằng cách phân
+          tích ba trường hợp thần đồng lịch sử khác: Anh em Thomson (vật lý/toán), John Stuart Mill (triết học/kinh tế)
+          và Goethe (văn học/khoa học). Các mô hình này chứng minh giáo dục gia đình từ sớm, dù có sự khác biệt về phong
+          cách (học qua thiên nhiên, sách vở hay nghệ thuật), đều đem lại sự phát triển vượt bậc.</p>
+
+        <div class="deep-section">
+          <strong>Đặt vấn đề (Setup):</strong> Cha của Witte ghi chép phương pháp chi tiết, nhưng cha của anh em Thomson
+          và J.S. Mill thì không. Dù vậy, qua tự truyện và lời kể của người thân, ta vẫn tái dựng được những mảnh ghép
+          giáo dục sớm độc đáo của họ. <span class="page-ref">Ch 3 · §1, §2</span>
+        </div>
+
+        <div class="deep-section">
+          <strong>Luận điểm (Argument):</strong> Giáo dục sớm tiết kiệm thời gian thơ ấu bị bỏ phí vô ích của trẻ. Dù
+          phong cách dạy có thể khác nhau (nhà Thomson chú trọng phiêu lưu, nhà Mill chú trọng sách vở và cách tư duy,
+          nhà Goethe chú trọng kỷ luật và óc tưởng tượng), điểm chung cốt lõi là bắt đầu từ buổi bình minh nhận thức và
+          có sự tham gia sâu sắc của cha mẹ. <span class="page-ref">Ch 3 · §1, §2, §4, §5</span>
+        </div>
+
+        <div class="deep-section">
+          <strong>Bằng chứng (Evidence):</strong>
+          <ul>
+            <li>Anh em Thomson thích học qua chuyện vượt biển của cha, lớn lên trở thành Giáo sư và Huân tước Kelvin vĩ
+              đại. <span class="page-ref">Ch 3 · §1</span></li>
+            <li>J.S. Mill học tiếng Hy Lạp lúc 3 tuổi, Latin lúc 8 tuổi, học Giải tích lúc 12 tuổi, có kiến thức vượt
+              trước bạn bè 25 năm dù tự nhận là người tiếp thu chậm. <span class="page-ref">Ch 3 · §2, §3</span></li>
+            <li>Goethe nói thạo 5 thứ tiếng lúc 8 tuổi nhờ mẹ kể chuyện kích thích trí tưởng tượng mỗi ngày từ năm 2
+              tuổi. <span class="page-ref">Ch 3 · §5</span></li>
+          </ul>
+        </div>
+
+        <div class="deep-section">
+          <strong>Hệ quả (Implications):</strong> Đừng lãng phí thời kỳ thơ ấu vàng ngọc của trẻ. Cha mẹ nên chọn phương
+          pháp giáo dục phù hợp với gia đình, kết hợp "học mà chơi, chơi mà học", dạy trẻ cách tự tư duy, bảo vệ trẻ
+          khỏi thói tự mãn và nuông chiều. <span class="page-ref">Ch 3 · §3, §4, §5</span>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 3 · ANH EM THOMSON</div>
+      <h2>Giáo dục qua thế giới truyện kể tương tác</h2>
+      <div class="content-card">
+        <h3 style="color: var(--accent-cyan); margin-top: 0; margin-bottom: 15px;">Anh em nhà Thomson & Giáo dục qua
+          truyện kể tương tác</h3>
+        <p style="font-size: 0.95rem; line-height: 1.5; margin-bottom: 20px;">
+          Cha của anh em nhà Thomson (trong đó William Thomson sau này trở thành Huân tước Kelvin lừng danh) là một giáo
+          sư toán học ở Belfast. Ông đã áp dụng phương pháp dạy học sinh động thông qua thế giới của những câu chuyện
+          phiêu lưu kỳ thú. <span class="page-ref">Ch 3 · §1</span>
+        </p>
+
+        <div class="split-layout">
+          <div class="split-left" style="border-right: 1px solid var(--border-strong); padding-right: 15px;">
+            <h4 style="color: var(--accent-cyan); margin-top: 0;">Kho tàng truyện kể phiêu lưu sống động</h4>
+            <p style="font-size: 0.85rem; line-height: 1.4; margin-bottom: 10px;">
+              Thay vì bắt con ghi nhớ từ ngữ khô khan, ông James Thomson dẫn dắt các con du hành qua không gian và thời
+              gian bằng lời kể:
+            </p>
+            <ul style="font-size: 0.82rem; line-height: 1.4; padding-left: 20px;">
+              <li style="margin-bottom: 6px;">Vượt biển xa xôi đến Ấn Độ, Trung Quốc.</li>
+              <li style="margin-bottom: 6px;">Ngược dòng sông Nile gặp gỡ người da đen.</li>
+              <li style="margin-bottom: 6px;">Thám hiểm rừng rậm châu Phi đầy sư tử, voi.</li>
+              <li style="margin-bottom: 6px;">Băng qua sa mạc trên lưng lạc đà hay phiêu bạt vùng băng tuyết Bắc Cực.
+              </li>
+              <li style="margin-bottom: 6px;">Quay về quá khứ cùng quân Spartan tấn công Troy, lên tàu Odysseus hay theo
+                gót Alexander viễn chinh. <span class="page-ref">Ch 3 · §1</span></li>
+            </ul>
+          </div>
+
+          <div class="split-right" style="padding-left: 15px;">
+            <h4 style="color: var(--accent-emerald); margin-top: 0;">Kỹ thuật "Kéo trẻ vào câu chuyện"</h4>
+            <ul style="font-size: 0.85rem; line-height: 1.4; padding-left: 20px; margin-top: 10px;">
+              <li style="margin-bottom: 10px;"><strong>Không độc thoại:</strong> Cha không chỉ kể một mình. Ông đặt câu
+                hỏi gợi mở, khuyến khích con đưa ra ý kiến, phán đoán tình huống, từ đó kích hoạt trí tưởng tượng bay
+                bổng của con. <span class="page-ref">Ch 3 · §1</span></li>
+              <li style="margin-bottom: 10px;"><strong>Phát triển ngôn ngữ tự nhiên:</strong> Nhờ nhập tâm vào cốt
+                truyện, anh em Thomson học từ vựng mới cực nhanh và ghi nhớ thông tin địa lý, lịch sử một cách tự nhiên.
+                <span class="page-ref">Ch 3 · §1</span>
+              </li>
+              <li style="margin-bottom: 10px;"><strong>Dạy học trong bữa ăn:</strong> Tận dụng thời gian sinh hoạt chung
+                để trò chuyện, giải đáp thắc mắc của con thay vì giữ im lặng khô khan. <span class="page-ref">Ch 3 ·
+                  §1</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 3 · J. S. MILL</div>
+      <h2>Tiết kiệm thời gian vàng ngọc của tuổi thơ</h2>
+      <div class="content-card">
+        <h3 style="color: var(--accent-purple); margin-top: 0; margin-bottom: 15px;">John Stuart Mill & Tiết kiệm thời
+          gian thơ ấu</h3>
+        <p style="font-size: 0.95rem; line-height: 1.5; margin-bottom: 20px;">
+          Triết gia John Stuart Mill sinh năm 1806. Trong cuốn tự truyện của mình, ông nhấn mạnh rằng phương pháp giáo
+          dục sớm của cha ông (James Mill) đã giúp ông có một <strong>lợi thế đi trước 25 năm</strong> so với các bạn
+          cùng trang lứa. <span class="page-ref">Ch 3 · §2, §3</span>
+        </p>
+
+        <div class="split-layout">
+          <div class="split-left" style="border-right: 1px solid var(--border-strong); padding-right: 15px;">
+            <h4 style="color: var(--accent-purple); margin-top: 0;">Mục đích viết tự truyện của Mill</h4>
+            <blockquote
+              style="font-size: 0.85rem; line-height: 1.4; border-left: 3px solid var(--accent-purple); padding-left: 10px; margin: 10px 0; color: var(--text-secondary);">
+              <em>"Thông thường trẻ em sẽ tiêu phí khoảng thời gian thơ ấu của mình. Nhưng nếu nhìn từ phương pháp giáo
+                dục mà tôi được tiếp nhận thì những đứa trẻ có thể sẽ tiếp thu được một lượng tri thức khổng lồ ở thời
+                kỳ thơ ấu thường bị bỏ qua một cách lãng phí này."</em> <span class="page-ref">Ch 3 · §2</span>
+            </blockquote>
+            <p style="font-size: 0.82rem; line-height: 1.4; color: var(--text-secondary);">
+              Mill viết tự truyện nhằm cung cấp một tài liệu tham khảo thực tế cho các nhà nghiên cứu giáo dục cải cách
+              trường học đương thời. <span class="page-ref">Ch 3 · §2</span>
+            </p>
+          </div>
+
+          <div class="split-right" style="padding-left: 15px;">
+            <h4 style="color: var(--accent-amber); margin-top: 0;">Lời khẳng định về tư chất bình thường</h4>
+            <ul style="font-size: 0.85rem; line-height: 1.4; padding-left: 20px; margin-top: 10px;">
+              <li style="margin-bottom: 10px;"><strong>Không phải thiên tài bẩm sinh:</strong> Mill thẳng thắn thừa nhận
+                mình là người có khả năng tiếp thu và ghi nhớ chậm hơn bình thường. Cậu không có năng lực bẩm sinh xuất
+                chúng. <span class="page-ref">Ch 3 · §3</span></li>
+              <li style="margin-bottom: 10px;"><strong>Khả năng của mọi đứa trẻ:</strong> Mill khẳng định: Bất kỳ đứa
+                trẻ nào có sức khỏe bình thường và khả năng tiếp thu trung bình đều có thể đạt được những thành tựu tri
+                thức khổng lồ như cậu nếu được giáo dục từ sớm đúng cách. <span class="page-ref">Ch 3 · §3</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 3 · CHƯƠNG TRÌNH HỌC TẬP</div>
+      <h2>Lộ trình học tập khắc nghiệt và đặc thù bàn học</h2>
+      <div class="content-card">
+        <div class="split-layout">
+          <div class="split-left" style="border-right: 1px solid var(--border-strong); padding-right: 15px;">
+            <h3 style="color: var(--accent-purple); margin-top: 0;">Lộ trình học tập khắc nghiệt của Mill</h3>
+            <ul style="font-size: 0.82rem; line-height: 1.4; padding-left: 20px;">
+              <li style="margin-bottom: 8px;"><strong>3 tuổi:</strong> Bắt đầu học tiếng Hy Lạp bằng thẻ bìa ghi từ đơn.
+                Đọc ngay sách Hy Lạp (Ngụ ngôn Aesop, Xenophon, Herodotus) dù chưa hiểu hết nghĩa. Không dạy ngữ pháp
+                khô khan. <span class="page-ref">Ch 3 · §2</span></li>
+              <li style="margin-bottom: 8px;"><strong>7 tuổi:</strong> Bị bắt đọc các tác phẩm Đối thoại của Platon dù
+                chưa thể hiểu hết ý nghĩa triết học sâu xa bên trong. <span class="page-ref">Ch 3 · §2</span></li>
+              <li style="margin-bottom: 8px;"><strong>8 tuổi:</strong> Bắt đầu học tiếng La-tinh.</li>
+              <li style="margin-bottom: 8px;"><strong>12 tuổi:</strong> Đã đọc hầu hết các tác phẩm văn học, lịch sử cổ
+                điển nổi tiếng của Hy Lạp và La Mã. Học đại số, hình học và nghiên cứu <strong>toán học cao cấp (vi
+                  phân, tích phân)</strong>. <span class="page-ref">Ch 3 · §2</span></li>
+              <li style="margin-bottom: 8px;"><strong>Đọc sách khoa học:</strong> Nghiên cứu lý thuyết khoa học chủ yếu
+                qua sách vở thay vì làm thí nghiệm trực quan. <span class="page-ref">Ch 3 · §2</span></li>
+            </ul>
+          </div>
+
+          <div class="split-right" style="padding-left: 15px;">
+            <h3 style="color: var(--accent-amber); margin-top: 0;">Đặc thù môi trường học & Nhược điểm</h3>
+            <p style="font-size: 0.85rem; line-height: 1.4; margin-bottom: 10px;">
+              <strong>Bàn học cạnh cha:</strong> James Mill đặt bàn học của con ngay sát bàn làm việc bận rộn của mình.
+              Khi đó chỉ có từ điển Hy Lạp - La-tinh (chưa có Hy Lạp - Anh), nên Mill liên tục phải hỏi cha nghĩa của
+              các câu đơn giản. Dù nóng tính và bận rộn, cha Mill vẫn chỉ bảo rất chu đáo. <span class="page-ref">Ch 3 ·
+                §2</span>
+            </p>
+            <p style="font-size: 0.85rem; line-height: 1.4; margin-bottom: 10px;">
+              <strong>Học lệch (Bookish study):</strong> Khác với Karl Witte học nhiều từ tự nhiên, Mill học chủ yếu từ
+              sách vở. Ông không được dạy các kiến thức gần gũi với cỏ cây hoa lá xung quanh. <span class="page-ref">Ch
+                3 · §2</span>
+            </p>
+            <p style="font-size: 0.85rem; line-height: 1.4;">
+              <strong>Toán học buổi tối:</strong> Môn toán không được cha Mill đặt lên hàng đầu, cậu chỉ được học môn
+              này vào buổi tối sau khi đã đọc xong sách ban ngày. <span class="page-ref">Ch 3 · §2</span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 3 · KỸ THUẬT ĐỌC HIỂU</div>
+      <h2>Đi bộ chất vấn và kỹ thuật ghi chú đọc sách</h2>
+      <div class="content-card">
+        <h3 style="color: var(--accent-emerald); margin-top: 0; margin-bottom: 15px;">Đi bộ buổi sáng & Kỹ thuật chủ
+          động tái hiện kiến thức</h3>
+        <p style="font-size: 0.95rem; line-height: 1.5; margin-bottom: 20px;">
+          Mỗi buổi sáng trước khi ăn điểm tâm, James Mill dắt con đi dạo. Đây không chỉ là hoạt động thể chất mà là
+          <strong>buổi phản biện tri thức</strong> sống động, biến việc đọc sách thụ động thành tư duy chủ động. <span
+            class="page-ref">Ch 3 · §2</span>
+        </p>
+
+        <div class="split-layout">
+          <div class="split-left" style="border-right: 1px solid var(--border-strong); padding-right: 15px;">
+            <h4 style="color: var(--accent-emerald); margin-top: 0;">Phương pháp "Đọc sách - Ghi chép - Kể lại"</h4>
+            <ul style="font-size: 0.85rem; line-height: 1.4; padding-left: 20px;">
+              <li style="margin-bottom: 10px;"><strong>Ghi chép chủ động (Active Notes):</strong> Khi đọc sách lịch sử
+                vào ban ngày, Mill bắt buộc phải ghi chép lại các ý chính, cấu trúc cuốn sách vào một mảnh giấy. <span
+                  class="page-ref">Ch 3 · §2</span></li>
+              <li style="margin-bottom: 10px;"><strong>Chất vấn trên đường đi dạo:</strong> Trong lúc đi bộ, Mill cầm tờ
+                ghi chép để kể lại nội dung cuốn sách cho cha nghe. Cha Mill lắng nghe, đặt câu hỏi phản biện, bắt con
+                giải thích sâu, sau đó sửa chữa những chỗ sai sót và giảng giải thêm. <span class="page-ref">Ch 3 ·
+                  §2</span></li>
+            </ul>
+          </div>
+
+          <div class="split-right" style="padding-left: 15px;">
+            <h4 style="color: var(--accent-amber); margin-top: 0;">Kho tàng sách đọc trước 7 tuổi</h4>
+            <p style="font-size: 0.85rem; line-height: 1.4; margin-bottom: 8px;">
+              Mill đọc một lượng sách lịch sử khổng lồ, bao gồm tác phẩm của Robertson, Hume, Gibbon, Hooke, Watson và
+              bản dịch Plutarchus. <span class="page-ref">Ch 3 · §2</span>
+            </p>
+            <p style="font-size: 0.85rem; line-height: 1.4;">
+              <strong>Kiểm soát tiểu thuyết:</strong> Cha Mill nghiêm cấm các cuốn tiểu thuyết thông thường lãng phí
+              thời gian, chỉ cho phép đọc những tác phẩm kinh điển kích thích óc phiêu lưu và nghị lực sống như
+              <em>Robinson Crusoe, Nghìn lẻ một đêm, Don Quixote</em>. <span class="page-ref">Ch 3 · §2</span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 3 · PHƯƠNG PHÁP TƯ DUY</div>
+      <h2>Dạy cách tư duy độc lập thay vì nhồi nhét</h2>
+      <div class="content-card">
+        <div class="split-layout">
+          <div class="split-left" style="border-right: 1px solid var(--border-strong); padding-right: 15px;">
+            <h3 style="color: var(--accent-purple); margin-top: 0;">Bài trừ chủ nghĩa nhồi nhét (Anti-Cramming)</h3>
+            <p style="font-size: 0.85rem; line-height: 1.4; margin-bottom: 10px;">
+              <strong>Tránh biến con thành bản sao:</strong> Nhiều người cha xuất sắc thường truyền đạt trực tiếp những
+              suy nghĩ tinh túy nhất của mình cho con. Hậu quả là con cái trở thành bản sao thụ động của cha, không tự
+              phát triển tư duy riêng. <span class="page-ref">Ch 3 · §3</span>
+            </p>
+            <p style="font-size: 0.85rem; line-height: 1.4; margin-bottom: 10px;">
+              <strong>Kích hoạt tư duy tự thân:</strong> Cha Mill không làm thay việc suy nghĩ của con. Khi Mill gặp khó
+              khăn, cha luôn yêu cầu: <em>"Con tự suy nghĩ xem sao!"</em> và quyết không giải đáp trước khi con đã thực
+              sự động não tìm tòi. <span class="page-ref">Ch 3 · §3</span>
+            </p>
+          </div>
+
+          <div class="split-right" style="padding-left: 15px;">
+            <h3 style="color: var(--accent-emerald); margin-top: 0;">Kỹ thuật gợi mở thông minh của James Mill</h3>
+            <ul style="font-size: 0.85rem; line-height: 1.4; padding-left: 20px;">
+              <li style="margin-bottom: 10px;"><strong>Hệ thống câu hỏi định hướng:</strong> Nếu Mill suy nghĩ mãi vẫn
+                không tìm ra giải pháp, cha sẽ không đưa ra ngay đáp án. Thay vào đó, ông đưa ra một chuỗi các câu hỏi
+                phụ gợi ý để dẫn dắt tư duy của con từng bước đi tới đích. <span class="page-ref">Ch 3 · §3</span></li>
+              <li style="margin-bottom: 10px;"><strong>Đòi hỏi vượt giới hạn:</strong> James Mill tin rằng nếu không yêu
+                cầu đứa trẻ những điều hơi quá khả năng hiện tại của nó thì tiềm năng trí lực của nó sẽ không bao giờ
+                được khai phá tối đa. <span class="page-ref">Ch 3 · §3</span></li>
+              <li style="margin-bottom: 10px;"><strong>Độc lập tư duy:</strong> Mục tiêu của phương pháp này là dạy con
+                cách vận hành bộ não để con có thể tự đưa ra những suy nghĩ vượt trội hơn cả cha mình về sau. <span
+                  class="page-ref">Ch 3 · §3</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 3 · ĐÒI HỎI LÝ TÍNH</div>
+      <h2>Truy vấn định nghĩa khái niệm ở tuổi 13</h2>
+      <div class="content-card">
+        <h3 style="color: var(--accent-red); margin-top: 0; margin-bottom: 15px;">Thử thách Lý luận & Sự minh triết về
+          khái niệm</h3>
+        <p style="font-size: 0.95rem; line-height: 1.5; margin-bottom: 20px;">
+          James Mill cực kỳ nghiêm khắc với những câu nói sáo rỗng hoặc lạm dụng thuật ngữ. Ông rèn luyện cho J.S. Mill
+          thói quen <strong>phải hiểu tường tận bản chất khái niệm</strong> thay vì bắt chước ngôn từ của người khác một
+          cách hời hợt. <span class="page-ref">Ch 3 · §3</span>
+        </p>
+
+        <div class="split-layout">
+          <div class="split-left" style="border-right: 1px solid var(--border-strong); padding-right: 15px;">
+            <h4 style="color: var(--accent-red); margin-top: 0;">Cuộc truy vấn khái niệm ở tuổi 13</h4>
+            <p style="font-size: 0.85rem; line-height: 1.4; margin-bottom: 8px;">
+              <strong>Hỏi về "Quan niệm":</strong> Mill ngẫu nhiên dùng từ "quan niệm", cha lập tức truy vấn: <em>"Quan
+                niệm là gì?"</em>. Mill giải thích loay hoay đều bị cha chỉ ra điểm mâu thuẫn trong logic khiến cậu vô
+              cùng bối rối. <span class="page-ref">Ch 3 · §3</span>
+            </p>
+            <p style="font-size: 0.85rem; line-height: 1.4;">
+              <strong>Hỏi về "Lý luận vs Thực tiễn":</strong> Khi Mill lặp lại câu nói thời thượng: <em>"Về lý luận thì
+                chính xác nhưng thực tiễn cần chỉnh sửa"</em>. Cha bắt bẻ ngay: <em>"Lý luận là gì? Giải thích
+                đi!"</em>. <span class="page-ref">Ch 3 · §3</span>
+            </p>
+          </div>
+
+          <div class="split-right" style="padding-left: 15px;">
+            <h4 style="color: var(--accent-purple); margin-top: 0;">Bản chất của Lý luận học</h4>
+            <blockquote
+              style="font-size: 0.85rem; line-height: 1.4; border-left: 3px solid var(--accent-purple); padding-left: 10px; margin: 10px 0; color: var(--text-secondary);">
+              <em>"Lý luận và thực tiễn không phải là hai vấn đề tương phản. Khi nghĩ nó là tương phản thì con hoàn toàn
+                chẳng hiểu gì về ý nghĩa của từ lý luận. Những kẻ dùng từ lý luận mà không hiểu nghĩa của nó là những kẻ
+                vô học."</em> <span class="page-ref">Ch 3 · §3</span>
+            </blockquote>
+            <p style="font-size: 0.82rem; line-height: 1.4; color: var(--text-secondary);">
+              <strong>Bài học cho cha mẹ:</strong> Dạy con tư duy phản biện bắt đầu bằng việc yêu cầu sự rõ ràng, chính
+              xác trong từ ngữ định nghĩa. Tránh để trẻ nói những lời sáo rỗng vô nghĩa. <span class="page-ref">Ch 3 ·
+                §3</span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 3 · PHÒNG NGỪA KIÊU NGẠO</div>
+      <h2>Bài học Hyde Park và rèn lòng khiêm tốn</h2>
+      <div class="content-card">
+        <div class="split-layout">
+          <div class="split-left" style="border-right: 1px solid var(--border-strong); padding-right: 15px;">
+            <h3 style="color: var(--accent-red); margin-top: 0;">Rèn luyện sự khiêm tốn & Bản lĩnh trước lời khen</h3>
+            <p style="font-size: 0.85rem; line-height: 1.4; margin-bottom: 10px;">
+              Thần đồng rất dễ có khuynh hướng kiêu ngạo, tự phụ dẫn đến sụt giảm thành tích khi trưởng thành. James
+              Mill áp dụng chế độ nghiêm ngặt để bảo vệ con khỏi thói xấu này. <span class="page-ref">Ch 3 · §4</span>
+            </p>
+            <ul style="font-size: 0.82rem; line-height: 1.4; padding-left: 20px;">
+              <li style="margin-bottom: 8px;"><strong>Hạn chế tán dương:</strong> Tuyệt đối không cho con nghe những lời
+                khen ngợi tâng bốc từ bên ngoài. Bản thân cha cũng cực kỳ tiết kiệm lời khen với con. <span
+                  class="page-ref">Ch 3 · §4</span></li>
+              <li style="margin-bottom: 8px;"><strong>Mục đích của việc so sánh:</strong> Dạy con: <em>"Không bao giờ so
+                  sánh với người khác để thấy mình hơn họ. Chỉ so sánh để học hỏi những điều hay từ họ"</em>. <span
+                  class="page-ref">Ch 3 · §4</span></li>
+              <li style="margin-bottom: 8px;"><strong>Ý thức giới hạn bản thân:</strong> Kiến thức là vô hạn, hiểu biết
+                của cá nhân chỉ là hữu hạn. Những gì mình biết chỉ là hạt cát trong đại dương tri thức. <span
+                  class="page-ref">Ch 3 · §4</span></li>
+            </ul>
+          </div>
+
+          <div class="split-right" style="padding-left: 15px;">
+            <h3 style="color: var(--accent-purple); margin-top: 0;">Bài học Hyde Park & Tâm lý "Hổ thẹn khi được khen"
+            </h3>
+            <p style="font-size: 0.85rem; line-height: 1.4; margin-bottom: 10px;">
+              <strong>Bối cảnh (14 tuổi):</strong> Trước khi Mill sang Pháp du học, cha dẫn cậu ra công viên Hyde Park
+              để thực hiện một cuộc huấn luyện tâm lý đặc biệt. <span class="page-ref">Ch 3 · §4</span>
+            </p>
+            <ul style="font-size: 0.82rem; line-height: 1.4; padding-left: 20px;">
+              <li style="margin-bottom: 6px;"><strong>Thừa nhận xuất phát điểm:</strong> Con có thành tích vượt trội bạn
+                bè không phải vì con là thiên tài, mà vì con được hưởng nền giáo dục sớm tốt nhất. <span
+                  class="page-ref">Ch 3 · §4</span></li>
+              <li style="margin-bottom: 6px;"><strong>Nguyên lý phản biện lời khen:</strong> <em>"Con cần cảm thấy xấu
+                  hổ khi được khen thì mới tiến bộ được."</em> Lời khen ngợi tâng bốc là liều thuốc độc làm thui chột ý
+                chí phấn đấu. <span class="page-ref">Ch 3 · §4</span></li>
+              <li style="margin-bottom: 6px;"><strong>Kết quả:</strong> Mill sang Pháp du học đạt thành tích xuất sắc
+                nhưng luôn giữ được sự điềm đạm, khiêm cung, không chút tự mãn. <span class="page-ref">Ch 3 · §4</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 3 · THỂ CHẤT &amp; XÃ HỘI</div>
+      <h2>Giáo dục tại nhà và rèn luyện thể chất</h2>
+      <div class="content-card">
+        <h3 style="color: var(--accent-amber); margin-top: 0; margin-bottom: 15px;">Giáo dục tại nhà & Thể chất của J.S.
+          Mill</h3>
+        <p style="font-size: 0.95rem; line-height: 1.5; margin-bottom: 20px;">
+          Mục tiêu giáo dục của James Mill hướng tới triết lý Hy Lạp cổ đại: <strong>"Một tinh thần minh mẫn trong một
+            cơ thể cường tráng"</strong>. Dù học tập cường độ cao, Mill vẫn được duy trì các hoạt động thể chất và cách
+          ly khỏi các tác động tiêu cực của trường học truyền thống. <span class="page-ref">Ch 3 · §4</span>
+        </p>
+
+        <div class="split-layout">
+          <div class="split-left" style="border-right: 1px solid var(--border-strong); padding-right: 15px;">
+            <h4 style="color: var(--accent-red); margin-top: 0;">Cách ly bạn bè để bảo vệ nhân cách</h4>
+            <ul style="font-size: 0.85rem; line-height: 1.4; padding-left: 20px; margin-top: 10px;">
+              <li style="margin-bottom: 10px;"><strong>Không cho đi học trường công:</strong> Mill chủ yếu tự học và học
+                trực tiếp từ cha. Điều này giúp loại bỏ nguy cơ lây nhiễm thói quen xấu và thái độ thờ ơ với tri thức từ
+                bạn học lười biếng. <span class="page-ref">Ch 3 · §4</span></li>
+              <li style="margin-bottom: 10px;"><strong>Ngăn ngừa kiêu ngạo sớm:</strong> Cha lo ngại nếu Mill tiếp xúc
+                nhiều với trẻ cùng lứa, sự chênh lệch học vấn quá lớn sẽ dễ làm nảy sinh tâm lý tự tôn, kiêu ngạo ở
+                Mill. <span class="page-ref">Ch 3 · §4</span></li>
+            </ul>
+          </div>
+
+          <div class="split-right" style="padding-left: 15px;">
+            <h4 style="color: var(--accent-emerald); margin-top: 0;">Rèn luyện thể chất & Kỷ luật đều đặn</h4>
+            <ul style="font-size: 0.85rem; line-height: 1.4; padding-left: 20px; margin-top: 10px;">
+              <li style="margin-bottom: 10px;"><strong>Môn thể thao bổ trợ:</strong> Mill được cha cho tham gia chạy bộ,
+                đi dạo và cưỡi ngựa hàng ngày để cải thiện sức khỏe (dù ông tự nhận mình không có năng khiếu thể thao).
+                <span class="page-ref">Ch 3 · §4</span>
+              </li>
+              <li style="margin-bottom: 10px;"><strong>"Học mà chơi, chơi mà học" cả Chủ nhật:</strong> Không cho phép
+                nghỉ ngơi hoàn toàn vào cuối tuần vì James Mill tin rằng ngắt quãng học tập sẽ hình thành thói lười
+                biếng. Cần duy trì nhịp độ học tập đều đặn mỗi ngày. <span class="page-ref">Ch 3 · §4</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 3 · ĐẠI THI HÀO GOETHE</div>
+      <h2>Kỷ luật nghiêm khắc và học qua đồng dao</h2>
+      <div class="content-card">
+        <div class="split-layout">
+          <div class="split-left" style="border-right: 1px solid var(--border-strong); padding-right: 15px;">
+            <h3 style="color: var(--accent-purple); margin-top: 0;">Johann Wolfgang von Goethe & Kỷ luật thép của cha
+            </h3>
+            <p style="font-size: 0.85rem; line-height: 1.4; margin-bottom: 10px;">
+              Cha của Goethe vốn xuất thân là quân nhân, do đó ngay từ nhỏ Goethe đã nhận được sự giáo dục cực kỳ nghiêm
+              khắc và kỷ luật chặt chẽ kiểu quân đội. <span class="page-ref">Ch 3 · §5</span>
+            </p>
+            <p style="font-size: 0.85rem; line-height: 1.4; margin-bottom: 10px;">
+              <strong>Không nuông chiều:</strong> Dù Goethe là con trai độc nhất trong gia đình, cha ông tuyệt đối không
+              nuông chiều bừa bãi mà đặt ra các nguyên tắc phát triển toàn diện cả trí tuệ lẫn nhân cách. <span
+                class="page-ref">Ch 3 · §5</span>
+            </p>
+          </div>
+
+          <div class="split-right" style="padding-left: 15px;">
+            <h3 style="color: var(--accent-emerald); margin-top: 0;">Học từ vựng qua bài đồng dao & Thực địa</h3>
+            <ul style="font-size: 0.85rem; line-height: 1.4; padding-left: 20px;">
+              <li style="margin-bottom: 8px;"><strong>Bài đồng dao tăng từ vựng:</strong> Bắt con học thuộc lòng tất cả
+                các bài đồng dao truyền thống của Đức. Các giai điệu vần điệu giúp trẻ tiếp thu từ ngữ mới cực nhanh và
+                tự nhiên. <span class="page-ref">Ch 3 · §5</span></li>
+              <li style="margin-bottom: 8px;"><strong>Học đọc trước 4 tuổi:</strong> Dạy Goethe tập đọc thông qua các
+                cuốn sách đơn giản có chứa lời ca của các bài đồng dao quen thuộc mà cậu đã thuộc lòng. <span
+                  class="page-ref">Ch 3 · §5</span></li>
+              <li style="margin-bottom: 8px;"><strong>Đi dạo kết hợp giải nghĩa:</strong> Dẫn Goethe đi dạo quanh
+                Frankfurt. Cha kể chuyện lịch sử, địa lý của các địa danh và giải thích tỉ mỉ những nơi xuất hiện trong
+                lời đồng dao. Đây là kỹ thuật tâm lý tuyệt vời giúp trẻ hào hứng học thêm nhiều bài đồng dao khác. <span
+                  class="page-ref">Ch 3 · §5</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 3 · VAI TRÒ NGƯỜI MẸ</div>
+      <h2>Mẹ Goethe và kỹ thuật &#x27;Kể chuyện nửa chừng&#x27;</h2>
+      <div class="content-card">
+        <h3 style="color: var(--accent-purple); margin-top: 0; margin-bottom: 15px;">Mẹ của Goethe & Động cơ kích hoạt
+          trí tưởng tượng</h3>
+        <p style="font-size: 0.95rem; line-height: 1.5; margin-bottom: 20px;">
+          Mẹ của Goethe đóng vai trò then chốt trong việc khơi nguồn óc sáng tạo thiên phú của ông. Bà hiểu rằng rèn
+          luyện trí tưởng tượng phong phú là chìa khóa vàng để phát triển tư duy nghệ thuật của con từ sớm. <span
+            class="page-ref">Ch 3 · §5</span>
+        </p>
+
+        <div class="split-layout">
+          <div class="split-left" style="border-right: 1px solid var(--border-strong); padding-right: 15px;">
+            <h4 style="color: var(--accent-purple); margin-top: 0;">Truyện cổ tích hàng ngày từ 2 tuổi</h4>
+            <ul style="font-size: 0.85rem; line-height: 1.4; padding-left: 20px;">
+              <li style="margin-bottom: 10px;"><strong>Mỗi ngày một câu chuyện mới:</strong> Từ khi Goethe lên 2 tuổi,
+                ngày nào mẹ cũng kể cho cậu nghe một câu chuyện cổ tích mới để liên tục bổ sung và làm phong phú vốn từ
+                vựng của trẻ. <span class="page-ref">Ch 3 · §5</span></li>
+              <li style="margin-bottom: 10px;"><strong>Đọc và kể lại chủ động:</strong> Bà khuyến khích Goethe tự đọc
+                sách và kể lại cho mẹ nghe các chi tiết để rèn luyện trí nhớ và khả năng diễn đạt lưu loát. <span
+                  class="page-ref">Ch 3 · §5</span></li>
+            </ul>
+          </div>
+
+          <div class="split-right" style="padding-left: 15px;">
+            <h4 style="color: var(--accent-amber); margin-top: 0;">Kỹ thuật "Kể chuyện nửa chừng" (Incomplete Story)
+            </h4>
+            <ul style="font-size: 0.85rem; line-height: 1.4; padding-left: 20px;">
+              <li style="margin-bottom: 10px;"><strong>Dừng lại ở đoạn gay cấn:</strong> Khi đọc một truyện ngắn hay
+                tiểu thuyết, mẹ Goethe cố tình dừng lại ở chi tiết cao trào và để cậu bé tự suy nghĩ, tưởng tượng diễn
+                biến tiếp theo. <span class="page-ref">Ch 3 · §5</span></li>
+              <li style="margin-bottom: 10px;"><strong>Thảo luận ý tưởng ngày hôm sau:</strong> Hôm sau, Goethe hào hứng
+                trình bày với mẹ phần kết hoặc hướng đi tiếp theo do cậu tự nghĩ ra. <span class="page-ref">Ch 3 ·
+                  §5</span></li>
+              <li style="margin-bottom: 10px;"><strong>Kết quả vĩ đại:</strong> Phương pháp rèn trí tưởng tượng kiên trì
+                này đã đặt nền móng vững chắc cho tư duy sáng tác của đại thi hào thế giới tương lai. <span
+                  class="page-ref">Ch 3 · §5</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 3 · PHÁT TRIỂN TOÀN DIỆN</div>
+      <h2>Thông thạo 5 ngôn ngữ &amp; Cảm thụ nghệ thuật sớm</h2>
+      <div class="content-card">
+        <h3 style="color: var(--accent-purple); margin-top: 0; margin-bottom: 15px;">Goethe & Sự phát triển toàn diện
+          trước 8 tuổi</h3>
+        <p style="font-size: 0.95rem; line-height: 1.5; margin-bottom: 20px;">
+          Tương tự như Karl Witte, Goethe không chỉ dừng lại ở sự phát triển ngôn ngữ đơn thuần mà được tiếp cận với một
+          nền giáo dục toàn diện, tích hợp cả khoa học tự nhiên, văn học, âm nhạc và nghệ thuật thị giác từ rất sớm.
+          <span class="page-ref">Ch 3 · §5</span>
+        </p>
+
+        <div class="split-layout">
+          <div class="split-left" style="border-right: 1px solid var(--border-strong); padding-right: 15px;">
+            <h4 style="color: var(--accent-purple); margin-top: 0;">Thông thạo 5 ngôn ngữ ở tuổi lên 8</h4>
+            <p style="font-size: 0.85rem; line-height: 1.4; margin-bottom: 10px;">
+              Nhờ môi trường ngôn ngữ phong phú và các bài hát đồng dao, Goethe đã làm chủ các ngôn ngữ lớn của châu Âu
+              trước khi bước vào tuổi tiểu học:
+            </p>
+            <ul style="font-size: 0.82rem; line-height: 1.4; padding-left: 20px;">
+              <li style="margin-bottom: 8px;"><strong>Tiếng Đức (Mẹ đẻ):</strong> Nền tảng tư duy vững chắc.</li>
+              <li style="margin-bottom: 8px;"><strong>Tiếng Pháp & Tiếng Ý:</strong> Ngôn ngữ văn hóa hiện đại.</li>
+              <li style="margin-bottom: 8px;"><strong>Tiếng La-tinh & Tiếng Hy Lạp:</strong> Ngôn ngữ triết học và văn
+                học cổ điển. <span class="page-ref">Ch 3 · §5</span></li>
+            </ul>
+          </div>
+
+          <div class="split-right" style="padding-left: 15px;">
+            <h4 style="color: var(--accent-emerald); margin-top: 0;">Tích hợp Nghệ thuật & Khoa học</h4>
+            <ul style="font-size: 0.85rem; line-height: 1.4; padding-left: 20px; margin-top: 10px;">
+              <li style="margin-bottom: 10px;"><strong>Giáo dục thẩm mỹ:</strong> Goethe được học vẽ tranh, hội họa và
+                âm nhạc từ rất sớm, giúp phát triển tối đa bán cầu não phải và khả năng cảm thụ cái đẹp. <span
+                  class="page-ref">Ch 3 · §5</span></li>
+              <li style="margin-bottom: 10px;"><strong>Tinh thần khoa học:</strong> Tiếp cận khoa học tự nhiên song song
+                với văn học giúp Goethe sau này không chỉ là nhà thơ lớn mà còn có nhiều đóng góp nghiên cứu khoa học
+                giá trị (ví dụ: thuyết màu sắc). <span class="page-ref">Ch 3 · §5</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 3 · MA TRẬN ĐỐI CHIẾU</div>
+      <h2>So sánh 4 mô hình giáo dục sớm điển hình</h2>
+      <div class="content-card" style="padding: 10px;">
+        <h3 style="color: var(--accent-purple); margin-top: 0; margin-bottom: 10px; font-size: 1.1rem;">Bảng đối chiếu 4
+          mô hình giáo dục sớm điển hình</h3>
+
+        <table style="width: 100%; border-collapse: collapse; font-size: 0.78rem; line-height: 1.35; margin-top: 5px;">
+          <thead>
+            <tr style="background-color: var(--accent); color: white; text-align: left;">
+              <th style="padding: 8px; border: 1px solid var(--border-strong); font-weight: 600;">Tiêu chí</th>
+              <th style="padding: 8px; border: 1px solid var(--border-strong); font-weight: 600;">Karl Witte</th>
+              <th style="padding: 8px; border: 1px solid var(--border-strong); font-weight: 600;">Anh em Thomson</th>
+              <th style="padding: 8px; border: 1px solid var(--border-strong); font-weight: 600;">John Stuart Mill</th>
+              <th style="padding: 8px; border: 1px solid var(--border-strong); font-weight: 600;">J. W. Goethe</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td
+                style="padding: 8px; border: 1px solid var(--border-strong); font-weight: bold; background-color: var(--surface-muted);">
+                Người dạy chính</td>
+              <td style="padding: 8px; border: 1px solid var(--border-strong);">Cha (Mục sư) & Mẹ</td>
+              <td style="padding: 8px; border: 1px solid var(--border-strong);">Cha (Giáo sư Toán)</td>
+              <td style="padding: 8px; border: 1px solid var(--border-strong);">Cha (Triết gia J. Mill)</td>
+              <td style="padding: 8px; border: 1px solid var(--border-strong);">Cha (Quân nhân) & Mẹ</td>
+            </tr>
+            <tr>
+              <td
+                style="padding: 8px; border: 1px solid var(--border-strong); font-weight: bold; background-color: var(--surface-muted);">
+                Phương pháp cốt lõi</td>
+              <td style="padding: 8px; border: 1px solid var(--border-strong);">Đi dạo thực tế, ngôn ngữ chuẩn, ghép
+                vần, đóng vai</td>
+              <td style="padding: 8px; border: 1px solid var(--border-strong);">Kể chuyện phiêu lưu tương tác, đàm thoại
+                bữa ăn</td>
+              <td style="padding: 8px; border: 1px solid var(--border-strong);">Học qua sách vở (lệch), ghi chép và phản
+                biện đi bộ</td>
+              <td style="padding: 8px; border: 1px solid var(--border-strong);">Đồng dao, đi dạo thực địa, mẹ kể chuyện
+                gợi mở</td>
+            </tr>
+            <tr>
+              <td
+                style="padding: 8px; border: 1px solid var(--border-strong); font-weight: bold; background-color: var(--surface-muted);">
+                Dạy tư duy</td>
+              <td style="padding: 8px; border: 1px solid var(--border-strong);">Trả lời chính xác, cùng tra cứu thư viện
+                nếu chưa rõ</td>
+              <td style="padding: 8px; border: 1px solid var(--border-strong);">Kích thích óc tò mò qua các tình huống
+                truyện kể</td>
+              <td style="padding: 8px; border: 1px solid var(--border-strong);">"Con tự nghĩ xem!", bắt định nghĩa chi
+                tiết khái niệm</td>
+              <td style="padding: 8px; border: 1px solid var(--border-strong);">Mẹ dừng chuyện nửa chừng để con tự suy
+                đoán kết</td>
+            </tr>
+            <tr>
+              <td
+                style="padding: 8px; border: 1px solid var(--border-strong); font-weight: bold; background-color: var(--surface-muted);">
+                Phòng ngừa tự phụ</td>
+              <td style="padding: 8px; border: 1px solid var(--border-strong);">Rất ít khen học tập, cấm người ngoài
+                khen tâng bốc</td>
+              <td style="padding: 8px; border: 1px solid var(--border-strong);">Hòa đồng thông qua các câu chuyện tương
+                tác chung</td>
+              <td style="padding: 8px; border: 1px solid var(--border-strong);">Không bao giờ khen, bài học "xấu hổ khi
+                được khen"</td>
+              <td style="padding: 8px; border: 1px solid var(--border-strong);">Kỷ luật nghiêm khắc như quân đội, không
+                nuông chiều</td>
+            </tr>
+            <tr>
+              <td
+                style="padding: 8px; border: 1px solid var(--border-strong); font-weight: bold; background-color: var(--surface-muted);">
+                Xã hội hóa</td>
+              <td style="padding: 8px; border: 1px solid var(--border-strong);">Chọn lọc bạn kỹ lưỡng, có giám sát của
+                cha mẹ</td>
+              <td style="padding: 8px; border: 1px solid var(--border-strong);">Hòa đồng cùng các anh chị em trong nhà
+              </td>
+              <td style="padding: 8px; border: 1px solid var(--border-strong);">Cách ly bạn bè đồng lứa, tự học tại nhà
+              </td>
+              <td style="padding: 8px; border: 1px solid var(--border-strong);">Học toàn diện văn hóa, nghệ thuật, giao
+                tiếp rộng</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 3 · HÀNH ĐỘNG CỦA CHA MẸ</div>
+      <h2>Kế hoạch hành động chi tiết</h2>
+      <ul class="action-list" style="margin-bottom: 15px;">
+        <li class="action-item">
+          <div>
+            <div class="action-headline">Kể chuyện tương tác kích thích phản biện và tò mò</div>
+            <div class="action-detail">Khi kể chuyện phiêu lưu hay lịch sử cho con (đặc biệt trong bữa ăn), hãy đặt câu
+              hỏi mở: <em>"Theo con nhân vật sẽ làm gì tiếp theo?"</em> thay vì độc thoại, giúp con cùng tham gia cốt
+              truyện. <span class="page-ref">Ch 3 · §1</span></div>
+          </div>
+        </li>
+        <li class="action-item">
+          <div>
+            <div class="action-headline">Chuyển hóa việc đọc sách bằng kỹ thuật Tóm tắt chủ động</div>
+            <div class="action-detail">Yêu cầu con ghi lại các ý chính khi đọc sách ban ngày. Tổ chức các buổi đi dạo
+              chất vấn ngắn, bắt con nhìn giấy ghi chú kể lại và phản biện các quan điểm trong sách thay vì chỉ ghi nhớ
+              thụ động. <span class="page-ref">Ch 3 · §2</span></div>
+          </div>
+        </li>
+        <li class="action-item">
+          <div>
+            <div class="action-headline">Áp dụng tư duy độc lập "Con tự nghĩ xem"</div>
+            <div class="action-detail">Khi con gặp bài khó hay thắc mắc, không đưa ngay đáp án. Hãy nói <em>"Con tự suy
+                nghĩ xem sao!"</em>, sau đó đưa ra chuỗi câu hỏi gợi mở để định hướng con tự tìm ra câu trả lời. Bài trừ
+              thói quen nhồi nhét. <span class="page-ref">Ch 3 · §3</span></div>
+          </div>
+        </li>
+        <li class="action-item">
+          <div>
+            <div class="action-headline">Kích hoạt óc sáng tạo qua kỹ thuật "Kể chuyện nửa chừng"</div>
+            <div class="action-detail">Học tập mẹ Goethe: kể hoặc đọc cho con nghe một câu chuyện hấp dẫn từ lúc 2 tuổi,
+              dừng lại ở đoạn cao trào và yêu cầu con tự tưởng tượng phần kết thúc. Thảo luận về ý tưởng của con vào
+              ngày hôm sau. <span class="page-ref">Ch 3 · §5</span></div>
+          </div>
+        </li>
+        <li class="action-item">
+          <div>
+            <div class="action-headline">Huấn luyện bản lĩnh khiêm tốn trước lời khen</div>
+            <div class="action-detail">Hạn chế khen ngợi con quá đà và cách ly khỏi lời tâng bốc bên ngoài. Dạy con hiểu
+              rằng đi trước bạn bè là nhờ cơ hội giáo dục sớm tốt, không phải vì bẩm sinh giỏi hơn người khác. Hãy dạy
+              con so sánh để học hỏi chứ không để tự mãn. <span class="page-ref">Ch 3 · §4</span></div>
+          </div>
+        </li>
       </ul>
-    </div>
 
-    <div class="split-right" style="padding-left: 15px;">
-      <h4 style="color: var(--accent-emerald); margin-top: 0;">Kỹ thuật "Kéo trẻ vào câu chuyện"</h4>
-      <ul style="font-size: 0.85rem; line-height: 1.4; padding-left: 20px; margin-top: 10px;">
-        <li style="margin-bottom: 10px;"><strong>Không độc thoại:</strong> Cha không chỉ kể một mình. Ông đặt câu hỏi gợi mở, khuyến khích con đưa ra ý kiến, phán đoán tình huống, từ đó kích hoạt trí tưởng tượng bay bổng của con. <span class="page-ref">Ch 3 · §1</span></li>
-        <li style="margin-bottom: 10px;"><strong>Phát triển ngôn ngữ tự nhiên:</strong> Nhờ nhập tâm vào cốt truyện, anh em Thomson học từ vựng mới cực nhanh và ghi nhớ thông tin địa lý, lịch sử một cách tự nhiên. <span class="page-ref">Ch 3 · §1</span></li>
-        <li style="margin-bottom: 10px;"><strong>Dạy học trong bữa ăn:</strong> Tận dụng thời gian sinh hoạt chung để trò chuyện, giải đáp thắc mắc của con thay vì giữ im lặng khô khan. <span class="page-ref">Ch 3 · §1</span></li>
-      </ul>
-    </div>
+      <figure class="image-slot hero" style="max-height: 180px;">
+        <img src="images/ch3_closing.png" alt="Trẻ em ước mơ bay cao với óc sáng tạo phong phú">
+        <figcaption>Nguồn: Unsplash (Free Stock Photo)</figcaption>
+      </figure>
+
+    </section>
+
   </div>
-</div>
 
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH 3 · J. S. MILL</div>
-    <h2>Tiết kiệm thời gian vàng ngọc của tuổi thơ</h2>
-<div class="content-card">
-  <h3 style="color: var(--accent-purple); margin-top: 0; margin-bottom: 15px;">John Stuart Mill & Tiết kiệm thời gian thơ ấu</h3>
-  <p style="font-size: 0.95rem; line-height: 1.5; margin-bottom: 20px;">
-    Triết gia John Stuart Mill sinh năm 1806. Trong cuốn tự truyện của mình, ông nhấn mạnh rằng phương pháp giáo dục sớm của cha ông (James Mill) đã giúp ông có một <strong>lợi thế đi trước 25 năm</strong> so với các bạn cùng trang lứa. <span class="page-ref">Ch 3 · §2, §3</span>
-  </p>
-
-  <div class="split-layout">
-    <div class="split-left" style="border-right: 1px solid var(--border-strong); padding-right: 15px;">
-      <h4 style="color: var(--accent-purple); margin-top: 0;">Mục đích viết tự truyện của Mill</h4>
-      <blockquote style="font-size: 0.85rem; line-height: 1.4; border-left: 3px solid var(--accent-purple); padding-left: 10px; margin: 10px 0; color: var(--text-secondary);">
-        <em>"Thông thường trẻ em sẽ tiêu phí khoảng thời gian thơ ấu của mình. Nhưng nếu nhìn từ phương pháp giáo dục mà tôi được tiếp nhận thì những đứa trẻ có thể sẽ tiếp thu được một lượng tri thức khổng lồ ở thời kỳ thơ ấu thường bị bỏ qua một cách lãng phí này."</em> <span class="page-ref">Ch 3 · §2</span>
-      </blockquote>
-      <p style="font-size: 0.82rem; line-height: 1.4; color: var(--text-secondary);">
-        Mill viết tự truyện nhằm cung cấp một tài liệu tham khảo thực tế cho các nhà nghiên cứu giáo dục cải cách trường học đương thời. <span class="page-ref">Ch 3 · §2</span>
-      </p>
-    </div>
-
-    <div class="split-right" style="padding-left: 15px;">
-      <h4 style="color: var(--accent-amber); margin-top: 0;">Lời khẳng định về tư chất bình thường</h4>
-      <ul style="font-size: 0.85rem; line-height: 1.4; padding-left: 20px; margin-top: 10px;">
-        <li style="margin-bottom: 10px;"><strong>Không phải thiên tài bẩm sinh:</strong> Mill thẳng thắn thừa nhận mình là người có khả năng tiếp thu và ghi nhớ chậm hơn bình thường. Cậu không có năng lực bẩm sinh xuất chúng. <span class="page-ref">Ch 3 · §3</span></li>
-        <li style="margin-bottom: 10px;"><strong>Khả năng của mọi đứa trẻ:</strong> Mill khẳng định: Bất kỳ đứa trẻ nào có sức khỏe bình thường và khả năng tiếp thu trung bình đều có thể đạt được những thành tựu tri thức khổng lồ như cậu nếu được giáo dục từ sớm đúng cách. <span class="page-ref">Ch 3 · §3</span></li>
-      </ul>
-    </div>
+  <div class="nav-controls">
+    <button class="nav-btn" id="prevBtn" onclick="prevSlide()" aria-label="Previous slide">&#8592;</button>
+    <div class="counter" id="counter" aria-live="polite">1 / 1</div>
+    <button class="nav-btn" id="nextBtn" onclick="nextSlide()" aria-label="Next slide">&#8594;</button>
   </div>
-</div>
 
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH 3 · CHƯƠNG TRÌNH HỌC TẬP</div>
-    <h2>Lộ trình học tập khắc nghiệt và đặc thù bàn học</h2>
-<div class="content-card">
-  <div class="split-layout">
-    <div class="split-left" style="border-right: 1px solid var(--border-strong); padding-right: 15px;">
-      <h3 style="color: var(--accent-purple); margin-top: 0;">Lộ trình học tập khắc nghiệt của Mill</h3>
-      <ul style="font-size: 0.82rem; line-height: 1.4; padding-left: 20px;">
-        <li style="margin-bottom: 8px;"><strong>3 tuổi:</strong> Bắt đầu học tiếng Hy Lạp bằng thẻ bìa ghi từ đơn. Đọc ngay sách Hy Lạp (Ngụ ngôn Aesop, Xenophon, Herodotus) dù chưa hiểu hết nghĩa. Không dạy ngữ pháp khô khan. <span class="page-ref">Ch 3 · §2</span></li>
-        <li style="margin-bottom: 8px;"><strong>7 tuổi:</strong> Bị bắt đọc các tác phẩm Đối thoại của Platon dù chưa thể hiểu hết ý nghĩa triết học sâu xa bên trong. <span class="page-ref">Ch 3 · §2</span></li>
-        <li style="margin-bottom: 8px;"><strong>8 tuổi:</strong> Bắt đầu học tiếng La-tinh.</li>
-        <li style="margin-bottom: 8px;"><strong>12 tuổi:</strong> Đã đọc hầu hết các tác phẩm văn học, lịch sử cổ điển nổi tiếng của Hy Lạp và La Mã. Học đại số, hình học và nghiên cứu <strong>toán học cao cấp (vi phân, tích phân)</strong>. <span class="page-ref">Ch 3 · §2</span></li>
-        <li style="margin-bottom: 8px;"><strong>Đọc sách khoa học:</strong> Nghiên cứu lý thuyết khoa học chủ yếu qua sách vở thay vì làm thí nghiệm trực quan. <span class="page-ref">Ch 3 · §2</span></li>
-      </ul>
-    </div>
-    
-    <div class="split-right" style="padding-left: 15px;">
-      <h3 style="color: var(--accent-amber); margin-top: 0;">Đặc thù môi trường học & Nhược điểm</h3>
-      <p style="font-size: 0.85rem; line-height: 1.4; margin-bottom: 10px;">
-        <strong>Bàn học cạnh cha:</strong> James Mill đặt bàn học của con ngay sát bàn làm việc bận rộn của mình. Khi đó chỉ có từ điển Hy Lạp - La-tinh (chưa có Hy Lạp - Anh), nên Mill liên tục phải hỏi cha nghĩa của các câu đơn giản. Dù nóng tính và bận rộn, cha Mill vẫn chỉ bảo rất chu đáo. <span class="page-ref">Ch 3 · §2</span>
-      </p>
-      <p style="font-size: 0.85rem; line-height: 1.4; margin-bottom: 10px;">
-        <strong>Học lệch (Bookish study):</strong> Khác với Karl Witte học nhiều từ tự nhiên, Mill học chủ yếu từ sách vở. Ông không được dạy các kiến thức gần gũi với cỏ cây hoa lá xung quanh. <span class="page-ref">Ch 3 · §2</span>
-      </p>
-      <p style="font-size: 0.85rem; line-height: 1.4;">
-        <strong>Toán học buổi tối:</strong> Môn toán không được cha Mill đặt lên hàng đầu, cậu chỉ được học môn này vào buổi tối sau khi đã đọc xong sách ban ngày. <span class="page-ref">Ch 3 · §2</span>
-      </p>
-    </div>
-  </div>
-</div>
-
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH 3 · KỸ THUẬT ĐỌC HIỂU</div>
-    <h2>Đi bộ chất vấn và kỹ thuật ghi chú đọc sách</h2>
-<div class="content-card">
-  <h3 style="color: var(--accent-emerald); margin-top: 0; margin-bottom: 15px;">Đi bộ buổi sáng & Kỹ thuật chủ động tái hiện kiến thức</h3>
-  <p style="font-size: 0.95rem; line-height: 1.5; margin-bottom: 20px;">
-    Mỗi buổi sáng trước khi ăn điểm tâm, James Mill dắt con đi dạo. Đây không chỉ là hoạt động thể chất mà là <strong>buổi phản biện tri thức</strong> sống động, biến việc đọc sách thụ động thành tư duy chủ động. <span class="page-ref">Ch 3 · §2</span>
-  </p>
-
-  <div class="split-layout">
-    <div class="split-left" style="border-right: 1px solid var(--border-strong); padding-right: 15px;">
-      <h4 style="color: var(--accent-emerald); margin-top: 0;">Phương pháp "Đọc sách - Ghi chép - Kể lại"</h4>
-      <ul style="font-size: 0.85rem; line-height: 1.4; padding-left: 20px;">
-        <li style="margin-bottom: 10px;"><strong>Ghi chép chủ động (Active Notes):</strong> Khi đọc sách lịch sử vào ban ngày, Mill bắt buộc phải ghi chép lại các ý chính, cấu trúc cuốn sách vào một mảnh giấy. <span class="page-ref">Ch 3 · §2</span></li>
-        <li style="margin-bottom: 10px;"><strong>Chất vấn trên đường đi dạo:</strong> Trong lúc đi bộ, Mill cầm tờ ghi chép để kể lại nội dung cuốn sách cho cha nghe. Cha Mill lắng nghe, đặt câu hỏi phản biện, bắt con giải thích sâu, sau đó sửa chữa những chỗ sai sót và giảng giải thêm. <span class="page-ref">Ch 3 · §2</span></li>
-      </ul>
-    </div>
-
-    <div class="split-right" style="padding-left: 15px;">
-      <h4 style="color: var(--accent-amber); margin-top: 0;">Kho tàng sách đọc trước 7 tuổi</h4>
-      <p style="font-size: 0.85rem; line-height: 1.4; margin-bottom: 8px;">
-        Mill đọc một lượng sách lịch sử khổng lồ, bao gồm tác phẩm của Robertson, Hume, Gibbon, Hooke, Watson và bản dịch Plutarchus. <span class="page-ref">Ch 3 · §2</span>
-      </p>
-      <p style="font-size: 0.85rem; line-height: 1.4;">
-        <strong>Kiểm soát tiểu thuyết:</strong> Cha Mill nghiêm cấm các cuốn tiểu thuyết thông thường lãng phí thời gian, chỉ cho phép đọc những tác phẩm kinh điển kích thích óc phiêu lưu và nghị lực sống như <em>Robinson Crusoe, Nghìn lẻ một đêm, Don Quixote</em>. <span class="page-ref">Ch 3 · §2</span>
-      </p>
-    </div>
-  </div>
-</div>
-
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH 3 · PHƯƠNG PHÁP TƯ DUY</div>
-    <h2>Dạy cách tư duy độc lập thay vì nhồi nhét</h2>
-<div class="content-card">
-  <div class="split-layout">
-    <div class="split-left" style="border-right: 1px solid var(--border-strong); padding-right: 15px;">
-      <h3 style="color: var(--accent-purple); margin-top: 0;">Bài trừ chủ nghĩa nhồi nhét (Anti-Cramming)</h3>
-      <p style="font-size: 0.85rem; line-height: 1.4; margin-bottom: 10px;">
-        <strong>Tránh biến con thành bản sao:</strong> Nhiều người cha xuất sắc thường truyền đạt trực tiếp những suy nghĩ tinh túy nhất của mình cho con. Hậu quả là con cái trở thành bản sao thụ động của cha, không tự phát triển tư duy riêng. <span class="page-ref">Ch 3 · §3</span>
-      </p>
-      <p style="font-size: 0.85rem; line-height: 1.4; margin-bottom: 10px;">
-        <strong>Kích hoạt tư duy tự thân:</strong> Cha Mill không làm thay việc suy nghĩ của con. Khi Mill gặp khó khăn, cha luôn yêu cầu: <em>"Con tự suy nghĩ xem sao!"</em> và quyết không giải đáp trước khi con đã thực sự động não tìm tòi. <span class="page-ref">Ch 3 · §3</span>
-      </p>
-    </div>
-    
-    <div class="split-right" style="padding-left: 15px;">
-      <h3 style="color: var(--accent-emerald); margin-top: 0;">Kỹ thuật gợi mở thông minh của James Mill</h3>
-      <ul style="font-size: 0.85rem; line-height: 1.4; padding-left: 20px;">
-        <li style="margin-bottom: 10px;"><strong>Hệ thống câu hỏi định hướng:</strong> Nếu Mill suy nghĩ mãi vẫn không tìm ra giải pháp, cha sẽ không đưa ra ngay đáp án. Thay vào đó, ông đưa ra một chuỗi các câu hỏi phụ gợi ý để dẫn dắt tư duy của con từng bước đi tới đích. <span class="page-ref">Ch 3 · §3</span></li>
-        <li style="margin-bottom: 10px;"><strong>Đòi hỏi vượt giới hạn:</strong> James Mill tin rằng nếu không yêu cầu đứa trẻ những điều hơi quá khả năng hiện tại của nó thì tiềm năng trí lực của nó sẽ không bao giờ được khai phá tối đa. <span class="page-ref">Ch 3 · §3</span></li>
-        <li style="margin-bottom: 10px;"><strong>Độc lập tư duy:</strong> Mục tiêu của phương pháp này là dạy con cách vận hành bộ não để con có thể tự đưa ra những suy nghĩ vượt trội hơn cả cha mình về sau. <span class="page-ref">Ch 3 · §3</span></li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH 3 · ĐÒI HỎI LÝ TÍNH</div>
-    <h2>Truy vấn định nghĩa khái niệm ở tuổi 13</h2>
-<div class="content-card">
-  <h3 style="color: var(--accent-red); margin-top: 0; margin-bottom: 15px;">Thử thách Lý luận & Sự minh triết về khái niệm</h3>
-  <p style="font-size: 0.95rem; line-height: 1.5; margin-bottom: 20px;">
-    James Mill cực kỳ nghiêm khắc với những câu nói sáo rỗng hoặc lạm dụng thuật ngữ. Ông rèn luyện cho J.S. Mill thói quen <strong>phải hiểu tường tận bản chất khái niệm</strong> thay vì bắt chước ngôn từ của người khác một cách hời hợt. <span class="page-ref">Ch 3 · §3</span>
-  </p>
-
-  <div class="split-layout">
-    <div class="split-left" style="border-right: 1px solid var(--border-strong); padding-right: 15px;">
-      <h4 style="color: var(--accent-red); margin-top: 0;">Cuộc truy vấn khái niệm ở tuổi 13</h4>
-      <p style="font-size: 0.85rem; line-height: 1.4; margin-bottom: 8px;">
-        <strong>Hỏi về "Quan niệm":</strong> Mill ngẫu nhiên dùng từ "quan niệm", cha lập tức truy vấn: <em>"Quan niệm là gì?"</em>. Mill giải thích loay hoay đều bị cha chỉ ra điểm mâu thuẫn trong logic khiến cậu vô cùng bối rối. <span class="page-ref">Ch 3 · §3</span>
-      </p>
-      <p style="font-size: 0.85rem; line-height: 1.4;">
-        <strong>Hỏi về "Lý luận vs Thực tiễn":</strong> Khi Mill lặp lại câu nói thời thượng: <em>"Về lý luận thì chính xác nhưng thực tiễn cần chỉnh sửa"</em>. Cha bắt bẻ ngay: <em>"Lý luận là gì? Giải thích đi!"</em>. <span class="page-ref">Ch 3 · §3</span>
-      </p>
-    </div>
-
-    <div class="split-right" style="padding-left: 15px;">
-      <h4 style="color: var(--accent-purple); margin-top: 0;">Bản chất của Lý luận học</h4>
-      <blockquote style="font-size: 0.85rem; line-height: 1.4; border-left: 3px solid var(--accent-purple); padding-left: 10px; margin: 10px 0; color: var(--text-secondary);">
-        <em>"Lý luận và thực tiễn không phải là hai vấn đề tương phản. Khi nghĩ nó là tương phản thì con hoàn toàn chẳng hiểu gì về ý nghĩa của từ lý luận. Những kẻ dùng từ lý luận mà không hiểu nghĩa của nó là những kẻ vô học."</em> <span class="page-ref">Ch 3 · §3</span>
-      </blockquote>
-      <p style="font-size: 0.82rem; line-height: 1.4; color: var(--text-secondary);">
-        <strong>Bài học cho cha mẹ:</strong> Dạy con tư duy phản biện bắt đầu bằng việc yêu cầu sự rõ ràng, chính xác trong từ ngữ định nghĩa. Tránh để trẻ nói những lời sáo rỗng vô nghĩa. <span class="page-ref">Ch 3 · §3</span>
-      </p>
-    </div>
-  </div>
-</div>
-
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH 3 · PHÒNG NGỪA KIÊU NGẠO</div>
-    <h2>Bài học Hyde Park và rèn lòng khiêm tốn</h2>
-<div class="content-card">
-  <div class="split-layout">
-    <div class="split-left" style="border-right: 1px solid var(--border-strong); padding-right: 15px;">
-      <h3 style="color: var(--accent-red); margin-top: 0;">Rèn luyện sự khiêm tốn & Bản lĩnh trước lời khen</h3>
-      <p style="font-size: 0.85rem; line-height: 1.4; margin-bottom: 10px;">
-        Thần đồng rất dễ có khuynh hướng kiêu ngạo, tự phụ dẫn đến sụt giảm thành tích khi trưởng thành. James Mill áp dụng chế độ nghiêm ngặt để bảo vệ con khỏi thói xấu này. <span class="page-ref">Ch 3 · §4</span>
-      </p>
-      <ul style="font-size: 0.82rem; line-height: 1.4; padding-left: 20px;">
-        <li style="margin-bottom: 8px;"><strong>Hạn chế tán dương:</strong> Tuyệt đối không cho con nghe những lời khen ngợi tâng bốc từ bên ngoài. Bản thân cha cũng cực kỳ tiết kiệm lời khen với con. <span class="page-ref">Ch 3 · §4</span></li>
-        <li style="margin-bottom: 8px;"><strong>Mục đích của việc so sánh:</strong> Dạy con: <em>"Không bao giờ so sánh với người khác để thấy mình hơn họ. Chỉ so sánh để học hỏi những điều hay từ họ"</em>. <span class="page-ref">Ch 3 · §4</span></li>
-        <li style="margin-bottom: 8px;"><strong>Ý thức giới hạn bản thân:</strong> Kiến thức là vô hạn, hiểu biết của cá nhân chỉ là hữu hạn. Những gì mình biết chỉ là hạt cát trong đại dương tri thức. <span class="page-ref">Ch 3 · §4</span></li>
-      </ul>
-    </div>
-    
-    <div class="split-right" style="padding-left: 15px;">
-      <h3 style="color: var(--accent-purple); margin-top: 0;">Bài học Hyde Park & Tâm lý "Hổ thẹn khi được khen"</h3>
-      <p style="font-size: 0.85rem; line-height: 1.4; margin-bottom: 10px;">
-        <strong>Bối cảnh (14 tuổi):</strong> Trước khi Mill sang Pháp du học, cha dẫn cậu ra công viên Hyde Park để thực hiện một cuộc huấn luyện tâm lý đặc biệt. <span class="page-ref">Ch 3 · §4</span>
-      </p>
-      <ul style="font-size: 0.82rem; line-height: 1.4; padding-left: 20px;">
-        <li style="margin-bottom: 6px;"><strong>Thừa nhận xuất phát điểm:</strong> Con có thành tích vượt trội bạn bè không phải vì con là thiên tài, mà vì con được hưởng nền giáo dục sớm tốt nhất. <span class="page-ref">Ch 3 · §4</span></li>
-        <li style="margin-bottom: 6px;"><strong>Nguyên lý phản biện lời khen:</strong> <em>"Con cần cảm thấy xấu hổ khi được khen thì mới tiến bộ được."</em> Lời khen ngợi tâng bốc là liều thuốc độc làm thui chột ý chí phấn đấu. <span class="page-ref">Ch 3 · §4</span></li>
-        <li style="margin-bottom: 6px;"><strong>Kết quả:</strong> Mill sang Pháp du học đạt thành tích xuất sắc nhưng luôn giữ được sự điềm đạm, khiêm cung, không chút tự mãn. <span class="page-ref">Ch 3 · §4</span></li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH 3 · THỂ CHẤT &amp; XÃ HỘI</div>
-    <h2>Giáo dục tại nhà và rèn luyện thể chất</h2>
-<div class="content-card">
-  <h3 style="color: var(--accent-amber); margin-top: 0; margin-bottom: 15px;">Giáo dục tại nhà & Thể chất của J.S. Mill</h3>
-  <p style="font-size: 0.95rem; line-height: 1.5; margin-bottom: 20px;">
-    Mục tiêu giáo dục của James Mill hướng tới triết lý Hy Lạp cổ đại: <strong>"Một tinh thần minh mẫn trong một cơ thể cường tráng"</strong>. Dù học tập cường độ cao, Mill vẫn được duy trì các hoạt động thể chất và cách ly khỏi các tác động tiêu cực của trường học truyền thống. <span class="page-ref">Ch 3 · §4</span>
-  </p>
-
-  <div class="split-layout">
-    <div class="split-left" style="border-right: 1px solid var(--border-strong); padding-right: 15px;">
-      <h4 style="color: var(--accent-red); margin-top: 0;">Cách ly bạn bè để bảo vệ nhân cách</h4>
-      <ul style="font-size: 0.85rem; line-height: 1.4; padding-left: 20px; margin-top: 10px;">
-        <li style="margin-bottom: 10px;"><strong>Không cho đi học trường công:</strong> Mill chủ yếu tự học và học trực tiếp từ cha. Điều này giúp loại bỏ nguy cơ lây nhiễm thói quen xấu và thái độ thờ ơ với tri thức từ bạn học lười biếng. <span class="page-ref">Ch 3 · §4</span></li>
-        <li style="margin-bottom: 10px;"><strong>Ngăn ngừa kiêu ngạo sớm:</strong> Cha lo ngại nếu Mill tiếp xúc nhiều với trẻ cùng lứa, sự chênh lệch học vấn quá lớn sẽ dễ làm nảy sinh tâm lý tự tôn, kiêu ngạo ở Mill. <span class="page-ref">Ch 3 · §4</span></li>
-      </ul>
-    </div>
-
-    <div class="split-right" style="padding-left: 15px;">
-      <h4 style="color: var(--accent-emerald); margin-top: 0;">Rèn luyện thể chất & Kỷ luật đều đặn</h4>
-      <ul style="font-size: 0.85rem; line-height: 1.4; padding-left: 20px; margin-top: 10px;">
-        <li style="margin-bottom: 10px;"><strong>Môn thể thao bổ trợ:</strong> Mill được cha cho tham gia chạy bộ, đi dạo và cưỡi ngựa hàng ngày để cải thiện sức khỏe (dù ông tự nhận mình không có năng khiếu thể thao). <span class="page-ref">Ch 3 · §4</span></li>
-        <li style="margin-bottom: 10px;"><strong>"Học mà chơi, chơi mà học" cả Chủ nhật:</strong> Không cho phép nghỉ ngơi hoàn toàn vào cuối tuần vì James Mill tin rằng ngắt quãng học tập sẽ hình thành thói lười biếng. Cần duy trì nhịp độ học tập đều đặn mỗi ngày. <span class="page-ref">Ch 3 · §4</span></li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH 3 · ĐẠI THI HÀO GOETHE</div>
-    <h2>Kỷ luật nghiêm khắc và học qua đồng dao</h2>
-<div class="content-card">
-  <div class="split-layout">
-    <div class="split-left" style="border-right: 1px solid var(--border-strong); padding-right: 15px;">
-      <h3 style="color: var(--accent-purple); margin-top: 0;">Johann Wolfgang von Goethe & Kỷ luật thép của cha</h3>
-      <p style="font-size: 0.85rem; line-height: 1.4; margin-bottom: 10px;">
-        Cha của Goethe vốn xuất thân là quân nhân, do đó ngay từ nhỏ Goethe đã nhận được sự giáo dục cực kỳ nghiêm khắc và kỷ luật chặt chẽ kiểu quân đội. <span class="page-ref">Ch 3 · §5</span>
-      </p>
-      <p style="font-size: 0.85rem; line-height: 1.4; margin-bottom: 10px;">
-        <strong>Không nuông chiều:</strong> Dù Goethe là con trai độc nhất trong gia đình, cha ông tuyệt đối không nuông chiều bừa bãi mà đặt ra các nguyên tắc phát triển toàn diện cả trí tuệ lẫn nhân cách. <span class="page-ref">Ch 3 · §5</span>
-      </p>
-    </div>
-    
-    <div class="split-right" style="padding-left: 15px;">
-      <h3 style="color: var(--accent-emerald); margin-top: 0;">Học từ vựng qua bài đồng dao & Thực địa</h3>
-      <ul style="font-size: 0.85rem; line-height: 1.4; padding-left: 20px;">
-        <li style="margin-bottom: 8px;"><strong>Bài đồng dao tăng từ vựng:</strong> Bắt con học thuộc lòng tất cả các bài đồng dao truyền thống của Đức. Các giai điệu vần điệu giúp trẻ tiếp thu từ ngữ mới cực nhanh và tự nhiên. <span class="page-ref">Ch 3 · §5</span></li>
-        <li style="margin-bottom: 8px;"><strong>Học đọc trước 4 tuổi:</strong> Dạy Goethe tập đọc thông qua các cuốn sách đơn giản có chứa lời ca của các bài đồng dao quen thuộc mà cậu đã thuộc lòng. <span class="page-ref">Ch 3 · §5</span></li>
-        <li style="margin-bottom: 8px;"><strong>Đi dạo kết hợp giải nghĩa:</strong> Dẫn Goethe đi dạo quanh Frankfurt. Cha kể chuyện lịch sử, địa lý của các địa danh và giải thích tỉ mỉ những nơi xuất hiện trong lời đồng dao. Đây là kỹ thuật tâm lý tuyệt vời giúp trẻ hào hứng học thêm nhiều bài đồng dao khác. <span class="page-ref">Ch 3 · §5</span></li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH 3 · VAI TRÒ NGƯỜI MẸ</div>
-    <h2>Mẹ Goethe và kỹ thuật &#x27;Kể chuyện nửa chừng&#x27;</h2>
-<div class="content-card">
-  <h3 style="color: var(--accent-purple); margin-top: 0; margin-bottom: 15px;">Mẹ của Goethe & Động cơ kích hoạt trí tưởng tượng</h3>
-  <p style="font-size: 0.95rem; line-height: 1.5; margin-bottom: 20px;">
-    Mẹ của Goethe đóng vai trò then chốt trong việc khơi nguồn óc sáng tạo thiên phú của ông. Bà hiểu rằng rèn luyện trí tưởng tượng phong phú là chìa khóa vàng để phát triển tư duy nghệ thuật của con từ sớm. <span class="page-ref">Ch 3 · §5</span>
-  </p>
-
-  <div class="split-layout">
-    <div class="split-left" style="border-right: 1px solid var(--border-strong); padding-right: 15px;">
-      <h4 style="color: var(--accent-purple); margin-top: 0;">Truyện cổ tích hàng ngày từ 2 tuổi</h4>
-      <ul style="font-size: 0.85rem; line-height: 1.4; padding-left: 20px;">
-        <li style="margin-bottom: 10px;"><strong>Mỗi ngày một câu chuyện mới:</strong> Từ khi Goethe lên 2 tuổi, ngày nào mẹ cũng kể cho cậu nghe một câu chuyện cổ tích mới để liên tục bổ sung và làm phong phú vốn từ vựng của trẻ. <span class="page-ref">Ch 3 · §5</span></li>
-        <li style="margin-bottom: 10px;"><strong>Đọc và kể lại chủ động:</strong> Bà khuyến khích Goethe tự đọc sách và kể lại cho mẹ nghe các chi tiết để rèn luyện trí nhớ và khả năng diễn đạt lưu loát. <span class="page-ref">Ch 3 · §5</span></li>
-      </ul>
-    </div>
-
-    <div class="split-right" style="padding-left: 15px;">
-      <h4 style="color: var(--accent-amber); margin-top: 0;">Kỹ thuật "Kể chuyện nửa chừng" (Incomplete Story)</h4>
-      <ul style="font-size: 0.85rem; line-height: 1.4; padding-left: 20px;">
-        <li style="margin-bottom: 10px;"><strong>Dừng lại ở đoạn gay cấn:</strong> Khi đọc một truyện ngắn hay tiểu thuyết, mẹ Goethe cố tình dừng lại ở chi tiết cao trào và để cậu bé tự suy nghĩ, tưởng tượng diễn biến tiếp theo. <span class="page-ref">Ch 3 · §5</span></li>
-        <li style="margin-bottom: 10px;"><strong>Thảo luận ý tưởng ngày hôm sau:</strong> Hôm sau, Goethe hào hứng trình bày với mẹ phần kết hoặc hướng đi tiếp theo do cậu tự nghĩ ra. <span class="page-ref">Ch 3 · §5</span></li>
-        <li style="margin-bottom: 10px;"><strong>Kết quả vĩ đại:</strong> Phương pháp rèn trí tưởng tượng kiên trì này đã đặt nền móng vững chắc cho tư duy sáng tác của đại thi hào thế giới tương lai. <span class="page-ref">Ch 3 · §5</span></li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH 3 · PHÁT TRIỂN TOÀN DIỆN</div>
-    <h2>Thông thạo 5 ngôn ngữ &amp; Cảm thụ nghệ thuật sớm</h2>
-<div class="content-card">
-  <h3 style="color: var(--accent-purple); margin-top: 0; margin-bottom: 15px;">Goethe & Sự phát triển toàn diện trước 8 tuổi</h3>
-  <p style="font-size: 0.95rem; line-height: 1.5; margin-bottom: 20px;">
-    Tương tự như Karl Witte, Goethe không chỉ dừng lại ở sự phát triển ngôn ngữ đơn thuần mà được tiếp cận với một nền giáo dục toàn diện, tích hợp cả khoa học tự nhiên, văn học, âm nhạc và nghệ thuật thị giác từ rất sớm. <span class="page-ref">Ch 3 · §5</span>
-  </p>
-
-  <div class="split-layout">
-    <div class="split-left" style="border-right: 1px solid var(--border-strong); padding-right: 15px;">
-      <h4 style="color: var(--accent-purple); margin-top: 0;">Thông thạo 5 ngôn ngữ ở tuổi lên 8</h4>
-      <p style="font-size: 0.85rem; line-height: 1.4; margin-bottom: 10px;">
-        Nhờ môi trường ngôn ngữ phong phú và các bài hát đồng dao, Goethe đã làm chủ các ngôn ngữ lớn của châu Âu trước khi bước vào tuổi tiểu học:
-      </p>
-      <ul style="font-size: 0.82rem; line-height: 1.4; padding-left: 20px;">
-        <li style="margin-bottom: 8px;"><strong>Tiếng Đức (Mẹ đẻ):</strong> Nền tảng tư duy vững chắc.</li>
-        <li style="margin-bottom: 8px;"><strong>Tiếng Pháp & Tiếng Ý:</strong> Ngôn ngữ văn hóa hiện đại.</li>
-        <li style="margin-bottom: 8px;"><strong>Tiếng La-tinh & Tiếng Hy Lạp:</strong> Ngôn ngữ triết học và văn học cổ điển. <span class="page-ref">Ch 3 · §5</span></li>
-      </ul>
-    </div>
-
-    <div class="split-right" style="padding-left: 15px;">
-      <h4 style="color: var(--accent-emerald); margin-top: 0;">Tích hợp Nghệ thuật & Khoa học</h4>
-      <ul style="font-size: 0.85rem; line-height: 1.4; padding-left: 20px; margin-top: 10px;">
-        <li style="margin-bottom: 10px;"><strong>Giáo dục thẩm mỹ:</strong> Goethe được học vẽ tranh, hội họa và âm nhạc từ rất sớm, giúp phát triển tối đa bán cầu não phải và khả năng cảm thụ cái đẹp. <span class="page-ref">Ch 3 · §5</span></li>
-        <li style="margin-bottom: 10px;"><strong>Tinh thần khoa học:</strong> Tiếp cận khoa học tự nhiên song song với văn học giúp Goethe sau này không chỉ là nhà thơ lớn mà còn có nhiều đóng góp nghiên cứu khoa học giá trị (ví dụ: thuyết màu sắc). <span class="page-ref">Ch 3 · §5</span></li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH 3 · MA TRẬN ĐỐI CHIẾU</div>
-    <h2>So sánh 4 mô hình giáo dục sớm điển hình</h2>
-<div class="content-card" style="padding: 10px;">
-  <h3 style="color: var(--accent-purple); margin-top: 0; margin-bottom: 10px; font-size: 1.1rem;">Bảng đối chiếu 4 mô hình giáo dục sớm điển hình</h3>
-  
-  <table style="width: 100%; border-collapse: collapse; font-size: 0.78rem; line-height: 1.35; margin-top: 5px;">
-    <thead>
-      <tr style="background-color: var(--accent); color: white; text-align: left;">
-        <th style="padding: 8px; border: 1px solid var(--border-strong); font-weight: 600;">Tiêu chí</th>
-        <th style="padding: 8px; border: 1px solid var(--border-strong); font-weight: 600;">Karl Witte</th>
-        <th style="padding: 8px; border: 1px solid var(--border-strong); font-weight: 600;">Anh em Thomson</th>
-        <th style="padding: 8px; border: 1px solid var(--border-strong); font-weight: 600;">John Stuart Mill</th>
-        <th style="padding: 8px; border: 1px solid var(--border-strong); font-weight: 600;">J. W. Goethe</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td style="padding: 8px; border: 1px solid var(--border-strong); font-weight: bold; background-color: var(--surface-muted);">Người dạy chính</td>
-        <td style="padding: 8px; border: 1px solid var(--border-strong);">Cha (Mục sư) & Mẹ</td>
-        <td style="padding: 8px; border: 1px solid var(--border-strong);">Cha (Giáo sư Toán)</td>
-        <td style="padding: 8px; border: 1px solid var(--border-strong);">Cha (Triết gia J. Mill)</td>
-        <td style="padding: 8px; border: 1px solid var(--border-strong);">Cha (Quân nhân) & Mẹ</td>
-      </tr>
-      <tr>
-        <td style="padding: 8px; border: 1px solid var(--border-strong); font-weight: bold; background-color: var(--surface-muted);">Phương pháp cốt lõi</td>
-        <td style="padding: 8px; border: 1px solid var(--border-strong);">Đi dạo thực tế, ngôn ngữ chuẩn, ghép vần, đóng vai</td>
-        <td style="padding: 8px; border: 1px solid var(--border-strong);">Kể chuyện phiêu lưu tương tác, đàm thoại bữa ăn</td>
-        <td style="padding: 8px; border: 1px solid var(--border-strong);">Học qua sách vở (lệch), ghi chép và phản biện đi bộ</td>
-        <td style="padding: 8px; border: 1px solid var(--border-strong);">Đồng dao, đi dạo thực địa, mẹ kể chuyện gợi mở</td>
-      </tr>
-      <tr>
-        <td style="padding: 8px; border: 1px solid var(--border-strong); font-weight: bold; background-color: var(--surface-muted);">Dạy tư duy</td>
-        <td style="padding: 8px; border: 1px solid var(--border-strong);">Trả lời chính xác, cùng tra cứu thư viện nếu chưa rõ</td>
-        <td style="padding: 8px; border: 1px solid var(--border-strong);">Kích thích óc tò mò qua các tình huống truyện kể</td>
-        <td style="padding: 8px; border: 1px solid var(--border-strong);">"Con tự nghĩ xem!", bắt định nghĩa chi tiết khái niệm</td>
-        <td style="padding: 8px; border: 1px solid var(--border-strong);">Mẹ dừng chuyện nửa chừng để con tự suy đoán kết</td>
-      </tr>
-      <tr>
-        <td style="padding: 8px; border: 1px solid var(--border-strong); font-weight: bold; background-color: var(--surface-muted);">Phòng ngừa tự phụ</td>
-        <td style="padding: 8px; border: 1px solid var(--border-strong);">Rất ít khen học tập, cấm người ngoài khen tâng bốc</td>
-        <td style="padding: 8px; border: 1px solid var(--border-strong);">Hòa đồng thông qua các câu chuyện tương tác chung</td>
-        <td style="padding: 8px; border: 1px solid var(--border-strong);">Không bao giờ khen, bài học "xấu hổ khi được khen"</td>
-        <td style="padding: 8px; border: 1px solid var(--border-strong);">Kỷ luật nghiêm khắc như quân đội, không nuông chiều</td>
-      </tr>
-      <tr>
-        <td style="padding: 8px; border: 1px solid var(--border-strong); font-weight: bold; background-color: var(--surface-muted);">Xã hội hóa</td>
-        <td style="padding: 8px; border: 1px solid var(--border-strong);">Chọn lọc bạn kỹ lưỡng, có giám sát của cha mẹ</td>
-        <td style="padding: 8px; border: 1px solid var(--border-strong);">Hòa đồng cùng các anh chị em trong nhà</td>
-        <td style="padding: 8px; border: 1px solid var(--border-strong);">Cách ly bạn bè đồng lứa, tự học tại nhà</td>
-        <td style="padding: 8px; border: 1px solid var(--border-strong);">Học toàn diện văn hóa, nghệ thuật, giao tiếp rộng</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH 3 · HÀNH ĐỘNG CỦA CHA MẸ</div>
-    <h2>Kế hoạch hành động chi tiết</h2>
-<ul class="action-list" style="margin-bottom: 15px;">
-  <li class="action-item">
-    <div>
-      <div class="action-headline">Kể chuyện tương tác kích thích phản biện và tò mò</div>
-      <div class="action-detail">Khi kể chuyện phiêu lưu hay lịch sử cho con (đặc biệt trong bữa ăn), hãy đặt câu hỏi mở: <em>"Theo con nhân vật sẽ làm gì tiếp theo?"</em> thay vì độc thoại, giúp con cùng tham gia cốt truyện. <span class="page-ref">Ch 3 · §1</span></div>
-    </div>
-  </li>
-  <li class="action-item">
-    <div>
-      <div class="action-headline">Chuyển hóa việc đọc sách bằng kỹ thuật Tóm tắt chủ động</div>
-      <div class="action-detail">Yêu cầu con ghi lại các ý chính khi đọc sách ban ngày. Tổ chức các buổi đi dạo chất vấn ngắn, bắt con nhìn giấy ghi chú kể lại và phản biện các quan điểm trong sách thay vì chỉ ghi nhớ thụ động. <span class="page-ref">Ch 3 · §2</span></div>
-    </div>
-  </li>
-  <li class="action-item">
-    <div>
-      <div class="action-headline">Áp dụng tư duy độc lập "Con tự nghĩ xem"</div>
-      <div class="action-detail">Khi con gặp bài khó hay thắc mắc, không đưa ngay đáp án. Hãy nói <em>"Con tự suy nghĩ xem sao!"</em>, sau đó đưa ra chuỗi câu hỏi gợi mở để định hướng con tự tìm ra câu trả lời. Bài trừ thói quen nhồi nhét. <span class="page-ref">Ch 3 · §3</span></div>
-    </div>
-  </li>
-  <li class="action-item">
-    <div>
-      <div class="action-headline">Kích hoạt óc sáng tạo qua kỹ thuật "Kể chuyện nửa chừng"</div>
-      <div class="action-detail">Học tập mẹ Goethe: kể hoặc đọc cho con nghe một câu chuyện hấp dẫn từ lúc 2 tuổi, dừng lại ở đoạn cao trào và yêu cầu con tự tưởng tượng phần kết thúc. Thảo luận về ý tưởng của con vào ngày hôm sau. <span class="page-ref">Ch 3 · §5</span></div>
-    </div>
-  </li>
-  <li class="action-item">
-    <div>
-      <div class="action-headline">Huấn luyện bản lĩnh khiêm tốn trước lời khen</div>
-      <div class="action-detail">Hạn chế khen ngợi con quá đà và cách ly khỏi lời tâng bốc bên ngoài. Dạy con hiểu rằng đi trước bạn bè là nhờ cơ hội giáo dục sớm tốt, không phải vì bẩm sinh giỏi hơn người khác. Hãy dạy con so sánh để học hỏi chứ không để tự mãn. <span class="page-ref">Ch 3 · §4</span></div>
-    </div>
-  </li>
-</ul>
-
-<figure class="image-slot hero" style="max-height: 180px;">
-  <img src="images/ch3_closing.png" alt="Trẻ em ước mơ bay cao với óc sáng tạo phong phú">
-  <figcaption>Nguồn: Unsplash (Free Stock Photo)</figcaption>
-</figure>
-
-  </section>
-
-</div>
-
-<div class="nav-controls">
-  <button class="nav-btn" id="prevBtn" onclick="prevSlide()" aria-label="Previous slide">&#8592;</button>
-  <div class="counter" id="counter" aria-live="polite">1 / 1</div>
-  <button class="nav-btn" id="nextBtn" onclick="nextSlide()" aria-label="Next slide">&#8594;</button>
-</div>
-
-<script src="common.js"></script>
+  <script src="../common.js"></script>
 </body>
+
 </html>

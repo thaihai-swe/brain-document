@@ -1,413 +1,491 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Chapter 11: Interday Volume Accumulation Indicators</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="common.css">
-<script src="https://cdn.jsdelivr.net/npm/mermaid@11.10.0/dist/mermaid.min.js" crossorigin="anonymous"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chapter 11: Interday Volume Accumulation Indicators</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../common.css">
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@11.10.0/dist/mermaid.min.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
 
-<div class="progress-bar" id="progressBar"></div>
+  <div class="progress-bar" id="progressBar"></div>
 
-<div class="chapter-menu">
-  <button class="menu-btn" id="chapterMenuBtn" onclick="toggleChapterMenu()" aria-haspopup="true" aria-expanded="false">Chapters &#9662;</button>
-  <div class="chapter-menu-panel" id="chapterMenuPanel" role="menu"></div>
-</div>
-
-<div class="slide-container" id="slideContainer">
-
-  <section class="slide chapter-divider">
-
-<div class="chapter-hero">
-  <div class="chapter-number">Chapter 11</div>
-  <h1 class="chapter-title">Interday Volume Accumulation Indicators</h1>
-  <div class="chapter-meta">
-    <span>⏱️ 15 min read</span>
-    <span>📊 Intermediate</span>
-    <span>🔑 OBV, VPT, VZO, Cumulative Volume</span>
-  </div>
-</div>
-
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CHAPTER 11</div>
-    <h2>Visual Summary</h2>
-
-<div class="content-card">
-  <h2>Concept Map: Interday Volume</h2>
-  <div class="mermaid">
-  graph TD
-      A[Interday Volume Accumulation] --> B[On-Balance Volume<br/>OBV]
-      A --> C[Volume Price Trend<br/>VPT]
-      A --> D[Volume Zone Oscillator<br/>VZO]
-      B --> E[Direction Only]
-      C --> F[Direction + Magnitude]
-      D --> G[Oscillator / Overbought-Oversold]
-      
-      style A fill:#7C3AED,stroke:#E2E8F0,color:#FFFFFF
-      style B fill:#4C1D95,stroke:#E2E8F0,color:#FFFFFF
-      style C fill:#4C1D95,stroke:#E2E8F0,color:#FFFFFF
-      style D fill:#4C1D95,stroke:#E2E8F0,color:#FFFFFF
-  </div>
-</div>
-
-  </section>
-
-  <section class="slide">
-
-<div class="takeaway-hero">
-  <div class="kicker">CH 11 · THE BIG IDEA</div>
-  <div class="headline">"Price reveals what happened, but accumulating daily volume flows exposes the hidden supply or demand building underneath."</div>
-  <div class="subline">Interday volume indicators like OBV act as the market's internal pressure gauge, often predicting price breakouts before they happen.</div>
-</div>
-
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CHAPTER 11</div>
-    <h2>Key Takeaways</h2>
-
-<div class="content-card">
-  <ul class="takeaway-list">
-    <li>
-      <strong>OBV detects hidden market coils</strong>
-      <p><strong>Why it matters:</strong> Volume often precedes price. Rising OBV during a flat price trend signals hidden accumulation.</p>
-      <p><strong>Evidence:</strong> Granville's observation that OBV highs/lows reliably precede price breakouts. <span class="page-ref">Ch 11, p. 148</span></p>
-      <p><strong>Application:</strong> Watch for divergences where OBV breaks out before price does.</p>
-      <p><strong>Caveat:</strong> OBV treats a 1-cent gain exactly the same as a 10-dollar gain.</p>
-    </li>
-    <li>
-      <strong>VPT improves upon OBV by adding magnitude</strong>
-      <p><strong>Why it matters:</strong> Weighting volume by the percentage price change creates a more proportional measure of supply/demand.</p>
-      <p><strong>Evidence:</strong> Markstein's 1966 adaptation integrates price magnitude directly into the volume flow. <span class="page-ref">Ch 11, p. 150</span></p>
-      <p><strong>Application:</strong> Use VPT instead of OBV when tracking highly volatile assets where daily price ranges vary wildly.</p>
-      <p><strong>Caveat:</strong> VPT can be distorted by sudden massive gap-ups on earnings.</p>
-    </li>
-    <li>
-      <strong>Rolling vs. Continuous Accumulation</strong>
-      <p><strong>Why it matters:</strong> While Granville insisted on continuous lifetime running totals, rolling periods adapt faster to current conditions.</p>
-      <p><strong>Evidence:</strong> Modern practitioners often use rolling 20-period OBV. <span class="page-ref">Ch 11, p. 148</span></p>
-      <p><strong>Application:</strong> Apply a 20-period rolling OBV for short-term swing trading to filter out historical baggage.</p>
-      <p><strong>Caveat:</strong> Granville firmly opposed rolling totals for long-term forecasting.</p>
-    </li>
-    <li>
-      <strong>VZO turns accumulation into an oscillator</strong>
-      <p><strong>Why it matters:</strong> Oscillators provide clear overbought/oversold boundaries.</p>
-      <p><strong>Evidence:</strong> Khalil bounded the VZO between -100 and +100 by dividing EMA of +/- volume by EMA of total volume. <span class="page-ref">Ch 11, p. 150</span></p>
-      <p><strong>Application:</strong> Use VZO to identify exhaustion points in cumulative volume trends.</p>
-      <p><strong>Caveat:</strong> Oscillators can stay "overbought" for long periods during strong trends.</p>
-    </li>
-  </ul>
-</div>
-
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CHAPTER 11</div>
-    <h2>Context &amp; Background</h2>
-
-<div class="content-card">
-  <h3>1. Intellectual Tradition</h3>
-  <ul>
-    <li><strong>School of Thought:</strong> Cumulative Volume Analysis.</li>
-    <li><strong>Intellectual Lineage:</strong> Paul Clay (1932) &rarr; Frank Vignolia (1946) &rarr; Joe Granville (1961) &rarr; David Markstein (1966).</li>
-    <li><strong>Key Influences:</strong> Granville brought OBV to the mainstream, turning technical analysis from a niche charting practice into a popular strategy.</li>
-  </ul>
-
-  <h3>2. Historical Moment</h3>
-  <ul>
-    <li><strong>Era:</strong> Mid-20th Century (1960s).</li>
-    <li><strong>Technological State:</strong> Pre-computer charting. OBV was revolutionary because it was mathematically simple enough to calculate by hand daily (just add or subtract volume).</li>
-  </ul>
-
-  <h3>3. Evolution of Ideas</h3>
-  <ul>
-    <li><strong>Then (1960s):</strong> OBV was a groundbreaking insight into hidden institutional accumulation.</li>
-    <li><strong>Now (2026):</strong> Algorithms can easily mask their volume footprints intraday, yet interday accumulation remains a robust macro-indicator. Variants like VZO apply modern smoothing (EMA) and oscillation techniques impossible to do quickly by hand in 1961.</li>
-  </ul>
-</div>
-
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CHAPTER 11</div>
-    <h2>Notable Quotes</h2>
-
-<div class="content-card">
-  <div class="quote-block">
-    <p class="quote-text">"Truth is never out of date. There're only two things that can change the value of a stock: supply and demand, the only things I teach."</p>
-    <p class="quote-context">&mdash; Joe Granville, when asked in 2002 if his methods still worked. <span class="page-ref">Ch 11, p. 149</span></p>
-  </div>
-  <div class="quote-analysis">
-    <p><strong>Interpretation:</strong> Market structures, technologies, and participants change, but the fundamental physics of price discovery&mdash;buyers vs. sellers&mdash;remains absolute.</p>
-    <p><strong>Significance:</strong> This highlights the philosophical core of volume analysis. It isn't a hack or a statistical anomaly; it is a direct measurement of market mechanics.</p>
+  <div class="chapter-menu">
+    <button class="menu-btn" id="chapterMenuBtn" onclick="toggleChapterMenu()" aria-haspopup="true"
+      aria-expanded="false">Chapters &#9662;</button>
+    <div class="chapter-menu-panel" id="chapterMenuPanel" role="menu"></div>
   </div>
 
-  <div class="quote-block">
-    <p class="quote-text">"[OBV's] original objective... was to uncover hidden building tensions in otherwise uneventful nontrending price patterns."</p>
-    <p class="quote-context">&mdash; Chapter 11. <span class="page-ref">Ch 11, p. 148-149</span></p>
-  </div>
-  <div class="quote-analysis">
-    <p><strong>Interpretation:</strong> Sideways markets aren't always dormant. OBV acts like an X-ray, revealing if the quiet consolidation is being used to quietly accumulate (buy) or distribute (sell).</p>
-  </div>
-</div>
+  <div class="slide-container" id="slideContainer">
 
-  </section>
+    <section class="slide chapter-divider">
 
-  <section class="slide">
-    <div class="slide-kicker">CHAPTER 11</div>
-    <h2>Mental Models: On-Balance Volume (OBV)</h2>
-
-<div class="content-card">
-  <p><strong>Core Principle:</strong> Volume on an "up" day represents pure demand; volume on a "down" day represents pure supply. Accumulating them over time reveals the true balance of power.</p>
-  
-  <h3>How It Works:</h3>
-  <ol>
-    <li>If today's close &gt; yesterday's close: add today's volume to the running total.</li>
-    <li>If today's close &lt; yesterday's close: subtract today's volume from the running total.</li>
-    <li>If unchanged: do nothing.</li>
-  </ol>
-  
-  <h3>When to Apply:</h3>
-  <ul>
-    <li><strong>Consolidations:</strong> When price is moving sideways in a tight range.</li>
-    <li><strong>Trend Confirmation:</strong> To verify if a price trend has the participation required to sustain it.</li>
-  </ul>
-  
-  <h3>Limitations:</h3>
-  <ul>
-    <li><strong>Binary Flaw:</strong> A close up by 1 cent adds the <em>entire</em> day's volume as positive, treating it identically to a +$10 day.</li>
-    <li><strong>Starting Point Arbitrariness:</strong> The absolute number of OBV is meaningless; only its <em>trend</em> matters.</li>
-  </ul>
-</div>
-
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CHAPTER 11</div>
-    <h2>Mental Models: VPT &amp; VZO</h2>
-
-<div class="content-card">
-  <h3>Volume Price Trend (VPT)</h3>
-  <p><strong>Core Principle:</strong> Volume accumulation should be proportional to the magnitude of the price move.</p>
-  <p><strong>How It Works:</strong> VPT = Prior VPT + (Current Volume &times; % Change in Close). This solves OBV's binary flaw. A massive up-day heavily impacts the indicator; a flat up-day barely moves it.</p>
-  
-  <h3>Volume Zone Oscillator (VZO)</h3>
-  <p><strong>Core Principle:</strong> Cumulative volume trends experience exhaustion and can be mapped within overbought/oversold bounds.</p>
-  <p><strong>How It Works:</strong> Smooths +/- volume with an EMA, divides by the EMA of total volume, and multiplies by 100. Range is fixed from -100 to +100.</p>
-  <p><strong>Application:</strong> Identifying shorter-term mean-reversion setups within the broader volume trend. When VZO hits +90, buying pressure may be temporarily exhausted.</p>
-</div>
-
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CHAPTER 11</div>
-    <h2>Signal Matrix: OBV vs. Price Trend</h2>
-
-<div class="content-card">
-  <table class="signal-matrix">
-    <thead>
-      <tr>
-        <th></th>
-        <th>OBV Rising (New Highs)</th>
-        <th>OBV Falling (New Lows)</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th class="row-header">Price Rising</th>
-        <td class="bullish"><span class="signal-label">Confirm</span>Healthy uptrend supported by demand.</td>
-        <td class="warning"><span class="signal-label">Divergence</span>Price up without volume. Vulnerable to reversal.</td>
-      </tr>
-      <tr>
-        <th class="row-header">Price Flat (Sideways)</th>
-        <td class="opportunity"><span class="signal-label">Hidden Accumulation</span>Coiled spring. Upside breakout likely.</td>
-        <td class="bearish"><span class="signal-label">Hidden Distribution</span>Smart money selling into strength. Downside likely.</td>
-      </tr>
-      <tr>
-        <th class="row-header">Price Falling</th>
-        <td class="warning"><span class="signal-label">Divergence</span>Sellers lack conviction. Potential bottom.</td>
-        <td class="bearish"><span class="signal-label">Confirm</span>Healthy downtrend driven by supply.</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CHAPTER 11</div>
-    <h2>Deep Dive: Mechanics of Interday Accumulation</h2>
-
-<div class="content-card">
-  <h3>1. Core Argument</h3>
-  <p>By classifying entire daily volumes as either "buying" or "selling" based purely on the closing price, and aggregating them over time, you filter out market noise and expose the underlying flow of funds.</p>
-
-  <h3>2. Logic Structure</h3>
-  <ul>
-    <li><strong>Premise 1:</strong> Net buying pressure results in a higher close; net selling results in a lower close.</li>
-    <li><strong>Premise 2:</strong> Institutional participation leaves a massive volume footprint.</li>
-    <li><strong>Conclusion:</strong> A cumulative ledger of volume signed by closing direction accurately tracks institutional positioning over time.</li>
-  </ul>
-  
-  <h3>3. Unstated Assumptions</h3>
-  <ul>
-    <li>Assumes the closing price accurately reflects the day's true balance of power (ignoring intraday reversals).</li>
-    <li>Assumes all volume traded on an "up" day can be meaningfully classified as demand.</li>
-  </ul>
-</div>
-
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CHAPTER 11</div>
-    <h2>Reading Layers: Deconstructing Interday Volume</h2>
-
-<div class="content-card">
-  <ul>
-    <li><strong>Layer 1: Surface Reading</strong><br>OBV adds volume on up days and subtracts on down days to show supply/demand trends. VPT improves this by adding percentage change.</li>
-    <li><strong>Layer 2: Structural Reading</strong><br>The author structures the chapter as an evolutionary timeline: starting with OBV's blunt binary logic (Granville), advancing to VPT's proportional logic (Markstein), and culminating in VZO's modern oscillatory logic (Khalil).</li>
-    <li><strong>Layer 3: Contextual Reading</strong><br>These indicators reflect an era where daily closing data was the primary unit of analysis. They are "interday" because historical analysts couldn't easily access tick-by-tick intraday data.</li>
-    <li><strong>Layer 4: Critical Reading</strong><br>The binary nature of OBV is fundamentally flawed in modern, highly volatile markets where a stock might open down 5%, rally 4.9% intraday, and close down 0.1%. OBV would register the entire massive accumulation day as negative volume.</li>
-    <li><strong>Layer 5: Generative Reading</strong><br>How can we merge OBV logic with modern data? We could create an "Intraday-Weighted OBV" that splits daily volume precisely at the transaction level, or applies the VZO oscillator framework to high-frequency tick data.</li>
-  </ul>
-</div>
-
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CHAPTER 11</div>
-    <h2>Evidence Evaluation</h2>
-
-<div class="content-card">
-  <p><strong>Claim:</strong> "A series of new highs or lows in OBV is often a good indicator that a corresponding price breakout or down is developing." <span class="page-ref">Ch 11, p. 148</span></p>
-  
-  <p><strong>Evidence Type:</strong> Expert Authority (Joe Granville) / Logical Argument</p>
-  <p><strong>Quality Score:</strong> &starf;&starf;&starf;&star;&star; (3/5)</p>
-  
-  <h3>Strengths:</h3>
-  <ul>
-    <li>Logically sound: Price cannot sustain a move without capital, which manifests as volume.</li>
-    <li>Empirically validated over decades of charting history; OBV divergences are standard tools.</li>
-  </ul>
-  
-  <h3>Weaknesses:</h3>
-  <ul>
-    <li>Chapter lacks statistical backtesting (e.g., win rates of OBV breakouts). Relies on Granville's authority.</li>
-    <li>Vulnerable to gap-risk: Earnings gaps can drastically distort the OBV line permanently.</li>
-  </ul>
-  
-  <h3>2026 Update:</h3>
-  <p>In modern algo-driven markets, large block trades are executed in dark pools or sliced into VWAP algorithms, intentionally designed to hide from indicators like OBV. Yet, because algorithms still must eventually move the closing price to find liquidity, macro-level OBV trends remain structurally valid for swing traders.</p>
-</div>
-
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CHAPTER 11</div>
-    <h2>Competing Views: The Time Horizon Debate</h2>
-
-<div class="content-card">
-  <p><strong>Granville's Stance (Continuous OBV):</strong> OBV must be kept as a continuous running total from the inception of the asset. <span class="page-ref">Ch 11, p. 148</span></p>
-  
-  <h3>Alternative View: Rolling OBV (Modern Quants)</h3>
-  <p><strong>Core Claim:</strong> Accumulation from 10 years ago has zero predictive value for tomorrow's price. OBV should be restricted to a rolling period (e.g., 20 or 50 days).</p>
-  <p><strong>Why They Differ:</strong> Granville viewed OBV as an absolute structural ledger of supply/demand. Modern quants view it as a momentum state that decays over time.</p>
-  
-  <h3>Synthesis &amp; Integration</h3>
-  <ul>
-    <li><strong>When Granville is right:</strong> Analyzing long-term macro cycles in major indices (like the S&amp;P 500) where long-term demographics and secular shifts matter.</li>
-    <li><strong>When Rolling OBV is right:</strong> Active swing trading, where recent institutional positioning (the last 30 days) is the only relevant driver of near-term liquidity.</li>
-  </ul>
-</div>
-
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CHAPTER 11</div>
-    <h2>Implementation Guide</h2>
-
-<div class="content-card">
-  <h3>Phase 1: Understanding (Week 1)</h3>
-  <ul>
-    <li>Add OBV and VPT to your charting platform below price.</li>
-    <li>Look back at the last 5 major breakouts on your favorite stock. Did OBV make a new high before the price did?</li>
-  </ul>
-  
-  <h3>Phase 2: Experimentation (Week 2-4)</h3>
-  <ul>
-    <li><strong>The Setup:</strong> Scan for stocks whose price has been in a tight 3-week trading range, but whose OBV line is trending upward at a 45-degree angle.</li>
-    <li><strong>The Action:</strong> Take small position sizes upon the actual price breakout, using the OBV divergence as your primary conviction filter.</li>
-  </ul>
-  
-  <h3>Phase 3: Integration (Month 2+)</h3>
-  <ul>
-    <li>Compare OBV and VPT on the same charts. Notice how VPT filters out the noise of low-volatility, low-range days.</li>
-    <li>Test rolling 20-period OBV vs continuous OBV to see which fits your trading timeframe best.</li>
-  </ul>
-</div>
-
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CHAPTER 11</div>
-    <h2>Reflection Questions</h2>
-
-<div class="content-card">
-  <ul>
-    <li><strong>Understand:</strong> Why does OBV assign the entire day's volume as either positive or negative based solely on the close?</li>
-    <li><strong>Apply:</strong> If a stock gapped up 10% on massive volume, but traded perfectly sideways for the rest of the day, how would VPT map this compared to OBV?</li>
-    <li><strong>Analyze:</strong> What are the specific market conditions (e.g., high volatility vs low volatility) where VPT provides a mathematically superior signal to OBV?</li>
-    <li><strong>Evaluate:</strong> Do you agree with Granville that a continuous running total is better than a rolling period? Defend your position.</li>
-    <li><strong>Create:</strong> How could you build an algorithmic trading rule that combines a VZO oversold signal with a structural OBV divergence?</li>
-  </ul>
-</div>
-
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CHAPTER 11</div>
-    <h2>Closing Actions</h2>
-
-<div class="content-card">
-  <ul class="action-list">
-    <li class="action-item">
-      <div>
-        <div class="action-headline">Chart the OBV Divergence</div>
-        <div class="action-detail">Find a stock currently in a sideways consolidation. Check its OBV. If OBV is dropping sharply, avoid buying the dip&mdash;distribution is hiding in the flat price.</div>
+      <div class="chapter-hero">
+        <div class="chapter-number">Chapter 11</div>
+        <h1 class="chapter-title">Interday Volume Accumulation Indicators</h1>
+        <div class="chapter-meta">
+          <span>⏱️ 15 min read</span>
+          <span>📊 Intermediate</span>
+          <span>🔑 OBV, VPT, VZO, Cumulative Volume</span>
+        </div>
       </div>
-    </li>
-    <li class="action-item">
-      <div>
-        <div class="action-headline">Upgrade to VPT for high-beta stocks</div>
-        <div class="action-detail">Replace OBV with Volume Price Trend (VPT) on volatile assets to ensure volume is correctly weighted by the magnitude of the daily price swing.</div>
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CHAPTER 11</div>
+      <h2>Visual Summary</h2>
+
+      <div class="content-card">
+        <h2>Concept Map: Interday Volume</h2>
+        <div class="mermaid">
+          graph TD
+          A[Interday Volume Accumulation] --> B[On-Balance Volume<br />OBV]
+          A --> C[Volume Price Trend<br />VPT]
+          A --> D[Volume Zone Oscillator<br />VZO]
+          B --> E[Direction Only]
+          C --> F[Direction + Magnitude]
+          D --> G[Oscillator / Overbought-Oversold]
+
+          style A fill:#7C3AED,stroke:#E2E8F0,color:#FFFFFF
+          style B fill:#4C1D95,stroke:#E2E8F0,color:#FFFFFF
+          style C fill:#4C1D95,stroke:#E2E8F0,color:#FFFFFF
+          style D fill:#4C1D95,stroke:#E2E8F0,color:#FFFFFF
+        </div>
       </div>
-    </li>
-    <li class="action-item">
-      <div>
-        <div class="action-headline">Test the Rolling Window</div>
-        <div class="action-detail">Apply a 20-period rolling OBV to a 6-month chart and observe how it highlights short-term capital flows better than the continuous lifetime line.</div>
+
+    </section>
+
+    <section class="slide">
+
+      <div class="takeaway-hero">
+        <div class="kicker">CH 11 · THE BIG IDEA</div>
+        <div class="headline">"Price reveals what happened, but accumulating daily volume flows exposes the hidden
+          supply or demand building underneath."</div>
+        <div class="subline">Interday volume indicators like OBV act as the market's internal pressure gauge, often
+          predicting price breakouts before they happen.</div>
       </div>
-    </li>
-  </ul>
-</div>
 
-  </section>
+    </section>
 
-</div>
+    <section class="slide">
+      <div class="slide-kicker">CHAPTER 11</div>
+      <h2>Key Takeaways</h2>
 
-<div class="nav-controls">
-  <button class="nav-btn" id="prevBtn" onclick="prevSlide()" aria-label="Previous slide">&#8592;</button>
-  <div class="counter" id="counter" aria-live="polite">1 / 1</div>
-  <button class="nav-btn" id="nextBtn" onclick="nextSlide()" aria-label="Next slide">&#8594;</button>
-</div>
+      <div class="content-card">
+        <ul class="takeaway-list">
+          <li>
+            <strong>OBV detects hidden market coils</strong>
+            <p><strong>Why it matters:</strong> Volume often precedes price. Rising OBV during a flat price trend
+              signals hidden accumulation.</p>
+            <p><strong>Evidence:</strong> Granville's observation that OBV highs/lows reliably precede price breakouts.
+              <span class="page-ref">Ch 11, p. 148</span>
+            </p>
+            <p><strong>Application:</strong> Watch for divergences where OBV breaks out before price does.</p>
+            <p><strong>Caveat:</strong> OBV treats a 1-cent gain exactly the same as a 10-dollar gain.</p>
+          </li>
+          <li>
+            <strong>VPT improves upon OBV by adding magnitude</strong>
+            <p><strong>Why it matters:</strong> Weighting volume by the percentage price change creates a more
+              proportional measure of supply/demand.</p>
+            <p><strong>Evidence:</strong> Markstein's 1966 adaptation integrates price magnitude directly into the
+              volume flow. <span class="page-ref">Ch 11, p. 150</span></p>
+            <p><strong>Application:</strong> Use VPT instead of OBV when tracking highly volatile assets where daily
+              price ranges vary wildly.</p>
+            <p><strong>Caveat:</strong> VPT can be distorted by sudden massive gap-ups on earnings.</p>
+          </li>
+          <li>
+            <strong>Rolling vs. Continuous Accumulation</strong>
+            <p><strong>Why it matters:</strong> While Granville insisted on continuous lifetime running totals, rolling
+              periods adapt faster to current conditions.</p>
+            <p><strong>Evidence:</strong> Modern practitioners often use rolling 20-period OBV. <span
+                class="page-ref">Ch 11, p. 148</span></p>
+            <p><strong>Application:</strong> Apply a 20-period rolling OBV for short-term swing trading to filter out
+              historical baggage.</p>
+            <p><strong>Caveat:</strong> Granville firmly opposed rolling totals for long-term forecasting.</p>
+          </li>
+          <li>
+            <strong>VZO turns accumulation into an oscillator</strong>
+            <p><strong>Why it matters:</strong> Oscillators provide clear overbought/oversold boundaries.</p>
+            <p><strong>Evidence:</strong> Khalil bounded the VZO between -100 and +100 by dividing EMA of +/- volume by
+              EMA of total volume. <span class="page-ref">Ch 11, p. 150</span></p>
+            <p><strong>Application:</strong> Use VZO to identify exhaustion points in cumulative volume trends.</p>
+            <p><strong>Caveat:</strong> Oscillators can stay "overbought" for long periods during strong trends.</p>
+          </li>
+        </ul>
+      </div>
 
-<script src="common.js"></script>
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CHAPTER 11</div>
+      <h2>Context &amp; Background</h2>
+
+      <div class="content-card">
+        <h3>1. Intellectual Tradition</h3>
+        <ul>
+          <li><strong>School of Thought:</strong> Cumulative Volume Analysis.</li>
+          <li><strong>Intellectual Lineage:</strong> Paul Clay (1932) &rarr; Frank Vignolia (1946) &rarr; Joe Granville
+            (1961) &rarr; David Markstein (1966).</li>
+          <li><strong>Key Influences:</strong> Granville brought OBV to the mainstream, turning technical analysis from
+            a niche charting practice into a popular strategy.</li>
+        </ul>
+
+        <h3>2. Historical Moment</h3>
+        <ul>
+          <li><strong>Era:</strong> Mid-20th Century (1960s).</li>
+          <li><strong>Technological State:</strong> Pre-computer charting. OBV was revolutionary because it was
+            mathematically simple enough to calculate by hand daily (just add or subtract volume).</li>
+        </ul>
+
+        <h3>3. Evolution of Ideas</h3>
+        <ul>
+          <li><strong>Then (1960s):</strong> OBV was a groundbreaking insight into hidden institutional accumulation.
+          </li>
+          <li><strong>Now (2026):</strong> Algorithms can easily mask their volume footprints intraday, yet interday
+            accumulation remains a robust macro-indicator. Variants like VZO apply modern smoothing (EMA) and
+            oscillation techniques impossible to do quickly by hand in 1961.</li>
+        </ul>
+      </div>
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CHAPTER 11</div>
+      <h2>Notable Quotes</h2>
+
+      <div class="content-card">
+        <div class="quote-block">
+          <p class="quote-text">"Truth is never out of date. There're only two things that can change the value of a
+            stock: supply and demand, the only things I teach."</p>
+          <p class="quote-context">&mdash; Joe Granville, when asked in 2002 if his methods still worked. <span
+              class="page-ref">Ch 11, p. 149</span></p>
+        </div>
+        <div class="quote-analysis">
+          <p><strong>Interpretation:</strong> Market structures, technologies, and participants change, but the
+            fundamental physics of price discovery&mdash;buyers vs. sellers&mdash;remains absolute.</p>
+          <p><strong>Significance:</strong> This highlights the philosophical core of volume analysis. It isn't a hack
+            or a statistical anomaly; it is a direct measurement of market mechanics.</p>
+        </div>
+
+        <div class="quote-block">
+          <p class="quote-text">"[OBV's] original objective... was to uncover hidden building tensions in otherwise
+            uneventful nontrending price patterns."</p>
+          <p class="quote-context">&mdash; Chapter 11. <span class="page-ref">Ch 11, p. 148-149</span></p>
+        </div>
+        <div class="quote-analysis">
+          <p><strong>Interpretation:</strong> Sideways markets aren't always dormant. OBV acts like an X-ray, revealing
+            if the quiet consolidation is being used to quietly accumulate (buy) or distribute (sell).</p>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CHAPTER 11</div>
+      <h2>Mental Models: On-Balance Volume (OBV)</h2>
+
+      <div class="content-card">
+        <p><strong>Core Principle:</strong> Volume on an "up" day represents pure demand; volume on a "down" day
+          represents pure supply. Accumulating them over time reveals the true balance of power.</p>
+
+        <h3>How It Works:</h3>
+        <ol>
+          <li>If today's close &gt; yesterday's close: add today's volume to the running total.</li>
+          <li>If today's close &lt; yesterday's close: subtract today's volume from the running total.</li>
+          <li>If unchanged: do nothing.</li>
+        </ol>
+
+        <h3>When to Apply:</h3>
+        <ul>
+          <li><strong>Consolidations:</strong> When price is moving sideways in a tight range.</li>
+          <li><strong>Trend Confirmation:</strong> To verify if a price trend has the participation required to sustain
+            it.</li>
+        </ul>
+
+        <h3>Limitations:</h3>
+        <ul>
+          <li><strong>Binary Flaw:</strong> A close up by 1 cent adds the <em>entire</em> day's volume as positive,
+            treating it identically to a +$10 day.</li>
+          <li><strong>Starting Point Arbitrariness:</strong> The absolute number of OBV is meaningless; only its
+            <em>trend</em> matters.
+          </li>
+        </ul>
+      </div>
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CHAPTER 11</div>
+      <h2>Mental Models: VPT &amp; VZO</h2>
+
+      <div class="content-card">
+        <h3>Volume Price Trend (VPT)</h3>
+        <p><strong>Core Principle:</strong> Volume accumulation should be proportional to the magnitude of the price
+          move.</p>
+        <p><strong>How It Works:</strong> VPT = Prior VPT + (Current Volume &times; % Change in Close). This solves
+          OBV's binary flaw. A massive up-day heavily impacts the indicator; a flat up-day barely moves it.</p>
+
+        <h3>Volume Zone Oscillator (VZO)</h3>
+        <p><strong>Core Principle:</strong> Cumulative volume trends experience exhaustion and can be mapped within
+          overbought/oversold bounds.</p>
+        <p><strong>How It Works:</strong> Smooths +/- volume with an EMA, divides by the EMA of total volume, and
+          multiplies by 100. Range is fixed from -100 to +100.</p>
+        <p><strong>Application:</strong> Identifying shorter-term mean-reversion setups within the broader volume trend.
+          When VZO hits +90, buying pressure may be temporarily exhausted.</p>
+      </div>
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CHAPTER 11</div>
+      <h2>Signal Matrix: OBV vs. Price Trend</h2>
+
+      <div class="content-card">
+        <table class="signal-matrix">
+          <thead>
+            <tr>
+              <th></th>
+              <th>OBV Rising (New Highs)</th>
+              <th>OBV Falling (New Lows)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th class="row-header">Price Rising</th>
+              <td class="bullish"><span class="signal-label">Confirm</span>Healthy uptrend supported by demand.</td>
+              <td class="warning"><span class="signal-label">Divergence</span>Price up without volume. Vulnerable to
+                reversal.</td>
+            </tr>
+            <tr>
+              <th class="row-header">Price Flat (Sideways)</th>
+              <td class="opportunity"><span class="signal-label">Hidden Accumulation</span>Coiled spring. Upside
+                breakout likely.</td>
+              <td class="bearish"><span class="signal-label">Hidden Distribution</span>Smart money selling into
+                strength. Downside likely.</td>
+            </tr>
+            <tr>
+              <th class="row-header">Price Falling</th>
+              <td class="warning"><span class="signal-label">Divergence</span>Sellers lack conviction. Potential bottom.
+              </td>
+              <td class="bearish"><span class="signal-label">Confirm</span>Healthy downtrend driven by supply.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CHAPTER 11</div>
+      <h2>Deep Dive: Mechanics of Interday Accumulation</h2>
+
+      <div class="content-card">
+        <h3>1. Core Argument</h3>
+        <p>By classifying entire daily volumes as either "buying" or "selling" based purely on the closing price, and
+          aggregating them over time, you filter out market noise and expose the underlying flow of funds.</p>
+
+        <h3>2. Logic Structure</h3>
+        <ul>
+          <li><strong>Premise 1:</strong> Net buying pressure results in a higher close; net selling results in a lower
+            close.</li>
+          <li><strong>Premise 2:</strong> Institutional participation leaves a massive volume footprint.</li>
+          <li><strong>Conclusion:</strong> A cumulative ledger of volume signed by closing direction accurately tracks
+            institutional positioning over time.</li>
+        </ul>
+
+        <h3>3. Unstated Assumptions</h3>
+        <ul>
+          <li>Assumes the closing price accurately reflects the day's true balance of power (ignoring intraday
+            reversals).</li>
+          <li>Assumes all volume traded on an "up" day can be meaningfully classified as demand.</li>
+        </ul>
+      </div>
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CHAPTER 11</div>
+      <h2>Reading Layers: Deconstructing Interday Volume</h2>
+
+      <div class="content-card">
+        <ul>
+          <li><strong>Layer 1: Surface Reading</strong><br>OBV adds volume on up days and subtracts on down days to show
+            supply/demand trends. VPT improves this by adding percentage change.</li>
+          <li><strong>Layer 2: Structural Reading</strong><br>The author structures the chapter as an evolutionary
+            timeline: starting with OBV's blunt binary logic (Granville), advancing to VPT's proportional logic
+            (Markstein), and culminating in VZO's modern oscillatory logic (Khalil).</li>
+          <li><strong>Layer 3: Contextual Reading</strong><br>These indicators reflect an era where daily closing data
+            was the primary unit of analysis. They are "interday" because historical analysts couldn't easily access
+            tick-by-tick intraday data.</li>
+          <li><strong>Layer 4: Critical Reading</strong><br>The binary nature of OBV is fundamentally flawed in modern,
+            highly volatile markets where a stock might open down 5%, rally 4.9% intraday, and close down 0.1%. OBV
+            would register the entire massive accumulation day as negative volume.</li>
+          <li><strong>Layer 5: Generative Reading</strong><br>How can we merge OBV logic with modern data? We could
+            create an "Intraday-Weighted OBV" that splits daily volume precisely at the transaction level, or applies
+            the VZO oscillator framework to high-frequency tick data.</li>
+        </ul>
+      </div>
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CHAPTER 11</div>
+      <h2>Evidence Evaluation</h2>
+
+      <div class="content-card">
+        <p><strong>Claim:</strong> "A series of new highs or lows in OBV is often a good indicator that a corresponding
+          price breakout or down is developing." <span class="page-ref">Ch 11, p. 148</span></p>
+
+        <p><strong>Evidence Type:</strong> Expert Authority (Joe Granville) / Logical Argument</p>
+        <p><strong>Quality Score:</strong> &starf;&starf;&starf;&star;&star; (3/5)</p>
+
+        <h3>Strengths:</h3>
+        <ul>
+          <li>Logically sound: Price cannot sustain a move without capital, which manifests as volume.</li>
+          <li>Empirically validated over decades of charting history; OBV divergences are standard tools.</li>
+        </ul>
+
+        <h3>Weaknesses:</h3>
+        <ul>
+          <li>Chapter lacks statistical backtesting (e.g., win rates of OBV breakouts). Relies on Granville's authority.
+          </li>
+          <li>Vulnerable to gap-risk: Earnings gaps can drastically distort the OBV line permanently.</li>
+        </ul>
+
+        <h3>2026 Update:</h3>
+        <p>In modern algo-driven markets, large block trades are executed in dark pools or sliced into VWAP algorithms,
+          intentionally designed to hide from indicators like OBV. Yet, because algorithms still must eventually move
+          the closing price to find liquidity, macro-level OBV trends remain structurally valid for swing traders.</p>
+      </div>
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CHAPTER 11</div>
+      <h2>Competing Views: The Time Horizon Debate</h2>
+
+      <div class="content-card">
+        <p><strong>Granville's Stance (Continuous OBV):</strong> OBV must be kept as a continuous running total from the
+          inception of the asset. <span class="page-ref">Ch 11, p. 148</span></p>
+
+        <h3>Alternative View: Rolling OBV (Modern Quants)</h3>
+        <p><strong>Core Claim:</strong> Accumulation from 10 years ago has zero predictive value for tomorrow's price.
+          OBV should be restricted to a rolling period (e.g., 20 or 50 days).</p>
+        <p><strong>Why They Differ:</strong> Granville viewed OBV as an absolute structural ledger of supply/demand.
+          Modern quants view it as a momentum state that decays over time.</p>
+
+        <h3>Synthesis &amp; Integration</h3>
+        <ul>
+          <li><strong>When Granville is right:</strong> Analyzing long-term macro cycles in major indices (like the
+            S&amp;P 500) where long-term demographics and secular shifts matter.</li>
+          <li><strong>When Rolling OBV is right:</strong> Active swing trading, where recent institutional positioning
+            (the last 30 days) is the only relevant driver of near-term liquidity.</li>
+        </ul>
+      </div>
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CHAPTER 11</div>
+      <h2>Implementation Guide</h2>
+
+      <div class="content-card">
+        <h3>Phase 1: Understanding (Week 1)</h3>
+        <ul>
+          <li>Add OBV and VPT to your charting platform below price.</li>
+          <li>Look back at the last 5 major breakouts on your favorite stock. Did OBV make a new high before the price
+            did?</li>
+        </ul>
+
+        <h3>Phase 2: Experimentation (Week 2-4)</h3>
+        <ul>
+          <li><strong>The Setup:</strong> Scan for stocks whose price has been in a tight 3-week trading range, but
+            whose OBV line is trending upward at a 45-degree angle.</li>
+          <li><strong>The Action:</strong> Take small position sizes upon the actual price breakout, using the OBV
+            divergence as your primary conviction filter.</li>
+        </ul>
+
+        <h3>Phase 3: Integration (Month 2+)</h3>
+        <ul>
+          <li>Compare OBV and VPT on the same charts. Notice how VPT filters out the noise of low-volatility, low-range
+            days.</li>
+          <li>Test rolling 20-period OBV vs continuous OBV to see which fits your trading timeframe best.</li>
+        </ul>
+      </div>
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CHAPTER 11</div>
+      <h2>Reflection Questions</h2>
+
+      <div class="content-card">
+        <ul>
+          <li><strong>Understand:</strong> Why does OBV assign the entire day's volume as either positive or negative
+            based solely on the close?</li>
+          <li><strong>Apply:</strong> If a stock gapped up 10% on massive volume, but traded perfectly sideways for the
+            rest of the day, how would VPT map this compared to OBV?</li>
+          <li><strong>Analyze:</strong> What are the specific market conditions (e.g., high volatility vs low
+            volatility) where VPT provides a mathematically superior signal to OBV?</li>
+          <li><strong>Evaluate:</strong> Do you agree with Granville that a continuous running total is better than a
+            rolling period? Defend your position.</li>
+          <li><strong>Create:</strong> How could you build an algorithmic trading rule that combines a VZO oversold
+            signal with a structural OBV divergence?</li>
+        </ul>
+      </div>
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CHAPTER 11</div>
+      <h2>Closing Actions</h2>
+
+      <div class="content-card">
+        <ul class="action-list">
+          <li class="action-item">
+            <div>
+              <div class="action-headline">Chart the OBV Divergence</div>
+              <div class="action-detail">Find a stock currently in a sideways consolidation. Check its OBV. If OBV is
+                dropping sharply, avoid buying the dip&mdash;distribution is hiding in the flat price.</div>
+            </div>
+          </li>
+          <li class="action-item">
+            <div>
+              <div class="action-headline">Upgrade to VPT for high-beta stocks</div>
+              <div class="action-detail">Replace OBV with Volume Price Trend (VPT) on volatile assets to ensure volume
+                is correctly weighted by the magnitude of the daily price swing.</div>
+            </div>
+          </li>
+          <li class="action-item">
+            <div>
+              <div class="action-headline">Test the Rolling Window</div>
+              <div class="action-detail">Apply a 20-period rolling OBV to a 6-month chart and observe how it highlights
+                short-term capital flows better than the continuous lifetime line.</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="nav-controls">
+    <button class="nav-btn" id="prevBtn" onclick="prevSlide()" aria-label="Previous slide">&#8592;</button>
+    <div class="counter" id="counter" aria-live="polite">1 / 1</div>
+    <button class="nav-btn" id="nextBtn" onclick="nextSlide()" aria-label="Next slide">&#8594;</button>
+  </div>
+
+  <script src="../common.js"></script>
 </body>
+
 </html>

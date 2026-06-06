@@ -1,397 +1,461 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Investing with Volume Analysis — Chapter 16</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="common.css">
-<script src="https://cdn.jsdelivr.net/npm/mermaid@11.10.0/dist/mermaid.min.js" crossorigin="anonymous"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Investing with Volume Analysis — Chapter 16</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../common.css">
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@11.10.0/dist/mermaid.min.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
 
-<div class="progress-bar" id="progressBar"></div>
+  <div class="progress-bar" id="progressBar"></div>
 
-<div class="chapter-menu">
-  <button class="menu-btn" id="chapterMenuBtn" onclick="toggleChapterMenu()" aria-haspopup="true" aria-expanded="false">Chapters &#9662;</button>
-  <div class="chapter-menu-panel" id="chapterMenuPanel" role="menu"></div>
-</div>
-
-<div class="slide-container" id="slideContainer">
-
-  <section class="slide" aria-hidden="false">
-<section class="slide" aria-hidden="false">
-  <figure class="image-slot hero">
-    <div class="image-prompt">
-      <span class="image-prompt-label">AI Image Prompt</span>
-      <p class="image-prompt-text">"Clean isometric illustration of interconnected gears and stock market data, grids, deep purple and emerald accents, high contrast"</p>
-      <span class="image-prompt-hint">Paste this into ChatGPT/Midjourney, save as images/ch16-hero.jpg, replace this block with &lt;img src="images/ch16-hero.jpg"&gt;</span>
-    </div>
-  </figure>
-  <h1>Investing with Volume Analysis</h1>
-  <p class="subtitle">Chapter 16: Volume-Weighted Price Indicators</p>
-  <div class="meta-grid">
-    <div class="meta-item">
-      <span class="meta-icon">⏱️</span>
-      <span class="meta-label">Est. Time</span>
-      <span class="meta-value">15 min</span>
-    </div>
-    <div class="meta-item">
-      <span class="meta-icon">🧠</span>
-      <span class="meta-label">Mode</span>
-      <span class="meta-value">DEEP</span>
-    </div>
+  <div class="chapter-menu">
+    <button class="menu-btn" id="chapterMenuBtn" onclick="toggleChapterMenu()" aria-haspopup="true"
+      aria-expanded="false">Chapters &#9662;</button>
+    <div class="chapter-menu-panel" id="chapterMenuPanel" role="menu"></div>
   </div>
-</section>
 
-  </section>
+  <div class="slide-container" id="slideContainer">
 
-  <section class="slide chapter-divider">
-<section class="slide chapter-divider">
-  <div class="chapter-number">Chapter 16</div>
-  <h2>Volume-Weighted Price Indicators</h2>
-  <p class="chapter-meta">Est. reading time: 15 min · Difficulty: Advanced · Key concepts: VWMA, VW-MACD, TTI, The 4 Rs</p>
-</section>
+    <section class="slide" aria-hidden="false">
+      <section class="slide" aria-hidden="false">
+        <figure class="image-slot hero">
+          <div class="image-prompt">
+            <span class="image-prompt-label">AI Image Prompt</span>
+            <p class="image-prompt-text">"Clean isometric illustration of interconnected gears and stock market data,
+              grids, deep purple and emerald accents, high contrast"</p>
+            <span class="image-prompt-hint">Paste this into ChatGPT/Midjourney, save as images/ch16-hero.jpg, replace
+              this block with &lt;img src="images/ch16-hero.jpg"&gt;</span>
+          </div>
+        </figure>
+        <h1>Investing with Volume Analysis</h1>
+        <p class="subtitle">Chapter 16: Volume-Weighted Price Indicators</p>
+        <div class="meta-grid">
+          <div class="meta-item">
+            <span class="meta-icon">⏱️</span>
+            <span class="meta-label">Est. Time</span>
+            <span class="meta-value">15 min</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-icon">🧠</span>
+            <span class="meta-label">Mode</span>
+            <span class="meta-value">DEEP</span>
+          </div>
+        </div>
+      </section>
 
-  </section>
+    </section>
 
-  <section class="slide">
-    <div class="slide-kicker">CH 16 · VISUAL SUMMARY</div>
-    <h2>Evolution of Volume-Weighted Indicators</h2>
-<div class="content-card">
-  <div class="mermaid">
-  graph TD
-      A[Price-Only Indicators] --> B[Simple Moving Average]
-      A --> C[MACD]
-      A --> D[RSI]
-      
-      E[Volume Infusion] --> F[Volume-Weighted Moving Average]
-      E --> G[VW-MACD]
-      E --> H[Trend Thrust Indicator]
-      E --> I[Money Flow Index]
-      
-      B -.->|Weighted by Volume| F
-      C -.->|Weighted by Volume| G
-      G -.->|Multiplier + Adaptive Line| H
-      D -.->|Typical Price + Volume| I
-      
-      style F fill:#7C3AED,stroke:#E2E8F0,color:#FFFFFF
-      style G fill:#7C3AED,stroke:#E2E8F0,color:#FFFFFF
-      style H fill:#059669,stroke:#E2E8F0,color:#FFFFFF
-      style I fill:#D97706,stroke:#E2E8F0,color:#FFFFFF
+    <section class="slide chapter-divider">
+      <section class="slide chapter-divider">
+        <div class="chapter-number">Chapter 16</div>
+        <h2>Volume-Weighted Price Indicators</h2>
+        <p class="chapter-meta">Est. reading time: 15 min · Difficulty: Advanced · Key concepts: VWMA, VW-MACD, TTI, The
+          4 Rs</p>
+      </section>
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 16 · VISUAL SUMMARY</div>
+      <h2>Evolution of Volume-Weighted Indicators</h2>
+      <div class="content-card">
+        <div class="mermaid">
+          graph TD
+          A[Price-Only Indicators] --> B[Simple Moving Average]
+          A --> C[MACD]
+          A --> D[RSI]
+
+          E[Volume Infusion] --> F[Volume-Weighted Moving Average]
+          E --> G[VW-MACD]
+          E --> H[Trend Thrust Indicator]
+          E --> I[Money Flow Index]
+
+          B -.->|Weighted by Volume| F
+          C -.->|Weighted by Volume| G
+          G -.->|Multiplier + Adaptive Line| H
+          D -.->|Typical Price + Volume| I
+
+          style F fill:#7C3AED,stroke:#E2E8F0,color:#FFFFFF
+          style G fill:#7C3AED,stroke:#E2E8F0,color:#FFFFFF
+          style H fill:#059669,stroke:#E2E8F0,color:#FFFFFF
+          style I fill:#D97706,stroke:#E2E8F0,color:#FFFFFF
+        </div>
+      </div>
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 16 · THE BIG IDEA</div>
+      <h2>The Big Idea</h2>
+      <div class="takeaway-hero">
+        <div class="kicker">CH 16 · THE BIG IDEA</div>
+        <div class="headline">"By weighting price averages with volume, we dissolve the age-old paradox of technical
+          analysis—achieving faster signals without sacrificing reliability."</div>
+        <div class="subline">When volume confirms price, signals speed up; when volume diverges, bad signals slow down.
+        </div>
+      </div>
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 16 · KEY TAKEAWAYS</div>
+      <h2>Core Insights</h2>
+      <ul class="takeaway-list">
+        <li class="takeaway-item">
+          <div class="takeaway-badge">1</div>
+          <div class="takeaway-text">Volume breaks the speed vs. reliability trade-off</div>
+          <div class="takeaway-detail">
+            <strong>Why it matters:</strong> Usually, faster moving averages create false signals. Volume weighting
+            speeds up trends when participation is real and filters noise when it's not.
+            <br><strong>Evidence:</strong> TTI produced 51.6% profitable trades vs MACD's 34.6%. <span
+              class="page-ref">Ch 16, p. 179</span>
+            <br><strong>Application:</strong> Upgrade SMAs to VWMAs.
+          </div>
+        </li>
+        <li class="takeaway-item">
+          <div class="takeaway-badge">2</div>
+          <div class="takeaway-text">Volume-weighting minimizes downside risk</div>
+          <div class="takeaway-detail">
+            <strong>Why it matters:</strong> Slower exits in traditional indicators leave money on the table and expose
+            traders to steep drawdowns.
+            <br><strong>Evidence:</strong> In small caps, VWMA experienced lower drawdowns in 14 of 20 tested stocks.
+            <span class="page-ref">Ch 16, p. 166</span>
+            <br><strong>Application:</strong> Use volume-weighted trailing stops to cut losses aggressively during
+            distributions.
+          </div>
+        </li>
+        <li class="takeaway-item">
+          <div class="takeaway-badge">3</div>
+          <div class="takeaway-text">The Trend Thrust Indicator (TTI) outshines MACD</div>
+          <div class="takeaway-detail">
+            <strong>Why it matters:</strong> TTI pairs VWMA with an adaptive signal line that loosens during
+            confirmation and tightens during divergence.
+            <br><strong>Evidence:</strong> Across 60 stocks, TTI outperformed MACD by $261,403 in the simulated
+            backtest. <span class="page-ref">Ch 16, p. 180</span>
+            <br><strong>Caveat:</strong> Highly illiquid or low-beta stocks may still produce choppy signals.
+          </div>
+        </li>
+      </ul>
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 16 · NOTABLE QUOTES</div>
+      <h2>Breaking the Paradox</h2>
+      <div class="quote-block">
+        <p class="quote-text">"By infusing price averages with volume, I simultaneously sped up the moving averages
+          signals while obtaining more reliable signals, thereby breaking the age-old paradox of haste makes waste."</p>
+        <p class="quote-context"><strong>— Buff Dormeier</strong>, on replacing Simple Moving Averages with
+          Volume-Weighted ones. <span class="page-ref">Ch 16, p. 165</span></p>
+      </div>
+
+      <div class="quote-block">
+        <p class="quote-text">"Because volume leads price, it makes sense to introduce volume into momentum indicators
+          to make them even faster."</p>
+        <p class="quote-context"><strong>— Buff Dormeier</strong>, introducing the concept of volume-weighting. <span
+            class="page-ref">Ch 16, p. 157</span></p>
+      </div>
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 16 · CONTEXT &amp; BACKGROUND</div>
+      <h2>From Price-Only to Volume-Weighted</h2>
+      <div class="content-card">
+        <div class="summary-text">
+          <strong>Author's Lens:</strong><br>
+          Buff Dormeier didn't just study these indicators—he invented them. He formulated "Buff Averages" (later named
+          Volume-Weighted Moving Averages, or VWMA) in the late 1990s and published them in 2001. He subsequently
+          created the VW-MACD and TTI while managing portfolios at T.P. Donovan Investments.
+
+          <br><br><strong>Historical Paradigm Shift:</strong><br>
+          Since Charles Dow, technical analysis largely separated price trends and volume confirmation. Analysts
+          visually inspected volume bars below price charts. The creation of VWMA mathematically married the two,
+          shifting the paradigm from "Price + Volume (visual)" to "Price * Volume (computed)."
+
+          <br><br><strong>Evolution of Ideas (Then vs Now):</strong><br>
+          In 1999, VWMA was revolutionary. By 2026, VWAP (Volume-Weighted Average Price) is an institutional standard
+          for algorithmic execution. However, Dormeier's specific TTI and adaptive smoothing concepts remain
+          underutilized alpha generators.
+        </div>
+      </div>
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 16 · DEEP DIVE</div>
+      <h2>The Four Rs of Volume</h2>
+      <div class="deep-section practical">
+        <div class="bullet-grid">
+          <div class="bullet-card">
+            <div class="bullet-icon">⚡</div>
+            <h4>1. Responsiveness</h4>
+            <p>Do volume-infused averages lead? Yes. In the 60-stock study, the TTI generated more total signals (7,905)
+              than the simple MACD (6,858), finding trend shifts faster. <span class="page-ref">Ch 16, p. 164</span></p>
+          </div>
+          <div class="bullet-card">
+            <div class="bullet-icon">🎯</div>
+            <h4>2. Reliability</h4>
+            <p>Are the signals accurate? The paradox dictates faster signals are noisier. Yet, TTI profitability soared
+              to 51.6%, crushing MACD's 34.6%. <span class="page-ref">Ch 16, p. 179</span></p>
+          </div>
+          <div class="bullet-card">
+            <div class="bullet-icon">🛡️</div>
+            <h4>3. Risk</h4>
+            <p>Does it limit losses? Because TTI's adaptive line tightens when volume diverges, false trends are exited
+              swiftly. Average drawdown was consistently lower in high-beta stocks. <span class="page-ref">Ch 16, p.
+                166</span></p>
+          </div>
+          <div class="bullet-card">
+            <div class="bullet-icon">💰</div>
+            <h4>4. Return</h4>
+            <p>Does it produce more profit? Across three capitalizations and four styles, VWMA generated $328,843 more
+              total profit than SMA. <span class="page-ref">Ch 16, p. 168</span></p>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 16 · MENTAL MODELS</div>
+      <h2>Trend Thrust Indicator (TTI)</h2>
+      <div class="mental-model-card">
+        <h4 class="model-name">Trend Thrust Indicator (TTI)</h4>
+        <div class="model-principle">Enhancing MACD through volume-weighting, volume multipliers, and an adaptive signal
+          line.</div>
+
+        <div class="model-application">
+          <strong>How It Works:</strong>
+          <ul>
+            <li><strong>The Buff Spread:</strong> Replaces MACD's exponential averages with VWMAs, then applies a
+              squared volume multiplier.</li>
+            <li><strong>The Adaptive Signal Line:</strong> Lengthens (smooths) when volume increases, delaying false
+              exits. Shortens (tightens) when volume decreases, generating faster counter-trend exits. <span
+                class="page-ref">Ch 16, p. 173</span></li>
+          </ul>
+          <strong>When to Apply:</strong>
+          <ul>
+            <li>High-volatility, high-volume stocks where trend confirmation is paramount.</li>
+          </ul>
+        </div>
+
+        <div class="model-limitations">
+          <strong>⚠️ Limitations & Caveats:</strong>
+          <ul>
+            <li>Computationally intense to build from scratch.</li>
+            <li>Low-volume large caps may not yield a massive edge over traditional MACD.</li>
+          </ul>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 16 · SIGNAL MATRIX</div>
+      <h2>TTI Adaptive Signals</h2>
+      <div class="content-card">
+        <table class="signal-matrix">
+          <thead>
+            <tr>
+              <th>State</th>
+              <th>Volume Increases</th>
+              <th>Volume Decreases</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th class="row-header">Buff Spread > Adaptive Signal</th>
+              <td class="bullish"><span class="signal-label">Confirm</span>Buy: Signal line loosens, keeping you in the
+                trade.</td>
+              <td class="warning"><span class="signal-label">Warning</span>Signal line tightens. Prepare for early exit.
+              </td>
+            </tr>
+            <tr>
+              <th class="row-header">Buff Spread < Adaptive Signal</th>
+              <td class="bearish"><span class="signal-label">Confirm</span>Sell: Distribution validated. Avoid buying.
+              </td>
+              <td class="neutral"><span class="signal-label">Sideways</span>Trend lacks conviction. Range-bound.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 16 · EVIDENCE EVALUATION</div>
+      <h2>The 60-Stock Study</h2>
+      <div class="evidence-card">
+        <div class="evidence-header">
+          <span class="claim-text">Volume Weighting Improves Trading System Results (The 60-Stock Study)</span>
+          <span class="quality-score">⭐⭐⭐⭐☆ 4/5</span>
+        </div>
+        <div class="evidence-type">📊 Empirical Data</div>
+        <div class="evidence-body">
+          <p><strong>Methodology:</strong> Dormeier backtested SMA vs VWMA, and MACD vs TTI over 3,000 trading days
+            (2,000 for mid/small caps). 60 stocks across 12 subgroups (capitalization + volume/beta combinations). <span
+              class="page-ref">Ch 16, p. 175</span></p>
+          <p><strong>Strengths:</strong> Highly structured testing isolating specific variables (volume, beta, cap).
+            Comprehensive sample size yielding statistically significant profitability delta ($261,403 improvement for
+            TTI over MACD).</p>
+          <p><strong>Weaknesses:</strong> Backtest is historical; does not account for slippage or exact trading fees.
+          </p>
+          <p><strong>2026 Context:</strong> Validated daily. Institutional reliance on VWAP for algorithmic entry/exit
+            corroborates the supremacy of volume-weighting over price-only averages.</p>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 16 · COUNTERARGUMENTS</div>
+      <h2>The Price-Only &amp; Dark Pool Critiques</h2>
+      <div class="split-layout">
+        <div class="split-left">
+          <h4>Dormeier's View</h4>
+          <p>Volume data contains distinct, leading information that price averages ignore. Injecting volume directly
+            into the moving average formula forces the indicator to reflect actual market conviction, reducing risk and
+            increasing return. <span class="page-ref">Ch 16, p. 181</span></p>
+        </div>
+        <div class="split-right">
+          <h4>The 2026 Algorithmic Critique</h4>
+          <p><strong>Dark Pools & Internalization:</strong> Critics argue that in modern markets, up to 40-50% of volume
+            is routed off-exchange (dark pools). Therefore, relying on "lit" volume for VWMA calculations may skew
+            indicators toward retail noise rather than institutional conviction.</p>
+          <p><strong>Synthesis:</strong> The solution isn't to abandon VWMA, but to ensure your data feed aggregates
+            consolidated tape volume, and to supplement analysis with Dark Index (DIX) metrics.</p>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 16 · READING LAYERS</div>
+      <h2>Depths of Volume Weighting</h2>
+      <div class="content-card">
+        <div class="summary-text">
+          <strong>Layer 1: Surface</strong><br>
+          Replacing a Simple Moving Average (SMA) with a Volume-Weighted Moving Average (VWMA) improves trading
+          results.<br><br>
+
+          <strong>Layer 2: Structural</strong><br>
+          The classic paradox—fast indicators generate false signals—is fundamentally solved. Volume provides a
+          filtering mechanism that validates speed.<br><br>
+
+          <strong>Layer 3: Contextual</strong><br>
+          Dormeier's creation of VWMA in the late 90s bridged the gap between visual volume analysis (Dow, Wyckoff) and
+          modern computed oscillators (Appel, Wilder).<br><br>
+
+          <strong>Layer 4: Generative</strong><br>
+          If volume weighting works, what about Volatility Weighting? What if the adaptive signal line in TTI
+          incorporated Average True Range (ATR) as an additional multiplier? The architecture is highly extensible.
+        </div>
+      </div>
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 16 · IMPLEMENTATION GUIDE</div>
+      <h2>Upgrading Your Arsenal</h2>
+      <div class="phase-progress">
+        <div class="phase active">Phase 1: Foundation</div>
+        <div class="phase">Phase 2: Transition</div>
+        <div class="phase">Phase 3: Backtest</div>
+        <div class="phase">Phase 4: Mastery</div>
+      </div>
+
+      <div class="content-card" style="margin-top: 1rem;">
+        <ul class="checklist" style="list-style-type: none; padding-left: 0;">
+          <li>✅ <strong>Foundation:</strong> Replace the 50-day SMA on your main chart with a 50-day VWMA. Observe the
+            divergence visually when volume spikes.</li>
+          <li>✅ <strong>Transition:</strong> Swap the RSI for the Money Flow Index (MFI). Treat overbought/oversold
+            extremes as "fuel" for continuation rather than immediate reversals. <span class="page-ref">Ch 16, p.
+              159</span></li>
+          <li>✅ <strong>Backtest:</strong> Program the TTI into your charting software (e.g., TradeStation,
+            TradingView). Test it specifically on high-beta mid-cap stocks where it performs best.</li>
+          <li>✅ <strong>Mastery:</strong> Learn to read the spread divergence. When price makes a new high but the Buff
+            Spread diverges and crosses below the adaptive line, exit aggressively.</li>
+        </ul>
+      </div>
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 16 · CONCEPT DEPENDENCIES</div>
+      <h2>Indicator Lineage</h2>
+      <div class="content-card">
+        <div class="mermaid">
+          graph TB
+          A[Chapter 2: Supply & Demand] --> B[Chapter 15: Tick Indicators]
+          B --> C[Chapter 16: Volume-Weighted Price Indicators]
+
+          D[Wilder's RSI] -.-> E[Money Flow Index]
+          F[Appel's MACD] -.-> G[VW-MACD]
+          G -.-> H[Trend Thrust Indicator TTI]
+
+          C --> H
+          E --> C
+
+          C --> I[Chapter 17: Volume Price Confirmation Indicator]
+
+          style C fill:#8B7CFF,stroke:#2A2D33,color:#F7F7F5
+          style I fill:#059669,stroke:#2A2D33,color:#F7F7F5
+        </div>
+        <p style="text-align: center; margin-top: 1rem;"><strong>Mastery Check:</strong> You must grasp VWMA and VW-MACD
+          before moving to Chapter 17's VPCI.</p>
+      </div>
+
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 16 · CLOSING ACTIONS</div>
+      <h2>Next Steps</h2>
+      <ul class="action-list">
+        <li class="action-item">
+          <div>
+            <div class="action-headline">Upgrade Your Averages</div>
+            <div class="action-detail">Tomorrow, change your short-term moving average (e.g. 5-day or 10-day) from
+              Simple (SMA) to Volume-Weighted (VWMA). Track if it keeps you in winning trends longer.</div>
+          </div>
+        </li>
+        <li class="action-item">
+          <div>
+            <div class="action-headline">Apply the TTI for High-Beta Plays</div>
+            <div class="action-detail">Use the Trend Thrust Indicator specifically for highly volatile small/mid-cap
+              stocks, where Dormeier's study proved it yields the most alpha.</div>
+          </div>
+        </li>
+        <li class="action-item">
+          <div>
+            <div class="action-headline">Look for Divergence, Not Just Crossovers</div>
+            <div class="action-detail">Pay attention to the adaptive signal line. If volume drops and the line tightens
+              rapidly, take it as an early warning to tighten stops.</div>
+          </div>
+        </li>
+      </ul>
+
+    </section>
+
   </div>
-</div>
 
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH 16 · THE BIG IDEA</div>
-    <h2>The Big Idea</h2>
-<div class="takeaway-hero">
-  <div class="kicker">CH 16 · THE BIG IDEA</div>
-  <div class="headline">"By weighting price averages with volume, we dissolve the age-old paradox of technical analysis—achieving faster signals without sacrificing reliability."</div>
-  <div class="subline">When volume confirms price, signals speed up; when volume diverges, bad signals slow down.</div>
-</div>
-
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH 16 · KEY TAKEAWAYS</div>
-    <h2>Core Insights</h2>
-<ul class="takeaway-list">
-  <li class="takeaway-item">
-    <div class="takeaway-badge">1</div>
-    <div class="takeaway-text">Volume breaks the speed vs. reliability trade-off</div>
-    <div class="takeaway-detail">
-      <strong>Why it matters:</strong> Usually, faster moving averages create false signals. Volume weighting speeds up trends when participation is real and filters noise when it's not.
-      <br><strong>Evidence:</strong> TTI produced 51.6% profitable trades vs MACD's 34.6%. <span class="page-ref">Ch 16, p. 179</span>
-      <br><strong>Application:</strong> Upgrade SMAs to VWMAs.
-    </div>
-  </li>
-  <li class="takeaway-item">
-    <div class="takeaway-badge">2</div>
-    <div class="takeaway-text">Volume-weighting minimizes downside risk</div>
-    <div class="takeaway-detail">
-      <strong>Why it matters:</strong> Slower exits in traditional indicators leave money on the table and expose traders to steep drawdowns.
-      <br><strong>Evidence:</strong> In small caps, VWMA experienced lower drawdowns in 14 of 20 tested stocks. <span class="page-ref">Ch 16, p. 166</span>
-      <br><strong>Application:</strong> Use volume-weighted trailing stops to cut losses aggressively during distributions.
-    </div>
-  </li>
-  <li class="takeaway-item">
-    <div class="takeaway-badge">3</div>
-    <div class="takeaway-text">The Trend Thrust Indicator (TTI) outshines MACD</div>
-    <div class="takeaway-detail">
-      <strong>Why it matters:</strong> TTI pairs VWMA with an adaptive signal line that loosens during confirmation and tightens during divergence.
-      <br><strong>Evidence:</strong> Across 60 stocks, TTI outperformed MACD by $261,403 in the simulated backtest. <span class="page-ref">Ch 16, p. 180</span>
-      <br><strong>Caveat:</strong> Highly illiquid or low-beta stocks may still produce choppy signals.
-    </div>
-  </li>
-</ul>
-
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH 16 · NOTABLE QUOTES</div>
-    <h2>Breaking the Paradox</h2>
-<div class="quote-block">
-  <p class="quote-text">"By infusing price averages with volume, I simultaneously sped up the moving averages signals while obtaining more reliable signals, thereby breaking the age-old paradox of haste makes waste."</p>
-  <p class="quote-context"><strong>— Buff Dormeier</strong>, on replacing Simple Moving Averages with Volume-Weighted ones. <span class="page-ref">Ch 16, p. 165</span></p>
-</div>
-
-<div class="quote-block">
-  <p class="quote-text">"Because volume leads price, it makes sense to introduce volume into momentum indicators to make them even faster."</p>
-  <p class="quote-context"><strong>— Buff Dormeier</strong>, introducing the concept of volume-weighting. <span class="page-ref">Ch 16, p. 157</span></p>
-</div>
-
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH 16 · CONTEXT &amp; BACKGROUND</div>
-    <h2>From Price-Only to Volume-Weighted</h2>
-<div class="content-card">
-  <div class="summary-text">
-    <strong>Author's Lens:</strong><br>
-    Buff Dormeier didn't just study these indicators—he invented them. He formulated "Buff Averages" (later named Volume-Weighted Moving Averages, or VWMA) in the late 1990s and published them in 2001. He subsequently created the VW-MACD and TTI while managing portfolios at T.P. Donovan Investments.
-    
-    <br><br><strong>Historical Paradigm Shift:</strong><br>
-    Since Charles Dow, technical analysis largely separated price trends and volume confirmation. Analysts visually inspected volume bars below price charts. The creation of VWMA mathematically married the two, shifting the paradigm from "Price + Volume (visual)" to "Price * Volume (computed)."
-    
-    <br><br><strong>Evolution of Ideas (Then vs Now):</strong><br>
-    In 1999, VWMA was revolutionary. By 2026, VWAP (Volume-Weighted Average Price) is an institutional standard for algorithmic execution. However, Dormeier's specific TTI and adaptive smoothing concepts remain underutilized alpha generators.
+  <div class="nav-controls">
+    <button class="nav-btn" id="prevBtn" onclick="prevSlide()" aria-label="Previous slide">&#8592;</button>
+    <div class="counter" id="counter" aria-live="polite">1 / 1</div>
+    <button class="nav-btn" id="nextBtn" onclick="nextSlide()" aria-label="Next slide">&#8594;</button>
   </div>
-</div>
 
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH 16 · DEEP DIVE</div>
-    <h2>The Four Rs of Volume</h2>
-<div class="deep-section practical">
-  <div class="bullet-grid">
-    <div class="bullet-card">
-      <div class="bullet-icon">⚡</div>
-      <h4>1. Responsiveness</h4>
-      <p>Do volume-infused averages lead? Yes. In the 60-stock study, the TTI generated more total signals (7,905) than the simple MACD (6,858), finding trend shifts faster. <span class="page-ref">Ch 16, p. 164</span></p>
-    </div>
-    <div class="bullet-card">
-      <div class="bullet-icon">🎯</div>
-      <h4>2. Reliability</h4>
-      <p>Are the signals accurate? The paradox dictates faster signals are noisier. Yet, TTI profitability soared to 51.6%, crushing MACD's 34.6%. <span class="page-ref">Ch 16, p. 179</span></p>
-    </div>
-    <div class="bullet-card">
-      <div class="bullet-icon">🛡️</div>
-      <h4>3. Risk</h4>
-      <p>Does it limit losses? Because TTI's adaptive line tightens when volume diverges, false trends are exited swiftly. Average drawdown was consistently lower in high-beta stocks. <span class="page-ref">Ch 16, p. 166</span></p>
-    </div>
-    <div class="bullet-card">
-      <div class="bullet-icon">💰</div>
-      <h4>4. Return</h4>
-      <p>Does it produce more profit? Across three capitalizations and four styles, VWMA generated $328,843 more total profit than SMA. <span class="page-ref">Ch 16, p. 168</span></p>
-    </div>
-  </div>
-</div>
-
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH 16 · MENTAL MODELS</div>
-    <h2>Trend Thrust Indicator (TTI)</h2>
-<div class="mental-model-card">
-  <h4 class="model-name">Trend Thrust Indicator (TTI)</h4>
-  <div class="model-principle">Enhancing MACD through volume-weighting, volume multipliers, and an adaptive signal line.</div>
-  
-  <div class="model-application">
-    <strong>How It Works:</strong>
-    <ul>
-      <li><strong>The Buff Spread:</strong> Replaces MACD's exponential averages with VWMAs, then applies a squared volume multiplier.</li>
-      <li><strong>The Adaptive Signal Line:</strong> Lengthens (smooths) when volume increases, delaying false exits. Shortens (tightens) when volume decreases, generating faster counter-trend exits. <span class="page-ref">Ch 16, p. 173</span></li>
-    </ul>
-    <strong>When to Apply:</strong>
-    <ul>
-      <li>High-volatility, high-volume stocks where trend confirmation is paramount.</li>
-    </ul>
-  </div>
-  
-  <div class="model-limitations">
-    <strong>⚠️ Limitations & Caveats:</strong>
-    <ul>
-      <li>Computationally intense to build from scratch.</li>
-      <li>Low-volume large caps may not yield a massive edge over traditional MACD.</li>
-    </ul>
-  </div>
-</div>
-
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH 16 · SIGNAL MATRIX</div>
-    <h2>TTI Adaptive Signals</h2>
-<div class="content-card">
-  <table class="signal-matrix">
-    <thead>
-      <tr>
-        <th>State</th>
-        <th>Volume Increases</th>
-        <th>Volume Decreases</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th class="row-header">Buff Spread > Adaptive Signal</th>
-        <td class="bullish"><span class="signal-label">Confirm</span>Buy: Signal line loosens, keeping you in the trade.</td>
-        <td class="warning"><span class="signal-label">Warning</span>Signal line tightens. Prepare for early exit.</td>
-      </tr>
-      <tr>
-        <th class="row-header">Buff Spread < Adaptive Signal</th>
-        <td class="bearish"><span class="signal-label">Confirm</span>Sell: Distribution validated. Avoid buying.</td>
-        <td class="neutral"><span class="signal-label">Sideways</span>Trend lacks conviction. Range-bound.</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH 16 · EVIDENCE EVALUATION</div>
-    <h2>The 60-Stock Study</h2>
-<div class="evidence-card">
-  <div class="evidence-header">
-    <span class="claim-text">Volume Weighting Improves Trading System Results (The 60-Stock Study)</span>
-    <span class="quality-score">⭐⭐⭐⭐☆ 4/5</span>
-  </div>
-  <div class="evidence-type">📊 Empirical Data</div>
-  <div class="evidence-body">
-    <p><strong>Methodology:</strong> Dormeier backtested SMA vs VWMA, and MACD vs TTI over 3,000 trading days (2,000 for mid/small caps). 60 stocks across 12 subgroups (capitalization + volume/beta combinations). <span class="page-ref">Ch 16, p. 175</span></p>
-    <p><strong>Strengths:</strong> Highly structured testing isolating specific variables (volume, beta, cap). Comprehensive sample size yielding statistically significant profitability delta ($261,403 improvement for TTI over MACD).</p>
-    <p><strong>Weaknesses:</strong> Backtest is historical; does not account for slippage or exact trading fees.</p>
-    <p><strong>2026 Context:</strong> Validated daily. Institutional reliance on VWAP for algorithmic entry/exit corroborates the supremacy of volume-weighting over price-only averages.</p>
-  </div>
-</div>
-
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH 16 · COUNTERARGUMENTS</div>
-    <h2>The Price-Only &amp; Dark Pool Critiques</h2>
-<div class="split-layout">
-  <div class="split-left">
-    <h4>Dormeier's View</h4>
-    <p>Volume data contains distinct, leading information that price averages ignore. Injecting volume directly into the moving average formula forces the indicator to reflect actual market conviction, reducing risk and increasing return. <span class="page-ref">Ch 16, p. 181</span></p>
-  </div>
-  <div class="split-right">
-    <h4>The 2026 Algorithmic Critique</h4>
-    <p><strong>Dark Pools & Internalization:</strong> Critics argue that in modern markets, up to 40-50% of volume is routed off-exchange (dark pools). Therefore, relying on "lit" volume for VWMA calculations may skew indicators toward retail noise rather than institutional conviction.</p>
-    <p><strong>Synthesis:</strong> The solution isn't to abandon VWMA, but to ensure your data feed aggregates consolidated tape volume, and to supplement analysis with Dark Index (DIX) metrics.</p>
-  </div>
-</div>
-
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH 16 · READING LAYERS</div>
-    <h2>Depths of Volume Weighting</h2>
-<div class="content-card">
-  <div class="summary-text">
-    <strong>Layer 1: Surface</strong><br>
-    Replacing a Simple Moving Average (SMA) with a Volume-Weighted Moving Average (VWMA) improves trading results.<br><br>
-    
-    <strong>Layer 2: Structural</strong><br>
-    The classic paradox—fast indicators generate false signals—is fundamentally solved. Volume provides a filtering mechanism that validates speed.<br><br>
-    
-    <strong>Layer 3: Contextual</strong><br>
-    Dormeier's creation of VWMA in the late 90s bridged the gap between visual volume analysis (Dow, Wyckoff) and modern computed oscillators (Appel, Wilder).<br><br>
-    
-    <strong>Layer 4: Generative</strong><br>
-    If volume weighting works, what about Volatility Weighting? What if the adaptive signal line in TTI incorporated Average True Range (ATR) as an additional multiplier? The architecture is highly extensible.
-  </div>
-</div>
-
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH 16 · IMPLEMENTATION GUIDE</div>
-    <h2>Upgrading Your Arsenal</h2>
-<div class="phase-progress">
-  <div class="phase active">Phase 1: Foundation</div>
-  <div class="phase">Phase 2: Transition</div>
-  <div class="phase">Phase 3: Backtest</div>
-  <div class="phase">Phase 4: Mastery</div>
-</div>
-
-<div class="content-card" style="margin-top: 1rem;">
-  <ul class="checklist" style="list-style-type: none; padding-left: 0;">
-    <li>✅ <strong>Foundation:</strong> Replace the 50-day SMA on your main chart with a 50-day VWMA. Observe the divergence visually when volume spikes.</li>
-    <li>✅ <strong>Transition:</strong> Swap the RSI for the Money Flow Index (MFI). Treat overbought/oversold extremes as "fuel" for continuation rather than immediate reversals. <span class="page-ref">Ch 16, p. 159</span></li>
-    <li>✅ <strong>Backtest:</strong> Program the TTI into your charting software (e.g., TradeStation, TradingView). Test it specifically on high-beta mid-cap stocks where it performs best.</li>
-    <li>✅ <strong>Mastery:</strong> Learn to read the spread divergence. When price makes a new high but the Buff Spread diverges and crosses below the adaptive line, exit aggressively.</li>
-  </ul>
-</div>
-
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH 16 · CONCEPT DEPENDENCIES</div>
-    <h2>Indicator Lineage</h2>
-<div class="content-card">
-  <div class="mermaid">
-  graph TB
-      A[Chapter 2: Supply & Demand] --> B[Chapter 15: Tick Indicators]
-      B --> C[Chapter 16: Volume-Weighted Price Indicators]
-      
-      D[Wilder's RSI] -.-> E[Money Flow Index]
-      F[Appel's MACD] -.-> G[VW-MACD]
-      G -.-> H[Trend Thrust Indicator TTI]
-      
-      C --> H
-      E --> C
-      
-      C --> I[Chapter 17: Volume Price Confirmation Indicator]
-      
-      style C fill:#8B7CFF,stroke:#2A2D33,color:#F7F7F5
-      style I fill:#059669,stroke:#2A2D33,color:#F7F7F5
-  </div>
-  <p style="text-align: center; margin-top: 1rem;"><strong>Mastery Check:</strong> You must grasp VWMA and VW-MACD before moving to Chapter 17's VPCI.</p>
-</div>
-
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH 16 · CLOSING ACTIONS</div>
-    <h2>Next Steps</h2>
-<ul class="action-list">
-  <li class="action-item">
-    <div>
-      <div class="action-headline">Upgrade Your Averages</div>
-      <div class="action-detail">Tomorrow, change your short-term moving average (e.g. 5-day or 10-day) from Simple (SMA) to Volume-Weighted (VWMA). Track if it keeps you in winning trends longer.</div>
-    </div>
-  </li>
-  <li class="action-item">
-    <div>
-      <div class="action-headline">Apply the TTI for High-Beta Plays</div>
-      <div class="action-detail">Use the Trend Thrust Indicator specifically for highly volatile small/mid-cap stocks, where Dormeier's study proved it yields the most alpha.</div>
-    </div>
-  </li>
-  <li class="action-item">
-    <div>
-      <div class="action-headline">Look for Divergence, Not Just Crossovers</div>
-      <div class="action-detail">Pay attention to the adaptive signal line. If volume drops and the line tightens rapidly, take it as an early warning to tighten stops.</div>
-    </div>
-  </li>
-</ul>
-
-  </section>
-
-</div>
-
-<div class="nav-controls">
-  <button class="nav-btn" id="prevBtn" onclick="prevSlide()" aria-label="Previous slide">&#8592;</button>
-  <div class="counter" id="counter" aria-live="polite">1 / 1</div>
-  <button class="nav-btn" id="nextBtn" onclick="nextSlide()" aria-label="Next slide">&#8594;</button>
-</div>
-
-<script src="common.js"></script>
+  <script src="../common.js"></script>
 </body>
+
 </html>

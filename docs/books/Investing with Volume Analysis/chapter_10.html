@@ -1,404 +1,471 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Investing with Volume Analysis — Chapter 10</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="common.css">
-<script src="https://cdn.jsdelivr.net/npm/mermaid@11.10.0/dist/mermaid.min.js" crossorigin="anonymous"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Investing with Volume Analysis — Chapter 10</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../common.css">
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@11.10.0/dist/mermaid.min.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
 
-<div class="progress-bar" id="progressBar"></div>
+  <div class="progress-bar" id="progressBar"></div>
 
-<div class="chapter-menu">
-  <button class="menu-btn" id="chapterMenuBtn" onclick="toggleChapterMenu()" aria-haspopup="true" aria-expanded="false">Chapters &#9662;</button>
-  <div class="chapter-menu-panel" id="chapterMenuPanel" role="menu"></div>
-</div>
+  <div class="chapter-menu">
+    <button class="menu-btn" id="chapterMenuBtn" onclick="toggleChapterMenu()" aria-haspopup="true"
+      aria-expanded="false">Chapters &#9662;</button>
+    <div class="chapter-menu-panel" id="chapterMenuPanel" role="menu"></div>
+  </div>
 
-<div class="slide-container" id="slideContainer">
+  <div class="slide-container" id="slideContainer">
 
-  <section class="slide" aria-hidden="false">
-<h1>Investing with Volume Analysis</h1>
-<p class="subtitle">Buff Pelz Dormeier · FT Press 2011 — Chương 10: <em>Pure Volume Indicators</em></p>
-<div class="meta-grid">
-  <div class="meta-pill">
-    <div class="label">Trang gốc</div>
-    <div class="value">138-146</div>
-  </div>
-  <div class="meta-pill">
-    <div class="label">Thời gian đọc gốc</div>
-    <div class="value">~9 phút</div>
-  </div>
-  <div class="meta-pill">
-    <div class="label">Độ sâu</div>
-    <div class="value">Deep</div>
-  </div>
-  <div class="meta-pill">
-    <div class="label">Đối tượng</div>
-    <div class="value">Pro</div>
-  </div>
-</div>
-<figure class="image-slot hero">
-  <div class="image-prompt">
-    <span class="image-prompt-label">AI Image Prompt</span>
-    <p class="image-prompt-text">"Minimalist data visualization showing a Crocker map, abstract volume bars, clean corporate style with #059669 and #7C3AED accents"</p>
-  </div>
-</figure>
-  </section>
-
-  <section class="slide chapter-divider">
-<div class="chapter-number">Chapter 10</div>
-<h2>Pure Volume Indicators</h2>
-<p class="chapter-meta">~9 phút · Intermediate/Pro · Crocker Charts · Volume at Price</p>
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH 10 · TÓM TẮT TRỰC QUAN</div>
-    <h2>Các Công Cụ Thuần Khối Lượng</h2>
-<div class="mermaid">
-graph TD
-    A[Thuần Khối Lượng<br>Pure Volume] --> B[Volume MA & %V]
-    A --> C[Oscillators & Bands]
-    A --> D[Volume at Price]
-    A --> E[Crocker Charts]
-    
-    C --> C1[V-MACD / V-ROC]
-    C --> C2[Volume Bollinger Bands]
-    E --> E1[Clockwise = Bullish]
-    E --> E2[Counter-clockwise = Bearish]
-    
-    style A fill:#7C3AED,stroke:#E2E8F0,color:#FFFFFF
-</div>
-<br>
-<div class="content-card">
-  <table>
-    <thead>
-      <tr><th>Loại Công Cụ</th><th>Chức Năng Chính</th></tr>
-    </thead>
-    <tbody>
-      <tr><td><strong>Volume Moving Averages</strong></td><td>Làm phẳng dữ liệu để so sánh volume hiện tại với mức "bình thường"</td></tr>
-      <tr><td><strong>Volume at Price</strong></td><td>Tìm chính xác vùng Giá có sự trao tay lớn (Support/Resistance)</td></tr>
-      <tr><td><strong>Crocker Charts</strong></td><td>Lập bản đồ tọa độ Giá-Khối lượng để tìm vòng lặp Cung/Cầu</td></tr>
-    </tbody>
-  </table>
-</div>
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH 10 · Ý TƯỞNG CỐT LÕI</div>
-    <h2>Giải Mã Các Chỉ Báo Thuần Khối Lượng</h2>
-<div class="takeaway-hero">
-  <div class="kicker">CH 10 · Ý TƯỞNG CỐT LÕI</div>
-  <div class="headline">"Chỉ báo thuần khối lượng bóc tách dòng tiền ra khỏi thời gian, định vị sự tham gia thực sự của những gã khổng lồ trên thị trường."</div>
-</div>
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH 10 · TỔNG QUAN</div>
-    <h2>Đa Dạng Góc Nhìn Đo Lường</h2>
-<div class="callout" style="margin-bottom: 2rem;">
-  <div class="callout-icon">🎯</div>
-  <div class="callout-content">
-    <strong>Trong một câu:</strong> Mặc dù chỉ báo thuần khối lượng (dùng độc quyền dữ liệu volume) có giới hạn, nhưng khi được xử lý bằng các công cụ đo lường trung bình, động lượng (oscillators) hoặc ánh xạ theo giá (Crocker, Volume at Price), chúng tiết lộ cấu trúc nội tại ẩn giấu của cung và cầu.
-  </div>
-</div>
-
-<div class="bullet-grid">
-  <div class="bullet-card">
-    <div class="icon">🔍</div>
-    <div class="heading">Bối cảnh (The Setup)</div>
-    <div class="body">Mọi người thường chỉ nhìn chằm chằm vào biểu đồ giá. Nhưng giá chỉ là kết quả cuối cùng. Ai đã tạo ra mức giá đó? Đám đông hoảng loạn hay dòng tiền lớn?</div>
-  </div>
-  <div class="bullet-card">
-    <div class="icon">🧠</div>
-    <div class="heading">Lập luận (The Argument)</div>
-    <div class="body">Chúng ta không thể phân tích các cột volume thô cứng. Ta cần biến nó thành các chỉ số linh hoạt (MA, Bollinger Bands, %V) để xác định tính bất thường.</div>
-  </div>
-  <div class="bullet-card">
-    <div class="icon">🔗</div>
-    <div class="heading">Sự kết nối (The Connection)</div>
-    <div class="body">Các chỉ báo Volume at Price và Crocker chart phá vỡ giới hạn truyền thống của "Trục X là Thời Gian", mở ra khái niệm định vị Cung Cầu trong Không Gian 2D.</div>
-  </div>
-</div>
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH 10 · ĐÚC KẾT</div>
-    <h2>Những Bài Học Quan Trọng</h2>
-<div class="takeaway-list">
-  <div class="takeaway-item content-card">
-    <div class="takeaway-badge">1</div>
-    <div style="flex: 1;">
-      <div class="takeaway-text" style="font-size: 1.25rem; color: var(--accent); margin-bottom: 0.5rem;">
-        <strong>Dùng đường trung bình (MA) để xác định điểm chuẩn khối lượng.</strong>
+    <section class="slide" aria-hidden="false">
+      <h1>Investing with Volume Analysis</h1>
+      <p class="subtitle">Buff Pelz Dormeier · FT Press 2011 — Chương 10: <em>Pure Volume Indicators</em></p>
+      <div class="meta-grid">
+        <div class="meta-pill">
+          <div class="label">Trang gốc</div>
+          <div class="value">138-146</div>
+        </div>
+        <div class="meta-pill">
+          <div class="label">Thời gian đọc gốc</div>
+          <div class="value">~9 phút</div>
+        </div>
+        <div class="meta-pill">
+          <div class="label">Độ sâu</div>
+          <div class="value">Deep</div>
+        </div>
+        <div class="meta-pill">
+          <div class="label">Đối tượng</div>
+          <div class="value">Pro</div>
+        </div>
       </div>
-      <div class="takeaway-detail">
-        <div style="margin-bottom: 0.5rem;"><strong>Tại sao quan trọng:</strong> Mắt người không thể so sánh độ cao hàng trăm cột volume. Đường MA (5, 20, 50) cung cấp một ranh giới rõ ràng: trên là mạnh, dưới là yếu.</div>
-        <div style="margin-bottom: 0.5rem;"><strong>Ứng dụng:</strong> Thêm đường SMA 50 ngày lên histogram khối lượng của bạn để làm baseline (đường cơ sở).</div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="takeaway-item content-card">
-    <div class="takeaway-badge" style="background: var(--accent-emerald);">2</div>
-    <div style="flex: 1;">
-      <div class="takeaway-text" style="font-size: 1.25rem; color: var(--accent-emerald); margin-bottom: 0.5rem;">
-        <strong>Sử dụng Bollinger Bands để quét sự kiện "Thâm nhập khối lượng" (Volume Surges).</strong>
-      </div>
-      <div class="takeaway-detail">
-        <div style="margin-bottom: 0.5rem;"><strong>Tại sao quan trọng:</strong> Nó phát hiện các phiên giao dịch nằm ngoài 2 độ lệch chuẩn (Standard Deviations) so với mức bình thường - dấu hiệu rõ ràng của institutional buying/selling.</div>
-        <div style="margin-bottom: 0.5rem;"><strong>Bằng chứng:</strong> "On those rare occasions when volume trades outside two-standard deviations... Bollinger Bands alert you." <span class="page-ref">Ch 10, p. 140-141</span></div>
-      </div>
-    </div>
-  </div>
-</div>
-  </section>
+      <figure class="image-slot hero">
+        <div class="image-prompt">
+          <span class="image-prompt-label">AI Image Prompt</span>
+          <p class="image-prompt-text">"Minimalist data visualization showing a Crocker map, abstract volume bars, clean
+            corporate style with #059669 and #7C3AED accents"</p>
+        </div>
+      </figure>
+    </section>
 
-  <section class="slide">
-    <div class="slide-kicker">CH 10 · TRÍCH DẪN</div>
-    <h2>Dấu Chân Của Người Khổng Lồ</h2>
-<div class="content-card">
-  <p class="quote-text">"Most people look at the price of their stock and don't pay much attention to volume. But volume is a crucial component of the measure of supply and demand. When you have major volume coming into a stock, it tells you there are important players involved. So, yes, we look at volume very carefully."</p>
-  <p class="quote-context">— William J. O'Neil, <span class="page-ref">Ch 10, p. 138</span></p>
-  
-  <div class="bullet-grid" style="margin-top: 1.5rem;">
-    <div class="bullet-card">
-      <div class="heading">Ý Nghĩa (Interpretation)</div>
-      <div class="body">Nhấn mạnh lại sự lệch pha trong tư duy của đám đông: Mọi người bị thu hút bởi Giá (bề nổi), nhưng dòng tiền thông minh (smart money/important players) chỉ bị lộ dấu vết thông qua Khối Lượng.</div>
-    </div>
-    <div class="bullet-card">
-      <div class="heading">Ứng Dụng (Application)</div>
-      <div class="body">Mọi đợt rũ bỏ (shakeout) hay bứt phá (breakout) đều phải được "kiểm toán" lại bằng chỉ báo thuần khối lượng.</div>
-    </div>
-  </div>
-</div>
-  </section>
+    <section class="slide chapter-divider">
+      <div class="chapter-number">Chapter 10</div>
+      <h2>Pure Volume Indicators</h2>
+      <p class="chapter-meta">~9 phút · Intermediate/Pro · Crocker Charts · Volume at Price</p>
+    </section>
 
-  <section class="slide">
-    <div class="slide-kicker">CH 10 · MÔ HÌNH TƯ DUY</div>
-    <h2>Mô Hình Bản Đồ Crocker</h2>
-<div class="content-card">
-  <h3 style="color: var(--accent-purple); margin-bottom: 1rem;">Mô Hình Tư Duy: Bản Đồ Crocker (The Crocker Map)</h3>
-  
-  <div class="split-layout">
-    <div class="split-left" style="border-top: 4px solid var(--accent-purple);">
-      <h4 style="color: var(--accent-purple);">Nguyên lý cốt lõi</h4>
-      <p>Loại bỏ trục Thời Gian. Hãy tưởng tượng một bản đồ Etch-a-Sketch: Trục dọc (Vĩ độ) là Giá. Trục ngang (Kinh độ) là Khối Lượng. Mỗi điểm trên đồ thị là tọa độ Giá-Khối Lượng của một ngày.</p>
-      
-      <h4 style="margin-top: 1rem;">Cách hoạt động</h4>
-      <ul>
-        <li>Dòng kẻ chạy từ Trái Dưới -> Phải Trên: Giá Tăng + Khối Lượng Tăng (Bullish).</li>
-        <li>Dòng kẻ vòng theo <strong>chiều Kim đồng hồ</strong>: Cầu lớn hơn Cung (Bullish Loop).</li>
-        <li>Dòng kẻ vòng <strong>ngược Kim đồng hồ</strong>: Cung lớn hơn Cầu (Bearish Loop).</li>
+    <section class="slide">
+      <div class="slide-kicker">CH 10 · TÓM TẮT TRỰC QUAN</div>
+      <h2>Các Công Cụ Thuần Khối Lượng</h2>
+      <div class="mermaid">
+        graph TD
+        A[Thuần Khối Lượng<br>Pure Volume] --> B[Volume MA & %V]
+        A --> C[Oscillators & Bands]
+        A --> D[Volume at Price]
+        A --> E[Crocker Charts]
+
+        C --> C1[V-MACD / V-ROC]
+        C --> C2[Volume Bollinger Bands]
+        E --> E1[Clockwise = Bullish]
+        E --> E2[Counter-clockwise = Bearish]
+
+        style A fill:#7C3AED,stroke:#E2E8F0,color:#FFFFFF
+      </div>
+      <br>
+      <div class="content-card">
+        <table>
+          <thead>
+            <tr>
+              <th>Loại Công Cụ</th>
+              <th>Chức Năng Chính</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Volume Moving Averages</strong></td>
+              <td>Làm phẳng dữ liệu để so sánh volume hiện tại với mức "bình thường"</td>
+            </tr>
+            <tr>
+              <td><strong>Volume at Price</strong></td>
+              <td>Tìm chính xác vùng Giá có sự trao tay lớn (Support/Resistance)</td>
+            </tr>
+            <tr>
+              <td><strong>Crocker Charts</strong></td>
+              <td>Lập bản đồ tọa độ Giá-Khối lượng để tìm vòng lặp Cung/Cầu</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 10 · Ý TƯỞNG CỐT LÕI</div>
+      <h2>Giải Mã Các Chỉ Báo Thuần Khối Lượng</h2>
+      <div class="takeaway-hero">
+        <div class="kicker">CH 10 · Ý TƯỞNG CỐT LÕI</div>
+        <div class="headline">"Chỉ báo thuần khối lượng bóc tách dòng tiền ra khỏi thời gian, định vị sự tham gia thực
+          sự của những gã khổng lồ trên thị trường."</div>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 10 · TỔNG QUAN</div>
+      <h2>Đa Dạng Góc Nhìn Đo Lường</h2>
+      <div class="callout" style="margin-bottom: 2rem;">
+        <div class="callout-icon">🎯</div>
+        <div class="callout-content">
+          <strong>Trong một câu:</strong> Mặc dù chỉ báo thuần khối lượng (dùng độc quyền dữ liệu volume) có giới hạn,
+          nhưng khi được xử lý bằng các công cụ đo lường trung bình, động lượng (oscillators) hoặc ánh xạ theo giá
+          (Crocker, Volume at Price), chúng tiết lộ cấu trúc nội tại ẩn giấu của cung và cầu.
+        </div>
+      </div>
+
+      <div class="bullet-grid">
+        <div class="bullet-card">
+          <div class="icon">🔍</div>
+          <div class="heading">Bối cảnh (The Setup)</div>
+          <div class="body">Mọi người thường chỉ nhìn chằm chằm vào biểu đồ giá. Nhưng giá chỉ là kết quả cuối cùng. Ai
+            đã tạo ra mức giá đó? Đám đông hoảng loạn hay dòng tiền lớn?</div>
+        </div>
+        <div class="bullet-card">
+          <div class="icon">🧠</div>
+          <div class="heading">Lập luận (The Argument)</div>
+          <div class="body">Chúng ta không thể phân tích các cột volume thô cứng. Ta cần biến nó thành các chỉ số linh
+            hoạt (MA, Bollinger Bands, %V) để xác định tính bất thường.</div>
+        </div>
+        <div class="bullet-card">
+          <div class="icon">🔗</div>
+          <div class="heading">Sự kết nối (The Connection)</div>
+          <div class="body">Các chỉ báo Volume at Price và Crocker chart phá vỡ giới hạn truyền thống của "Trục X là
+            Thời Gian", mở ra khái niệm định vị Cung Cầu trong Không Gian 2D.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 10 · ĐÚC KẾT</div>
+      <h2>Những Bài Học Quan Trọng</h2>
+      <div class="takeaway-list">
+        <div class="takeaway-item content-card">
+          <div class="takeaway-badge">1</div>
+          <div style="flex: 1;">
+            <div class="takeaway-text" style="font-size: 1.25rem; color: var(--accent); margin-bottom: 0.5rem;">
+              <strong>Dùng đường trung bình (MA) để xác định điểm chuẩn khối lượng.</strong>
+            </div>
+            <div class="takeaway-detail">
+              <div style="margin-bottom: 0.5rem;"><strong>Tại sao quan trọng:</strong> Mắt người không thể so sánh độ
+                cao hàng trăm cột volume. Đường MA (5, 20, 50) cung cấp một ranh giới rõ ràng: trên là mạnh, dưới là
+                yếu.</div>
+              <div style="margin-bottom: 0.5rem;"><strong>Ứng dụng:</strong> Thêm đường SMA 50 ngày lên histogram khối
+                lượng của bạn để làm baseline (đường cơ sở).</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="takeaway-item content-card">
+          <div class="takeaway-badge" style="background: var(--accent-emerald);">2</div>
+          <div style="flex: 1;">
+            <div class="takeaway-text" style="font-size: 1.25rem; color: var(--accent-emerald); margin-bottom: 0.5rem;">
+              <strong>Sử dụng Bollinger Bands để quét sự kiện "Thâm nhập khối lượng" (Volume Surges).</strong>
+            </div>
+            <div class="takeaway-detail">
+              <div style="margin-bottom: 0.5rem;"><strong>Tại sao quan trọng:</strong> Nó phát hiện các phiên giao dịch
+                nằm ngoài 2 độ lệch chuẩn (Standard Deviations) so với mức bình thường - dấu hiệu rõ ràng của
+                institutional buying/selling.</div>
+              <div style="margin-bottom: 0.5rem;"><strong>Bằng chứng:</strong> "On those rare occasions when volume
+                trades outside two-standard deviations... Bollinger Bands alert you." <span class="page-ref">Ch 10, p.
+                  140-141</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 10 · TRÍCH DẪN</div>
+      <h2>Dấu Chân Của Người Khổng Lồ</h2>
+      <div class="content-card">
+        <p class="quote-text">"Most people look at the price of their stock and don't pay much attention to volume. But
+          volume is a crucial component of the measure of supply and demand. When you have major volume coming into a
+          stock, it tells you there are important players involved. So, yes, we look at volume very carefully."</p>
+        <p class="quote-context">— William J. O'Neil, <span class="page-ref">Ch 10, p. 138</span></p>
+
+        <div class="bullet-grid" style="margin-top: 1.5rem;">
+          <div class="bullet-card">
+            <div class="heading">Ý Nghĩa (Interpretation)</div>
+            <div class="body">Nhấn mạnh lại sự lệch pha trong tư duy của đám đông: Mọi người bị thu hút bởi Giá (bề
+              nổi), nhưng dòng tiền thông minh (smart money/important players) chỉ bị lộ dấu vết thông qua Khối Lượng.
+            </div>
+          </div>
+          <div class="bullet-card">
+            <div class="heading">Ứng Dụng (Application)</div>
+            <div class="body">Mọi đợt rũ bỏ (shakeout) hay bứt phá (breakout) đều phải được "kiểm toán" lại bằng chỉ báo
+              thuần khối lượng.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 10 · MÔ HÌNH TƯ DUY</div>
+      <h2>Mô Hình Bản Đồ Crocker</h2>
+      <div class="content-card">
+        <h3 style="color: var(--accent-purple); margin-bottom: 1rem;">Mô Hình Tư Duy: Bản Đồ Crocker (The Crocker Map)
+        </h3>
+
+        <div class="split-layout">
+          <div class="split-left" style="border-top: 4px solid var(--accent-purple);">
+            <h4 style="color: var(--accent-purple);">Nguyên lý cốt lõi</h4>
+            <p>Loại bỏ trục Thời Gian. Hãy tưởng tượng một bản đồ Etch-a-Sketch: Trục dọc (Vĩ độ) là Giá. Trục ngang
+              (Kinh độ) là Khối Lượng. Mỗi điểm trên đồ thị là tọa độ Giá-Khối Lượng của một ngày.</p>
+
+            <h4 style="margin-top: 1rem;">Cách hoạt động</h4>
+            <ul>
+              <li>Dòng kẻ chạy từ Trái Dưới -> Phải Trên: Giá Tăng + Khối Lượng Tăng (Bullish).</li>
+              <li>Dòng kẻ vòng theo <strong>chiều Kim đồng hồ</strong>: Cầu lớn hơn Cung (Bullish Loop).</li>
+              <li>Dòng kẻ vòng <strong>ngược Kim đồng hồ</strong>: Cung lớn hơn Cầu (Bearish Loop).</li>
+            </ul>
+          </div>
+
+          <div class="split-right" style="border-top: 4px solid var(--accent-emerald);">
+            <h4 style="color: var(--accent-emerald);">Ứng dụng & Hạn chế</h4>
+            <p><strong>Khi nào áp dụng:</strong> Nhận diện sớm vòng lặp thao túng của cá mập khi biểu đồ giá truyền
+              thống bị nhiễu.</p>
+            <p><strong>⚠️ Cạm bẫy:</strong> Cực kỳ khó đọc (như nét vẽ nguệch ngoạc của trẻ con). Cần sự tinh tế và kinh
+              nghiệm quan sát cực kỳ cao. Không phù hợp cho trader thích sự đơn giản.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 10 · BỐI CẢNH</div>
+      <h2>Sự Khai Sinh Của Biểu Đồ Crocker (1950s)</h2>
+      <div class="content-card">
+        <h3 style="color: var(--accent-cyan);">Bối Cảnh Lịch Sử: Benjamin Crocker</h3>
+        <div class="bullet-grid" style="margin-top: 1rem;">
+          <div class="bullet-card">
+            <div class="heading">1. Bối cảnh Lịch sử (1950s)</div>
+            <div class="body">Thời điểm Benjamin Crocker sáng tạo ra biểu đồ Price-Volume, máy tính chưa phổ biến. Mọi
+              đồ thị đều được vẽ tay. Việc loại bỏ trục thời gian là một bước nhảy vọt về tư duy trừu tượng.</div>
+          </div>
+          <div class="bullet-card">
+            <div class="heading">2. Sự tiến hóa của Ý tưởng</div>
+            <div class="body">Ban đầu Crocker Chart là một công cụ "bí truyền". Ngày nay (2026), cấu trúc này đã tiến
+              hóa thành các biểu đồ Market Profile hoặc Footprint charts tinh vi hơn nhiều.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 10 · PHÂN TÍCH SÂU</div>
+      <h2>Volume at Price (Khối Lượng Theo Giá)</h2>
+      <div class="deep-section">
+        <h3 style="text-align: center; margin-bottom: 1.5rem;">Deep Dive: Volume at Price (Khối Lượng Theo Giá)</h3>
+        <div class="bullet-grid">
+          <div class="bullet-card">
+            <div class="heading" style="color: var(--accent-amber);">1. Core Argument</div>
+            <div class="body">Khối lượng tích lũy tại một <strong>Mức Giá cụ thể</strong> (không phải tại một thời điểm)
+              là bức tường thành vững chắc nhất của Hỗ Trợ và Kháng Cự.</div>
+          </div>
+          <div class="bullet-card">
+            <div class="heading" style="color: var(--accent-cyan);">2. Logical Structure</div>
+            <div class="body">Nhiều cổ phiếu sang tay ở giá X -> Giá X là vùng có tính đồng thuận cao -> Khi giá quay
+              lại X, những người mua trước đó sẽ cố gắng bảo vệ vị thế của họ -> X trở thành Hỗ trợ/Kháng cự mạnh.</div>
+          </div>
+          <div class="bullet-card">
+            <div class="heading" style="color: var(--accent-emerald);">3. Practical Implication</div>
+            <div class="body">Sử dụng công cụ Volume Profile (nằm ngang trên trục Y) thay vì chỉ dùng Volume cột dọc.
+              Điểm kiểm soát (Point of Control - POC) chính là thỏi nam châm hút giá.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 10 · KIỂM ĐỊNH</div>
+      <h2>V-MACD &amp; Bollinger Bands</h2>
+      <div class="content-card">
+        <h3>Đánh Giá Các Công Cụ Dao Động (Oscillators)</h3>
+        <br>
+        <div
+          style="margin-bottom: 1.5rem; padding: 1rem; background: var(--surface-light); border-radius: var(--radius-lg); border-left: 4px solid var(--accent-amber);">
+          <strong>Luận điểm:</strong> Sử dụng V-MACD hoặc V-ROC hiệu quả hơn MACD giá.
+        </div>
+        <div class="bullet-grid">
+          <div class="bullet-card">
+            <div class="heading">Cơ sở toán học</div>
+            <div class="body">Do khối lượng biến động (volatile) mạnh hơn giá, việc tính toán động lượng (momentum) của
+              khối lượng nhạy bén hơn.</div>
+          </div>
+          <div class="bullet-card">
+            <div class="heading">Điểm yếu / Lỗ hổng</div>
+            <div class="body">Khối lượng có tính chu kỳ trong ngày (U-shape: cao đầu giờ, cao cuối giờ, thấp giữa trưa).
+              V-MACD dễ bị nhiễu do hiệu ứng chu kỳ này nếu không chuẩn hóa (normalize) trước.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 10 · GÓC NHÌN ĐỐI LẬP</div>
+      <h2>Khối Lượng Thời Gian vs Khối Lượng Mức Giá</h2>
+      <div class="split-layout">
+        <div class="split-left" style="border-top: 4px solid var(--accent-emerald);">
+          <h3 style="color: var(--accent-emerald);">Khối Lượng Theo Thời Gian (Vertical Volume)</h3>
+          <p>Khối lượng vẽ dưới dạng cột dọc. <strong>Điểm mạnh:</strong> Cho biết khi NÀO dòng tiền lớn xuất hiện.
+            Thích hợp để bắt các nhịp Breakout chớp nhoáng.</p>
+        </div>
+
+        <div class="split-right" style="border-top: 4px solid var(--accent-amber);">
+          <h3 style="color: var(--accent-amber);">Khối Lượng Theo Mức Giá (Horizontal Volume)</h3>
+          <p>Khối lượng vẽ ngang (Volume Profile). <strong>Điểm mạnh:</strong> Cho biết dòng tiền lớn phòng thủ ở ĐÂU.
+            Thích hợp cho swing trader để đặt Stop-loss và Take-profit an toàn.</p>
+        </div>
+      </div>
+
+      <div class="content-card" style="margin-top: 1rem; border: 1px solid var(--accent-purple);">
+        <h4 style="color: var(--accent-purple);">Tổng hợp (Synthesis)</h4>
+        <p>Một hệ thống giao dịch sâu sắc (DEEP) của năm 2026 sẽ kết hợp cả hai: Xác định "Vùng giá trị" bằng Volume at
+          Price, sau đó bóp cò giao dịch (trigger) dựa trên "Sự bùng nổ khối lượng" của Vertical Volume + Bollinger
+          Bands.</p>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 10 · PHÂN TÍCH ĐA TẦNG</div>
+      <h2>Đọc Hiểu Dòng Chảy Pure Volume</h2>
+      <div class="content-card">
+        <h3 style="color: var(--accent-cyan);">Phân Tích Đa Tầng: Sự "Thuần" Của Khối Lượng</h3>
+        <div class="timeline" style="margin-top: 1.5rem;">
+          <div class="timeline-item">
+            <div class="timeline-marker" style="background: var(--accent-cyan)">1</div>
+            <div class="timeline-body">
+              <strong>Tầng Mặt (Surface):</strong> Các chỉ báo thuần túy xử lý chuỗi số liệu volume.
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-marker" style="background: var(--accent-amber)">2</div>
+            <div class="timeline-body">
+              <strong>Tầng Cấu trúc (Structural):</strong> Cung cấp một chiều đo lường (dimension) hoàn toàn song song
+              với Giá, giúp loại bỏ tính "nội suy lẫn nhau" (multicollinearity) khi dùng nhiều chỉ báo giá cùng lúc.
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-marker" style="background: var(--accent-purple)">5</div>
+            <div class="timeline-body">
+              <strong>Tầng Mở rộng (Generative):</strong> Triết lý "Bản đồ Etch-a-Sketch" của Crocker mở ra kỷ nguyên
+              của Biểu đồ Không-Thời-Gian (Spatiotemporal Charting) trong High-Frequency Trading.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 10 · CẢNH BÁO</div>
+      <h2>Điểm Mù Của Biểu Đồ Zero Line &amp; Tích Lũy</h2>
+      <div class="warning-card">
+        <div class="warning-headline">Cảnh Báo Về Volume Tích Lũy Bằng Zero Line</div>
+        <div class="warning-detail">
+          <strong>Cạm bẫy:</strong> Tác giả cực kỳ không khuyến khích việc vẽ cột volume dương (xanh) bên trên vạch số
+          0, và cột âm (đỏ) bên dưới vạch số 0.<br><br>
+          <strong>Tại sao:</strong> Nó làm mất đi khả năng "so sánh trực quan" (eyeballing) độ cao tuyệt đối giữa phiên
+          mua và phiên bán kế tiếp nhau. Chúng bị lệch hướng so với trục hoành, làm mắt người khó phân định chính xác.
+          <span class="page-ref">Ch 10, p. 139</span>
+        </div>
+      </div>
+      <br>
+      <div class="warning-card" style="border-left-color: var(--accent-purple);">
+        <div class="warning-headline" style="color: var(--accent-purple);">Volume Accumulation Đơn Thuần Là Vô Dụng
+        </div>
+        <div class="warning-detail">
+          <strong>Tại sao:</strong> Một chỉ báo chỉ cộng trừ thô (volume hôm nay - volume hôm qua) kéo dài quá lâu sẽ
+          trở nên trơ lì (less sensitive) với biến động hiện tại. Tác giả đánh giá nó làm rất tệ nhiệm vụ đối chiếu các
+          dao động cục bộ. <span class="page-ref">Ch 10, p. 141</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 10 · THỰC HÀNH</div>
+      <h2>Thiết Lập Biểu Đồ Chuẩn</h2>
+      <div class="content-card">
+        <h3>Lộ Trình Tích Hợp Chỉ Báo Thuần (Implementation Guide)</h3>
+        <br>
+        <div class="phase-progress">
+          <div class="phase active">Tuần 1: Cấu Hình</div>
+          <div class="phase">Tuần 2: Volume Profile</div>
+          <div class="phase">Tháng 2: Oscillator</div>
+          <div class="phase">Tháng 6: Crocker</div>
+        </div>
+
+        <div style="margin-top: 2rem;">
+          <p><strong>Giai đoạn 1 - Cấu Hình Cơ Bản:</strong></p>
+          <ul style="margin-bottom: 1.5rem; margin-left: 1.5rem; list-style-type: disc;">
+            <li>Thêm đường SMA(50) lên trên thanh Volume mặc định.</li>
+            <li>Bọc Bollinger Bands (2 std dev) quanh đường SMA đó để phần mềm tự báo động (alert) mỗi khi có Volume
+              Surge.</li>
+          </ul>
+
+          <p><strong>Giai đoạn 2 - Áp dụng Volume At Price:</strong></p>
+          <ul style="margin-left: 1.5rem; list-style-type: disc;">
+            <li>Bật công cụ "Volume Profile Fixed Range" trên TradingView. Kéo nó qua khu vực sideway gần nhất để tìm
+              POC (Point of Control). Dùng nó làm lệnh Stop-loss.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="slide-kicker">CH 10 · HÀNH ĐỘNG &amp; SUY NGẪM</div>
+      <h2>Áp Dụng Lập Tức</h2>
+      <div class="content-card">
+        <h3 style="margin-bottom: 1rem;">Câu Hỏi Suy Ngẫm</h3>
+        <ul style="margin-bottom: 2rem;">
+          <li><strong>Phân Tích & Đánh Giá:</strong> Tại sao biểu đồ Crocker, dù thể hiện được bản chất Cung-Cầu theo
+            vòng tròn, lại bị mai một và ít người sử dụng? Sự phức tạp có luôn mang lại lợi nhuận cao hơn?</li>
+          <li><strong>Áp Dụng:</strong> Lần cuối cùng bạn mua một cổ phiếu tại hỗ trợ, bạn có kiểm tra xem mức hỗ trợ đó
+            có được tạo ra bởi "Volume at Price" khổng lồ trong quá khứ không?</li>
+        </ul>
+      </div>
+
+      <ul class="action-list">
+        <li class="action-item">
+          <div>
+            <div class="action-headline">Hành Động: Cài Đặt Bollinger Band cho Khối Lượng</div>
+            <div class="action-detail">Ngay bây giờ, hãy thêm Bollinger Band với thông số (Period 50, Std Dev 2) áp dụng
+              riêng cho Volume. Lọc ra các cổ phiếu chọc thủng dải Band trên trong phiên hôm nay.</div>
+          </div>
+        </li>
+        <li class="action-item">
+          <div>
+            <div class="action-headline">Hành Động: Loại Bỏ Biểu Đồ Zero-Line</div>
+            <div class="action-detail">Nếu bạn đang dùng dạng Volume có vạch số 0 (Zero-line oscillator cho volume thô),
+              hãy chuyển về biểu đồ cột kề nhau truyền thống để dễ so sánh.</div>
+          </div>
+        </li>
       </ul>
-    </div>
-    
-    <div class="split-right" style="border-top: 4px solid var(--accent-emerald);">
-      <h4 style="color: var(--accent-emerald);">Ứng dụng & Hạn chế</h4>
-      <p><strong>Khi nào áp dụng:</strong> Nhận diện sớm vòng lặp thao túng của cá mập khi biểu đồ giá truyền thống bị nhiễu.</p>
-      <p><strong>⚠️ Cạm bẫy:</strong> Cực kỳ khó đọc (như nét vẽ nguệch ngoạc của trẻ con). Cần sự tinh tế và kinh nghiệm quan sát cực kỳ cao. Không phù hợp cho trader thích sự đơn giản.</p>
-    </div>
+    </section>
+
   </div>
-</div>
-  </section>
 
-  <section class="slide">
-    <div class="slide-kicker">CH 10 · BỐI CẢNH</div>
-    <h2>Sự Khai Sinh Của Biểu Đồ Crocker (1950s)</h2>
-<div class="content-card">
-  <h3 style="color: var(--accent-cyan);">Bối Cảnh Lịch Sử: Benjamin Crocker</h3>
-  <div class="bullet-grid" style="margin-top: 1rem;">
-    <div class="bullet-card">
-      <div class="heading">1. Bối cảnh Lịch sử (1950s)</div>
-      <div class="body">Thời điểm Benjamin Crocker sáng tạo ra biểu đồ Price-Volume, máy tính chưa phổ biến. Mọi đồ thị đều được vẽ tay. Việc loại bỏ trục thời gian là một bước nhảy vọt về tư duy trừu tượng.</div>
-    </div>
-    <div class="bullet-card">
-      <div class="heading">2. Sự tiến hóa của Ý tưởng</div>
-      <div class="body">Ban đầu Crocker Chart là một công cụ "bí truyền". Ngày nay (2026), cấu trúc này đã tiến hóa thành các biểu đồ Market Profile hoặc Footprint charts tinh vi hơn nhiều.</div>
-    </div>
+  <div class="nav-controls">
+    <button class="nav-btn" id="prevBtn" onclick="prevSlide()" aria-label="Previous slide">&#8592;</button>
+    <div class="counter" id="counter" aria-live="polite">1 / 1</div>
+    <button class="nav-btn" id="nextBtn" onclick="nextSlide()" aria-label="Next slide">&#8594;</button>
   </div>
-</div>
-  </section>
 
-  <section class="slide">
-    <div class="slide-kicker">CH 10 · PHÂN TÍCH SÂU</div>
-    <h2>Volume at Price (Khối Lượng Theo Giá)</h2>
-<div class="deep-section">
-  <h3 style="text-align: center; margin-bottom: 1.5rem;">Deep Dive: Volume at Price (Khối Lượng Theo Giá)</h3>
-  <div class="bullet-grid">
-    <div class="bullet-card">
-      <div class="heading" style="color: var(--accent-amber);">1. Core Argument</div>
-      <div class="body">Khối lượng tích lũy tại một <strong>Mức Giá cụ thể</strong> (không phải tại một thời điểm) là bức tường thành vững chắc nhất của Hỗ Trợ và Kháng Cự.</div>
-    </div>
-    <div class="bullet-card">
-      <div class="heading" style="color: var(--accent-cyan);">2. Logical Structure</div>
-      <div class="body">Nhiều cổ phiếu sang tay ở giá X -> Giá X là vùng có tính đồng thuận cao -> Khi giá quay lại X, những người mua trước đó sẽ cố gắng bảo vệ vị thế của họ -> X trở thành Hỗ trợ/Kháng cự mạnh.</div>
-    </div>
-    <div class="bullet-card">
-      <div class="heading" style="color: var(--accent-emerald);">3. Practical Implication</div>
-      <div class="body">Sử dụng công cụ Volume Profile (nằm ngang trên trục Y) thay vì chỉ dùng Volume cột dọc. Điểm kiểm soát (Point of Control - POC) chính là thỏi nam châm hút giá.</div>
-    </div>
-  </div>
-</div>
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH 10 · KIỂM ĐỊNH</div>
-    <h2>V-MACD &amp; Bollinger Bands</h2>
-<div class="content-card">
-  <h3>Đánh Giá Các Công Cụ Dao Động (Oscillators)</h3>
-  <br>
-  <div style="margin-bottom: 1.5rem; padding: 1rem; background: var(--surface-light); border-radius: var(--radius-lg); border-left: 4px solid var(--accent-amber);">
-    <strong>Luận điểm:</strong> Sử dụng V-MACD hoặc V-ROC hiệu quả hơn MACD giá.
-  </div>
-  <div class="bullet-grid">
-    <div class="bullet-card">
-      <div class="heading">Cơ sở toán học</div>
-      <div class="body">Do khối lượng biến động (volatile) mạnh hơn giá, việc tính toán động lượng (momentum) của khối lượng nhạy bén hơn.</div>
-    </div>
-    <div class="bullet-card">
-      <div class="heading">Điểm yếu / Lỗ hổng</div>
-      <div class="body">Khối lượng có tính chu kỳ trong ngày (U-shape: cao đầu giờ, cao cuối giờ, thấp giữa trưa). V-MACD dễ bị nhiễu do hiệu ứng chu kỳ này nếu không chuẩn hóa (normalize) trước.</div>
-    </div>
-  </div>
-</div>
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH 10 · GÓC NHÌN ĐỐI LẬP</div>
-    <h2>Khối Lượng Thời Gian vs Khối Lượng Mức Giá</h2>
-<div class="split-layout">
-  <div class="split-left" style="border-top: 4px solid var(--accent-emerald);">
-    <h3 style="color: var(--accent-emerald);">Khối Lượng Theo Thời Gian (Vertical Volume)</h3>
-    <p>Khối lượng vẽ dưới dạng cột dọc. <strong>Điểm mạnh:</strong> Cho biết khi NÀO dòng tiền lớn xuất hiện. Thích hợp để bắt các nhịp Breakout chớp nhoáng.</p>
-  </div>
-  
-  <div class="split-right" style="border-top: 4px solid var(--accent-amber);">
-    <h3 style="color: var(--accent-amber);">Khối Lượng Theo Mức Giá (Horizontal Volume)</h3>
-    <p>Khối lượng vẽ ngang (Volume Profile). <strong>Điểm mạnh:</strong> Cho biết dòng tiền lớn phòng thủ ở ĐÂU. Thích hợp cho swing trader để đặt Stop-loss và Take-profit an toàn.</p>
-  </div>
-</div>
-
-<div class="content-card" style="margin-top: 1rem; border: 1px solid var(--accent-purple);">
-  <h4 style="color: var(--accent-purple);">Tổng hợp (Synthesis)</h4>
-  <p>Một hệ thống giao dịch sâu sắc (DEEP) của năm 2026 sẽ kết hợp cả hai: Xác định "Vùng giá trị" bằng Volume at Price, sau đó bóp cò giao dịch (trigger) dựa trên "Sự bùng nổ khối lượng" của Vertical Volume + Bollinger Bands.</p>
-</div>
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH 10 · PHÂN TÍCH ĐA TẦNG</div>
-    <h2>Đọc Hiểu Dòng Chảy Pure Volume</h2>
-<div class="content-card">
-  <h3 style="color: var(--accent-cyan);">Phân Tích Đa Tầng: Sự "Thuần" Của Khối Lượng</h3>
-  <div class="timeline" style="margin-top: 1.5rem;">
-    <div class="timeline-item">
-      <div class="timeline-marker" style="background: var(--accent-cyan)">1</div>
-      <div class="timeline-body">
-        <strong>Tầng Mặt (Surface):</strong> Các chỉ báo thuần túy xử lý chuỗi số liệu volume.
-      </div>
-    </div>
-    <div class="timeline-item">
-      <div class="timeline-marker" style="background: var(--accent-amber)">2</div>
-      <div class="timeline-body">
-        <strong>Tầng Cấu trúc (Structural):</strong> Cung cấp một chiều đo lường (dimension) hoàn toàn song song với Giá, giúp loại bỏ tính "nội suy lẫn nhau" (multicollinearity) khi dùng nhiều chỉ báo giá cùng lúc.
-      </div>
-    </div>
-    <div class="timeline-item">
-      <div class="timeline-marker" style="background: var(--accent-purple)">5</div>
-      <div class="timeline-body">
-        <strong>Tầng Mở rộng (Generative):</strong> Triết lý "Bản đồ Etch-a-Sketch" của Crocker mở ra kỷ nguyên của Biểu đồ Không-Thời-Gian (Spatiotemporal Charting) trong High-Frequency Trading.
-      </div>
-    </div>
-  </div>
-</div>
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH 10 · CẢNH BÁO</div>
-    <h2>Điểm Mù Của Biểu Đồ Zero Line &amp; Tích Lũy</h2>
-<div class="warning-card">
-  <div class="warning-headline">Cảnh Báo Về Volume Tích Lũy Bằng Zero Line</div>
-  <div class="warning-detail">
-    <strong>Cạm bẫy:</strong> Tác giả cực kỳ không khuyến khích việc vẽ cột volume dương (xanh) bên trên vạch số 0, và cột âm (đỏ) bên dưới vạch số 0.<br><br>
-    <strong>Tại sao:</strong> Nó làm mất đi khả năng "so sánh trực quan" (eyeballing) độ cao tuyệt đối giữa phiên mua và phiên bán kế tiếp nhau. Chúng bị lệch hướng so với trục hoành, làm mắt người khó phân định chính xác. <span class="page-ref">Ch 10, p. 139</span>
-  </div>
-</div>
-<br>
-<div class="warning-card" style="border-left-color: var(--accent-purple);">
-  <div class="warning-headline" style="color: var(--accent-purple);">Volume Accumulation Đơn Thuần Là Vô Dụng</div>
-  <div class="warning-detail">
-    <strong>Tại sao:</strong> Một chỉ báo chỉ cộng trừ thô (volume hôm nay - volume hôm qua) kéo dài quá lâu sẽ trở nên trơ lì (less sensitive) với biến động hiện tại. Tác giả đánh giá nó làm rất tệ nhiệm vụ đối chiếu các dao động cục bộ. <span class="page-ref">Ch 10, p. 141</span>
-  </div>
-</div>
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH 10 · THỰC HÀNH</div>
-    <h2>Thiết Lập Biểu Đồ Chuẩn</h2>
-<div class="content-card">
-  <h3>Lộ Trình Tích Hợp Chỉ Báo Thuần (Implementation Guide)</h3>
-  <br>
-  <div class="phase-progress">
-    <div class="phase active">Tuần 1: Cấu Hình</div>
-    <div class="phase">Tuần 2: Volume Profile</div>
-    <div class="phase">Tháng 2: Oscillator</div>
-    <div class="phase">Tháng 6: Crocker</div>
-  </div>
-  
-  <div style="margin-top: 2rem;">
-    <p><strong>Giai đoạn 1 - Cấu Hình Cơ Bản:</strong></p>
-    <ul style="margin-bottom: 1.5rem; margin-left: 1.5rem; list-style-type: disc;">
-      <li>Thêm đường SMA(50) lên trên thanh Volume mặc định.</li>
-      <li>Bọc Bollinger Bands (2 std dev) quanh đường SMA đó để phần mềm tự báo động (alert) mỗi khi có Volume Surge.</li>
-    </ul>
-
-    <p><strong>Giai đoạn 2 - Áp dụng Volume At Price:</strong></p>
-    <ul style="margin-left: 1.5rem; list-style-type: disc;">
-      <li>Bật công cụ "Volume Profile Fixed Range" trên TradingView. Kéo nó qua khu vực sideway gần nhất để tìm POC (Point of Control). Dùng nó làm lệnh Stop-loss.</li>
-    </ul>
-  </div>
-</div>
-  </section>
-
-  <section class="slide">
-    <div class="slide-kicker">CH 10 · HÀNH ĐỘNG &amp; SUY NGẪM</div>
-    <h2>Áp Dụng Lập Tức</h2>
-<div class="content-card">
-  <h3 style="margin-bottom: 1rem;">Câu Hỏi Suy Ngẫm</h3>
-  <ul style="margin-bottom: 2rem;">
-    <li><strong>Phân Tích & Đánh Giá:</strong> Tại sao biểu đồ Crocker, dù thể hiện được bản chất Cung-Cầu theo vòng tròn, lại bị mai một và ít người sử dụng? Sự phức tạp có luôn mang lại lợi nhuận cao hơn?</li>
-    <li><strong>Áp Dụng:</strong> Lần cuối cùng bạn mua một cổ phiếu tại hỗ trợ, bạn có kiểm tra xem mức hỗ trợ đó có được tạo ra bởi "Volume at Price" khổng lồ trong quá khứ không?</li>
-  </ul>
-</div>
-
-<ul class="action-list">
-  <li class="action-item">
-    <div>
-      <div class="action-headline">Hành Động: Cài Đặt Bollinger Band cho Khối Lượng</div>
-      <div class="action-detail">Ngay bây giờ, hãy thêm Bollinger Band với thông số (Period 50, Std Dev 2) áp dụng riêng cho Volume. Lọc ra các cổ phiếu chọc thủng dải Band trên trong phiên hôm nay.</div>
-    </div>
-  </li>
-  <li class="action-item">
-    <div>
-      <div class="action-headline">Hành Động: Loại Bỏ Biểu Đồ Zero-Line</div>
-      <div class="action-detail">Nếu bạn đang dùng dạng Volume có vạch số 0 (Zero-line oscillator cho volume thô), hãy chuyển về biểu đồ cột kề nhau truyền thống để dễ so sánh.</div>
-    </div>
-  </li>
-</ul>
-  </section>
-
-</div>
-
-<div class="nav-controls">
-  <button class="nav-btn" id="prevBtn" onclick="prevSlide()" aria-label="Previous slide">&#8592;</button>
-  <div class="counter" id="counter" aria-live="polite">1 / 1</div>
-  <button class="nav-btn" id="nextBtn" onclick="nextSlide()" aria-label="Next slide">&#8594;</button>
-</div>
-
-<script src="common.js"></script>
+  <script src="../common.js"></script>
 </body>
+
 </html>

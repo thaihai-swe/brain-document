@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How to Make Money in Stocks — Chapter 6</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="common.css">
+<script src="https://cdn.jsdelivr.net/npm/@panzoom/panzoom@4.5.1/dist/panzoom.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11.10.0/dist/mermaid.min.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div class="progress-bar" id="progressBar"></div>
+
+<div class="chapter-menu">
+  <button class="menu-btn" id="chapterMenuBtn" onclick="toggleChapterMenu()" aria-haspopup="true" aria-expanded="false">Chapters &#9662;</button>
+  <div class="chapter-menu-panel" id="chapterMenuPanel" role="menu"></div>
+</div>
+
+<div class="slide-container" id="slideContainer">
+
+  <section class="slide" aria-hidden="false">
+<h1>How to Make Money in Stocks</h1>
+<p class="subtitle">Chương 6: S = Cung và Cầu: Lượng Cầu Lớn Tại Các Điểm Then Chốt<br><span style="font-size: 0.9em; opacity: 0.85;">(S = Supply and Demand: Big Volume Demand at Key Points)</span></p>
+
+<figure class="image-slot hero">
+  <img src="images/ch6_title_hero.png" alt="A classic brass scale under spotlight, representing the balance of supply and demand">
+  <figcaption>Chữ Cái Thứ Tư Trong CAN SLIM: Quy Luật Tự Nhiên Chi Phối Giá Cổ Phiếu</figcaption>
+</figure>
+
+<div class="meta-grid">
+  <div class="meta-item">
+    <div class="meta-label">Tác giả</div>
+    <div class="meta-value">William J. O'Neil</div>
+  </div>
+  <div class="meta-item">
+    <div class="meta-label">Độ sâu phân tích</div>
+    <div class="meta-value">DEEP+ Mode (23 Slides)</div>
+  </div>
+  <div class="meta-item">
+    <div class="meta-label">Đối tượng mục tiêu</div>
+    <div class="meta-value">Nhà đầu tư cá nhân</div>
+  </div>
+  <div class="meta-item">
+    <div class="meta-label">Ngôn ngữ</div>
+    <div class="meta-value">Song ngữ Anh - Việt</div>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide chapter-divider">
+<div class="chapter-number">Chương 6</div>
+<h2>Cung và Cầu: Lượng Cầu Lớn Tại Các Điểm Then Chốt</h2>
+<p class="chapter-meta">Ước tính thời gian đọc: 45 phút (chế độ DEEP+) &middot; Độ khó: Trung bình &middot; Khái niệm chính: Quy luật Cung Cầu, Quy mô vốn hóa (Capitalization Size), Lượng cổ phiếu trôi nổi (Floating Supply), Mua lại cổ phiếu (Share Buybacks), Tỷ lệ Nợ/Vốn chủ sở hữu, Khối lượng giao dịch bứt phá (Breakout Volume)</p>
+
+<figure class="image-slot hero">
+  <img src="images/ch6_divider_hero.png" alt="Abstract glowing curves representing the intense energy of buying and selling pressure">
+  <figcaption>Chữ S trong CAN SLIM - Giải mã cán cân lực lượng giữa bên mua và bên bán thông qua đồ thị khối lượng</figcaption>
+</figure>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 6 &amp;middot; TỔNG QUAN TRỰC QUAN 1</div>
+    <h2>Cơ cấu hệ thống bộ lọc chữ S</h2>
+<div class="mermaid">
+graph TD
+    A["Quy mô vốn hóa vừa và nhỏ (Cung cô đặc)"] --> E["BỘ LỌC CUNG CẦU (CHỮ S)"]
+    B["Ban điều hành sở hữu lượng cổ phiếu lớn (1% - 3%+)"] --> E
+    C["Hoạt động mua lại cổ phiếu quỹ (Thu hẹp cung tự nhiên)"] --> E
+    D["Cấu trúc tài chính lành mạnh (Nợ/Vốn chủ sở hữu thấp)"] --> E
+    E --> F["Dấu hiệu cầu lớn: Khối lượng giao dịch tăng vọt >= 40% - 50%+ tại điểm Breakout"]
+    
+    style A fill:#F7F7F5,stroke:#2A2D33,color:#2A2D33
+    style B fill:#8B7CFF,stroke:#2A2D33,color:#F7F7F5
+    style C fill:#D97706,stroke:#2A2D33,color:#F7F7F5
+    style E fill:#059669,stroke:#2A2D33,color:#F7F7F5
+</div>
+<div class="callout" style="margin-top: 1rem;">
+  <div class="callout-icon">💡</div>
+  <div class="callout-content">
+    <strong>Bản chất chữ S:</strong> Lợi nhuận và sản phẩm mới chỉ là tiềm năng; chính hành động mua bán thực tế trên thị trường mới quyết định hướng đi của giá. Chữ S đo lường trực tiếp cán cân cung cầu thông qua sự thay đổi của giá và khối lượng (Volume) hàng ngày.
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 6 &amp;middot; TỔNG QUAN TRỰC QUAN 2</div>
+    <h2>Tương tác giá và khối lượng trong nền tích lũy</h2>
+<div class="mermaid">
+graph TD
+    A["Cổ phiếu trong nền giá tích lũy (Base-building)"] --> B["Nhịp điều chỉnh/kéo ngược (Pullback)"]
+    B --> C["Khối lượng cạn kiệt (Volume Dry-up)"]
+    C --> D["Xác nhận: Áp lực bán tháo của tổ chức đã cạn"]
+    D --> E["Nhịp tăng giá hồi phục hướng lên (Rally)"]
+    E --> F["Khối lượng giao dịch gia tăng (Volume Increases)"]
+    F --> G["Xác nhận: Lực cầu gom hàng chủ động của tổ chức lớn"]
+    G --> H["Điểm bứt phá cuối cùng (Breakout) với Khối lượng đột biến (+50% đến +100%+)"]
+    
+    style C fill:#F7F7F5,stroke:#2A2D33,color:#2A2D33
+    style F fill:#8B7CFF,stroke:#2A2D33,color:#F7F7F5
+    style H fill:#059669,stroke:#2A2D33,color:#F7F7F5
+</div>
+<div class="callout" style="margin-top: 1rem;">
+  <div class="callout-icon">📊</div>
+  <div class="callout-content">
+    <strong>Tương tác Khối lượng & Giá:</strong> Trong nền giá, sự kết hợp giữa "Giảm giá kèm khối lượng thấp" và "Tăng giá kèm khối lượng cao" là bằng chứng đắt giá nhất cho thấy cổ phiếu đang được các tổ chức mua gom tích lũy lặng lẽ trước khi đánh lên.
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 6 &amp;middot; TÓM TẮT CHƯƠNG</div>
+    <h2>Tóm tắt cấu trúc</h2>
+<div class="content-card">
+  <div class="summary-text">
+    <p><strong>Bối cảnh (Setup):</strong> Làm thế nào cấu trúc vốn của doanh nghiệp (số cổ phiếu lưu hành, nợ vay, chia tách, mua lại cổ phiếu) tác động đến giá cổ phiếu? Làm thế nào phát hiện dấu chân gom hàng hoặc phân phối của các tổ chức lớn?</p>
+    <p><strong>Luận điểm chính (Argument):</strong> Quy luật cung cầu chi phối tất cả, vượt lên trên mọi ý kiến phân tích của Wall Street. Các cổ phiếu có số lượng lưu hành và lượng trôi nổi (float) nhỏ hơn đòi hỏi ít lực cầu hơn để tăng giá. Nhà đầu tư nên chọn doanh nghiệp có ban lãnh đạo nắm giữ nhiều cổ phiếu, có hoạt động mua lại cổ phiếu quỹ thực chất, tỷ lệ nợ thấp, và luôn xác thực xu hướng bằng phân tích biến động khối lượng (Volume) giao dịch thực tế.</p>
+    <p><strong>Bằng chứng (Evidence):</strong> Các siêu cổ phiếu thực hiện mua lại lượng lớn vốn cổ phần như Tandy (tăng từ $2.75 lên $60), Metromedia ($30 lên $560), Teledyne ($8 lên $190, giảm từ 88 triệu còn 15 triệu cổ phiếu) ghi nhận mức tăng khổng lồ. Vụ sụp đổ tài chính 2008 là minh chứng cho rủi ro đòn bẩy nợ 40x-50x. Qualcomm đạt đỉnh năm 1999 ngay sau đợt chia tách lớn 4-for-1.</p>
+    <p><strong>Hệ quả (Implications):</strong> Đặt giới hạn quy mô vốn hóa khi lọc cổ phiếu tăng trưởng. Kiểm tra tỷ lệ Nợ/Vốn chủ sở hữu. Ưu tiên lãnh đạo sở hữu nhiều cổ phiếu. Phân tích khối lượng tuần và ngày: Yêu cầu khối lượng tăng tối thiểu 40%-50%+ (thường > 100%) tại điểm breakout và cạn kiệt trong các nhịp điều chỉnh.</p>
+    <p><strong>Tranh luận (Controversy):</strong> Wall Street thường khuyến khích chia tách lớn để thu hút nhỏ lẻ mua cổ phiếu giá thấp, trong khi O'Neil chứng minh điều này làm loãng cung và triệt tiêu động lực tăng giá.</p>
+    <p><strong>Mối liên kết (Connection):</strong> Hỗ trợ trực tiếp cho Chương 2 (Đồ thị) bằng cách cung cấp bộ lọc khối lượng để loại bỏ các breakout xịt, đồng thời chuẩn bị cho Chương 9 (Sự bảo trợ của tổ chức) bằng cách phân tích dòng tiền lớn.</p>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 6 &amp;middot; Ý TƯỞNG CỐT LÕI</div>
+    <h2>Ý tưởng cốt lõi</h2>
+<div class="takeaway-hero">
+  <div class="kicker">CH 6 &middot; Ý TƯỞNG CỐT LÕI</div>
+  <div class="headline">"Quy luật Cung Cầu quyết định giá cổ phiếu. Hãy chọn doanh nghiệp vốn hóa vừa/nhỏ, có mua lại cổ phiếu quỹ, nợ vay thấp và khối lượng giao dịch bùng nổ tại điểm breakout."</div>
+  <div class="subline">Khối lượng giao dịch chính là dấu chân không thể che giấu của dòng tiền tổ chức lớn đang gom mua hoặc phân phối cổ phiếu.</div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 6 &amp;middot; BÀI HỌC CHỦ CHỐT</div>
+    <h2>Bài học chủ chốt</h2>
+<div class="takeaway-list">
+  <div class="takeaway-item">
+    <div class="takeaway-badge">1</div>
+    <div class="takeaway-content">
+      <strong>Ưu thế vượt trội của quy mô vốn hóa vừa và nhỏ (Smaller Capitalization Advantage)</strong>
+      <div class="takeaway-detail">
+        <ul>
+          <li><strong>Ý nghĩa:</strong> Nguồn cung cổ phiếu cô đặc giúp giá cổ phiếu dễ dàng bứt phá mạnh mẽ khi xuất hiện lực cầu từ các tổ chức lớn, không bị trì trệ như các doanh nghiệp khổng lồ.</li>
+          <li><strong>Bằng chứng:</strong> Một cổ phiếu có 50 triệu cổ phiếu lưu hành luôn dễ tăng giá hơn cổ phiếu có 5 tỷ cổ phiếu lưu hành khi các yếu tố khác tương đương. <span class="page-ref">Ch 6 &middot; "Big or Small Supply of Stock"</span></li>
+          <li><strong>Ứng dụng:</strong> Ưu tiên chọn các doanh nghiệp tăng trưởng có số lượng cổ phiếu lưu hành vừa phải và lượng cổ phiếu trôi nổi (Float) cô đặc.</li>
+          <li><strong>Cảnh báo:</strong> Cổ phiếu vốn hóa nhỏ đi kèm thanh khoản thấp và độ biến động giảm giá rất lớn. Cần có quy tắc quản trị quy mô vị thế nghiêm ngặt.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="takeaway-item">
+    <div class="takeaway-badge">2</div>
+    <div class="takeaway-content">
+      <strong>Sự đồng thuận lợi ích từ tỷ lệ sở hữu của Ban quản trị (Management Ownership)</strong>
+      <div class="takeaway-detail">
+        <ul>
+          <li><strong>Ý nghĩa:</strong> Lãnh đạo nắm giữ lượng cổ phần lớn sẽ có động lực cao nhất để thúc đẩy hiệu quả kinh doanh của công ty và tối ưu hóa giá trị cổ đông.</li>
+          <li><strong>Bằng chứng:</strong> Tránh các ban quản trị kiểu "Người trông coi" (Caretaker Managements) - những người có rất ít sở hữu cổ phiếu, thiếu sáng tạo và lười đổi mới. <span class="page-ref">Ch 6 &middot; "Pick Entrepreneurial Management..."</span></li>
+          <li><strong>Ứng dụng:</strong> Ưu tiên các doanh nghiệp có ban lãnh đạo nắm giữ tối thiểu 1% - 3% cổ phần (đối với doanh nghiệp lớn) và tỷ lệ cao hơn đối với doanh nghiệp nhỏ.</li>
+          <li><strong>Cảnh báo:</strong> Tránh các trường hợp ban lãnh đạo chỉ đăng ký mua mang tính chất làm đẹp truyền thông hoặc sở hữu thông qua các công ty con/sân sau phức tạp.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="takeaway-item">
+    <div class="takeaway-badge">3</div>
+    <div class="takeaway-content">
+      <strong>Mua lại cổ phiếu quỹ phải đi kèm tăng trưởng thực chất (Earnings-backed Buybacks)</strong>
+      <div class="takeaway-detail">
+        <ul>
+          <li><strong>Ý nghĩa:</strong> Việc doanh nghiệp tự gom mua cổ phần của chính mình làm giảm mẫu số cổ phiếu lưu hành, tự động thúc đẩy EPS tăng vọt.</li>
+          <li><strong>Bằng chứng:</strong> Các siêu cổ phiếu như Teledyne (giảm từ 88 triệu còn 15 triệu cổ phiếu qua 8 lần mua lại), Tandy, Metromedia đều mang lại lợi nhuận khổng lồ. <span class="page-ref">Ch 6 &middot; "Look for Companies Buying..."</span></li>
+          <li><strong>Ứng dụng:</strong> Tìm kiếm các công ty có thông báo mua lại cổ phiếu quỹ quy mô lớn (> 10% số lượng lưu hành) trong khi hoạt động cốt lõi vẫn đang tăng trưởng tốt.</li>
+          <li><strong>Cảnh báo:</strong> Mua lại cổ phiếu khi lợi nhuận của doanh nghiệp đang suy giảm là dấu hiệu lãng phí dòng tiền và không lành mạnh về cấu trúc tài chính.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="takeaway-item">
+    <div class="takeaway-badge">4</div>
+    <div class="takeaway-content">
+      <strong>Xác thực điểm Breakout bằng khối lượng giao dịch bùng nổ (Breakout Volume Rule)</strong>
+      <div class="takeaway-detail">
+        <ul>
+          <li><strong>Ý nghĩa:</strong> Khối lượng giao dịch tăng vọt chứng tỏ dòng tiền lớn của các tổ chức tài chính lớn đã chính thức hành động để đẩy giá vượt kháng cự.</li>
+          <li><strong>Bằng chứng:</strong> Tại ngày breakout khỏi nền giá tích lũy, khối lượng giao dịch bắt buộc phải tăng tối thiểu từ 40% - 50% trở lên (thông thường là trên 100%) so với trung bình 3 tháng. <span class="page-ref">Ch 6 &middot; "Evaluating Supply and Demand"</span></li>
+          <li><strong>Ứng dụng:</strong> Chỉ giải ngân mua mới khi giá vượt điểm pivot đi kèm thanh khoản bùng nổ rõ rệt.</li>
+          <li><strong>Cảnh báo:</strong> Đề phòng các đợt bùng nổ khối lượng cực đại tại vùng giá quá mua kéo dài (Climax top) vì đó có thể là dấu hiệu phân phối bán ra của các tổ chức.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 6 &amp;middot; TRÍCH DẪN ĐẮT GIÁ</div>
+    <h2>Trích dẫn đắt giá</h2>
+<div class="quote-block" style="margin-bottom: 2rem;">
+  <p class="quote-text">"This basic principle of supply and demand also applies to the stock market, where it is more important than the opinions of all the analysts on Wall Street..."</p>
+  <p class="quote-context"><strong>— William J. O'Neil</strong>, khẳng định tính tối thượng của quy luật cung cầu. <span class="page-ref">Ch 6 &middot; §CHAPTER 6</span></p>
+  <div style="font-size: 0.95rem; color: var(--text-secondary); margin-top: 0.5rem; line-height: 1.5;">
+    <strong>Bản dịch:</strong> "Nguyên lý cơ bản này của cung và cầu cũng áp dụng cho thị trường chứng khoán, nơi nó quan trọng hơn ý kiến của tất cả các nhà phân tích trên Wall Street..."<br>
+    <strong>Phân tích:</strong> O'Neil nhắc nhở chúng ta rằng ý kiến của con người dù thông minh đến đâu cũng chỉ là chủ quan. Thị trường vận hành dựa trên dòng tiền thực tế. Lực mua chủ động (cầu) vượt trội lực bán chủ động (cung) là lý do duy nhất khiến giá cổ phiếu tăng lên.
+  </div>
+</div>
+
+<div class="quote-block" style="margin-bottom: 2rem;">
+  <p class="quote-text">"Rule 1 for all competent investors and homeowners is never ever borrow more than you can pay back. Excessive debt hurts all people, companies, and governments."</p>
+  <p class="quote-context"><strong>— William J. O'Neil</strong>, cảnh báo về rủi ro của đòn bẩy tài chính quá mức. <span class="page-ref">Ch 6 &middot; "A Low Corporate Debt-to-Equity Ratio..."</span></p>
+  <div style="font-size: 0.95rem; color: var(--text-secondary); margin-top: 0.5rem; line-height: 1.5;">
+    <strong>Bản dịch:</strong> "Quy tắc 1 cho tất cả các nhà đầu tư và chủ sở hữu nhà đất có năng lực là không bao giờ vay nhiều hơn số tiền bạn có thể trả. Nợ nần quá mức gây tổn hại cho tất cả mọi người, công ty và chính phủ."<br>
+    <strong>Phân tích:</strong> Đòn bẩy nợ là một con dao hai lưỡi. Trong thời kỳ kinh tế thuận lợi, nợ vay giúp gia tăng lợi nhuận nhanh chóng. Tuy nhiên, khi chu kỳ kinh tế đảo chiều hoặc lãi suất tăng cao, các doanh nghiệp thâm dụng nợ lớn sẽ bị sụt giảm EPS nghiêm trọng và đứng trước nguy cơ phá sản.
+  </div>
+</div>
+
+<div class="quote-block">
+  <p class="quote-text">"When a stock pulls back in price, you typically want to see volume dry up at some point, indicating that there is no further significant selling pressure."</p>
+  <p class="quote-context"><strong>— William J. O'Neil</strong>, hướng dẫn cách đọc hiểu thanh khoản trong nhịp điều chỉnh kỹ thuật. <span class="page-ref">Ch 6 &middot; "Evaluating Supply and Demand"</span></p>
+  <div style="font-size: 0.95rem; color: var(--text-secondary); margin-top: 0.5rem; line-height: 1.5;">
+    <strong>Bản dịch:</strong> "Khi một cổ phiếu kéo ngược về giá, thông thường bạn muốn thấy khối lượng giao dịch cạn kiệt tại một thời điểm nào đó, cho thấy không còn áp lực bán đáng kể nào nữa."<br>
+    <strong>Phân tích:</strong> Đây là chìa khóa để phân biệt một nhịp điều chỉnh lành mạnh (pullback) với một xu hướng phân phối đỉnh. Nếu giá giảm nhưng khối lượng giao dịch cạn kiệt (Volume dry-up), chứng tỏ các tổ chức lớn không bán tháo ra và chỉ có hoạt động chốt lời nhỏ lẻ. Cổ phiếu sẵn sàng hồi phục khi có dòng tiền cầu quay lại.
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 6 &amp;middot; MÔ HÌNH TƯ DUY 1</div>
+    <h2>Mô hình 1: Lợi thế quy mô vốn hóa nhỏ</h2>
+<div class="mental-model-card">
+  <h4 class="model-name" style="color: var(--accent-purple);">Mô Hình 1: Quy Luật Cung Cầu & Hiệu Ứng Quy Mô Vốn Hóa (Supply-Demand & Capitalization Size Effect)</h4>
+  <div class="model-principle">
+    <strong>Nguyên lý cốt lõi:</strong> Sức nặng của quy mô vốn hóa. Cổ phiếu có số lượng lưu hành nhỏ hơn (nguồn cung cô đặc) sẽ phản ứng nhạy bén hơn và dễ tăng giá mạnh mẽ hơn trước cùng một lực cầu mua vào so với cổ phiếu vốn hóa khổng lồ.
+  </div>
+  
+  <div class="model-application" style="margin-top: 1rem;">
+    <strong>Cơ chế chênh lệch lực đẩy giá:</strong>
+    <ul>
+      <li><strong>Cơ cấu vốn lớn (5 tỷ cổ phiếu lưu hành):</strong> Cần một khối lượng dòng tiền khổng lồ của hàng chục quỹ đầu tư tham gia gom mua chỉ để đẩy giá tăng vài phần trăm. Quá trình di chuyển rất chậm và sluggish. <span class="page-ref">Ch 6 &middot; "Big or Small Supply of Stock"</span></li>
+      <li><strong>Cơ cấu vốn nhỏ (50 triệu cổ phiếu lưu hành):</strong> Chỉ cần một lực cầu vừa phải của 1-2 tổ chức lớn mua gom là đủ để làm sạch nguồn cung trôi nổi và kéo giá tăng trần liên tiếp.</li>
+    </ul>
+  </div>
+
+  <div class="model-application" style="margin-top: 1rem;">
+    <strong>Cách thức áp dụng thực tế:</strong>
+    <ol>
+      <li>Khi đứng trước hai cổ phiếu cùng ngành có các tiêu chuẩn CAN SLIM tương đương, luôn ưu tiên chọn cổ phiếu có số lượng cổ phiếu lưu hành nhỏ hơn.</li>
+      <li>Đặc biệt chú ý đến **Lượng cổ phiếu trôi nổi tự do (Floating Supply)** - là lượng cổ phần thực tế lưu thông ngoài thị trường sau khi đã trừ đi lượng nắm giữ của cổ đông nhà nước, ban lãnh đạo và cổ đông chiến lược.</li>
+    </ol>
+  </div>
+
+  <div class="model-limitations" style="margin-top: 1rem; border-left: 3px solid var(--accent-red); padding-left: 10px;">
+    <strong>⚠️ Hạn chế & Rủi ro thanh khoản:</strong>
+    <ul>
+      <li><strong>Bẫy thanh khoản (Illiquidity Trap):</strong> Cổ phiếu vốn hóa quá nhỏ sẽ không đủ thanh khoản cho các nhà đầu tư lớn giải ngân vị thế quy mô. Việc bán ra khi xảy ra biến động xấu sẽ cực kỳ khó khăn và dễ gây hiện tượng trượt giá sâu (giảm sàn liên tục không có người mua).</li>
+      <li><strong>Độ biến động hai chiều cực lớn:</strong> Vốn hóa nhỏ tăng nhanh nhưng khi giảm cũng sẽ giảm tàn khốc hơn.</li>
+    </ul>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 6 &amp;middot; MÔ HÌNH TƯ DUY 2</div>
+    <h2>Mô hình 2: Phân tích khối lượng tuần và gom hàng</h2>
+<div class="mental-model-card">
+  <h4 class="model-name" style="color: var(--accent-purple);">Mô Hình 2: Phân Tích Khối Lượng Tuần & Hành Vi Gom Hàng (Weekly Volume & Accumulation Analysis)</h4>
+  <div class="model-principle">
+    <strong>Nguyên lý cốt lõi:</strong> Phân tích mối quan hệ giữa biến động giá tuần và khối lượng giao dịch để đọc hiểu hành vi gom hàng lặng lẽ (Accumulation) hoặc bán ra (Distribution) của dòng tiền tổ chức lớn bên trong nền giá tích lũy.
+  </div>
+  
+  <div class="model-application" style="margin-top: 1rem;">
+    <strong>Quy trình kiểm định nền giá tuần-qua-tuần:</strong>
+    <ul>
+      <li><strong>Tuần tích lũy tích cực (Accumulation):</strong> Giá tăng điểm trong tuần kèm theo <strong>khối lượng giao dịch tăng vọt</strong> so với tuần trước đó. Đây là dấu chân mua gom trực tiếp của các quỹ đầu tư lớn. <span class="page-ref">Ch 6 &middot; "Evaluating Supply and Demand"</span></li>
+      <li><strong>Tuần điều chỉnh lành mạnh (Pullback):</strong> Giá giảm điểm trong tuần nhưng đi kèm với <strong>khối lượng giao dịch sụt giảm mạnh (cạn kiệt)</strong>. Điều này chứng tỏ tổ chức lớn không bán tháo cổ phiếu, chỉ có nhà đầu tư nhỏ lẻ chốt lời ngắn hạn.</li>
+      <li><strong>Vị trí giá đóng cửa tuần:</strong> Quan sát nến tuần, xem giá đóng cửa nằm ở đâu trong phạm vi biên độ giá (High - Low) của tuần đó. Đóng cửa ở <strong>nửa trên của nến tuần</strong> (đặc biệt là sát mức cao nhất) thể hiện lực cầu hỗ trợ cực kỳ mạnh mẽ vào cuối tuần.</li>
+    </ul>
+  </div>
+
+  <div class="model-application" style="margin-top: 1rem;">
+    <strong>Cách thức áp dụng thực tế:</strong>
+    <ol>
+      <li>Phân tích nền giá của cổ phiếu (ví dụ: kéo dài 8 tuần). Đếm số tuần tăng giá kèm khối lượng lớn.</li>
+      <li>Đối chiếu với số tuần giảm giá kèm khối lượng lớn.</li>
+      <li>Một nền giá kiến tạo chuẩn mực để bứt phá bắt buộc phải có số tuần Gom hàng (Accumulation Weeks) nhiều hơn rõ rệt và không được có các tuần giảm giá dốc đứng kèm khối lượng đột biến (dấu hiệu phân phối tháo chạy).</li>
+    </ol>
+  </div>
+
+  <div class="model-limitations" style="margin-top: 1rem; border-left: 3px solid var(--accent-red); padding-left: 10px;">
+    <strong>⚠️ Hạn chế & Sai lầm cần tránh:</strong>
+    <ul>
+      <li><strong>Nền giá bị lỏng lẻo (Loose and Volatile Base):</strong> Nếu biên độ biến động giá hàng tuần quá rộng (tăng giảm thất thường > 15-20% mỗi tuần) kèm khối lượng hỗn loạn, nền giá đó đã bị hỏng cấu trúc và không an toàn để mua breakout.</li>
+      <li><strong>Bỏ qua bối cảnh thị trường chung:</strong> Khối lượng tuần tăng đột biến đôi khi bị bóp méo bởi các sự kiện tái cơ cấu danh mục của các quỹ chỉ số (ETF rebalancing) vào tuần cuối quý.</li>
+    </ul>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 6 &amp;middot; MÔ HÌNH TƯ DUY 3</div>
+    <h2>Mô hình 3: Cạm bẫy chia tách cổ phiếu quá mức</h2>
+<div class="mental-model-card">
+  <h4 class="model-name" style="color: var(--accent-purple);">Mô Hình 3: Cạm Bẫy Chia Tách Cổ Phiếu Quá Mức (The Over-Splitting Trap)</h4>
+  <div class="model-principle">
+    <strong>Nguyên lý cốt lõi:</strong> Việc chia tách cổ phiếu tỷ lệ lớn làm gia tăng đột biến nguồn cung lưu thông trên thị trường, làm loãng tính cô đặc và thường là dấu hiệu cảnh báo đà tăng trưởng sắp đi vào giai đoạn thoái trào (phân phối đỉnh).
+  </div>
+  
+  <div class="model-application" style="margin-top: 1rem;">
+    <strong>Tác động tâm lý và hành vi của dòng tiền lớn:</strong>
+    <ul>
+      <li><strong>Tâm lý lừa phỉnh nhỏ lẻ:</strong> Các tập đoàn thường chia tách cổ phiếu tỷ lệ cao (3-for-1 hoặc 5-for-1) để hạ thị giá cổ phiếu xuống thấp, tạo cảm giác "rẻ" nhằm thu hút dòng tiền của nhà đầu tư nhỏ lẻ. <span class="page-ref">Ch 6 &middot; "Excessive Stock Splits May Hurt"</span></li>
+      <li><strong>Cơ hội thoát hàng của tổ chức:</strong> Các quỹ đầu tư lớn hiểu rằng việc bán ra lượng lớn cổ phiếu (ví dụ: bán 100.000 cổ phiếu trước chia tách) sẽ dễ dàng và ít gây sụt giá hơn việc bán 300.000 cổ phiếu sau khi đã chia tách 3-for-1 và thị trường ngập tràn nguồn cung nhỏ lẻ.</li>
+      <li><strong>Quy luật đỉnh thứ hai/thứ ba:</strong> Xu hướng tăng giá của siêu cổ phiếu thường sẽ tạo đỉnh lịch sử xung quanh đợt chia tách thứ 2 hoặc thứ 3 trong chu kỳ tăng giá. Chỉ <strong>18%</strong> siêu cổ phiếu có chia tách cổ phiếu trong năm trước đà tăng vĩ đại nhất của chúng (chứng minh tính cô đặc là bắt buộc).</li>
+    </ul>
+  </div>
+
+  <div class="model-application" style="margin-top: 1rem;">
+    <strong>Cách thức áp dụng thực tế:</strong>
+    <ol>
+      <li>Nếu một cổ phiếu bạn đang nắm giữ đã tăng giá rất mạnh trong 1-2 năm qua và công bố chia tách cổ phiếu tỷ lệ lớn (như 3-for-1 hoặc 4-for-1) ở cuối chu kỳ tăng giá, hãy chuẩn bị chiến lược chốt lời chủ động.</li>
+      <li>Không mua đuổi cổ phiếu tại ngày giao dịch không hưởng quyền của các đợt chia tách tỷ lệ cao.</li>
+      <li>Ví dụ lịch sử điển hình: Siêu cổ phiếu **Qualcomm** đạt đỉnh thời đại vào tháng 12/1999 ngay sau khi thực hiện đợt chia tách cổ phiếu tỷ lệ lớn 4-for-1.</li>
+    </ol>
+  </div>
+
+  <div class="model-limitations" style="margin-top: 1rem; border-left: 3px solid var(--accent-red); padding-left: 10px;">
+    <strong>⚠️ Hạn chế & Ngoại lệ:</strong>
+    <ul>
+      <li><strong>Đợt chia tách đầu tiên (First Split):</strong> Cổ phiếu thường sẽ tiếp tục tăng giá sau đợt chia tách đầu tiên trong một chu kỳ bull market mới, sau khi đã trải qua một vài tuần tích lũy điều chỉnh tự nhiên. Không phải đợt chia tách nào cũng xấu.</li>
+      <li><strong>Mục đích thực chất:</strong> Cần phân biệt rõ giữa chia tách để tăng tính thanh khoản hợp lý (2-for-1 hoặc 3-for-2) với chia tách quá mức nhằm mục đích đầu cơ thổi giá ngắn hạn.</li>
+    </ul>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 6 &amp;middot; SỐ LIỆU &amp; THỐNG KÊ</div>
+    <h2>Bằng chứng thành công lịch sử (Teledyne, Tandy, IGT...)</h2>
+<div class="metric-grid">
+  <div class="metric-card">
+    <div class="metric-value" style="color: var(--accent-cyan);">2.000%+</div>
+    <div class="metric-label">Tandy (1975 - 1983)</div>
+    <div class="metric-detail">Đà tăng trưởng giá cổ phiếu từ mức điều chỉnh <strong>$2.75 lên $60</strong>. Chiến lược của CEO Charles Tandy là liên tục vay ngân hàng để mua lại cổ phần của chính mình khi thị trường điều chỉnh giảm giá. <span class="page-ref">Ch 6 &middot; "Look for Companies Buying..."</span></div>
+  </div>
+
+  <div class="metric-card">
+    <div class="metric-value" style="color: var(--accent-cyan);">2.275%</div>
+    <div class="metric-label">Teledyne (1971 - 1984)</div>
+    <div class="metric-detail">Cổ phiếu tăng từ <strong>$8 lên $190</strong> nhờ thực hiện 8 đợt mua lại cổ phiếu quỹ lớn liên tiếp. <strong>Shrank capitalization từ 88 triệu cổ phiếu xuống còn 15 triệu cổ phiếu</strong> (giảm 83% nguồn cung), đẩy EPS từ $0.61 vọt lên gần $20. <span class="page-ref">Ch 6 &middot; "Look for Companies Buying..."</span></div>
+  </div>
+
+  <div class="metric-card">
+    <div class="metric-value" style="color: var(--accent-cyan);">1.760%</div>
+    <div class="metric-label">Metromedia (1971 - 1977)</div>
+    <div class="metric-detail">Cổ phiếu bứt phá tăng từ <strong>$30 lên $560</strong> nhờ chiến dịch thu hẹp lượng cổ phần trôi nổi mạnh mẽ trong bối cảnh lợi nhuận ròng tăng trưởng vững chắc qua các năm. <span class="page-ref">Ch 6 &middot; "Look for Companies Buying..."</span></div>
+  </div>
+
+  <div class="metric-card">
+    <div class="metric-value" style="color: var(--accent-cyan);">2.000%</div>
+    <div class="metric-label">International Game Technology (1989 - 1993)</div>
+    <div class="metric-detail">IGT công bố mua lại <strong>20% cổ phiếu lưu hành</strong> trong giai đoạn 1989-1990. Kết quả là cổ phiếu đã tăng giá hơn 20 lần tính đến thời điểm tháng 9/1993. <span class="page-ref">Ch 6 &middot; "Look for Companies Buying..."</span></div>
+  </div>
+</div>
+
+<div class="callout" style="margin-top: 1rem;">
+  <div class="callout-icon">📊</div>
+  <div class="callout-content">
+    <strong>Bản chất sức mạnh mua lại:</strong> Khi một công ty mua lại cổ phần của chính mình, số lượng cổ phiếu dùng để tính toán EPS bị giảm đi đáng kể. Điều này tạo ra một "đòn bẩy EPS" cực mạnh, làm gia tăng tốc độ tăng trưởng EPS của doanh nghiệp mà không cần mở rộng quy mô kinh doanh vật lý.
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 6 &amp;middot; QUY MÔ VỐN HÓA</div>
+    <h2>Lượng cổ phiếu trôi nổi tự do và sở hữu lãnh đạo</h2>
+<div class="content-card">
+  <p class="summary-text" style="font-size: 1.1rem; line-height: 1.6;">
+    Để hiểu sâu về quy luật cung cầu của cổ phiếu, nhà đầu tư phải nắm rõ khái niệm <strong>Lượng cổ phiếu trôi nổi tự do (Floating Supply)</strong> chứ không chỉ nhìn vào tổng số cổ phiếu lưu hành (Shares Outstanding). <span class="page-ref">Ch 6 &middot; "Big or Small Supply of Stock"</span>
+  </p>
+</div>
+
+<div class="bullet-grid" style="margin-top: 1.5rem;">
+  <div class="bullet-card">
+    <h4>1. Lượng cổ phiếu trôi nổi (Float) là gì?</h4>
+    <p>Là số lượng cổ phiếu thực tế sẵn sàng giao dịch tự do trên thị trường. Nó được tính bằng cách lấy tổng số cổ phiếu phát hành trừ đi lượng cổ phần bị khóa hoặc nắm giữ dài hạn bởi: Ban quản trị, cổ đông chiến lược, nhà nước hoặc các cổ đông lớn nội bộ.</p>
+  </div>
+
+  <div class="bullet-card">
+    <h4>2. Tại sao cổ đông nội bộ sở hữu nhiều lại tốt?</h4>
+    <p>Khi ban quản lý sở hữu tỷ lệ cổ phần lớn (ít nhất <strong>1% đến 3%</strong> đối với các công ty quy mô lớn và nhiều hơn đối với công ty nhỏ), quyền lợi của họ gắn chặt vào giá trị của cổ đông. Họ sẽ nỗ lực tối đa để đưa doanh nghiệp tăng trưởng bền vững thay vì chỉ làm công ăn lương (Caretakers).</p>
+  </div>
+
+  <div class="bullet-card">
+    <h4>3. Ngoại lệ của các cổ phiếu vốn hóa lớn (Big-Caps)</h4>
+    <p>Mặc dù cung lớn khó tăng giá, nhưng các cổ phiếu vốn hóa lớn có ưu thế riêng: <strong>Tính thanh khoản cực tốt, biên độ sụt giảm giá thấp hơn trong thị trường gấu, chất lượng kinh doanh vững vàng và rủi ro thấp hơn</strong>. Trong thập kỷ 1990, dòng tiền mới ồ ạt đổ vào các quỹ tương hỗ lớn đã ép họ phải mua gom các cổ phiếu Big-cap, đẩy nhóm này tăng giá rất mạnh. <span class="page-ref">Ch 6 &middot; "Big or Small Supply of Stock"</span></p>
+  </div>
+
+  <div class="bullet-card">
+    <h4>4. Đánh giá bối cảnh chu kỳ thị trường</h4>
+    <p>Thị trường chứng khoán sẽ luân phiên chuyển đổi dòng tiền giữa nhóm vốn hóa lớn (Bluechips) và nhóm vốn hóa vừa/nhỏ (Midcaps/Smallcaps). Nhà đầu tư cần linh hoạt điều chỉnh trọng tâm danh mục để đi cùng dòng chảy của dòng tiền lớn.</p>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 6 &amp;middot; CHIA TÁCH CỔ PHIẾU</div>
+    <h2>Tác động tiêu cực của chia tách cổ phiếu quá mức</h2>
+<div class="content-card">
+  <p class="summary-text" style="font-size: 1.1rem; line-height: 1.6;">
+    Nhiều doanh nghiệp và giới tư vấn tài chính tin rằng việc chia tách cổ phiếu để hạ giá thấp là điều tích cực. Tuy nhiên, William O'Neil cảnh báo <strong>chia tách quá nhiều (Excessive Stock Splits) là một sai lầm tài chính nguy hiểm</strong>. <span class="page-ref">Ch 6 &middot; "Excessive Stock Splits May Hurt"</span>
+  </p>
+</div>
+
+<div class="bullet-grid" style="margin-top: 1.5rem;">
+  <div class="bullet-card">
+    <h4>1. Mức độ chia tách hợp lý</h4>
+    <p>O'Neil khuyến nghị tỷ lệ chia tách lành mạnh là <strong>2-for-1 (2 chia 1) hoặc 3-for-2 (3 chia 2)</strong>. Các tỷ lệ quá lớn như 3-for-1 hoặc 5-for-1 sẽ đẩy doanh nghiệp vào trạng thái "vốn hóa lớn và ì ạch" sớm hơn do lượng cung trôi nổi tăng quá nhanh.</p>
+  </div>
+
+  <div class="bullet-card">
+    <h4>2. Quy luật điều chỉnh sau chia tách</h4>
+    <p>Sau đợt chia tách đầu tiên trong một thị trường bò mới, cổ phiếu thường không tăng ngay lập tức mà sẽ <strong>trải qua một đợt tích lũy điều chỉnh kéo dài vài tuần</strong> trước khi có thể tiếp tục xu hướng đi lên.</p>
+  </div>
+
+  <div class="bullet-card">
+    <h4>3. Rủi ro chia tách cuối chu kỳ tăng giá</h4>
+    <p>Việc doanh nghiệp cố tình công bố chia tách lớn ở giai đoạn cuối của thị trường tăng giá (Bull Market) hoặc giai đoạn đầu thị trường giảm giá (Bear Market) là tín hiệu cực kỳ rủi ro. Các nhà đầu tư chuyên nghiệp tận dụng sự hưng phấn ngắn hạn của tin tức này để bán tháo chốt lời, còn các đội bán khống sẽ bắt đầu nhắm vào các mã này khi chúng xuất hiện dấu hiệu suy yếu.</p>
+  </div>
+
+  <div class="bullet-card">
+    <h4>4. Thống kê thực tế của siêu cổ phiếu</h4>
+    <p>Nghiên cứu của IBD chỉ ra chỉ có <strong>18%</strong> các siêu cổ phiếu hàng đầu có xảy ra hoạt động chia tách cổ phiếu trong vòng 1 năm trước đợt tăng giá bùng nổ vĩ đại nhất của chúng. Rõ ràng, sự cô đặc nguồn cung là tiền đề vững chắc cho việc tăng giá dốc đứng.</p>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 6 &amp;middot; MUA LẠI CỔ PHIẾU</div>
+    <h2>Đòn bẩy EPS từ hoạt động mua lại cổ phiếu quỹ</h2>
+<div class="content-card">
+  <p class="summary-text" style="font-size: 1.1rem; line-height: 1.6;">
+    Hoạt động <strong>mua lại cổ phiếu quỹ (Share Buybacks)</strong> của một công ty tăng trưởng là một trong những tín hiệu hỗ trợ mạnh mẽ nhất cho giá cổ phiếu, giúp thu hẹp nguồn cung lưu hành và tối ưu hóa lợi ích cổ đông. <span class="page-ref">Ch 6 &middot; "Look for Companies Buying..."</span>
+  </p>
+</div>
+
+<div class="bullet-grid" style="margin-top: 1.5rem;">
+  <div class="bullet-card">
+    <h4>1. Cơ chế tác động đến EPS</h4>
+    <p>Khi công ty mua lại cổ phiếu của chính mình trên thị trường tự do, số lượng cổ phiếu lưu hành sẽ giảm đi. Do đó, Lợi nhuận sau thuế (Net Income) khi chia cho số lượng cổ phiếu ít hơn sẽ tự động tạo ra mức <strong>Lợi nhuận trên mỗi cổ phiếu (EPS) cao hơn</strong>, trực tiếp kích thích đà tăng giá.</p>
+  </div>
+
+  <div class="bullet-card">
+    <h4>2. Quy mô mua lại có ý nghĩa</h4>
+    <p>Một chiến dịch mua lại cổ phiếu quỹ được coi là có tác động lớn khi tỷ lệ mua lại đạt từ <strong>10% trở lên</strong> so với tổng số lượng cổ phần đang lưu hành của doanh nghiệp.</p>
+  </div>
+
+  <div class="bullet-card">
+    <h4>3. Điển hình lịch sử Teledyne & Tandy</h4>
+    <p>&bull; <strong>Teledyne:</strong> Thực hiện 8 đợt mua lại độc lập từ 1971 đến 1984, giảm số lượng cổ phiếu từ <strong>88 triệu xuống còn 15 triệu</strong>, đẩy EPS tăng vọt từ $0.61 lên gần $20.
+      <br>&bull; <strong>Tandy:</strong> CEO Charles Tandy thường xuyên vay tiền ngân hàng để mua lại cổ phiếu quỹ khi thị trường điều chỉnh giảm giá và thanh toán nợ sau khi giá cổ phiếu hồi sinh.
+    </p>
+  </div>
+
+  <div class="bullet-card" style="border-left: 3px solid var(--accent-red); padding-left: 10px;">
+    <h4>⚠️ Cảnh báo cực kỳ quan trọng</h4>
+    <p>Hoạt động mua lại cổ phiếu <strong>chỉ thực sự tốt khi đi kèm đà tăng trưởng lợi nhuận cốt lõi</strong> của doanh nghiệp. Việc mua lại cổ phiếu quỹ tại các doanh nghiệp đang suy giảm lợi nhuận chỉ là thủ thuật tài chính nhằm làm đẹp EPS tạm thời và gây lãng phí nghiêm trọng nguồn lực tài chính mặt của công ty.</p>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 6 &amp;middot; TỶ LỆ NỢ VAY</div>
+    <h2>Tỷ lệ Nợ/Vốn chủ sở hữu và bài học từ khủng hoảng 2008</h2>
+<div class="content-card">
+  <p class="summary-text" style="font-size: 1.1rem; line-height: 1.6;">
+    Bên cạnh việc phân tích số lượng cổ phiếu, nhà đầu tư bắt buộc phải kiểm tra cơ cấu nguồn vốn của doanh nghiệp, đặc biệt là <strong>Tỷ lệ Nợ trên Vốn chủ sở hữu (Debt-to-Equity Ratio)</strong>. <span class="page-ref">Ch 6 &middot; "A Low Corporate Debt-to-Equity Ratio..."</span>
+  </p>
+</div>
+
+<div class="bullet-grid" style="margin-top: 1.5rem;">
+  <div class="bullet-card">
+    <h4>1. Ưu thế của tỷ lệ nợ vay thấp</h4>
+    <p>Thông thường, tỷ lệ nợ vay dài hạn càng thấp thì cấu trúc tài chính của doanh nghiệp càng an toàn và vững mạnh. Các doanh nghiệp có tỷ lệ nợ vay thấp sẽ không phải đối mặt với áp lực chi phí lãi vay lớn, giúp duy trì sự ổn định của lợi nhuận.</p>
+  </div>
+
+  <div class="bullet-card">
+    <h4>2. Rủi ro đòn bẩy tài chính cao</h4>
+    <p>Các công ty có tỷ lệ Nợ/Vốn chủ sở hữu cao (sử dụng đòn bẩy tài chính lớn) là những doanh nghiệp chất lượng thấp và rủi ro cao. Trong các thời kỳ thắt chặt tiền tệ (lãi suất tăng cao) hoặc nền kinh tế rơi vào suy thoái, chi phí lãi vay khổng lồ sẽ trực tiếp tàn phá lợi nhuận ròng và EPS của các công ty này.</p>
+  </div>
+
+  <div class="bullet-card">
+    <h4>3. Tín hiệu giảm nợ tích cực</h4>
+    <p>Một doanh nghiệp liên tục thực hiện giảm tỷ lệ nợ vay trên vốn chủ sở hữu trong 2 đến 3 năm liên tiếp là ứng viên rất đáng cân nhắc. Hành động này giúp tiết giảm mạnh chi phí tài chính, trực tiếp thúc đẩy lợi nhuận ròng chuyển dịch đi lên.</p>
+  </div>
+
+  <div class="bullet-card">
+    <h4>4. Đề phòng trái phiếu chuyển đổi & Bài học 2008</h4>
+    <p>&bull; <strong>Trái phiếu chuyển đổi (Convertible Bonds):</strong> Cần cảnh giác với sự hiện diện của chúng trong cấu trúc vốn, vì chúng có thể chuyển đổi thành cổ phiếu phổ thông và làm pha loãng EPS bất cứ lúc nào.
+      <br>&bull; <strong>Bài học khủng hoảng 2008:</strong> Đòn bẩy nợ cực đoan 40:1 hoặc 50:1 của các tổ chức tài chính và cho vay thế chấp (Fannie Mae, Freddie Mac) là nguyên nhân gốc rễ dẫn đến thảm họa tín dụng dưới chuẩn 2008.
+    </p>
+  </div>
+</div>
+
+<div class="callout" style="margin-top: 1.5rem; border-color: var(--accent-red);">
+  <div class="callout-icon">⚠️</div>
+  <div class="callout-content">
+    <strong>Quy tắc bất biến:</strong> "Không bao giờ vay nhiều hơn số tiền bạn có thể chi trả. Nợ nần quá mức luôn gây tổn hại sâu sắc cho mọi cá nhân, mọi doanh nghiệp và mọi quốc gia."
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 6 &amp;middot; ĐÁNH GIÁ CHỨNG CỨ</div>
+    <h2>Tính xác thực của cung cầu &amp; Cập nhật quỹ ETF 2026</h2>
+<div class="evidence-card" style="margin-bottom: 1.5rem; border-left: 4px solid var(--accent-cyan);">
+  <div class="evidence-header">
+    <span class="claim-text"><strong>Cổ phiếu vốn hóa nhỏ và vừa dễ tăng giá mạnh hơn cổ phiếu vốn hóa lớn</strong></span>
+    <span class="quality-score">⭐⭐⭐⭐☆ (4.5/5)</span>
+  </div>
+  <div class="evidence-type">📊 Nghiên cứu Tài chính Học thuật & Hiệu ứng Quy mô (Size Effect)</div>
+  <div class="evidence-body">
+    <ul>
+      <li><strong>Điểm mạnh:</strong> Được xác nhận bởi nghiên cứu kinh điển của Banz (1981) và mô hình 3 nhân tố của Fama & French (1992) thừa nhận mức sinh lời vượt trội của nhóm quy mô nhỏ (Small-firm premium).</li>
+      <li><strong>Thiên kiến thanh khoản:</strong> Mức sinh lời cao hơn của nhóm vốn hóa nhỏ một phần là để bù đắp cho rủi ro thanh khoản kém và chi phí giao dịch lớn hơn. Ngoài ra, trong các thời kỳ thắt chặt tiền tệ, nhóm vốn hóa lớn thường hoạt động tốt hơn do dòng tiền trú ẩn an toàn.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="evidence-card" style="margin-bottom: 1.5rem; border-left: 4px solid var(--accent-cyan);">
+  <div class="evidence-header">
+    <span class="claim-text"><strong>Mua lại cổ phiếu quỹ giúp tăng giá trị cổ phiếu nhờ đòn bẩy EPS</strong></span>
+    <span class="quality-score">⭐⭐⭐⭐★ (4.6/5)</span>
+  </div>
+  <div class="evidence-type">📈 Dữ liệu Thực nghiệm Doanh nghiệp & Nghiên cứu Hành vi mua lại</div>
+  <div class="evidence-body">
+    <ul>
+      <li><strong>Điểm mạnh:</strong> Các nghiên cứu tài chính hiện đại chứng minh hoạt động công bố mua lại cổ phiếu quỹ thường tạo ra phản ứng giá tích cực ngắn và trung hạn do làm giảm nguồn cung trôi nổi ngoài thị trường.</li>
+      <li><strong>Bẫy thao túng (Manipulation Bias):</strong> Nhiều ban quản trị doanh nghiệp lạm dụng việc mua lại cổ phiếu quỹ bằng tiền đi vay để thổi phồng EPS ảo nhằm mục đích đạt chỉ tiêu nhận thưởng (KPI bonuses), gây tổn hại đến dòng tiền đầu tư phát triển dài hạn của công ty.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="callout" style="margin-top: 1rem; border-color: var(--accent-purple);">
+  <div class="callout-icon">🧠</div>
+  <div class="callout-content">
+    <strong>Cập nhật thị trường 2026 & Phân tích rủi ro tâm lý (Mental Burnout Analysis):</strong>
+    <br>&bull; <strong>Thực tế hiện đại:</strong> Sự bùng nổ của dòng tiền đầu tư thụ động (Passive Investing/ETFs) trong giai đoạn 2015-2025 đã đẩy dòng vốn tự động chảy vào các cổ phiếu có quy mô vốn hóa lớn nhất (như nhóm Magnificent Seven: NVDA, MSFT, AAPL...), tạo ra hiện tượng Big-caps tăng giá phi thường bất chấp quy mô cung lớn. Điều này tương tự như ngoại lệ quỹ tương hỗ những năm 1990 mà O'Neil đã đề cập.
+    <br>&bull; <strong>Rủi ro stress tinh thần:</strong> Việc theo dõi khối lượng giao dịch (Volume) và biến động trong phiên liên tục dễ khiến nhà đầu tư rơi vào trạng thái nghiện màn hình, mệt mỏi tinh thần và đưa ra quyết định giao dịch theo cảm xúc quá nhiều. Nhà đầu tư cần thiết lập các bộ lọc cảnh báo khối lượng tự động và giới hạn thời gian xem bảng điện tử để bảo vệ năng lượng tinh thần.
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 6 &amp;middot; GÓC NHÌN ĐỐI LẬP</div>
+    <h2>Động lượng Breakout vs Đa dạng hóa danh mục hiện đại</h2>
+<div class="split-layout">
+  <div class="split-left" style="border-right: 1px solid var(--border); padding-right: 1.5rem;">
+    <h4 style="color: var(--accent-emerald); margin-top: 0;">Trường phái Cung Cầu Động lượng (William O'Neil)</h4>
+    <p><strong>Bản chất:</strong> Quy mô vốn hóa nhỏ và lượng trôi nổi cô đặc là điều kiện lý tưởng cho sự tăng giá siêu tốc. Giá cả được định đoạt bởi hành động mua gom thực tế của tổ chức.</p>
+    <p><strong>Công cụ chính:</strong> Biểu đồ kỹ thuật phân tích biến động giá và khối lượng (Volume) giao dịch ngày/tuần để phát hiện dòng tiền lớn đi trước. <span class="page-ref">Ch 6 &middot; "Evaluating Supply and Demand"</span></p>
+  </div>
+
+  <div class="split-right" style="padding-left: 1.5rem;">
+    <h4 style="color: var(--accent-red); margin-top: 0;">Trường phái Lý thuyết Danh mục Hiện đại (MPT) & EMH</h4>
+    <p><strong>Bản chất:</strong> Hiệu suất vượt trội của vốn hóa nhỏ chỉ là phần bù đắp rủi ro cho tính biến động cao. Thị trường là hiệu quả (EMH) và mọi nỗ lực đọc biểu đồ khối lượng để chọn thời điểm mua (Market Timing) đều vô nghĩa trong dài hạn.</p>
+    <p><strong>Công cụ chính:</strong> Phân bổ vốn đa dạng hóa danh mục, nắm giữ chỉ số thụ động (Indexing) để tối ưu hóa tỷ suất Sharpe (tỷ lệ lợi nhuận trên rủi ro).</p>
+  </div>
+</div>
+
+<div class="callout" style="margin-top: 1.5rem; background-color: rgba(139, 124, 255, 0.05); border-color: var(--accent-purple);">
+  <div class="callout-icon">⚖️</div>
+  <div class="callout-content">
+    <strong>Tích hợp mô hình quản trị danh mục hiện đại:</strong>
+    <br>&bull; <strong>Phương án Dung hòa (Core-Satellite Approach):</strong> 
+      <br>1. **Phần lõi (Core - 70% danh mục):** Nắm giữ các cổ phiếu Big-cap chất lượng cao, thanh khoản cực lớn và có sự vững vàng về tài chính để đảm bảo tính phòng vệ và an toàn cho tài khoản.
+      <br>2. **Phần vệ tinh (Satellite - 30% danh mục):** Áp dụng bộ lọc chữ S của CAN SLIM để tìm kiếm các cổ phiếu vốn hóa vừa và nhỏ (Mid-to-Small caps) đang ở giai đoạn đầu bứt phá từ nền giá chuẩn nhằm mục tiêu gia tăng đột biến hiệu suất đầu tư.
+    <br>&bull; <strong>Dịch chuyển vốn theo chu kỳ:</strong> Trong thời kỳ nới lỏng tiền tệ (lãi suất thấp), ưu tiên phân bổ vào nhóm vốn hóa nhỏ động lượng cao. Khi nền kinh tế bước vào chu kỳ thắt chặt, lập tức chuyển dòng vốn sang nhóm vốn hóa lớn có cấu trúc nợ vay thấp để phòng vệ.
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 6 &amp;middot; RỦI RO &amp; PHẢN BIỆN</div>
+    <h2>Rủi ro bẫy thanh khoản và tín hiệu khối lượng giả</h2>
+<div class="bullet-grid">
+  <div class="bullet-card" style="border-left: 3px solid var(--accent-red);">
+    <h4>1. Bẫy thanh khoản của cổ phiếu vốn hóa nhỏ</h4>
+    <p>Trong các đợt sụp đổ bất ngờ của thị trường (Market Crashes), các cổ phiếu vốn hóa nhỏ sẽ hoàn toàn mất đi thanh khoản ở chiều mua (trắng bên mua). Nhà đầu tư nắm giữ vị thế lớn sẽ không thể thực hiện cắt lỗ và phải chấp nhận chịu mức sụt giảm tài sản vô cùng lớn.</p>
+  </div>
+
+  <div class="bullet-card" style="border-left: 3px solid var(--accent-red);">
+    <h4>2. Bẫy mua lại bằng nợ vay (Debt-funded buybacks)</h4>
+    <p>Doanh nghiệp có thể vay nợ lãi suất thấp để thực hiện mua lại cổ phiếu quỹ nhằm mục đích che đậy kết quả kinh doanh trì trệ hoặc sụt giảm biên lợi nhuận ròng. Điều này làm tăng rủi ro tài chính của doanh nghiệp trong dài hạn.</p>
+  </div>
+
+  <div class="bullet-card" style="border-left: 3px solid var(--accent-red);">
+    <h4>3. Rủi ro pha loãng từ công cụ tài chính phái sinh</h4>
+    <p>Cấu trúc vốn của doanh nghiệp có thể chứa các chứng quyền (warrants), quyền chọn cổ phiếu cho nhân viên (ESOP) hoặc trái phiếu chuyển đổi chưa thực hiện. Khi các công cụ này được kích hoạt, nguồn cung cổ phiếu sẽ phình to đột biến và làm loãng mạnh chỉ số EPS.</p>
+  </div>
+
+  <div class="bullet-card" style="border-left: 3px solid var(--accent-red);">
+    <h4>4. Tín hiệu khối lượng giả (Volume Churning)</h4>
+    <p>Khối lượng giao dịch tăng rất lớn nhưng giá cổ phiếu không thể bứt phá đi lên mà đóng cửa đi ngang hoặc bị đạp xuống trong phiên (Churning). Đây thực chất là hành vi phân phối kín của tổ chức chứ không phải lực cầu đẩy giá.</p>
+  </div>
+</div>
+
+<div class="callout" style="margin-top: 1.5rem;">
+  <div class="callout-icon">⚠️</div>
+  <div class="callout-content">
+    <strong>Giải pháp phòng thủ:</strong>
+    <br>1. Luôn kiểm tra kỹ cơ cấu nợ vay trước khi đánh giá hoạt động mua lại cổ phiếu quỹ.
+    <br>2. Theo dõi hành vi giá đóng cửa trong ngày có khối lượng lớn để loại trừ bẫy phân phối kín (Churning).
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 6 &amp;middot; SƠ ĐỒ KHÁI NIỆM</div>
+    <h2>Mối liên kết khái niệm giữa các chương</h2>
+<div class="mermaid">
+graph TB
+    A["Chương 2: Mẫu hình biểu đồ (Thiết lập điểm Pivot và vùng tích lũy)"] --> B["Chương 6: Chữ S - Cung và Cầu (Xác thực thanh khoản đột biến)"]
+    C["Chương 3 & 4: Lợi nhuận quý & năm (Bảo chứng cho chất lượng mua lại cổ phần)"] --> B
+    B --> D["Chương 9: Chữ I (Dòng tiền tổ chức bảo trợ và hấp thụ cung trôi nổi)"]
+    B --> E["Chương 10 & 11: Quy tắc bán cắt lỗ và chốt lời (Kiểm soát rủi ro thanh khoản)"]
+    
+    style B fill:#8B7CFF,stroke:#2A2D33,color:#F7F7F5
+</div>
+
+<div class="split-layout" style="margin-top: 1rem;">
+  <div class="split-left" style="padding-right: 1rem; border-right: 1px solid var(--border);">
+    <h5 style="color: var(--accent-purple); margin-top: 0;">Khái niệm tiên quyết (Prerequisites)</h5>
+    <ul style="font-size: 0.9rem; padding-left: 1rem; margin: 0; line-height: 1.5;">
+      <li><strong>Mẫu hình kỹ thuật (Ch 2):</strong> Cung cầu và khối lượng giao dịch chỉ thực sự có ý nghĩa kiểm chứng khi được đặt trong bối cảnh phân tích các mẫu hình tích lũy chuẩn mực.</li>
+      <li><strong>Chất lượng EPS (Ch 3 & 4):</strong> Hoạt động mua lại cổ phiếu quỹ chỉ thực sự tạo ra đòn bẩy giá trị lâu dài khi doanh nghiệp có tăng trưởng doanh thu/lợi nhuận thực chất đi kèm.</li>
+    </ul>
+  </div>
+  
+  <div class="split-right" style="padding-left: 1rem;">
+    <h5 style="color: var(--accent-emerald); margin-top: 0;">Khái niệm mở khóa (Future Unlocks)</h5>
+    <ul style="font-size: 0.9rem; padding-left: 1rem; margin: 0; line-height: 1.5;">
+      <li><strong>Sự bảo trợ của tổ chức (Ch 9):</strong> Giúp hiểu sâu hơn về nguồn gốc của lực cầu khối lượng lớn tại ngày breakout: chính là các quỹ đầu tư lớn đang giải ngân.</li>
+      <li><strong>Kỷ luật giao dịch (Ch 10 & 11):</strong> Cung cấp các quy tắc cắt lỗ và chốt lời bắt buộc để bảo vệ tài khoản khỏi rủi ro sụt giảm thanh khoản nhanh chóng của nhóm vốn hóa nhỏ.</li>
+    </ul>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 6 &amp;middot; HƯỚNG DẪN THỰC HÀNH</div>
+    <h2>Lộ trình ứng dụng thực tế chữ S</h2>
+<div class="phase-progress">
+  <div class="phase active">Pha 1: Kiểm Toán Cấu Trúc</div>
+  <div class="phase">Pha 2: Quét Mua Lại</div>
+  <div class="phase">Pha 3: Đọc Biến Động</div>
+  <div class="phase">Pha 4: Thực Thi Lệnh</div>
+</div>
+
+<div class="bullet-grid" style="margin-top: 1.5rem;">
+  <div class="bullet-card">
+    <h4>Pha 1: Kiểm toán cấu trúc vốn (Tuần 1)</h4>
+    <ul class="checklist" style="padding-left: 0; list-style: none;">
+      <li><input type="checkbox" checked disabled> <strong>Đánh giá quy mô:</strong> Xác định tổng lượng lưu hành và lượng trôi nổi (Float) của cổ phiếu.</li>
+      <li><input type="checkbox" checked disabled> <strong>Sở hữu ban điều hành:</strong> Kiểm tra tỷ lệ sở hữu của lãnh đạo tối thiểu phải đạt 1% - 3%+.</li>
+      <li><input type="checkbox" checked disabled> <strong>Kiểm soát nợ:</strong> Lọc bỏ các doanh nghiệp có tỷ lệ Nợ/Vốn chủ sở hữu quá cao, ưu tiên các mã có tỷ lệ nợ đang giảm dần.</li>
+    </ul>
+  </div>
+
+  <div class="bullet-card">
+    <h4>Pha 2: Quét tin tức mua lại & pha loãng (Tuần 2)</h4>
+    <ul class="checklist" style="padding-left: 0; list-style: none;">
+      <li><input type="checkbox" disabled> <strong>Xác thực động lực mua lại:</strong> Kiểm tra quy mô mua lại cổ phiếu quỹ (>= 10%) có đi kèm sự cải thiện của hoạt động kinh doanh cốt lõi hay không.</li>
+      <li><input type="checkbox" disabled> <strong>Rà soát pha loãng:</strong> Kiểm toán các công cụ phái sinh nợ như trái phiếu chuyển đổi để ngăn ngừa rủi ro pha loãng bất ngờ.</li>
+    </ul>
+  </div>
+
+  <div class="bullet-card">
+    <h4>Pha 3: Đọc hiểu khối lượng tuần trong nền giá (Cuối tuần)</h4>
+    <ul class="checklist" style="padding-left: 0; list-style: none;">
+      <li><input type="checkbox" disabled> <strong>Phân tích tuần-qua-tuần:</strong> Quan sát biến động giá và khối lượng của từng tuần trong nền giá tích lũy.</li>
+      <li><input type="checkbox" disabled> <strong>Xác nhận mua gom:</strong> Đảm bảo số tuần tăng giá kèm thanh khoản lớn nhiều hơn rõ rệt số tuần giảm giá kèm thanh khoản lớn.</li>
+      <li><input type="checkbox" disabled> <strong>Định vị điểm cạn kiệt:</strong> Tìm kiếm nhịp điều chỉnh có khối lượng cạn kiệt (Volume dry-up) ở vùng đáy của mẫu hình.</li>
+    </ul>
+  </div>
+
+  <div class="bullet-card">
+    <h4>Pha 4: Thực thi giao dịch tại điểm breakout (Trong phiên)</h4>
+    <ul class="checklist" style="padding-left: 0; list-style: none;">
+      <li><input type="checkbox" disabled> <strong>Kiểm tra thanh khoản bùng nổ:</strong> Chỉ giải ngân mua mới khi giá vượt pivot đi kèm khối lượng trong phiên ước tính tăng tối thiểu 40%-50% trở lên.</li>
+      <li><input type="checkbox" disabled> <strong>Khống chế vùng mua:</strong> Tuyệt đối chỉ mua trong phạm vi vùng an toàn 5% từ điểm pivot.</li>
+      <li><input type="checkbox" disabled> <strong>Thiết lập phòng vệ:</strong> Đặt lệnh dừng lỗ tự động 7% - 8% ngay khi hoàn tất giao dịch mua để phòng ngừa breakout giả.</li>
+    </ul>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 6 &amp;middot; CHIẾN LƯỢC HỌC TẬP</div>
+    <h2>Mỏ neo trí nhớ &amp; Lặp lại ngắt quãng</h2>
+<div class="learning-style-section visual" style="margin-bottom: 1rem;">
+  <div class="style-icon">👁️ Phương Pháp Học Tập Đa Cảm Giác (Dành cho Học viên Cân bằng)</div>
+  <div class="style-content" style="font-size: 0.95rem; line-height: 1.5;">
+    <ul>
+      <li><strong>Mỏ neo trực quan (Visual Anchor):</strong> Hãy nhớ đến hình ảnh những làn sóng năng lượng phát sáng rực rỡ <span style="color: var(--accent-purple); font-weight: bold;">ch6_divider_hero.png</span> để đóng đinh bài học: <em>"Khối lượng giao dịch chính là năng lượng sinh học của cổ phiếu. Giá có thể tăng do tin đồn, nhưng chỉ có khối lượng khổng lồ mới chứng thực sự nhập cuộc của dòng tiền tổ chức."</em></li>
+      <li><strong>Hành động thực tế (Kinesthetic Action):</strong> Mở biểu đồ tuần của một cổ phiếu thành công gần đây. Tiến hành phân tích nến tuần-qua-tuần: Đánh dấu các tuần tăng giá kèm khối lượng lớn bằng màu xanh lá và các tuần giảm giá kèm khối lượng lớn bằng màu đỏ để cảm nhận rõ nét dòng tiền gom hàng/phân phối.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="split-layout" style="margin-top: 1rem;">
+  <div class="split-left" style="padding-right: 1rem; border-right: 1px solid var(--border);">
+    <h5 style="color: var(--accent-purple); margin-top: 0;">Mỏ Neo Trí Nhớ & Câu Chuyện Lịch Sử</h5>
+    <ul style="font-size: 0.9rem; padding-left: 1rem; margin: 0; line-height: 1.5;">
+      <li><strong>Kỳ tích Teledyne:</strong> Doanh nghiệp thực hiện 8 đợt mua lại cổ phiếu độc lập để <strong>co rút số lượng cổ phần lưu hành từ 88 triệu xuống còn 15 triệu cổ phiếu</strong>. Nhờ đó đưa EPS tăng từ $0.61 lên sát $20, tạo ra đà tăng giá vĩ đại bậc nhất lịch sử. <span class="page-ref">Ch 6 &middot; "Look for Companies Buying..."</span></li>
+      <li><strong>Bài học cốt lõi:</strong> Hãy tìm kiếm những doanh nghiệp chủ động thu hẹp nguồn cung cổ phần khi hoạt động kinh doanh cốt lõi đang tăng trưởng mạnh mẽ.</li>
+    </ul>
+  </div>
+
+  <div class="split-right" style="padding-left: 1rem;">
+    <h5 style="color: var(--accent-emerald); margin-top: 0;">Lịch Trình Lặp Lại Ngắt Quãng</h5>
+    <ul style="font-size: 0.9rem; padding-left: 1rem; margin: 0; line-height: 1.5;">
+      <li><strong>Ngày 1:</strong> Đọc hiểu tóm tắt chữ S, ghi nhớ các quy tắc về vốn hóa, chia tách, nợ vay và mua lại cổ phiếu quỹ.</li>
+      <li><strong>Ngày 2:</strong> Nghiên cứu kỹ phương pháp phân tích nến đóng cửa tuần và khối lượng cạn kiệt trong nhịp điều chỉnh.</li>
+      <li><strong>Ngày 7:</strong> Tự rà soát tỷ lệ Nợ/Vốn chủ sở hữu và cơ cấu cổ đông của 5 cổ phiếu trong watchlist của bạn.</li>
+      <li><strong>Ngày 30:</strong> Cập nhật thông tin mua lại cổ phiếu quỹ và tình hình chia tách của toàn bộ danh mục theo dõi hàng tháng.</li>
+    </ul>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 6 &amp;middot; HÀNH ĐỘNG CUỐI CÙNG</div>
+    <h2>Hành động cuối cùng</h2>
+<ul class="action-list">
+  <li class="action-item">
+    <div>
+      <div class="action-headline">Kiểm toán Cấu trúc vốn và Cơ cấu sở hữu lãnh đạo</div>
+      <div class="action-detail">Truy cập phần mềm phân tích tài chính của bạn vào cuối tuần này. Thêm cột "Tỷ lệ Nợ/Vốn chủ sở hữu" và "Tỷ lệ sở hữu của Ban điều hành" vào bảng lọc. Loại bỏ các doanh nghiệp có ban lãnh đạo nắm giữ dưới 1% cổ phần hoặc có tỷ lệ nợ vay/vốn chủ sở hữu lớn hơn 1.0.</div>
+    </div>
+  </li>
+  <li class="action-item">
+    <div>
+      <div class="action-headline">Rà soát và đánh giá hoạt động chia tách cổ phiếu</div>
+      <div class="action-detail">Kiểm tra lịch sử chia tách của các cổ phiếu trong watchlist của bạn trong vòng 1 tuần tới. Đánh dấu đỏ cảnh báo đối với các doanh nghiệp đã thực hiện chia tách lớn hơn hoặc bằng 3-for-1 từ lần thứ hai trở đi trong chu kỳ tăng giá, chuẩn bị sẵn phương án chốt lời khi có dấu hiệu suy yếu.</div>
+    </div>
+  </li>
+  <li class="action-item">
+    <div>
+      <div class="action-headline">Áp dụng bộ lọc Khối lượng bứt phá tối thiểu +50%</div>
+      <div class="action-detail">Kể từ phiên giao dịch ngày mai, khi phát hiện điểm breakout kỹ thuật của cổ phiếu khỏi nền giá chuẩn, hãy kiểm tra khối lượng giao dịch. Chỉ giải ngân mua mới nếu ước tính khối lượng cả phiên đạt tối thiểu 1.5 lần (tức tăng 50%) so với trung bình 3 tháng gần nhất. Hủy bỏ lệnh mua nếu breakout thiếu thanh khoản bám đỡ.</div>
+    </div>
+  </li>
+</ul>
+
+<figure class="image-slot hero" style="margin-top: 1.5rem;">
+  <div class="image-prompt">
+    <span class="image-prompt-label">AI Image Prompt — Giới hạn quota Image-gen của hệ thống tạm thời hết</span>
+    <p class="image-prompt-text">"Hands assembling golden puzzle pieces, close-up photograph, soft focus, warm light, dark background, premium business aesthetic."</p>
+    <span class="image-prompt-hint">Bạn có thể dán prompt này vào Midjourney/DALL-E để tạo ảnh, lưu với tên 'ch6_buyback_hero.png' vào thư mục 'images/' và thay thế khối HTML này bằng thẻ &lt;img src="images/ch6_buyback_hero.png"&gt; để có slide hoàn chỉnh nhất.</span>
+  </div>
+</figure>
+
+  </section>
+
+</div>
+
+<div class="nav-controls">
+  <button class="nav-btn" id="prevBtn" onclick="prevSlide()" aria-label="Previous slide">&#8592;</button>
+  <div class="counter" id="counter" aria-live="polite">1 / 1</div>
+  <button class="nav-btn" id="nextBtn" onclick="nextSlide()" aria-label="Next slide">&#8594;</button>
+</div>
+
+<script src="common.js"></script>
+</body>
+</html>

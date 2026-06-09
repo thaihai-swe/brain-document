@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How to Make Money in Stocks — Chapter 12</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="common.css">
+<script src="https://cdn.jsdelivr.net/npm/@panzoom/panzoom@4.5.1/dist/panzoom.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11.10.0/dist/mermaid.min.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div class="progress-bar" id="progressBar"></div>
+
+<div class="chapter-menu">
+  <button class="menu-btn" id="chapterMenuBtn" onclick="toggleChapterMenu()" aria-haspopup="true" aria-expanded="false">Chapters &#9662;</button>
+  <div class="chapter-menu-panel" id="chapterMenuPanel" role="menu"></div>
+</div>
+
+<div class="slide-container" id="slideContainer">
+
+  <section class="slide" aria-hidden="false">
+<h1>How to Make Money in Stocks</h1>
+<p class="subtitle">Chương 12: Quản Trị Danh Mục Và Các Lựa Chọn Đầu Tư Khác<br><span style="font-size: 0.9em; opacity: 0.85;">(Money Management: Should You Diversify, Invest for the Long Haul, Use Margin, Sell Short...)</span></p>
+
+<figure class="image-slot hero">
+  <div class="image-prompt">
+    <span class="image-prompt-label">AI Image Prompt — Giới hạn quota Image-gen của hệ thống tạm thời hết</span>
+    <p class="image-prompt-text">"A structured wooden organizer box on a dark desk with a few polished gold coins, silver keys, and a clean minimalist portfolio chart, moody dark aesthetic, warm side lighting, 8k."</p>
+    <span class="image-prompt-hint">Bạn có thể tạo ảnh trên Midjourney, lưu dưới tên 'ch12_title_hero.png' vào thư mục 'images/' và thay thế khối HTML này bằng thẻ &lt;img src="images/ch12_title_hero.png"&gt;</span>
+  </div>
+</figure>
+
+<div class="meta-grid">
+  <div class="meta-item">
+    <div class="meta-label">Tác giả</div>
+    <div class="meta-value">William J. O'Neil</div>
+  </div>
+  <div class="meta-item">
+    <div class="meta-label">Độ sâu phân tích</div>
+    <div class="meta-value">DEEP+ Mode (24 Slides)</div>
+  </div>
+  <div class="meta-item">
+    <div class="meta-label">Đối tượng mục tiêu</div>
+    <div class="meta-value">Nhà đầu tư cá nhân</div>
+  </div>
+  <div class="meta-item">
+    <div class="meta-label">Ngôn ngữ</div>
+    <div class="meta-value">Song ngữ Anh - Việt</div>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide chapter-divider">
+<div class="chapter-number">Chương 12</div>
+<h2>Quản Trị Danh Mục Và Các Kênh Đầu Tư</h2>
+<p class="chapter-meta">Ước tính thời gian đọc: 45 phút (chế độ DEEP+) &middot; Độ khó: Cao &middot; Khái niệm chính: Tập trung danh mục (Concentration) vs Đa dạng hóa (Diversification), Quản trị Margin an toàn, Nghệ thuật bán khống (Short Selling), Đầu cơ Options/Futures, Lầm tưởng về Cổ phiếu thu nhập cao, Đầu tư IPOs muộn, Penny stocks và các bẫy phân bổ tài sản phi sản xuất</p>
+
+<figure class="image-slot hero">
+  <div class="image-prompt">
+    <span class="image-prompt-label">AI Image Prompt — Giới hạn quota Image-gen của hệ thống tạm thời hết</span>
+    <p class="image-prompt-text">"A beautifully organized set of glass jars on a shelf, each containing a single type of vibrant green plant cutting, clean modern Scandinavian laboratory style, soft natural lighting, depth of field, 8k."</p>
+    <span class="image-prompt-hint">Bạn có thể tạo ảnh trên Midjourney, lưu dưới tên 'ch12_divider_hero.png' vào thư mục 'images/' và thay thế khối HTML này bằng thẻ &lt;img src="images/ch12_divider_hero.png"&gt;</span>
+  </div>
+</figure>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 12 &amp;middot; TỔNG QUAN TRỰC QUAN 1</div>
+    <h2>Phân bổ danh mục tối ưu theo quy mô vốn</h2>
+<div class="mermaid">
+graph TD
+    A["QUY MÔ VỐN ĐẦU TƯ (Capital Account Size)"] --> B["Dưới $3,000: Tối đa 2 cổ phiếu"]
+    A --> C["$5,000 - $20,000: Tối đa 3 cổ phiếu"]
+    A --> D["$20,000 - $200,000: Tối đa 4 - 5 cổ phiếu"]
+    A --> E["Trên $1,000,000: Tối đa 6 - 7 cổ phiếu (Tối đa 10 nếu quá lo lắng)"]
+    
+    B --> F["TẬP TRUNG DÒNG VỐN (Concentration Power)"]
+    C --> F
+    D --> F
+    E --> F
+    
+    F --> G["Mục tiêu: Sở hữu 1-2 siêu cổ phiếu tăng mạnh gánh toàn bộ tài khoản"]
+    F --> H["Lợi ích: Theo dõi sát sao & phản ứng cắt lỗ cực nhanh khi thị trường đảo chiều"]
+    
+    style A fill:#4F46E5,stroke:#2A2D33,color:#F7F7F5
+    style F fill:#059669,stroke:#2A2D33,color:#F7F7F5
+</div>
+
+<div class="callout" style="margin-top: 1rem; border-color: var(--accent-blue);">
+  <div class="callout-icon">💡</div>
+  <div class="callout-content">
+    <strong>Sức mạnh của sự tập trung (Concentration vs. Overdiversification):</strong> William O'Neil khẳng định rằng đa dạng hóa danh mục quá mức thực chất là "tấm khiên che đậy cho sự thiếu hiểu biết". Càng sở hữu nhiều cổ phiếu, bạn càng biết ít về từng cổ phiếu đó và càng chậm chạp trong việc tháo chạy khi thị trường bước vào xu hướng giảm (bear market). <span class="page-ref">Ch 12 &middot; "How Many Stocks Should You Really Own?"</span>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 12 &amp;middot; TỔNG QUAN TRỰC QUAN 2</div>
+    <h2>Bộ lọc và Ranh giới của công cụ đầu cơ nâng cao</h2>
+<div class="mermaid">
+graph TD
+    A["CÁC KÊNH ĐẦU TƯ PHỤC VỤ HỆ THỐNG"] --> B["Margin (Ký quỹ)"]
+    A --> C["Bán khống (Short Selling)"]
+    A --> D["Options (Quyền chọn)"]
+    A --> E["Bối cảnh cần TRÁNH"]
+    
+    B --> B1["Chỉ dùng khi có 2-3 năm kinh nghiệm & thị trường uptrend"]
+    B --> B2["Quy tắc thép: Cấm nộp thêm tiền khi bị margin call, phải bán cổ phiếu"]
+    
+    C --> C1["Chỉ bán khống trong bear market, cắt lỗ tuyệt đối ở 8%"]
+    C --> C2["Mẫu hình: Vai Đầu Vai (Head & Shoulders) hoặc Breakout lỗi"]
+    
+    D --> D1["Giới hạn 10%-15% tài sản, ưu tiên kỳ hạn dài (6 tháng)"]
+    D --> D2["Chỉ mua Options của cổ phiếu dẫn đầu, cấm viết naked call"]
+    
+    E --> E1["Penny stocks dưới $15, Bonds (Trái phiếu), Warrants"]
+    E --> E2["Cổ phiếu thu nhập cao (bẫy cổ tức) & Futures hàng hóa"]
+    
+    style A fill:#D97706,stroke:#2A2D33,color:#F7F7F5
+    style E fill:#DC2626,stroke:#2A2D33,color:#F7F7F5
+</div>
+
+<div class="callout" style="margin-top: 1rem; border-color: var(--accent-orange);">
+  <div class="callout-icon">⚠️</div>
+  <div class="callout-content">
+    <strong>Bảo vệ hộp cát đầu cơ (Speculative Sandbox Limits):</strong> Hãy giữ cho hoạt động đầu tư đơn giản và tinh gọn. O'Neil khuyên nhà đầu tư tránh xa các công cụ quá phức tạp như Futures, Warrants, hay Trái phiếu doanh nghiệp. Nếu quyết định tham gia đầu cơ Options hay Bán khống, hãy giới hạn tỷ trọng ở mức tối đa 10%-15% tài sản và thắt chặt mức cắt lỗ. <span class="page-ref">Ch 12 &middot; "Should You Day Trade? / Should You Sell Short?"</span>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 12 &amp;middot; TÓM TẮT CHƯƠNG</div>
+    <h2>Tóm tắt cấu trúc quản trị danh mục</h2>
+<div class="content-card">
+  <div class="summary-text">
+    <p><strong>Bối cảnh (Setup):</strong> Sau khi tham gia thị trường, nhà đầu tư cá nhân bị bủa vây bởi vô số công cụ tài chính phức tạp và lời khuyên đa dạng hóa danh mục để giảm thiểu rủi ro. Làm thế nào để phân bổ tài sản hiệu quả mà không bị phân tán nguồn lực vào các kênh đầu tư kém hiệu quả hoặc rủi ro cực đoan?</p>
+    <p><strong>Luận điểm chính (Argument):</strong> Thành công vượt trội trên thị trường chứng khoán đến từ việc <strong>tập trung vốn vào một số ít cổ phiếu xuất sắc nhất</strong> (từ 2 đến 7 cổ phiếu tùy thuộc quy mô tài khoản) thay vì đa dạng hóa tràn lan. Đa dạng hóa quá nhiều thực chất là "khiên che đậy sự thiếu hiểu biết" và làm giảm tốc độ xử lý khi thị trường bước vào xu hướng giảm. Đối với các công cụ đầu cơ nâng cao: Chỉ dùng margin khi đã có kinh nghiệm và trong giai đoạn uptrend rõ rệt; bán khống chỉ thực hiện trong bear market đối với các cổ phiếu thanh khoản cực lớn (5-10 triệu cổ/ngày) có mẫu hình phân phối muộn (sau đỉnh 5-7 tháng như Lucent, Yahoo!); Options chỉ nên giữ tối đa 10%-15% danh mục với kỳ hạn dài 6 tháng. Đồng thời, nhà đầu tư phải kiên quyết loại bỏ penny stocks dưới $15, warrants, futures, và ngộ nhận về độ an toàn của cổ phiếu thu nhập ăn cổ tức cao.</p>
+    <p><strong>Bằng chứng (Evidence):</strong> Thảm họa từ các cổ phiếu khổng lồ như Enron (2001), WorldCom (1999), Citigroup, AIG và General Motors (2007) cho thấy chiến lược mua và nắm giữ dài hạn (buy-and-hold) mà không phân tích đồ thị kỹ thuật là tự sát tài chính. Case study Citigroup sụp đổ từ $50 về $2 vào năm 2008 bất chấp lịch sử trả cổ tức cao là minh chứng rõ ràng cho bẫy cổ tức của nhóm cổ phiếu giá trị lỗi thời. <span class="page-ref">Ch 12 &middot; "Should You Invest in Income Stocks?"</span></p>
+    <p><strong>Hệ quả (Implications):</strong> Đặt giới hạn cứng cho số lượng cổ phiếu tối đa nắm giữ trong tài khoản. Rà soát danh mục định kỳ để "nhổ cỏ dại, trồng hoa hồng" (bán mã yếu dồn tiền vào mã mạnh). Tuyệt đối cấm nộp thêm tiền mặt để cứu margin call khi vị thế thua lỗ; thay vào đó, hãy thực hiện bán hạ vị thế một cách khách quan.</p>
+    <p><strong>Tranh luận (Controversy):</strong> Đi ngược lại hoàn toàn Lý thuyết Danh mục hiện đại (MPT) khuyên đa dạng hóa tối đa để triệt tiêu rủi ro phi hệ thống và trường phái đầu tư giá trị khuyên mua trung bình giá xuống. CAN SLIM khẳng định tập trung danh mục và cắt lỗ chủ động 7%-8% là cách tối ưu nhất để bảo vệ và nhân rộng dòng vốn.</p>
+    <p><strong>Mối liên kết (Connection):</strong> Kết nối chặt chẽ với Chương 2 (phương pháp đọc đồ thị để phát hiện mẫu hình phân phối muộn phục vụ bán khống) và Chương 9 (định vị xu hướng thị trường chung để quyết định thời điểm rút margin hoặc bán khống).</p>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 12 &amp;middot; Ý TƯỞNG CỐT LÕI</div>
+    <h2>Ý tưởng cốt lõi</h2>
+<div class="big-idea-card">
+  <div class="big-idea-quote">
+    "The more you diversify, the less you know about any one area... The big money is made by concentration, provided you use sound buy and sell rules along with realistic general market rules."
+  </div>
+  <div class="big-idea-translation">
+    "Bạn càng đa dạng hóa, bạn càng biết ít về bất kỳ một lĩnh vực nào... Số tiền lớn được tạo ra nhờ sự tập trung, với điều kiện bạn sử dụng các quy tắc mua bán chuẩn xác kết hợp với quy tắc thị trường chung thực tế."
+  </div>
+  <div class="big-idea-core">
+    <strong>Ý TƯỞNG CỐT LÕI:</strong> Đừng bao giờ làm phức tạp hóa danh mục bằng cách rải tiền vào hàng tá cổ phiếu hay sa đà vào các sản phẩm phái sinh phức tạp. Giống như một thương nhân khôn ngoan, hãy tập trung nguồn lực vào một số ít chiếc giỏ chất lượng cao mà bạn hiểu cực kỳ rõ và giám sát chúng chặt chẽ từng giây. Tập trung chính là bí quyết nhân đôi dòng vốn, còn đa dạng hóa tràn lan chỉ là sự thừa nhận của việc thiếu kiến thức và sợ hãi.
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 12 &amp;middot; BÀI HỌC CHỦ CHỐT</div>
+    <h2>Bài học chủ chốt</h2>
+<div class="takeaway-list">
+  <div class="takeaway-item">
+    <div class="takeaway-badge">1</div>
+    <div class="takeaway-content">
+      <strong>Tập trung danh mục và loại bỏ đa dạng hóa quá đà (Concentration Power)</strong>
+      <div class="takeaway-detail">
+        <ul>
+          <li><strong>Ý nghĩa:</strong> Sở hữu từ 2 đến 7 cổ phiếu được chọn lọc cực kỳ kỹ lưỡng (tùy quy mô vốn) giúp tối ưu hóa lợi suất từ siêu cổ phiếu dẫn đầu và dễ dàng kiểm soát rủi ro. Đa dạng hóa tràn lan chỉ là "khiên che sự thiếu hiểu biết".</li>
+          <li><strong>Bằng chứng:</strong> Các ví dụ lịch sử Citigroup, AIG, General Motors (2007) sụp đổ chứng minh đa dạng hóa rộng không cứu được tài khoản trong bear market; chỉ có sự tập trung và kỷ luật dừng lỗ mới giữ được vốn. <span class="page-ref">Ch 12 &middot; "How Many Stocks Should You Really Own?"</span></li>
+          <li><strong>Ứng dụng:</strong> Đặt giới hạn cứng số lượng cổ phiếu tối đa nắm giữ trong danh mục theo quy mô tài khoản thực tế.</li>
+          <li><strong>Cảnh báo:</strong> Sở hữu quá nhiều cổ phiếu tạo ra cảm giác an toàn giả tạo và khiến bạn phản ứng cực kỳ chậm chạp khi thị trường chung bắt đầu rơi vào chu kỳ giảm giá lớn.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="takeaway-item">
+    <div class="takeaway-badge">2</div>
+    <div class="takeaway-content">
+      <strong>Quy tắc sử dụng Margin và kỷ luật thép xử lý Margin Call (Margin Principles)</strong>
+      <div class="takeaway-detail">
+        <ul>
+          <li><strong>Ý nghĩa:</strong> Đòn bẩy ký quỹ (margin) giúp khuếch đại lợi nhuận mạnh mẽ nhưng chỉ nên dùng khi đã có 2-3 năm kinh nghiệm thực chiến bằng tiền mặt và thị trường đang ở giai đoạn uptrend rõ rệt.</li>
+          <li><strong>Bằng chứng:</strong> Bài học thực tế thảm họa năm 2000-2001 và 2008 cho thấy đòn bẩy quá mức có thể thiêu rụi toàn bộ tài sản của nhà đầu tư chỉ trong vài tuần khi cổ phiếu giảm 50%+. <span class="page-ref">Ch 12 &middot; "Should You Use Margin? / Never Answer a Margin Call"</span></li>
+          <li><strong>Ứng dụng:</strong> Khi nhận được yêu cầu bổ sung ký quỹ (Margin Call) từ công ty chứng khoán, tuyệt đối cấm nộp thêm tiền mặt để gồng lỗ. Hãy thực hiện bán hạ vị thế cổ phiếu để hạ rủi ro ngay.</li>
+          <li><strong>Cảnh báo:</strong> Nộp thêm tiền để gồng lỗ margin cho một cổ phiếu đang lao dốc là hành vi phi lý trí và là con đường nhanh nhất dẫn đến phá sản.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="takeaway-item">
+    <div class="takeaway-badge">3</div>
+    <div class="takeaway-content">
+      <strong>Quản trị rủi ro Options & Bán khống nâng cao (Short Selling & Options)</strong>
+      <div class="takeaway-detail">
+        <ul>
+          <li><strong>Ý nghĩa:</strong> Bán khống và Quyền chọn (Options) là các công cụ đầu cơ có tính sát thương cao. Chỉ nên xem đây là một phần phụ nhỏ của tài sản (dưới 10%-15%) và đòi hỏi timing chính xác tuyệt đối.</li>
+          <li><strong>Bằng chứng:</strong> Nghiên cứu 50 năm của O'Neil cho thấy thời điểm bán khống vàng là 5-7 tháng sau khi cổ phiếu dẫn đầu rõ ràng tạo đỉnh (với mẫu hình Vai Đầu Vai hoặc breakout lỗi như Lucent, Yahoo!). Options nên mua kỳ hạn dài 6 tháng để tránh rủi ro thời gian. <span class="page-ref">Ch 12 &middot; "Should You Sell Short? / What Are Options..."</span></li>
+          <li><strong>Ứng dụng:</strong> Chỉ bán khống cổ phiếu thanh khoản lớn (5-10 triệu cổ/ngày) trong bear market. Chỉ mua call options của cổ phiếu dẫn đầu thị trường.</li>
+          <li><strong>Cảnh báo:</strong> Cấm bán khống cổ phiếu thanh khoản thấp (dễ bị short squeeze) hoặc bán khống cổ phiếu đang trong đà tăng mạnh chỉ vì định giá P/E có vẻ quá cao.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="takeaway-item">
+    <div class="takeaway-badge">4</div>
+    <div class="takeaway-content">
+      <strong>Tránh xa các cạm bẫy phân bổ tài sản phi sản xuất (Avoiding Investment Traps)</strong>
+      <div class="takeaway-detail">
+        <ul>
+          <li><strong>Ý nghĩa:</strong> Giữ triết lý đầu tư đơn giản và hiệu quả cao bằng cách chủ động né tránh các loại tài sản kém chất lượng, bị thao túng hoặc dễ mất giá trị thực tế do lạm phát/chu kỳ thoái trào.</li>
+          <li><strong>Bằng chứng:</strong> Cổ phiếu như Citigroup hay Bank of America sụp đổ năm 2008 cho thấy cổ tức cao không bù nổi đà sụt giảm của giá vốn. Penny stocks dưới $15 thường bị đầu cơ thao túng. Trái phiếu và bảo hiểm thuế (tax shelters) thường đem lại hiệu suất thực tế rất tệ. <span class="page-ref">Ch 12 &middot; "Should You Invest in Income Stocks? / Avoid Penny Stocks"</span></li>
+          <li><strong>Ứng dụng:</strong> Kiên quyết không mua cổ phiếu dưới $15, không mua trái phiếu, warrants, và không mua cổ phiếu chỉ vì ham nhận cổ tức cao.</li>
+          <li><strong>Cảnh báo:</strong> Việc cố tìm kiếm tỷ suất cổ tức 5%-8% có thể khiến bạn mất sạch 50%-80% vốn gốc khi doanh nghiệp đi vào chu kỳ thoái trào hoặc tái cấu trúc.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 12 &amp;middot; TRÍCH DẪN ĐẮT GIÁ</div>
+    <h2>Trích dẫn đắt giá</h2>
+<div class="quote-block" style="margin-bottom: 2rem;">
+  <p class="quote-text">"Broad diversification is plainly and simply often a hedge for ignorance."</p>
+  <p class="quote-context"><strong>— William J. O'Neil</strong>, về lý do tại sao đa dạng hóa quá nhiều là sai lầm. <span class="page-ref">Ch 12 &middot; "How Many Stocks Should You Really Own?"</span></p>
+  <div style="font-size: 0.95rem; color: var(--text-secondary); margin-top: 0.5rem; line-height: 1.5;">
+    <strong>Bản dịch:</strong> "Đa dạng hóa rộng rãi, rõ ràng và đơn giản, thường là tấm khiên che đậy cho sự thiếu hiểu biết."<br>
+    <strong>Phân tích:</strong> O'Neil kịch liệt phản bác việc rải vốn vào hàng chục cổ phiếu. Đa dạng hóa quá đà chỉ xuất hiện khi nhà đầu tư không tự tin hoặc không chịu nghiên cứu sâu sắc để chọn ra các siêu cổ phiếu dẫn đầu. Tập trung danh mục giúp bạn quản lý chặt chẽ và tháo chạy kịp thời khi giông bão ập tới.
+  </div>
+</div>
+
+<div class="quote-block" style="margin-bottom: 2rem;">
+  <p class="quote-text">"It’s what you learn after you know it all that counts."</p>
+  <p class="quote-context"><strong>— John Wooden</strong>, huấn luyện viên bóng rổ huyền thoại của UCLA, được O'Neil trích dẫn về tính kỷ luật và sự khiêm tốn. <span class="page-ref">Ch 12 &middot; "Should You Sell Short?"</span></p>
+  <div style="font-size: 0.95rem; color: var(--text-secondary); margin-top: 0.5rem; line-height: 1.5;">
+    <strong>Bản dịch:</strong> "Những gì bạn học được sau khi bạn nghĩ rằng mình đã biết hết mới là điều thực sự quan trọng."<br>
+    <strong>Phân tích:</strong> Phản ánh tư duy của O'Neil về sự khiêm tốn trước thị trường. Những nhà đầu tư có cái tôi quá lớn (ego) thường thua lỗ nặng vì cố chấp cãi lại xu hướng thị trường hoặc áp đặt định kiến cá nhân. Sự học hỏi không ngừng và tôn trọng quy luật cung cầu khách quan mới giúp nhà đầu tư sinh tồn.
+  </div>
+</div>
+
+<div class="quote-block">
+  <p class="quote-text">"You never make big money in the stock market by eighths and quarters... Your objective is to be right on the big moves, not on the minor fluctuations."</p>
+  <p class="quote-context"><strong>— William J. O'Neil</strong>, chỉ trích việc quá chi li đặt lệnh giới hạn (limit orders). <span class="page-ref">Ch 12 &middot; "Limit Your Risk when It Comes to Options"</span></p>
+  <div style="font-size: 0.95rem; color: var(--text-secondary); margin-top: 0.5rem; line-height: 1.5;">
+    <strong>Bản dịch:</strong> "Bạn không bao giờ kiếm được số tiền lớn trên thị trường chứng khoán bằng cách so đo vài phần tám hay một phần tư xu lẻ... Mục tiêu của bạn là phải đúng trong các xu hướng lớn, chứ không phải ở các dao động nhỏ nhặt."<br>
+    <strong>Phân tích:</strong> O'Neil khuyên nhà đầu tư nên sử dụng lệnh thị trường (market order) khi mua bán siêu cổ phiếu để đảm bảo khớp lệnh ngay lập tức. Việc chi li đặt lệnh limit thấp hơn vài xu có thể khiến bạn bỏ lỡ một siêu cổ phiếu tăng giá bằng lần, hoặc tệ hơn là bị kẹt lại không bán được khi cổ phiếu đang rơi tự do.
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 12 &amp;middot; MÔ HÌNH TƯ DUY 1</div>
+    <h2>Mô hình 1: Khiên phòng vệ sự thiếu hiểu biết vs Sức mạnh tiêu điểm</h2>
+<div class="split-layout">
+  <div class="split-left" style="padding-right: 1rem; border-right: 1px solid var(--border);">
+    <h3 style="color: var(--accent-purple); margin-top: 0;">Mô hình 1: Phòng vệ sự thiếu hiểu biết vs Sức mạnh tiêu điểm</h3>
+    <p style="font-size: 0.95rem; line-height: 1.5;">
+      Lý thuyết tài chính truyền thống khuyên đa dạng hóa danh mục để phân tán rủi ro. O'Neil đảo ngược góc nhìn này bằng cách định nghĩa: <strong>"Đa dạng hóa rộng là cách phòng thủ trước sự thiếu hiểu biết"</strong>. Nếu bạn sở hữu quá nhiều cổ phiếu, đó là vì bạn không thực sự hiểu sâu sắc về bất kỳ doanh nghiệp nào.
+    </p>
+    <div class="callout" style="border-color: var(--accent-purple); margin-top: 1rem; padding: 0.8rem;">
+      <strong>Triết lý CAN SLIM:</strong> <em>"Hãy đặt trứng vào một vài chiếc giỏ được chọn lọc kỹ lưỡng, rồi canh chừng các giỏ đó thật sát sao."</em> Càng tập trung vốn, bạn càng có động lực nghiên cứu sâu sắc hành vi giá, khối lượng và tin tức của từng cổ phiếu để hành động chính xác.
+    </div>
+  </div>
+  
+  <div class="split-right" style="padding-left: 1rem;">
+    <h4 style="color: var(--accent-emerald); margin-top: 0;">So sánh hai triết lý phân bổ vốn</h4>
+    <table style="width: 100%; border-collapse: collapse; font-size: 0.85rem; margin-top: 0.5rem;">
+      <thead>
+        <tr style="border-bottom: 2px solid var(--border);">
+          <th style="text-align: left; padding: 0.4rem; color: var(--text-secondary);">Tiêu chí</th>
+          <th style="text-align: left; padding: 0.4rem; color: var(--accent-red);">Đa dạng hóa quá đà</th>
+          <th style="text-align: left; padding: 0.4rem; color: var(--accent-emerald);">Tập trung tiêu điểm</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom: 1px solid var(--border);">
+          <td style="padding: 0.4rem; font-weight: bold;">Số lượng mã</td>
+          <td style="padding: 0.4rem;">30 - 50 cổ phiếu</td>
+          <td style="padding: 0.4rem;">3 - 6 cổ phiếu chất lượng</td>
+        </tr>
+        <tr style="border-bottom: 1px solid var(--border);">
+          <td style="padding: 0.4rem; font-weight: bold;">Tác động của siêu cổ</td>
+          <td style="padding: 0.4rem;">Rất mờ nhạt (chiếm tỷ trọng <2% tài khoản)</td>
+          <td style="padding: 0.4rem;">Khuếch đại tài sản cực lớn (chiếm tỷ trọng 20-30%)</td>
+        </tr>
+        <tr style="border-bottom: 1px solid var(--border);">
+          <td style="padding: 0.4rem; font-weight: bold;">Khả năng giám sát</td>
+          <td style="padding: 0.4rem;">Hời hợt, không đọc nổi hết tin tức</td>
+          <td style="padding: 0.4rem;">Chi tiết đến từng biến động nhỏ trên đồ thị hàng ngày</td>
+        </tr>
+        <tr style="border-bottom: 1px solid var(--border);">
+          <td style="padding: 0.4rem; font-weight: bold;">Tốc độ tháo chạy</td>
+          <td style="padding: 0.4rem;">Chậm chạp, tâm lý hỗn loạn khi bán tháo</td>
+          <td style="padding: 0.4rem;">Nhanh chóng trong 1 phiên giao dịch để thu tiền mặt</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 12 &amp;middot; MÔ HÌNH TƯ DUY 2</div>
+    <h2>Mô hình 2: Ranh giới Hộp cát đầu cơ - Options &amp; Bán khống</h2>
+<div class="split-layout">
+  <div class="split-left" style="padding-right: 1rem; border-right: 1px solid var(--border);">
+    <h3 style="color: var(--accent-purple); margin-top: 0;">Mô hình 2: Ranh giới "Hộp cát đầu cơ" (Speculative Sandbox)</h3>
+    <p style="font-size: 0.95rem; line-height: 1.5;">
+      Bán khống và Options là những công cụ vô cùng quyến rũ vì tính đòn bẩy cao, nhưng chúng chứa đựng những rủi ro cấu trúc cực kỳ tàn khốc đối với nhà đầu tư thiếu kỷ luật.
+    </p>
+    <ul style="font-size: 0.85rem; padding-left: 1rem; line-height: 1.5; margin-top: 0.5rem;">
+      <li><strong>Bán khống - Rủi ro vô hạn:</strong> Khi mua cổ phiếu thông thường, khoản lỗ tối đa của bạn là 100% vốn. Nhưng khi bán khống, nếu cổ phiếu tăng giá không giới hạn (hoặc bị short squeeze), khoản thua lỗ của bạn là vô tận.</li>
+      <li><strong>Options - Kẻ thù thời gian:</strong> Khác với cổ phiếu có thể giữ qua chu kỳ, Options là "bom hẹn giờ" (time decay). Bạn mua call option ngắn hạn 30-90 ngày, chỉ một nhịp chỉnh của thị trường chung cũng đủ biến toàn bộ vị thế của bạn thành vô giá trị, bất kể cổ phiếu đó có tốt đến đâu.</li>
+    </ul>
+  </div>
+  
+  <div class="split-right" style="padding-left: 1rem;">
+    <h4 style="color: var(--accent-emerald); margin-top: 0;">Hàng rào kiểm soát rủi ro của O'Neil</h4>
+    <div class="bullet-grid" style="grid-template-columns: 1fr; gap: 0.8rem; margin-top: 0.5rem;">
+      <div class="bullet-card" style="padding: 0.6rem;">
+        <strong>Giới hạn tỷ trọng cứng:</strong> Không bao giờ phân bổ quá 10% đến 15% tổng tài sản cho Options hoặc Bán khống. Phần lớn tài sản phải nằm ở cổ phiếu phổ thông chất lượng cao.
+      </div>
+      <div class="bullet-card" style="padding: 0.6rem;">
+        <strong>Kéo dài kỳ hạn Options:</strong> Ưu tiên mua options kỳ hạn dài 6 tháng trở lên để chống lại áp lực hao mòn thời gian và các nhịp điều chỉnh ngắn hạn của thị trường.
+      </div>
+      <div class="bullet-card" style="padding: 0.6rem;">
+        <strong>Chỉ bán khống khi hội tụ đủ 3 yếu tố:</strong> (1) Thị trường chung là gấu (bear), (2) Cổ phiếu vốn hóa lớn, thanh khoản >5 triệu cổ/ngày, (3) Xuất hiện mô hình phân phối muộn (5-7 tháng sau đỉnh).
+      </div>
+    </div>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 12 &amp;middot; MÔ HÌNH TƯ DUY 3</div>
+    <h2>Mô hình 3: Nghệ thuật làm vườn chủ động — Nhổ cỏ dại, trồng hoa hồng</h2>
+<div class="split-layout">
+  <div class="split-left" style="padding-right: 1rem; border-right: 1px solid var(--border);">
+    <h3 style="color: var(--accent-purple); margin-top: 0;">Mô hình 3: Nghệ thuật làm vườn chủ động — Nhổ cỏ dại, trồng hoa hồng</h3>
+    <p style="font-size: 0.95rem; line-height: 1.5;">
+      Hãy tưởng tượng danh mục đầu tư của bạn là một khu vườn. Để khu vườn nở hoa rực rỡ, bạn không chỉ cần trồng những bông hoa hồng đẹp nhất, mà quan trọng hơn, bạn phải liên tục <strong>nhổ cỏ dại và cắt tỉa những cành cây héo úa</strong>.
+    </p>
+    <div class="callout" style="border-color: var(--accent-purple); margin-top: 0.8rem; padding: 0.8rem;">
+      <strong>Sai lầm kinh điển:</strong> Nhà đầu tư cá nhân thường làm ngược lại hoàn toàn. Họ vội vã bán đi các cổ phiếu đang tăng mạnh để hiện thực hóa khoản lợi nhuận nhỏ (cắt hoa hồng), trong khi lại ôm chặt và mua trung bình giá xuống các cổ phiếu đang chịu lỗ sâu với hy vọng hòa vốn (tưới nước cho cỏ dại).
+    </div>
+  </div>
+  
+  <div class="split-right" style="padding-left: 1rem;">
+    <h4 style="color: var(--accent-emerald); margin-top: 0;">Quy tắc luân chuyển vốn "Force-Feed"</h4>
+    <p style="font-size: 0.85rem; line-height: 1.4; margin-top: 0.5rem;">
+      O'Neil đề xuất một quy trình cơ học tự động ép buộc dòng tiền chảy từ nơi yếu kém nhất đến nơi mạnh mẽ nhất:
+    </p>
+    <ul style="font-size: 0.85rem; padding-left: 1.2rem; line-height: 1.5; margin: 0.5rem 0;">
+      <li><strong>Nhận diện laggard:</strong> Sắp xếp danh mục hàng tuần theo hiệu suất. Cổ phiếu nào trì trệ hoặc có hiệu suất kém nhất chính là "cỏ dại" cần loại bỏ.</li>
+      <li><strong>Bơm vốn cưỡng bức (Force-feeding):</strong> Bán dứt khoát cổ phiếu laggard để giải phóng dòng tiền mặt. Dùng số tiền đó để gia tăng vị thế cho các cổ phiếu dẫn đầu (leaders) đang hoạt động hiệu quả khi chúng xuất hiện điểm mua gia tăng an toàn.</li>
+      <li><strong>Kết quả:</strong> Dòng vốn của bạn luôn được tối ưu hóa ở mức cao nhất, không bị chôn chân trong các nhịp điều chỉnh kéo dài vô ích của nhóm cổ phiếu yếu.</li>
+    </ul>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 12 &amp;middot; SỐ LIỆU &amp; THỐNG KÊ</div>
+    <h2>Số liệu phân bổ danh mục và tỷ lệ đi vốn kim tự tháp</h2>
+<div class="split-layout">
+  <div class="split-left" style="padding-right: 1rem; border-right: 1px solid var(--border); flex: 1.1;">
+    <h3 style="color: var(--accent-purple); margin-top: 0;">Hướng dẫn phân bổ danh mục theo quy mô vốn</h3>
+    <p style="font-size: 0.9rem; line-height: 1.5; margin-bottom: 0.8rem;">
+      Số liệu định lượng chi tiết được đúc rút từ hàng chục năm vận hành quỹ quỹ của William O'Neil để giúp nhà đầu tư cá nhân duy trì sự tập trung tối đa:
+    </p>
+    <table style="width: 100%; border-collapse: collapse; font-size: 0.8rem; text-align: left;">
+      <thead>
+        <tr style="border-bottom: 2px solid var(--border); background-color: rgba(255,255,255,0.02);">
+          <th style="padding: 0.5rem; color: var(--text-secondary);">Quy mô tài khoản</th>
+          <th style="padding: 0.5rem; color: var(--accent-blue); text-align: center;">Số lượng mã tối đa</th>
+          <th style="padding: 0.5rem; color: var(--accent-emerald); text-align: center;">Tỷ trọng mỗi vị thế</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom: 1px solid var(--border);">
+          <td style="padding: 0.5rem; font-weight: bold;">Dưới $3,000</td>
+          <td style="padding: 0.5rem; text-align: center;">2 cổ phiếu</td>
+          <td style="padding: 0.5rem; text-align: center;">~50% / cổ phiếu</td>
+        </tr>
+        <tr style="border-bottom: 1px solid var(--border);">
+          <td style="padding: 0.5rem; font-weight: bold;">$3,000 – $20,000</td>
+          <td style="padding: 0.5rem; text-align: center;">3 cổ phiếu</td>
+          <td style="padding: 0.5rem; text-align: center;">~33% / cổ phiếu</td>
+        </tr>
+        <tr style="border-bottom: 1px solid var(--border);">
+          <td style="padding: 0.5rem; font-weight: bold;">$20,000 – $200,000</td>
+          <td style="padding: 0.5rem; text-align: center;">4 – 5 cổ phiếu</td>
+          <td style="padding: 0.5rem; text-align: center;">20% – 25% / cổ phiếu</td>
+        </tr>
+        <tr style="border-bottom: 1px solid var(--border);">
+          <td style="padding: 0.5rem; font-weight: bold;">Trên $1,000,000</td>
+          <td style="padding: 0.5rem; text-align: center;">6 – 7 cổ phiếu</td>
+          <td style="padding: 0.5rem; text-align: center;">15% – 16% / cổ phiếu</td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 0.5rem;">
+      * Lưu ý: Đối với tài khoản triệu đô, nếu nhà đầu tư cảm thấy quá lo lắng, có thể nới rộng lên tối đa 10 cổ phiếu, nhưng tuyệt đối không bao giờ được chạm mốc 30-40 cổ phiếu.
+    </p>
+  </div>
+  
+  <div class="split-right" style="padding-left: 1rem; flex: 0.9;">
+    <h4 style="color: var(--accent-emerald); margin-top: 0;">Cơ cấu giải ngân Kim tự tháp (Pyramiding)</h4>
+    <p style="font-size: 0.85rem; line-height: 1.4; margin-top: 0.5rem;">
+      Không giải ngân toàn bộ vốn cho một vị thế trong một lần mua duy nhất. Hãy chia nhỏ để thăm dò và gia tăng vị thế khi cổ phiếu chứng minh bạn đúng:
+    </p>
+    <ul style="font-size: 0.85rem; padding-left: 1.2rem; line-height: 1.6; margin: 0.5rem 0;">
+      <li><strong>Lần mua 1 (Breakout Pivot):</strong> Đi vốn <strong>50%</strong> quy mô vị thế ngay khi giá bứt phá điểm pivot chuẩn từ nền giá tin cậy.</li>
+      <li><strong>Lần mua 2 (Giá tăng 2% - 2.5%):</strong> Đi tiếp <strong>30%</strong> vốn vị thế khi cổ phiếu bắt đầu chứng minh hướng đi đúng đắn của bạn.</li>
+      <li><strong>Lần mua 3 (Giá tăng 3% - 4%):</strong> Đi nốt <strong>20%</strong> vốn vị thế còn lại. Cấm mua đuổi nếu giá đã tăng vượt quá <strong>5%</strong> từ điểm mua pivot ban đầu.</li>
+    </ul>
+    <div class="callout" style="border-color: var(--accent-emerald); padding: 0.6rem; font-size: 0.8rem; margin-top: 0.5rem;">
+      <strong>Toán học đằng sau:</strong> Việc đi vốn kim tự tháp giúp giá vốn trung bình của bạn luôn ở sát chân sóng tăng, bảo vệ bạn khỏi các nhịp điều chỉnh rung lắc tự nhiên.
+    </div>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 12 &amp;middot; KỸ THUẬT NÂNG CAO 1</div>
+    <h2>Cơ chế bán khống và mẫu hình bán khống vàng</h2>
+<div class="split-layout">
+  <div class="split-left" style="padding-right: 1rem; border-right: 1px solid var(--border); flex: 1.1;">
+    <h3 style="color: var(--accent-purple); margin-top: 0;">Cơ chế và Quy tắc vàng của hoạt động Bán khống</h3>
+    <p style="font-size: 0.9rem; line-height: 1.4; margin-bottom: 0.5rem;">
+      Bán khống là đảo ngược quy trình giao dịch (bán trước mua lại sau). O'Neil nhấn mạnh các quy tắc sinh tồn cực kỳ khắt khe:
+    </p>
+    <ul style="font-size: 0.85rem; padding-left: 1.2rem; line-height: 1.5; margin: 0;">
+      <li><strong>Cấm short trong Bull Market:</strong> Đừng bao giờ chống lại xu hướng chung của thị trường. Chỉ thực hiện bán khống trong chu kỳ Bear Market thực sự.</li>
+      <li><strong>Tránh xa cổ phiếu cô đặc:</strong> Chỉ short cổ phiếu có thanh khoản giao dịch trung bình từ <strong>5 đến 10 triệu cổ phiếu/ngày</strong> trở lên. Short cổ phiếu cô đặc rất dễ bị các tổ chức gom hàng kéo giá ngược để tiêu diệt phe bán khống (Short Squeeze).</li>
+      <li><strong>Cắt lỗ cơ học 8%:</strong> Do bán khống có rủi ro thua lỗ vô hạn, việc cắt lỗ tuyệt đối ở mức 8% là bắt buộc để sinh tồn.</li>
+      <li><strong>Đừng short chỉ vì định giá đắt:</strong> Đừng bán khống một cổ phiếu đang tăng mạnh chỉ vì P/E quá cao. Nó có thể tiếp tục tăng cao hơn nữa và làm bạn cháy tài khoản.</li>
+    </ul>
+  </div>
+  
+  <div class="split-right" style="padding-left: 1rem; flex: 0.9;">
+    <h4 style="color: var(--accent-emerald); margin-top: 0;">Mẫu hình Bán khống vàng</h4>
+    <p style="font-size: 0.85rem; line-height: 1.4; margin-top: 0.5rem;">
+      Hai mẫu hình kỹ thuật tin cậy nhất được kiểm chứng qua 50 năm lịch sử thị trường:
+    </p>
+    <ul style="font-size: 0.85rem; padding-left: 1.2rem; line-height: 1.5; margin: 0.5rem 0;">
+      <li><strong>Vai Đầu Vai phân phối muộn (Head-and-Shoulders):</strong> Vai phải phải thấp hơn vai trái. Điểm short tối ưu xuất hiện <strong>5 đến 7 tháng sau đỉnh cao nhất</strong>, tại các nhịp hồi phục yếu ớt ở vai phải khi giá quay đầu xuyên thủng đường MA 10 tuần (ví dụ: Lucent, Yahoo!).</li>
+      <li><strong>Breakout thất bại từ nền giá muộn:</strong> Cổ phiếu nỗ lực bứt phá (breakout) từ các nền giá Stage 3 hoặc Stage 4 nhưng thất bại, giá quay đầu giảm mạnh thủng vùng tay cầm với volume lớn.</li>
+    </ul>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 12 &amp;middot; KỸ THUẬT NÂNG CAO 2</div>
+    <h2>Hướng dẫn đầu cơ Options an toàn và quy tắc 6 tháng</h2>
+<div class="split-layout">
+  <div class="split-left" style="padding-right: 1rem; border-right: 1px solid var(--border); flex: 1.1;">
+    <h3 style="color: var(--accent-purple); margin-top: 0;">Đầu cơ Quyền chọn (Options) an toàn</h3>
+    <p style="font-size: 0.9rem; line-height: 1.4; margin-bottom: 0.5rem;">
+      Options là công cụ đòn bẩy cực mạnh nhưng có xác suất thua lỗ rất lớn đối với nhà đầu tư cá nhân. O'Neil đề xuất các rào cản kỹ thuật để tự vệ:
+    </p>
+    <ul style="font-size: 0.85rem; padding-left: 1.2rem; line-height: 1.5; margin: 0;">
+      <li><strong>Nguyên lý 6 tháng:</strong> Tránh xa quyền chọn ngắn hạn 30-90 ngày. Hãy ưu tiên mua các hợp đồng kỳ hạn dài từ <strong>6 tháng trở lên</strong> để bảo vệ vị thế trước sự hao mòn thời gian (time decay) và các nhịp điều chỉnh ngắn hạn của thị trường.</li>
+      <li><strong>Tập trung cổ phiếu cơ sở chất lượng:</strong> Thành công trong giao dịch Options thực chất phụ thuộc 90% vào việc chọn đúng cổ phiếu cơ sở bằng hệ thống CAN SLIM. Chỉ mua Options của các cổ phiếu tăng trưởng hàng đầu, thanh khoản cao để tránh trượt giá (slippage) khi khớp lệnh.</li>
+      <li><strong>Quy tắc dừng lỗ Options:</strong> Cắt lỗ tuyệt đối ở mức <strong>20% - 25%</strong> (do Options biến động gấp 3 lần cổ phiếu thường). Chốt lời chủ động khi đạt lợi nhuận <strong>50% - 75%</strong>.</li>
+    </ul>
+  </div>
+  
+  <div class="split-right" style="padding-left: 1rem; flex: 0.9;">
+    <h4 style="color: var(--accent-emerald); margin-top: 0;">Tránh xa các cấu trúc phức tạp</h4>
+    <p style="font-size: 0.85rem; line-height: 1.4; margin-top: 0.5rem;">
+      O'Neil khuyên nhà đầu tư luôn luôn giữ hoạt động giao dịch đơn giản, tránh xa các gói sản phẩm được Phố Wall tiếp thị:
+    </p>
+    <ul style="font-size: 0.85rem; padding-left: 1.2rem; line-height: 1.5; margin: 0.5rem 0;">
+      <li><strong>Tránh Straddles, Spreads, Strips:</strong> Việc hedging (vừa mua Call vừa mua Put hoặc kết hợp bán) tạo ra sự phức tạp tâm lý cực lớn. Nhà đầu tư rất dễ bị quét lỗ cả hai đầu khi thị trường biến động mạnh.</li>
+      <li><strong>Cấm viết Naked Calls (Bán quyền chọn mua khống):</strong> Việc nhận một khoản phí nhỏ (premium) để cam kết bán cổ phiếu bạn không sở hữu là hành động vô cùng dại dột, rủi ro thua lỗ là không giới hạn nếu giá cổ phiếu tăng vọt.</li>
+    </ul>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 12 &amp;middot; PHÂN BỔ TÀI SẢN 1</div>
+    <h2>Đầu tư IPO muộn và case study Google</h2>
+<div class="split-layout">
+  <div class="split-left" style="padding-right: 1rem; border-right: 1px solid var(--border); flex: 1.1;">
+    <h3 style="color: var(--accent-purple); margin-top: 0;">Hiểm họa từ các đợt IPO nóng (Initial Public Offerings)</h3>
+    <p style="font-size: 0.9rem; line-height: 1.4; margin-bottom: 0.5rem;">
+      IPOs luôn được truyền thông vẽ nên như mỏ vàng làm giàu nhanh chóng. O'Neil chỉ ra nghịch lý phân bổ vốn của IPO:
+    </p>
+    <ul style="font-size: 0.85rem; padding-left: 1.2rem; line-height: 1.5; margin: 0;">
+      <li><strong>Nghịch lý phân bổ:</strong> Những đợt IPO chất lượng cao nhất luôn bị các quỹ tổ chức lớn tranh giành mua hết. Nếu bạn là nhà đầu tư cá nhân nhỏ lẻ mà dễ dàng mua được bao nhiêu tùy thích, điều đó đồng nghĩa với việc các tổ chức lớn đã chê và loại bỏ cổ phiếu đó.</li>
+      <li><strong>Sự thiếu hụt dữ liệu đồ thị:</strong> Một cổ phiếu vừa lên sàn không có lịch sử giao dịch. Bạn không thể vẽ đường xu hướng, MA, hay đọc hành vi giá và khối lượng để biết lực cung cầu thực tế. Mua IPO ngày đầu là hành vi đánh bạc thuần túy.</li>
+      <li><strong>Cảnh báo bong bóng IPO:</strong> Sự xuất hiện dày đặc của các đợt IPO "nóng" tăng giá điên cuồng (như năm 1999 - 2000) thường là dấu hiệu cảnh báo thị trường chung sắp tạo đỉnh và bước vào bear market tàn khốc.</li>
+    </ul>
+  </div>
+  
+  <div class="split-right" style="padding-left: 1rem; flex: 0.9;">
+    <h4 style="color: var(--accent-emerald); margin-top: 0;">Case Study: Mua IPO muộn an toàn</h4>
+    <p style="font-size: 0.85rem; line-height: 1.4; margin-top: 0.5rem;">
+      Quy tắc CAN SLIM: Chỉ mua cổ phiếu IPO sau khi nó đã giao dịch được <strong>1 đến 3 tháng</strong> và xây dựng được nền tích lũy đầu tiên:
+    </p>
+    <ul style="font-size: 0.85rem; padding-left: 1.2rem; line-height: 1.5; margin: 0.5rem 0;">
+      <li><strong>Google (2004):</strong> Lên sàn vào tháng 8/2004. Điểm mua chuẩn xác không phải ngày đầu tiên, mà là vào tuần thứ 5 (giữa tháng 9/2004) khi Google bứt phá bùng nổ vượt đỉnh lịch sử cũ ở mức <strong>$114</strong> từ nền giá ngắn sau IPO.</li>
+      <li><strong>CB Richard Ellis (2004):</strong> Lên sàn vào mùa hè 2004, xây dựng một nền giá phẳng (flat base) hoàn hảo rồi bứt phá tăng tốc tới <strong>500%</strong> sau đó.</li>
+    </ul>
+    <div class="callout" style="border-color: var(--accent-emerald); padding: 0.6rem; font-size: 0.8rem; margin-top: 0.5rem;">
+      <strong>Bài học:</strong> Hãy kiên nhẫn đợi cổ phiếu mới lên sàn trải qua nhịp điều chỉnh đầu tiên để kiểm chứng sức mạnh cung cầu trước khi giải ngân.
+    </div>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 12 &amp;middot; PHÂN BỔ TÀI SẢN 2</div>
+    <h2>Lầm tưởng về cổ phiếu thu nhập và thảm họa Citigroup</h2>
+<div class="split-layout">
+  <div class="split-left" style="padding-right: 1rem; border-right: 1px solid var(--border); flex: 1.1;">
+    <h3 style="color: var(--accent-purple); margin-top: 0;">Lầm tưởng về Cổ phiếu thu nhập cao (Income Stocks Fallacy)</h3>
+    <p style="font-size: 0.9rem; line-height: 1.4; margin-bottom: 0.5rem;">
+      Nhiều nhà đầu tư thích mua cổ phiếu ngành tiện ích (điện, nước) hoặc ngân hàng lớn chỉ vì tỷ suất cổ tức cao và đều đặn. O'Neil vạch trần ngộ nhận này:
+    </p>
+    <ul style="font-size: 0.85rem; padding-left: 1.2rem; line-height: 1.5; margin: 0;">
+      <li><strong>Cái giá của việc săn lợi suất (Yield Chasing):</strong> Việc cố gắng giành thêm 2%-3% cổ tức mỗi năm sẽ trở nên vô nghĩa nếu bạn phải đánh đổi bằng việc mất 50%-90% giá trị vốn gốc khi doanh nghiệp gặp khủng hoảng. Cổ tức có thể bị cắt giảm bất cứ lúc nào nếu lợi nhuận sụt giảm.</li>
+      <li><strong>Citigroup (2008) - Bài học đắt giá nhất:</strong> Ngân hàng Citigroup từng là cổ phiếu được nắm giữ nhiều nhất vì trả cổ tức hấp dẫn. Nhưng trong cuộc khủng hoảng tài chính 2008, Citigroup rơi thẳng đứng từ <strong>$50 về $2</strong>. Cổ tức nhận được không thể bù đắp nổi khoản lỗ 96% vốn gốc.</li>
+      <li><strong>Bank of America & AT&T:</strong> BofA sập từ $55 về $5 đầu năm 2009. AT&T Plunge từ trên $60 về dưới $20 năm 2000.</li>
+    </ul>
+  </div>
+  
+  <div class="split-right" style="padding-left: 1rem; flex: 0.9;">
+    <h4 style="color: var(--accent-emerald); margin-top: 0;">Giải pháp thay thế thông minh</h4>
+    <p style="font-size: 0.85rem; line-height: 1.4; margin-top: 0.5rem;">
+      Sử dụng đồ thị kỹ thuật để tự vệ và tự thiết lập dòng tiền đều đặn thay vì phụ thuộc vào cổ tức doanh nghiệp:
+    </p>
+    <ul style="font-size: 0.85rem; padding-left: 1.2rem; line-height: 1.5; margin: 0.5rem 0;">
+      <li><strong>Đồ thị cứu mạng Citigroup:</strong> Vào tháng 10/2007, Citigroup bộc lộ sự suy kiệt khi gãy đổ vùng hỗ trợ $40 với khối lượng bán lớn nhất trong lịch sử. Việc quan sát biểu đồ sẽ giúp nhà đầu tư thoát vị thế ngay lập tức và giữ được tài sản.</li>
+      <li><strong>Quy tắc rút 6% tự động:</strong> Nếu bạn cần thu nhập đều đặn, hãy tập trung đầu tư vào các cổ phiếu tăng trưởng chất lượng nhất. Định kỳ mỗi quý, hãy bán bớt một lượng nhỏ cổ phiếu để rút ra <strong>1.5%</strong> (tương đương <strong>6% một năm</strong>) từ tài sản ròng của bạn.</li>
+    </ul>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 12 &amp;middot; SỰ THỰC DỄ BỊ BỎ QUA</div>
+    <h2>Danh sách cần tránh xa: Penny stocks, bonds và futures hàng hóa</h2>
+<div class="split-layout">
+  <div class="split-left" style="padding-right: 1rem; border-right: 1px solid var(--border); flex: 1.1;">
+    <h3 style="color: var(--accent-purple); margin-top: 0;">Danh sách cấm: Cổ phiếu Penny và Tài sản phi sản xuất</h3>
+    <p style="font-size: 0.9rem; line-height: 1.4; margin-bottom: 0.5rem;">
+      William O'Neil khuyên nhà đầu tư kiên quyết gạt bỏ các kênh đầu tư kém hiệu quả hoặc chứa đựng rủi ro thao túng:
+    </p>
+    <ul style="font-size: 0.85rem; padding-left: 1.2rem; line-height: 1.5; margin: 0;">
+      <li><strong>Penny Stocks (Cổ phiếu dưới $15):</strong> <em>"Tiền nào của nấy" (Everything sells for what it's worth)</em>. Cổ phiếu có giá rẻ vì bản thân nó có vấn đề nội tại. Nhóm này không có sự bảo trợ của tổ chức lớn và rất dễ bị thao túng giá.</li>
+      <li><strong>Bất lợi chênh lệch Bid/Ask:</strong> Cổ phiếu $5 có chênh lệch Bid/Ask là $0.25 (chiếm tới <strong>5%</strong> giá mua - bạn đã tạm lỗ 5% ngay khi đặt lệnh). Trong khi cổ phiếu $50 có cùng mức chênh lệch $0.25 chỉ chiếm <strong>0.5%</strong>. Sức ép từ spread của penny là quá lớn.</li>
+      <li><strong>Trái phiếu & Trái phiếu chuyển đổi:</strong> Không có khả năng chống lạm phát dài hạn và thị trường giao dịch có thể mất thanh khoản hoàn toàn trong các cuộc khủng hoảng tín dụng.</li>
+    </ul>
+  </div>
+  
+  <div class="split-right" style="padding-left: 1rem; flex: 0.9;">
+    <h4 style="color: var(--accent-emerald); margin-top: 0;">Né tránh Futures hàng hóa và Bẫy trốn thuế</h4>
+    <ul style="font-size: 0.85rem; padding-left: 1.2rem; line-height: 1.5; margin: 0.5rem 0;">
+      <li><strong>Commodity Futures (Hợp đồng tương lai):</strong> Biến động giá cực kỳ khốc liệt và đòn bẩy quá lớn. Nguy hiểm nhất là hiện tượng "Limit Down" (giới hạn sàn) khiến bạn bị kẹt cứng vị thế và không thể bán cắt lỗ, dẫn đến nguy cơ cháy tài khoản hoàn toàn.</li>
+      <li><strong>Bẫy tránh thuế (Tax Shelters & Munis):</strong> Đừng bao giờ để nỗi sợ đóng thuế làm che mờ tư duy đầu tư. Nhiều người cố trốn thuế bằng cách đầu tư vào các dự án mờ ám rủi ro cao và kết quả là mất trắng vốn gốc. Hãy tập trung kiếm lợi nhuận ròng lớn nhất và vui vẻ thực hiện nghĩa vụ thuế với nhà nước.</li>
+    </ul>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 12 &amp;middot; ĐÁNH GIÁ CHỨNG CỨ</div>
+    <h2>Tính thực chứng của chiến lược tập trung vs EMH &amp; Cập nhật ETF 2026</h2>
+<div class="split-layout">
+  <div class="split-left" style="padding-right: 1rem; border-right: 1px solid var(--border); flex: 1.1;">
+    <h3 style="color: var(--accent-purple); margin-top: 0;">Đánh giá thực chứng: Lý thuyết danh mục hiện đại vs CAN SLIM</h3>
+    <p style="font-size: 0.9rem; line-height: 1.4; margin-bottom: 0.5rem;">
+      Lý thuyết Tài chính Hiện đại (Modern Portfolio Theory - MPT) khuyên đa dạng hóa rộng (30-50 mã) để triệt tiêu rủi ro đặc thù (unsystematic risk). O'Neil phản bác trực tiếp luận điểm này:
+    </p>
+    <ul style="font-size: 0.85rem; padding-left: 1.2rem; line-height: 1.5; margin: 0;">
+      <li><strong>Hiệu suất thực tế:</strong> Việc dàn trải danh mục làm giảm đáng kể tác động đóng góp của các siêu cổ phiếu tăng mạnh nhất. Hiệu suất của tài khoản đa dạng hóa quá đà có xu hướng bị kéo về mức trung bình của thị trường (mediocre results).</li>
+      <li><strong>Tấm khiên bảo vệ thực tế:</strong> CAN SLIM triệt tiêu rủi ro đặc thù không phải bằng cách đa dạng hóa, mà bằng <strong>kỷ luật cắt lỗ thép 7%-8%</strong> kết hợp với việc mua chính xác tại điểm Pivot. Điều này cho phép tập trung tối đa vốn vào 3-4 cổ phiếu mạnh nhất mà vẫn bảo tồn được vốn ròng.</li>
+    </ul>
+  </div>
+  
+  <div class="split-right" style="padding-left: 1rem; flex: 0.9;">
+    <h4 style="color: var(--accent-emerald); margin-top: 0;">Bối cảnh 2026: Dòng tiền thụ động ETF</h4>
+    <p style="font-size: 0.85rem; line-height: 1.4; margin-top: 0.5rem;">
+      Sự bùng nổ của các quỹ ETF chỉ số (passive indexing) vào năm 2026 đã tái cấu trúc thị trường tài chính:
+    </p>
+    <ul style="font-size: 0.85rem; padding-left: 1.2rem; line-height: 1.5; margin: 0.5rem 0;">
+      <li><strong>Khuếch đại siêu cổ phiếu:</strong> Khi dòng tiền thụ động chảy liên tục vào các quỹ lớn như SPY hay QQQ, các cổ phiếu dẫn đầu có vốn hóa lớn nhất (như Big Tech) sẽ tự động được mua gom nhiều nhất theo trọng số.</li>
+      <li><strong>Lợi thế cho CAN SLIM:</strong> Điều này tạo ra lực đẩy khổng lồ cho các siêu cổ phiếu dẫn dắt thị trường, củng cố triết lý tập trung danh mục của O'Neil vào nhóm cổ phiếu siêu thanh khoản có bảo trợ tổ chức lớn.</li>
+      <li><strong>Rủi ro tâm lý:</strong> Danh mục tập trung sẽ có biến động tài sản (NAV) hàng ngày cao hơn. Nhà đầu tư phải rèn luyện tâm lý vững vàng để không bị rung lắc khỏi vị thế tốt.</li>
+    </ul>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 12 &amp;middot; GÓC NHÌN ĐỐI LẬP</div>
+    <h2>Đa dạng hóa thụ động chỉ số vs Đầu cơ tăng trưởng tập trung</h2>
+<div class="split-layout">
+  <div class="split-left" style="padding-right: 1rem; border-right: 1px solid var(--border);">
+    <h3 style="color: var(--accent-purple); margin-top: 0;">Góc nhìn A: Đa dạng hóa thụ động (Passive Indexing)</h3>
+    <p style="font-size: 0.9rem; line-height: 1.5; margin-bottom: 0.8rem;">
+      <strong>Đại diện tiêu biểu:</strong> John Bogle (Người sáng lập Vanguard), các nhà kinh tế học hàn lâm ủng hộ Thuyết thị trường hiệu quả (EMH).
+    </p>
+    <ul style="font-size: 0.85rem; padding-left: 1.2rem; line-height: 1.5; margin: 0;">
+      <li><strong>Luận điểm:</strong> Không ai có thể liên tục dự báo thị trường hoặc chọn lọc chính xác cổ phiếu chiến thắng trong dài hạn. Việc cố gắng mua bán chủ động chỉ làm tốn phí giao dịch và thuế.</li>
+      <li><strong>Giải pháp:</strong> Đa dạng hóa tối đa bằng cách mua và nắm giữ các quỹ chỉ số (như S&P 500) trọn đời. Chấp nhận lợi suất trung bình của thị trường để có sự an toàn cao nhất và an nhàn về tâm lý.</li>
+    </ul>
+  </div>
+  
+  <div class="split-right" style="padding-left: 1rem;">
+    <h3 style="color: var(--accent-emerald); margin-top: 0;">Góc nhìn B: Đầu cơ tăng trưởng tập trung (CAN SLIM)</h3>
+    <p style="font-size: 0.9rem; line-height: 1.5; margin-bottom: 0.8rem;">
+      <strong>Đại diện tiêu biểu:</strong> William O'Neil, Jesse Livermore, Gerald Loeb, Nicolas Darvas.
+    </p>
+    <ul style="font-size: 0.85rem; padding-left: 1.2rem; line-height: 1.5; margin: 0;">
+      <li><strong>Luận điểm:</strong> Thị trường không hiệu quả hoàn hảo. Luôn có sự chênh lệch lớn giữa nhóm cổ phiếu dẫn đầu xuất sắc và phần còn lại yếu kém. Đa dạng hóa tràn lan chỉ mang lại kết quả tầm thường.</li>
+      <li><strong>Giải pháp:</strong> Tập trung tối đa nguồn lực vào 3-5 siêu cổ phiếu tăng trưởng đột phá đang thu hút dòng tiền tổ chức. Sử dụng đồ thị kỹ thuật để tìm điểm mua chuẩn xác và bảo vệ tài khoản bằng kỷ luật cắt lỗ cơ học 7%-8%.</li>
+    </ul>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 12 &amp;middot; RỦI RO &amp; PHẢN BIỆN</div>
+    <h2>Rủi ro biến động NAV cực đoan và hiện tượng quét dừng lỗ liên tục</h2>
+<div class="split-layout">
+  <div class="split-left" style="padding-right: 1rem; border-right: 1px solid var(--border); flex: 1.1;">
+    <h3 style="color: var(--accent-purple); margin-top: 0;">Rủi ro hệ thống của chiến lược tập trung</h3>
+    <p style="font-size: 0.9rem; line-height: 1.4; margin-bottom: 0.5rem;">
+      Mặc dù mang lại hiệu suất vượt trội, chiến lược tập trung vốn cực đoan của CAN SLIM cũng đi kèm những rủi ro cấu trúc lớn cần được quản trị:
+    </p>
+    <ul style="font-size: 0.85rem; padding-left: 1.2rem; line-height: 1.5; margin: 0;">
+      <li><strong>Biến động NAV cực đoan:</strong> Sở hữu ít mã đồng nghĩa với việc giá trị tài sản ròng (NAV) của bạn sẽ dao động rất mạnh hàng ngày. Chỉ cần một cổ phiếu bị khoảng trống giảm giá (down gap) bất ngờ đầu phiên do tin tức xấu, tài khoản của bạn sẽ chịu tổn thương lớn trước khi kịp kích hoạt lệnh bán cắt lỗ.</li>
+      <li><strong>Cái chết từ ngàn nhát cắt (Whipsaw Risk):</strong> Trong thị trường đi ngang (sideways) hoặc đầy biến động nhiễu, việc liên tục mua breakout pivot lỗi rồi cắt lỗ cơ học 7%-8% sẽ nhanh chóng bào mòn toàn bộ vốn gốc của bạn thông qua hàng chục khoản lỗ nhỏ liên tiếp.</li>
+    </ul>
+  </div>
+  
+  <div class="split-right" style="padding-left: 1rem; flex: 0.9;">
+    <h4 style="color: var(--accent-emerald); margin-top: 0;">Rủi ro đòn bẩy và lỗi Timing đầu cơ</h4>
+    <ul style="font-size: 0.85rem; padding-left: 1.2rem; line-height: 1.5; margin: 0.5rem 0;">
+      <li><strong>Hiểm họa cháy tài khoản do Margin:</strong> Việc sử dụng đòn bẩy cao ở vùng đỉnh thị trường hoặc gồng lỗ margin call sẽ nhân đôi tốc độ sụt giảm tài sản của bạn, biến một nhịp điều chỉnh bình thường thành thảm họa thanh lý bắt buộc.</li>
+      <li><strong>Độ khó timing của Options/Short Selling:</strong> Bán khống và mua quyền chọn đòi hỏi độ chính xác tuyệt đối về cả xu hướng lẫn thời gian (timing). Hầu hết nhà đầu tư cá nhân thiếu kinh nghiệm chạm vào các công cụ này đều bị thua lỗ nhanh chóng do nôn nóng và quản lý vốn kém.</li>
+      <li><strong>Rủi ro thanh khoản tài khoản lớn:</strong> Khi quy mô tài sản tăng lên, việc tập trung quá mức vào các mã vốn hóa vừa sẽ khiến bạn khó thoát hàng nhanh trong 1 phiên mà không tự mình ép giá cổ phiếu giảm sàn.</li>
+    </ul>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 12 &amp;middot; SƠ ĐỒ KHÁI NIỆM</div>
+    <h2>Mối liên kết quản trị danh mục trong hệ thống</h2>
+<div class="mermaid">
+graph TB
+    A["Chương 2: Mẫu hình & Điểm Pivot (Điểm xuất phát mua chuẩn phục vụ Options & Margin)"] --> C["Chương 12: Quản trị danh mục & Các kênh đầu tư"]
+    B["Chương 9: Xu hướng thị trường chung (Quyết định thời điểm rút margin, bán khống vàng)"] --> C
+    C --> D["Đầu cơ phái sinh (Yêu cầu độ chính xác timing & kỷ luật cắt lỗ 8% / 20%)"]
+    C --> E["Tập trung danh mục (Mục tiêu tối ưu hóa vốn vào 3-5 siêu cổ phiếu)"]
+    C --> F["Loại bỏ tài sản rác (Cấm Penny, Trái phiếu, Warrants, Cổ phiếu thu nhập)"]
+    
+    style C fill:#8B7CFF,stroke:#2A2D33,color:#F7F7F5
+</div>
+
+<div class="split-layout" style="margin-top: 1rem;">
+  <div class="split-left" style="padding-right: 1rem; border-right: 1px solid var(--border);">
+    <h5 style="color: var(--accent-purple); margin-top: 0;">Mối quan hệ tiên quyết (Prerequisites)</h5>
+    <ul style="font-size: 0.9rem; padding-left: 1rem; margin: 0; line-height: 1.5;">
+      <li><strong>Mẫu hình & Pivot (Ch 2):</strong> Điểm mua pivot chuẩn là mốc neo duy nhất để thực thi đi vốn kim tự tháp, chặn mua đuổi trên 5% và là cơ sở chọn lựa tài sản gốc để mua Options/Sử dụng margin.</li>
+      <li><strong>Xu hướng thị trường (Ch 9):</strong> Trạng thái thị trường chung quyết định mức độ sử dụng đòn bẩy (chỉ dùng margin trong uptrend) và định vị thời điểm bán khống (chỉ short khi thị trường chung bước vào downtrend).</li>
+    </ul>
+  </div>
+  
+  <div class="split-right" style="padding-left: 1rem;">
+    <h5 style="color: var(--accent-emerald); margin-top: 0;">Mối quan hệ mở khóa (Future Unlocks)</h5>
+    <ul style="font-size: 0.9rem; padding-left: 1rem; margin: 0; line-height: 1.5;">
+      <li><strong>Sinh tồn qua suy thoái:</strong> Kỷ luật cấm gồng lỗ margin call và rút đòn bẩy chủ động giúp bảo vệ 100% vốn ròng qua các chu kỳ sụp đổ vĩ mô như năm 2000 hay 2008.</li>
+      <li><strong>Tối ưu hóa vòng quay vốn:</strong> Triết lý làm vườn (nhổ cỏ dại, trồng hoa hồng) giải phóng dòng tiền từ nhóm cổ phiếu laggard để tập trung lực đẩy tối đa cho nhóm siêu cổ phiếu dẫn đầu.</li>
+    </ul>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 12 &amp;middot; HƯỚNG DẪN THỰC HÀNH</div>
+    <h2>Lộ trình ứng dụng thực tế quản trị danh mục và đi vốn</h2>
+<div class="phase-progress">
+  <div class="phase active">Pha 1: Thiết Lập Giới Hạn</div>
+  <div class="phase">Pha 2: Kỷ Luật Margin</div>
+  <div class="phase">Pha 3: Khoanh Vùng Đầu Cơ</div>
+  <div class="phase">Pha 4: Nhổ Cỏ Dại</div>
+</div>
+
+<div class="bullet-grid" style="margin-top: 1.5rem;">
+  <div class="bullet-card">
+    <h4>Pha 1: Giới hạn mã và đi vốn Kim tự tháp</h4>
+    <ul class="checklist" style="padding-left: 0; list-style: none;">
+      <li><input type="checkbox" checked disabled> <strong>Đặt giới hạn số mã cứng:</strong> Quyết định số lượng cổ phiếu nắm giữ tối đa phù hợp với số vốn (ví dụ: tối đa 4-5 mã cho tài khoản từ $20,000 đến $200,000).</li>
+      <li><input type="checkbox" checked disabled> <strong>Chia nhỏ giải ngân:</strong> Áp dụng quy tắc đi vốn kim tự tháp 50% - 30% - 20% khi giá tăng nhẹ 2% - 2.5%, tuyệt đối không mua đuổi quá 5% từ điểm pivot. Ghi chép rõ ràng vào nhật ký.</li>
+    </ul>
+  </div>
+
+  <div class="bullet-card">
+    <h4>Pha 2: Thực thi kỷ luật Margin & xử lý Margin Call</h4>
+    <ul class="checklist" style="padding-left: 0; list-style: none;">
+      <li><input type="checkbox" disabled> <strong>Bảo vệ đòn bẩy:</strong> Chỉ sử dụng margin trong 2 năm đầu tiên của uptrend và đưa tài khoản về tiền mặt ngay khi thị trường bước vào phân phối gấu.</li>
+      <li><input type="checkbox" disabled> <strong>Xử lý margin call cơ học:</strong> Nếu bị gọi ký quỹ bổ sung, tuyệt đối cấm nộp thêm tiền mặt gồng lỗ. Lập tức đặt lệnh bán hạ tỷ trọng cổ phiếu đang giảm giá.</li>
+    </ul>
+  </div>
+
+  <div class="bullet-card">
+    <h4>Pha 3: Thiết lập ranh giới "hộp cát đầu cơ" (Options/Short)</h4>
+    <ul class="checklist" style="padding-left: 0; list-style: none;">
+      <li><input type="checkbox" disabled> <strong>Khống chế tỷ trọng đầu cơ:</strong> Giới hạn tổng quy mô giao dịch Options và Bán khống dưới 10% - 15% tổng tài sản ròng.</li>
+      <li><input type="checkbox" disabled> <strong>Kiểm soát tham số:</strong> Options chỉ mua call siêu cổ phiếu kỳ hạn 6 tháng, cắt lỗ ở 20%. Bán khống chỉ short trong bear market với cổ phiếu thanh khoản >5 triệu cổ/ngày, cắt lỗ ở 8%.</li>
+    </ul>
+  </div>
+
+  <div class="bullet-card">
+    <h4>Pha 4: Thực thi quy trình "Làm vườn" hàng tuần</h4>
+    <ul class="checklist" style="padding-left: 0; list-style: none;">
+      <li><input type="checkbox" disabled> <strong>Xếp hạng danh mục:</strong> Cuối mỗi tuần, lập bảng xếp hạng hiệu suất phần trăm tăng giảm của toàn bộ cổ phiếu đang nắm giữ.</li>
+      <li><input type="checkbox" disabled> <strong>Bán xả cỏ dại:</strong> Kiên quyết bán loại bỏ 1-2 cổ phiếu yếu kém nhất nằm cuối danh sách để giải phóng tiền mặt, dồn tiền gia tăng vị thế cho nhóm dẫn đầu.</li>
+    </ul>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 12 &amp;middot; CHIẾN LƯỢC HỌC TẬP</div>
+    <h2>Mỏ neo trí nhớ &amp; Lặp lại ngắt quãng</h2>
+<div class="learning-style-section visual" style="margin-bottom: 1rem;">
+  <div class="style-icon">👁️ Phương Pháp Học Tập Đa Cảm Giác (Dành cho Học viên Cân bằng)</div>
+  <div class="style-content" style="font-size: 0.95rem; line-height: 1.5;">
+    <ul>
+      <li><strong>Mỏ neo trực quan (Visual Anchor):</strong> Hãy tưởng tượng hình ảnh <em>chiếc giỏ trứng vàng được bảo vệ nghiêm ngặt (Protected Eggs Basket)</em>: Một chiếc giỏ đan thủ công cực kỳ chắc chắn chỉ chứa tối đa 4 quả trứng vàng khổng lồ. Chiếc giỏ được bao bọc bởi hai tấm khiên thép khắc chữ "Cắt lỗ 7%" và "Cắt lỗ 8%". Triết lý: <em>"Đừng rải trứng khắp nơi để rồi không thể bảo vệ. Hãy gom chúng vào một giỏ tốt nhất và canh chừng nó bằng kỷ luật thép."</em></li>
+      <li><strong>Hành động thực tế (Kinesthetic Action):</strong> Mở ngay tài khoản giao dịch của bạn. Đếm chính xác số lượng cổ phiếu đang nắm giữ. Nếu con số vượt quá giới hạn khuyến nghị (ví dụ: >5 mã đối với tài khoản dưới $200k) hoặc có những mã penny dưới $15, hãy lập tức đánh dấu chúng bằng mực đỏ và lên kế hoạch bán dứt khoát cơ cấu dòng vốn ngay trong các phiên tới.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="split-layout" style="margin-top: 1rem;">
+  <div class="split-left" style="padding-right: 1rem; border-right: 1px solid var(--border);">
+    <h5 style="color: var(--accent-purple); margin-top: 0;">Mỏ Neo Trí Nhớ & Case Cảnh Tỉnh</h5>
+    <ul style="font-size: 0.9rem; padding-left: 1rem; margin: 0; line-height: 1.5;">
+      <li><strong>Thảm họa Citigroup ($50 về $2):</strong> Nhắc nhở bản thân hàng ngày về bẫy cổ tức của nhóm cổ phiếu thu nhập. Đừng bao giờ tin tưởng mù quáng vào chiến lược "mua và nắm giữ dài hạn" mà không theo dõi đồ thị kỹ thuật. <span class="page-ref">Ch 12 &middot; "Should You Invest in Income Stocks?"</span></li>
+      <li><strong>Giữ đơn giản (Keep it simple):</strong> Tránh xa mọi gói sản phẩm đầu tư phức tạp. Phố Wall kiếm tiền bằng cách làm phức tạp hóa các công cụ đầu cơ để thu phí giao dịch của bạn.</li>
+    </ul>
+  </div>
+
+  <div class="split-right" style="padding-left: 1rem;">
+    <h5 style="color: var(--accent-emerald); margin-top: 0;">Lịch Trình Lặp Lại Ngắt Quãng</h5>
+    <ul style="font-size: 0.9rem; padding-left: 1rem; margin: 0; line-height: 1.5;">
+      <li><strong>Ngày 1:</strong> Khắc ghi giới hạn số lượng cổ phiếu tối đa cho tài khoản của mình. Cam kết tuyệt đối cấm trung bình giá xuống.</li>
+      <li><strong>Ngày 2:</strong> Học thuộc lòng cơ chế bán khống (short sau đỉnh 5-7 tháng) và quy tắc Options dài hạn (kỳ hạn 6 tháng, tỷ trọng <10%).</li>
+      <li><strong>Ngày 7:</strong> Phân tích kỹ lưỡng các case study sụp đổ Citigroup, WorldCom và penny stocks để thiết lập màng lọc loại bỏ rác.</li>
+      <li><strong>Ngày 30:</strong> Thực hiện quy trình "Làm vườn" cuối tháng: Lập bảng xếp hạng hiệu suất NAV, kiên quyết "nhổ cỏ dại" và tinh gọn danh mục.</li>
+    </ul>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 12 &amp;middot; HÀNH ĐỘNG CUỐI CÙNG</div>
+    <h2>Hành động cuối cùng</h2>
+<ul class="action-list">
+  <li class="action-item">
+    <div>
+      <div class="action-headline">Tinh gọn danh mục về trạng thái tối ưu ngay hôm nay</div>
+      <div class="action-detail">Kiểm tra tài khoản và kiên quyết bán cắt lỗ hoặc chốt lời thu gọn danh mục về đúng giới hạn tối đa được khuyến nghị (ví dụ: tối đa 4 cổ phiếu cho vốn dưới $200k). Cơ cấu dòng tiền từ những mã chậm chạp nhất sang các siêu cổ phiếu dẫn đầu.</div>
+    </div>
+  </li>
+  <li class="action-item">
+    <div>
+      <div class="action-headline">Ký bản cam kết kỷ luật thép khi sử dụng Margin</div>
+      <div class="action-detail">Viết và dán ngay trước bàn giao dịch cam kết: <em>"Tôi tuyệt đối cấm bản thân nộp thêm tiền mặt để cứu Margin Call khi cổ phiếu giảm giá. Nếu tài khoản bị gọi ký quỹ, tôi sẽ bán hạ tỷ trọng cổ phiếu ngay lập tức không do dự."</em></div>
+    </div>
+  </li>
+  <li class="action-item">
+    <div>
+      <div class="action-headline">Đặt bộ lọc cứng loại bỏ hoàn toàn penny stocks dưới $15</div>
+      <div class="action-detail">Cài đặt bộ lọc (screener) trên phần mềm giao dịch của bạn để tự động loại bỏ mọi cổ phiếu có giá dưới $15 ra khỏi danh sách theo dõi. Không cho phép bản thân bị cám dỗ bởi các cổ phiếu có thị giá "rẻ" nhưng chất lượng thấp và dễ bị thao túng.</div>
+    </div>
+  </li>
+</ul>
+
+<figure class="image-slot hero" style="margin-top: 1.5rem;">
+  <div class="image-prompt">
+    <span class="image-prompt-label">AI Image Prompt — Giới hạn quota Image-gen của hệ thống tạm thời hết</span>
+    <p class="image-prompt-text">"A beautifully woven rustic wicker basket on a simple wooden table containing exactly four glossy golden eggs, clean minimalist composition, soft morning light streaming from a window, high depth of field, 8k."</p>
+    <span class="image-prompt-hint">Bạn có thể tạo ảnh trên Midjourney, lưu dưới tên 'ch12_eggs_hero.png' vào thư mục 'images/' và thay thế khối HTML này bằng thẻ &lt;img src="images/ch12_eggs_hero.png"&gt; để hoàn thiện slide Closing Actions.</span>
+  </div>
+</figure>
+
+  </section>
+
+</div>
+
+<div class="nav-controls">
+  <button class="nav-btn" id="prevBtn" onclick="prevSlide()" aria-label="Previous slide">&#8592;</button>
+  <div class="counter" id="counter" aria-live="polite">1 / 1</div>
+  <button class="nav-btn" id="nextBtn" onclick="nextSlide()" aria-label="Next slide">&#8594;</button>
+</div>
+
+<script src="common.js"></script>
+</body>
+</html>

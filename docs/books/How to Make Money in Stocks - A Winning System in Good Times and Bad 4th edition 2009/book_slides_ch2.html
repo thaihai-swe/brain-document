@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How to Make Money in Stocks — Chapter 2</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="common.css">
+<script src="https://cdn.jsdelivr.net/npm/@panzoom/panzoom@4.5.1/dist/panzoom.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11.10.0/dist/mermaid.min.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div class="progress-bar" id="progressBar"></div>
+
+<div class="chapter-menu">
+  <button class="menu-btn" id="chapterMenuBtn" onclick="toggleChapterMenu()" aria-haspopup="true" aria-expanded="false">Chapters &#9662;</button>
+  <div class="chapter-menu-panel" id="chapterMenuPanel" role="menu"></div>
+</div>
+
+<div class="slide-container" id="slideContainer">
+
+  <section class="slide" aria-hidden="false">
+<h1>How to Make Money in Stocks</h1>
+<p class="subtitle">Chương 2: Hướng Dẫn Đọc Biểu Đồ Như Chuyên Nghiệp để Cải Thiện Lựa Chọn Cổ Phiếu và Thời Điểm Giao Dịch<br><span style="font-size: 0.9em; opacity: 0.85;">(How to Read Charts Like a Pro and Improve Your Selection and Timing)</span></p>
+
+<figure class="image-slot hero">
+  <img src="images/ch2_title_hero.png" alt="Cup with handle stock chart pattern display">
+  <figcaption>Phương Pháp Đọc Hiểu Mẫu Hình Biểu Đồ & Quy Luật Cung Cầu</figcaption>
+</figure>
+
+<div class="meta-grid">
+  <div class="meta-item">
+    <div class="meta-label">Tác giả</div>
+    <div class="meta-value">William J. O'Neil</div>
+  </div>
+  <div class="meta-item">
+    <div class="meta-label">Độ sâu phân tích</div>
+    <div class="meta-value">DEEP+ Mode (24 Slides)</div>
+  </div>
+  <div class="meta-item">
+    <div class="meta-label">Đối tượng mục tiêu</div>
+    <div class="meta-value">Nhà đầu tư cá nhân</div>
+  </div>
+  <div class="meta-item">
+    <div class="meta-label">Ngôn ngữ</div>
+    <div class="meta-value">Song ngữ Anh - Việt</div>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide chapter-divider">
+<div class="chapter-number">Chương 2</div>
+<h2>Hướng Dẫn Đọc Biểu Đồ Như Chuyên Nghiệp</h2>
+<p class="chapter-meta">Ước tính thời gian đọc: 60+ phút (chế độ DEEP+) &middot; Độ khó: Khá - Khó &middot; Khái niệm chính: Mẫu hình Giá, Điểm Pivot, Lượng Cung Lơ Lửng (Overhead Supply), Rũ Bỏ (Shakeout), Sức Mạnh Tương Đối (Relative Strength Line)</p>
+
+<figure class="image-slot hero">
+  <img src="images/ch2_divider_hero.png" alt="Modern trading desk with multiple chart monitors in dark office at night">
+  <figcaption>Chẩn đoán sức mạnh cổ phiếu thông qua phim chụp X-quang giá và khối lượng</figcaption>
+</figure>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 2 &amp;middot; TỔNG QUAN TRỰC QUAN 1</div>
+    <h2>Sơ đồ các Nền giá &amp; Điểm Pivot</h2>
+<div class="mermaid">
+graph TD
+    A["Các Loại Nền Giá Kiến Tạo (Proper Bases)"] --> B["Cốc có tay cầm (Cup with Handle)"]
+    A --> C["Hai Đáy (Double Bottom)"]
+    A --> D["Nền Giá Phẳng (Flat Base)"]
+    A --> E["Lá cờ cao thắt chặt (High, Tight Flag)"]
+    A --> F["Hộp vuông (Square Box)"]
+    
+    B --> B1["Pivot = Đỉnh Tay Cầm (dưới đỉnh cũ 5-10%)"]
+    C --> C1["Pivot = Đỉnh giữa chữ W (hoặc tay cầm)"]
+    D --> D1["Pivot = Đỉnh cao nhất của nền phẳng (đi ngang 5-6 tuần)"]
+    E --> E1["Pivot = Đỉnh cao nhất của cờ (tăng 100%+ trong 4-8 tuần)"]
+    F --> F1["Pivot = Đỉnh cao nhất của hộp (đi ngang 4-7 tuần)"]
+
+    style A fill:#D97706,stroke:#2A2D33,color:#F7F7F5
+    style B1 fill:#8B7CFF,stroke:#2A2D33,color:#F7F7F5
+    style C1 fill:#8B7CFF,stroke:#2A2D33,color:#F7F7F5
+    style D1 fill:#8B7CFF,stroke:#2A2D33,color:#F7F7F5
+    style E1 fill:#8B7CFF,stroke:#2A2D33,color:#F7F7F5
+    style F1 fill:#8B7CFF,stroke:#2A2D33,color:#F7F7F5
+</div>
+<div class="callout" style="margin-top: 1rem;">
+  <div class="callout-icon">💡</div>
+  <div class="callout-content">
+    <strong>Lưu ý kỹ thuật:</strong> Điểm mua Pivot của phần lớn các nền giá kiến tạo đều nằm <em>dưới đỉnh cũ của toàn bộ cấu trúc từ 5% đến 10%</em>. Chờ mua khi vượt đỉnh cũ hoàn toàn thường dẫn tới việc mua quá muộn (late entry).
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 2 &amp;middot; TỔNG QUAN TRỰC QUAN 2</div>
+    <h2>Đọc hiểu Hành vi Giá và Khối lượng</h2>
+<div class="mermaid">
+graph TD
+    A["Chu trình Tích luỹ & Đột phá (Accumulation & Breakout)"] --> B["Xu hướng tăng trước đó (Prior Uptrend >= 30% kèm Vol lớn)"]
+    B --> C["Điều chỉnh tạo đáy nền giá (Thanh khoản giảm dần)"]
+    C --> D["Giai đoạn rũ bỏ cuối (Tay cầm - Shakeout & Volume Dry-up)"]
+    D --> E["Bứt phá vùng kháng cự (Pivot Point Breakout)"]
+    E --> F["Xác nhận Khối lượng đột biến (Volume Spike >= 40-50% so với trung bình)"]
+    F --> G["Xác lập chu kỳ tăng giá mới (Major Advance)"]
+    
+    style B fill:#F7F7F5,stroke:#2A2D33,color:#2A2D33
+    style D fill:#D97706,stroke:#2A2D33,color:#F7F7F5
+    style E fill:#8B7CFF,stroke:#2A2D33,color:#F7F7F5
+    style F fill:#059669,stroke:#2A2D33,color:#F7F7F5
+</div>
+<div class="callout" style="margin-top: 1rem;">
+  <div class="callout-icon">💡</div>
+  <div class="callout-content">
+    <strong>Dấu hiệu dòng tiền thông minh:</strong> Sự cạn kiệt khối lượng (Volume Dry-up) tại đáy nền giá chứng minh lực cung đã cạn. Khối lượng bùng nổ (Volume Spike) tại điểm Pivot chứng minh có dòng tiền khổng lồ của các định chế tài chính tham gia mua gom quyết liệt.
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 2 &amp;middot; TÓM TẮT CHƯƠNG</div>
+    <h2>Tóm tắt cấu trúc</h2>
+<div class="content-card">
+  <div class="summary-text" style="font-size: 0.88em; line-height: 1.55;">
+    <p><strong>Tóm tắt trong một câu:</strong> Chương 2 cung cấp một hệ thống phân tích biểu đồ kỹ thuật dựa trên quy luật cung cầu thực tế, hướng dẫn nhà đầu tư cách đọc hiểu các mô hình tích luỹ kiến tạo (như Cốc tay cầm, Hai đáy) để xác định điểm mua Pivot có xác suất chiến thắng cao nhất.</p>
+    
+    <p><strong>Bối cảnh đặt ra (The Setup):</strong> Hầu hết nhà đầu tư thất bại vì mua cổ phiếu ở vị thế quá xa nền giá tích luỹ (extended) hoặc mua các cổ phiếu có biểu đồ bị lỗi, lỏng lẻo, khiến họ dễ bị quét sạch vốn khi cổ phiếu điều chỉnh thông thường.</p>
+    
+    <p><strong>Luận điểm cốt lõi (The Argument):</strong> Biểu đồ không phải là công cụ tiên tri mà là công cụ chẩn đoán hành vi của dòng tiền tổ chức. Nhà đầu tư thông thái phải chờ đợi sự cạn kiệt nguồn cung trong nền giá và chỉ mua khi có dòng tiền lớn xác nhận bứt phá.</p>
+    
+    <p><strong>Bằng chứng hỗ trợ (The Evidence):</strong> Tác giả sử dụng các trường hợp lịch sử kinh điển như Sea Containers (1975), Microsoft (1986), Cisco (1990) và Apple (2004) để mô tả chi tiết cách các nền giá hình thành chặt chẽ, khối lượng cạn kiệt và cách chúng tăng giá phi mã sau khi bứt phá pivot thành công.</p>
+    
+    <p><strong>Hệ quả thực tế (The Implications):</strong> Nhà đầu tư cần kỷ luật kiên nhẫn đứng ngoài quan sát cho tới khi cổ phiếu đạt điểm mua chuẩn xác. Đồng thời, bất kỳ giao dịch nào đi ngược lại kỳ vọng đều phải được bảo vệ bởi bộ quy tắc cắt lỗ tự động 7% - 8% mà không có ngoại lệ.</p>
+    
+    <p><strong>Điểm tranh luận (The Controversy):</strong> Phân tích kỹ thuật truyền thống thường sử dụng các mẫu hình như tam giác, pennant hay đầu vai ngược. O'Neil kịch liệt phản đối và chứng minh qua nghiên cứu của mình rằng các mẫu hình đó cực kỳ không đáng tin cậy và có xác suất thất bại rất cao.</p>
+    
+    <p><strong>Liên kết cấu trúc (The Connection):</strong> Chương này liên kết trực tiếp lý thuyết tiền lệ của Chương 1 với hành động thực tế. Nó là chìa khóa kỹ thuật để kiểm chứng các yếu tố tài chính cơ bản của hệ thống CAN SLIM trong các chương sau.</p>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 2 &amp;middot; Ý TƯỞNG CỐT LÕI</div>
+    <h2>Ý tưởng cốt lõi</h2>
+<div class="takeaway-hero">
+  <div class="kicker">CH 2 &middot; Ý TƯỞNG CỐT LÕI</div>
+  <div class="headline">"Biểu đồ là tấm bản đồ giao dịch; bỏ qua biểu đồ giống như bác sĩ thực hiện phẫu thuật mà không thèm xem phim chụp X-quang."</div>
+  <div class="subline">Hãy rèn luyện kỹ năng đọc hiểu giá và khối lượng để đi theo dấu chân dòng tiền tổ chức, chỉ mua tại điểm Pivot chuẩn xác và cắt lỗ tuyệt đối để bảo vệ nguồn vốn của bạn.</div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 2 &amp;middot; BÀI HỌC CHỦ CHỐT</div>
+    <h2>Bài học chủ chốt</h2>
+<div class="takeaway-list" style="font-size: 0.88em;">
+  <div class="takeaway-item">
+    <div class="takeaway-badge">01</div>
+    <div class="takeaway-content">
+      <div class="takeaway-title">Mô hình hóa Điểm mua Pivot chuẩn xác</div>
+      <div class="takeaway-detail">
+        <strong>Tại sao quan trọng (Why):</strong> Pivot Point là điểm bứt phá có lực cản yếu nhất (line of least resistance), nơi hành trình tăng giá thực sự bắt đầu. Mua đúng điểm này giúp giảm thiểu thời gian chờ đợi và tránh được các nhịp rung lắc sớm.<br>
+        <strong>Cách áp dụng (Apply):</strong> Đặt lệnh mua ngay khi giá vượt qua đỉnh của tay cầm (đối với cốc tay cầm) hoặc đỉnh giữa chữ W (đối với hai đáy) đi kèm khối lượng lớn.<br>
+        <strong>Lưu ý (Caveat):</strong> Không được mua đuổi khi giá đã tăng vượt quá 5% - 10% so với điểm Pivot, vì bạn sẽ rất dễ dính cắt lỗ khi cổ phiếu điều chỉnh kỹ thuật thông thường.
+      </div>
+    </div>
+  </div>
+
+  <div class="takeaway-item">
+    <div class="takeaway-badge">02</div>
+    <div class="takeaway-content">
+      <div class="takeaway-title">Cạn kiệt nguồn cung trước khi bứt phá</div>
+      <div class="takeaway-detail">
+        <strong>Tại sao quan trọng (Why):</strong> Siêu cổ phiếu cần tích lũy để rũ bỏ các nhà đầu tư yếu ớt. Sự cạn kiệt khối lượng (Volume Dry-up) chứng minh lượng cung trôi nổi ngoài thị trường đã cạn, chỉ cần lực cầu nhỏ cũng làm giá tăng vọt.<br>
+        <strong>Cách áp dụng (Apply):</strong> Tìm kiếm các tuần giao dịch có giá đóng cửa biến động cực kỳ hẹp (tightness) đi kèm khối lượng sụt giảm sâu dưới trung bình ở đáy cốc hoặc vùng tay cầm.<br>
+        <strong>Lưu ý (Caveat):</strong> Nếu nền giá quá rộng và biến động lỏng lẻo (wide and loose), đó là dấu hiệu của sự thiếu đồng thuận từ các tổ chức lớn và có xác suất thất bại cao.
+      </div>
+    </div>
+  </div>
+
+  <div class="takeaway-item">
+    <div class="takeaway-badge">03</div>
+    <div class="takeaway-content">
+      <div class="takeaway-title">Khối lượng là thước đo kiểm chứng duy nhất</div>
+      <div class="takeaway-detail">
+        <strong>Tại sao quan trọng (Why):</strong> Chỉ có các tổ chức tài chính lớn mới đủ sức mua hàng triệu cổ phiếu để tạo nên các cột khối lượng khổng lồ. Khối lượng bùng nổ tại điểm Pivot xác nhận sự tham gia của dòng tiền lớn.<br>
+        <strong>Cách áp dụng (Apply):</strong> Yêu cầu khối lượng trong ngày bứt phá phải tăng ít nhất 40% đến 50% so với trung bình hàng ngày (đối với siêu cổ phiếu lớn có thể gấp 200% - 1,000%).<br>
+        <strong>Lưu ý (Caveat):</strong> Đột phá giá với khối lượng thấp hoặc trung bình có nguy cơ là đột phá giả (bull trap), bạn nên tránh tham gia.
+      </div>
+    </div>
+  </div>
+
+  <div class="takeaway-item">
+    <div class="takeaway-badge">04</div>
+    <div class="takeaway-content">
+      <div class="takeaway-title">Khái niệm Lượng Cung Lơ Lửng (Overhead Supply)</div>
+      <div class="takeaway-detail">
+        <strong>Tại sao quan trọng (Why):</strong> Những nhà đầu tư bị kẹt hàng ở vùng đỉnh cũ có tâm lý bán hòa vốn khi giá quay trở lại đỉnh. Vùng này tạo ra kháng cự mạnh làm hạn chế đà tăng của giá.<br>
+        <strong>Cách áp dụng (Apply):</strong> Ưu tiên mua các cổ phiếu bứt phá đỉnh lịch sử mọi thời đại (All-Time High), vì khi đó cổ phiếu không còn bất kỳ lượng cung lơ lửng nào cản trở phía trên.<br>
+        <strong>Lưu ý (Caveat):</strong> Các vùng kháng cự/kẹt hàng cũ tồn tại trên 2 năm sẽ ít gây ảnh hưởng tâm lý và lực cản hơn so với vùng kẹt hàng mới xuất hiện gần đây.
+      </div>
+    </div>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 2 &amp;middot; TRÍCH DẪN ĐẮT GIÁ</div>
+    <h2>Trích dẫn đắt giá</h2>
+<div class="bullet-grid" style="grid-template-columns: 1fr 1fr 1fr; gap: 1rem; font-size: 0.85em;">
+  <div class="bullet-card" style="padding: 1.25rem; background: var(--surface); border: 1px solid var(--border); display: flex; flex-direction: column; justify-content: space-between; border-top: 4px solid var(--accent-amber);">
+    <div>
+      <p style="font-family: 'Merriweather', serif; font-style: italic; font-size: 0.95rem; line-height: 1.5; margin-top: 0; color: var(--text-primary);">
+        "Would you allow a doctor to open you up and perform heart surgery if he had not utilized the critical necessary tools? Of course not. ... However, many investors do exactly that when they buy and sell stocks without first consulting stock charts."
+      </p>
+      <p style="font-size: 0.8em; color: var(--text-secondary); margin-bottom: 0.8rem;">
+        &mdash; Chẩn đoán bằng công cụ. <span class="page-ref">Ch 2 &middot; p. 919</span>
+      </p>
+    </div>
+    <div style="border-top: 1px solid var(--border); padding-top: 0.5rem; font-size: 0.85em;">
+      <strong>Ý nghĩa:</strong> Biểu đồ không phải trò may rủi mà là thiết bị đo lường khoa học phản ánh chính xác hành vi giá/khối lượng. Đầu tư không dùng biểu đồ là sự thiếu trách nhiệm với tiền bạc của bản thân.
+    </div>
+  </div>
+
+  <div class="bullet-card" style="padding: 1.25rem; background: var(--surface); border: 1px solid var(--border); display: flex; flex-direction: column; justify-content: space-between; border-top: 4px solid var(--accent-amber);">
+    <div>
+      <p style="font-family: 'Merriweather', serif; font-style: italic; font-size: 0.95rem; line-height: 1.5; margin-top: 0; color: var(--text-primary);">
+        "This proves that opinions and feelings are frequently wrong, but markets rarely are."
+      </p>
+      <p style="font-size: 0.8em; color: var(--text-secondary); margin-bottom: 0.8rem;">
+        &mdash; Bản chất khách quan của thị trường. <span class="page-ref">Ch 2 &middot; p. 1277</span>
+      </p>
+    </div>
+    <div style="border-top: 1px solid var(--border); padding-top: 0.5rem; font-size: 0.85em;">
+      <strong>Ý nghĩa:</strong> Ý kiến cá nhân, cảm xúc hoặc phân tích lý thuyết của bạn đều có thể sai lầm, nhưng những gì đang diễn ra trên biểu đồ giá của thị trường luôn phản ánh đúng thực tế dòng tiền. Hãy tôn trọng thị trường.
+    </div>
+  </div>
+
+  <div class="bullet-card" style="padding: 1.25rem; background: var(--surface); border: 1px solid var(--border); display: flex; flex-direction: column; justify-content: space-between; border-top: 4px solid var(--accent-amber);">
+    <div>
+      <p style="font-family: 'Merriweather', serif; font-style: italic; font-size: 0.95rem; line-height: 1.5; margin-top: 0; color: var(--text-primary);">
+        "It isn’t that bases, breakouts, or the method isn’t working anymore; it’s that the timing and the stocks are simply all wrong."
+      </p>
+      <p style="font-size: 0.8em; color: var(--text-secondary); margin-bottom: 0.8rem;">
+        &mdash; Về tính hiệu quả chu kỳ. <span class="page-ref">Ch 2 &middot; p. 1392</span>
+      </p>
+    </div>
+    <div style="border-top: 1px solid var(--border); padding-top: 0.5rem; font-size: 0.85em;">
+      <strong>Ý nghĩa:</strong> Khi thị trường chung bước vào giai đoạn gấu (Bear Market), các mô hình bứt phá sẽ thất bại hàng loạt do lực cản thị trường chứ không phải do phương pháp lỗi. Việc chọn sai bối cảnh dẫn đến thất bại.
+    </div>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 2 &amp;middot; MÔ HÌNH TƯ DUY 1</div>
+    <h2>Phim Chụp X-Quang Đo Lường Sức Khỏe Cổ Phiếu</h2>
+<div class="split-layout">
+  <div class="split-left">
+    <figure class="image-slot" style="margin: 0;">
+      <img src="images/ch2_xray_hero.png" alt="Minimalist blue x-ray scan of a human hand pointing upward" style="max-height: 55vh; object-fit: cover; width: 100%;">
+      <figcaption style="font-size: 0.8em; text-align: center; margin-top: 0.5rem; color: var(--text-secondary);">Mô hình tư duy: Sử dụng biểu đồ tuần như một tấm phim chụp X-quang chuẩn đoán dòng tiền</figcaption>
+    </figure>
+  </div>
+  
+  <div class="split-right">
+    <div class="mental-model-card" style="border: none; padding: 0; background: transparent;">
+      <h4 class="model-name" style="color: var(--accent-purple); font-size: 1.3rem; margin-top: 0; margin-bottom: 0.5rem;">Mô hình: "Phim Chụp X-Quang" Đo Lường Sức Khỏe Cổ Phiếu</h4>
+      
+      <div class="model-principle" style="font-size: 0.95em; line-height: 1.5; color: var(--text-primary); margin-bottom: 0.8rem;">
+        <strong>Nguyên lý:</strong> Trong y khoa, bác sĩ phẫu thuật tim không thể mổ nếu thiếu phim chụp X-quang hay EKG. Tương tự, nhà đầu tư chứng khoán không thể mua bán cổ phiếu nếu không đọc biểu đồ. Biểu đồ ghi lại hành vi thực tế của Cung - Cầu, phản ánh sức khỏe thực sự của doanh nghiệp mà báo cáo tài chính tĩnh không thể hiện được.
+      </div>
+
+      <div class="model-application" style="font-size: 0.9em; line-height: 1.5; color: var(--text-primary); margin-bottom: 0.8rem;">
+        <strong>🎯 Cách áp dụng:</strong>
+        <ul style="margin: 0.2rem 0 0 0; padding-left: 1.2rem;">
+          <li>Sử dụng biểu đồ tuần để chẩn đoán xem giá đóng cửa có chặt chẽ (tightness) hay không.</li>
+          <li>Theo dõi khối lượng giao dịch để kiểm tra hành vi tích lũy (volume dry-up tại đáy và volume spike tại breakout).</li>
+        </ul>
+      </div>
+
+      <div class="model-limitations" style="font-size: 0.9em; line-height: 1.5; color: var(--text-primary);">
+        <strong>⚠️ Hạn chế:</strong>
+        <ul style="margin: 0.2rem 0 0 0; padding-left: 1.2rem;">
+          <li>Phim chụp bị nhiễu do bối cảnh thị trường chung xấu (Bear Market làm méo mó các mô hình bứt phá).</li>
+          <li>Đọc sai "triệu chứng" do sự nôn nóng hoặc cố ép biểu đồ theo thiên kiến cá nhân.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 2 &amp;middot; MÔ HÌNH TƯ DUY 2</div>
+    <h2>Điểm Xoay Jesse Livermore (Pivot Point)</h2>
+<div class="mental-model-card" style="border-left: 6px solid var(--accent-purple); padding: 1.5rem; background: var(--surface); border-radius: var(--radius);">
+  <h4 class="model-name" style="color: var(--accent-purple); font-size: 1.4rem; margin-top: 0; margin-bottom: 0.5rem;">Mô hình: Điểm Xoay Jesse Livermore (Pivot Point / Line of Least Resistance)</h4>
+  
+  <div class="model-principle" style="font-size: 1.05em; line-height: 1.5; margin-bottom: 1rem; color: var(--text-primary); font-weight: 500;">
+    <strong>Nguyên lý cốt lõi:</strong> Giá cổ phiếu chuyển động qua các điểm xoay (Pivot Point) - nơi lực kháng cự của thị trường yếu nhất. Chờ đợi cổ phiếu tự chứng minh sức mạnh bằng cách bứt phá qua điểm Pivot này mới là thời điểm an toàn và tối ưu nhất để giải ngân dòng vốn.
+  </div>
+
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 1rem;">
+    <div class="model-application">
+      <strong style="color: var(--accent-emerald);">🎯 Kỹ thuật áp dụng:</strong>
+      <ul style="margin: 0.5rem 0 0 0; padding-left: 1.2rem; font-size: 0.9em; line-height: 1.5; color: var(--text-primary);">
+        <li><strong>Xác định điểm Pivot:</strong> Đối với mô hình cốc tay cầm, điểm Pivot nằm ở đỉnh cao nhất của tay cầm (thường thấp hơn đỉnh cốc 5-10%).</li>
+        <li><strong>Nguyên tắc Chờ đợi (Wait Rule):</strong> Chỉ mua khi giá thực sự chạm hoặc vượt qua điểm Pivot. Mua quá sớm sẽ chịu rủi ro nền giá bị gãy.</li>
+        <li><strong>Không mua đuổi:</strong> Không mua khi giá đã vượt quá 5% so với điểm Pivot ban đầu.</li>
+      </ul>
+    </div>
+    
+    <div class="model-limitations">
+      <strong style="color: var(--accent-red);">⚠️ Những lỗi thường gặp:</strong>
+      <ul style="margin: 0.5rem 0 0 0; padding-left: 1.2rem; font-size: 0.9em; line-height: 1.5; color: var(--text-primary);">
+        <li><strong>Mua đuổi giá (Chasing):</strong> Tâm lý sợ bỏ lỡ cơ hội (FOMO) thúc đẩy nhà đầu tư mua khi giá đã tăng xa pivot. Khi giá điều chỉnh tự nhiên, họ bị chạm dừng lỗ 8% và buộc phải bán ra.</li>
+        <li><strong>Mua quá sớm (Premature Buying):</strong> Cố gắng mua ở đáy cốc để được giá rẻ. Cổ phiếu có thể đi ngang hàng tháng trời hoặc giảm sâu hơn.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 2 &amp;middot; MÔ HÌNH TƯ DUY 3</div>
+    <h2>Lượng Cung Lơ Lửng Trên Đầu (Overhead Supply)</h2>
+<div class="mental-model-card" style="border-left: 6px solid var(--accent-purple); padding: 1.5rem; background: var(--surface); border-radius: var(--radius);">
+  <h4 class="model-name" style="color: var(--accent-purple); font-size: 1.4rem; margin-top: 0; margin-bottom: 0.5rem;">Mô hình: Lượng Cung Lơ Lửng Trên Đầu (Overhead Supply)</h4>
+  
+  <div class="model-principle" style="font-size: 1.05em; line-height: 1.5; margin-bottom: 1rem; color: var(--text-primary); font-weight: 500;">
+    <strong>Nguyên lý cốt lõi:</strong> Bản tính con người không thay đổi. Khi nhà đầu tư mua cổ phiếu và bị thua lỗ, họ hứa với bản thân: <em>"Chỉ cần giá hồi về giá vốn, tôi sẽ bán ra hòa vốn."</em> Điều này tạo nên những vùng kháng cự giá cực kỳ mạnh (Overhead Supply) cản trở đà tăng của cổ phiếu khi nó hồi phục.
+  </div>
+
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 1rem;">
+    <div class="model-application">
+      <strong style="color: var(--accent-emerald);">🎯 Nguyên tắc Thiết lập Giao dịch:</strong>
+      <ul style="margin: 0.5rem 0 0 0; padding-left: 1.2rem; font-size: 0.9em; line-height: 1.5; color: var(--text-primary);">
+        <li><strong>Không mua cổ phiếu từ đáy đi lên:</strong> Tránh xa các cổ phiếu đang hồi phục từ xu hướng giảm mạnh vì chúng sẽ liên tục gặp các vùng kháng cự xả hàng hòa vốn.</li>
+        <li><strong>Mua cổ phiếu vượt đỉnh thời đại (All-Time High):</strong> Những cổ phiếu này hoàn toàn giải phóng lực cung lơ lửng, không có ai bị kẹt hàng phía trên. Đường tăng giá phía trước là đường có ít kháng cự nhất.</li>
+      </ul>
+    </div>
+    
+    <div class="model-limitations">
+      <strong style="color: var(--accent-amber);">⏳ Yếu tố Thời gian (Time Decay):</strong>
+      <ul style="margin: 0.5rem 0 0 0; padding-left: 1.2rem; font-size: 0.9em; line-height: 1.5; color: var(--text-primary);">
+        <li>Các vùng kẹt hàng cũ <strong>trên 2 năm</strong> sẽ tạo ra ít lực cản hơn. Nhiều nhà đầu tư cũ đã cắt lỗ, cơ cấu hoặc quên đi khoản đầu tư đó.</li>
+        <li>Các vùng kẹt hàng mới tạo ra trong vòng <strong>6 tháng gần nhất</strong> sẽ có áp lực cung lơ lửng vô cùng mãnh liệt.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 2 &amp;middot; MẪU HÌNH CỐT LÕI 1</div>
+    <h2>Mô hình Cốc Tay Cầm (Cup with Handle)</h2>
+<div class="split-layout" style="gap: 1.5rem; font-size: 0.88em;">
+  <div class="split-left" style="background: var(--surface); border: 1px solid var(--border); padding: 1.25rem; border-radius: var(--radius); border-top: 4px solid var(--accent-purple);">
+    <h4 style="margin: 0 0 0.8rem 0; color: var(--accent-purple); font-size: 1.2rem;">🥛 Cấu Trúc Phần Cốc (The Cup)</h4>
+    <ul style="margin: 0; padding-left: 1.2rem; display: flex; flex-direction: column; gap: 0.6rem; line-height: 1.5; color: var(--text-primary);">
+      <li><strong>Xu hướng tăng trước đó (Prior Uptrend):</strong> Phải có xu hướng tăng tối thiểu <strong>30%</strong> trước đó đi kèm khối lượng giao dịch gia tăng rõ rệt để chứng tỏ có dòng tiền lớn đã bảo trợ.</li>
+      <li><strong>Thời gian hình thành (Duration):</strong> Kéo dài từ <strong>7 tuần đến 65 tuần</strong>, thông thường nhất là từ 3 đến 6 tháng.</li>
+      <li><strong>Độ sâu điều chỉnh (Depth):</strong> Thông thường từ <strong>12% đến 33%</strong>. Trong thị trường gấu hoặc với cổ phiếu cực kỳ biến động, độ sâu có thể lên tới 40% - 50%.</li>
+      <li><strong>Hình dáng đáy cốc:</strong> Phải có hình dạng chữ <strong>"U"</strong> bo tròn thay vì chữ "V". Đáy chữ "U" giúp kéo dài thời gian để chán nản hóa và rũ bỏ hoàn toàn những nhà đầu tư yếu ớt.</li>
+    </ul>
+  </div>
+
+  <div class="split-right" style="background: var(--surface); border: 1px solid var(--border); padding: 1.25rem; border-radius: var(--radius); border-top: 4px solid var(--accent-purple);">
+    <h4 style="margin: 0 0 0.8rem 0; color: var(--accent-purple); font-size: 1.2rem;">☕ Cấu Trúc Phần Tay Cầm (The Handle)</h4>
+    <ul style="margin: 0; padding-left: 1.2rem; display: flex; flex-direction: column; gap: 0.6rem; line-height: 1.5; color: var(--text-primary);">
+      <li><strong>Thời gian hình thành:</strong> Phải kéo dài từ <strong>1 đến 2 tuần trở lên</strong>.</li>
+      <li><strong>Độ sâu điều chỉnh:</strong> Chỉ được phép điều chỉnh từ <strong>8% đến 12%</strong> so với đỉnh của tay cầm trong thị trường tăng giá (bull market).</li>
+      <li><strong>Vị trí xuất hiện:</strong> Phải nằm ở <strong>nửa trên</strong> của tổng thể nền giá cốc và phải nằm <strong>phía trên</strong> đường trung bình động 10 tuần (50 ngày).</li>
+      <li><strong>Hành vi Giá & Khối lượng:</strong> Giá của tay cầm phải hướng xuống (shakeout) vào những ngày cuối cùng trước khi bứt phá. Khối lượng giao dịch phải cạn kiệt rõ rệt (Volume Dry-up).</li>
+      <li><strong>Điểm mua Pivot:</strong> Được xác định bởi mức giá cao nhất của vùng tay cầm này.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="callout" style="margin-top: 1rem; border-left: 4px solid var(--accent-red);">
+  <div class="callout-icon">⚠️</div>
+  <div class="callout-content">
+    <strong>Dấu hiệu lỗi:</strong> Tránh xa các tay cầm hướng lên (wedging handle - không rũ bỏ), tay cầm nằm ở nửa dưới của cốc (sức mua quá yếu), hoặc tay cầm biến động quá rộng (>15% trong thị trường tăng).
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 2 &amp;middot; MẪU HÌNH CỐT LÕI 2</div>
+    <h2>Mô hình Hai Đáy &amp; Nền Giá Phẳng</h2>
+<div class="split-layout" style="gap: 1.5rem; font-size: 0.88em;">
+  <div class="split-left" style="background: var(--surface); border: 1px solid var(--border); padding: 1.25rem; border-radius: var(--radius); border-top: 4px solid var(--accent-purple);">
+    <h4 style="margin: 0 0 0.8rem 0; color: var(--accent-purple); font-size: 1.2rem;">W Mô Hình Hai Đáy (Double Bottom)</h4>
+    <ul style="margin: 0; padding-left: 1.2rem; display: flex; flex-direction: column; gap: 0.6rem; line-height: 1.5; color: var(--text-primary);">
+      <li><strong>Hình dáng:</strong> Có hình dạng giống như chữ <strong>"W"</strong>. Thời gian và độ sâu tương tự mô hình cốc tay cầm.</li>
+      <li><strong>Yêu cầu cốt lõi (Undercut):</strong> Đáy thứ hai (chân phải chữ W) bắt buộc phải giảm sâu hơn (xuyên thủng) đáy thứ nhất (chân trái chữ W) từ 1 đến 2 điểm để tạo ra một đợt rũ bỏ (shakeout) cuối cùng trước khi tăng giá.</li>
+      <li><strong>Điểm mua Pivot:</strong> Được xác định bởi đỉnh giữa của chữ W. Nếu mô hình có tay cầm ở bên phải chữ W, thì điểm Pivot sẽ lấy theo đỉnh của tay cầm đó.</li>
+      <li><strong>Lưu ý lỗi:</strong> Nếu đáy thứ hai không xuyên thủng đáy thứ nhất, mô hình sẽ rất dễ thất bại (faulty "almost" double bottom).</li>
+    </ul>
+  </div>
+
+  <div class="split-right" style="background: var(--surface); border: 1px solid var(--border); padding: 1.25rem; border-radius: var(--radius); border-top: 4px solid var(--accent-purple);">
+    <h4 style="margin: 0 0 0.8rem 0; color: var(--accent-purple); font-size: 1.2rem;">➖ Nền Giá Phẳng (Flat Base)</h4>
+    <ul style="margin: 0; padding-left: 1.2rem; display: flex; flex-direction: column; gap: 0.6rem; line-height: 1.5; color: var(--text-primary);">
+      <li><strong>Bối cảnh xuất hiện:</strong> Là nền giá giai đoạn 2 (second-stage base), hình thành sau khi cổ phiếu đã tăng ít nhất <strong>20% trở lên</strong> từ một nền giá Cup hoặc Double Bottom trước đó.</li>
+      <li><strong>Thời gian hình thành:</strong> Đi ngang chặt chẽ theo chiều ngang trong tối thiểu từ <strong>5 đến 6 tuần</strong>.</li>
+      <li><strong>Độ sâu điều chỉnh:</strong> Rất nông, không được điều chỉnh sâu quá <strong>10% đến 15%</strong> từ đỉnh nền giá phẳng.</li>
+      <li><strong>Điểm mua Pivot:</strong> Mức giá cao nhất của vùng nền phẳng đó.</li>
+      <li><strong>Công dụng:</strong> Cung cấp cơ hội mua gia tăng hoặc cơ hội thứ hai cho những nhà đầu tư đã bỏ lỡ điểm bứt phá đầu tiên của cổ phiếu.</li>
+    </ul>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 2 &amp;middot; MẪU HÌNH PHỤ</div>
+    <h2>Hộp Vuông, Lá Cờ Thắt Chặt, Nền Trên Nền &amp; Hướng Lên</h2>
+<div class="bullet-grid" style="grid-template-columns: 1fr 1fr; gap: 1.25rem; font-size: 0.88em;">
+  <div class="bullet-card" style="padding: 1.2rem; background: var(--surface); border: 1px solid var(--border); border-left: 4px solid var(--accent-purple);">
+    <h4 style="margin: 0 0 0.4rem 0; color: var(--accent-purple); font-size: 1.15rem;">📦 Hộp Vuông (Square Box)</h4>
+    <p style="margin: 0; line-height: 1.5; color: var(--text-primary);">
+      Thường kéo dài từ <strong>4 đến 7 tuần</strong> sau khi bứt phá nền giá trước đó. Biên độ điều chỉnh nông (chỉ từ <strong>10% đến 15%</strong>) và có hình dáng vuông vức, chặt chẽ. Điểm mua Pivot được xác định bằng đỉnh của hộp.
+    </p>
+  </div>
+
+  <div class="bullet-card" style="padding: 1.2rem; background: var(--surface); border: 1px solid var(--border); border-left: 4px solid var(--accent-purple);">
+    <h4 style="margin: 0 0 0.4rem 0; color: var(--accent-purple); font-size: 1.15rem;">🚩 Lá Cờ Cao Thắt Chặt (High, Tight Flag)</h4>
+    <p style="margin: 0; line-height: 1.5; color: var(--text-primary);">
+      Mẫu hình siêu mạnh nhưng hiếm gặp và rủi ro cao. Cổ phiếu tăng vọt <strong>100% đến 120%</strong> trong 4-8 tuần, sau đó điều chỉnh đi ngang <strong>10% đến 25%</strong> trong 3-5 tuần trước khi bứt phá tiếp.
+    </p>
+  </div>
+
+  <div class="bullet-card" style="padding: 1.2rem; background: var(--surface); border: 1px solid var(--border); border-left: 4px solid var(--accent-purple);">
+    <h4 style="margin: 0 0 0.4rem 0; color: var(--accent-purple); font-size: 1.15rem;">🔝 Nền Trên Nền (Base on Top of a Base)</h4>
+    <p style="margin: 0; line-height: 1.5; color: var(--text-primary);">
+      Cổ phiếu bứt phá nhưng gặp thị trường chung sụp đổ nên quay đầu tạo nền giá thứ hai ngay trên nền giá cũ. Khi thị trường gấu kết thúc, cổ phiếu này sẽ là mã đầu tiên bứt phá và tăng phi mã giống như lò xo bị nén.
+    </p>
+  </div>
+
+  <div class="bullet-card" style="padding: 1.2rem; background: var(--surface); border: 1px solid var(--border); border-left: 4px solid var(--accent-purple);">
+    <h4 style="margin: 0 0 0.4rem 0; color: var(--accent-purple); font-size: 1.15rem;">📈 Nền Giá Hướng Lên (Ascending Base)</h4>
+    <p style="margin: 0; line-height: 1.5; color: var(--text-primary);">
+      Hình thành ở giữa sóng tăng mạnh của cổ phiếu. Bao gồm <strong>3 đợt điều chỉnh kéo dài từ 10% đến 20%</strong> với đáy sau cao hơn đáy trước (mỗi đợt sụt giảm thường do thị trường chung điều chỉnh ngắn hạn).
+    </p>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 2 &amp;middot; NHẬN DIỆN CẤU TRÚC LỖI</div>
+    <h2>Các Nền Giá và Tay Cầm Bị Lỗi Cần Tránh</h2>
+<div class="bullet-grid" style="grid-template-columns: 1fr 1fr; gap: 1.25rem; font-size: 0.88em;">
+  <div class="bullet-card" style="padding: 1.2rem; background: var(--surface); border: 1px solid var(--border); border-left: 4px solid var(--accent-red);">
+    <h4 style="margin: 0 0 0.4rem 0; color: var(--accent-red); font-size: 1.15rem;">⚠️ Tay Cầm Nêm Hướng Lên (Wedging Handle)</h4>
+    <p style="margin: 0; line-height: 1.5; color: var(--text-primary);">
+      <strong>Tại sao lỗi:</strong> Tay cầm bò dần lên trên hoặc đi ngang mà không có nhịp điều chỉnh hướng xuống. Cấu trúc này không tạo ra đợt rũ bỏ (shakeout) cuối cùng để loại bỏ nhà đầu tư yếu. Xác suất thất bại khi đột phá cực kỳ cao. <span class="page-ref">Ch 2 &middot; p. 1003</span>
+    </p>
+  </div>
+
+  <div class="bullet-card" style="padding: 1.2rem; background: var(--surface); border: 1px solid var(--border); border-left: 4px solid var(--accent-red);">
+    <h4 style="margin: 0 0 0.4rem 0; color: var(--accent-red); font-size: 1.15rem;">⚠️ Tay Cầm Nửa Dưới & Dưới MA 10 Tuần</h4>
+    <p style="margin: 0; line-height: 1.5; color: var(--text-primary);">
+      <strong>Tại sao lỗi:</strong> Tay cầm hình thành ở nửa dưới của cốc hoặc nằm dưới đường trung bình động 10 tuần. Điều này chứng tỏ sức mua quá yếu ớt, lực cầu không đủ để phục hồi cổ phiếu lên mức cao. <span class="page-ref">Ch 2 &middot; p. 1000</span>
+    </p>
+  </div>
+
+  <div class="bullet-card" style="padding: 1.2rem; background: var(--surface); border: 1px solid var(--border); border-left: 4px solid var(--accent-red);">
+    <h4 style="margin: 0 0 0.4rem 0; color: var(--accent-red); font-size: 1.15rem;">⚠️ Nền Giá Quá Rộng & Lỏng Lẻo (Wide & Loose)</h4>
+    <p style="margin: 0; line-height: 1.5; color: var(--text-primary);">
+      <strong>Tại sao lỗi:</strong> Biên độ giá dao động cực mạnh từ tuần này qua tuần khác, không có sự thắt chặt chặt chẽ. Cổ phiếu liên tục thu hút sự chú ý của công chúng nhưng thiếu đi sự gom hàng có kiểm soát của các tổ chức lớn. <span class="page-ref">Ch 2 &middot; p. 1240</span>
+    </p>
+  </div>
+
+  <div class="bullet-card" style="padding: 1.2rem; background: var(--surface); border: 1px solid var(--border); border-left: 4px solid var(--accent-red);">
+    <h4 style="margin: 0 0 0.4rem 0; color: var(--accent-red); font-size: 1.15rem;">⚠️ Mẫu Hình Chữ V (V-Shape Base)</h4>
+    <p style="margin: 0; line-height: 1.5; color: var(--text-primary);">
+      <strong>Tại sao lỗi:</strong> Giá sụt giảm mạnh và phục hồi thẳng đứng hình chữ V lên đỉnh mới mà không trải qua quá trình tích luỹ hay có tay cầm kéo dài. Cổ phiếu đi lên thẳng tuột không có nền hỗ trợ, rủi ro sụt giảm trở lại rất cao. <span class="page-ref">Ch 2 &middot; p. 1388</span>
+    </p>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 2 &amp;middot; SỨC MẠNH TƯƠNG ĐỐI</div>
+    <h2>Sử Dụng Đường Relative Strength (RS) Đúng Cách</h2>
+<div class="split-layout" style="gap: 1.5rem; font-size: 0.88em;">
+  <div class="split-left" style="background: var(--surface); border: 1px solid var(--border); padding: 1.25rem; border-radius: var(--radius); border-top: 4px solid var(--accent-emerald);">
+    <h4 style="margin: 0 0 0.8rem 0; color: var(--accent-emerald); font-size: 1.2rem;">📈 RS Tại Điểm Đột Phá (Breakout Stage)</h4>
+    <ul style="margin: 0; padding-left: 1.2rem; display: flex; flex-direction: column; gap: 0.6rem; line-height: 1.5; color: var(--text-primary);">
+      <li><strong>Nguyên lý:</strong> Chỉ mua cổ phiếu có đường Relative Strength (RS) dốc lên mạnh mẽ, thể hiện hiệu suất vượt trội hơn hẳn so với thị trường chung (S&P 500).</li>
+      <li><strong>Dấu hiệu Siêu cổ phiếu:</strong> Trong lúc thị trường chung đang điều chỉnh tạo đáy, đường RS của cổ phiếu đã bứt phá vượt đỉnh trước giá (RS new high before price). Điều này chứng minh sức mạnh nội tại cực lớn.</li>
+      <li><strong>Hành động:</strong> Mua ngay khi giá bứt phá điểm Pivot <strong>và</strong> đường RS đang dốc lên hướng tới các mức cao mới. <span class="page-ref">Ch 2 &middot; p. 1330</span></li>
+    </ul>
+  </div>
+
+  <div class="split-right" style="background: var(--surface); border: 1px solid var(--border); padding: 1.25rem; border-radius: var(--radius); border-top: 4px solid var(--accent-red);">
+    <h4 style="margin: 0 0 0.8rem 0; color: var(--accent-red); font-size: 1.2rem;">📉 RS Tại Vùng Quá Mua (Extended Stage)</h4>
+    <ul style="margin: 0; padding-left: 1.2rem; display: flex; flex-direction: column; gap: 0.6rem; line-height: 1.5; color: var(--text-primary);">
+      <li><strong>Nguyên lý:</strong> Tránh xa việc mua đuổi các cổ phiếu có RS cao ngất ngưởng nhưng giá đã tăng quá xa nền giá tích lũy (extended). Lúc này, RS cao chỉ phản ánh động lượng ngắn hạn sắp cạn kiệt.</li>
+      <li><strong>Dấu hiệu đạt đỉnh:</strong> Khi cổ phiếu đã chạy nước rút và tăng giá kéo dài, đường RS đạt mức cực đại (climax). Đây là thời điểm các quỹ lớn bắt đầu chốt lời.</li>
+      <li><strong>Hành động:</strong> Cân nhắc bán ra để bảo vệ lợi nhuận khi cổ phiếu đã tăng >20-25% từ điểm Pivot và đường RS có dấu hiệu đi ngang hoặc suy yếu. <span class="page-ref">Ch 2 &middot; p. 1335</span></li>
+    </ul>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 2 &amp;middot; CẢNH BÁO THỊ TRƯỜNG GẤU</div>
+    <h2>Đặc điểm các Nền giá Phony trong Downtrend</h2>
+<div class="callout" style="background: rgba(239, 68, 68, 0.05); border-left: 6px solid var(--accent-red); padding: 1.5rem; border-radius: var(--radius); margin-bottom: 1.5rem;">
+  <div class="callout-icon" style="font-size: 2rem;">🚨</div>
+  <div class="callout-content">
+    <h3 style="margin: 0 0 0.5rem 0; color: var(--accent-red); font-size: 1.35rem;">CẢNH BÁO TỬ THẦN: TUYỆT ĐỐI KHÔNG MUA BREAKOUT TRONG THỊ TRƯỜNG GẤU!</h3>
+    <p style="margin: 0; font-size: 0.95em; line-height: 1.6; color: var(--text-primary); font-weight: 500;">
+      Nếu bạn đang đọc cuốn sách này vào thời kỳ bắt đầu hoặc giữa của một thị trường gấu (Bear Market), đừng bao giờ kỳ vọng các mẫu hình bứt phá bám theo quy tắc mua sẽ hoạt động. <strong>Hầu hết các điểm breakout sẽ hoàn toàn thất bại.</strong> <span class="page-ref">Ch 2 &middot; p. 1384</span>
+    </p>
+  </div>
+</div>
+
+<div class="split-layout" style="gap: 1.5rem; font-size: 0.88em;">
+  <div class="split-left" style="background: var(--surface); border: 1px solid var(--border); padding: 1.25rem; border-radius: var(--radius); border-top: 4px solid var(--accent-red);">
+    <h4 style="margin: 0 0 0.8rem 0; color: var(--accent-red); font-size: 1.15rem;">✖️ Đặc điểm Mô hình Lỗi trong Downtrend</h4>
+    <ul style="margin: 0; padding-left: 1.2rem; display: flex; flex-direction: column; gap: 0.5rem; line-height: 1.5; color: var(--text-primary);">
+      <li>Nền giá biến động quá sâu, rộng và lỏng lẻo.</li>
+      <li>Tay cầm hướng lên (wedging) hoặc tay cầm sụt giảm quá sâu (>20-30%).</li>
+      <li>Tay cầm nằm ở nửa dưới của cốc hoặc dưới MA 10 tuần.</li>
+      <li>Đường RS của cổ phiếu liên tục suy yếu hướng xuống dưới đáy mới.</li>
+    </ul>
+  </div>
+
+  <div class="split-right" style="background: var(--surface); border: 1px solid var(--border); padding: 1.25rem; border-radius: var(--radius); border-top: 4px solid var(--accent-emerald);">
+    <h4 style="margin: 0 0 0.8rem 0; color: var(--accent-emerald); font-size: 1.15rem;">✔️ Hành động của Nhà đầu tư Thông minh</h4>
+    <ul style="margin: 0; padding-left: 1.2rem; display: flex; flex-direction: column; gap: 0.5rem; line-height: 1.5; color: var(--text-primary);">
+      <li><strong>Bán ra và giữ tiền mặt:</strong> Đứng ngoài thị trường, hạ tỷ trọng đòn bẩy về 0.</li>
+      <li><strong>Phân tích lại sai lầm (Post-Analysis):</strong> Vẽ lại biểu đồ các giao dịch thua lỗ trong năm để tìm lỗi sai.</li>
+      <li><strong>Chuẩn bị danh sách chu kỳ mới:</strong> Nghiên cứu các cổ phiếu giữ giá tốt nhất trong downtrend, vì chúng sẽ là các siêu cổ phiếu dẫn đầu khi thị trường phục hồi.</li>
+    </ul>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 2 &amp;middot; ĐÁNH GIÁ CHỨNG CỨ</div>
+    <h2>Tính Xác Thực &amp; Cập Nhật Thị Trường Hiện Đại (2026)</h2>
+<div class="evidence-card" style="border: 1px solid var(--border); padding: 1.5rem; background: var(--surface); border-radius: var(--radius); border-left: 6px solid var(--accent-cyan);">
+  <div class="evidence-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; border-bottom: 1px solid var(--border); padding-bottom: 0.5rem;">
+    <span class="claim-text" style="font-weight: 700; font-size: 1.15rem; color: var(--text-primary);">Giả định: "Điểm đột phá (Pivot Breakout) từ mô hình cốc tay cầm, hai đáy hoặc nền giá phẳng là điểm mua có xác suất chiến thắng cao nhất."</span>
+    <span class="quality-score" style="font-weight: 700; color: var(--accent-cyan); font-size: 1.2rem; background: rgba(5, 150, 105, 0.1); padding: 0.2rem 0.6rem; border-radius: 4px;">⭐⭐⭐⭐☆ 4/5</span>
+  </div>
+  
+  <div class="evidence-type" style="font-weight: 600; margin-bottom: 1rem; color: var(--text-secondary); font-size: 0.9em;">
+    📊 Loại chứng cứ: Nghiên cứu Thực nghiệm của hãng William O'Neil & Co. trên cơ sở dữ liệu hàng nghìn siêu cổ phiếu.
+  </div>
+
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; font-size: 0.9em; line-height: 1.6; color: var(--text-primary);">
+    <div>
+      <strong style="color: var(--accent-emerald);">✔️ Điểm mạnh (Strengths):</strong>
+      <ul style="margin: 0.3rem 0 0 0; padding-left: 1.2rem;">
+        <li>Cấu trúc hình thái học của nền giá (như cốc tay cầm) phản ánh trực tiếp quá trình phân phối của nhỏ lẻ và tích luỹ của tổ chức lớn.</li>
+        <li>Hạn chế tối đa thời gian chờ đợi chôn vốn: bứt phá Pivot thường dẫn đến sóng tăng ngay lập tức nếu thị trường ủng hộ.</li>
+      </ul>
+    </div>
+    
+    <div>
+      <strong style="color: var(--accent-red);">❌ Hạn chế (Weaknesses):</strong>
+      <ul style="margin: 0.3rem 0 0 0; padding-left: 1.2rem;">
+        <li><strong>Thiên lệch kẻ sống sót (Survivorship Bias):</strong> Chỉ nghiên cứu các cổ phiếu đã tăng giá thành công lớn. Rất nhiều cổ phiếu cũng có tay cầm nhưng thất bại ngay sau breakout (false breakouts).</li>
+        <li>Không thống kê tỷ lệ breakout thành công/thất bại tổng thể trên toàn bộ thị trường.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="callout" style="margin-top: 1.2rem; background: rgba(99, 91, 255, 0.05); border-left: 4px solid var(--accent-purple);">
+    <div class="callout-icon">💡</div>
+    <div class="callout-content">
+      <strong>Bối cảnh hiện đại (2026):</strong> Do sự bùng nổ của giao dịch thuật toán (Algo/HFT) và các mô hình AI quét cơ sở dữ liệu kỹ thuật, các điểm bứt phá Pivot rất dễ bị các robot săn thanh khoản (stop-loss hunting) tạo ra các nhịp phá vỡ giả (shakeout) rũ bỏ trước khi tăng thật. Điều này đòi hỏi nhà đầu tư hiện đại phải nâng cao bộ lọc cơ bản (chỉ chọn doanh nghiệp tăng trưởng xuất sắc nhất) và linh hoạt hơn trong việc quản lý điểm dừng lỗ, hoặc sử dụng thêm các kỹ thuật mua sớm trong nền giá (Pocket Pivot) để có giá vốn tốt hơn.
+    </div>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 2 &amp;middot; GÓC NHÌN ĐỐI LẬP</div>
+    <h2>Góc Nhìn Đối Lập: Technicals vs EMH vs Quants</h2>
+<div class="split-layout" style="gap: 1.5rem; font-size: 0.88em;">
+  <div class="split-left" style="background: rgba(5, 150, 105, 0.03); border: 1px solid var(--border); padding: 1.25rem; border-radius: var(--radius); border-top: 4px solid var(--accent-emerald);">
+    <h4 style="margin: 0 0 0.5rem 0; color: var(--accent-emerald); font-size: 1.15rem;">📈 O'Neil & Thực Chiến: Quy Luật Cung Cầu Vật Lý</h4>
+    <p style="margin: 0; line-height: 1.6; color: var(--text-primary);">
+      Biểu đồ là sự ghi chép khách quan về giá và khối lượng giao dịch. Sự tích lũy của dòng tiền tổ chức lớn là hành vi vật lý mua gom hàng triệu cổ phiếu, bắt buộc phải để lại dấu vết khối lượng lớn trên biểu đồ mà không thể che giấu được. Phủ nhận điều này là ngu ngốc.
+    </p>
+  </div>
+
+  <div class="split-right" style="background: rgba(239, 68, 68, 0.03); border: 1px solid var(--border); padding: 1.25rem; border-radius: var(--radius); border-top: 4px solid var(--accent-red);">
+    <h4 style="margin: 0 0 0.5rem 0; color: var(--accent-red); font-size: 1.15rem;">🏛️ Học Thuật & EMH: Bước Đi Ngẫu Nhiên (Random Walk)</h4>
+    <p style="margin: 0; line-height: 1.6; color: var(--text-primary);">
+      Giá cổ phiếu biến động hoàn toàn ngẫu nhiên và phản ánh ngay lập tức mọi thông tin. Việc tìm kiếm các mẫu hình hình học như cốc tay cầm, đĩa có tay cầm chỉ là hành vi gán ghép chủ quan, tự đánh lừa thị giác của con người (Apophenia). Phân tích kỹ thuật không đem lại lợi nhuận vượt trội dài hạn.
+    </p>
+  </div>
+</div>
+
+<div class="callout" style="margin-top: 1.2rem; background: rgba(99, 91, 255, 0.05); border-left: 4px solid var(--accent-purple); font-size: 0.88em;">
+  <div class="callout-icon">🤖</div>
+  <div class="callout-content">
+    <strong>Góc nhìn của Quants & Thuật toán hiện đại:</strong> Các mẫu hình hình học (như chiếc cốc) thực chất là sự biểu hiện hình ảnh của các chu kỳ thanh khoản ngắn hạn và hành vi tái cấu trúc danh mục. Các Quants không tìm kiếm hình dáng cốc tay cầm bằng mắt thường, mà họ lập trình các thuật toán đo lường độ lệch chuẩn, độ biến động thu hẹp (VCP) và dòng tiền vào ròng (Net Inflow) để tự động hóa giao dịch trước khi con người nhận diện bằng mắt.
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 2 &amp;middot; RỦI RO &amp; PHẢN BIỆN</div>
+    <h2>Những Cạm Bẫy Khi Đầu Tư Theo Nền Giá</h2>
+<div class="bullet-grid" style="grid-template-columns: 1fr 1fr; gap: 1.25rem; font-size: 0.88em;">
+  <div class="bullet-card" style="padding: 1.2rem; background: var(--surface); border: 1px solid var(--border); border-top: 4px solid var(--accent-red);">
+    <h4 style="margin: 0 0 0.4rem 0; color: var(--accent-red); font-size: 1.15rem;">🧠 Bẫy Ảo Giác Thị Giác (Apophenia)</h4>
+    <p style="margin: 0; line-height: 1.5; color: var(--text-primary);">
+      Nhà đầu tư mới thường bắt đầu nhìn thấy "cốc tay cầm" ở khắp mọi nơi, ngay cả trong các biểu đồ lộn xộn, không có xu hướng tăng trước đó, hoặc ở các cổ phiếu thanh khoản thấp. Lỗi này dẫn đến việc mua phải các cổ phiếu rác, không có dòng tiền tổ chức bảo trợ.
+    </p>
+  </div>
+
+  <div class="bullet-card" style="padding: 1.2rem; background: var(--surface); border: 1px solid var(--border); border-top: 4px solid var(--accent-red);">
+    <h4 style="margin: 0 0 0.4rem 0; color: var(--accent-red); font-size: 1.15rem;">🤖 Bẫy Săn Cắt Lỗ Của Thuật Toán</h4>
+    <p style="margin: 0; line-height: 1.5; color: var(--text-primary);">
+      Các quỹ lớn biết rằng nhiều nhà đầu tư cá nhân mua đúng tại điểm breakout Pivot và đặt cắt lỗ ở mức 7% - 8% ngay bên dưới nền giá. Họ có thể tận dụng lợi thế quy mô để bán mạnh ép giá sụt giảm sâu để quét sạch điểm dừng lỗ (shakeout), trước khi đẩy giá tăng thực sự.
+    </p>
+  </div>
+
+  <div class="bullet-card" style="padding: 1.2rem; background: var(--surface); border: 1px solid var(--border); border-top: 4px solid var(--accent-amber);">
+    <h4 style="margin: 0 0 0.4rem 0; color: var(--accent-amber); font-size: 1.15rem;">😰 Áp Lực Tâm Lý Khi Mua Giá Cao</h4>
+    <p style="margin: 0; line-height: 1.5; color: var(--text-primary);">
+      William O'Neil thừa nhận 95% công chúng sợ hãi không dám mua tại điểm bứt phá vì đó là vùng giá cao nhất mọi thời đại. Việc mua cổ phiếu khi giá có vẻ đắt đỏ đi ngược lại trực giác thông thường của con người, gây ra căng thẳng và lo âu cho nhà giao dịch.
+    </p>
+  </div>
+
+  <div class="bullet-card" style="padding: 1.2rem; background: var(--surface); border: 1px solid var(--border); border-top: 4px solid var(--accent-emerald);">
+    <h4 style="margin: 0 0 0.4rem 0; color: var(--accent-emerald); font-size: 1.15rem;">🛡️ Kỷ Luật Thép Để Phòng Ngừa Thất Bại</h4>
+    <p style="margin: 0; line-height: 1.5; color: var(--text-primary);">
+      Không có mô hình biểu đồ nào thắng 100%. Cách duy nhất để chiến thắng dài hạn là: Luôn giới hạn quy mô giao dịch ban đầu, chỉ gia tăng tỷ trọng khi cổ phiếu chứng minh vị thế đúng bằng lợi nhuận, và thực thi cắt lỗ 7% - 8% một cách cơ học, không do dự hay hy vọng.
+    </p>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 2 &amp;middot; SƠ ĐỒ KHÁI NIỆM</div>
+    <h2>Mối Liên Kết Khái Niệm Giữa Các Chương</h2>
+<div class="split-layout" style="gap: 2rem;">
+  <div class="split-left" style="flex: 1.2;">
+    <div class="mermaid">
+      graph TB
+          A["Chương 1: Ý thức về Tiền lệ Lịch sử"] --> B["Chương 2: Đọc biểu đồ chuyên nghiệp"]
+          B --> C["Cốc tay cầm (Mô hình chính)"]
+          B --> D["Hai đáy & Nền phẳng"]
+          B --> E["Các mô hình phụ (Lá cờ, Hộp, v.v.)"]
+          C --> F["Xác định Điểm Pivot"]
+          D --> F
+          E --> F
+          F --> G["Thiết lập Điểm mua chuẩn"]
+          G --> H["Chương 3-9: Hệ thống CAN SLIM (Cơ bản)"]
+          G --> I["Chương 10: Quy tắc Bán & Cắt lỗ (Bảo vệ vốn)"]
+          style B fill:#8B7CFF,stroke:#2A2D33,color:#F7F7F5
+          style F fill:#059669,stroke:#2A2D33,color:#F7F7F5
+          style I fill:#FF7C7C,stroke:#2A2D33,color:#F7F7F5
+    </div>
+  </div>
+
+  <div class="split-right" style="flex: 0.8; display: flex; flex-direction: column; justify-content: center;">
+    <div class="checklist">
+      <h4 style="margin: 0 0 1rem 0; color: var(--accent); font-size: 1.2rem;">Lộ Trình Khái Niệm Chương 2:</h4>
+      <p style="font-size: 0.9em; line-height: 1.5; color: var(--text-primary);">
+        Đọc biểu đồ không nằm độc lập. Nó nhận đầu vào từ tư duy tiền lệ của Chương 1 và làm bộ lọc thời điểm (timing) cho các chỉ số cơ bản của CAN SLIM. Cuối cùng, nó kết hợp với Chương 10 để thực thi việc bán ra bảo vệ lợi nhuận hoặc cắt lỗ cơ học.
+      </p>
+    </div>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 2 &amp;middot; HƯỚNG DẪN THỰC HÀNH</div>
+    <h2>Lộ Trình Từng Bước Đọc Đồ Thị Chuyên Nghiệp</h2>
+<div class="phase-progress" style="margin-bottom: 1.5rem; display: flex; gap: 0.5rem;">
+  <div class="phase active" style="flex: 1; text-align: center; padding: 0.5rem; background: var(--accent-purple); color: var(--surface); border-radius: 4px; font-weight: 600; font-size: 0.85em;">P1: Học & Nhận diện (Tuần 1)</div>
+  <div class="phase" style="flex: 1; text-align: center; padding: 0.5rem; background: var(--surface); border: 1px solid var(--border); color: var(--text-secondary); border-radius: 4px; font-size: 0.85em;">P2: Rèn luyện thị giác (Tuần 2-4)</div>
+  <div class="phase" style="flex: 1; text-align: center; padding: 0.5rem; background: var(--surface); border: 1px solid var(--border); color: var(--text-secondary); border-radius: 4px; font-size: 0.85em;">P3: Lập kế hoạch (Tháng 2+)</div>
+  <div class="phase" style="flex: 1; text-align: center; padding: 0.5rem; background: var(--surface); border: 1px solid var(--border); color: var(--text-secondary); border-radius: 4px; font-size: 0.85em;">P4: Thực hành (Tháng 3+)</div>
+</div>
+
+<div class="checklist" style="background: var(--surface); padding: 1.25rem; border-radius: var(--radius); border: 1px solid var(--border); font-size: 0.9em;">
+  <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.8rem; font-size: 0.95em; line-height: 1.5; color: var(--text-primary);">
+    <li style="position: relative; padding-left: 1.8rem; margin-bottom: 0.3rem;">
+      <input type="checkbox" checked style="position: absolute; left: 0; top: 0.2rem;">
+      <strong>Bước 1 (Học & Nhận diện):</strong> Nắm vững các tiêu chuẩn kỹ thuật của mô hình cốc tay cầm, hai đáy và nền giá phẳng (kích thước, độ sâu, thời gian tối thiểu 7-8 tuần).
+    </li>
+    <li style="position: relative; padding-left: 1.8rem; margin-bottom: 0.3rem;">
+      <input type="checkbox" style="position: absolute; left: 0; top: 0.2rem;">
+      <strong>Bước 2 (Rèn luyện thị giác):</strong> Lấy biểu đồ của 10 cổ phiếu dẫn đầu thị trường trong 3 chu kỳ tăng trưởng gần nhất. Đánh dấu thủ công các điểm Pivot, vùng tay cầm có khối lượng cạn kiệt và ngày bứt phá bùng nổ thanh khoản.
+    </li>
+    <li style="position: relative; padding-left: 1.8rem; margin-bottom: 0.3rem;">
+      <input type="checkbox" style="position: absolute; left: 0; top: 0.2rem;">
+      <strong>Bước 3 (Lập kế hoạch):</strong> Thiết lập bộ lọc cổ phiếu hàng tuần dựa trên đường xu hướng và Relative Strength line dốc lên. Vẽ sẵn các đường Pivot kháng cự và cài đặt cảnh báo giá tự động (Price Alerts) trên phần mềm đồ thị.
+    </li>
+    <li style="position: relative; padding-left: 1.8rem; margin-bottom: 0.3rem;">
+      <input type="checkbox" style="position: absolute; left: 0; top: 0.2rem;">
+      <strong>Bước 4 (Thực hành giao dịch):</strong> Chỉ mua khi giá chạm đúng điểm Pivot kèm khối lượng lớn xác nhận. Tuyệt đối tuân thủ quy tắc cắt lỗ cơ học 7% - 8% ngay khi vi phạm để bảo toàn tài khoản.
+    </li>
+  </ul>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 2 &amp;middot; CHIẾN LƯỢC HỌC TẬP</div>
+    <h2>Phương Pháp Nhận Diện Mẫu Hình Nhanh Chóng</h2>
+<div class="split-layout" style="gap: 1.5rem;">
+  <div class="split-left" style="flex: 1.1;">
+    <h4 style="margin: 0 0 1rem 0; color: var(--accent); font-size: 1.2rem;">📅 Lịch trình Lặp lại ngắt quãng (Spaced Repetition)</h4>
+    <div class="timeline" style="display: flex; flex-direction: column; gap: 1rem; font-size: 0.85em; line-height: 1.5;">
+      <div class="timeline-item" style="border-left: 3px solid var(--accent-purple); padding-left: 1rem; position: relative;">
+        <strong>Ngày 1: Ghi nhớ cấu trúc hình thái</strong><br>
+        Xem và học thuộc lòng các thông số kỹ thuật của 3 nền giá cốt lõi: cốc tay cầm, hai đáy, nền giá phẳng. Vẽ phác thảo hình học ra giấy.
+      </div>
+      <div class="timeline-item" style="border-left: 3px solid var(--accent-purple); padding-left: 1rem; position: relative;">
+        <strong>Ngày 7: Thực hành kiểm thử thị giác</strong><br>
+        Mở ngẫu nhiên biểu đồ tuần của 20 mã cổ phiếu lớn và tự động xác định xem chúng có đang ở trong nền giá tích lũy nào không.
+      </div>
+      <div class="timeline-item" style="border-left: 3px solid var(--accent-purple); padding-left: 1rem; position: relative;">
+        <strong>Ngày 30: Rà soát & Lọc lỗi</strong><br>
+        Kiểm tra lại danh sách các điểm breakout gần đây trên thị trường để phân tích xem có điểm nào bị lỗi (wedging, lỏng lẻo, cạn vol giả) không.
+      </div>
+    </div>
+  </div>
+
+  <div class="split-right" style="flex: 0.9; display: flex; flex-direction: column; gap: 1rem;">
+    <h4 style="margin: 0 0 0.5rem 0; color: var(--accent); font-size: 1.2rem;">💡 Mỏ neo Trí nhớ (Memory Anchors)</h4>
+    
+    <div class="learning-style-section visual" style="background: rgba(99, 91, 255, 0.03); border: 1px solid var(--border); padding: 1rem; border-radius: var(--radius); border-left: 4px solid var(--accent-purple); font-size: 0.85em; line-height: 1.5;">
+      <strong>👁️ Mỏ neo "Cái Tay Cầm Chiếc Cốc":</strong><br>
+      Hãy nhớ rằng một chiếc cốc quá sâu (>50%) sẽ rất khó để nâng lên. Tương tự, tay cầm phải nằm ở phần nửa trên của cốc, giống như vị trí vật lý thực tế của tay cầm trên một chiếc cốc uống nước thông thường.
+    </div>
+
+    <div class="learning-style-section verbal" style="background: rgba(5, 150, 105, 0.03); border: 1px solid var(--border); padding: 1rem; border-radius: var(--radius); border-left: 4px solid var(--accent-emerald); font-size: 0.85em; line-height: 1.5;">
+      <strong>🗣️ Mỏ neo "Bản Đồ Chỉ Đường":</strong><br>
+      Hãy coi biểu đồ là thiết bị GPS dẫn đường. Đi qua một thành phố lạ mà không bật định vị GPS giống như việc mua cổ phiếu tăng trưởng mà không thèm kiểm tra biểu đồ kỹ thuật.
+    </div>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 2 &amp;middot; HÀNH ĐỘNG CUỐI CÙNG</div>
+    <h2>Hành động cuối cùng</h2>
+<ul class="action-list" style="font-size: 0.95em;">
+  <li class="action-item">
+    <div>
+      <div class="action-headline">Thực hiện phân tích hồi quy (Post-Analysis) các giao dịch cũ</div>
+      <div class="action-detail">In ra hoặc lưu lại biểu đồ của tất cả các cổ phiếu bạn đã giao dịch trong 1 năm qua. Đánh dấu chính xác điểm mua/bán của bạn lên biểu đồ tuần, đối chiếu với các nền giá chuẩn để xem bạn đã mua sớm (premature), mua đuổi (extended) hay mua mô hình lỗi hay không.</div>
+    </div>
+  </li>
+
+  <li class="action-item">
+    <div>
+      <div class="action-headline">Cài đặt Cảnh báo Giá (Price Alerts) tự động trên đồ thị</div>
+      <div class="action-detail">Lọc ra danh sách 5-10 cổ phiếu mạnh nhất đang tích luỹ nền giá. Xác định đường Pivot kháng cự của tay cầm hoặc chữ W và cài đặt cảnh báo tự động khi giá vượt qua điểm này. Cách này giúp bạn kiểm soát tâm lý, tránh nhìn bảng điện liên tục dẫn đến giao dịch sai quy tắc.</div>
+    </div>
+  </li>
+
+  <li class="action-item">
+    <div>
+      <div class="action-headline">Tạo bảng tra cứu nhanh (Cheat Sheet) mô hình bứt phá chuẩn mực</div>
+      <div class="action-detail">Tóm tắt các thông số của mô hình Cốc tay cầm (thời gian >=7 tuần, độ sâu 12-33%, tay cầm nằm ở nửa trên và điều chỉnh 8-12%, volume dry-up ở đáy) và mô hình Hai đáy (chân phải undercut chân trái chữ W). Dán cheat sheet này ngay tại bàn làm việc để tham chiếu trước khi đặt lệnh mua.</div>
+    </div>
+  </li>
+</ul>
+
+  </section>
+
+</div>
+
+<div class="nav-controls">
+  <button class="nav-btn" id="prevBtn" onclick="prevSlide()" aria-label="Previous slide">&#8592;</button>
+  <div class="counter" id="counter" aria-live="polite">1 / 1</div>
+  <button class="nav-btn" id="nextBtn" onclick="nextSlide()" aria-label="Next slide">&#8594;</button>
+</div>
+
+<script src="common.js"></script>
+</body>
+</html>

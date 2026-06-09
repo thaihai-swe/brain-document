@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How to Make Money in Stocks — Chapter 21</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="common.css">
+<script src="https://cdn.jsdelivr.net/npm/@panzoom/panzoom@4.5.1/dist/panzoom.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11.10.0/dist/mermaid.min.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div class="progress-bar" id="progressBar"></div>
+
+<div class="chapter-menu">
+  <button class="menu-btn" id="chapterMenuBtn" onclick="toggleChapterMenu()" aria-haspopup="true" aria-expanded="false">Chapters &#9662;</button>
+  <div class="chapter-menu-panel" id="chapterMenuPanel" role="menu"></div>
+</div>
+
+<div class="slide-container" id="slideContainer">
+
+  <section class="slide" aria-hidden="false">
+<h1>Câu Chuyện Thành Công & Chứng Thực Thực Chiến</h1>
+<p class="subtitle">Những câu chuyện người thật việc thật về tự do tài chính nhờ hệ thống CAN SLIM và IBD</p>
+
+<div class="meta-grid">
+  <div class="meta-item">
+    <div class="meta-label">Nguồn tài liệu</div>
+    <div class="meta-value">How to Make Money in Stocks</div>
+  </div>
+  <div class="meta-item">
+    <div class="meta-label">Bản dịch & Phân tích</div>
+    <div class="meta-value">Song ngữ Việt - Anh</div>
+  </div>
+  <div class="meta-item">
+    <div class="meta-label">Cấp độ thiết kế</div>
+    <div class="meta-value">DEEP+ (22 Slides)</div>
+  </div>
+  <div class="meta-item">
+    <div class="meta-label">Thời gian học</div>
+    <div class="meta-value">~60 phút</div>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide chapter-divider">
+<div class="chapter-number">CÂU CHUYỆN THÀNH CÔNG</div>
+<h2>Chứng Thực Thực Chiến từ các Nhà đầu tư Cá nhân</h2>
+<p class="chapter-meta">
+  <strong>Thời gian đọc ước tính:</strong> 15 phút &middot;
+  <strong>Độ khó:</strong> Trung bình &middot;
+  <strong>Khái niệm then chốt:</strong> Nhà đầu tư tự hướng dẫn (Self-directed), Sinh tồn trong thị trường gấu, Lãi kép thực tế, Giáo dục tài chính, Đào thải người môi giới
+</p>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 21 &amp;middot; TỔNG QUAN TRỰC QUAN 1</div>
+    <h2>Con đường từ phụ thuộc đến tự do tài chính</h2>
+<div class="content-card" style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%;">
+  <div class="mermaid" style="width: 100%; max-height: 75vh;">
+    graph TD
+        %% Broker dependence state
+        Sub1["Giai đoạn lệ thuộc (Broker Dependence)"] --> B1["Nhận lời khuyên miễn phí / Tin đồn"]
+        Sub1 --> B2["Không có quy tắc cắt lỗ rõ ràng"]
+        Sub1 --> B3["Phí giao dịch cao & Hiệu suất trung bình"]
+        B1 & B2 & B3 --> Trap{"Thị trường gấu sụp đổ (Bear Market)"}
+        Trap -->|"Thua lỗ nặng nề (mất 35-50% vốn)"| WakeUp["Điểm thức tỉnh: Tự học đầu tư"]
+
+        %% Education phase
+        WakeUp --> Ed1["Đọc sách How to Make Money in Stocks"]
+        WakeUp --> Ed2["Đọc IBD & Investors.com mỗi ngày"]
+        WakeUp --> Ed3["Học cách đọc biểu đồ & Điểm breakout"]
+
+        %% Self directed phase
+        Ed1 & Ed2 & Ed3 --> Self["Nhà đầu tư tự quyết định (Self-Directed)"]
+        Self --> S1["Cắt lỗ nghiêm ngặt tại 7-8%"]
+        Self --> S2["Chốt lời chủ động 20-25%"]
+        Self --> S3["Rút tiền mặt về vùng an toàn trong thị trường gấu"]
+        
+        %% Results
+        S1 & S2 & S3 --> Success["Đạt tự do tài chính & Nghỉ hưu sớm"]
+
+        %% Styling
+        style Trap fill:#EF4444,stroke:#B91C1C,color:#FFF
+        style Self fill:#8B7CFF,stroke:#4338CA,color:#FFF
+        style Success fill:#10B981,stroke:#047857,color:#FFF
+
+        classDef default fill:#F4F4F6,stroke:#D1D1D6,color:#1C1C1E;
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 21 &amp;middot; TỔNG QUAN TRỰC QUAN 2</div>
+    <h2>Cơ chế vận hành hệ thống kỷ luật CAN SLIM</h2>
+<div class="content-card" style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%;">
+  <div class="mermaid" style="width: 100%; max-height: 75vh;">
+    graph TD
+        %% Detection
+        Start["Thị trường xuất hiện nhiều Ngày phân phối"] --> Trend{"Đánh giá IBD The Big Picture"}
+        Trend -->|"Nhận diện Đỉnh thị trường"| Action["BÁN hạ margin & rút về TIỀN MẶT"]
+
+        %% Crisis phase
+        Action --> Bear["Thị trường gấu sập sâu (2000 / 2008)"]
+        Bear -->|"Bảo vệ vốn thành công"| SafeDrawdown["Hạn chế sụt giảm tài sản (0% đến +4% ròng)"]
+        
+        %% Bull phase
+        SafeDrawdown --> Wait["Kiên nhẫn đứng ngoài thị trường quan sát"]
+        Wait --> FTD{"Xuất hiện Ngày bứt phá theo đà (FTD)"}
+        FTD -->|"Xác nhận xu hướng tăng mới"| Reenter["Giải ngân trở lại vào Siêu cổ phiếu mới"]
+        Reenter --> Breakout["Mua đúng điểm breakout của nền giá tích lũy"]
+        Breakout --> Compounding["Lãi kép bùng nổ trong chu kỳ tăng giá tiếp theo"]
+
+        %% Styling
+        style Action fill:#F59E0B,stroke:#D97706,color:#FFF
+        style SafeDrawdown fill:#10B981,stroke:#047857,color:#FFF
+        style Compounding fill:#10B981,stroke:#047857,color:#FFF
+        style FTD fill:#8B7CFF,stroke:#4338CA,color:#FFF
+
+        classDef default fill:#F4F4F6,stroke:#D1D1D6,color:#1C1C1E;
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 21 &amp;middot; TÓM TẮT CHƯƠNG</div>
+    <h2>Tóm tắt các câu chuyện thành công tiêu biểu</h2>
+<div class="content-card">
+  <div class="summary-text">
+    <p><strong>Bối cảnh (Setup):</strong> Sau khi giới thiệu toàn bộ lý thuyết và quy tắc CAN SLIM, câu hỏi lớn đặt ra là: Liệu một hệ thống giao dịch định lượng và kỹ thuật chi tiết như vậy có thể được áp dụng thành công bởi những nhà đầu tư cá nhân bình thường, không có xuất thân từ phố Wall?</p>
+    
+    <p><strong>Luận điểm chính (Argument):</strong> Phần "Success Stories" (Câu chuyện thành công) đóng vai trò là bằng chứng thực tế (social proof) đanh thép nhất chứng minh tính hiệu quả vượt thời gian của hệ thống CAN SLIM và ấn phẩm IBD. Luận điểm cốt lõi là: **Bất kỳ ai, ở bất kỳ độ tuổi và ngành nghề nào, đều có thể đạt được tự do tài chính nếu chịu đầu tư thời gian học tập nghiêm túc để trở thành nhà đầu tư tự hướng dẫn (self-directed investor)**. Sự thành công của họ không đến từ các mẹo phím hàng hay tin đồn, mà đến từ việc chuyển đổi tư duy: sa thải người môi giới trung gian, tự đọc biểu đồ, tuân thủ kỷ luật cắt lỗ 8% và theo sát xu hướng thị trường chung khách quan.</p>
+    
+    <p><strong>Bằng chứng (Evidence):</strong> Hàng chục bức thư cảm ơn từ các bác sĩ, mục sư, kỹ sư, CPA, giáo viên, và thậm chí học sinh trung học chứng thực kết quả vượt trội:
+      <br>&bull; Đạt mức lợi nhuận 3 chữ số (+359%, +130%, nhân tài khoản từ $5,000 lên 7 chữ số trong 9 năm).
+      <br>&bull; Bảo vệ hoàn toàn tài sản trong các năm thị trường sụp đổ như 2000-2001 và 2008 (năm 2008 đạt lợi nhuận +4% ròng bằng cách đứng ngoài giữ tiền mặt nhờ chỉ báo "The Big Picture", trong khi thị trường chung bốc hơi 35-50%).
+      <br>&bull; Các lớp học phổ thông tại Denver và Guatemala đoạt giải nhì bang trong các cuộc thi giả lập đầu tư nhờ áp dụng bộ lọc xếp hạng 1-99 và xếp hạng chữ của IBD. <span class="page-ref">Ch 21 &middot; "Oldies but Goodies"</span></p>
+    
+    <p><strong>Hệ quả (Implications):</strong> Giáo dục tài chính tự lập là chiếc chìa khóa duy nhất mở cánh cửa tự do tài chính dài hạn. Nhà đầu tư cá nhân có lợi thế cực lớn về sự linh hoạt khi không phải giải trình trước các hội đồng hay chịu ràng buộc pháp lý phức tạp như các định chế lớn.</p>
+    
+    <p><strong>Tranh luận (Controversy):</strong> O'Neil và các độc giả lên án mạnh mẽ triết lý "mua và nắm giữ thụ động" được cổ súy bởi các công ty quản lý tài sản truyền thống. Các câu chuyện chứng thực rằng người môi giới không bảo vệ được khách hàng khi khủng hoảng nổ ra, và việc tính phí quản lý cao là không tương xứng với hiệu suất nghèo nàn họ mang lại.</p>
+    
+    <p><strong>Mối liên kết (Connection):</strong> Đóng vai trò là lời kết đầy cảm hứng cho cuốn sách, chuyển giao toàn bộ tri thức của tác giả thành động lực hành động thực tế cho người đọc: "Little acorns can grow into giant oaks" (Hạt dẻ nhỏ có thể lớn lên thành cây sồi khổng lồ).</p>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 21 &amp;middot; Ý TƯỞNG CỐT LÕI</div>
+    <h2>Ý tưởng cốt lõi</h2>
+<div class="takeaway-hero">
+  <div class="kicker">SUCCESS STORIES &middot; THE BIG IDEA</div>
+  <div class="headline">"Success in a free country is simple. Get a job, get an education, and learn to save and invest wisely. Anyone can do it. You can do it."</div>
+  <div class="subline">Thành công trong một xã hội tự do thực chất rất đơn giản: Tìm kiếm một công việc, không ngừng tích lũy tri thức đầu tư, và kiên trì tiết kiệm cũng như đầu tư một cách khôn ngoan. Bất kỳ ai cũng có thể đạt được tự do tài chính. Chính sự bền bỉ và quyết tâm của bạn mới là yếu tố quyết định tối hậu. <span class="page-ref">Ch 21 &middot; "One Final Thought"</span></div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 21 &amp;middot; BÀI HỌC CHỦ CHỐT</div>
+    <h2>Bài học chủ chốt</h2>
+<div class="takeaway-list">
+  <div class="takeaway-item">
+    <div class="takeaway-badge">1</div>
+    <div class="takeaway-content">
+      <strong>Sa thải môi giới và tự làm chủ tài chính cá nhân</strong>
+      <div class="takeaway-detail">
+        <strong>Ý nghĩa:</strong> Phần lớn các câu chuyện thành công đều bắt đầu sau khi nhà đầu tư nhận ra các công ty quản lý tài sản lớn (như Goldman Sachs, các nhà môi giới cá nhân) không bảo vệ được họ khỏi các đợt sụp đổ vĩ mô và tính phí quản lý quá cao.
+        <br><strong>Áp dụng:</strong> Chủ động nghiên cứu tri thức đầu tư để tự đưa ra quyết định giao dịch của bản thân, không phó mặc tương lai tài chính cho các "chuyên gia" trung gian.
+        <br><strong>Lưu ý:</strong> Việc tự chủ đi kèm trách nhiệm tự chịu trách nhiệm 100% về mọi sai lầm đầu tư và phải tuân thủ nghiêm ngặt hệ thống cắt lỗ. <span class="page-ref">Ch 21 &middot; "The Confidence to Win"</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="takeaway-item">
+    <div class="takeaway-badge">2</div>
+    <div class="takeaway-content">
+      <strong>Đứng ngoài giữ tiền mặt trong thị trường gấu là chìa khóa sinh tồn</strong>
+      <div class="takeaway-detail">
+        <strong>Ý nghĩa:</strong> Khả năng bảo vệ vốn trong thị trường gấu quan trọng không kém khả năng kiếm tiền trong thị trường bò. Giữ được tiền mặt giúp bạn ở thế chủ động khi chu kỳ mới mở ra.
+        <br><strong>Áp dụng:</strong> Theo sát chuyên mục "The Big Picture" trên IBD hàng ngày để nhận diện xu hướng thị trường chung, rút hoàn toàn về vị thế tiền mặt khi thị trường ở trạng thái phân phối nặng (như năm 2000 và 2008).
+        <br><strong>Lưu ý:</strong> Đứng ngoài thị trường đòi hỏi sự kiên nhẫn cực lớn chống lại cảm giác nôn nóng (FOMO) muốn bắt đáy quá sớm. <span class="page-ref">Ch 21 &middot; "Market Timing"</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="takeaway-item">
+    <div class="takeaway-badge">3</div>
+    <div class="takeaway-content">
+      <strong>Tuyệt đối không nghe tin đồn, chỉ tin vào sự thực khách quan</strong>
+      <div class="takeaway-detail">
+        <strong>Ý nghĩa:</strong> Tin đồn và ý kiến phân tích cá nhân chỉ gây nhiễu loạn thông tin. Việc đầu tư dựa trên dữ liệu định lượng thực chứng (doanh thu, EPS, biểu đồ giá kỹ thuật) là con đường đáng tin cậy nhất.
+        <br><strong>Áp dụng:</strong> Tránh xa việc xem các kênh tivi tài chính (CNBC) hay nghe ngóng các diễn đàn "phím hàng". Tập trung phân tích các nền tích lũy giá chuẩn trên biểu đồ tuần và ngày.
+        <br><strong>Lưu ý:</strong> Việc đọc biểu đồ cần thời gian rèn luyện thực chiến liên tục (David C. mất 3 năm mới hoàn toàn thấu hiểu điểm pivot lý tưởng). <span class="page-ref">Ch 21 &middot; "No Opinions, Only Facts" & "Oldies but Goodies"</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="takeaway-item">
+    <div class="takeaway-badge">4</div>
+    <div class="takeaway-content">
+      <strong>Hạt dẻ nhỏ có thể lớn lên thành cây sồi khổng lồ</strong>
+      <div class="takeaway-detail">
+        <strong>Ý nghĩa:</strong> Lãi kép bắt đầu từ những số vốn nhỏ. Sự tích lũy kỷ luật qua nhiều chu kỳ kinh tế sẽ tạo ra khối tài sản khổng lồ ngoài sức tưởng tượng của bạn.
+        <br><strong>Áp dụng:</strong> Bắt đầu giao dịch một cách thận trọng kể cả với số vốn nhỏ ($5,000). Tập trung học tập phương pháp chuẩn, gia tăng quy mô vốn dần dần khi hiệu suất đầu tư cải thiện.
+        <br><strong>Lưu ý:</strong> Tránh ảo tưởng làm giàu nhanh chóng. Con đường từ $5,000 lên 7 chữ số đòi hỏi sự bền bỉ học tập kéo dài từ 5 đến 10 năm. <span class="page-ref">Ch 21 &middot; "Real Performance" & "One Final Thought"</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="takeaway-item">
+    <div class="takeaway-badge">5</div>
+    <div class="takeaway-content">
+      <strong>Đầu tư vào giáo dục tài chính trước khi xuống tiền</strong>
+      <div class="takeaway-detail">
+        <strong>Ý nghĩa:</strong> Một đợt hội thảo chất lượng hay một cuốn sách lịch sử có giá trị gấp hàng trăm lần các "phím hàng nóng" miễn phí. Giáo dục là đòn bẩy duy nhất đưa bạn đi lên bền vững.
+        <br><strong>Áp dụng:</strong> Dành thời gian đọc và ghi chú lại cuốn sách nhiều lần, tô màu các lỗi sai lầm cũ, tham gia các buổi đào tạo thực chiến để mài giũa hệ thống kỹ năng.
+        <br><strong>Lưu ý:</strong> Đừng chỉ dừng lại ở lý thuyết suông; hãy áp dụng thử nghiệm quy mô nhỏ để kiểm chứng thực tế và rút kinh nghiệm cho bản thân. <span class="page-ref">Ch 21 &middot; "Investor Education at Its Best"</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 21 &amp;middot; TRÍCH DẪN ĐẮT GIÁ</div>
+    <h2>Trích dẫn đắt giá</h2>
+<div class="quote-container">
+  <div class="quote-block">
+    <p class="quote-text">"William O’Neil taught me the two rules that form the cornerstone of my investing plan: (1) keep your losses small, and (2) average up, never down. Those two simple rules have kept me out of a lot of trouble. When I have strayed from them, it inevitably cost me money."</p>
+    <p class="quote-context">
+      <strong>Bản dịch:</strong> "William O'Neil đã dạy tôi hai quy tắc tạo nên nền tảng cho kế hoạch đầu tư của tôi: (1) giữ khoản lỗ của bạn ở mức nhỏ, và (2) mua trung bình giá lên, không bao giờ trung bình giá xuống. Hai quy tắc đơn giản đó đã giúp tôi tránh khỏi rất nhiều rắc rối. Khi tôi vi phạm chúng, cái giá phải trả luôn là tiền bạc."
+      <br><strong>Người chứng thực:</strong> Peter M., Giám đốc điều hành. Quy tắc cốt lõi giúp loại bỏ các thảm họa sụt giảm lớn cho tài khoản cá nhân.
+      <span class="page-ref">Ch 21 &middot; "Proven Rules"</span>
+    </p>
+  </div>
+
+  <div class="quote-block" style="margin-top: 2rem;">
+    <p class="quote-text">"Just like people grab their family photo albums from the house on fire, if I were to pick just one thing to assure my continued success in stock trading, it would be William O’Neil’s How to Make Money in Stocks."</p>
+    <p class="quote-context">
+      <strong>Bản dịch:</strong> "Giống như người ta sẽ ôm vội cuốn album ảnh gia đình khi ngôi nhà bốc cháy, nếu tôi phải chọn duy nhất một thứ để bảo đảm sự thành công liên tục của mình trong giao dịch chứng khoán, đó sẽ là cuốn sách How to Make Money in Stocks của William O'Neil."
+      <br><strong>Người chứng thực:</strong> Slav F., Nhà giao dịch toàn thời gian. Thể hiện niềm tin tuyệt đối của các nhà giao dịch chuyên nghiệp vào tính thực chiến của cuốn sách.
+      <span class="page-ref">Ch 21 &middot; "CAN SLIM"</span>
+    </p>
+  </div>
+
+  <div class="quote-block" style="margin-top: 2rem;">
+    <p class="quote-text">"I have now been taught the tools to recognize when a trade may not go as planned, and, most importantly, when to sell. That lesson alone has been invaluable."</p>
+    <p class="quote-context">
+      <strong>Bản dịch:</strong> "Giờ đây tôi đã được dạy những công cụ để nhận biết khi nào một giao dịch không diễn ra như kế hoạch, và điều quan trọng nhất là khi nào cần bán ra. Chỉ riêng bài học đó thôi đã vô cùng vô giá rồi."
+      <br><strong>Người chứng thực:</strong> Michael G., Nhà đầu tư cá nhân. Nhấn mạnh việc kiểm soát rủi ro chủ động và loại bỏ việc hy vọng huyễn hoặc khi vị thế giao dịch bị lỗi.
+      <span class="page-ref">Ch 21 &middot; "Oldies but Goodies"</span>
+    </p>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 21 &amp;middot; MÔ HÌNH TƯ DUY 1</div>
+    <h2>Mô hình 1: Đường cong học tập của nhà giao dịch</h2>
+<div class="mental-model-card">
+  <h4 class="model-name">Bánh đà Nhà đầu tư Tự định hướng (The Self-Directed Investor Flywheel)</h4>
+  <div class="model-principle">
+    Người bảo vệ và làm gia tăng tài sản tốt nhất không ai khác ngoài chính bản thân bạn. Việc loại bỏ các bên trung gian (như người môi giới, nhà tư vấn) và thay thế bằng sự tự giáo dục tài chính nghiêm túc sẽ triệt tiêu mâu thuẫn lợi ích, giảm thiểu chi phí quản lý và tối đa hóa tính linh hoạt giao dịch.
+  </div>
+  
+  <div class="model-application" style="margin-top: 1rem;">
+    <strong>Cách thức hoạt động & Vòng lặp phản hồi tích cực:</strong>
+    <ul>
+      <li><strong>Học tập chủ động:</strong> Thay vì tìm kiếm lời khuyên hoặc tin đồn, bạn học cách đọc biểu đồ kỹ thuật và phân tích báo cáo doanh nghiệp.</li>
+      <li><strong>Sa thải môi giới (Rule 3):</strong> Loại bỏ gánh nặng phí quản lý hàng năm và chi phí hoa hồng trượt giá, đồng thời thoát khỏi bẫy "ôm chỉ số" thụ động của các quỹ truyền thống.</li>
+      <li><strong>Xây dựng tự tin thực chiến:</strong> Sự thành công của các giao dịch độc lập nhỏ ban đầu sẽ tiếp thêm sự tự tin, thúc đẩy việc nghiên cứu chuyên sâu hơn và tạo ra kết quả tốt hơn (bánh đà tự quay).</li>
+    </ul>
+  </div>
+
+  <div class="model-limitations" style="margin-top: 1rem;">
+    <strong>⚠️ Hạn chế & Điều kiện tiên quyết:</strong>
+    <ul>
+      <li><strong>Đòi hỏi tính kỷ luật thép:</strong> Nếu không có sự kỷ luật tự giác cao độ (cắt lỗ tuyệt đối ở 7-8%), việc tự giao dịch có thể đốt cháy tài khoản nhanh hơn nhiều so với việc để các quỹ quản lý hộ.</li>
+      <li><strong>Đánh đổi thời gian:</strong> Phương pháp đòi hỏi nhà đầu tư phải dành ra ít nhất 1-2 tiếng mỗi ngày để cập nhật nhật ký thị trường và lọc danh mục.</li>
+    </ul>
+  </div>
+  
+  <div class="page-reference">Ch 21 &middot; "The Confidence to Win" & "Investor Education at Its Best"</div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 21 &amp;middot; MÔ HÌNH TƯ DUY 2</div>
+    <h2>Mô hình 2: Phễu lọc thông tin khách quan</h2>
+<div class="mental-model-card">
+  <h4 class="model-name">Khiên phòng thủ Thị trường gấu (The Bear Market Shield)</h4>
+  <div class="model-principle">
+    Tiền mặt (Cash) là một vị thế tài sản chủ động cực kỳ quan trọng. Cách tốt nhất để gia tăng tài sản dài hạn không phải là liên tục mua bán, mà là **bảo vệ toàn bộ nguồn vốn nguyên vẹn trong suốt chu kỳ giảm giá (Bear Market)**, kiên nhẫn đứng ngoài thị trường cho đến khi dòng tiền tổ chức xác nhận xu hướng tăng mới.
+  </div>
+  
+  <div class="model-application" style="margin-top: 1rem;">
+    <strong>Cách thức hoạt động & Quy tắc phòng thủ:</strong>
+    <ul>
+      <li><strong>Nhận diện đỉnh qua Ngày phân phối:</strong> Khi thị trường xuất hiện dồn dập các ngày phân phối (khối lượng tăng nhưng giá giảm/đi ngang), lập tức hạ đòn bẩy margin và tăng tỷ trọng tiền mặt.</li>
+      <li><strong>Nguyên tắc đứng ngoài (Cash protection):</strong> Giữ 100% tiền mặt trong suốt thị trường gấu. Bỏ qua mọi lời khuyên "phòng thủ bằng cổ phiếu giá trị/trái phiếu" (những tài sản thực tế vẫn giảm mạnh trong các đợt sập như 2008).</li>
+      <li><strong>Tái giải ngân đồng thuận (Follow-Through Day):</strong> Chỉ xuống tiền mua cổ phiếu tăng trưởng mới khi thị trường chung xuất hiện ngày bứt phá theo đà (FTD) để xác nhận đáy thị trường.</li>
+    </ul>
+  </div>
+
+  <div class="model-limitations" style="margin-top: 1rem;">
+    <strong>⚠️ Ý nghĩa đối với hiệu suất thực tế:</strong>
+    <ul>
+      <li><strong>Ví dụ thực chứng:</strong> Độc giả Brian D. (Supervisory Special Agent) đã bảo vệ toàn bộ quỹ hưu trí 401(k) trong năm 2008 bằng cách chuyển 100% sang quỹ tiền mặt "G-Fund" nhờ chỉ báo xu hướng của IBD, đạt lợi nhuận +4% trong khi các đồng nghiệp mất 35-50% tài khoản.</li>
+    </ul>
+  </div>
+  
+  <div class="page-reference">Ch 21 &middot; "Market Timing" &middot; Testimonies of Ken C. & Brian D.</div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 21 &amp;middot; MÔ HÌNH TƯ DUY 3</div>
+    <h2>Mô hình 3: Phương pháp giáo dục tài chính thực tế</h2>
+<div class="mental-model-card">
+  <h4 class="model-name">Vòng lặp Tích lũy Tri thức Giáo dục (The Educational Compounding Loop)</h4>
+  <div class="model-principle">
+    Tốc độ gia tăng tài sản tài chính luôn bị giới hạn bởi chất lượng tài sản trí tuệ của bạn. Việc đầu tư vào giáo dục tài chính tự lập (đọc sách, ghi chú, nghiên cứu biểu đồ lịch sử và ghi nhật ký giao dịch) sẽ tạo ra một tỷ suất sinh lời bất đối xứng khổng lồ so với số tiền bỏ ra ban đầu.
+  </div>
+  
+  <div class="model-application" style="margin-top: 1rem;">
+    <strong>Các bước xây dựng vòng lặp tích lũy tri thức:</strong>
+    <ul>
+      <li><strong>Học chuẩn từ mô hình lịch sử:</strong> Nghiên cứu kỹ lưỡng các siêu cổ phiếu trong quá khứ để xây dựng năng lực nhận diện mẫu hình (pattern recognition). Tránh các lời khuyên nóng hổi miễn phí trên mạng.</li>
+      <li><strong>Tự ghi chép sai lầm (Trade Journaling):</strong> Độc giả David C. đã đọc lại Chương 10 (quy tắc Bán) hơn 20 lần để hiểu tại sao mình vi phạm kỷ luật. Việc ghi nhận lỗi sai giúp bạn không lặp lại chúng ở chu kỳ sau.</li>
+      <li><strong>Xây dựng checklist cá nhân:</strong> Thiết lập một danh sách kiểm tra (checklist) cứng rắn trước khi đặt lệnh mua để ép bản thân tuân thủ quy tắc một cách lý trí, loại bỏ cảm xúc nhất thời.</li>
+    </ul>
+  </div>
+
+  <div class="model-limitations" style="margin-top: 1rem;">
+    <strong>⚠️ Yêu cầu về thời gian & Sự kiên trì:</strong>
+    <ul>
+      <li><strong>Định giá thời gian hòa vốn tri thức:</strong> Đừng kỳ vọng làm chủ hệ thống trong vài tuần. Các độc giả thành công thường mất từ 1 đến 3 năm giao dịch thực chiến để hoàn toàn hiểu và cảm nhận được điểm bứt phá (pivot point) chuẩn xác.</li>
+    </ul>
+  </div>
+  
+  <div class="page-reference">Ch 21 &middot; "Oldies but Goodies" &middot; Testimonies of Slav F. & David C.</div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 21 &amp;middot; SỐ LIỆU &amp; THỐNG KÊ</div>
+    <h2>Các cột mốc tăng trưởng và bảo vệ vốn</h2>
+<div class="metric-grid">
+  <div class="metric-card">
+    <div class="metric-value">359%</div>
+    <div class="metric-label">Lợi nhuận ròng lũy kế</div>
+    <div class="metric-detail">
+      Hiệu suất sinh lời của độc giả Barbara J. và Kathleen P. đạt được sau khi áp dụng triệt để bộ công cụ lọc định lượng của IBD và CAN SLIM.
+      <span class="page-ref">Ch 21 &middot; "CAN SLIM"</span>
+    </div>
+  </div>
+
+  <div class="metric-card">
+    <div class="metric-value">57% / Năm</div>
+    <div class="metric-label">Lãi kép liên tục trong 10 năm</div>
+    <div class="metric-detail">
+      Tỷ suất sinh lợi kép hàng năm (CAGR) ấn tượng của độc giả Florence R. đạt được liên tục trong suốt một thập kỷ nhờ tuân thủ nguyên tắc.
+      <span class="page-ref">Ch 21 &middot; "Real Performance"</span>
+    </div>
+  </div>
+
+  <div class="metric-card">
+    <div class="metric-value">7 Chữ Số</div>
+    <div class="metric-label">Tích lũy tài sản từ số vốn nhỏ</div>
+    <div class="metric-detail">
+      Nhà đầu tư Jonathan S. đã biến số vốn ban đầu 12,000 USD (năm 1999) thành hơn **1,000,000 USD** vào năm 2008 bằng cách giao dịch siêu cổ phiếu tăng trưởng.
+      <span class="page-ref">Ch 21 &middot; "Real Performance"</span>
+    </div>
+  </div>
+
+  <div class="metric-card">
+    <div class="metric-value">50K &rarr; 174K</div>
+    <div class="metric-label">Lợi nhuận trong 6 tháng giao dịch</div>
+    <div class="metric-detail">
+      Mục sư Larry R. đã biến số vốn 50,000 USD thành 174,000 USD trong vòng nửa năm bằng cách mua cổ phiếu vượt đỉnh mẫu hình Cốc tay cầm.
+      <span class="page-ref">Ch 21 &middot; "Oldies but Goodies"</span>
+    </div>
+  </div>
+
+  <div class="metric-card">
+    <div class="metric-value">+4% vs -35%</div>
+    <div class="metric-label">Hiệu suất bảo vệ tài khoản năm 2008</div>
+    <div class="metric-detail">
+      Độc giả Brian D. bảo toàn toàn bộ tài khoản hưu trí 401(k), đạt +4% ròng năm 2008 bằng cách chuyển về quỹ tiền mặt nhờ chỉ báo "The Big Picture", trong khi thị trường chung bốc hơi 35%.
+      <span class="page-ref">Ch 21 &middot; "Market Timing"</span>
+    </div>
+  </div>
+
+  <div class="metric-card">
+    <div class="metric-value">5K &rarr; 50K</div>
+    <div class="metric-label">Tỷ lệ tăng trưởng tài khoản sau 3 năm</div>
+    <div class="metric-detail">
+      Nhà đầu tư Fred B. nhân tài khoản lên gấp 10 lần sau 3 năm kiên trì rèn luyện và giao dịch theo các nguyên tắc chuẩn của IBD.
+      <span class="page-ref">Ch 21 &middot; "Real Performance"</span>
+    </div>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 21 &amp;middot; CÂU CHUYỆN THÀNH CÔNG 1</div>
+    <h2>Tránh tổn thất lớn &amp; Nghỉ hưu sớm</h2>
+<div class="split-layout">
+  <div class="split-left" style="border-left-color: var(--accent-emerald); background-color: rgba(16, 185, 129, 0.05); flex: 1; padding: 1rem;">
+    <h3 style="color: var(--accent-emerald); margin-top: 0;">Michael A. &bull; Nghỉ hưu sớm ở tuổi 50</h3>
+    <ul class="action-list" style="padding: 0; list-style: none; font-size: 0.95rem;">
+      <li style="margin-bottom: 1rem;">
+        <strong>Chiến lược hai chiều:</strong> Michael sử dụng IBD không chỉ để tìm kiếm các cổ phiếu dẫn dắt hàng đầu trong các đợt tăng giá vĩ đại, mà quan trọng hơn là sử dụng các tín hiệu cảnh báo để rời bỏ thị trường trước các đợt điều chỉnh lớn.
+      </li>
+      <li style="margin-bottom: 1rem;">
+        <strong>Hệ quả thực tế:</strong> Nhờ bảo vệ được vốn và thu lợi nhuận lớn bền vững qua nhiều chu kỳ, ông đã có thể nghỉ hưu sớm ở độ tuổi ngoài 50, dành trọn thời gian chăm sóc gia đình, theo đuổi đam mê cá nhân và tận hưởng cuộc sống hạnh phúc viên mãn.
+      </li>
+    </ul>
+  </div>
+  
+  <div class="split-right" style="border-left-color: var(--accent-cyan); background-color: rgba(6, 182, 212, 0.05); flex: 1; padding: 1rem;">
+    <h3 style="color: var(--accent-cyan); margin-top: 0;">Brian D. &bull; Bảo vệ quỹ hưu trí liên bang</h3>
+    <ul class="action-list" style="padding: 0; list-style: none; font-size: 0.95rem;">
+      <li style="margin-bottom: 1rem;">
+        <strong>Hạn chế của tài khoản hưu trí TSP:</strong> Quỹ hưu trí công chức liên bang của Brian chỉ được chọn phân bổ trong 5 quỹ cơ bản (C-Fund: S&P 500, S-Fund: Small-cap, I-Fund: Quốc tế, F-Fund: Trái phiếu, G-Fund: Tiền mặt/Trái phiếu CP an toàn).
+      </li>
+      <li style="margin-bottom: 1rem;">
+        <strong>Thực thi tín hiệu IBD:</strong> Vào tháng 12/2007, dựa trên chuyên mục "The Big Picture" cảnh báo phân phối và đảo chiều vĩ mô, Brian chuyển toàn bộ 100% tài sản hưu trí từ các quỹ cổ phiếu sang quỹ an toàn G-Fund (tiền mặt).
+      </li>
+      <li style="margin-bottom: 1rem;">
+        <strong>Kết quả vượt trội (2008):</strong> Tài khoản của Brian kết thúc năm 2008 đạt mức tăng trưởng **+4%**, trong khi các đồng nghiệp của ông bị bốc hơi từ 35% đến 50% giá trị tài khoản hưu trí do nắm giữ cổ phiếu thụ động.
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="callout" style="margin-top: 1.5rem; border-left-color: var(--accent-cyan);">
+  <div class="callout-icon">💡</div>
+  <div class="callout-content">
+    <strong>Bài học cốt lõi:</strong> Kỷ luật định thời điểm thị trường của CAN SLIM (IBD Market Outlook) không chỉ áp dụng cho tài khoản giao dịch năng động cá nhân mà còn là vũ khí phòng thủ tối thượng để quản lý các quỹ hưu trí dài hạn, giúp bảo vệ công sức tích lũy cả đời của bạn.
+    <span class="page-ref">Ch 21 &middot; "Market Timing"</span>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 21 &amp;middot; CÂU CHUYỆN THÀNH CÔNG 2</div>
+    <h2>Từ tay mơ thành triệu phú đô la</h2>
+<div class="split-layout">
+  <div class="split-left" style="border-left-color: var(--accent-purple); background-color: rgba(139, 92, 246, 0.05); flex: 1; padding: 1rem;">
+    <h3 style="color: var(--accent-purple); margin-top: 0;">George G. &bull; Từ con số 0 đến triệu phú đô la</h3>
+    <ul class="action-list" style="padding: 0; list-style: none; font-size: 0.95rem;">
+      <li style="margin-bottom: 1rem;">
+        <strong>Sa thải môi giới lập tức:</strong> Nhận thấy người môi giới không giúp ích được gì, George quyết định sa thải môi giới chỉ 2 tuần sau khi đăng ký đọc ấn phẩm IBD để tự giao dịch.
+      </li>
+      <li style="margin-bottom: 1rem;">
+        <strong>Coi đầu tư như doanh nghiệp:</strong> George coi việc đầu tư là một công việc kinh doanh nghiêm túc. Ông tự nghiên cứu 2 tiếng mỗi ngày, giao dịch hơn 150,000 cổ phiếu mỗi năm.
+      </li>
+      <li style="margin-bottom: 1rem;">
+        <strong>Kết quả đột phá:</strong> Từ chỗ không có khoản tiết kiệm nào trước đó, nhờ IBD, giá trị tài sản ròng ròng của ông đã tăng trưởng vượt bậc, đạt mốc **hơn 1 triệu USD**.
+      </li>
+    </ul>
+  </div>
+  
+  <div class="split-right" style="border-left-color: var(--accent-emerald); background-color: rgba(16, 185, 129, 0.05); flex: 1; padding: 1rem;">
+    <h3 style="color: var(--accent-emerald); margin-top: 0;">Jonathan S. &bull; Hành trình biến 12,000 USD thành hơn 1 triệu USD</h3>
+    <ul class="action-list" style="padding: 0; list-style: none; font-size: 0.95rem;">
+      <li style="margin-bottom: 1rem;">
+        <strong>Khởi đầu khiêm tốn (1999):</strong> Jonathan bắt đầu hành trình đầu tư với vỏn vẹn 5,000 USD tiền tiết kiệm cá nhân và 7,000 USD tiền mừng đám cưới.
+      </li>
+      <li style="margin-bottom: 1rem;">
+        <strong>Nghiêm túc tuân thủ CAN SLIM:</strong> Ông áp dụng kỷ luật cắt lỗ tuyệt đối ở mức &le; 8%, chốt lời mục tiêu 20-25% và nắm giữ các siêu cổ phiếu tăng trưởng mạnh mẽ nhất.
+      </li>
+      <li style="margin-bottom: 1rem;">
+        <strong>Kết quả kỳ diệu (2008):</strong> Qua 9 năm đầu tư kiên trì và trải qua cả chu kỳ sụp đổ dot-com, ông đã gia tăng khối tài sản ban đầu lên thành **hơn 1,000,000 USD** (mức tăng trưởng hàng trăm lần).
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="callout" style="margin-top: 1.5rem; border-left-color: var(--accent-emerald);">
+  <div class="callout-icon">💡</div>
+  <div class="callout-content">
+    <strong>Thông điệp từ các câu chuyện thành công:</strong> "Tôi chỉ là một người bình thường, không phải thiên tài, nhưng tôi chăm chỉ học tập và sử dụng IBD như một cẩm nang làm việc thực tế." Thành công không yêu cầu chỉ số IQ vượt trội, nó yêu cầu sự nghiêm túc, chăm chỉ rèn luyện và tính kỷ luật sắt đá.
+    <span class="page-ref">Ch 21 &middot; "Investor Education at Its Best" & "Real Performance"</span>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 21 &amp;middot; CÂU CHUYỆN THÀNH CÔNG 3</div>
+    <h2>Ứng dụng CAN SLIM trong giảng đường</h2>
+<div class="split-layout">
+  <div class="split-left" style="border-left-color: var(--accent-purple); background-color: rgba(139, 92, 246, 0.05); flex: 1; padding: 1rem;">
+    <h3 style="color: var(--accent-purple); margin-top: 0;">Mục sư Larry R. &bull; Đầu tư tài trợ xây dựng nhà thờ</h3>
+    <ul class="action-list" style="padding: 0; list-style: none; font-size: 0.95rem;">
+      <li style="margin-bottom: 1rem;">
+        <strong>Thất bại với môi giới:</strong> Larry tự tìm hiểu thị trường từ tháng 3/1999. Sau 6 tháng để môi giới quản lý vốn nhưng không mang lại kết quả, ông quyết định tự học tại thư viện qua sách O'Neil và IBD.
+      </li>
+      <li style="margin-bottom: 1rem;">
+        <strong>Hiệu suất đột phá:</strong> Bắt đầu tự giao dịch từ tháng 9 với 50,000 USD, ông đã bán toàn bộ danh mục vào tháng 3 năm sau (giai đoạn đỉnh bong bóng dot-com), thu về **174,000 USD** nhờ mẫu hình cốc tay cầm.
+      </li>
+      <li style="margin-bottom: 1rem;">
+        <strong>Mục tiêu phụng sự:</strong> Larry sử dụng toàn bộ số tiền kiếm được để tài trợ xây dựng các nhà thờ mới tại Illinois. Mục tiêu của ông là xây dựng 13 nhà thờ cho cộng đồng.
+      </li>
+    </ul>
+  </div>
+  
+  <div class="split-right" style="border-left-color: var(--accent-cyan); background-color: rgba(6, 182, 212, 0.05); flex: 1; padding: 1rem;">
+    <h3 style="color: var(--accent-cyan); margin-top: 0;">Thầy giáo David C. &bull; Giảng dạy CAN SLIM trong trường học</h3>
+    <ul class="action-list" style="padding: 0; list-style: none; font-size: 0.95rem;">
+      <li style="margin-bottom: 1rem;">
+        <strong>Giáo trình IBD cho học sinh lớp 5:</strong> Tại Guatemala (1997), David dạy học sinh lớp 5 đọc bảng IBD. Các em hào hứng vì IBD xếp hạng cổ phiếu (1-99 và điểm chữ A-F) giống hệt cách chấm điểm học tập ở lớp. Các em tự thi đua tìm các mẫu hình cốc tay cầm.
+      </li>
+      <li style="margin-bottom: 1rem;">
+        <strong>Đoạt giải nhì bang Colorado:</strong> Về Mỹ, David lập câu lạc bộ kinh doanh sau giờ học cho học sinh lớp 6-8. Sử dụng bộ lọc IBD, đội của ông gồm các học sinh nhập cư gốc Ethiopia và Philippines (mới đến Mỹ 1 năm) đã đoạt **giải nhì cuộc thi đầu tư giả lập của bang Colorado**.
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="callout" style="margin-top: 1.5rem; border-left-color: var(--accent-purple);">
+  <div class="callout-icon">🎓</div>
+  <div class="callout-content">
+    <strong>Ý nghĩa giáo dục sâu sắc:</strong> CAN SLIM không phải là một công thức toán học bí ẩn dành riêng cho các nhà toán học. Sự rõ ràng, tính trực quan và bộ lọc xếp hạng chuẩn mực của nó đơn giản đến mức học sinh trung học và những người nhập cư chưa thông thạo tiếng Anh vẫn có thể học, áp dụng và giành chiến thắng.
+    <span class="page-ref">Ch 21 &middot; "Oldies but Goodies"</span>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 21 &amp;middot; CÂU CHUYỆN THÀNH CÔNG 4</div>
+    <h2>Xây dựng tổ ấm &amp; Đạt tỷ suất lợi nhuận mơ ước</h2>
+<div class="split-layout">
+  <div class="split-left" style="border-left-color: var(--accent-emerald); background-color: rgba(16, 185, 129, 0.05); flex: 1; padding: 1rem;">
+    <h3 style="color: var(--accent-emerald); margin-top: 0;">Marilyn E. &bull; Nghỉ hưu sớm & Xây dựng ngôi nhà mơ ước</h3>
+    <ul class="action-list" style="padding: 0; list-style: none; font-size: 0.95rem;">
+      <li style="margin-bottom: 1rem;">
+        <strong>Kiểm chứng thực tế:</strong> Marilyn theo dõi các dự báo thị trường của O'Neil trên CNBC từ cuối thập niên 1980 và phát hiện ông luôn dự báo cực kỳ chính xác. Hai vợ chồng quyết định dành thời gian làm chủ CAN SLIM.
+      </li>
+      <li style="margin-bottom: 1rem;">
+        <strong>Lãi kép & Tự do tài chính:</strong> Marilyn đạt mức tỷ suất sinh lợi **+100%/năm** trong các thị trường bò, và đứng ngoài giữ 100% tiền mặt trong các thị trường gấu.
+      </li>
+      <li style="margin-bottom: 1rem;">
+        <strong>Chất lượng cuộc sống:</strong> Thành công này giúp họ nghỉ hưu sớm, xây dựng ngôi nhà mơ ước và tận hưởng các chuyến du lịch dài ngày khắp châu Âu — một cuộc sống mà họ từng nghĩ không thể đạt được.
+      </li>
+    </ul>
+  </div>
+  
+  <div class="split-right" style="border-left-color: var(--accent-cyan); background-color: rgba(6, 182, 212, 0.05); flex: 1; padding: 1rem;">
+    <h3 style="color: var(--accent-cyan); margin-top: 0;">Florence R. &bull; Kỷ lục lãi kép 57% liên tục trong 10 năm</h3>
+    <ul class="action-list" style="padding: 0; list-style: none; font-size: 0.95rem;">
+      <li style="margin-bottom: 1rem;">
+        <strong>Hiệu suất phi thường:</strong> Florence duy trì mức lợi nhuận kép hàng năm (CAGR) lên đến **57% đều đặn trong suốt 10 năm liên tiếp**.
+      </li>
+      <li style="margin-bottom: 1rem;">
+        <strong>Kiên định kỷ luật làm nên chiến thắng:</strong> Florence khẳng định rằng việc tuân thủ nghiêm ngặt các quy tắc mua và bán của CAN SLIM và hệ thống dữ liệu IBD đóng vai trò quyết định, giúp loại bỏ hoàn toàn cảm xúc cá nhân ra khỏi quá trình vận hành vốn.
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="callout" style="margin-top: 1.5rem; border-left-color: var(--accent-emerald);">
+  <div class="callout-icon">🏠</div>
+  <div class="callout-content">
+    <strong>Mục đích tối hậu của đầu tư:</strong> Đầu tư tài chính không phải là cuộc chơi số liệu vô cảm. Mục đích tối hậu là biến lợi nhuận từ thị trường thành **chất lượng cuộc sống thực tế**: nghỉ hưu sớm, tự do thời gian, xây dựng nhà cửa, du lịch trải nghiệm và chăm sóc những người thân yêu.
+    <span class="page-ref">Ch 21 &middot; "Real Performance" & "Oldies but Goodies"</span>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 21 &amp;middot; ĐÁNH GIÁ CHỨNG CỨ</div>
+    <h2>Đánh giá bằng chứng &amp; Cập nhật thị trường 2026</h2>
+<div class="evidence-card">
+  <div class="evidence-header">
+    <span class="claim-text">Nhà đầu tư cá nhân có thể tự học để đạt tỷ suất sinh lợi vượt trội thị trường</span>
+    <span class="quality-score">⭐⭐⭐⭐☆ 4/5</span>
+  </div>
+  <div class="evidence-type">📈 Thư chứng thực độc giả & Nghiên cứu hàn lâm độc lập</div>
+  <div class="evidence-body">
+    <ul>
+      <li><strong>Chứng cứ gốc:</strong> Hơn 1,000 thư cảm ơn gửi về IBD từ nhiều ngành nghề khác nhau chứng thực mức sinh lời vượt trội; Nghiên cứu "Selecting Superior Securities" của GS. Marc Reinganum xác nhận bộ lọc định lượng đánh bại S&P 500 tới 36.7% giai đoạn 1984-1985. <span class="page-ref">Ch 21 &middot; "Is An Index Fund the Way to Go?"</span></li>
+      <li><strong>Phân tích khoa học (Thiên kiến kẻ sống sót - Survivorship Bias):</strong> Cần lưu ý rằng các bức thư chứng thực luôn chịu ảnh hưởng từ thiên kiến sống sót — những người thành công mới viết thư chia sẻ, còn những người thất bại hoặc bỏ cuộc thường im lặng. Tuy nhiên, tính thực chứng của phương pháp được củng cố vững chắc bởi: (1) Kết quả kiểm toán độc lập đối với tài khoản đầu tư riêng của O'Neil (tăng 20 lần từ 1978-1991, tăng 1500% từ 1998-2000) và (2) Sự thành công của các đội thi giả lập học sinh trung học chứng minh tính dễ chuyển giao và nhân bản của bộ quy tắc.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="evidence-card" style="margin-top: 1.5rem;">
+  <div class="evidence-header">
+    <span class="claim-text">Rút toàn bộ tiền mặt về vị thế đứng ngoài giúp tránh thảm họa thị trường gấu</span>
+    <span class="quality-score">⭐⭐⭐⭐⭐ 5/5</span>
+  </div>
+  <div class="evidence-type">📐 Logic toán học & Kiểm chứng thực tế các cuộc khủng hoảng</div>
+  <div class="evidence-body">
+    <ul>
+      <li><strong>Chứng cứ gốc:</strong> Các trường hợp thực tế của Brian D., Ken C. và Eric M. thoát khỏi thị trường gấu năm 2000 và 2008 bằng cách chuyển đổi sang 100% tiền mặt. <span class="page-ref">Ch 21 &middot; "Market Timing"</span></li>
+      <li><strong>Xác thực thực tế:</strong> Đây là quy tắc có tính xác thực 100% và cực kỳ dễ thực hiện. Tiền mặt có tỷ suất sinh lời bằng 0%, nhưng trong một thị trường gấu giảm 35% (như năm 2008), giữ tiền mặt mang lại tỷ suất **alpha dương 35% tương đối** so với thị trường chung. Điều này bảo vệ sức mua của dòng vốn nguyên vẹn để sẵn sàng mua gom siêu cổ phiếu tại chân sóng tiếp theo.</li>
+    </ul>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 21 &amp;middot; GÓC NHÌN ĐỐI LẬP</div>
+    <h2>Đầu tư tự định hướng vs Đầu tư ủy thác vs Chỉ số thụ động</h2>
+<table class="signal-matrix" style="width: 100%; border-collapse: collapse; font-size: 0.9rem;">
+  <thead>
+    <tr style="background-color: var(--surface);">
+      <th style="padding: 10px; border: 1px solid var(--border);">Khía cạnh</th>
+      <th style="padding: 10px; border: 1px solid var(--border); color: var(--accent-emerald);">Đầu tư Tự định hướng (CAN SLIM)</th>
+      <th style="padding: 10px; border: 1px solid var(--border); color: var(--accent-purple);">Môi giới / Ủy thác Quỹ truyền thống</th>
+      <th style="padding: 10px; border: 1px solid var(--border); color: var(--accent-cyan);">Đầu tư Chỉ số Thụ động (ETF)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th style="padding: 10px; border: 1px solid var(--border); text-align: left;">Mức độ kiểm soát</th>
+      <td style="padding: 10px; border: 1px solid var(--border);"><strong>Cao nhất</strong>. Bạn tự nghiên cứu, tự đặt lệnh mua/bán và kiểm soát 100% tài chính của mình. <span class="page-ref">Ch 21 &middot; Testimony of George G.</span></td>
+      <td style="padding: 10px; border: 1px solid var(--border);"><strong>Thấp</strong>. Giao phó hoàn toàn cho nhà quản lý quỹ hoặc nhân viên môi giới ra quyết định thay bạn.</td>
+      <td style="padding: 10px; border: 1px solid var(--border);"><strong>Không có</strong>. Tài sản tự động phân bổ mô phỏng theo tỷ trọng vốn hóa của chỉ số chung (như S&P 500).</td>
+    </tr>
+    <tr>
+      <th style="padding: 10px; border: 1px solid var(--border); text-align: left;">Hành xử trong khủng hoảng</th>
+      <td class="bullish" style="padding: 10px; border: 1px solid var(--border);"><strong>Bảo vệ vốn chủ động</strong>. Thoát nhanh về vị thế tiền mặt dựa trên chỉ báo xu hướng thị trường chung. <span class="page-ref">Ch 21 &middot; Testimony of Brian D.</span></td>
+      <td class="bearish" style="padding: 10px; border: 1px solid var(--border);"><strong>Thụ động kẹt hàng</strong>. Thường khuyên khách hàng "tiếp tục nắm giữ dài hạn" để duy trì thu phí quản lý tài sản (AUM).</td>
+      <td class="neutral" style="padding: 10px; border: 1px solid var(--border);"><strong>Chấp nhận sụt giảm</strong>. Hứng chịu toàn bộ mức sụt giảm chung của thị trường (ví dụ lỗ 50% năm 1974). <span class="page-ref">Ch 21, p. 7094</span></td>
+    </tr>
+    <tr>
+      <th style="padding: 10px; border: 1px solid var(--border); text-align: left;">Chi phí vận hành</th>
+      <td style="padding: 10px; border: 1px solid var(--border);"><strong>Thấp</strong>. Chỉ mất phí giao dịch trực tiếp cho công ty chứng khoán, không có phí ẩn của quỹ.</td>
+      <td class="warning" style="padding: 10px; border: 1px solid var(--border);"><strong>Rất cao</strong>. Phí quản lý thường niên, phí mua/bán quỹ (loads) bào mòn lãi kép dài hạn. <span class="page-ref">Ch 21 &middot; Testimony of Kent J.</span></td>
+      <td style="padding: 10px; border: 1px solid var(--border);"><strong>Thực sự tối thiểu</strong>. Phí quản lý cực thấp (thường &le; 0.1% hàng năm đối với các ETF lớn).</td>
+    </tr>
+    <tr>
+      <th style="padding: 10px; border: 1px solid var(--border); text-align: left;">Đối tượng phù hợp</th>
+      <td class="opportunity" style="padding: 10px; border: 1px solid var(--border);">Nhà đầu tư nghiêm túc, sẵn sàng học hỏi kỹ thuật và rèn luyện tính kỷ luật tự giác cao độ.</td>
+      <td class="neutral" style="padding: 10px; border: 1px solid var(--border);">Nhà đầu tư bận rộn, chấp nhận hiệu suất trung bình và tin tưởng hoàn toàn vào năng lực của một tổ chức quản lý cụ thể.</td>
+      <td class="opportunity" style="padding: 10px; border: 1px solid var(--border);">Phù hợp với số đông nhà đầu tư đại chúng không chuyên, đầu tư tích sản dài hạn 10-20 năm.</td>
+    </tr>
+  </tbody>
+</table>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 21 &amp;middot; RỦI RO &amp; PHẢN BIỆN</div>
+    <h2>Rào cản học tập &amp; Rủi ro tâm lý</h2>
+<div class="content-card">
+  <p>Mặc dù các câu chuyện thành công mang lại động lực tinh thần to lớn, việc phóng đại các trường hợp đột phá dễ tạo ra ảo tưởng "làm giàu nhanh chóng" và che giấu các rủi ro vận hành thực tế:</p>
+
+  <div class="bullet-grid" style="margin-top: 1.5rem;">
+    <div class="bullet-card">
+      <div class="bullet-icon">📈</div>
+      <h4>1. Rào cản khốc liệt của đường cong học tập</h4>
+      <p>
+        Hầu hết các bức thư chứng thực chỉ làm nổi bật kết quả huy hoàng ở đích đến mà bỏ qua giai đoạn thử thách đau đớn ban đầu. Độc giả David C. thừa nhận ông đã liên tục vi phạm quy tắc, giao dịch cảm tính vô kỷ luật và "bào mòn" tài khoản của mình về mức rất thấp trong suốt 2 năm đầu tiên trước khi xây dựng được tính kỷ luật. Đường cong học tập đòi hỏi chi phí bằng tiền mặt và thời gian thực chiến rất lớn.
+      </p>
+    </div>
+
+    <div class="bullet-card">
+      <div class="bullet-icon">🫠</div>
+      <h4>2. Thiên kiến tâm lý và sự tự phụ của nhà đầu tư</h4>
+      <p>
+        Việc tự giao dịch (self-directed) đòi hỏi khả năng tự kiểm soát cảm xúc cực cao. Khi gặt hái thành công ban đầu trong thị trường bò, nhà đầu tư rất dễ nảy sinh tâm lý tự phụ "quá tự tin vào bản thân" (overconfidence), dẫn đến việc tăng quy mô margin sai thời điểm hoặc bỏ qua quy tắc cắt lỗ 8%, khiến tài khoản sụt giảm thảm hại khi thị trường đảo chiều đột ngột.
+      </p>
+    </div>
+
+    <div class="bullet-card">
+      <div class="bullet-icon">🖥️</div>
+      <h4>3. Tác động của cấu trúc thị trường hiện đại</h4>
+      <p>
+        Các câu chuyện thành công trong sách chủ yếu diễn ra từ giai đoạn những năm 1990 đến 2008. Ngày nay, thị trường tài chính đã dịch chuyển mạnh mẽ sang giao dịch thuật toán tự động và AI. Các mô hình bứt phá (breakout) kinh điển dễ bị nhiễu sóng hơn. Nếu nhà đầu tư cá nhân áp dụng một cách cứng nhắc mà không biết linh hoạt thích ứng với bối cảnh vĩ mô và cấu trúc thanh khoản mới, họ rất dễ chịu tổn thất.
+      </p>
+    </div>
+  </div>
+
+  <div class="callout" style="margin-top: 1.5rem; border-left-color: var(--accent-red); background-color: rgba(239, 68, 68, 0.05);">
+    <div class="callout-icon">⚠️</div>
+    <div class="callout-content">
+      <strong>Lời khuyên cân bằng:</strong> Hãy coi các câu chuyện thành công là minh chứng rằng **hệ thống có thể hoạt động hiệu quả**, chứ không phải là lời hứa hẹn về một chiến thắng dễ dàng. Bạn phải chuẩn bị tinh thần trải qua giai đoạn huấn luyện nghiêm ngặt, chấp nhận những thất bại nhỏ ban đầu và liên tục rèn luyện kỷ luật thép để làm chủ hệ thống.
+    </div>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 21 &amp;middot; SƠ ĐỒ KHÁI NIỆM</div>
+    <h2>Bản đồ tri thức tích hợp tri thức Chương 21</h2>
+<div class="content-card" style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%;">
+  <div class="mermaid" style="width: 100%; max-height: 70vh;">
+    graph TB
+        %% Nguồn lực nền tảng
+        F1["Nguồn lực nền tảng: Sách & IBD"] --> C1["Chương 21: Hiện thực hóa thành công thực chiến"]
+        F2["Quy tắc cốt lõi: Cắt lỗ nhỏ & Mua trung bình giá lên"] --> C1
+        F3["Phương pháp: Phân tích kỹ thuật & Đọc đồ thị"] --> C1
+
+        %% Động lực cốt lõi trong Chương 21
+        C1 --> A1["Vượt qua rào cản học tập ban đầu"]
+        C1 --> A2["Rèn luyện kỷ luật thép & Thiết lập Checklist"]
+        C1 --> A3["Loại bỏ ý kiến cá nhân, theo sát Sự thật thị trường"]
+
+        %% Mục tiêu cuối cùng
+        A1 & A2 & A3 --> G1["Đạt hiệu suất danh mục vượt trội (Alpha)"]
+        A1 & A2 & A3 --> G2["Tự do tài chính & Làm chủ cuộc sống"]
+
+        %% Định dạng phong cách
+        style C1 fill:#8B7CFF,stroke:#2A2D33,color:#F7F7F5
+        style G1 fill:#10B981,stroke:#047857,color:#F7F7F5
+        style G2 fill:#10B981,stroke:#047857,color:#F7F7F5
+        style A2 fill:#F59E0B,stroke:#D97706,color:#F7F7F5
+        
+        classDef default fill:#F4F4F6,stroke:#D1D1D6,color:#1C1C1E;
+  </div>
+  
+  <div class="callout" style="margin-top: 1.5rem; width: 100%;">
+    <div class="callout-icon">💡</div>
+    <div class="callout-content">
+      <strong>Sơ đồ phát triển:</strong> Các nhân vật thành công trong Chương 21 đều đi qua cùng một con đường: tiếp cận tài liệu đúng đắn, trải qua thử thách ban đầu để loại bỏ cái tôi, rèn luyện kỷ luật thép với bộ quy tắc rõ ràng, và cuối cùng gặt hái thành quả tự do tài chính bền vững.
+    </div>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 21 &amp;middot; HƯỚNG DẪN THỰC THI</div>
+    <h2>Kế hoạch hành động 4 giai đoạn ứng dụng thực tế</h2>
+<div class="phase-progress" style="margin-bottom: 2rem;">
+  <div class="phase active">P1: Học tập & Xây dựng niềm tin (Tuần 1)</div>
+  <div class="phase">P2: Loại bỏ nhiễu & Lập Checklist (Tuần 2-4)</div>
+  <div class="phase">P3: Thực chiến kỷ luật (Tháng 2-3)</div>
+  <div class="phase">P4: Làm chủ & Chia sẻ (Tháng 4+)</div>
+</div>
+
+<div class="content-card">
+  <div class="checklist">
+    <h3 style="color: var(--accent); margin-top: 0;">Lộ trình học tập và hiện thực hóa thành công từ các câu chuyện thực chiến:</h3>
+    
+    <div style="margin-bottom: 1.2rem;">
+      <strong>Phase 1: Học tập & Xây dựng niềm tin (Tuần 1)</strong>
+      <ul>
+        <li>[ ] Nghiên cứu kỹ các câu chuyện thành công để hiểu rằng bất kỳ ai (kể cả giáo viên, phi công, bác sĩ) cũng có thể làm chủ hệ thống nếu nỗ lực.</li>
+        <li>[ ] Chấp nhận thực tế về đường cong học tập: Thua lỗ ban đầu là bình thường, điều quan trọng là ghi chép lỗi lầm và rút kinh nghiệm <span class="page-ref">Ch 21 &middot; Testimony of David C.</span>.</li>
+      </ul>
+    </div>
+
+    <div style="margin-bottom: 1.2rem;">
+      <strong>Phase 2: Loại bỏ nhiễu & Lập Checklist (Tuần 2-4)</strong>
+      <ul>
+        <li>[ ] Ngắt kết nối với các kênh tin tức giật gân, các diễn đàn chứng khoán đầy tin đồn để tránh bị ảnh hưởng bởi tâm lý đám đông <span class="page-ref">Ch 21 &middot; Testimony of Norm D.</span>.</li>
+        <li>[ ] Xây dựng một Checklist giao dịch cá nhân rõ ràng dựa trên quy tắc CAN SLIM và dán ở góc làm việc để đối chiếu trước mỗi lệnh mua/bán.</li>
+      </ul>
+    </div>
+
+    <div style="margin-bottom: 1.2rem;">
+      <strong>Phase 3: Thực chiến kỷ luật & Giới hạn quy mô (Tháng 2-3)</strong>
+      <ul>
+        <li>[ ] Bắt đầu giao dịch với quy mô vốn nhỏ để rèn luyện tâm lý thực thi cắt lỗ 7-8% nghiêm ngặt, coi đó là chi phí bảo hiểm bắt buộc <span class="page-ref">Ch 21 &middot; Testimony of Don B.</span>.</li>
+        <li>[ ] Duy trì thói quen đọc chuyên mục "The Big Picture" trên IBD/Investors.com 15 phút mỗi ngày để đồng điệu với xu hướng thị trường chung <span class="page-ref">Ch 21 &middot; Testimony of George M.</span>.</li>
+      </ul>
+    </div>
+
+    <div>
+      <strong>Phase 4: Làm chủ hệ thống & Nhân rộng thành quả (Tháng 4+)</strong>
+      <ul>
+        <li>[ ] Đạt trạng thái kỷ luật tự giác, cắt lỗ nhanh chóng và mua trung bình giá lên một cách có hệ thống mà không bị cái tôi chi phối.</li>
+        <li>[ ] Chia sẻ, dạy lại phương pháp hoặc thảo luận cùng nhóm nhà đầu tư kỷ luật để củng cố và cọ xát kiến thức của mình một cách sâu sắc hơn <span class="page-ref">Ch 21 &middot; Testimony of Mike S.</span>.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 21 &amp;middot; HÀNH ĐỘNG CUỐI CÙNG</div>
+    <h2>Hành động cuối cùng</h2>
+<div class="split-layout">
+  <div class="split-left" style="flex: 1.2;">
+    <ul class="action-list" style="padding: 0; list-style: none;">
+      <li class="action-item" style="margin-bottom: 1.5rem;">
+        <div>
+          <div class="action-headline">1. Thiết lập bộ lọc nguồn thông tin sạch</div>
+          <div class="action-detail">
+            Kiên quyết loại bỏ hoàn toàn các ý kiến cá nhân thiên lệch, các tin đồn vô căn cứ trên mạng xã hội hay tivi. Chỉ tập trung quan sát hành động giá, khối lượng thực tế và dữ liệu khách quan từ thị trường. <span class="page-ref">Ch 21 &middot; Testimony of Norm D.</span>
+          </div>
+        </div>
+      </li>
+      <li class="action-item" style="margin-bottom: 1.5rem;">
+        <div>
+          <div class="action-headline">2. Xây dựng Checklist kỷ luật cá nhân</div>
+          <div class="action-detail">
+            Viết ra một Checklist quy trình giao dịch ngắn gọn bao gồm: tiêu chí chọn cổ phiếu, quy tắc mua chuẩn và cam kết cắt lỗ 7-8%. Thực hiện đối chiếu nghiêm ngặt checklist này trước mỗi lần ra quyết định. <span class="page-ref">Ch 21 &middot; Testimony of David C.</span>
+          </div>
+        </div>
+      </li>
+      <li class="action-item">
+        <div>
+          <div class="action-headline">3. Duy trì thói quen đọc "The Big Picture" hàng ngày</div>
+          <div class="action-detail">
+            Dành ra 15 phút mỗi ngày để cập nhật xu hướng thị trường chung qua chuyên mục "The Big Picture". Chuẩn bị sẵn tâm thế rút về tiền mặt bảo vệ thành quả khi thị trường có dấu hiệu phân phối mạnh. <span class="page-ref">Ch 21 &middot; Testimony of George M.</span>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <div class="split-right" style="flex: 0.8; display: flex; align-items: center; justify-content: center;">
+    <figure class="image-slot hero" style="width: 100%;">
+      <div class="image-prompt">
+        <span class="image-prompt-label">AI Image Prompt — DALL-E 3 / Midjourney</span>
+        <p class="image-prompt-text">"A cozy, sunlit study room with a large wooden desk, an open notebook showing charts and neat checklists, a laptop showing green stock patterns, soft light filtering through a window, a cup of warm coffee next to it, peaceful and disciplined atmosphere, digital art style, warm emerald and gold tones #059669 #D97706"</p>
+        <span class="image-prompt-hint">Paste this into ChatGPT/DALL-E/Midjourney, save as images/ch21_studyroom.png, and replace this block with &lt;img src="images/ch21_studyroom.png" alt="Disciplined study room"&gt;</span>
+      </div>
+    </figure>
+  </div>
+</div>
+
+  </section>
+
+</div>
+
+<div class="nav-controls">
+  <button class="nav-btn" id="prevBtn" onclick="prevSlide()" aria-label="Previous slide">&#8592;</button>
+  <div class="counter" id="counter" aria-live="polite">1 / 1</div>
+  <button class="nav-btn" id="nextBtn" onclick="nextSlide()" aria-label="Next slide">&#8594;</button>
+</div>
+
+<script src="common.js"></script>
+</body>
+</html>

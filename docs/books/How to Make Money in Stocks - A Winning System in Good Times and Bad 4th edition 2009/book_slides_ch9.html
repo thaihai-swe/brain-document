@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How to Make Money in Stocks — Chapter 9</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="common.css">
+<script src="https://cdn.jsdelivr.net/npm/@panzoom/panzoom@4.5.1/dist/panzoom.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11.10.0/dist/mermaid.min.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div class="progress-bar" id="progressBar"></div>
+
+<div class="chapter-menu">
+  <button class="menu-btn" id="chapterMenuBtn" onclick="toggleChapterMenu()" aria-haspopup="true" aria-expanded="false">Chapters &#9662;</button>
+  <div class="chapter-menu-panel" id="chapterMenuPanel" role="menu"></div>
+</div>
+
+<div class="slide-container" id="slideContainer">
+
+  <section class="slide" aria-hidden="false">
+<h1>How to Make Money in Stocks</h1>
+<p class="subtitle">Chương 9: M = Xu Hướng Thị Trường: Cách Nhận Diện Và Hành Động Theo Chu Kỳ<br><span style="font-size: 0.9em; opacity: 0.85;">(M = Market Direction: How You Can Determine It)</span></p>
+
+<figure class="image-slot hero">
+  <div class="image-prompt">
+    <span class="image-prompt-label">AI Image Prompt — Giới hạn quota Image-gen của hệ thống tạm thời hết</span>
+    <p class="image-prompt-text">"A majestic golden bull and a dark silver bear facing off in a dramatic, mist-filled arena, volumetric lighting, epic cinematic style, high contrast, 3d render."</p>
+    <span class="image-prompt-hint">Bạn có thể tạo ảnh trên Midjourney, lưu dưới tên 'ch9_title_hero.png' vào thư mục 'images/' và thay thế khối HTML này bằng thẻ &lt;img src="images/ch9_title_hero.png"&gt;</span>
+  </div>
+</figure>
+
+<div class="meta-grid">
+  <div class="meta-item">
+    <div class="meta-label">Tác giả</div>
+    <div class="meta-value">William J. O'Neil</div>
+  </div>
+  <div class="meta-item">
+    <div class="meta-label">Độ sâu phân tích</div>
+    <div class="meta-value">DEEP+ Mode (23 Slides)</div>
+  </div>
+  <div class="meta-item">
+    <div class="meta-label">Đối tượng mục tiêu</div>
+    <div class="meta-value">Nhà đầu tư cá nhân</div>
+  </div>
+  <div class="meta-item">
+    <div class="meta-label">Ngôn ngữ</div>
+    <div class="meta-value">Song ngữ Anh - Việt</div>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide chapter-divider">
+<div class="chapter-number">Chương 9</div>
+<h2>M = Xu Hướng Thị Trường</h2>
+<p class="chapter-meta">Ước tính thời gian đọc: 50 phút (chế độ DEEP+) &middot; Độ khó: Cao &middot; Khái niệm chính: Xu hướng thị trường (Market Direction), Nhận diện Đỉnh qua Ngày phân phối (Distribution Days), Nhận diện Đáy qua Ngày bùng nổ theo đà (Follow-Through Day - FTD), Các chỉ số thị trường chung, Chu kỳ kinh tế dẫn - trễ, Đa dạng hóa danh mục vs Quản trị vị thế, Phân tích hành động giá & khối lượng hàng ngày</p>
+
+<figure class="image-slot hero">
+  <div class="image-prompt">
+    <span class="image-prompt-label">AI Image Prompt — Giới hạn quota Image-gen của hệ thống tạm thời hết</span>
+    <p class="image-prompt-text">"A close-up of a glass aquarium with colorful fish swimming inside, one student sitting in a classroom and observing closely with a notebook, soft study lighting, retro film aesthetic, atmospheric."</p>
+    <span class="image-prompt-hint">Bạn có thể tạo ảnh trên Midjourney, lưu dưới tên 'ch9_divider_hero.png' vào thư mục 'images/' và thay thế khối HTML này bằng thẻ &lt;img src="images/ch9_divider_hero.png"&gt;</span>
+  </div>
+</figure>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 9 &amp;middot; TỔNG QUAN TRỰC QUAN 1</div>
+    <h2>Các chỉ số thị trường và checklist quan sát hàng ngày</h2>
+<div class="mermaid">
+graph TD
+    A["CÁC CHỈ SỐ THỊ TRƯỜNG CHUNG (THE GENERAL MARKET)"] --> B["S&P 500 (Đại diện 500 vốn hóa lớn)"]
+    A --> C["Nasdaq Composite (Công nghệ & Tăng trưởng trẻ)"]
+    A --> D["Dow Jones (30 cổ phiếu truyền thống)"]
+    A --> E["NYSE Composite (Toàn bộ cổ phiếu niêm yết NYSE)"]
+    
+    B --> F["PHÂN TÍCH HÀNG NGÀY (PRICE & VOLUME ANALYSIS)"]
+    C --> F
+    D --> F
+    E --> F
+    
+    F --> G["Giá: % tăng/giảm, spread dao động, vị thế đóng cửa"]
+    F --> H["Khối lượng: Lớn/nhỏ so với hôm trước & trung bình 50 phiên"]
+    F --> I["Xu hướng: Mối quan hệ với MA 50 ngày, MA 200 ngày"]
+
+    style A fill:#059669,stroke:#2A2D33,color:#F7F7F5
+    style F fill:#8B7CFF,stroke:#2A2D33,color:#F7F7F5
+</div>
+<div class="callout" style="margin-top: 1rem;">
+  <div class="callout-icon">📊</div>
+  <div class="callout-content">
+    <strong>Quan sát thị trường trực tiếp:</strong> O'Neil nhấn mạnh việc theo dõi các chỉ số thị trường chung giống như việc quan sát bể cá của giáo sư Harvard hay phân tích chuyển động ném bóng của cầu thủ Lou Brock. Bạn phải tự mình theo dõi biểu đồ giá và khối lượng hàng ngày của các chỉ số chính để nhận diện xu hướng thay vì nghe theo các dự báo kinh tế. <span class="page-ref">Ch 9 &middot; "Why Is Skilled, Careful Market Observation So Important?"</span>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 9 &amp;middot; TỔNG QUAN TRỰC QUAN 2</div>
+    <h2>Chu kỳ phân phối đỉnh của tổ chức</h2>
+<div class="mermaid">
+graph TD
+    A["Thị trường trong xu hướng tăng mạnh (Uptrend)"] --> B["Xuất hiện Ngày Phân Phối 1 (Volume lớn hơn, giá giảm hoặc stalling)"]
+    B --> C["Tích lũy tiếp 3-5 Ngày Phân Phối trong vòng 4-5 tuần"]
+    C --> D["Các siêu cổ phiếu dẫn đầu bộc lộ tín hiệu Tạo đỉnh Cao trào (Climax Tops)"]
+    D --> E["HÀNH ĐỘNG PHÒNG THỦ: Hạ Margin, Bán thu tiền mặt 25%-50%+"]
+    
+    style A fill:#F7F7F5,stroke:#2A2D33,color:#2A2D33
+    style C fill:#D97706,stroke:#2A2D33,color:#F7F7F5
+    style E fill:#DC2626,stroke:#2A2D33,color:#F7F7F5
+</div>
+<div class="callout" style="margin-top: 1rem; border-color: var(--accent-red);">
+  <div class="callout-icon">⚠️</div>
+  <div class="callout-content">
+    <strong>Bản chất phân phối đỉnh:</strong> Hoạt động bán phân phối của các tổ chức lớn luôn diễn ra âm thầm ngay khi thị trường *vẫn đang hướng lên*. Điều này lý giải vì sao đám đông nhỏ lẻ thường hoàn toàn bị bất ngờ khi thị trường đột ngột đảo chiều sụp đổ. Nhận diện ngày phân phối giúp bạn thoát hàng cùng tổ chức trước khi quá muộn. <span class="page-ref">Ch 9 &middot; "How You Can Learn to Identify Stock Market Tops"</span>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 9 &amp;middot; TỔNG QUAN TRỰC QUAN 3</div>
+    <h2>Chu kỳ tạo đáy và Ngày bùng nổ theo đà (FTD)</h2>
+<div class="mermaid">
+graph TD
+    A["Thị trường trong xu hướng giảm (Downtrend)"] --> B["Ngày 1 nỗ lực hồi phục (Chỉ số đóng cửa tăng điểm sau khi lập đáy mới)"]
+    B --> C["Giá duy trì trên mức đáy mới trong các phiên tiếp theo"]
+    C --> D["Ngày Bùng Nổ Theo Đà - FTD (Xuất hiện từ Ngày 4-7+, Giá tăng mạnh + Vol đột biến)"]
+    D --> E["XÁC NHẬN XU HƯỚNG TĂNG: Giải ngân mua mới các cổ phiếu dẫn đầu tại điểm pivot"]
+    
+    style A fill:#F7F7F5,stroke:#2A2D33,color:#2A2D33
+    style D fill:#8B7CFF,stroke:#2A2D33,color:#F7F7F5
+    style E fill:#059669,stroke:#2A2D33,color:#F7F7F5
+</div>
+<div class="callout" style="margin-top: 1rem; border-color: var(--accent-emerald);">
+  <div class="callout-icon">🚀</div>
+  <div class="callout-content">
+    <strong>Bản chất của Ngày bùng nổ theo đà (FTD):</strong> Không có một thị trường tăng giá mới nào bắt đầu mà thiếu đi sự xuất hiện của Ngày bùng nổ theo đà. Nó đóng vai trò là tiếng súng phát lệnh xác nhận dòng tiền lớn của tổ chức chính thức quay trở lại mua gom cổ phiếu. Giải ngân trước khi có FTD là cực kỳ nguy hiểm, vì các nỗ lực hồi phục ngắn hạn rất dễ bị thất bại và tiếp tục lập đáy mới. <span class="page-ref">Ch 9 &middot; "How You Can Spot Stock Market Bottoms"</span>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 9 &amp;middot; TÓM TẮT CHƯƠNG</div>
+    <h2>Tóm tắt cấu trúc chữ M</h2>
+<div class="content-card">
+  <div class="summary-text">
+    <p><strong>Bối cảnh (Setup):</strong> Tại sao xu hướng thị trường chung (chữ M) lại là nhân tố quan trọng nhất quyết định sự thành bại của toàn bộ hệ thống CAN SLIM? Làm thế nào để tự mình nhận diện chính xác xu hướng thị trường hàng ngày mà không bị nhiễu bởi các tin tức kinh tế hay khuyến nghị phân tích xung quanh?</p>
+    <p><strong>Luận điểm chính (Argument):</strong> Thị trường chung là trọng tài tối cao. Ba trong số bốn cổ phiếu (75%) sẽ di chuyển đồng pha với xu hướng của các chỉ số chính. Do đó, việc xác định đúng thị trường đang ở giai đoạn nào quyết định 50% kết quả đầu tư. Xu hướng thị trường được đọc vị chính xác nhất thông qua việc phân tích hành động giá và khối lượng hàng ngày của các chỉ số chính (S&P 500, Nasdaq, DJIA) thay vì phân tích kinh tế vĩ mô. Nhà đầu tư bắt buộc phải học cách đếm Ngày phân phối (Distribution Days) để chủ động phòng vệ hạ tỷ trọng khi thị trường tạo đỉnh, và nhận diện Ngày bùng nổ theo đà (Follow-Through Day - FTD) để giải ngân mạnh trở lại khi thị trường tạo đáy thành công.</p>
+    <p><strong>Bằng chứng (Evidence):</strong> Các cuộc sụp đổ lịch sử năm 1929, 1973-1974, 2000-2002 và 2008 đã phá hủy hoàn toàn tài sản của những nhà đầu tư trung thành với chiến lược nắm giữ thụ động. Ngược lại, dữ liệu thống kê từ các độc giả IBD ứng dụng nguyên tắc đếm 5 ngày phân phối chứng minh trên 60% nhà đầu tư đã bảo vệ được vốn bằng cách bán hạ tỷ trọng và ôm tiền mặt trước các cú sập năm 2000 và 2008. <span class="page-ref">Ch 9 &middot; "How CAN SLIM and IBD Red-Flagged the 2007 Top..."</span></p>
+    <p><strong>Hệ quả (Implications):</strong> Tuyệt đối không bao giờ tranh cãi hay cố gắng dự báo thị trường. Thực thi hành động robot: Khi thị trường tích lũy phân phối đỉnh, tiến hành thu hẹp danh mục, hạ margin và bảo vệ lợi nhuận. Khi thị trường xác nhận sóng tăng mới qua FTD, nhanh chóng giải ngân vào các cổ phiếu dẫn đầu có nền tảng cơ bản xuất sắc vừa bứt phá nền giá tích lũy.</p>
+    <p><strong>Tranh luận (Controversy):</strong> Phản bác mạnh mẽ định kiến kinh điển của phố Wall về chiến lược "Mua và nắm giữ dài hạn" (Buy and Hold) và quan điểm "Không ai có thể căn thời điểm thị trường" (You can't time the market). O'Neil chứng minh nhà đầu tư cá nhân hoàn toàn có thể căn thời điểm thị trường cực kỳ hiệu quả nhờ lợi thế quy mô nhỏ và tính linh hoạt cao.</p>
+    <p><strong>Mối liên kết (Connection):</strong> Gắn kết trực tiếp chữ M với toàn bộ các chương cơ bản trước đó (C, A, N, S, L, I). Dù bạn có chọn đúng siêu cổ phiếu đáp ứng hoàn hảo các tiêu chuẩn cơ bản và kỹ thuật, nếu bạn giải ngân sai xu hướng thị trường chung (chữ M đang giảm), cổ phiếu của bạn vẫn sẽ sụt giảm sâu cùng thị trường.</p>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 9 &amp;middot; Ý TƯỞNG CỐT LÕI</div>
+    <h2>Ý tưởng cốt lõi</h2>
+<div class="takeaway-hero">
+  <div class="kicker">CH 9 &middot; Ý TƯỞNG CỐT LÕI</div>
+  <div class="headline">"Bạn có thể chọn đúng cổ phiếu cơ bản xuất sắc nhất, nhưng nếu bạn sai về hướng đi của thị trường chung (chữ M) và thị trường lao dốc, 3 trong số 4 cổ phiếu của bạn sẽ rơi tự do và bạn sẽ thua lỗ nặng."</div>
+  <div class="subline">Thị trường chung là trọng tài tối cao của trò chơi đầu tư. Nhà đầu tư thông minh không dự đoán thị trường, họ học cách đọc vị và hành động đồng điệu với xu thế thực tế hàng ngày.</div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 9 &amp;middot; BÀI HỌC CHỦ CHỐT</div>
+    <h2>Bài học chủ chốt</h2>
+<div class="takeaway-list">
+  <div class="takeaway-item">
+    <div class="takeaway-badge">1</div>
+    <div class="takeaway-content">
+      <strong>Thị trường chung quyết định 75% chuyển động của cổ phiếu (Market Rules 75% of Moves)</strong>
+      <div class="takeaway-detail">
+        <ul>
+          <li><strong>Ý nghĩa:</strong> Đa số cổ phiếu không thể chống lại xu hướng của thị trường chung. Khi thị trường gấu xuất hiện, kể cả các siêu cổ phiếu dẫn đầu mạnh mẽ nhất cũng sẽ bị bán tháo và điều chỉnh sâu theo các chỉ số.</li>
+          <li><strong>Bằng chứng:</strong> Thống kê lịch sử cho thấy 3 trong 4 cổ phiếu (75%) sẽ rụng rơi đồng pha với các chỉ số chính (S&P 500, Nasdaq, DJIA) khi thị trường điều chỉnh hoặc sụp đổ. <span class="page-ref">Ch 9 &middot; §CHAPTER 9</span></li>
+          <li><strong>Ứng dụng:</strong> Chỉ giải ngân mua mới khi thị trường chung ở trạng thái xu hướng tăng được xác nhận. Rút về thế phòng thủ khi thị trường chung bước vào pha điều chỉnh.</li>
+          <li><strong>Cảnh báo:</strong> Việc cố gắng tìm kiếm các cổ phiếu "đi ngược thị trường" trong xu hướng giảm thường mang lại kết cục thua lỗ nặng nề và kiệt sức tinh thần.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="takeaway-item">
+    <div class="takeaway-badge">2</div>
+    <div class="takeaway-content">
+      <strong>Nhận diện đỉnh thị trường qua Ngày phân phối (Spotting Tops via Distribution Days)</strong>
+      <div class="takeaway-detail">
+        <ul>
+          <li><strong>Ý nghĩa:</strong> Dòng tiền tổ chức lớn luôn âm thầm bán phân phối thoát hàng ngay khi chỉ số thị trường vẫn đang tăng rướn lập các mức cao mới.</li>
+          <li><strong>Bằng chứng:</strong> Một ngày phân phối xuất hiện khi chỉ số chính đóng cửa giảm (>0.2%) hoặc stalling với khối lượng giao dịch lớn hơn ngày hôm trước. Việc xuất hiện liên tiếp 4 đến 5 ngày phân phối trong vòng 4-5 tuần là tín hiệu tạo đỉnh cực kỳ đáng tin cậy. <span class="page-ref">Ch 9 &middot; "How You Can Learn to Identify Stock Market Tops"</span></li>
+          <li><strong>Ứng dụng:</strong> Theo dõi và đếm số lượng ngày phân phối hàng ngày. Khi đạt mốc 4-5 ngày, hãy chủ động bán thu hẹp vị thế và rút hoàn toàn margin về tiền mặt.</li>
+          <li><strong>Cảnh báo:</strong> Đừng chờ đợi tin tức vĩ mô xấu xuất hiện mới bán. Biểu đồ giá/khối lượng của các chỉ số luôn đi trước và phản ánh sớm tin tức kinh tế nhiều tháng.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="takeaway-item">
+    <div class="takeaway-badge">3</div>
+    <div class="takeaway-content">
+      <strong>Xác nhận đáy thị trường bằng Ngày bùng nổ theo đà (Follow-Through Days)</strong>
+      <div class="takeaway-detail">
+        <ul>
+          <li><strong>Ý nghĩa:</strong> Không có một xu hướng tăng giá bền vững nào bắt đầu mà thiếu đi Ngày bùng nổ theo đà (FTD). Đây là tiếng súng phát lệnh xác nhận dòng tiền lớn quay trở lại thị trường.</li>
+          <li><strong>Bằng chứng:</strong> FTD xuất hiện từ ngày thứ 4 đến ngày thứ 7+ của nỗ lực hồi phục, thể hiện bằng một phiên chỉ số chính tăng mạnh (>1.0%) với khối lượng bùng nổ vượt trội ngày hôm trước và vượt trung bình 50 phiên. <span class="page-ref">Ch 9 &middot; "After the Initial Decline off the Top..."</span></li>
+          <li><strong>Ứng dụng:</strong> Kiên nhẫn đứng ngoài ôm tiền mặt trong xu hướng giảm và chỉ giải ngân mua mới sau khi xuất hiện FTD. Tập trung vào các cổ phiếu dẫn dắt bứt phá nền giá tích lũy sớm nhất.</li>
+          <li><strong>Cảnh báo:</strong> Rất nhiều đợt hồi phục ngắn hạn sẽ thất bại và tiếp tục phá đáy nếu không có FTD xác nhận. Mua dò đáy sớm trước FTD là cực kỳ nguy hiểm.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="takeaway-item">
+    <div class="takeaway-badge">4</div>
+    <div class="takeaway-content">
+      <strong>Xoay chuyển linh hoạt và Kỷ luật bảo vệ vốn (Capital Preservation Strategy)</strong>
+      <div class="takeaway-detail">
+        <ul>
+          <li><strong>Ý nghĩa:</strong> Rào cản lớn nhất của nhà đầu tư cá nhân là sự bảo thủ và niềm tin mù quáng vào chiến lược nắm giữ dài hạn của phố Wall. Bạn cần thay đổi trạng thái linh hoạt đồng điệu với thị trường.</li>
+          <li><strong>Bằng chứng:</strong> Thảm kịch của các cổ phiếu quốc dân như Coca-Cola (1998) hay nhóm công nghệ (2000-2002) chứng minh việc nắm giữ thụ động qua thị trường gấu sẽ chôn vùi lợi nhuận và phá hủy tài khoản của bạn. <span class="page-ref">Ch 9 &middot; "The Myths about “Long-Term Investing”..."</span></li>
+          <li><strong>Ứng dụng:</strong> Sẵn sàng rút toàn bộ danh mục về tiền mặt khi thị trường chung suy thoái. Lợi thế lớn nhất của bạn là quy mô nhỏ, có thể thoát ra chỉ trong vài phút.</li>
+          <li><strong>Cảnh báo:</strong> Cắt lỗ tuyệt đối ở mức 7% - 8% để tự động bảo vệ tài khoản của bạn khỏi các biến cố sụp đổ lớn của thị trường gấu.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 9 &amp;middot; TRÍCH DẪN ĐẮT GIÁ</div>
+    <h2>Trích dẫn đắt giá</h2>
+<div class="quote-block" style="margin-bottom: 2rem;">
+  <p class="quote-text">"You can be right about every one of the factors in the last six chapters, but if you’re wrong about the direction of the general market, and that direction is down, three out of four of your stocks will plummet..."</p>
+  <p class="quote-context"><strong>— William J. O'Neil</strong>, khẳng định tính tối cao của xu hướng thị trường chung. <span class="page-ref">Ch 9 &middot; §CHAPTER 9</span></p>
+  <div style="font-size: 0.95rem; color: var(--text-secondary); margin-top: 0.5rem; line-height: 1.5;">
+    <strong>Bản dịch:</strong> "Bạn có thể đúng về mọi yếu tố trong sáu chương vừa qua, nhưng nếu bạn sai về hướng đi của thị trường chung, và hướng đi đó là đi xuống, ba trong số bốn cổ phiếu của bạn sẽ giảm sâu cùng với các chỉ số trung bình của thị trường..."<br>
+    <strong>Phân tích:</strong> Chữ M là bộ lọc quan trọng nhất. Dù cổ phiếu của bạn có đạt điểm tối đa ở các chữ cái C-A-N-S-L-I, lực hút của thị trường gấu vẫn sẽ kéo sụt giảm 75% số cổ phiếu. Không có cổ phiếu nào là bất khả xâm phạm.
+  </div>
+</div>
+
+<div class="quote-block" style="margin-bottom: 2rem;">
+  <p class="quote-text">"If you want to learn anything about fish, sit in front of a fishbowl and look at fish."</p>
+  <p class="quote-context"><strong>— William J. O'Neil</strong>, trích dẫn bài học từ giáo sư Harvard về triết lý quan sát thực nghiệm. <span class="page-ref">Ch 9 &middot; "Why Is Skilled, Careful Market Observation So Important?"</span></p>
+  <div style="font-size: 0.95rem; color: var(--text-secondary); margin-top: 0.5rem; line-height: 1.5;">
+    <strong>Bản dịch:</strong> "Nếu bạn muốn học bất kỳ điều gì về cá, hãy ngồi trước bể cá và quan sát cá."<br>
+    <strong>Phân tích:</strong> Cách duy nhất để đọc vị thị trường là tự mình quan sát, phân tích biểu đồ giá và khối lượng của các chỉ số chính hàng ngày. Đừng tìm đọc các lý thuyết kinh tế xa vời hay các bài báo phân tích của bên thứ ba, vì chúng chỉ tạo ra sự nghi ngờ và mơ hồ.
+  </div>
+</div>
+
+<div class="quote-block">
+  <p class="quote-text">"Don’t ever let anyone tell you that you can’t time the market. This is a giant myth passed on mainly by Wall Street, the media, and those who have never been able to do it..."</p>
+  <p class="quote-context"><strong>— William J. O'Neil</strong>, phá vỡ lầm tưởng kinh điển về việc không thể căn thời điểm thị trường. <span class="page-ref">Ch 9 &middot; §CHAPTER 9</span></p>
+  <div style="font-size: 0.95rem; color: var(--text-secondary); margin-top: 0.5rem; line-height: 1.5;">
+    <strong>Bản dịch:</strong> "Đừng bao giờ để bất kỳ ai nói với bạn rằng bạn không thể căn thời điểm thị trường. Đây là một lầm tưởng khổng lồ được truyền bá chủ yếu bởi phố Wall, giới truyền thông và những người chưa bao giờ có khả năng làm điều đó, vì vậy họ nghĩ rằng đó là điều không thể."<br>
+    <strong>Phân tích:</strong> Phố Wall muốn bạn tin vào lầm tưởng này để bạn luôn giữ vốn trong các quỹ tài chính của họ bất kể thị trường gấu, giúp họ thu phí quản lý đều đặn. Với quy mô vốn nhỏ và tính linh hoạt cao, nhà đầu tư cá nhân hoàn toàn có thể thoát ra tiền mặt rất nhanh để tránh bão và quay trở lại khi xu hướng tăng xác nhận.
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 9 &amp;middot; MÔ HÌNH TƯ DUY 1</div>
+    <h2>Mô hình 1: Bộ đếm ngày phân phối xác định đỉnh</h2>
+<div class="mental-model-card">
+  <h4 class="model-name" style="color: var(--accent-purple);">Mô Hình 1: Bộ Đếm Ngày Phân Phối Xác Định Đỉnh (The Distribution Day Count)</h4>
+  <div class="model-principle">
+    <strong>Nguyên lý cốt lõi:</strong> Các nhà đầu tư tổ chức lớn (Smart Money) sở hữu nguồn vốn khổng lồ. Khi muốn phân phối chốt lời, họ không thể bán hết trong một phiên mà phải bán rải rác trong nhiều tuần khi thị trường vẫn đang tăng. Việc này để lại dấu vết là các phiên chỉ số giảm điểm hoặc biến động hẹp với khối lượng giao dịch gia tăng đột biến so với phiên trước đó.
+  </div>
+  
+  <div class="model-application" style="margin-top: 1rem;">
+    <strong>Tiêu chuẩn xác định một Ngày Phân Phối (Distribution Day):</strong>
+    <ol>
+      <li><strong>Điều kiện về giá:</strong> Chỉ số thị trường chung (như S&P 500 hoặc Nasdaq) đóng cửa giảm điểm (thường từ <strong>-0.2% trở lên</strong>). HOẶC chỉ số tăng điểm nhẹ nhưng biến động hẹp (stalling), đóng cửa ở nửa dưới của khung giá ngày.</li>
+      <li><strong>Điều kiện về khối lượng:</strong> Khối lượng giao dịch của ngày đó phải <strong>lớn hơn</strong> khối lượng giao dịch của ngày trước đó. <span class="page-ref">Ch 9 &middot; "How You Can Learn to Identify Stock Market Tops"</span></li>
+    </ol>
+  </div>
+
+  <div class="model-application" style="margin-top: 1rem;">
+    <strong>Quy tắc hành động dựa trên số lượng ngày phân phối (trong 4-5 tuần):</strong>
+    <ul>
+      <li><strong>1 - 2 ngày phân phối:</strong> Trạng thái bình thường. Dòng tiền gom mua vẫn áp đảo. Tiếp tục giải ngân mua các cổ phiếu bứt phá pivot.</li>
+      <li><strong>3 ngày phân phối:</strong> Đưa danh mục vào trạng thái cảnh giác cao độ. Dừng mọi hoạt động mua đuổi và quan sát hành vi của các siêu cổ phiếu dẫn đầu.</li>
+      <li><strong>4 - 5 ngày phân phối:</strong> Xác nhận đỉnh thị trường. Thực thi phòng thủ cơ học robot: Bán toàn bộ cổ phiếu mua bằng tiền vay (margin), thu hẹp danh mục, bán chốt lời chủ động và nâng tỷ trọng tiền mặt lên mức an toàn (50% - 100%).</li>
+    </ul>
+  </div>
+
+  <div class="model-limitations" style="margin-top: 1rem; border-left: 3px solid var(--accent-red); padding-left: 10px;">
+    <strong>⚠️ Quy tắc xóa/hết hạn của Ngày Phân Phối:</strong>
+    <ul>
+      <li>Một ngày phân phối sẽ bị xóa khỏi bộ đếm nếu: (1) Trôi qua <strong>25 phiên giao dịch</strong> (khoảng 5 tuần lịch), hoặc (2) Chỉ số chính tăng bứt phá vượt hẳn lên trên mức đỉnh cao nhất của ngày phân phối đó.</li>
+    </ul>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 9 &amp;middot; MÔ HÌNH TƯ DUY 2</div>
+    <h2>Mô hình 2: Ngày bùng nổ theo đà xác định đáy</h2>
+<div class="mental-model-card">
+  <h4 class="model-name" style="color: var(--accent-purple);">Mô Hình 2: Ngày Bùng Nổ Theo Đà Xác Nhận Đáy (The Follow-Through Day - FTD)</h4>
+  <div class="model-principle">
+    <strong>Nguyên lý cốt lõi:</strong> Trong một xu hướng giảm (Bear market), thị trường chung sẽ liên tục xuất hiện các đợt nỗ lực hồi phục kỹ thuật ngắn hạn. Để xác nhận đợt hồi phục đó là thực chất và chuyển hóa thành xu hướng tăng mới (Uptrend), bắt buộc phải có sự xác nhận nhập cuộc của dòng tiền định chế khổng lồ thông qua phiên Bùng nổ theo đà (FTD).
+  </div>
+  
+  <div class="model-application" style="margin-top: 1rem;">
+    <strong>Quy trình 3 bước nhận diện Ngày Bùng Nổ Theo Đà (FTD):</strong>
+    <ol>
+      <li><strong>Bước 1: Ngày 1 nỗ lực hồi phục (Day 1 of Attempted Rally):</strong> Chỉ số chính (Nasdaq hoặc S&P 500) đóng cửa tăng điểm sau khi chạm một đáy sâu mới hoặc rút chân mạnh mẽ lên trên.</li>
+      <li><strong>Bước 2: Duy trì nỗ lực (Day 2 đến Day 3):</strong> Chỉ số chính dao động giữ giá và tuyệt đối <strong>không được phá vỡ</strong> mức giá đáy thấp nhất vừa được thiết lập ở Ngày 1. Khối lượng ở các ngày này thường ở mức thấp do tâm lý nghi ngờ của đám đông.</li>
+      <li><strong>Bước 3: Phiên Bùng nổ theo đà (FTD - Day 4 đến Day 7+):</strong> Xuất hiện một phiên chỉ số chính <strong>tăng mạnh (tối thiểu +1.0% trở lên)</strong> đi kèm với khối lượng giao dịch đột biến <strong>lớn hơn ngày hôm trước</strong> và vượt trung bình 50 phiên. <span class="page-ref">Ch 9 &middot; "After the Initial Decline off the Top..."</span></li>
+    </ol>
+  </div>
+
+  <div class="model-application" style="margin-top: 1rem;">
+    <strong>Quy tắc giải ngân sau FTD:</strong>
+    <ul>
+      <li>Không bao giờ mua đuổi lan man toàn thị trường. Chỉ giải ngân từng phần (20%-30% ban đầu) vào các siêu cổ phiếu dẫn đầu (chữ L) có doanh số và lợi nhuận đột phá xuất hiện điểm breakout pivot chuẩn đầu tiên từ nền tích lũy vững chắc (Ch 2).</li>
+    </ul>
+  </div>
+
+  <div class="model-limitations" style="margin-top: 1rem; border-left: 3px solid var(--accent-red); padding-left: 10px;">
+    <strong>⚠️ Rủi ro FTD thất bại (Failed FTD):</strong>
+    <ul>
+      <li>Khoảng 30% ngày FTD lịch sử bị thất bại. Một FTD bị coi là thất bại nếu chỉ số nhanh chóng quay đầu giảm mạnh và phá vỡ mức đáy thấp nhất trước đó của đợt nỗ lực phục hồi. Để phòng thủ, bạn bắt buộc phải áp dụng quy tắc cắt lỗ 7%-8% cho từng cổ phiếu mua.</li>
+    </ul>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 9 &amp;middot; MÔ HÌNH TƯ DUY 3</div>
+    <h2>Mô hình 3: Sự lệch pha giữa thị trường và chu kỳ kinh tế</h2>
+<div class="mental-model-card">
+  <h4 class="model-name" style="color: var(--accent-purple);">Mô Hình 3: Sự Lệch Pha Giữa Thị Trường Và Chu Kỳ Kinh Tế (Lead-Lag Relationship)</h4>
+  <div class="model-principle">
+    <strong>Nguyên lý cốt lõi:</strong> Thị trường chứng khoán là một chỉ báo dẫn dắt (leading indicator) của nền kinh tế, chứ không phải chỉ báo trùng khớp hay trễ. Thị trường di chuyển dựa trên cơ chế chiết khấu (discounting mechanism) – phản ánh các kỳ vọng về lợi nhuận doanh nghiệp và chính sách tiền tệ từ 6 đến 9 tháng tới.
+  </div>
+  
+  <div class="split-layout" style="margin-top: 1rem;">
+    <div class="split-left" style="border-right: 1px solid var(--border); padding-right: 1.5rem;">
+      <h5 style="color: var(--accent-emerald); margin-top: 0;">Pha Tạo Đáy (Market Bottoms)</h5>
+      <p style="font-size: 0.9rem; line-height: 1.5;">
+        &bull; <strong>Thực tế thị trường:</strong> Các chỉ số chứng khoán luôn tạo đáy và quay đầu tăng giá mạnh mẽ khi <strong>nền kinh tế thực tế vẫn đang u ám</strong>, thất nghiệp ở mức cao nhất và lợi nhuận doanh nghiệp sụt giảm thê thảm.
+        <br>&bull; <strong>Sai lầm của đám đông:</strong> Chờ đợi các tin tức kinh tế vĩ mô tích cực hoặc báo cáo lợi nhuận tốt lên mới dám mua vào. Khi đó, thị trường thường đã tăng được 20%-30% từ đáy. <span class="page-ref">Ch 9 &middot; "The Stages of a Stock Market Cycle"</span>
+      </p>
+    </div>
+
+    <div class="split-right" style="padding-left: 1.5rem;">
+      <h5 style="color: var(--accent-red); margin-top: 0;">Pha Tạo Đỉnh (Market Tops)</h5>
+      <p style="font-size: 0.9rem; line-height: 1.5;">
+        &bull; <strong>Thực tế thị trường:</strong> Các chỉ số chứng khoán luôn tạo đỉnh và đi xuống trước khi nền kinh tế thực sự rơi vào suy thoái vĩ mô. Lúc đỉnh thị trường, <strong>tin tức vĩ mô luôn rực rỡ nhất</strong>, các chỉ số GDP tốt nhất và doanh nghiệp báo lãi kỷ lục.
+        <br>&bull; <strong>Sai lầm của đám đông:</strong> Giữ nguyên vị thế nắm giữ dài hạn vì tin rằng "nền kinh tế đang hoạt động tốt thì cổ phiếu không thể giảm." <span class="page-ref">Ch 9 &middot; "The Stages of a Stock Market Cycle"</span>
+      </p>
+    </div>
+  </div>
+
+  <div class="model-application" style="margin-top: 1rem;">
+    <strong>Quy luật luân chuyển nhóm ngành cuối chu kỳ (Sector Rotation):</strong>
+    <ul>
+      <li>Các nhóm ngành <strong>tư liệu sản xuất (Capital Goods), máy móc thiết bị (Machinery), nguyên vật liệu và năng lượng</strong> luôn là những nhóm tăng giá cuối cùng trong một chu kỳ tăng trưởng. Khi các nhóm ngành này bùng nổ mạnh mẽ, đó là tín hiệu cảnh báo chu kỳ bull market đang đi đến giai đoạn bão hòa và chuẩn bị tạo đỉnh.</li>
+    </ul>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 9 &amp;middot; SỐ LIỆU &amp; THỐNG KÊ</div>
+    <h2>Các đợt sụp đổ lịch sử và toán học suy giảm tài sản</h2>
+<div class="metric-grid">
+  <div class="metric-card">
+    <div class="metric-value" style="color: var(--accent-red);">-70%</div>
+    <div class="metric-label">Cổ phiếu trung bình (1973 - 1974)</div>
+    <div class="metric-detail">Chỉ số Dow Jones giảm 50% nhưng cổ phiếu trung bình sụp đổ hơn <strong>70%</strong> do ảnh hưởng từ bê bối Watergate và lệnh cấm vận dầu mỏ OPEC. Đây là đợt suy thoái tồi tệ nhất kể từ đại khủng hoảng. <span class="page-ref">Ch 9 &middot; "The Prolonged Two-Year Bear Market..."</span></div>
+  </div>
+
+  <div class="metric-card">
+    <div class="metric-value" style="color: var(--accent-red);">-90%</div>
+    <div class="metric-label">Cổ phiếu trung bình (1929 - 1933)</div>
+    <div class="metric-detail">Sự sụp đổ lịch sử của nền kinh tế Mỹ. Sản xuất công nghiệp giảm gần một nửa, tỷ lệ thất nghiệp đạt đỉnh <strong>25%</strong>. Phải mất hàng thập kỷ nền kinh tế và thị trường chứng khoán mới phục hồi. <span class="page-ref">Ch 9 &middot; "The Prolonged Two-Year Bear Market..."</span></div>
+  </div>
+
+  <div class="metric-card">
+    <div class="metric-value" style="color: var(--accent-cyan);">+100%</div>
+    <div class="metric-label">Mức hồi phục cần thiết từ mức giảm 50%</div>
+    <div class="metric-detail">Chỉ số S&P 500 giảm hơn 50% trong cuộc khủng hoảng tài chính 2007-2008. Để hòa vốn từ mức giảm 50%, tài khoản của nhà đầu tư phải <strong>tăng trưởng gấp đôi (100%)</strong>. <span class="page-ref">Ch 9 &middot; "A 33% Drop Requires a 50% Rise to Break Even"</span></div>
+  </div>
+
+  <div class="metric-card">
+    <div class="metric-value" style="color: var(--accent-red);">-36.9%</div>
+    <div class="metric-label">Chỉ số Dow Jones (1969 - 1970)</div>
+    <div class="metric-detail">Ảnh hưởng từ Chiến tranh Việt Nam, lạm phát và thắt chặt tiền tệ. Đợt suy thoái kéo dài <strong>2 năm</strong>, vượt xa mức trung bình lịch sử là 9 tháng và mức giảm 26%. <span class="page-ref">Ch 9 &middot; "Protecting Yourself from Market Downturns"</span></div>
+  </div>
+</div>
+
+<div class="callout" style="margin-top: 1rem;">
+  <div class="callout-icon">📊</div>
+  <div class="callout-content">
+    <strong>Toán học về sự sụt giảm tài khoản (Drawdown Math):</strong>
+    <br>&bull; Nếu bạn lỗ <strong>33%</strong>, bạn cần tăng <strong>50%</strong> mới hòa vốn.
+    <br>&bull; Nếu bạn lỗ <strong>50%</strong>, bạn cần tăng <strong>100%</strong> mới hòa vốn.
+    <br>&bull; Nếu bạn lỗ <strong>75%</strong>, bạn cần tăng <strong>300%</strong> mới hòa vốn.
+    <br>Bảo vệ vốn và cắt lỗ sớm là con đường duy nhất để sống sót trên thị trường. Để tài khoản lỗ sâu là tự sát tài chính vì việc kiếm lại 100%-300% lợi nhuận là cực kỳ khó khăn.
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 9 &amp;middot; CASE STUDY 1</div>
+    <h2>Nhận diện đỉnh bong bóng Nasdaq tháng 3/2000</h2>
+<div class="mental-model-card">
+  <h4 class="model-name" style="color: var(--accent-purple);">Case Study 1: Cách Hệ Thống Nhận Diện Đỉnh Bong Bóng Nasdaq (Tháng 3/2000)</h4>
+  <div class="model-principle">
+    <strong>Bối cảnh:</strong> Cuối năm 1999 - đầu năm 2000, thị trường công nghệ và Internet trải qua cơn sốt điên cuồng vĩ đại nhất lịch sử. Đám đông cực kỳ lạc quan, các nhà phân tích liên tục hô mua. Tuy nhiên, hệ thống đếm ngày phân phối của CAN SLIM đã phát tín hiệu thoát hàng cơ học cực kỳ chính xác.
+  </div>
+
+  <div class="model-application" style="margin-top: 1rem;">
+    <strong>Biên niên sử phân phối đỉnh Nasdaq (Tháng 3/2000):</strong>
+    <ol>
+      <li><strong>Ngày 7 tháng 3 (Ngày phân phối 1):</strong> Nasdaq đóng cửa giảm điểm nhẹ trên khối lượng giao dịch tăng cao hơn phiên trước. Đây là tín hiệu cảnh báo đầu tiên sau 6 tuần tăng liên tục.</li>
+      <li><strong>Ngày 10 tháng 3 (Ngày phân phối 2 - Churning Day):</strong> Nasdaq bùng nổ tăng hơn 85 điểm vào buổi sáng lập đỉnh lịch sử mới, nhưng bị bán mạnh vào buổi chiều, đóng cửa chỉ còn tăng 2 điểm với khối lượng giao dịch khổng lồ (+13% trên trung bình). Hiện tượng giá chạy nhiều nhưng không tăng (stalling) là bằng chứng các tổ chức lớn đang xả hàng cho đám đông.</li>
+      <li><strong>Ngày 14 tháng 3 (Ngày phân phối 3):</strong> Nasdaq sụp đổ <strong>-4.0%</strong> kèm khối lượng giao dịch tăng vọt. Đây là lúc nhà đầu tư bắt buộc phải hành động bán hạ tỷ trọng margin và rút tiền mặt.</li>
+      <li><strong>Ngày 16 - 24 tháng 3 (Nhịp hồi phục yếu):</strong> Thị trường hồi phục với khối lượng giao dịch sụt giảm và không thể vượt quá một nửa mức giảm trước đó. Ngày 24/3 xuất hiện Ngày phân phối thứ 4.</li>
+      <li><strong>Ngày 28 tháng 3 (Ngày phân phối 5 - Xác nhận sập):</strong> Nasdaq giảm mạnh trên khối lượng lớn hơn phiên trước, chính thức xác nhận đỉnh bong bóng và bắt đầu thị trường gấu tàn khốc kéo dài 2 năm (Nasdaq giảm 75%).</li>
+    </ol>
+  </div>
+
+  <div class="callout" style="margin-top: 1rem; border-color: var(--accent-red);">
+    <div class="callout-icon">⚠️</div>
+    <div class="callout-content">
+      <strong>Bài học đắt giá:</strong> Trong khi các chuyên gia truyền thông liên tục khuyên "mua tích trữ" vì cho rằng công nghệ là tương lai, các nhà đầu tư CAN SLIM kỷ luật đã thoát hoàn toàn danh mục về tiền mặt nhờ đếm ngày phân phối, bảo vệ trọn vẹn thành quả của cả chu kỳ tăng trước đó. <span class="page-ref">Ch 9 &middot; "How CAN SLIM and IBD Red-Flagged the March 2000 Nasdaq Top"</span>
+    </div>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 9 &amp;middot; CASE STUDY 2</div>
+    <h2>Nhận diện đỉnh khủng hoảng tài chính tháng 11/2007</h2>
+<div class="mental-model-card">
+  <h4 class="model-name" style="color: var(--accent-purple);">Case Study 2: Cách Hệ Thống Nhận Diện Đỉnh Khủng Hoảng Tài Chính (Tháng 11/2007)</h4>
+  <div class="model-principle">
+    <strong>Bối cảnh:</strong> Cuối năm 2007, thị trường chứng khoán Mỹ đang ở đỉnh cao lịch sử trước khi cuộc khủng hoảng nợ dưới chuẩn (subprime mortgage) và khủng hoảng tín dụng nổ ra. Giới truyền thông và hầu hết định chế lớn tại phố Wall vẫn cho rằng nền kinh tế đang có sức khỏe tốt. Tuy nhiên, hành động giá và khối lượng trên đồ thị đã phát đi những cảnh báo tháo chạy đỏ rực.
+  </div>
+
+  <div class="model-application" style="margin-top: 1rem;">
+    <strong>Tín hiệu tạo đỉnh và hành động bảo vệ vốn (Cuối 2007 - Đầu 2008):</strong>
+    <ul>
+      <li><strong>Tích lũy Ngày phân phối (Tháng 11/2007):</strong> Chỉ số S&P 500 và Nasdaq liên tiếp ghi nhận 5 ngày phân phối lớn (giảm điểm kèm khối lượng tăng vọt) chỉ trong vòng 4 tuần ngắn ngủi.</li>
+      <li><strong>Cảnh báo chính thức từ IBD:</strong> Chuyên mục "The Big Picture" trên tờ IBD lập tức chuyển trạng thái thị trường sang <strong>"Market in Correction" (Thị trường đang điều chỉnh)</strong> trong hộp Market Pulse. Đây là lệnh dừng mua bắt buộc và bắt đầu hạ tỷ trọng danh mục ráo riết.</li>
+      <li><strong>Sự xác nhận từ các siêu cổ phiếu:</strong> Các cổ phiếu dẫn dắt hàng đầu như Apple, Google bắt đầu bộc lộ các ngày phân phối với khối lượng lớn bất thường trên đồ thị tuần.</li>
+      <li><strong>Kết quả thực tế năm 2008:</strong> Chỉ số S&P 500 sụp đổ hơn 50% trong năm 2008, quét sạch hàng nghìn tỷ USD của các nhà đầu tư nắm giữ thụ động.</li>
+    </ul>
+  </div>
+
+  <div class="callout" style="margin-top: 1rem; border-color: var(--accent-emerald);">
+    <div class="callout-icon">📊</div>
+    <div class="callout-content">
+      <strong>Khảo sát thực tế:</strong> Các cuộc khảo sát độc giả IBD vào năm 2008 cho thấy trên <strong>60% nhà đầu tư ứng dụng bộ đếm ngày phân phối</strong> đã bán cổ phiếu, trả hết margin và giữ lượng tiền mặt cực lớn từ tháng 12/2007 hoặc tháng 6/2008. Họ hoàn toàn tránh được đợt sụt giảm khốc liệt nhất vào mùa thu năm 2008 và chuẩn bị sẵn nguồn lực khổng lồ để làm giàu trong chu kỳ tăng trưởng mới bắt đầu từ tháng 3/2009. <span class="page-ref">Ch 9 &middot; "How CAN SLIM and IBD Red-Flagged the 2007 Top in the Market"</span>
+    </div>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 9 &amp;middot; HÀNH VI THỦ LĨNH</div>
+    <h2>Cổ phiếu dẫn dắt - Chỉ báo sớm cho đỉnh thị trường</h2>
+<div class="mental-model-card">
+  <h4 class="model-name" style="color: var(--accent-purple);">Hành Vi Cổ Phiếu Dẫn Dắt – Chỉ Báo Sớm Cho Đỉnh Thị Trường (Market Leaders as Topping Indicators)</h4>
+  <div class="model-principle">
+    <strong>Nguyên lý cốt lõi:</strong> Thị trường chung không thể tiếp tục tăng trưởng nếu thiếu đi sức mạnh của các cổ phiếu dẫn dắt (Leaders). Sự suy yếu hoặc hành vi tăng tốc bất thường của các thủ lĩnh chính là chỉ báo sớm có độ tin cậy cực cao báo hiệu đỉnh của cả chu kỳ tăng giá, thường xuất hiện trước khi các chỉ số thị trường chính thức sụp đổ.
+  </div>
+
+  <div class="split-layout" style="margin-top: 1rem;">
+    <div class="split-left" style="border-right: 1px solid var(--border); padding-right: 1.5rem;">
+      <h5 style="color: var(--accent-red); margin-top: 0;">1. Đỉnh Cao Trào (Climax Tops)</h5>
+      <p style="font-size: 0.9rem; line-height: 1.5;">
+        &bull; <strong>Dấu hiệu:</strong> Siêu cổ phiếu dẫn dắt bất ngờ tăng tốc dốc đứng liên tục trong 1-2 tuần (tăng từ 25% đến 50%+) sau một đợt tăng giá dài. Khối lượng giao dịch bùng nổ kỷ lục chưa từng thấy.
+        <br>&bull; <strong>Bản chất:</strong> Đây là hành vi đẩy giá cao trào của tổ chức lớn để tạo sự hưng phấn tột độ cho đám đông cá nhân lao vào mua đuổi, giúp tổ chức xả hết lượng hàng khổng lồ (chốt lời) một cách dễ dàng. <span class="page-ref">Ch 9 &middot; "How CAN SLIM and IBD Red-Flagged the March 2000 Nasdaq Top"</span>
+      </p>
+    </div>
+
+    <div class="split-right" style="padding-left: 1.5rem;">
+      <h5 style="color: var(--accent-red); margin-top: 0;">2. Gãy Nền Giá & Đường Xu Hướng</h5>
+      <p style="font-size: 0.9rem; line-height: 1.5;">
+        &bull; <strong>Dấu hiệu:</strong> Cổ phiếu dẫn dắt bứt phá đỉnh mới từ các nền giá lỏng lẻo nhưng nhanh chóng thất bại (failed breakouts) và quay đầu giảm mạnh.
+        <br>&bull; <strong>Tín hiệu bán tháo:</strong> Giá sụt giảm mạnh xuyên thủng đường hỗ trợ trung bình động MA 50 ngày (hoặc đồ thị tuần đóng cửa dưới đường MA 10 tuần) với khối lượng lớn đột biến, chứng tỏ tổ chức lớn đang tháo chạy quyết liệt.
+      </p>
+    </div>
+  </div>
+
+  <div class="callout" style="margin-top: 1rem;">
+    <div class="callout-icon">💡</div>
+    <div class="callout-content">
+      <strong>Quy tắc quan sát kết hợp:</strong>
+      <br>Khi bạn thấy chỉ số thị trường chung ghi nhận từ 3-4 ngày phân phối, đồng thời danh sách các siêu cổ phiếu dẫn đầu bắt đầu xuất hiện hiện tượng Climax Tops hoặc gãy đường MA 50 ngày hàng loạt, đó là lúc trò chơi tăng giá kết thúc. Đừng cố chấp bám trụ lại thị trường.
+    </div>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 9 &amp;middot; ĐÁNH GIÁ CHỨNG CỨ</div>
+    <h2>Tính thực chứng của phân phối đỉnh &amp; FTD đáy</h2>
+<div class="evidence-card" style="margin-bottom: 1.5rem; border-left: 4px solid var(--accent-cyan);">
+  <div class="evidence-header">
+    <span class="claim-text"><strong>Ngày phân phối (Distribution Days) dự báo đỉnh thị trường có độ chính xác cao</strong></span>
+    <span class="quality-score">⭐⭐⭐⭐★ (4.7/5)</span>
+  </div>
+  <div class="evidence-type">📊 Thực chứng Thực địa & Thống kê chu kỳ đỉnh thị trường (1950 - 2008)</div>
+  <div class="evidence-body">
+    <ul>
+      <li><strong>Điểm mạnh:</strong> Loại bỏ hoàn toàn cảm xúc chủ quan và ý kiến cá nhân. Dựa trực tiếp trên mối quan hệ giá/khối lượng thực tế phản ánh hành vi xả hàng của dòng tiền lớn tổ chức. Chứng minh hiệu quả vượt trội trong việc thoát đỉnh năm 2000 và 2008.</li>
+      <li><strong>Điểm yếu:</strong> Thỉnh thoảng xuất hiện các tín hiệu nhiễu (whipsaws) khi chỉ số ghi nhận 3-4 ngày phân phối rồi lập tức xóa bỏ đà phân phối nhờ dòng tiền mới đổ vào vượt đỉnh. Cần phải kiểm tra chéo sự suy yếu thực tế của danh sách cổ phiếu dẫn dắt để xác nhận.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="evidence-card" style="margin-bottom: 1.5rem; border-left: 4px solid var(--accent-cyan);">
+  <div class="evidence-header">
+    <span class="claim-text"><strong>Ngày bùng nổ theo đà (FTD) xác nhận đáy thị trường có độ tin cậy cao</strong></span>
+    <span class="quality-score">⭐⭐⭐⭐☆ (4.5/5)</span>
+  </div>
+  <div class="evidence-type">📈 Thống kê Thực chứng & Khảo sát Chu kỳ đáy thị trường gấu</div>
+  <div class="evidence-body">
+    <ul>
+      <li><strong>Điểm mạnh:</strong> Lịch sử chứng minh 100% các thị trường tăng giá mới (Bull markets) đều bắt đầu bằng một phiên bùng nổ theo đà. Giúp nhà đầu tư cá nhân tránh được thảm kịch bắt đáy quá sớm khi con dao rơi chưa chạm đất.</li>
+      <li><strong>Điểm yếu:</strong> Tỷ lệ thất bại lịch sử khoảng 30% (Failed FTD). FTD là điều kiện cần chứ chưa đủ. Nếu chỉ số có FTD nhưng không xuất hiện bất kỳ cổ phiếu dẫn đầu nào bứt phá điểm pivot từ nền giá tin cậy, sóng tăng mới đó sẽ nhanh chóng thất bại.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="callout" style="margin-top: 1rem; border-color: var(--accent-purple);">
+  <div class="callout-icon">🧠</div>
+  <div class="callout-content">
+    <strong>Cập nhật xu hướng dòng tiền ETF 2026 & Phân tích tâm lý Trading Burnout:</strong>
+    <br>&bull; <strong>Thực tế hiện đại 2026:</strong> Sự thống trị của các quỹ ETF chỉ số khổng lồ đã tạo ra sự méo mó lớn trên thị trường. Chỉ số Nasdaq hay S&P 500 có thể tăng điểm mạnh mẽ hoặc giữ giá tốt chỉ nhờ lực kéo của một vài cổ phiếu Big Tech siêu lớn (như Nvidia, Apple) trong khi phần lớn các cổ phiếu còn lại trên sàn đều đang suy yếu (độ rộng thị trường thu hẹp). Nhà đầu tư cần kết hợp đếm ngày phân phối chỉ số với đường Advance-Decline (A/D line) hoặc số lượng cổ phiếu lập đỉnh 52 tuần để đánh giá đúng sức khỏe thực chất của thị trường.
+    <br>&bull; <strong>Kiềm chế tâm lý & Phòng tránh Trading Burnout:</strong> Chờ đợi một phiên FTD xuất hiện trong thị trường gấu kéo dài yêu cầu kỷ luật thép và kiểm soát tâm lý cực kỳ nghiêm ngặt. Sự sợ hãi bị bỏ lỡ cơ hội (FOMO) khi thấy thị trường hồi phục ở ngày thứ 2, thứ 3 của đợt nỗ lực hồi phục dễ khiến nhà đầu tư phá bỏ quy tắc và mua đuổi sớm. Khi FTD thất bại hoặc thị trường đi ngang giằng co (whipsaw), nhà đầu tư liên tục cắt lỗ sẽ dẫn đến tình trạng kiệt sức tinh thần (Trading Burnout) và mất niềm tin vào phương pháp. Hãy chấp nhận đứng ngoài ôm tiền mặt như một phần tất yếu của trò chơi đầu tư.
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 9 &amp;middot; GÓC NHÌN ĐỐI LẬP</div>
+    <h2>Căn thời điểm chủ động vs Nắm giữ thụ động</h2>
+<div class="split-layout">
+  <div class="split-left" style="border-right: 1px solid var(--border); padding-right: 1.5rem;">
+    <h4 style="color: var(--accent-emerald); margin-top: 0;">Trường phái Căn Thời Điểm Chủ Động (CAN SLIM)</h4>
+    <p><strong>Triết lý cốt lõi:</strong> Hãy để thị trường tự nói cho bạn biết hướng đi của nó thông qua giá và khối lượng hàng ngày. Hãy đứng ngoài bảo vệ vốn khi thị trường phân phối đỉnh, và chỉ giải ngân mạnh khi có Ngày bùng nổ theo đà (FTD).</p>
+    <p><strong>Ưu điểm:</strong> Tránh được hoàn toàn các đợt sụt giảm thảm khốc của thị trường gấu (như -50% năm 2008). Tối ưu hóa hiệu quả xoay vòng vốn và tối đa hóa tỷ suất sinh lời vượt trội.</p>
+    <p><strong>Hạn chế:</strong> Đòi hỏi thời gian quan sát hàng ngày, kỷ luật thép để vượt qua tâm lý đám đông, và chấp nhận một số khoản cắt lỗ nhỏ khi gặp tín hiệu nhiễu.</p>
+  </div>
+
+  <div class="split-right" style="padding-left: 1.5rem;">
+    <h4 style="color: var(--accent-red); margin-top: 0;">Trường phái Nắm Giữ Thụ Động (Buy-and-Hold / Indexing)</h4>
+    <p><strong>Triết lý cốt lõi:</strong> Căn thời điểm thị trường là điều không thể (Market timing is a myth). Vì thị trường luôn tăng giá trong dài hạn, cách tốt nhất là mua tích sản đều đặn và nắm giữ lâu dài thông qua các quỹ chỉ số (ETF).</p>
+    <p><strong>Ưu điểm:</strong> Đơn giản, không yêu cầu phân tích kỹ thuật hay theo dõi bảng điện hàng ngày, thích hợp với các nhà đầu tư bận rộn hoặc dòng vốn cực kỳ lớn của các định chế tài chính.</p>
+    <p><strong>Hạn chế:</strong> Chấp nhận việc tài khoản bị sụt giảm sâu (tới 50%-90% đối với các cổ phiếu riêng lẻ hoặc 50% đối với chỉ số S&P 500) trong thị trường gấu. Mất nhiều năm chỉ để đưa tài khoản về lại điểm hòa vốn.</p>
+  </div>
+</div>
+
+<div class="callout" style="margin-top: 1.5rem; background-color: rgba(139, 124, 255, 0.05); border-color: var(--accent-purple);">
+  <div class="callout-icon">⚖️</div>
+  <div class="callout-content">
+    <strong>Giải pháp dung hòa tối ưu cho nhà đầu tư cá nhân:</strong>
+    <br>&bull; <strong>Tận dụng lợi thế quy mô nhỏ:</strong> Các quỹ đầu tư khổng lồ bắt buộc phải duy trì trạng thái đầu tư đầy đủ (fully invested 95%-100%) vì quy mô vốn quá lớn không thể thoái ra tiền mặt trong 1-2 ngày mà không đè bẹp giá cổ phiếu.
+    <br>&bull; <strong>Hành động linh hoạt:</strong> Nhà đầu tư cá nhân không bị ràng buộc bởi giới hạn quy mô đó. Bạn có thể chuyển toàn bộ tài khoản về tiền mặt chỉ trong vài phút. Đừng tự nguyện gánh chịu rủi ro sụt giảm của thị trường gấu chỉ vì tin vào triết lý của những người quản lý quỹ khổng lồ đang bị kẹt bởi quy mô vốn của họ. <span class="page-ref">Ch 9 &middot; "The Myths about “Long-Term Investing”..."</span>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 9 &amp;middot; RỦI RO &amp; PHẢN BIỆN</div>
+    <h2>Rủi ro tín hiệu FTD giả và đếm ngày phân phối nhiễu</h2>
+<div class="bullet-grid">
+  <div class="bullet-card" style="border-left: 3px solid var(--accent-red);">
+    <h4>1. Rủi ro từ Ngày Bùng nổ theo đà thất bại (Failed FTD)</h4>
+    <p>Khoảng 30% số ngày FTD trong lịch sử chứng khoán Mỹ bị thất bại. Sau một phiên bùng nổ bứt phá mạnh mẽ, chỉ số quay đầu giảm sâu phá vỡ mức đáy cũ của đợt nỗ lực hồi phục. Nếu giải ngân quá nhanh và mạnh tay ngay tại phiên FTD, nhà đầu tư sẽ chịu rủi ro sụt giảm tài khoản lớn.</p>
+  </div>
+
+  <div class="bullet-card" style="border-left: 3px solid var(--accent-red);">
+    <h4>2. Tín hiệu nhiễu từ bộ đếm ngày phân phối (Whipsaws)</h4>
+    <p>Thị trường có thể tích lũy 4-5 ngày phân phối, kích hoạt lệnh bán thu hẹp danh mục phòng thủ. Nhưng thay vì sụp đổ tạo đỉnh, chỉ số chỉ điều chỉnh nhẹ 3%-5% rồi nhanh chóng phục hồi vượt đỉnh cũ. Điều này khiến nhà đầu tư bán đúng đáy điều chỉnh ngắn hạn và phải mua lại ở giá cao hơn.</p>
+  </div>
+
+  <div class="bullet-card" style="border-left: 3px solid var(--accent-red);">
+    <h4>3. Sự lệch pha giữa các chỉ số chính (Index Divergence)</h4>
+    <p>Có những giai đoạn dòng tiền dịch chuyển mạnh khiến chỉ số Nasdaq liên tục bị phân phối mạnh do nhóm công nghệ suy yếu, trong khi chỉ số Dow Jones vẫn tăng nhờ nhóm sản xuất và phòng thủ nâng đỡ. Sự phân kỳ này dễ khiến nhà đầu tư bối rối trong việc đánh giá xu hướng chung.</p>
+  </div>
+
+  <div class="bullet-card" style="border-left: 3px solid var(--accent-red);">
+    <h4>4. Bẫy tăng giá kỹ thuật ngắn hạn (Bull Traps)</h4>
+    <p>Trong thị trường gấu dài hạn, các đợt phục hồi 2-3 phiên đầu tiên thường tăng rất mạnh mẽ, dốc đứng, tạo cảm giác thị trường đã tạo đáy xong. Nếu nhà đầu tư nôn nóng giải ngân trước khi xuất hiện Ngày bùng nổ theo đà (thường từ ngày thứ 4 trở đi), họ dễ rơi vào bẫy hồi phục kỹ thuật (Dead Cat Bounce).</p>
+  </div>
+</div>
+
+<div class="callout" style="margin-top: 1.5rem;">
+  <div class="callout-icon">⚠️</div>
+  <div class="callout-content">
+    <strong>Quy tắc giảm thiểu rủi ro:</strong>
+    <br>1. Chỉ giải ngân từng phần (20%-30% lượng tiền mặt) tại phiên FTD để thăm dò thị trường. Chỉ gia tăng tỷ trọng khi các cổ phiếu mua bộc lộ lợi nhuận đệm tốt.
+    <br>2. Bắt buộc kết hợp chỉ số thị trường chung với hành vi của các cổ phiếu dẫn dắt. FTD chỉ thực sự tin cậy khi có các siêu cổ phiếu đồng loạt bứt phá đỉnh mới từ các nền tích lũy chặt chẽ.
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 9 &amp;middot; SƠ ĐỒ KHÁI NIỆM</div>
+    <h2>Mối liên kết chữ M vĩ mô với các chương</h2>
+<div class="mermaid">
+graph TB
+    A["Chương 9: Chữ M - Xu hướng Thị trường (Bộ lọc vĩ mô tối cao)"] --> B["Các chữ cái C, A, N, S, L, I (Cơ bản & Kỹ thuật của Cổ phiếu)"]
+    A --> C["Chương 10 & 11: Quy tắc Bán bảo vệ vốn (Bán phòng thủ khi Chữ M tạo đỉnh phân phối)"]
+    A --> D["Chương 12: Bán khống (Chỉ được phép thực hiện khi Chữ M xác nhận xu hướng giảm Bear Market)"]
+    
+    style A fill:#8B7CFF,stroke:#2A2D33,color:#F7F7F5
+</div>
+
+<div class="split-layout" style="margin-top: 1rem;">
+  <div class="split-left" style="padding-right: 1rem; border-right: 1px solid var(--border);">
+    <h5 style="color: var(--accent-purple); margin-top: 0;">Mối quan hệ tiên quyết (Prerequisites)</h5>
+    <ul style="font-size: 0.9rem; padding-left: 1rem; margin: 0; line-height: 1.5;">
+      <li><strong>Tác động vĩ mô:</strong> Chữ M là điều kiện môi trường bắt buộc. Các phân tích cơ bản (C-A-N) hay sự bảo trợ (I) của siêu cổ phiếu chỉ phát huy tác dụng tăng giá khi thị trường ở trạng thái **Uptrend**. Nếu thị trường ở pha **Correction**, 75% cổ phiếu sẽ bị đè bẹp bất kể nội tại tốt đến đâu.</li>
+    </ul>
+  </div>
+  
+  <div class="split-right" style="padding-left: 1rem;">
+    <h5 style="color: var(--accent-emerald); margin-top: 0;">Mối quan hệ mở khóa (Future Unlocks)</h5>
+    <ul style="font-size: 0.9rem; padding-left: 1rem; margin: 0; line-height: 1.5;">
+      <li><strong>Quy tắc bán (Ch 10 & 11):</strong> Xu hướng thị trường quyết định mức độ chủ động và quyết liệt của quy tắc bán. Trong thị trường gấu, quy tắc cắt lỗ 7% và chốt lời ngắn 20% phải được thực thi triệt để.</li>
+      <li><strong>Bán khống (Ch 12):</strong> Kỹ thuật bán khống (Short Selling) là một kỹ năng cực kỳ khó và nguy hiểm. Nó chỉ mang lại xác suất thắng cao khi thị trường chung xác nhận xu hướng giảm giá mạnh mẽ.</li>
+    </ul>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 9 &amp;middot; HƯỚNG DẪN THỰC HÀNH</div>
+    <h2>Lộ trình ứng dụng thực tế chữ M</h2>
+<div class="phase-progress">
+  <div class="phase active">Pha 1: Giám Sát Hàng Ngày</div>
+  <div class="phase">Pha 2: Quản Trị Đỉnh</div>
+  <div class="phase">Pha 3: Săn Tìm Đáy</div>
+  <div class="phase">Pha 4: Quản Trị Vị Thế</div>
+</div>
+
+<div class="bullet-grid" style="margin-top: 1.5rem;">
+  <div class="bullet-card">
+    <h4>Pha 1: Giám sát chỉ số thị trường hàng ngày</h4>
+    <ul class="checklist" style="padding-left: 0; list-style: none;">
+      <li><input type="checkbox" checked disabled> <strong>Phân tích Price/Volume:</strong> Xem biểu đồ S&P 500, Nasdaq và Dow Jones mỗi ngày sau phiên đóng cửa để đánh giá phần trăm thay đổi và khối lượng.</li>
+      <li><input type="checkbox" checked disabled> <strong>Theo dõi đường MA:</strong> Giám sát vị trí của các chỉ số so với đường trung bình động MA 50 ngày và MA 200 ngày.</li>
+    </ul>
+  </div>
+
+  <div class="bullet-card">
+    <h4>Pha 2: Quản trị rủi ro khi thị trường tạo đỉnh</h4>
+    <ul class="checklist" style="padding-left: 0; list-style: none;">
+      <li><input type="checkbox" disabled> <strong>Bộ đếm Ngày phân phối:</strong> Duy trì bộ đếm số ngày phân phối xuất hiện trong vòng 4-5 tuần gần nhất.</li>
+      <li><input type="checkbox" disabled> <strong>Hạ tỷ trọng margin:</strong> Bán ngay lập tức các phần cổ phiếu mua bằng tiền vay margin khi bộ đếm chạm mức 3 ngày phân phối và bắt đầu có dấu hiệu suy yếu ở các cổ phiếu dẫn dắt.</li>
+      <li><input type="checkbox" disabled> <strong>Bán thu tiền mặt:</strong> Chủ động bán 25%-50%+ danh mục khi bộ đếm đạt 4-5 ngày phân phối.</li>
+    </ul>
+  </div>
+
+  <div class="bullet-card">
+    <h4>Pha 3: Săn tìm đáy thị trường gấu</h4>
+    <ul class="checklist" style="padding-left: 0; list-style: none;">
+      <li><input type="checkbox" disabled> <strong>Xác nhận nỗ lực phục hồi:</strong> Tìm kiếm "Ngày 1 nỗ lực phục hồi" khi chỉ số chính đóng cửa tăng điểm sau đáy mới.</li>
+      <li><input type="checkbox" disabled> <strong>Chờ đợi FTD:</strong> Kiên nhẫn giữ tiền mặt, tuyệt đối không bắt đáy sớm. Chờ phiên Bùng nổ theo đà (FTD) xuất hiện ở ngày thứ 4-7+ của nỗ lực hồi phục.</li>
+    </ul>
+  </div>
+
+  <div class="bullet-card">
+    <h4>Pha 4: Quản trị vị thế và giải ngân mới</h4>
+    <ul class="checklist" style="padding-left: 0; list-style: none;">
+      <li><input type="checkbox" disabled> <strong>Giải ngân từng phần:</strong> Giải ngân từ 20%-30% lượng tiền mặt tại phiên FTD vào các cổ phiếu bứt phá pivot đầu tiên.</li>
+      <li><input type="checkbox" disabled> <strong>Cắt lỗ cơ học:</strong> Thực thi nghiêm ngặt dừng lỗ tự động 7%-8% cho mọi vị thế mua mới để phòng vệ kịch bản FTD thất bại.</li>
+    </ul>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 9 &amp;middot; CHIẾN LƯỢC HỌC TẬP</div>
+    <h2>Mỏ neo trí nhớ &amp; Lặp lại ngắt quãng</h2>
+<div class="learning-style-section visual" style="margin-bottom: 1rem;">
+  <div class="style-icon">👁️ Phương Pháp Học Tập Đa Cảm Giác (Dành cho Học viên Cân bằng)</div>
+  <div class="style-content" style="font-size: 0.95rem; line-height: 1.5;">
+    <ul>
+      <li><strong>Mỏ neo trực quan (Visual Anchor):</strong> Hãy nhớ đến hình ảnh <em>học sinh ngồi quan sát bể cá của giáo sư Harvard hàng giờ liền</em> để khắc ghi triết lý: <em>"Muốn hiểu về thị trường, cách duy nhất là ngồi trước bảng điện và tự mình quan sát chuyển động của giá/khối lượng hàng ngày. Mọi lý thuyết hay nhận định của người khác chỉ là thứ yếu."</em></li>
+      <li><strong>Hành động thực tế (Kinesthetic Action):</strong> Mở phần mềm phân tích kỹ thuật của bạn ngay tối nay. Bật đồ thị của chỉ số thị trường chung (như S&P 500 hoặc VN-Index). Vẽ đường MA 50 ngày và MA 200 ngày. Tập đếm số lượng ngày phân phối (giảm kèm vol lớn hơn phiên trước) xuất hiện trong 25 phiên gần nhất để xác định xem thị trường hiện tại đang ở trạng thái nào.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="split-layout" style="margin-top: 1rem;">
+  <div class="split-left" style="padding-right: 1rem; border-right: 1px solid var(--border);">
+    <h5 style="color: var(--accent-purple); margin-top: 0;">Mỏ Neo Trí Nhớ & Bài Học Lịch Sử</h5>
+    <ul style="font-size: 0.9rem; padding-left: 1rem; margin: 0; line-height: 1.5;">
+      <li><strong>Toán học sụt giảm tài khoản (Drawdown Math):</strong> Ghi nhớ con số **-50% yêu cầu +100%**. Việc để tài khoản lỗ sâu trong thị trường gấu là sự tự sát tài chính vì việc nhân đôi tài khoản để hòa vốn là cực kỳ khó khăn. Cắt lỗ sớm ở mức 7%-8% là cách cơ học duy nhất giúp bạn tồn tại để tham gia chu kỳ mới.</li>
+      <li><strong>Nguyên tắc bùng nổ theo đà (FTD):</strong> 100% các chu kỳ bull market mới đều bắt đầu bằng phiên FTD từ ngày thứ 4 đến ngày thứ 7+ của nỗ lực hồi phục đáy. Đừng bao giờ mua dò đáy trước khi tiếng súng FTD phát nổ.</li>
+    </ul>
+  </div>
+
+  <div class="split-right" style="padding-left: 1rem;">
+    <h5 style="color: var(--accent-emerald); margin-top: 0;">Lịch Trình Lặp Lại Ngắt Quãng</h5>
+    <ul style="font-size: 0.9rem; padding-left: 1rem; margin: 0; line-height: 1.5;">
+      <li><strong>Ngày 1:</strong> Nắm vững vai trò chữ M, các chỉ số chính (S&P 500, Nasdaq, DJIA) và sự lệch pha giữa thị trường và kinh tế.</li>
+      <li><strong>Ngày 2:</strong> Học thuộc các tiêu chuẩn nhận diện Ngày phân phối (đỉnh) và Ngày bùng nổ theo đà FTD (đáy).</li>
+      <li><strong>Ngày 7:</strong> Nghiên cứu kỹ hai Case Study tạo đỉnh lịch sử năm 2000 và 2007 để khắc sâu dấu vết của dòng tiền tổ chức xả hàng.</li>
+      <li><strong>Ngày 30:</strong> Thực hiện rà soát xu hướng thị trường hàng tháng: Tổng kết số lượng ngày phân phối thực tế và ghi chép hành vi của các cổ phiếu dẫn đầu để tối ưu danh mục.</li>
+    </ul>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 9 &amp;middot; HÀNH ĐỘNG CUỐI CÙNG</div>
+    <h2>Hành động cuối cùng</h2>
+<ul class="action-list">
+  <li class="action-item">
+    <div>
+      <div class="action-headline">Thực hành đếm ngày phân phối mỗi tối sau giờ giao dịch</div>
+      <div class="action-detail">Thiết lập nhật ký theo dõi thị trường chung của bạn từ tối hôm nay. Cập nhật số lượng ngày phân phối của các chỉ số chính (như S&P 500 hoặc VN-Index) trong 25 phiên gần nhất để xác định xem thị trường đang ở trạng thái nào (Tăng giá, Tăng giá dưới áp lực, hay Đang điều chỉnh).</div>
+    </div>
+  </li>
+  <li class="action-item">
+    <div>
+      <div class="action-headline">Ký cam kết tuyệt đối đứng ngoài thị trường gấu cho đến khi có FTD</div>
+      <div class="action-detail">Viết ra giấy cam kết kỷ luật giao dịch cá nhân của bạn: Tuyệt đối giữ kỷ luật ôm tiền mặt trong các pha giảm giá của thị trường. Không bao giờ giải ngân mua mới bất kỳ cổ phiếu nào (dù giá trông rẻ hay được đồn thổi tin tốt thế nào) trước khi xuất hiện phiên Bùng nổ theo đà (FTD) xác nhận.</div>
+    </div>
+  </li>
+  <li class="action-item">
+    <div>
+      <div class="action-headline">Giám sát sức khỏe định kỳ của danh sách cổ phiếu dẫn dắt</div>
+      <div class="action-detail">Cuối tuần này, rà soát biểu đồ kỹ thuật tuần của top 20 cổ phiếu dẫn dắt thị trường. Đánh giá xem có bao nhiêu cổ phiếu đang xuất hiện hiện tượng Climax Tops tăng tốc bất thường hoặc đang gãy đường MA 50 ngày với khối lượng lớn, lấy đó làm cảnh báo sớm cho đỉnh chu kỳ.</div>
+    </div>
+  </li>
+</ul>
+
+<figure class="image-slot hero" style="margin-top: 1.5rem;">
+  <div class="image-prompt">
+    <span class="image-prompt-label">AI Image Prompt — Giới hạn quota Image-gen của hệ thống tạm thời hết</span>
+    <p class="image-prompt-text">"An elegant hourglass sitting on a polished dark desk, sand flowing down representing market cycle time and timing, soft dramatic backlighting, clean corporate style, high contrast, 8k."</p>
+    <span class="image-prompt-hint">Bạn có thể tạo ảnh trên Midjourney, lưu dưới tên 'ch9_cycle_hero.png' vào thư mục 'images/' và thay thế khối HTML này bằng thẻ &lt;img src="images/ch9_cycle_hero.png"&gt; để hoàn thiện slide Closing Actions.</span>
+  </div>
+</figure>
+
+  </section>
+
+</div>
+
+<div class="nav-controls">
+  <button class="nav-btn" id="prevBtn" onclick="prevSlide()" aria-label="Previous slide">&#8592;</button>
+  <div class="counter" id="counter" aria-live="polite">1 / 1</div>
+  <button class="nav-btn" id="nextBtn" onclick="nextSlide()" aria-label="Next slide">&#8594;</button>
+</div>
+
+<script src="common.js"></script>
+</body>
+</html>

@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How to Make Money in Stocks — Chapter 19</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="common.css">
+<script src="https://cdn.jsdelivr.net/npm/@panzoom/panzoom@4.5.1/dist/panzoom.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11.10.0/dist/mermaid.min.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div class="progress-bar" id="progressBar"></div>
+
+<div class="chapter-menu">
+  <button class="menu-btn" id="chapterMenuBtn" onclick="toggleChapterMenu()" aria-haspopup="true" aria-expanded="false">Chapters &#9662;</button>
+  <div class="chapter-menu-panel" id="chapterMenuPanel" role="menu"></div>
+</div>
+
+<div class="slide-container" id="slideContainer">
+
+  <section class="slide" aria-hidden="false">
+<h1>How to Make Money in Stocks</h1>
+<p class="subtitle">Chương 19: Cải Thiện Quản Lý Danh Mục Quỹ Hưu Trí Và Định Chế Tài Chính<br><span style="font-size: 0.9em; opacity: 0.85;">(Improving the Management of Pension and Institutional Portfolios)</span></p>
+
+<figure class="image-slot hero">
+  <div class="image-prompt">
+    <span class="image-prompt-label">AI Image Prompt — Giới hạn quota Image-gen của hệ thống tạm thời hết</span>
+    <p class="image-prompt-text">"A modern luxury corporate boardroom overlooking a city skyline at dusk, a large glowing holographic graph showing upward stock trends in the center of the table, ultra-premium style, 8k."</p>
+    <span class="image-prompt-hint">Bạn có thể tạo ảnh trên Midjourney, lưu dưới tên 'ch19_title_hero.png' vào thư mục 'images/' và thay thế khối HTML này bằng thẻ &lt;img src="images/ch19_title_hero.png"&gt;</span>
+  </div>
+</figure>
+
+<div class="meta-grid">
+  <div class="meta-item">
+    <div class="meta-label">Tác giả</div>
+    <div class="meta-value">William J. O'Neil</div>
+  </div>
+  <div class="meta-item">
+    <div class="meta-label">Độ sâu phân tích</div>
+    <div class="meta-value">DEEP+ Mode (23 Slides)</div>
+  </div>
+  <div class="meta-item">
+    <div class="meta-label">Đối tượng mục tiêu</div>
+    <div class="meta-value">Nhà đầu tư cá nhân</div>
+  </div>
+  <div class="meta-item">
+    <div class="meta-label">Ngôn ngữ</div>
+    <div class="meta-value">Song ngữ Anh - Việt</div>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide chapter-divider">
+<div class="divider-container">
+  <div class="chapter-number">CHƯƠNG 19</div>
+  <h2>Cải Thiện Quản Lý Danh Mục Quỹ Hưu Trí Và Định Chế Tài Chính</h2>
+  <p class="divider-subtitle">Bóc trần những điểm yếu cấu trúc của các tổ chức tài chính lớn và cách tận dụng sự linh hoạt của nhà đầu tư cá nhân.</p>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 19 &amp;middot; TỔNG QUAN TRỰC QUAN 1</div>
+    <h2>Mô hình cổ chai quyết định của định chế tài chính</h2>
+<div class="visual-summary-card">
+  <h2>NÚT THẮT CỔ CHAI QUYẾT ĐỊNH CỦA ĐỊNH CHẾ TÀI CHÍNH</h2>
+  <div class="mermaid-container" style="background: var(--background); padding: 1rem; border-radius: 8px; border: 1px solid var(--border); margin-top: 1rem;">
+    <pre class="mermaid">
+graph TD
+  NewIdea["Ý tưởng cổ phiếu mới xuất sắc"] --> AnalystReport["Chuyên viên viết báo cáo nghiên cứu chi tiết"]
+  AnalystReport --> ApprovedList["Trình lên danh mục được phê duyệt (Approved List)"]
+  ApprovedList --> Committee["Ủy ban đầu tư họp xét duyệt (Committee Review)"]
+  Committee --> PortfolioManager["Chấp thuận cho Quản lý quỹ (Portfolio Manager)"]
+  PortfolioManager --> Execution["Đặt lệnh giao dịch qua môi giới giá rẻ"]
+  
+  Execution --> LagTime["Trễ 1 - 3 tháng: Cổ phiếu đã tăng 50% & Lọt đỉnh"]
+    </pre>
+  </div>
+  <div class="page-reference" style="margin-top: 0.5rem;">Ch 19 &middot; "Antiquated rules & Committee decision-making bottleneck"</div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 19 &amp;middot; TỔNG QUAN TRỰC QUAN 2</div>
+    <h2>Chu kỳ đánh giá hiệu suất nhà quản lý quỹ</h2>
+<div class="visual-summary-card">
+  <h2>QUY TRÌNH ĐÀO THẢI & TỐI ƯU HÓA ĐỘI NGŨ QUẢN LÝ QUỸ</h2>
+  <div class="mermaid-container" style="background: var(--background); padding: 1rem; border-radius: 8px; border: 1px solid var(--border); margin-top: 1rem;">
+    <pre class="mermaid">
+graph TD
+  HireManagers["Tuyển dụng nhiều Quản lý quỹ có phong cách khác nhau"] --> FullCycle["Thực thi trọn vẹn 1 chu kỳ kinh tế (3 - 4 năm)"]
+  FullCycle --> RankManagers["Xếp hạng toàn bộ hiệu suất (Trough to Trough hoặc Peak to Peak)"]
+  
+  RankManagers --> ReplaceBottom["Thay thế 20% Quản lý có hiệu suất kém nhất"]
+  ReplaceBottom --> MaintainTeam["Hệ thống tự sửa lỗi duy trì đội ngũ tinh anh (High-performing team)"]
+  
+  MaintainTeam --> DropAnnual["Hàng năm đào thải tiếp 5% - 10% quản lý đứng cuối"]
+  DropAnnual --> FullCycle
+    </pre>
+  </div>
+  <div class="page-reference" style="margin-top: 0.5rem;">Ch 19 &middot; "How to Select and Measure Money Managers Properly"</div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 19 &amp;middot; TÓM TẮT CHƯƠNG</div>
+    <h2>Cấu trúc quản lý quỹ lương hưu &amp; tổ chức</h2>
+<div class="content-card">
+  <div class="summary-text">
+    <p><strong>Bối cảnh (Setup):</strong> Tại sao các định chế tài chính lớn sở hữu nguồn lực tài chính và nhân sự khổng lồ nhưng hiệu suất đầu tư dài hạn của họ thường rất bình thường, thậm chí thua cả chỉ số S&P 500? Nhà đầu tư cá nhân có thể rút ra bài học gì từ những điểm yếu cấu trúc này?</p>
+    <p><strong>Luận điểm chính (Argument):</strong> Sự yếu kém của các tổ chức tài chính lớn không xuất phát từ năng lực cá nhân mà từ sự ràng buộc pháp lý mang tính hệ thống và phương pháp đầu tư lạc hậu. Họ bị trói buộc bởi luật "người ủy thác cẩn trọng" (prudent man rule), bắt buộc phải tuân thủ danh mục phê duyệt tĩnh (approved lists), ưu tiên cổ tức và phân bổ tài sản cố định vào trái phiếu làm loãng hiệu suất. Việc đưa quyết định thông qua các ủy ban đầu tư cồng kềnh và phân chia phân tích theo ngành hẹp (industry specialist) làm triệt tiêu tính linh hoạt và phản xạ nhanh trước thị trường. O'Neil đề xuất giải pháp cải tổ: làm việc từ dưới lên (bottom-up), sử dụng hệ thống lọc dữ liệu đa chiều thời gian thực (WONDA), giải phóng quản lý quỹ khỏi các danh mục phê duyệt cứng nhắc, và thiết lập cơ chế đào thải tự động đối với các nhà quản lý yếu kém sau mỗi chu kỳ 3-4 năm.</p>
+    <p><strong>Bằng chứng (Evidence):</strong> O'Neil chỉ ra các dẫn chứng thực tế: Sự thất bại toàn tập của giới phân tích CNBC năm 2000 khi khuyên mua cổ phiếu công nghệ đã giảm 80-90%, hay khuyên bắt đáy nhóm ngân hàng/dầu khí năm 2008 vì P/E rẻ. Khảo sát của tạp chí *Financial World* năm 1980 khẳng định các chuyên gia phân tích "ngôi sao" được trả lương cao ngất ngưởng thực tế đã dự báo sai 2/3 số cổ phiếu khuyến nghị. Ngược lại, dịch vụ NSMI dựa trên bộ lọc định lượng của O'Neil đã đánh bại chỉ số S&P 500 tới <strong>41 lần</strong> trong 30 năm (1978-2008), và các lựa chọn tránh né (avoid list) chỉ tăng vỏn vẹn 19% trong suốt 30 năm. <span class="page-ref">Ch 19 &middot; "Financial World’s Startling Survey of Top Analysts"</span></p>
+    <p><strong>Hệ quả (Implications):</strong> Doanh nghiệp sở hữu quỹ hưu trí lớn nên phân bổ vốn cho nhiều nhà quản lý có phong cách khác nhau, đánh giá hiệu suất của họ qua trọn vẹn một chu kỳ kinh tế (3-4 năm) thay vì so đo từng quý, đào thải 20% những người đứng cuối bảng. Nhà đầu tư cá nhân phải tự tin tận dụng sự linh hoạt vượt trội của mình để mua gom các cổ phiếu tăng trưởng vừa và nhỏ có nền tảng cơ bản cực tốt mà các tổ chức lớn chưa thể mua được do thanh khoản thấp ở giai đoạn đầu (Ví dụ: Pic 'N' Save tăng 10 lần).</p>
+    <p><strong>Tranh luận (Controversy):</strong> Phản đối gay gắt triết lý đầu tư thụ động mô phỏng chỉ số (indexing) tuyệt đối và việc chia nhỏ chuyên viên phân tích theo ngành. O'Neil khẳng định đầu tư theo chỉ số tĩnh là hành động vô trách nhiệm của người ủy thác khi thị trường rơi vào thảm họa sụp đổ, và việc chia ngành hẹp biến chuyên gia phân tích thành những người mù quáng giới thiệu cổ phiếu "ít tệ nhất" trong một ngành đang suy thoái.</p>
+    <p><strong>Mối liên kết (Connection):</strong> Kết nối trực tiếp với Chương 16 (cơ sở dữ liệu IBD giúp loại bỏ ý kiến cá nhân của phân tích Wall Street) và Chương 18 (sử dụng ETF chỉ số chỉ như giải pháp tạm thời cho nhà đầu tư bảo thủ, mục tiêu tối hậu vẫn là tìm các nhà quản lý tăng trưởng alpha xuất sắc).</p>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 19 &amp;middot; Ý TƯỞNG CỐT LÕI</div>
+    <h2>Ý tưởng cốt lõi</h2>
+<div class="takeaway-hero">
+  <div class="kicker">CH 19 &middot; THE BIG IDEA</div>
+  <div class="headline">"Superior performance comes from fresh ideas, not from the same old overused, stale names or last cycle’s favorites."</div>
+  <div class="subline">Hiệu suất đầu tư vượt trội bắt buộc phải đến từ các ý tưởng đầu tư mới mẻ được lọc từ dưới lên (bottom-up), chứ không thể dựa vào các danh mục phê duyệt tĩnh (approved lists) hay những cổ phiếu dẫn dắt của chu kỳ cũ. <span class="page-ref">Ch 19 &middot; "Size Is Not the Key Problem"</span></div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 19 &amp;middot; BÀI HỌC CHỦ CHỐT</div>
+    <h2>Bài học chủ chốt</h2>
+<div class="takeaway-list">
+  <div class="takeaway-item">
+    <div class="takeaway-badge">1</div>
+    <div class="takeaway-content">
+      <strong>Vượt qua rào cản quy mô (Size Handicap) bằng cách mở rộng danh mục</strong>
+      <div class="takeaway-detail">
+        <strong>Ý nghĩa:</strong> Quản lý dòng vốn tỷ đô rất khó để giải ngân vào cổ phiếu vừa và nhỏ. Tuy nhiên, tự giới hạn vào cổ phiếu vốn hóa lớn (Large-cap) tăng trưởng chậm (10-12%) sẽ bỏ lỡ các siêu cổ phiếu.
+        <br><strong>Áp dụng:</strong> Các định chế lớn nên sở hữu tối đa 500 cổ phiếu ở mọi quy mô thay vì chỉ tập trung vào 100 cổ phiếu blue-chip đã trưởng thành.
+        <br><strong>Lưu ý:</strong> Quỹ nhỏ tăng trưởng nhanh cần cực kỳ cẩn trọng khi dòng vốn phình to, tránh sa đà vào các cổ phiếu đầu cơ thanh khoản thấp dễ bị sụp đổ không thanh khoản được. <span class="page-ref">Ch 19 &middot; "The Size Problem in Portfolio Management"</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="takeaway-item">
+    <div class="takeaway-badge">2</div>
+    <div class="takeaway-content">
+      <strong>Lựa chọn cổ phiếu từ dưới lên (Bottom-up) vượt trội hơn phương pháp giá trị/định giá rẻ</strong>
+      <div class="takeaway-detail">
+        <strong>Ý nghĩa:</strong> Việc lọc cổ phiếu từ dưới lên dựa trên các đặc điểm tăng trưởng (CAN SLIM) mang lại hiệu suất 25-30%/năm, vượt trội so với các quỹ mua theo mô hình định giá P/E thấp (chỉ đạt 15-20%/năm).
+        <br><strong>Áp dụng:</strong> Loại bỏ tư duy "định giá rẻ" hoặc P/E thấp. Tìm kiếm các doanh nghiệp có tốc độ tăng trưởng EPS mạnh mẽ và đột phá sản phẩm.
+        <br><strong>Lưu ý:</strong> Cổ phiếu giá trị (Value) có thể phòng thủ tốt hơn trong thị trường gấu ngắn hạn, nhưng sẽ bị bỏ xa trong các chu kỳ tăng trưởng dài hạn. <span class="page-ref">Ch 19 &middot; "Comparing Growth versus Value Results"</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="takeaway-item">
+    <div class="takeaway-badge">3</div>
+    <div class="takeaway-content">
+      <strong>Nhận diện xung đột lợi ích và tư duy cục bộ của giới phân tích Wall Street</strong>
+      <div class="takeaway-detail">
+        <strong>Ý nghĩa:</strong> Chuyên viên phân tích thường bị chia theo ngành hẹp (industry specialist), dẫn đến việc họ cố khuyến nghị "cổ phiếu ít tệ nhất" trong một ngành đang suy thoái. Đồng thời, xung đột lợi ích từ mảng ngân hàng đầu tư (investment banking) khiến họ hiếm khi đưa ra khuyến nghị BÁN.
+        <br><strong>Áp dụng:</strong> Chỉ tin tưởng vào dữ liệu thực tế và mô hình giá lịch sử. Tuyệt đối không giao dịch dựa trên tin đồn, ý kiến cá nhân của chuyên gia trên TV (như CNBC năm 2000 hay 2008).
+        <br><strong>Lưu ý:</strong> Luật SEC Rule FD đã giảm bớt lợi thế thông tin nội bộ của các nhà phân tích lớn, đưa vị thế của nhà đầu tư cá nhân về gần hơn với tổ chức. <span class="page-ref">Ch 19 &middot; "Weaknesses of the Industry Analyst System"</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="takeaway-item">
+    <div class="takeaway-badge">4</div>
+    <div class="takeaway-content">
+      <strong>Nguyên tắc "Người ủy thác cẩn trọng" (Prudent Man Rule) dung dưỡng sự trung bình</strong>
+      <div class="takeaway-detail">
+        <strong>Ý nghĩa:</strong> Luật pháp bảo vệ các nhà quản lý quỹ nếu họ tuân thủ đúng quy trình đầu tư (fiduciary duty) và mua các cổ phiếu "an toàn" trong danh sách được duyệt, ngay cả khi danh mục đó thua lỗ nặng nề.
+        <br><strong>Áp dụng:</strong> Nhà đầu tư cá nhân không bị trói buộc bởi các quy tắc pháp lý này, hãy tận dụng tối đa sự linh hoạt để mua các cổ phiếu tăng trưởng mới nổi trước khi chúng được các tổ chức thêm vào danh mục phê duyệt.
+        <br><strong>Lưu ý:</strong> Tự do hành động đi kèm với kỷ luật cắt lỗ nghiêm ngặt 7-8% để bảo vệ tài khoản cá nhân. <span class="page-ref">Ch 19 &middot; "Size Is Not the Key Problem"</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="takeaway-item">
+    <div class="takeaway-badge">5</div>
+    <div class="takeaway-content">
+      <strong>Đánh giá hiệu suất quản lý quỹ theo chu kỳ kinh tế trọn vẹn (3-4 năm)</strong>
+      <div class="takeaway-detail">
+        <strong>Ý nghĩa:</strong> So sánh hiệu suất theo quý hoặc theo năm dẫn đến các quyết định thay đổi nhân sự vội vã và sai lầm. Các nhà quản lý xuất sắc cần thời gian trải qua cả thị trường bò và gấu để chứng minh năng lực.
+        <br><strong>Áp dụng:</strong> Đối với các doanh nghiệp ủy thác vốn đầu tư hưu trí, hãy đánh giá hiệu suất của các nhà quản lý theo chu kỳ 3-4 năm. Đào thải 20% những người đứng cuối bảng sau mỗi chu kỳ và thay thế bằng dòng máu mới.
+        <br><strong>Lưu ý:</strong> Phân bổ vốn cho các nhà quản lý có phong cách và khu vực địa lý khác nhau để phân tán rủi ro. <span class="page-ref">Ch 19 &middot; "How to Select and Measure Money Managers Properly"</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 19 &amp;middot; TRÍCH DẪN ĐẮT GIÁ</div>
+    <h2>Trích dẫn đắt giá</h2>
+<div class="quote-container">
+  <div class="quote-block">
+    <p class="quote-text">"One of the secrets that you, as a winning individual investor, should never forget is that you want to buy a stock before its potential is obvious to others. When numerous research reports show up, it might actually be time to consider selling. If it’s value is obvious to almost everyone, it’s probably too late."</p>
+    <p class="quote-context">
+      <strong>Bản dịch:</strong> "Một trong những bí mật mà bạn, với tư cách là một nhà đầu tư cá nhân thành công, không bao giờ được phép quên là bạn muốn mua một cổ phiếu trước khi tiềm năng của nó trở nên quá rõ ràng với những người khác. Khi vô số báo cáo nghiên cứu xuất hiện, đó thực sự có thể là lúc cần cân nhắc bán ra. Nếu giá trị của nó đã rõ ràng với hầu hết mọi người, có lẽ đã quá muộn."
+      <br><strong>Bối cảnh & Ý nghĩa:</strong> O'Neil thảo luận về câu chuyện mua Dome Petroleum trước khi các tổ chức nhận ra giá trị của nó. Khi một cổ phiếu được đám đông phân tích đồng loạt hô hào và ca ngợi, giá thường đã phản ánh hết kỳ vọng (fully priced) và không còn dư địa tăng lớn.
+      <span class="page-ref">Ch 19 &middot; "Interpreting Dome Petroleum’s Datagraph"</span>
+    </p>
+  </div>
+
+  <div class="quote-block" style="margin-top: 2rem;">
+    <p class="quote-text">"The stock market is like a giant mirror that reflects basic conditions, political management (or mismanagement), and the psychology of the country."</p>
+    <p class="quote-context">
+      <strong>Bản dịch:</strong> "Thị trường chứng khoán giống như một tấm gương khổng lồ phản chiếu các điều kiện cơ bản, sự quản lý (hoặc quản lý tồi) của chính phủ, và tâm lý của cả quốc gia."
+      <br><strong>Bối cảnh & Ý nghĩa:</strong> Giải thích lý do tại sao các đợt sụt giảm nghiêm trọng từ năm 1969 đến 1975 không phải lỗi của nhà đầu tư cá nhân hay tổ chức, mà là do các chính sách kinh tế sai lầm của Washington. Thị trường là phong vũ biểu trung thực nhất phản ánh sức khỏe chính trị và kinh tế vĩ mô.
+      <span class="page-ref">Ch 19 &middot; "Institutional Investors: An Overview"</span>
+    </p>
+  </div>
+
+  <div class="quote-block" style="margin-top: 2rem;">
+    <p class="quote-text">"Superior performance comes from fresh ideas, not from the same old overused, stale names or last cycle’s favorites."</p>
+    <p class="quote-context">
+      <strong>Bản dịch:</strong> "Hiệu suất vượt trội đến từ những ý tưởng mới mẻ, chứ không phải từ những danh mục cũ kỹ bị lạm dụng, hay những cổ phiếu được ưa chuộng của chu kỳ trước."
+      <br><strong>Bối cảnh & Ý nghĩa:</strong> Chỉ trích các tổ chức lười biếng sử dụng lại danh mục được phê duyệt tĩnh năm này qua năm khác. Các siêu cổ phiếu công nghệ dẫn dắt của chu kỳ 1998-1999 sẽ bị thay thế hoàn toàn bởi các cổ phiếu tiêu dùng và quốc phòng mới trong chu kỳ tiếp theo.
+      <span class="page-ref">Ch 19 &middot; "Size Is Not the Key Problem"</span>
+    </p>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 19 &amp;middot; MÔ HÌNH TƯ DUY 1</div>
+    <h2>Mô hình 1: Rào cản quy mô lớn vs Lợi thế linh hoạt</h2>
+<div class="mental-model-card">
+  <h4 class="model-name">Rào cản quy mô lớn vs Lợi thế linh hoạt (The Size Handicap vs Flexible Generalist)</h4>
+  <div class="model-principle">
+    Quy mô tài sản tỷ đô là kẻ thù của hiệu suất đầu tư cao. Khi một quỹ phình to, họ bị ép buộc phải từ bỏ các cổ phiếu tăng trưởng vừa và nhỏ để tập trung vào nhóm vốn hóa lớn (Large-cap) có tính thanh khoản cao nhưng tăng trưởng chậm. Ngược lại, nhà đầu tư cá nhân hoặc quỹ nhỏ có thể linh hoạt gom mua cổ phiếu triển vọng ở giai đoạn sớm khi thanh khoản còn thấp.
+  </div>
+  
+  <div class="model-application" style="margin-top: 1rem;">
+    <strong>Cách thức hoạt động & Quy tắc áp dụng:</strong>
+    <ul>
+      <li><strong>Quy luật thanh khoản tỷ lệ nghịch với Alpha:</strong> Cổ phiếu càng nhỏ và ít người biết đến càng dễ có mức tăng trưởng giá đột phá (x5, x10). Các tổ chức lớn không thể mua vì khối lượng giao dịch hàng ngày quá thấp.</li>
+      <li><strong>Đa dạng hóa thông minh (ở quy mô lớn):</strong> Nếu buộc phải quản lý quy mô lớn, hãy chia nhỏ vốn thành 500 danh mục đa dạng thay vì tập trung vào 100 mã blue-chip. Phân bổ cho nhiều quản lý quỹ độc lập có phong cách khác nhau.</li>
+      <li><strong>Tận dụng lợi thế cá nhân:</strong> Mua gom trước khi cổ phiếu trở nên quá rõ ràng và xuất hiện trên hàng loạt báo cáo phân tích của Wall Street.</li>
+    </ul>
+  </div>
+
+  <div class="model-limitations" style="margin-top: 1rem;">
+    <strong>⚠️ Hạn chế & Sai lầm thường gặp:</strong>
+    <ul>
+      <li><strong>Sai lầm "Thành công tự mãn":</strong> Một quỹ nhỏ thành công nhờ cổ phiếu tăng trưởng nhỏ, khi thu hút thêm hàng tỷ đô đầu tư, vẫn cố chấp áp dụng chiến lược này. Điều này dẫn đến kẹt thanh khoản khi thị trường đảo chiều (Ví dụ: Sự thất bại của các quỹ Janus và Putnam cuối những năm 1990).</li>
+      <li><strong>Rủi ro thanh khoản cá nhân:</strong> Mua cổ phiếu có thanh khoản quá thấp (dưới 1,000 cổ phiếu/ngày) mà không có hệ thống quản lý rủi ro và cắt lỗ tốt.</li>
+    </ul>
+  </div>
+  
+  <div class="page-reference">Ch 19 &middot; "The Size Problem in Portfolio Management"</div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 19 &amp;middot; MÔ HÌNH TƯ DUY 2</div>
+    <h2>Mô hình 2: Tuân thủ quy trình vs Hiệu suất thực tế</h2>
+<div class="mental-model-card">
+  <h4 class="model-name">Tuân thủ quy trình vs Hiệu suất thực tế (Process Compliance vs Performance Reality)</h4>
+  <div class="model-principle">
+    Trong thế giới quản lý tài sản ủy thác, tiêu chuẩn đánh giá một quyết định đầu tư "đúng đắn" không phải là hiệu suất sinh lời, mà là <strong>khả năng miễn trừ trách nhiệm pháp lý</strong>. Nếu một nhà quản lý quỹ tuân thủ đúng quy tắc "Người ủy thác cẩn trọng" (Prudent Man Rule), thực hiện quy trình thẩm định (due diligence) chặt chẽ trên các cổ phiếu thuộc danh mục phê duyệt truyền thống, họ sẽ không bị kiện khi cổ phiếu đó sụp đổ.
+  </div>
+  
+  <div class="model-application" style="margin-top: 1rem;">
+    <strong>Cơ chế vận hành trong thực tế:</strong>
+    <ul>
+      <li><strong>Ảo tưởng an toàn pháp lý:</strong> Việc mua các cổ phiếu lớn, trả cổ tức cao, dù kết quả tồi tệ, vẫn được coi là hành động "cẩn trọng" (prudent). Việc mua một siêu cổ phiếu tăng trưởng mới nổi không chia cổ tức, dù tăng gấp nhiều lần, lại bị coi là rủi ro và thiếu trách nhiệm ủy thác.</li>
+      <li><strong>Hành vi bầy đàn phòng thủ (Index Hugging):</strong> Để tránh rủi ro mất việc và bị kiện, các quỹ chọn mô phỏng danh mục của S&P 500 hoặc các đối thủ cạnh tranh. Điều này dẫn đến sự tương đồng kỳ lạ giữa các danh mục của các quỹ lớn và kéo hiệu suất dài hạn về mức trung bình.</li>
+    </ul>
+  </div>
+
+  <div class="model-limitations" style="margin-top: 1rem;">
+    <strong>⚠️ Ý nghĩa đối với Nhà đầu tư cá nhân:</strong>
+    <ul>
+      <li><strong>Tận dụng lợi thế phi đối xứng:</strong> Cá nhân không phải giải trình trước ủy ban đầu tư hay lo ngại các vụ kiện ủy thác. Bạn được tự do mua các doanh nghiệp xuất sắc không chia cổ tức nhưng tái đầu tư 100% lợi nhuận để tăng trưởng EPS tốc độ cao.</li>
+      <li><strong>Cảnh giác với quỹ lớn:</strong> Hiểu rằng phần lớn lời khuyên đầu tư "an toàn" từ các tổ chức tài chính lớn được thiết kế để bảo vệ họ khỏi rủi ro kiện tụng, chứ không phải để giúp bạn tối đa hóa lợi nhuận.</li>
+    </ul>
+  </div>
+  
+  <div class="page-reference">Ch 19 &middot; "Size Is Not the Key Problem"</div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 19 &amp;middot; MÔ HÌNH TƯ DUY 3</div>
+    <h2>Mô hình 3: Sai lầm phân tích ngành hẹp vs Tầm nhìn tổng quan</h2>
+<div class="mental-model-card">
+  <h4 class="model-name">Phân tích ngành hẹp vs Tầm nhìn tổng quan (Industry Specialist Fallacy)</h4>
+  <div class="model-principle">
+    Hệ thống phân tích truyền thống chia chuyên viên theo dõi từng ngành hẹp (Specialist) sẽ triệt tiêu khả năng luân chuyển vốn linh hoạt. Chuyên viên phân tích ngành dầu khí hoặc ôtô bị ép buộc phải liên tục đưa ra khuyến nghị mua trong ngành của họ, ngay cả khi ngành đó đang suy thoái nghiêm trọng, dẫn đến việc khuyên mua "cổ phiếu ít tệ nhất" (least bad). Ngược lại, một nhà phân tích tổng quan (Generalist) có thể dễ dàng so sánh và chuyển dịch vốn từ ngành yếu sang các ngành dẫn dắt mạnh nhất.
+  </div>
+  
+  <div class="model-application" style="margin-top: 1rem;">
+    <strong>Tại sao các chuyên gia ngành thường sai lầm tại đỉnh thị trường:</strong>
+    <ul>
+      <li><strong>Mù quáng vì chi tiết kỹ thuật:</strong> Một kỹ sư hóa chất làm phân tích ngành hóa chất rất giỏi các thông số kỹ thuật, nhưng lại thiếu hiểu biết về chu kỳ dòng tiền vĩ mô và cách thức thị trường định giá dòng tiền.</li>
+      <li><strong>Hiện tượng CNBC 2000 & 2008:</strong> Các chuyên gia ngành tiếp tục phát hành khuyến nghị MUA khi nhóm công nghệ (2000) giảm 80-90%, hay khuyên bắt đáy nhóm ngân hàng (2008) vì P/E rẻ, mà không thấy được xu hướng phân phối lớn trên đồ thị giá kỹ thuật.</li>
+    </ul>
+  </div>
+
+  <div class="model-limitations" style="margin-top: 1rem;">
+    <strong>⚠️ Lớp phòng thủ của nhà đầu tư cá nhân:</strong>
+    <ul>
+      <li><strong>Trở thành nhà tổng quát lọc số liệu:</strong> Hãy tập trung vào các tiêu chí CAN SLIM cơ bản và kỹ thuật đồng đều cho mọi ngành. So sánh sức mạnh tương đối (Relative Strength) của các cổ phiếu thuộc các ngành khác nhau để tìm ra những ngành hàng đầu thực sự.</li>
+      <li><strong>Sử dụng bộ lọc định lượng tự động:</strong> Loại bỏ định kiến cá nhân và tin đồn bằng cách dùng công nghệ lọc (như WONDA hay IBD) để quét toàn bộ thị trường tìm điểm sáng dòng tiền.</li>
+    </ul>
+  </div>
+  
+  <div class="page-reference">Ch 19 &middot; "Weaknesses of the Industry Analyst System"</div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 19 &amp;middot; SỐ LIỆU &amp; THỐNG KÊ</div>
+    <h2>Số liệu thực chứng và kết quả kiểm toán 30 năm</h2>
+<div class="metric-grid">
+  <div class="metric-card">
+    <div class="metric-value">41&times;</div>
+    <div class="metric-label">Hiệu suất NSMI vượt trội S&P 500</div>
+    <div class="metric-detail">
+      Dịch vụ <strong>New Stock Market Ideas (NSMI)</strong> của O'Neil trong 30 năm (1978-2008) đã mang lại kết quả tăng trưởng gấp 41 lần chỉ số S&P 500.
+      <span class="page-ref">Ch 19 &middot; "Database Power and Efficiency"</span>
+    </div>
+  </div>
+
+  <div class="metric-card">
+    <div class="metric-value">307 : 1</div>
+    <div class="metric-label">Tỷ lệ Lợi nhuận Chọn mua vs Tránh né</div>
+    <div class="metric-detail">
+      Hiệu suất các cổ phiếu khuyến nghị MUA vượt trội gấp 307 lần so với danh sách Tránh né (Past Leaders to Avoid).
+      <span class="page-ref">Ch 19 &middot; "Database Power and Efficiency"</span>
+    </div>
+  </div>
+
+  <div class="metric-card">
+    <div class="metric-value">19%</div>
+    <div class="metric-label">Tăng trưởng 30 năm của Danh mục Tránh né</div>
+    <div class="metric-detail">
+      Tổng mức tăng trưởng lũy kế của nhóm cổ phiếu khuyên tránh chỉ đạt 19% trong suốt 30 năm, tức là mất giá nặng nề do lạm phát.
+      <span class="page-ref">Ch 19 &middot; "Database Power and Efficiency"</span>
+    </div>
+  </div>
+
+  <div class="metric-card">
+    <div class="metric-value">2 / 3</div>
+    <div class="metric-label">Tỷ lệ sai lệch của chuyên gia All-star</div>
+    <div class="metric-detail">
+      Khảo sát của *Financial World (1/11/1980)*: 2/3 khuyến nghị của các "siêu sao" phân tích không khớp nổi chỉ số ngành hoặc thị trường chung.
+      <span class="page-ref">Ch 19 &middot; "Financial World’s Startling Survey of Top Analysts"</span>
+    </div>
+  </div>
+
+  <div class="metric-card">
+    <div class="metric-value">29 / 8,000</div>
+    <div class="metric-label">Khuyến nghị BÁN tại đỉnh bong bóng</div>
+    <div class="metric-detail">
+      Thống kê của Zacks (31/12/2000): Trong 8.000 khuyến nghị về S&P 500 của các nhà phân tích, chỉ có duy nhất 29 khuyến nghị BÁN.
+      <span class="page-ref">Ch 19 &middot; "Weaknesses of the Industry Analyst System"</span>
+    </div>
+  </div>
+
+  <div class="metric-card">
+    <div class="metric-value">+36.7%</div>
+    <div class="metric-label">Kết quả nghiên cứu độc lập của Reinganum</div>
+    <div class="metric-detail">
+      Nghiên cứu của Giáo sư Marc Reinganum (SMU/U Chicago 1984-1985) dùng 9 biến số định lượng tương tự CAN SLIM để đánh bại S&P 500.
+      <span class="page-ref">Ch 19 &middot; "Is An Index Fund the Way to Go?"</span>
+    </div>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 19 &amp;middot; PHÂN TÍCH CHUYÊN SÂU 1</div>
+    <h2>Thời kỳ đồ đá của danh mục phê duyệt tĩnh &amp; cổ tức</h2>
+<div class="split-layout">
+  <div class="split-left" style="border-left-color: var(--accent-red); background-color: rgba(239, 68, 68, 0.05);">
+    <h3 style="color: var(--accent-red); margin-top: 0;">Tư duy "Thời kỳ đồ đá" (Stale Approved Lists)</h3>
+    <ul class="action-list" style="padding: 0; list-style: none;">
+      <li style="margin-bottom: 1rem;">
+        <strong>Bắt buộc chi trả cổ tức:</strong> Cấm mua cổ phiếu không chia cổ tức. Điều này loại bỏ hoàn toàn các siêu cổ phiếu tăng trưởng đang cần giữ lại 100% lợi nhuận để tái đầu tư mở rộng sản xuất.
+      </li>
+      <li style="margin-bottom: 1rem;">
+        <strong>Danh mục phê duyệt tĩnh (Approved Lists):</strong> Chỉ được mua cổ phiếu nằm trong danh sách được hội đồng quản trị phê duyệt từ trước. Danh sách gồm 100 mã và chỉ thêm mới 4-5 mã mỗi năm.
+      </li>
+      <li style="margin-bottom: 1rem;">
+        <strong>Quyết định bằng Ủy ban đầu tư:</strong> Mọi lệnh giao dịch phải được phê duyệt bởi một ủy ban đầu tư cồng kềnh, thậm chí có những thành viên không có chuyên môn hoặc kinh nghiệm quản lý vốn thực chiến.
+      </li>
+      <li style="margin-bottom: 1rem;">
+        <strong>Áp đặt tỷ trọng Trái phiếu & Tập trung vào Lợi tức (Yield):</strong> Ràng buộc tối thiểu 50% vốn vào trái phiếu dài hạn có hiệu suất kém. Tập trung thu lãi suất định kỳ thay vì gia tăng giá trị ròng tài sản (Net Asset Value).
+      </li>
+    </ul>
+  </div>
+  
+  <div class="split-right" style="border-left-color: var(--accent-emerald); background-color: rgba(16, 185, 129, 0.05);">
+    <h3 style="color: var(--accent-emerald); margin-top: 0;">Tư duy Tăng trưởng Hiện đại (Modern Growth)</h3>
+    <ul class="action-list" style="padding: 0; list-style: none;">
+      <li style="margin-bottom: 1rem;">
+        <strong>Đánh giá cao việc Reinvest vốn:</strong> Các cổ phiếu tăng trưởng tốt nhất không chia cổ tức mà dùng lợi nhuận tích lũy để phát triển sản phẩm đột phá, tạo hiệu ứng đòn bẩy EPS.
+      </li>
+      <li style="margin-bottom: 1rem;">
+        <strong>Ý tưởng tươi mới (Fresh Ideas):</strong> Thị trường liên tục sản sinh ra các cơ hội mới sau mỗi chu kỳ. Danh mục phải linh hoạt thích ứng và tìm kiếm các doanh nghiệp dẫn dắt mới nổi từ dưới lên.
+      </li>
+      <li style="margin-bottom: 1rem;">
+        <strong>Ủy quyền cho cá nhân xuất sắc:</strong> Quyết định giao dịch phải nhanh chóng, dứt khoát dưới sự kiểm soát của một nhà quản lý quỹ có năng lực và chịu trách nhiệm trực tiếp về kết quả.
+      </li>
+      <li style="margin-bottom: 1rem;">
+        <strong>Tập trung tối đa hóa Tổng lợi nhuận (Total Return):</strong> Đo lường sự biến đổi giá trị ròng của danh mục tài sản định kỳ. Trái phiếu chỉ đóng vai trò trú ẩn tạm thời chứ không phải là phân bổ bắt buộc dài hạn.
+      </li>
+    </ul>
+  </div>
+</div>
+<div class="callout" style="margin-top: 1.5rem;">
+  <div class="callout-icon">💡</div>
+  <div class="callout-content">
+    <strong>Bài học của O'Neil:</strong> "Hiệu suất vượt trội đến từ những ý tưởng tươi mới, chứ không phải từ những danh mục phê duyệt cũ kỹ hay những cổ phiếu dẫn dắt của chu kỳ trước." Nhà đầu tư cá nhân có lợi thế tuyệt đối khi hoàn toàn thoát khỏi những ràng buộc ngớ ngẩn của các danh mục phê duyệt kiểu cũ này.
+    <span class="page-ref">Ch 19 &middot; "Size Is Not the Key Problem"</span>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 19 &amp;middot; PHÂN TÍCH CHUYÊN SÂU 2</div>
+    <h2>Mâu thuẫn lợi ích và sự vắng bóng của lệnh bán</h2>
+<div class="content-card">
+  <p>Một trong những sự thật trần trụi nhất của thế giới tài chính chuyên nghiệp là **các báo cáo phân tích của Wall Street không được thiết kế độc lập để giúp nhà đầu tư kiếm tiền**. Thay vào đó, chúng là một phần trong cỗ máy tiếp thị khổng lồ của mảng ngân hàng đầu tư (investment banking).</p>
+  
+  <div class="bullet-grid" style="margin-top: 1.5rem;">
+    <div class="bullet-card">
+      <div class="bullet-icon">💔</div>
+      <h4>Sự phân đôi lòng trung thành (Split Loyalties)</h4>
+      <p>Nhiệm vụ của chuyên viên phân tích bị giằng xé giữa hai bên: viết báo cáo khách quan cho khách hàng mua cổ phiếu, và giữ mối quan hệ tốt đẹp với các doanh nghiệp lớn là khách hàng tiềm năng của mảng IPO và bảo lãnh phát hành (mảng mang lại hàng chục triệu đô hoa hồng cho công ty mẹ).</p>
+    </div>
+    
+    <div class="bullet-card">
+      <div class="bullet-icon">🚫</div>
+      <h4>Sự vắng bóng của khuyến nghị BÁN</h4>
+      <p>Để không làm mếch lòng các ban lãnh đạo doanh nghiệp (vốn là khách hàng gửi tiền/phát hành trái phiếu), các nhà phân tích hầu như không bao giờ phát hành khuyến nghị <strong>BÁN (SELL)</strong>. Họ dùng các từ ngữ hoa mỹ như "Hold" (Nắm giữ), "Market Perform" (Trung lập) hoặc sáng tạo ra các tiêu chuẩn định giá ảo để che đậy sự suy thoái. <span class="page-ref">Ch 19, p. 6961</span></p>
+    </div>
+
+    <div class="bullet-card">
+      <div class="bullet-icon">⚖️</div>
+      <h4>Luật SEC Rule FD (Fair Disclosure)</h4>
+      <p>Ban hành năm 2000, luật này cấm các doanh nghiệp tiết lộ thông tin quan trọng trước cho các công ty chứng khoán lớn. Điều này đã tước đi lợi thế tiếp cận thông tin nội bộ của các nhà phân tích hàng đầu, biến hầu hết các báo cáo phân tích thành sản phẩm phản ứng chậm trễ sau khi tin tức đã ra mắt.</p>
+    </div>
+  </div>
+
+  <div class="callout" style="margin-top: 1.5rem; border-left-color: var(--accent-red); background-color: rgba(239, 68, 68, 0.05);">
+    <div class="callout-icon">⚠️</div>
+    <div class="callout-content">
+      <strong>Lời khuyên thực tế của William O'Neil:</strong> "Chúng tôi ưu tiên giao dịch hoàn toàn dựa trên dữ liệu thực tế và mô hình giá lịch sử hơn là dựa vào ý kiến cá nhân về các giá trị giả định. Hãy cảnh giác với 'tin tức miễn phí' trên truyền hình hoặc các khuyến nghị mua đồng loạt tại các vùng đỉnh." 
+      <span class="page-ref">Ch 19 &middot; "Weaknesses of the Industry Analyst System"</span>
+    </div>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 19 &amp;middot; PHÂN TÍCH CHUYÊN SÂU 3</div>
+    <h2>Tiến trình công nghệ: Từ sách giấy Datagraph đến WONDA</h2>
+<div class="timeline" style="margin: 0 auto; max-width: 900px;">
+  <div class="timeline-item" style="display: flex; margin-bottom: 1.5rem; align-items: flex-start;">
+    <div class="timeline-marker" style="font-weight: bold; background: var(--accent-cyan); color: var(--background); padding: 0.3rem 0.8rem; border-radius: 4px; margin-right: 1.5rem; min-width: 60px; text-align: center;">1964</div>
+    <div class="timeline-body">
+      <strong>Khai sinh Sách Datagraph (O'Neil Database Datagraph Books)</strong>
+      <p style="margin: 0.2rem 0 0 0; font-size: 0.95rem; color: var(--text-secondary);">
+        Hệ thống biểu đồ chi tiết đầu tiên cho định chế tài chính. Dữ liệu được cập nhật vào tối thứ Sáu, in ấn bằng máy vẽ vi phim tốc độ 1 trang/giây, và vận chuyển khẩn cấp qua cuối tuần để kịp phục vụ phiên mở cửa sáng thứ Hai.
+      </p>
+    </div>
+  </div>
+
+  <div class="timeline-item" style="display: flex; margin-bottom: 1.5rem; align-items: flex-start;">
+    <div class="timeline-marker" style="font-weight: bold; background: var(--accent-cyan); color: var(--background); padding: 0.3rem 0.8rem; border-radius: 4px; margin-right: 1.5rem; min-width: 60px; text-align: center;">1980s</div>
+    <div class="timeline-body">
+      <strong>Mở rộng cơ sở dữ liệu đa chiều</strong>
+      <p style="margin: 0.2rem 0 0 0; font-size: 0.95rem; color: var(--text-secondary);">
+        Mỗi biểu đồ Datagraph hiển thị chi tiết <strong>96 chỉ số cơ bản (fundamental)</strong> và <strong>26 chỉ số kỹ thuật (technical)</strong> cho hơn 8.000 cổ phiếu, phân thành 197 nhóm ngành độc quyền. Giúp so sánh nhanh các công ty trong ngành.
+      </p>
+    </div>
+  </div>
+
+  <div class="timeline-item" style="display: flex; align-items: flex-start;">
+    <div class="timeline-marker" style="font-weight: bold; background: var(--accent-purple); color: var(--background); padding: 0.3rem 0.8rem; border-radius: 4px; margin-right: 1.5rem; min-width: 60px; text-align: center;">1990s</div>
+    <div class="timeline-body">
+      <strong>Đột phá WONDA (William O'Neil Direct Access)</strong>
+      <p style="margin: 0.2rem 0 0 0; font-size: 0.95rem; color: var(--text-secondary);">
+        Chuyển đổi từ sách giấy sang phần mềm truy cập trực tiếp qua Internet. Cung cấp hơn 3.000 biến số cơ bản và kỹ thuật trên thời gian thực. Cho phép thiết lập các bộ lọc tự động thông minh để săn lùng siêu cổ phiếu ngay khi thị trường đang giao dịch.
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="callout" style="margin-top: 1.5rem; border-left-color: var(--accent-purple);">
+  <div class="callout-icon">💻</div>
+  <div class="callout-content">
+    <strong>Sức mạnh của Bộ lọc định lượng thời gian thực:</strong> Thay vì đọc hàng nghìn trang báo cáo nghiên cứu dầy cộp mỗi ngày, WONDA giúp các nhà quản lý quỹ hàng đầu thế giới quét sạch 84 công ty quốc phòng hoặc công nghệ chỉ trong <strong>20 phút</strong> để lọc ra 5-10 ứng viên có các đặc điểm tăng trưởng xuất sắc nhất.
+    <span class="page-ref">Ch 19 &middot; "Database Power and Efficiency"</span>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 19 &amp;middot; PHÂN TÍCH CHUYÊN SÂU 4</div>
+    <h2>Nghiên cứu điển hình: Pic &#x27;N&#x27; Save, Dome Petroleum &amp; Tandy</h2>
+<div class="bullet-grid">
+  <div class="bullet-card">
+    <div class="bullet-icon">🏬</div>
+    <h4>Pic ’N’ Save (Tăng hơn 10 lần)</h4>
+    <p>
+      <strong>Bối cảnh (1977):</strong> Định chế tài chính từ chối mua vì thanh khoản quá thấp (500 cổ phiếu/ngày). O'Neil mua gom liên tục trong 285 ngày khác nhau và nắm giữ 7.5 năm.
+      <br><strong>Chỉ số cơ bản:</strong> Biên lợi nhuận gộp, ROE, nợ ròng vượt trội hoàn toàn so với Walmart tại thời điểm đó. O'Neil tự tin mua vì có tiền lệ từ Kmart (1962) và Jack Eckerd Drug (1967) đều đi lên từ thanh khoản thấp.
+      <span class="page-ref">Ch 19 &middot; "The Pic ’N’ Save Story"</span>
+    </p>
+  </div>
+
+  <div class="bullet-card">
+    <div class="bullet-icon">🛢️</div>
+    <h4>Dome Petroleum (Siêu sóng dầu khí)</h4>
+    <p>
+      <strong>Bối cảnh (11/1977):</strong> O'Neil khuyến nghị cho các tổ chức tại mức giá $48. Giới quản lý quỹ chê bai và từ chối. O'Neil tự dùng vốn công ty mua gom toàn bộ vị thế.
+      <br><strong>Bài học:</strong> Muốn chiến thắng lớn, phải mua cổ phiếu trước khi giá trị của nó hiển hiện rõ ràng đối với tất cả mọi người. Khi mọi báo cáo đều tung hô, đó thường là đỉnh.
+      <span class="page-ref">Ch 19 &middot; "Interpreting Dome Petroleum’s Datagraph"</span>
+    </p>
+  </div>
+
+  <div class="bullet-card">
+    <div class="bullet-icon">📻</div>
+    <h4>Tandy Corp & Qualcomm (Triệt tiêu định kiến)</h4>
+    <p>
+      <strong>Tandy (1967):</strong> Bị các quỹ chê vì không chia cổ tức và người sáng lập Charles Tandy bị coi là "kẻ quảng cáo thổi phồng". O'Neil gặp trực tiếp Tandy và phát hiện hệ thống kiểm soát hàng tồn kho tự động bằng máy tính cực kỳ tiên tiến. Cổ phiếu sau đó tăng gấp 3 lần trước khi được phố Wall chú ý.
+      <br><strong>Qualcomm (1998):</strong> Bị gán mác đầu cơ, O'Neil mua ngay điểm phá vỡ tuần cuối năm 1998, cổ phiếu tăng 20 lần trong năm 1999.
+      <span class="page-ref">Ch 19 &middot; "Radio Shack’s Charles Tandy"</span>
+    </p>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 19 &amp;middot; PHÂN TÍCH CHUYÊN SÂU 5</div>
+    <h2>Quy trình tuyển chọn &amp; đào thải nhà quản lý quỹ</h2>
+<div class="phase-progress" style="margin-bottom: 2rem;">
+  <div class="phase active" style="flex: 1;">Giai đoạn 1: Thiết lập & Đa dạng hóa</div>
+  <div class="phase active" style="flex: 1;">Giai đoạn 2: Cho trọn một Chu kỳ (3-4 năm)</div>
+  <div class="phase active" style="flex: 1;">Giai đoạn 3: Đào thải 20% cuối bảng</div>
+  <div class="phase active" style="flex: 1;">Giai đoạn 4: Tự động hóa & Tinh chỉnh thường niên</div>
+</div>
+
+<div class="content-card">
+  <div class="bullet-grid">
+    <div class="bullet-card">
+      <div class="bullet-icon">📅</div>
+      <h4>1. Đánh giá theo chu kỳ kinh tế trọn vẹn</h4>
+      <p>
+        Tuyệt đối không đo lường và thay đổi nhà quản lý quỹ dựa trên biến động của một vài quý hoặc một năm ngắn ngủi. Hãy cho họ thời gian trải qua trọn vẹn một chu kỳ kinh tế (thường kéo dài 3-4 năm, đi từ đỉnh này đến đỉnh kia hoặc đáy này đến đáy kia) để kiểm chứng năng lực thực sự qua cả thị trường bò và thị trường gấu.
+      </p>
+    </div>
+
+    <div class="bullet-card">
+      <div class="bullet-icon">🗑️</div>
+      <h4>2. Cơ chế đào thải tự động (20% & 5-10%)</h4>
+      <p>
+        Khi kết thúc chu kỳ đầu tiên, tiến hành sa thải và thay thế <strong>20% nhóm quản lý có hiệu suất ròng thấp nhất</strong>. Sau đó, cứ mỗi 1-2 năm, tiếp tục đào thải thêm 5% đến 10% những người đứng cuối bảng trong nhóm thống kê 3-4 năm gần nhất. Đây là bộ lọc tự sửa lỗi tự động của tổ chức.
+      </p>
+    </div>
+
+    <div class="bullet-card">
+      <div class="bullet-icon">⚠️</div>
+      <h4>3. Tránh sự can thiệp từ phía khách hàng/hội đồng</h4>
+      <p>
+        Doanh nghiệp ủy thác vốn không nên can thiệp vào các quyết định phân bổ kỹ thuật (như bắt ép chuyển đổi giữa cổ phiếu và trái phiếu tại các vùng bước ngoặt), không áp đặt giao dịch qua các công ty môi giới rẻ tiền chất lượng kém (làm trượt giá giao dịch lớn tới 0.5%), và tránh các vũ trụ quản lý hạn hẹp của các công ty tư vấn.
+      </p>
+    </div>
+  </div>
+</div>
+<div class="page-reference" style="margin-top: 1rem; text-align: right;">Ch 19 &middot; "How to Select and Measure Money Managers Properly"</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 19 &amp;middot; ĐÁNH GIÁ CHỨNG CỨ</div>
+    <h2>Đánh giá chứng cứ &amp; Sự xê dịch vĩ mô đến năm 2026</h2>
+<div class="evidence-card">
+  <div class="evidence-header">
+    <span class="claim-text">Khuyến nghị của giới phân tích Wall Street mang tính định kiến và trễ pha nặng nề</span>
+    <span class="quality-score">⭐⭐⭐⭐⭐ 5/5</span>
+  </div>
+  <div class="evidence-type">📊 Khảo sát thực chứng & Nghiên cứu Độc lập</div>
+  <div class="evidence-body">
+    <ul>
+      <li><strong>Chứng cứ gốc:</strong> Khảo sát của *Financial World (1980)* chứng minh 2/3 khuyến nghị của các "all-star analysts" thua chỉ số chung; Zacks (2000) ghi nhận chỉ có 29 khuyến nghị BÁN trên tổng số 8.000 khuyến nghị giữa đỉnh bong bóng dot-com. <span class="page-ref">Ch 19, p. 6961-6973</span></li>
+      <li><strong>Đánh giá thực trạng 2026:</strong> Hoàn toàn chính xác và càng nghiêm trọng hơn trong kỷ nguyên số. Sự phổ biến của các mô hình định lượng và AI đã khiến các báo cáo phân tích định tính của Wall Street ngày càng mất đi giá trị thông tin. Các nhà phân tích chủ yếu viết báo cáo để duy trì quan hệ với doanh nghiệp (mảng ngân hàng đầu tư) và thu hút hoa hồng giao dịch.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="evidence-card" style="margin-top: 1.5rem;">
+  <div class="evidence-header">
+    <span class="claim-text">Lọc dữ liệu từ dưới lên (Bottom-up) bằng bộ lọc định lượng đánh bại chỉ số S&P 500</span>
+    <span class="quality-score">⭐⭐⭐⭐☆ 4/5</span>
+  </div>
+  <div class="evidence-type">📈 Số liệu kiểm toán 30 năm (1978-2008)</div>
+  <div class="evidence-body">
+    <ul>
+      <li><strong>Chứng cứ gốc:</strong> Danh mục chọn lọc NSMI được kiểm toán độc lập đã vượt trội S&P 500 gấp 41 lần trong 30 năm; danh mục tránh né (avoid) chỉ tăng 19%. Nghiên cứu của Reinganum (SMU) xác thực tỷ suất alpha vượt trội 36.7% của bộ lọc 9 biến số CAN SLIM. <span class="page-ref">Ch 19, p. 6996-7106</span></li>
+      <li><strong>Bối cảnh hiện đại 2026 (Institutional Crowding & Algo Liquidity):</strong> Trong bối cảnh hiện tại, dòng vốn thụ động đổ vào các quỹ ETF chỉ số đã chiếm trên 50% thị trường Mỹ. Điều này tạo ra hiện tượng **"Institutional Crowding" (Tụ tụ dòng vốn tổ chức)** vào một số ít cổ phiếu siêu lớn (như nhóm Magnificent Seven/AI Leaders). Các thuật toán tần số cao (HFT) thường xuyên quét các điểm dừng thanh khoản (liquidity sweeps) tạo ra các đợt rung lắc mạnh hơn trên các điểm phá vỡ (breakout) của mẫu hình đồ thị cổ điển. Việc lọc cổ phiếu CAN SLIM vẫn cực kỳ hiệu quả, nhưng đòi hỏi sự tinh tế hơn trong việc quản lý điểm dừng và nhận diện dòng tiền tổ chức thật sự thông qua khối lượng đột biến (institutional accumulation).</li>
+    </ul>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 19 &amp;middot; GÓC NHÌN ĐỐI LẬP</div>
+    <h2>CAN SLIM vs Phân bổ tài sản vĩ mô vs Indexing</h2>
+<table class="signal-matrix" style="width: 100%; border-collapse: collapse; font-size: 0.9rem;">
+  <thead>
+    <tr style="background-color: var(--surface);">
+      <th style="padding: 10px; border: 1px solid var(--border);">Khía cạnh</th>
+      <th style="padding: 10px; border: 1px solid var(--border); color: var(--accent-emerald);">CAN SLIM (Bottom-up Growth)</th>
+      <th style="padding: 10px; border: 1px solid var(--border); color: var(--accent-purple);">Phân bổ Tài sản Top-down (MPT)</th>
+      <th style="padding: 10px; border: 1px solid var(--border); color: var(--accent-cyan);">Đầu tư Thụ động (Passive Indexing)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th style="padding: 10px; border: 1px solid var(--border); text-align: left;">Triết lý cốt lõi</th>
+      <td style="padding: 10px; border: 1px solid var(--border);">Tập trung lọc từ dưới lên. Săn lùng siêu cổ phiếu đột phá có doanh số, EPS tăng vọt và dòng tiền tổ chức ủng hộ. <span class="page-ref">Ch 19, p. 6874</span></td>
+      <td style="padding: 10px; border: 1px solid var(--border);">Phân bổ tài sản từ trên xuống (Cổ phiếu, Trái phiếu, Tiền mặt). Biến động danh mục do phân bổ tài sản quyết định 90% hiệu suất.</td>
+      <td style="padding: 10px; border: 1px solid var(--border);">Thị trường là hiệu quả. Hầu hết các nhà quản lý quỹ chủ động đều thua cuộc sau khi trừ phí. Hãy mua và nắm giữ toàn bộ thị trường.</td>
+    </tr>
+    <tr>
+      <th style="padding: 10px; border: 1px solid var(--border); text-align: left;">Định nghĩa rủi ro</th>
+      <td style="padding: 10px; border: 1px solid var(--border);">Mất vốn vĩnh viễn do mua sai thời điểm hoặc giữ cổ phiếu rơi sâu. Bảo vệ bằng <strong>cắt lỗ tuyệt đối 7-8%</strong>.</td>
+      <td style="padding: 10px; border: 1px solid var(--border);">Độ lệch chuẩn của lợi nhuận danh mục (Volatility) và mối tương quan hệ số Beta giữa các tài sản.</td>
+      <td style="padding: 10px; border: 1px solid var(--border);">Rủi ro hệ thống của nền kinh tế nói chung. Đơn giản là đồng hành cùng xu hướng đi lên dài hạn của đất nước.</td>
+    </tr>
+    <tr>
+      <th style="padding: 10px; border: 1px solid var(--border); text-align: left;">Khi nào đúng nhất</th>
+      <td class="bullish" style="padding: 10px; border: 1px solid var(--border);">Trong thị trường tăng trưởng mạnh mẽ, khi có sự xuất hiện của các nhà dẫn dắt công nghệ, tiêu dùng đột phá mới nổi.</td>
+      <td class="neutral" style="padding: 10px; border: 1px solid var(--border);">Dành cho các quỹ hưu trí khổng lồ cần bảo toàn vốn tối đa, giảm thiểu biến động danh mục trong ngắn hạn.</td>
+      <td class="opportunity" style="padding: 10px; border: 1px solid var(--border);">Dành cho nhà đầu tư đại chúng không chuyên, không có thời gian theo dõi biểu đồ hàng ngày, tích lũy lãi kép 10-20 năm.</td>
+    </tr>
+    <tr>
+      <th style="padding: 10px; border: 1px solid var(--border); text-align: left;">Điểm yếu lớn nhất</th>
+      <td class="bearish" style="padding: 10px; border: 1px solid var(--border);">Đòi hỏi kỷ luật thép, kỹ năng đọc biểu đồ tốt. Có thể gặp khó khăn trong thị trường đi ngang kéo dài (whipsaw).</td>
+      <td class="warning" style="padding: 10px; border: 1px solid var(--border);">Bắt buộc nắm giữ trái phiếu làm loãng hiệu suất sinh lời dài hạn trong các chu kỳ lạm phát cao. <span class="page-ref">Ch 19, p. 6880</span></td>
+      <td class="warning" style="padding: 10px; border: 1px solid var(--border);">Hứng chịu toàn bộ mức sụt giảm 50-90% nếu thị trường gặp khủng hoảng thảm khốc như 1929 hay 1974. <span class="page-ref">Ch 19, p. 7091</span></td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="callout" style="margin-top: 1.5rem; border-left-color: var(--accent-emerald);">
+  <div class="callout-icon">⚖️</div>
+  <div class="callout-content">
+    <strong>Giải pháp tích hợp (Synthesis):</strong> Nhà đầu tư thông minh có thể chia tài sản thành 2 phần: phần **Bảo vệ** sử dụng quỹ chỉ số thụ động (Passive ETF) để đồng hành cùng thị trường chung, và phần **Tăng tốc** áp dụng nghiêm ngặt hệ thống CAN SLIM để tìm kiếm tỷ suất sinh lời vượt trội alpha từ các siêu cổ phiếu dẫn dắt mới nổi.
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 19 &amp;middot; RỦI RO &amp; PHẢN BIỆN</div>
+    <h2>Trở ngại cốt lõi của đầu tư chủ động quy mô lớn</h2>
+<div class="content-card">
+  <p>Mặc dù triết lý lọc cổ phiếu tăng trưởng CAN SLIM có tỷ suất sinh lời lịch sử rất cao, việc triển khai nó tại các định chế tài chính lớn vấp phải những rào cản cấu trúc cực kỳ thực tế mà O'Neil phê phán nhưng khó lòng giải quyết triệt để.</p>
+
+  <div class="bullet-grid" style="margin-top: 1.5rem;">
+    <div class="bullet-card">
+      <div class="bullet-icon">👔</div>
+      <h4>1. Rủi ro nghề nghiệp & Vấn đề đại diện (Career Risk)</h4>
+      <p>
+        Các nhà quản lý quỹ là người làm thuê ăn lương, không phải chủ sở hữu vốn. Nếu họ thua lỗ vì tự ý mua cổ phiếu tăng trưởng trung bình ngoài danh mục phê duyệt, họ sẽ lập tức bị sa thải. Nhưng nếu họ thua lỗ khi nắm giữ cổ phiếu quốc dân (như Microsoft, Apple), họ được giữ lại vì "tất cả mọi người đều lỗ giống nhau". Sự an toàn nghề nghiệp thúc ép họ phải ôm chỉ số (index hugging).
+      </p>
+    </div>
+
+    <div class="bullet-card">
+      <div class="bullet-icon">🌊</div>
+      <h4>2. Chi phí tác động thị trường (Market Impact Costs)</h4>
+      <p>
+        O'Neil đề xuất quỹ lớn nên sở hữu tới 500 mã ở mọi quy mô. Tuy nhiên, việc quản lý 500 mã làm loãng hiệu suất của những mã xuất sắc nhất và đòi hỏi bộ máy phân tích cồng kềnh. Hơn nữa, khi một quỹ quy mô hàng tỷ đô la cố gắng giải ngân hoặc thoái vốn khỏi một cổ phiếu vốn hóa vừa và nhỏ, hành động của họ sẽ đẩy giá tăng mạnh khi mua hoặc ép giá sập sâu khi bán, triệt tiêu phần lớn lợi thế sinh lời.
+      </p>
+    </div>
+
+    <div class="bullet-card">
+      <div class="bullet-icon">💸</div>
+      <h4>3. Thuế suất & Phí giao dịch do vòng quay cao</h4>
+      <p>
+        Chiến lược CAN SLIM có tỷ lệ vòng quay danh mục (turnover rate) cao do nguyên tắc cắt lỗ nghiêm ngặt 7-8% và chốt lời chủ động 20-25%. Đối với các tài khoản chịu thuế, việc giao dịch liên tục này tạo ra gánh nặng thuế thu nhập ngắn hạn khổng lồ và chi phí giao dịch lớn, kéo giảm đáng kể hiệu suất thực tế so với chiến lược mua và nắm giữ (buy and hold) thụ động.
+      </p>
+    </div>
+  </div>
+
+  <div class="callout" style="margin-top: 1.5rem; border-left-color: var(--accent-red); background-color: rgba(239, 68, 68, 0.05);">
+    <div class="callout-icon">⚠️</div>
+    <div class="callout-content">
+      <strong>Kết luận phản biện:</strong> Việc chuyển dịch một quỹ đầu tư định chế từ mô hình phòng thủ pháp lý sang mô hình tấn công tăng trưởng chủ động đòi hỏi sự thay đổi toàn diện về cơ chế lương thưởng, chính sách thuế, và sự chấp nhận rủi ro từ phía khách hàng gửi tiền — điều gần như bất khả thi đối với các đại ngân hàng và quỹ hưu trí quốc gia.
+    </div>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 19 &amp;middot; SƠ ĐỒ KHÁI NIỆM</div>
+    <h2>Bản đồ phụ thuộc các khái niệm quản lý danh mục</h2>
+<div class="content-card" style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%;">
+  <div class="mermaid" style="width: 100%; max-height: 70vh;">
+    graph TB
+        %% Foundation Concepts
+        F1["Ch 2 & 14: Base Breakouts & Chart Precedents"] --> C1["Bottom-up Growth Selection"]
+        F2["Ch 16: Quantitative Databases (IBD/WONDA)"] --> C1
+        F2 --> C2["Eliminating Personal Opinions & Tips"]
+        F3["Ch 18: DCA & Long-Term Compounding Resolve"] --> C3["Portfolio Manager Selection"]
+
+        %% Chapter 19 Core Concepts
+        C1 --> A1["Overcoming the Size Handicap"]
+        C1 --> A2["Avoiding the Analyst Industry Bias"]
+        C2 --> A2
+        C3 --> A3["The 3-4 Year Evaluation & 20% Elimination Cycle"]
+
+        %% Future Concepts
+        A1 --> G1["Ch 20: Master Checklist & Golden Rules"]
+        A2 --> G1
+        A3 --> G1
+
+        %% Styling
+        style C1 fill:#8B7CFF,stroke:#2A2D33,color:#F7F7F5
+        style C2 fill:#8B7CFF,stroke:#2A2D33,color:#F7F7F5
+        style C3 fill:#8B7CFF,stroke:#2A2D33,color:#F7F7F5
+        
+        classDef default fill:#F4F4F6,stroke:#D1D1D6,color:#1C1C1E;
+  </div>
+  
+  <div class="callout" style="margin-top: 1.5rem; width: 100%;">
+    <div class="callout-icon">📚</div>
+    <div class="callout-content">
+      <strong>Mối liên kết tri thức:</strong> Sự hiểu biết về rào cản quy mô và thiên kiến của giới phân tích Wall Street (Chương 19) được xây dựng trực tiếp trên nền tảng của việc sử dụng dữ liệu định lượng độc lập (Chương 16). Kỹ năng này mở ra chương cuối cùng (Chương 20) — nơi tích hợp toàn bộ các quy tắc CAN SLIM thành một kế hoạch hành động tối thượng.
+    </div>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 19 &amp;middot; HƯỚNG DẪN THỰC THI</div>
+    <h2>Lộ trình thực thi 4 giai đoạn áp dụng triết lý quản lý</h2>
+<div class="phase-progress" style="margin-bottom: 2rem;">
+  <div class="phase active">P1: Thấu suốt (Tuần 1)</div>
+  <div class="phase">P2: Thử nghiệm (Tuần 2-4)</div>
+  <div class="phase">P3: Tích hợp (Tháng 2-3)</div>
+  <div class="phase">P4: Làm chủ (Tháng 4+)</div>
+</div>
+
+<div class="content-card">
+  <div class="checklist">
+    <h3 style="color: var(--accent); margin-top: 0;">Các hành động cụ thể theo từng giai đoạn:</h3>
+    
+    <div style="margin-bottom: 1.2rem;">
+      <strong>Phase 1: Thấu suốt lý thuyết & Nhận diện thiên kiến (Tuần 1)</strong>
+      <ul>
+        <li>[ ] Phân tích danh mục hiện tại để phát hiện các cổ phiếu đang nắm giữ chỉ vì "được các chuyên gia Wall Street/TV khuyến nghị" hoặc "định giá P/E thấp".</li>
+        <li>[ ] Thống kê tỷ lệ phí quản lý và chi phí trượt giá ẩn trong các tài khoản quỹ tương hỗ bạn đang sở hữu.</li>
+      </ul>
+    </div>
+
+    <div style="margin-bottom: 1.2rem;">
+      <strong>Phase 2: Thử nghiệm lọc cổ phiếu từ dưới lên (Tuần 2-4)</strong>
+      <ul>
+        <li>[ ] Thiết lập một bộ lọc định lượng tự động (WONDA, IBD, hoặc các bộ lọc tương đương ở Việt Nam như FiinTrade/Wichart) dựa trên 9 biến số CAN SLIM.</li>
+        <li>[ ] So sánh 5 cổ phiếu đứng đầu bộ lọc định lượng với danh mục khuyến nghị của các CTCK lớn để kiểm chứng độ trễ của chuyên viên phân tích.</li>
+      </ul>
+    </div>
+
+    <div style="margin-bottom: 1.2rem;">
+      <strong>Phase 3: Tích hợp và Tái cấu trúc cơ chế đánh giá (Tháng 2-3)</strong>
+      <ul>
+        <li>[ ] Thiết kế bảng theo dõi hiệu suất danh mục so với chỉ số S&P 500 (hoặc VN-Index) theo từng tháng/quý để phục vụ đánh giá dài hạn.</li>
+        <li>[ ] Loại bỏ các quy tắc "thời kỳ đồ đá" như cấm mua cổ phiếu không chia cổ tức hoặc bắt buộc giữ trái phiếu nếu mục tiêu là tối đa hóa hiệu suất ròng.</li>
+      </ul>
+    </div>
+
+    <div>
+      <strong>Phase 4: Tự động hóa đào thải và Làm chủ danh mục (Tháng 4+)</strong>
+      <ul>
+        <li>[ ] Thiết lập cơ chế đào thải tự động: Đánh giá các nhà quản lý quỹ hoặc các mã cổ phiếu nắm giữ dài hạn sau trọn vẹn chu kỳ 3-4 năm.</li>
+        <li>[ ] Kiên quyết thay thế 20% những nhân tố hoặc cổ phiếu đứng cuối bảng hiệu suất để tái phân bổ vốn vào các ý tưởng mới mẻ dẫn dắt thị trường.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 19 &amp;middot; HÀNH ĐỘNG CUỐI CÙNG</div>
+    <h2>Hành động cuối cùng</h2>
+<div class="split-layout">
+  <div class="split-left" style="flex: 1.2;">
+    <ul class="action-list" style="padding: 0; list-style: none;">
+      <li class="action-item" style="margin-bottom: 1.5rem;">
+        <div>
+          <div class="action-headline">1. Thiết lập bộ lọc định lượng độc lập (Systematic Radar)</div>
+          <div class="action-detail">
+            Quét toàn bộ cổ phiếu thị trường bằng tiêu chí CAN SLIM hàng tuần. Loại bỏ 100% các tin đồn, ý kiến chuyên gia phân tích cảm tính để tập trung vào thực tế số liệu tăng trưởng và xu hướng đồ thị giá.
+          </div>
+        </div>
+      </li>
+      <li class="action-item" style="margin-bottom: 1.5rem;">
+        <div>
+          <div class="action-headline">2. Áp dụng cơ chế đánh giá chu kỳ kinh tế 3-4 năm</div>
+          <div class="action-detail">
+            Lập kế hoạch rà soát định kỳ các quỹ tương hỗ hoặc cổ phiếu nắm giữ dài hạn. Thiết lập kỷ luật đào thải và tái phân bổ vốn đối với 20% nhóm nhân tố có hiệu suất thấp nhất khi kết thúc chu kỳ.
+          </div>
+        </div>
+      </li>
+      <li class="action-item">
+        <div>
+          <div class="action-headline">3. Khai thác tối đa sự linh hoạt của nhà đầu tư cá nhân</div>
+          <div class="action-detail">
+            Săn tìm các cổ phiếu tăng trưởng vừa và nhỏ có cơ bản cực tốt khi chúng bắt đầu bứt phá (breakout) khỏi nền giá tích lũy chặt chẽ, trước khi các tổ chức tài chính lớn kịp gom hàng.
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <div class="split-right" style="flex: 0.8; display: flex; align-items: center; justify-content: center;">
+    <figure class="image-slot hero" style="width: 100%;">
+      <div class="image-prompt">
+        <span class="image-prompt-label">AI Image Prompt — DALL-E 3 / Midjourney</span>
+        <p class="image-prompt-text">"Premium modern corporate boardroom, large digital screen displaying stock charts and database tables, clean minimal design, editorial lighting, purple and emerald accent lighting #635BFF #059669"</p>
+        <span class="image-prompt-hint">Paste this into ChatGPT/DALL-E/Midjourney, save as images/ch19_boardroom.png, and replace this block with &lt;img src="images/ch19_boardroom.png" alt="Boardroom dashboard"&gt;</span>
+      </div>
+    </figure>
+  </div>
+</div>
+
+  </section>
+
+</div>
+
+<div class="nav-controls">
+  <button class="nav-btn" id="prevBtn" onclick="prevSlide()" aria-label="Previous slide">&#8592;</button>
+  <div class="counter" id="counter" aria-live="polite">1 / 1</div>
+  <button class="nav-btn" id="nextBtn" onclick="nextSlide()" aria-label="Next slide">&#8594;</button>
+</div>
+
+<script src="common.js"></script>
+</body>
+</html>

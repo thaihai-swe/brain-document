@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How to Make Money in Stocks — Chapter 16</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="common.css">
+<script src="https://cdn.jsdelivr.net/npm/@panzoom/panzoom@4.5.1/dist/panzoom.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11.10.0/dist/mermaid.min.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div class="progress-bar" id="progressBar"></div>
+
+<div class="chapter-menu">
+  <button class="menu-btn" id="chapterMenuBtn" onclick="toggleChapterMenu()" aria-haspopup="true" aria-expanded="false">Chapters &#9662;</button>
+  <div class="chapter-menu-panel" id="chapterMenuPanel" role="menu"></div>
+</div>
+
+<div class="slide-container" id="slideContainer">
+
+  <section class="slide" aria-hidden="false">
+<h1>How to Make Money in Stocks</h1>
+<p class="subtitle">Chương 16: Cách Sử Dụng IBD® Để Tìm Kiếm Các Cổ Phiếu Dẫn Đầu Tiềm Năng<br><span style="font-size: 0.9em; opacity: 0.85;">(How to Use IBD® to Find Potential Winning Stocks)</span></p>
+
+<figure class="image-slot hero">
+  <div class="image-prompt">
+    <span class="image-prompt-label">AI Image Prompt — Giới hạn quota Image-gen của hệ thống tạm thời hết</span>
+    <p class="image-prompt-text">"A high-tech digital control room with multiple glowing green radar screens tracking financial market data, dark futuristic background, ultra-modern luxury style, 8k."</p>
+    <span class="image-prompt-hint">Bạn có thể tạo ảnh trên Midjourney, lưu dưới tên 'ch16_title_hero.png' vào thư mục 'images/' và thay thế khối HTML này bằng thẻ &lt;img src="images/ch16_title_hero.png"&gt;</span>
+  </div>
+</figure>
+
+<div class="meta-grid">
+  <div class="meta-item">
+    <div class="meta-label">Tác giả</div>
+    <div class="meta-value">William J. O'Neil</div>
+  </div>
+  <div class="meta-item">
+    <div class="meta-label">Độ sâu phân tích</div>
+    <div class="meta-value">DEEP+ Mode (23 Slides)</div>
+  </div>
+  <div class="meta-item">
+    <div class="meta-label">Đối tượng mục tiêu</div>
+    <div class="meta-value">Nhà đầu tư cá nhân</div>
+  </div>
+  <div class="meta-item">
+    <div class="meta-label">Ngôn ngữ</div>
+    <div class="meta-value">Song ngữ Anh - Việt</div>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide chapter-divider">
+<div class="divider-container">
+  <div class="chapter-number">CHƯƠNG 16</div>
+  <h2>Cách Sử Dụng IBD® Để Tìm Kiếm Các Cổ Phiếu Dẫn Đầu Tiềm Năng</h2>
+  <p class="divider-subtitle">Làm chủ bộ radar dữ liệu chuyên sâu để loại bỏ ý kiến cá nhân và đón đầu dòng tiền định chế lớn.</p>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 16 &amp;middot; TỔNG QUAN TRỰC QUAN 1</div>
+    <h2>Quy trình hành động 3 bước: Tìm - Đánh giá - Theo dõi</h2>
+<div class="visual-summary-card">
+  <h2>QUY TRÌNH HÀNH ĐỘNG 3 BƯỚC: TÌM - ĐÁNH GIÁ - THEO DÕI</h2>
+  <div class="mermaid-container" style="background: var(--background); padding: 1rem; border-radius: 8px; border: 1px solid var(--border); margin-top: 1rem;">
+    <pre class="mermaid">
+graph TD
+  MarketDirection["Theo dõi Xu hướng Thị trường (Market Direction)"] --> FindStocks["Tìm kiếm Cổ phiếu (Find Stocks)"]
+  FindStocks --> EvaluateStocks["Đánh giá Cổ phiếu (Evaluate Stocks)"]
+  EvaluateStocks --> Purchase["Quyết định Giải ngân (Execute Trades)"]
+  Purchase --> TrackStocks["Bám sát Danh mục (Track Stocks)"]
+  TrackStocks --> ExitExecution["Quản trị Rủi ro & Bán dứt khoát"]
+  ExitExecution --> MarketDirection
+    </pre>
+  </div>
+  <div class="page-reference" style="margin-top: 0.5rem;">Ch 16 &middot; "The IBD Stock Research Tool on the home page of Investors.com..."</div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 16 &amp;middot; TỔNG QUAN TRỰC QUAN 2</div>
+    <h2>Cấu trúc điểm số tổng hợp SmartSelect</h2>
+<div class="visual-summary-card">
+  <h2>CẤU TRÚC ĐIỂM SỐ TỔNG HỢP SMARTSELECT (COMPOSITE RATING)</h2>
+  <div class="mermaid-container" style="background: var(--background); padding: 1rem; border-radius: 8px; border: 1px solid var(--border); margin-top: 1rem;">
+    <pre class="mermaid">
+graph TD
+  Composite["Chỉ số Tổng hợp (Composite Rating 1-99)"] --> DoubleWeight["Trọng số gấp đôi (Double Weighted)"]
+  Composite --> NormalWeight["Trọng số thông thường (Normal Weight)"]
+  
+  DoubleWeight --> EPS["Xếp hạng EPS (Lợi nhuận 3 năm & quý gần nhất)"]
+  DoubleWeight --> RS["Sức mạnh Giá RS (Đo lường 12 tháng qua)"]
+  
+  NormalWeight --> IndustryGroup["Sức mạnh nhóm ngành (IGRS Rating A+ to E)"]
+  NormalWeight --> SMR["Chỉ số SMR (Sales + Margins + ROE)"]
+  NormalWeight --> AD["Tích lũy/Phân phối (Accumulation/Distribution)"]
+  NormalWeight --> OffHigh["Tỷ lệ cách đỉnh 52 tuần (% Off 52-Week High)"]
+    </pre>
+  </div>
+  <div class="page-reference" style="margin-top: 0.5rem;">Ch 16 &middot; "Because of the impact of earnings and previous price performance on stock price..."</div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 16 &amp;middot; TÓM TẮT CHƯƠNG</div>
+    <h2>Tóm tắt cấu trúc bộ lọc và công cụ IBD</h2>
+<div class="content-card">
+  <div class="summary-text">
+    <p><strong>Bối cảnh (Setup):</strong> Tại sao 80% nhà đầu tư cá nhân thường chịu thua lỗ nặng nề? Họ bị ngập lụt trong biển tin đồn, ý kiến cá nhân và các báo cáo phân tích thiếu dữ liệu kiểm chứng lịch sử. O'Neil sáng lập IBD năm 1984 để phá vỡ thế độc quyền thông tin của các định chế tài chính lớn, đưa hệ thống cơ sở dữ liệu vi tính hóa đầu tiên của Mỹ tới tay công chúng dưới dạng các bộ lọc định lượng khoa học.</p>
+    <p><strong>Luận điểm chính (Argument):</strong> Loại bỏ cảm xúc và phán đoán cá nhân bằng cách áp dụng các bộ xếp hạng định lượng nghiêm ngặt (SmartSelect Ratings). Các chỉ số EPS (tăng trưởng lợi nhuận), RS (sức mạnh giá tương đối), SMR (doanh thu + biên lãi + ROE), A/D (tích lũy/phân phối) xếp hạng cổ phiếu trên thang điểm 1-99 hoặc A-E, lọc ra 10% doanh nghiệp xuất sắc nhất. Dòng tiền định chế lớn (Smart Money) có sức mạnh khổng lồ không thể giấu kín; nó sẽ bộc lộ rõ ràng thông qua hai công cụ độc quyền: Volume % Change và danh mục Stocks on the Move. Nhà đầu tư phải thiết lập một "Routine" (Thói quen giao dịch) chặt chẽ hàng ngày và hàng tuần để tìm, đánh giá và bám sát cổ phiếu thông qua đồ thị ngày và tuần.</p>
+    <p><strong>Bằng chứng (Evidence):</strong> O'Neil chỉ ra các ví dụ thực chứng lịch sử: SDL Inc năm 2000 chạy 112% trong 8 tuần nhờ xếp hạng SMR điểm A; Visa bứt phá trên NYSE với khối lượng tăng 239% và EPS rank đạt 99 bất chấp thị trường gấu; 7 tín hiệu phân phối liên tiếp của Nasdaq từ tháng 10/2007 báo trước cuộc sụp đổ vĩ đại 2008. Ngược lại, việc mua các cổ phiếu có EPS rank 30 hay RS rank 40 chỉ mang lại thất vọng. <span class="page-ref">Ch 16 &middot; "How Investor's Business Daily Is Different"</span></p>
+    <p><strong>Hệ quả (Implications):</strong> Hãy hành xử như người quản lý đội bóng New York Yankees, chỉ tuyển các cầu thủ có tỷ lệ đánh bóng .300 (cổ phiếu hàng đầu có EPS & RS trên 80) thay vì tích lũy các cầu thủ .200 giá rẻ. Nghiêm cấm mua bất kỳ cổ phiếu nào có xếp hạng ngành yếu kém, SMR hạng D/E, hoặc A/D hạng E.</p>
+    <p><strong>Tranh luận (Controversy):</strong> Đối lập mạnh mẽ với trường phái đầu tư giá trị truyền thống vốn tôn sùng chỉ số P/E thấp. CAN SLIM khẳng định P/E thấp thường đi kèm với những khiếm khuyết nội tại nghiêm trọng, trong khi các siêu cổ phiếu bứt phá luôn có P/E cao vì chúng bán ở mức giá phản ánh hiệu suất vượt trội.</p>
+    <p><strong>Mối liên kết (Connection):</strong> Liên kết chặt chẽ với Chương 9 (theo dõi phân phối thị trường chung qua cột Big Picture) và Chương 10 & 11 (nghiêm ngặt thực thi quy tắc cắt lỗ 7% và chốt lời chủ động thông qua My Stock Lists).</p>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 16 &amp;middot; Ý TƯỞNG CỐT LÕI</div>
+    <h2>Ý tưởng cốt lõi</h2>
+<div class="big-idea-card">
+  <h2>Ý TƯỞNG CỐT LÕI (THE BIG IDEA)</h2>
+  <div class="quote-text">
+    "For decades, professional money managers were the only ones who had access to the in-depth data that are critical to finding winning stocks. In effect, they had a monopoly on relevant investment information. That’s why I started Investor’s Business Daily in April 1984: to bring the needed information to all investors..."
+  </div>
+  <div class="explanation">
+    <p>Sự chênh lệch thông tin giữa các tổ chức lớn và nhà đầu tư cá nhân đã bị san phẳng. IBD không chỉ là một tờ báo thông thường; nó là một <strong>hệ thống radar dữ liệu định lượng</strong> được lập trình để quét hơn 10.000 cổ phiếu, hiển thị các đặc điểm của những siêu cổ phiếu thành công nhất lịch sử trước khi bùng nổ tăng giá. Muốn giành chiến thắng, nhà đầu tư cá nhân phải học cách đọc bảng số liệu định lượng này để đi trước đám đông.</p>
+  </div>
+  <div class="page-reference">Ch 16 &middot; "Why We Created Investor’s Business Daily"</div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 16 &amp;middot; BÀI HỌC CHỦ CHỐT</div>
+    <h2>Bài học chủ chốt</h2>
+<div class="takeaway-list">
+  <div class="takeaway-item">
+    <div class="takeaway-badge">1</div>
+    <div class="takeaway-content">
+      <strong>Lọc Cổ phiếu bằng SmartSelect Ratings (SmartSelect Filtering)</strong>
+      <div class="takeaway-detail">
+        <ul>
+          <li><strong>Ý nghĩa:</strong> SmartSelect Ratings dịch chuyển hàng tá báo cáo tài chính phức tạp thành các chỉ số định lượng đơn giản từ 1 đến 99 hoặc từ A đến E để so sánh trực tiếp sức khỏe của 10.000 doanh nghiệp.</li>
+          <li><strong>Bằng chứng:</strong> Nghiên cứu cho thấy phần lớn các siêu cổ phiếu dẫn đầu đều có xếp hạng EPS và RS trên 80 trước khi bắt đầu đợt tăng giá khổng lồ. <span class="page-ref">Ch 16 &middot; "The IBD SmartSelect Corporate Ratings"</span></li>
+          <li><strong>Ứng dụng:</strong> Đặt tiêu chuẩn cứng cho bộ lọc: chỉ mua cổ phiếu có EPS & RS đạt từ 80 trở lên (khuyến nghị đạt 90 trở lên trong thị trường giá lên).</li>
+          <li><strong>Cảnh báo:</strong> Tránh xa các cổ phiếu có xếp hạng EPS/RS dưới 70, đó là dấu hiệu doanh nghiệp yếu kém hoặc đang mất dần đà tăng trưởng.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="takeaway-item">
+    <div class="takeaway-badge">2</div>
+    <div class="takeaway-content">
+      <strong>Theo sát Dòng tiền qua Volume % Change (Tracking the Money Flow)</strong>
+      <div class="takeaway-detail">
+        <ul>
+          <li><strong>Ý nghĩa:</strong> Volume % Change đo lường khối lượng khớp lệnh thực tế trong ngày so với mức trung bình 50 ngày gần nhất. Đây là bộ cảm biến nhạy nhất để phát hiện dấu vết của các tổ chức lớn.</li>
+          <li><strong>Bằng chứng:</strong> Sự bứt phá giá đi kèm với khối lượng tăng vọt (ví dụ +100%, +200%, hoặc Visa tăng +239%) chứng minh dòng tiền định chế lớn (Smart Money) đang tiến hành thu mua mạnh mẽ. <span class="page-ref">Ch 16 &middot; "Volume Percent Change Tracks the Big Money Flow"</span></li>
+          <li><strong>Ứng dụng:</strong> Sử dụng danh sách "Stocks on the Move" hàng ngày để lọc ra các cổ phiếu bứt phá với volume tăng đột biến trên +50%.</li>
+          <li><strong>Cảnh báo:</strong> Một đợt tăng giá nhưng không có sự gia tăng về khối lượng (volume % change âm hoặc thấp) chỉ là bứt phá ảo và rất dễ thất bại.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="takeaway-item">
+    <div class="takeaway-badge">3</div>
+    <div class="takeaway-content">
+      <strong>Hệ thống Thói quen "My Daily Routine" (The Execution Routine)</strong>
+      <div class="takeaway-detail">
+        <ul>
+          <li><strong>Ý nghĩa:</strong> Thành công trong đầu tư không đến từ vận may mà đến từ tính kỷ luật lặp đi lặp lại. Nhà đầu tư phải có một thói quen rà soát thị trường cố định hàng ngày và hàng tuần.</li>
+          <li><strong>Bằng chứng:</strong> Hơn 1.000 nhà đầu tư gửi thư cảm ơn O'Neil khẳng định họ chỉ đạt được tự do tài chính sau khi kiên trì xây dựng thói quen rà soát biểu đồ và danh sách IBD mỗi ngày. <span class="page-ref">Ch 16 &middot; "My Routine: Create Your Own Custom Investing Routine"</span></li>
+          <li><strong>Ứng dụng:</strong> Thiết lập quy trình 5 bước mỗi tối: (1) Đọc Big Picture/Market Pulse; (2) Lọc Screen Center/On the Move; (3) Kiểm tra Stock Checkup; (4) Xem đồ thị ngày/tuần; (5) Cập nhật My Stock Lists.</li>
+          <li><strong>Cảnh báo:</strong> Việc giao dịch ngẫu hứng, nghe theo tin đồn hay lười biếng làm bài tập về nhà vào cuối tuần là nguyên nhân hàng đầu dẫn tới thua lỗ.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="takeaway-item">
+    <div class="takeaway-badge">4</div>
+    <div class="takeaway-content">
+      <strong>Triết lý Đội hình Yankees: Chọn Cầu thủ .300 (The .300 Hitter Philosophy)</strong>
+      <div class="takeaway-detail">
+        <ul>
+          <li><strong>Ý nghĩa:</strong> Quản lý danh mục đầu tư giống như huấn luyện một đội bóng chày. Để giành chiến thắng, bạn cần tối đa các cầu thủ xuất sắc nhất (.300 hitters) thay vì đi thu gom các cầu thủ giá rẻ nhưng vụng về (.200 hitters).</li>
+          <li><strong>Bằng chứng:</strong> Cổ phiếu giá rẻ luôn rẻ có lý do (nợ nần, sản phẩm lỗi thời, mất thị phần). Trong khi đó, các cổ phiếu dẫn đầu giá cao phản ánh biên lợi nhuận cao và thế độc quyền kinh doanh. <span class="page-ref">Ch 16 &middot; "You Need Both Strong EPS and Strong RS Ratings"</span></li>
+          <li><strong>Ứng dụng:</strong> Sẵn sàng chi tiền mua các cổ phiếu đắt đỏ, tiệm cận đỉnh 52 tuần nếu chúng thỏa mãn đầy đủ các tiêu chuẩn CAN SLIM xuất sắc.</li>
+          <li><strong>Cảnh báo:</strong> Việc cố gắng "săn hàng rẻ" dưới đáy hoặc trung bình hóa giá xuống là biểu hiện của tư duy cầu thủ .200 đe dọa sự an toàn của tài khoản.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 16 &amp;middot; TRÍCH DẪN ĐẮT GIÁ</div>
+    <h2>Trích dẫn đắt giá</h2>
+<div class="quotes-card">
+  <h2>TRÍCH DẪN ĐÁNG GIÁ (NOTABLE QUOTES)</h2>
+  
+  <div class="quote-item">
+    <div class="quote-english">
+      "The greatest winning stocks since 1952 and even much earlier showed an average RS rating of 87 when they broke out of their first price consolidation areas (bases). In other words, the greatest stocks were already outperforming nearly 90% ... of all other stocks in the market before they made their biggest price gains."
+    </div>
+    <div class="quote-vietnamese">
+      "Các siêu cổ phiếu tăng trưởng mạnh nhất kể từ năm 1952 và cả trước đó nữa đều sở hữu điểm xếp hạng RS trung bình là 87 ngay khi chúng bứt phá khỏi vùng tích lũy đầu tiên. Nói cách khác, các cổ phiếu xuất sắc nhất đã vượt trội hơn gần 90% toàn bộ thị trường trước khi chúng bước vào chu kỳ tăng giá mạnh nhất."
+    </div>
+    <div class="quote-reference">Ch 16 &middot; "Relative Price Strength Rating Shows Emerging Price Leaders"</div>
+  </div>
+
+  <div class="quote-item">
+    <div class="quote-english">
+      "Selecting and managing a portfolio of stocks is no different from baseball when it comes to performance. To win consistently and finish first in your division, you need a roster of the very best players available—those with proven records of excellence."
+    </div>
+    <div class="quote-vietnamese">
+      "Việc lựa chọn và quản lý một danh mục cổ phiếu không khác gì môn bóng chày khi nói về hiệu suất. Để giành chiến thắng liên tục và đứng đầu bảng đấu, bạn cần một đội hình gồm những cầu thủ xuất sắc nhất hiện có — những người sở hữu thành tích xuất chúng đã được chứng minh."
+    </div>
+    <div class="quote-reference">Ch 16 &middot; "You Need Both Strong EPS and Strong RS Ratings"</div>
+  </div>
+
+  <div class="quote-item">
+    <div class="quote-english">
+      "If price is all you look at when you check your stocks, you’re like a piano player who plays with only one hand, uses only one finger, has never heard of a chord or foot pedal, or doesn’t read sheet music, so he never knows when to speed up, get loud, or get softer."
+    </div>
+    <div class="quote-vietnamese">
+      "Nếu giá là tất cả những gì bạn nhìn vào khi kiểm tra cổ phiếu của mình, bạn giống như một người chơi piano chỉ chơi bằng một tay, sử dụng duy nhất một ngón tay, chưa bao giờ nghe nói về hợp âm hay bàn đạp chân, hoặc không biết đọc nhạc phổ, vì vậy anh ta không bao giờ biết khi nào cần tăng tốc, chơi lớn hơn hay nhỏ đi."
+    </div>
+    <div class="quote-reference">Ch 16 &middot; "Volume Percent Change Tracks the Big Money Flow"</div>
+  </div>
+
+  <div class="quote-item">
+    <div class="quote-english">
+      "There are no free lunches in the stock market. But once you understand and apply yourself, you could in time become financially independent. Would that be a worthy goal for you to strive for and achieve?"
+    </div>
+    <div class="quote-vietnamese">
+      "Không có bữa trưa nào miễn phí trên thị trường chứng khoán. Nhưng một khi bạn đã hiểu rõ và nỗ lực hết mình, theo thời gian bạn có thể đạt được sự độc lập về tài chính. Liệu đó có phải là một mục tiêu xứng đáng để bạn phấn đấu và đạt được?"
+    </div>
+    <div class="quote-reference">Ch 16 &middot; "You Can Do It Too"</div>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 16 &amp;middot; MÔ HÌNH TƯ DUY 1</div>
+    <h2>Mô hình 1: Triết lý Cầu thủ .300 vs Cầu thủ .200</h2>
+<div class="split-layout">
+  <div class="split-left" style="padding-right: 1rem; border-right: 1px solid var(--border);">
+    <h3 style="color: var(--accent-purple); margin-top: 0;">Mô hình 1: Triết lý Cầu thủ .300 vs Cầu thủ .200 (.300 Hitter Philosophy)</h3>
+    <p style="font-size: 0.95rem; line-height: 1.5;">
+      Tại sao nhà đầu tư cá nhân thích mua cổ phiếu giá rẻ ở đáy, trong khi các chuyên gia hàng đầu sẵn sàng trả giá cao để sở hữu cổ phiếu dẫn đầu? Câu trả lời nằm ở tư duy xây dựng đội hình chiến thắng.
+    </p>
+    <div class="callout" style="border-color: var(--accent-purple); margin-top: 1rem; padding: 0.8rem;">
+      <strong>Nguyên lý Bóng chày:</strong> Một huấn luyện viên bóng chày muốn giành chức vô địch sẽ không bao giờ ký hợp đồng với những cầu thủ có tỷ lệ đánh bóng thấp .200 chỉ vì họ "giá rẻ". Họ sẵn sàng chi đậm để tuyển những cầu thủ có tỷ lệ .300 vì đó là những người quyết định chiến thắng ở giây phút quyết định.
+    </div>
+  </div>
+  
+  <div class="split-right" style="padding-left: 1rem;">
+    <h4 style="color: var(--accent-emerald); margin-top: 0;">Đặc tính của Cổ phiếu dẫn đầu vs Cổ phiếu rẻ</h4>
+    <p style="font-size: 0.85rem; line-height: 1.4; margin-top: 0.5rem;">
+      Hãy so sánh hai nhóm này trên phương diện đầu tư:
+    </p>
+    <ul style="font-size: 0.85rem; padding-left: 1.2rem; line-height: 1.5; margin: 0.5rem 0;">
+      <li><strong>Siêu cổ phiếu .300:</strong> Giá bán cao, P/E cao, giao dịch tiệm cận đỉnh 52 tuần. Sở hữu đà tăng trưởng EPS và sức mạnh RS cực đại (> 80). Đây là những doanh nghiệp dẫn đầu thị phần, liên tục tung ra cải tiến sản phẩm.</li>
+      <li><strong>Cổ phiếu "bình dân" .200:</strong> Giá rẻ, P/E thấp, giao dịch gần đáy cũ. Tưởng chừng là món hời nhưng thực chất chứa đựng nhiều khuyết tật ngầm: nợ nần, mất thị phần, ban lãnh đạo trì trệ.</li>
+      <li><strong>Ảo tưởng thay đổi:</strong> Rất hiếm khi một cầu thủ .200 trung bình tự dưng lột xác thành vua phá lưới. Kỳ vọng cổ phiếu rác tự dưng tăng gấp 10 lần mà không có nền tảng cơ bản là ảo tưởng nguy hiểm nhất.</li>
+    </ul>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 16 &amp;middot; MÔ HÌNH TƯ DUY 2</div>
+    <h2>Mô hình 2: Con voi trong bồn tắm (Institutional Flow)</h2>
+<div class="split-layout">
+  <div class="split-left" style="padding-right: 1rem; border-right: 1px solid var(--border);">
+    <h3 style="color: var(--accent-purple); margin-top: 0;">Mô hình 2: Con voi trong bồn tắm (The Elephant in the Bathtub)</h3>
+    <p style="font-size: 0.95rem; line-height: 1.5;">
+      Dòng tiền định chế lớn (các quỹ tương hỗ, quỹ hưu trí) chiếm tới hơn 80% khối lượng giao dịch hàng ngày. Sự di chuyển của dòng tiền khổng lồ này là không thể che giấu.
+    </p>
+    <div class="callout" style="border-color: var(--accent-purple); margin-top: 1rem; padding: 0.8rem;">
+      <strong>Nguyên lý Dòng chảy khổng lồ:</strong> Khi một định chế quyết định mua hàng triệu cổ phiếu, hành động của họ giống như một <strong>con voi nhảy vào bồn tắm nước</strong> — nước sẽ bắn tung tóe ra xung quanh. Khối lượng giao dịch và giá sẽ tăng vọt bất thường trên bảng điện.
+    </div>
+  </div>
+  
+  <div class="split-right" style="padding-left: 1rem;">
+    <h4 style="color: var(--accent-emerald); margin-top: 0;">Cách đọc dấu chân dòng tiền lớn</h4>
+    <p style="font-size: 0.85rem; line-height: 1.4; margin-top: 0.5rem;">
+      William O'Neil cung cấp các công cụ cụ thể để theo vết định chế:
+    </p>
+    <ul style="font-size: 0.85rem; padding-left: 1.2rem; line-height: 1.5; margin: 0.5rem 0;">
+      <li><strong>Chỉ báo Volume % Change:</strong> So sánh lượng khớp lệnh hiện tại với trung bình 50 phiên trước đó. Dòng tiền lớn mua vào luôn tạo ra điểm đột biến volume (+100% đến +500%).</li>
+      <li><strong>Bộ lọc Stocks on the Move:</strong> Sàng lọc tự động các cổ phiếu có khối lượng tăng đột ngột trong ngày, giúp phát hiện sớm hoạt động gom hàng (accumulation) ngay khi nó vừa diễn ra.</li>
+      <li><strong>Đồ thị tuần:</strong> Các cột khối lượng tuần màu xanh dương cao vọt vượt trung bình thể hiện sự gom hàng kiên trì kéo dài nhiều tuần của các quỹ. Đây là điểm tựa an toàn nhất cho nhà đầu tư cá nhân.</li>
+    </ul>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 16 &amp;middot; MÔ HÌNH TƯ DUY 3</div>
+    <h2>Mô hình 3: Hệ thống Radar Quét Thị trường</h2>
+<div class="split-layout">
+  <div class="split-left" style="padding-right: 1rem; border-right: 1px solid var(--border);">
+    <h3 style="color: var(--accent-purple); margin-top: 0;">Mô hình 3: Hệ thống Radar Quét Thị trường (The Market Radar Grid)</h3>
+    <p style="font-size: 0.95rem; line-height: 1.5;">
+      Nhà đầu tư cá nhân thường bị ngộp thở trước hơn 10.000 mã cổ phiếu. Thiết lập hệ thống radar giúp thu hẹp tiêu điểm quan sát và tối ưu hóa thời gian nghiên cứu.
+    </p>
+    <div class="callout" style="border-color: var(--accent-purple); margin-top: 1rem; padding: 0.8rem;">
+      <strong>Nguyên lý quét mục tiêu:</strong> Coi thị trường như bầu trời và cổ phiếu là các máy bay. Hệ thống radar IBD quét liên tục để lọc bỏ những "nhiễu động" (cổ phiếu yếu) và chỉ hiển thị các "mục tiêu lớn" (siêu cổ phiếu tiềm năng) đang di chuyển đúng lộ trình.
+    </div>
+  </div>
+  
+  <div class="split-right" style="padding-left: 1rem;">
+    <h4 style="color: var(--accent-emerald); margin-top: 0;">4 Khối Chức năng của Hệ thống Radar</h4>
+    
+    <ul style="font-size: 0.85rem; padding-left: 1.2rem; line-height: 1.5; margin: 0.5rem 0;">
+      <li><strong>1. Định vị Xu hướng (Market Direction):</strong> Cột "The Big Picture" và "Market Pulse" xác định xem thị trường đang ở trạng thái nào (Uptrend hay Downtrend). 3/4 cổ phiếu đi theo xu hướng chung; không giao dịch khi radar báo động đỏ.</li>
+      <li><strong>2. Sàng lọc Cơ hội (Find Stocks):</strong> Sử dụng bộ lọc "Screen Center" và "Stocks on the Move" để quét ra các mã đang có dòng tiền lớn gia nhập đột ngột trong ngày.</li>
+      <li><strong>3. Đánh giá Chất lượng (Evaluate Stocks):</strong> Sử dụng công cụ "Stock Checkup" để chấm điểm theo hệ thống đèn giao thông (Xanh, Vàng, Đỏ) và đối chiếu mẫu hình trên đồ thị.</li>
+      <li><strong>4. Bám sát Danh mục (Track Stocks):</strong> Sử dụng tính năng "My Stock Lists" để theo dõi chặt chẽ điểm dừng lỗ 7-8% và điểm chốt lời 20-25% của các cổ phiếu đang nắm giữ.</li>
+    </ul>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 16 &amp;middot; SỐ LIỆU &amp; THỐNG KÊ</div>
+    <h2>Số liệu định lượng hệ thống xếp hạng IBD</h2>
+<div class="numbers-card">
+  <h2>SỐ LIỆU ĐỊNH LƯỢNG HỆ THỐNG IBD (VITAL QUANTITATIVE METRICS)</h2>
+  
+  <div class="metrics-grid">
+    <div class="metric-card">
+      <div class="metric-value">87</div>
+      <div class="metric-label">Điểm RS Trung bình của Siêu Cổ phiếu Lịch sử</div>
+      <div class="metric-description">
+        Phân tích từ năm 1952 cho thấy các siêu cổ phiếu lớn nhất đều đạt điểm Relative Price Strength trung bình là 87 ngay trước khi bứt phá khỏi nền giá tích lũy đầu tiên.
+      </div>
+    </div>
+
+    <div class="metric-card">
+      <div class="metric-value">16%</div>
+      <div class="metric-label">Tỷ lệ Trùng lặp Độc giả với Wall Street Journal (1984)</div>
+      <div class="metric-description">
+        Các khảo sát độc lập cho thấy chỉ có 16% thuê bao của IBD đồng thời đặt mua báo WSJ, khẳng định tính độc quyền và chuyên biệt cao của hệ thống dữ liệu IBD.
+      </div>
+    </div>
+
+    <div class="metric-card">
+      <div class="metric-value">Top 10%</div>
+      <div class="metric-label">Bộ lọc Cổ phiếu qua xếp hạng EPS &ge; 90</div>
+      <div class="metric-description">
+        Mức điểm 90 thể hiện lợi nhuận doanh nghiệp vượt trội hơn 90% trong số 10.000 cổ phiếu được theo dõi trong cơ sở dữ liệu vi tính hóa.
+      </div>
+    </div>
+  </div>
+
+  <table class="metrics-table" style="width: 100%; margin-top: 1rem; border-collapse: collapse; font-size: 0.85rem;">
+    <thead>
+      <tr style="border-bottom: 2px solid var(--border); text-align: left;">
+        <th style="padding: 0.5rem; width: 25%;">Chỉ số SmartSelect</th>
+        <th style="padding: 0.5rem; width: 15%;">Thang đo</th>
+        <th style="padding: 0.5rem; width: 20%;">Ngưỡng an toàn tối thiểu</th>
+        <th style="padding: 0.5rem; width: 40%;">Ý nghĩa cốt lõi đối với CAN SLIM</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="border-bottom: 1px solid var(--border);">
+        <td style="padding: 0.5rem; font-weight: bold;">EPS Rating</td>
+        <td style="padding: 0.5rem;">1 - 99</td>
+        <td style="padding: 0.5rem; color: var(--accent-emerald); font-weight: bold;">&ge; 80</td>
+        <td style="padding: 0.5rem;">Tốc độ tăng trưởng và tính ổn định của lợi nhuận 3 năm và 2 quý gần nhất.</td>
+      </tr>
+      <tr style="border-bottom: 1px solid var(--border);">
+        <td style="padding: 0.5rem; font-weight: bold;">RS Rating</td>
+        <td style="padding: 0.5rem;">1 - 99</td>
+        <td style="padding: 0.5rem; color: var(--accent-emerald); font-weight: bold;">&ge; 80</td>
+        <td style="padding: 0.5rem;">Sức mạnh giá tương đối so với toàn thị trường trong 12 tháng qua.</td>
+      </tr>
+      <tr style="border-bottom: 1px solid var(--border);">
+        <td style="padding: 0.5rem; font-weight: bold;">SMR Rating</td>
+        <td style="padding: 0.5rem;">A - E</td>
+        <td style="padding: 0.5rem; color: var(--accent-emerald); font-weight: bold;">Hạng A hoặc B</td>
+        <td style="padding: 0.5rem;">Đo lường Doanh số (Sales) + Biên lợi nhuận (Margins) + Hiệu suất ROE.</td>
+      </tr>
+      <tr style="border-bottom: 1px solid var(--border);">
+        <td style="padding: 0.5rem; font-weight: bold;">Acc/Dist Rating</td>
+        <td style="padding: 0.5rem;">A - E</td>
+        <td style="padding: 0.5rem; color: var(--accent-emerald); font-weight: bold;">Hạng A, B hoặc C</td>
+        <td style="padding: 0.5rem;">Khối lượng mua ròng (A/B) hoặc bán ròng (D/E) của các quỹ trong 13 tuần qua.</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="page-reference" style="margin-top: 0.5rem;">Ch 16 &middot; "The unique IBD ratings are a way to spot potential winners..."</div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 16 &amp;middot; ĐÁNH GIÁ ĐỊNH LƯỢNG</div>
+    <h2>Phân tích chuyên sâu bộ năm SmartSelect Corporate Ratings</h2>
+<div class="ibd-data-card">
+  <h2>PHÂN TÍCH CHUYÊN SÂU: BỘ NĂM SMARTSELECT CORPORATE RATINGS</h2>
+  <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: -0.5rem;">
+    Hệ thống đánh giá độc quyền giúp chắt lọc thông tin tài chính của 10.000 doanh nghiệp thành điểm số so sánh trực tiếp:
+  </p>
+
+  <div class="grid-3-col" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 1rem; font-size: 0.82rem; line-height: 1.4;">
+    <div class="data-group-box" style="border: 1px solid var(--border); padding: 0.8rem; border-radius: 6px; background: rgba(255,255,255,0.02);">
+      <h4 style="color: var(--accent-purple); margin-top: 0; border-bottom: 1px solid var(--border); padding-bottom: 0.3rem;">1. Xếp hạng EPS & RS</h4>
+      <ul style="padding-left: 1.2rem; margin: 0.5rem 0;">
+        <li><strong>EPS Rating (1-99):</strong> Đo lường tốc độ tăng trưởng và tính ổn định của lợi nhuận ròng 3 năm qua, tập trung trọng số vào các quý gần nhất. Lọc bỏ các dự báo chủ quan của giới phân tích.</li>
+        <li><strong>RS Rating (1-99):</strong> Đo lường đà tăng giá trong 12 tháng qua. Siêu cổ phiếu lịch sử đạt RS trung bình 87 tại điểm bứt phá.</li>
+      </ul>
+    </div>
+
+    <div class="data-group-box" style="border: 1px solid var(--border); padding: 0.8rem; border-radius: 6px; background: rgba(255,255,255,0.02);">
+      <h4 style="color: var(--accent-emerald); margin-top: 0; border-bottom: 1px solid var(--border); padding-bottom: 0.3rem;">2. Xếp hạng SMR & A/D</h4>
+      <ul style="padding-left: 1.2rem; margin: 0.5rem 0;">
+        <li><strong>SMR Rating (A-E):</strong> Kết hợp ba cấu phần thiết yếu: Doanh thu (Sales), Biên lợi nhuận (Profit Margins) và Hiệu suất sử dụng vốn (Return on Equity). Cực kỳ đáng tin cậy để tìm kiếm doanh nghiệp chất lượng cao.</li>
+        <li><strong>A/D Rating (A-E):</strong> Sử dụng công thức phức tạp dựa trên biến động giá & khối lượng trong 13 tuần qua để đo lường lực mua/bán của tổ chức.</li>
+      </ul>
+    </div>
+
+    <div class="data-group-box" style="border: 1px solid var(--border); padding: 0.8rem; border-radius: 6px; background: rgba(255,255,255,0.02);">
+      <h4 style="color: var(--accent-blue); margin-top: 0; border-bottom: 1px solid var(--border); padding-bottom: 0.3rem;">3. Chỉ số Tổng hợp & Trọng số</h4>
+      <ul style="padding-left: 1.2rem; margin: 0.5rem 0;">
+        <li><strong>Composite Rating (1-99):</strong> Điểm số tóm tắt kết hợp cả 4 chỉ số trên cùng với khoảng cách từ đỉnh 52 tuần.</li>
+        <li><strong>Công thức Trọng số:</strong> Nhân đôi sức ảnh hưởng (Double weighting) của EPS và RS. Các chỉ số IGRS, SMR và A/D có trọng số thông thường. Tìm kiếm điểm số Composite &ge; 80 để rút ngắn thời gian lọc.</li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="page-reference" style="margin-top: 1rem;">Ch 16 &middot; "The one line of information in the IBD SmartSelect Corporate Ratings is much more powerful..."</div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 16 &amp;middot; ĐO LƯỜNG CUNG CẦU</div>
+    <h2>Khối lượng Biến động Tỷ lệ (Volume Percent Change)</h2>
+<div class="split-layout">
+  <div class="split-left" style="padding-right: 1rem; border-right: 1px solid var(--border);">
+    <h3 style="color: var(--accent-purple); margin-top: 0;">Khối lượng Biến động Tỷ lệ (Volume Percent Change)</h3>
+    <p style="font-size: 0.95rem; line-height: 1.5;">
+      Khối lượng tuyệt đối (ví dụ: giao dịch 10.000 cổ phiếu hay 5 triệu cổ phiếu) không phản ánh đúng câu chuyện cung cầu. Lượng giao dịch tương đối mới là chìa khóa.
+    </p>
+    <div class="callout" style="border-color: var(--accent-purple); margin-top: 1rem; padding: 0.8rem;">
+      <strong>Ẩn dụ người chơi Piano:</strong> Nhìn vào giá mà không nhìn vào khối lượng giống như người chơi piano chỉ gõ một ngón tay, không dùng hợp âm hay bàn đạp. Bạn sẽ không bao giờ biết khi nào dòng tiền đang tăng tốc dữ dội để đẩy giá đi lên.
+    </div>
+  </div>
+  
+  <div class="split-right" style="padding-left: 1rem;">
+    <h4 style="color: var(--accent-emerald); margin-top: 0;">Cách đo lường và Cơ chế Vận hành</h4>
+    <p style="font-size: 0.85rem; line-height: 1.4; margin-top: 0.5rem;">
+      Chỉ số Volume % Change của IBD tự động so sánh khối lượng giao dịch trong ngày với <strong>trung bình 50 phiên giao dịch trước đó</strong>:
+    </p>
+    <ul style="font-size: 0.85rem; padding-left: 1.2rem; line-height: 1.5; margin: 0.5rem 0;">
+      <li><strong>Điểm bứt phá tin cậy:</strong> Tại điểm breakout vượt pivot của nền giá, Volume % Change bắt buộc phải đạt mức <strong>từ +50% trở lên</strong> (khuyến nghị đạt trên +100% hoặc cao hơn nữa).</li>
+      <li><strong>Ví dụ thực tế:</strong> Một cổ phiếu bình thường chỉ giao dịch 10.000 cổ phiếu/ngày bỗng nhiên khớp 70.000 cổ phiếu (+600% Volume % Change) đi kèm giá tăng mạnh. Đây là tín hiệu gom hàng rõ nét của tổ chức.</li>
+      <li><strong>Cảnh báo phân phối (Distribution):</strong> Ngược lại, nếu giá giảm mạnh đi kèm Volume % Change tăng vọt (+50% hoặc hơn), đó là cảnh báo đỏ về lực xả hàng lớn của định chế.</li>
+    </ul>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 16 &amp;middot; ĐỊNH VỊ VĨ MÔ</div>
+    <h2>Bức Tranh Chung (The Big Picture) &amp; Nhịp đập thị trường</h2>
+<div class="split-layout">
+  <div class="split-left" style="padding-right: 1rem; border-right: 1px solid var(--border);">
+    <h3 style="color: var(--accent-purple); margin-top: 0;">Cột báo sinh mệnh: Bức Tranh Chung (The Big Picture)</h3>
+    <p style="font-size: 0.95rem; line-height: 1.5;">
+      Bất kể cổ phiếu của bạn tốt đến đâu, 3/4 số cổ phiếu sẽ gãy đổ theo thị trường chung. Cột "The Big Picture" cung cấp la bàn định hướng cho mọi hành động mua bán.
+    </p>
+    <div class="callout" style="border-color: var(--accent-purple); margin-top: 1rem; padding: 0.8rem;">
+      <strong>Market Pulse (Nhịp đập Thị trường):</strong> Là bảng tóm tắt trạng thái thị trường nằm trong cột Big Picture. Bảng này giúp bạn nhận biết ngay lập tức xu hướng chung đang ở pha nào: (1) Thị trường tăng giá (Confirmed Uptrend); (2) Xu hướng tăng bị áp lực (Uptrend under pressure); hay (3) Thị trường điều chỉnh (Market in correction).
+    </div>
+  </div>
+  
+  <div class="split-right" style="padding-left: 1rem;">
+    <h4 style="color: var(--accent-emerald); margin-top: 0;">Bài học sinh tử từ Đỉnh thị trường năm 2007</h4>
+    <p style="font-size: 0.85rem; line-height: 1.4; margin-top: 0.5rem;">
+      Trước khi thị trường gấu tàn khốc năm 2008 diễn ra, IBD đã liên tục cảnh báo thông qua các Ngày phân phối (Distribution Days) trên Nasdaq:
+    </p>
+    <ul style="font-size: 0.85rem; padding-left: 1.2rem; line-height: 1.5; margin: 0.5rem 0;">
+      <li><strong>Cảnh báo dồn dập (Tháng 10/2007):</strong> Nasdaq xuất hiện các ngày phân phối liên tiếp vào ngày 3/10, 11/10, 15/10, 16/10, và 19/10 (tổng cộng 5 ngày phân phối).</li>
+      <li><strong>Tín hiệu rút vốn bắt buộc:</strong> Ngày 24/10 xuất hiện ngày phân phối thứ 6. Đến ngày 1/11, thị trường có ngày phân phối thứ 7. Một hệ thống radar nhạy bén đã chỉ ra lực xả hàng quyết liệt của các tổ chức lớn trước khi chỉ số rơi tự do.</li>
+      <li><strong>Hành động thực chiến:</strong> Khi số ngày phân phối tăng lên từ 5 đến 6 ngày trong vòng 4-5 tuần, hãy lập tức đóng các lệnh mua mới, bán hạ tỷ trọng margin và nâng cao tỷ lệ tiền mặt để bảo vệ thành quả.</li>
+    </ul>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 16 &amp;middot; QUÉT DÒNG TIỀN NÓNG</div>
+    <h2>Sàng lọc dòng tiền nóng thời gian thực: Stocks on the Move</h2>
+<div class="split-layout">
+  <div class="split-left" style="padding-right: 1rem; border-right: 1px solid var(--border);">
+    <h3 style="color: var(--accent-purple); margin-top: 0;">Sàng lọc dòng tiền nóng: Stocks on the Move</h3>
+    <p style="font-size: 0.95rem; line-height: 1.5;">
+      Làm thế nào để phát hiện các siêu cổ phiếu mới bứt phá trước khi chúng tăng giá bằng lần? Bảng lọc "Stocks on the Move" là bộ cảm biến nhạy bén nhất.
+    </p>
+    <div class="callout" style="border-color: var(--accent-purple); margin-top: 1rem; padding: 0.8rem;">
+      <strong>Nguyên lý lọc dòng tiền đột biến:</strong> Thay vì chỉ liệt kê các cổ phiếu giao dịch sôi động nhất (most-active list) một cách thô sơ, IBD quét toàn bộ sàn NYSE và Nasdaq để lọc ra những cổ phiếu có <strong>khối lượng giao dịch tăng vượt trội so với mức trung bình 3 tháng gần nhất</strong>.
+    </div>
+  </div>
+  
+  <div class="split-right" style="padding-left: 1rem;">
+    <h4 style="color: var(--accent-emerald); margin-top: 0;">Cách sử dụng Bộ lọc Stocks on the Move</h4>
+    <p style="font-size: 0.85rem; line-height: 1.4; margin-top: 0.5rem;">
+      Quy trình khai thác dữ liệu từ bảng lọc:
+    </p>
+    <ul style="font-size: 0.85rem; padding-left: 1.2rem; line-height: 1.5; margin: 0.5rem 0;">
+      <li><strong>Tìm chữ in đậm (Boldfaced names):</strong> IBD tự động in đậm các cổ phiếu trên danh sách này nếu chúng có điểm <strong>EPS và RS &ge; 80</strong>. Đây là các mục tiêu ưu tiên số 1 cần kiểm tra đồ thị ngay lập tức.</li>
+      <li><strong>Nhận diện điểm mua Breakout:</strong> Khi một cổ phiếu in đậm xuất hiện trên danh sách này đi kèm khối lượng tăng vọt (+100%, +200%) và giá vượt lên trên điểm pivot của nền giá tích lũy, đó là điểm mua chuẩn chỉnh.</li>
+      <li><strong>Theo dõi danh sách giảm giá (Stocks Down):</strong> Quan sát các cổ phiếu giảm giá mạnh với khối lượng lớn trên danh sách Stocks Down giúp nhận diện sớm các nhóm ngành đang bị các định chế lớn tháo chạy và thanh lý vị thế.</li>
+    </ul>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 16 &amp;middot; KIỂM DUYỆT CỔ PHIẾU</div>
+    <h2>Bộ lọc kiểm duyệt cổ phiếu: IBD Stock Checkup</h2>
+<div class="split-layout">
+  <div class="split-left" style="padding-right: 1rem; border-right: 1px solid var(--border);">
+    <h3 style="color: var(--accent-purple); margin-top: 0;">Kiểm duyệt Cổ phiếu: IBD Stock Checkup</h3>
+    <p style="font-size: 0.95rem; line-height: 1.5;">
+      Trước khi đưa ra quyết định mua một cổ phiếu, nhà đầu tư phải kiểm tra toàn diện sức khỏe doanh nghiệp thông qua bộ lọc chuẩn CAN SLIM.
+    </p>
+    <div class="callout" style="border-color: var(--accent-purple); margin-top: 1rem; padding: 0.8rem;">
+      <strong>Hệ thống Đèn giao thông (Red Light, Green Light):</strong> Công cụ Stock Checkup chấm điểm tự động các chỉ số cơ bản & kỹ thuật của cổ phiếu theo 3 màu: 
+      <br>&bull; <span style="color: var(--accent-emerald); font-weight: bold;">Xanh dương/Xanh lá (Pass)</span>: Đạt tiêu chuẩn mua.
+      <br>&bull; <span style="color: #eab308; font-weight: bold;">Vàng (Neutral)</span>: Cần thận trọng theo dõi.
+      <br>&bull; <span style="color: var(--accent-red); font-weight: bold;">Đỏ (Fail)</span>: Loại bỏ ngay lập tức.
+    </div>
+  </div>
+  
+  <div class="split-right" style="padding-left: 1rem;">
+    <h4 style="color: var(--accent-emerald); margin-top: 0;">3 Trọng tâm Đánh giá của Stock Checkup</h4>
+    
+    <ul style="font-size: 0.85rem; padding-left: 1.2rem; line-height: 1.5; margin: 0.5rem 0;">
+      <li><strong>1. Đánh giá Tổng thể (Composite Scorecard):</strong> Kiểm tra xem điểm số tích hợp có đạt trên 80 (khuyến nghị trên 90) để đảm bảo cổ phiếu thuộc nhóm 10% mạnh nhất thị trường.</li>
+      <li><strong>2. So sánh trong nhóm ngành (Performance Within Group):</strong> Xếp hạng trực tiếp cổ phiếu của bạn với các đối thủ cạnh tranh cùng ngành. Mục tiêu là chỉ mua những cổ phiếu giữ vị trí số 1 hoặc số 2 (Group Leaders) của ngành.</li>
+      <li><strong>3. Trạng thái Thị trường chung (General Market Grade):</strong> Nếu thị trường chung bị radar đánh dấu Đỏ (Fail/Correction), <strong>tuyệt đối không mở vị thế mua mới</strong> dù cổ phiếu riêng lẻ có đẹp đến đâu.</li>
+    </ul>
+    
+    <div class="callout" style="border-color: var(--accent-emerald); padding: 0.5rem; font-size: 0.8rem; margin-top: 0.5rem;">
+      <strong>Lời khuyên vàng:</strong> "Tuyệt đối không mua bất kỳ cổ phiếu nào có xếp hạng cao mà không kiểm tra đồ thị để xác nhận điểm breakout an toàn từ một nền giá chuẩn."
+    </div>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 16 &amp;middot; ĐÁNH GIÁ CHỨNG CỨ</div>
+    <h2>Đánh giá chất lượng bằng chứng và bối cảnh giao dịch thuật toán AI</h2>
+<div class="evidence-card">
+  <h2>ĐÁNH GIÁ CHẤT LƯỢNG BẰNG CHỨNG (EVIDENCE EVALUATION)</h2>
+  
+  <div class="split-layout">
+    <div class="split-left" style="padding-right: 1rem; border-right: 1px solid var(--border);">
+      <h4 style="color: var(--accent-purple); margin-top: 0;">Đánh giá Phương pháp luận của William O'Neil</h4>
+      
+      <div class="evaluation-score" style="margin-bottom: 0.8rem; font-size: 0.82rem; line-height: 1.45;">
+        <strong>1. Quy mô mẫu kiểm chứng (Sample Size): <span style="color: var(--accent-emerald);">9/10</span></strong>
+        <p style="margin: 0.2rem 0 0.5rem 0; font-size: 0.78rem;">
+          Xuất sắc. William O'Neil & Co. sở hữu cơ sở dữ liệu chứng khoán vi tính hóa đầu tiên tại Mỹ từ năm 1953 (mở rộng về trước tới những năm 1880), bao gồm hơn 10.000 cổ phiếu.
+        </p>
+      </div>
+
+      <div class="evaluation-score" style="margin-bottom: 0.8rem; font-size: 0.82rem; line-height: 1.45;">
+        <strong>2. Kiểm soát Thiên lệch kẻ sống sót (Survivor Bias): <span style="color: var(--accent-emerald);">8/10</span></strong>
+        <p style="margin: 0.2rem 0 0.5rem 0; font-size: 0.78rem;">
+          Khá tốt. Dù tập trung nghiên cứu đặc điểm của siêu cổ phiếu trước sóng tăng, O'Neil cũng ghi chép đầy đủ các ngày phân phối thị trường gấu (2000, 2008) để xây dựng hệ thống thoát hiểm dứt khoát.
+        </p>
+      </div>
+
+      <div class="evaluation-score" style="font-size: 0.82rem; line-height: 1.45;">
+        <strong>3. Tính hệ thống & Dòng tiền (Systematic Flow): <span style="color: var(--accent-emerald);">9/10</span></strong>
+        <p style="margin: 0.2rem 0 0 0.78rem;">
+          Logic vững chắc. Dòng tiền định chế lớn (Mutual Funds, Pension Funds) vận hành bằng cách mua tích lũy ròng trong nhiều tuần. "Con voi trong bồn tắm" bắt buộc phải để lại dấu chân lớn trên đồ thị.
+        </p>
+      </div>
+    </div>
+    
+    <div class="split-right" style="padding-left: 1rem;">
+      <h4 style="color: var(--accent-emerald); margin-top: 0;">Bối cảnh Hiện đại: Kỷ nguyên AI & Giao dịch Thuật toán (Algorithmic Trading)</h4>
+      <p style="font-size: 0.82rem; line-height: 1.45; margin-top: 0.5rem;">
+        Trong thế kỷ 21, thị trường đã dịch chuyển từ báo giấy sang các bộ máy quét thời gian thực bằng AI và thuật toán giao dịch tần suất cao (HFT):
+      </p>
+      <ul style="font-size: 0.8rem; padding-left: 1.2rem; line-height: 1.45; margin: 0.5rem 0;">
+        <li><strong>Thuật toán để lại dấu vết rõ hơn:</strong> Các lệnh quét tự động lớn (Block Trades, VWAP, TWAP) của các định chế lớn tạo ra các cây nến volume tăng đột biến trong ngày tại các vùng kháng cự đỉnh cũ (pivot point). Dấu chân "con voi" giờ đây hiện lên trên bảng quét thời gian thực chi tiết hơn bao giờ hết.</li>
+        <li><strong>Lọc AI đa chiều:</strong> Các công cụ quét hiện đại có thể tích hợp điểm số CAN SLIM của O'Neil cùng với các chỉ số tâm lý mạng xã hội và luồng quyền chọn (options flow) để tìm điểm breakout có độ tin cậy cao hơn.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="page-reference" style="margin-top: 0.5rem;">Ch 16 &middot; "Our primary concern is understanding and interpreting the national economy..."</div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 16 &amp;middot; GÓC NHÌN ĐỐI LẬP</div>
+    <h2>Mua cổ phiếu rẻ dưới đáy vs Lọc định lượng chất lượng cao</h2>
+<div class="competing-views-card">
+  <h2>GÓC NHÌN TRÁI CHIỀU (COMPETING VIEWS)</h2>
+  
+  <table class="comparison-table" style="width: 100%; border-collapse: collapse; margin-top: 1rem; font-size: 0.85rem; line-height: 1.45;">
+    <thead>
+      <tr style="border-bottom: 2px solid var(--border); text-align: left; background: rgba(255,255,255,0.02);">
+        <th style="padding: 0.8rem; width: 20%; font-weight: bold;">Tiêu chí so sánh</th>
+        <th style="padding: 0.8rem; width: 40%; color: var(--accent-red); font-weight: bold;">Đầu tư Giá trị rẻ / P/E thấp (Low P/E Bargains)</th>
+        <th style="padding: 0.8rem; width: 40%; color: var(--accent-emerald); font-weight: bold;">CAN SLIM / Lọc SmartSelect (O'Neil)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="border-bottom: 1px solid var(--border);">
+        <td style="padding: 0.8rem; font-weight: bold;">Tiêu chí chọn lọc</td>
+        <td style="padding: 0.8rem;">
+          Lọc tìm cổ phiếu có P/E thấp, thị giá chiết khấu sâu từ đỉnh, mong đợi sự đảo chiều trung bình (Mean Reversion).
+        </td>
+        <td style="padding: 0.8rem;">
+          Lọc tìm cổ phiếu có EPS & RS &ge; 80, SMR đạt hạng A/B, tích lũy mẫu hình đẹp và đang ở vùng giá cao tiệm cận đỉnh 52 tuần.
+        </td>
+      </tr>
+      <tr style="border-bottom: 1px solid var(--border);">
+        <td style="padding: 0.8rem; font-weight: bold;">Ẩn dụ về chất lượng</td>
+        <td style="padding: 0.8rem;">
+          Tuyển dụng các cầu thủ .200 giá rẻ với hy vọng một ngày nào đó họ sẽ tỏa sáng thành nhà vô địch.
+        </td>
+        <td style="padding: 0.8rem;">
+          Tuyển dụng các cầu thủ .300 đắt giá, có lịch sử thi đấu đỉnh cao ổn định để giành chiến thắng ngay lập tức.
+        </td>
+      </tr>
+      <tr style="border-bottom: 1px solid var(--border);">
+        <td style="padding: 0.8rem; font-weight: bold;">Rủi ro hệ thống</td>
+        <td style="padding: 0.8rem;">
+          <strong>Bẫy giá trị (Value Trap):</strong> Cổ phiếu giá rẻ tiếp tục giảm sâu hoặc đi ngang vô thời hạn do doanh nghiệp mất năng lực cạnh tranh cốt lõi.
+        </td>
+        <td style="padding: 0.8rem;">
+          <strong>Đu đỉnh tăng trưởng (Growth Trap):</strong> Trả giá quá cao cho cổ phiếu tại điểm cuối chu kỳ tăng trưởng của doanh nghiệp và ngành.
+        </td>
+      </tr>
+      <tr style="border-bottom: 1px solid var(--border);">
+        <td style="padding: 0.8rem; font-weight: bold;">Quan niệm về P/E</td>
+        <td style="padding: 0.8rem;">
+          P/E cao là bong bóng, nguy hiểm và rủi ro thua lỗ lớn.
+        </td>
+        <td style="padding: 0.8rem;">
+          Đà tăng trưởng lợi nhuận và doanh thu mới là động lực đẩy giá, P/E cao phản ánh chất lượng dẫn đầu vượt trội.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <div class="page-reference" style="margin-top: 0.8rem;">Ch 16 &middot; "According to our historical study of all the greatest winning stocks, if you’d been relying on P/E ratios, you would have missed almost every major winner..."</div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 16 &amp;middot; RỦI RO &amp; PHẢN BIỆN</div>
+    <h2>Hạn chế của dữ liệu trễ &amp; Bẫy săn thanh khoản thuật toán</h2>
+<div class="split-layout">
+  <div class="split-left" style="padding-right: 1rem; border-right: 1px solid var(--border);">
+    <h3 style="color: var(--accent-red); margin-top: 0;">Hạn chế & Rủi ro Hệ thống (Systematic Risks & Warnings)</h3>
+    <p style="font-size: 0.9rem; line-height: 1.45;">
+      Mặc dù các bộ xếp hạng IBD cung cấp lợi thế định lượng lớn, nhà đầu tư phải cảnh giác với 3 rủi ro cốt lõi khi áp dụng vào thực tế hiện đại:
+    </p>
+    <div class="callout" style="border-color: var(--accent-red); padding: 0.8rem; font-size: 0.82rem; margin-top: 0.8rem;">
+      <strong>Độ trễ của Dữ liệu lịch sử:</strong> Điểm số SmartSelect được tính toán dựa trên báo cáo tài chính quá khứ và giá của 12 tháng qua. Khi doanh nghiệp bước vào đỉnh chu kỳ và bắt đầu suy thoái đột ngột, điểm số trên radar có thể vẫn hiển thị màu Xanh lá cây (Pass) hoàn hảo do độ trễ cập nhật.
+    </div>
+  </div>
+  
+  <div class="split-right" style="padding-left: 1rem;">
+    <h4 style="color: var(--accent-purple); margin-top: 0;">3 Thách thức lớn đối với Nhà đầu tư định lượng</h4>
+    
+    <ul style="font-size: 0.82rem; padding-left: 1.2rem; line-height: 1.5; margin: 0.5rem 0;">
+      <li><strong>1. Thuật toán săn thanh khoản (Algorithmic Front-Running):</strong> Các quỹ đầu cơ thuật toán (HFT) biết rõ các tiêu chí lọc CAN SLIM của IBD. Chúng có thể tạo ra các điểm breakout giả (Bull Trap) đi kèm khối lượng ảo để kích hoạt lệnh mua tự động của nhỏ lẻ, sau đó lập tức bán khống đè giá.</li>
+      <li><strong>2. Sự rút ngắn chu kỳ gom hàng (Execution Speedup):</strong> O'Neil nhận định các quỹ mất nhiều tuần để gom hàng, giúp nhà đầu tư cá nhân có thời gian theo sau. Hiện nay, các chương trình giao dịch tần suất cao có thể hoàn thành việc mua tích lũy hoặc phân phối hàng triệu cổ phiếu chỉ trong một vài phiên.</li>
+      <li><strong>3. Bẫy Tối ưu hóa quá mức (Over-Optimization Trap):</strong> Loại bỏ tuyệt đối các cổ phiếu có điểm RS/EPS dưới 80 có thể khiến bạn bỏ lỡ các siêu cổ phiếu phục hồi từ vực sâu (Turnaround stocks), nơi lợi nhuận bùng nổ mạnh nhất nhưng điểm số lịch sử 3 năm vẫn đang ở mức thấp.</li>
+    </ul>
+    
+    <div class="callout" style="border-color: var(--accent-emerald); padding: 0.6rem; font-size: 0.8rem; margin-top: 0.5rem;">
+      <strong>Cách phòng thủ:</strong> Luôn kết hợp xếp hạng định lượng với việc đọc biểu đồ kỹ thuật thời gian thực và thực hiện dừng lỗ tuyệt đối ở mức 7% để bảo vệ tài khoản khỏi các biến động bất ngờ.
+    </div>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 16 &amp;middot; SƠ ĐỒ KHÁI NIỆM</div>
+    <h2>Bản đồ phụ thuộc công cụ trong quy trình IBD</h2>
+<div class="dependency-card">
+  <h2>BẢN ĐỒ PHỤ THUỘC CÔNG CỤ (TOOL DEPENDENCY MAP)</h2>
+  <div class="mermaid-container" style="background: var(--background); padding: 1rem; border-radius: 8px; border: 1px solid var(--border); margin-top: 1rem;">
+    <pre class="mermaid">
+graph TD
+  BigPicture["The Big Picture & Market Pulse"] --> MarketState["Xác định trạng thái Thị trường Chung"]
+  MarketState --> TradingMode["Quyết định Chế độ giao dịch (Uptrend/Downtrend)"]
+  
+  TradingMode -->|Confirmed Uptrend| Screening["Quét cổ phiếu (Screen Center & Stocks on the Move)"]
+  Screening --> Candidates["Danh sách Cổ phiếu bứt phá tiềm năng"]
+  
+  Candidates --> Checkup["Đánh giá cơ bản (IBD Stock Checkup Rating &ge; 80)"]
+  Candidates --> ChartCheck["Kiểm tra kỹ thuật (Đồ thị Ngày & Tuần)"]
+  
+  Checkup --> PivotValidation["Xác thực Điểm mua Pivot an toàn"]
+  ChartCheck --> PivotValidation
+  
+  PivotValidation --> PortfolioPurchase["Giải ngân mua cổ phiếu"]
+  
+  PortfolioPurchase --> StockLists["Bám sát mục tiêu (My Stock Lists)"]
+  StockLists --> StopLoss["Quản trị dừng lỗ (7% Rule)"]
+  StockLists --> TakeProfit["Quản trị chốt lãi (20% Rule)"]
+    </pre>
+  </div>
+  <div class="page-reference" style="margin-top: 0.5rem;">Ch 16 &middot; Tool & Platform Architecture on Investors.com</div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 16 &amp;middot; HƯỚNG DẪN THỰC THI</div>
+    <h2>Quy trình 5 bước xây dựng thói quen giao dịch hàng ngày</h2>
+<div class="implementation-card">
+  <h2>HƯỚNG DẪN THỰC THI: THÓI QUEN GIAO DỊCH HÀNG NGÀY (MY DAILY ROUTINE)</h2>
+  <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: -0.5rem;">
+    Quy trình 5 bước rà soát thị trường mỗi tối để chuẩn bị cho ngày giao dịch tiếp theo:
+  </p>
+
+  <div class="checklist-grid" style="display: grid; grid-template-columns: 1fr; gap: 0.8rem; margin-top: 1rem; font-size: 0.85rem; line-height: 1.45;">
+    <div class="checklist-item" style="border: 1px solid var(--border); padding: 0.8rem; border-radius: 6px; background: rgba(255,255,255,0.02); display: flex; align-items: flex-start; gap: 0.8rem;">
+      <input type="checkbox" style="margin-top: 0.2rem;" checked disabled>
+      <div>
+        <strong>Bước 1: Rà soát Xu hướng thị trường chung</strong>
+        <p style="margin: 0.2rem 0 0 0; font-size: 0.78rem; color: var(--text-muted);">
+          Mở cột "The Big Picture" và "Market Pulse" trên Investors.com. Đảm bảo trạng thái thị trường là <strong>Confirmed Uptrend</strong> và kiểm tra số lượng Ngày phân phối hiện tại.
+        </p>
+      </div>
+    </div>
+
+    <div class="checklist-item" style="border: 1px solid var(--border); padding: 0.8rem; border-radius: 6px; background: rgba(255,255,255,0.02); display: flex; align-items: flex-start; gap: 0.8rem;">
+      <input type="checkbox" style="margin-top: 0.2rem;" checked disabled>
+      <div>
+        <strong>Bước 2: Tìm kiếm cơ hội qua Stocks on the Move & Screen Center</strong>
+        <p style="margin: 0.2rem 0 0 0; font-size: 0.78rem; color: var(--text-muted);">
+          Sàng lọc danh sách các cổ phiếu bứt phá trong phiên có <strong>tên in đậm</strong> (đồng nghĩa với điểm EPS và RS &ge; 80) và sở hữu mức tăng khối lượng đột biến <strong>Volume % Change &ge; +50%</strong>.
+        </p>
+      </div>
+    </div>
+
+    <div class="checklist-item" style="border: 1px solid var(--border); padding: 0.8rem; border-radius: 6px; background: rgba(255,255,255,0.02); display: flex; align-items: flex-start; gap: 0.8rem;">
+      <input type="checkbox" style="margin-top: 0.2rem;" checked disabled>
+      <div>
+        <strong>Bước 3: Đánh giá sức khỏe qua IBD Stock Checkup</strong>
+        <p style="margin: 0.2rem 0 0 0; font-size: 0.78rem; color: var(--text-muted);">
+          Nhập mã cổ phiếu vào công cụ Stock Checkup. Xác nhận điểm <strong>Composite &ge; 80</strong> (hoặc &ge; 90 trong thị trường mạnh) và đảm bảo không có tín hiệu Đỏ (Fail) ở các xếp hạng cốt lõi (SMR, A/D, Group Rating).
+        </p>
+      </div>
+    </div>
+
+    <div class="checklist-item" style="border: 1px solid var(--border); padding: 0.8rem; border-radius: 6px; background: rgba(255,255,255,0.02); display: flex; align-items: flex-start; gap: 0.8rem;">
+      <input type="checkbox" style="margin-top: 0.2rem;" checked disabled>
+      <div>
+        <strong>Bước 4: Kiểm chứng kỹ thuật trên Đồ thị Ngày & Tuần</strong>
+        <p style="margin: 0.2rem 0 0 0; font-size: 0.78rem; color: var(--text-muted);">
+          Xác định xem cổ phiếu đang tích lũy nền giá nào (Cốc tay cầm, Hai đáy, Nền giá phẳng). Nhìn vào đồ thị tuần để tìm kiếm sự hiện diện của các cột khối lượng xanh lớn (dòng tiền tổ chức mua gom) và định vị điểm pivot chính xác.
+        </p>
+      </div>
+    </div>
+
+    <div class="checklist-item" style="border: 1px solid var(--border); padding: 0.8rem; border-radius: 6px; background: rgba(255,255,255,0.02); display: flex; align-items: flex-start; gap: 0.8rem;">
+      <input type="checkbox" style="margin-top: 0.2rem;" checked disabled>
+      <div>
+        <strong>Bước 5: Cập nhật Watchlist & Quản trị Danh mục</strong>
+        <p style="margin: 0.2rem 0 0 0; font-size: 0.78rem; color: var(--text-muted);">
+          Phân loại các cổ phiếu đang theo dõi vào các danh sách trong "My Stock Lists" (ví dụ: "Cổ phiếu trong nền giá", "Gần điểm mua pivot"). Đặt lệnh cảnh báo tự động trên hệ thống khi giá chạm mốc pivot để sẵn sàng kích hoạt lệnh mua vào phiên ngày mai.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 16 &amp;middot; HÀNH ĐỘNG CUỐI CÙNG</div>
+    <h2>Hành động cuối cùng</h2>
+<ul class="action-list">
+  <li class="action-item">
+    <div>
+      <div class="action-headline">Đăng ký và làm quen với công cụ định lượng Investors.com</div>
+      <div class="action-detail">Tiếp cận các công cụ quét định lượng thời gian thực (Stock Checkup, Screen Center). Thay vì đọc tin tức ngẫu hứng, hãy tập trung rèn luyện cách sử dụng các chỉ số SmartSelect định lượng để lọc bỏ các yếu tố cảm xúc.</div>
+    </div>
+  </li>
+  <li class="action-item">
+    <div>
+      <div class="action-headline">Thiết lập khung giờ cố định "My Routine" 30 phút mỗi tối</div>
+      <div class="action-detail">Cam kết dành ra đúng 30 phút từ thứ Hai đến thứ Sáu sau khi kết thúc phiên giao dịch để thực hiện rà soát theo 5 bước hướng dẫn. Ghi chép nhật ký hành động giá của các cổ phiếu dẫn dắt vào sổ tay cá nhân.</div>
+    </div>
+  </li>
+  <li class="action-item">
+    <div>
+      <div class="action-headline">Thực hành vẽ và quan sát các đường trung bình động động (MA 50 & 200 ngày)</div>
+      <div class="action-detail">Tích hợp các đường MA 50 ngày (hoặc 10 tuần) và MA 200 ngày (hoặc 40 tuần) vào toàn bộ đồ thị theo dõi. Tập quan sát phản ứng của giá tại các vùng kiểm định đường trung bình động này để phát hiện dòng tiền tổ chức nâng đỡ giá.</div>
+    </div>
+  </li>
+</ul>
+
+<figure class="image-slot hero" style="margin-top: 1.5rem;">
+  <div class="image-prompt">
+    <span class="image-prompt-label">AI Image Prompt — Giới hạn quota Image-gen của hệ thống tạm thời hết</span>
+    <p class="image-prompt-text">"A glowing blue holographic radar screen projecting a clean green financial chart breakout, high contrast, black background, minimalist clean luxury corporate style, 8k."</p>
+    <span class="image-prompt-hint">Bạn có thể tạo ảnh trên Midjourney, lưu dưới tên 'ch16_radar_hero.png' vào thư mục 'images/' và thay thế khối HTML này bằng thẻ &lt;img src="images/ch16_radar_hero.png"&gt; để hoàn thiện slide Closing Actions.</span>
+  </div>
+</figure>
+
+  </section>
+
+</div>
+
+<div class="nav-controls">
+  <button class="nav-btn" id="prevBtn" onclick="prevSlide()" aria-label="Previous slide">&#8592;</button>
+  <div class="counter" id="counter" aria-live="polite">1 / 1</div>
+  <button class="nav-btn" id="nextBtn" onclick="nextSlide()" aria-label="Next slide">&#8594;</button>
+</div>
+
+<script src="common.js"></script>
+</body>
+</html>

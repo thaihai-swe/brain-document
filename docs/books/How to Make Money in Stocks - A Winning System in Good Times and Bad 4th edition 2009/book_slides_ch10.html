@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How to Make Money in Stocks — Chapter 10</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="common.css">
+<script src="https://cdn.jsdelivr.net/npm/@panzoom/panzoom@4.5.1/dist/panzoom.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11.10.0/dist/mermaid.min.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div class="progress-bar" id="progressBar"></div>
+
+<div class="chapter-menu">
+  <button class="menu-btn" id="chapterMenuBtn" onclick="toggleChapterMenu()" aria-haspopup="true" aria-expanded="false">Chapters &#9662;</button>
+  <div class="chapter-menu-panel" id="chapterMenuPanel" role="menu"></div>
+</div>
+
+<div class="slide-container" id="slideContainer">
+
+  <section class="slide" aria-hidden="false">
+<h1>How to Make Money in Stocks</h1>
+<p class="subtitle">Chương 10: Quy Tắc Bán Bắt Buộc Để Cắt Mọi Khoản Lỗ... Không Ngoại Lệ<br><span style="font-size: 0.9em; opacity: 0.85;">(When You Must Sell and Cut Every Loss… Without Exception)</span></p>
+
+<figure class="image-slot hero">
+  <div class="image-prompt">
+    <span class="image-prompt-label">AI Image Prompt — Giới hạn quota Image-gen của hệ thống tạm thời hết</span>
+    <p class="image-prompt-text">"A thick glass shield reflecting a sharp red laser beam, minimalist dark background, futuristic defensive technology, studio lighting, high contrast, 8k."</p>
+    <span class="image-prompt-hint">Bạn có thể tạo ảnh trên Midjourney, lưu dưới tên 'ch10_title_hero.png' vào thư mục 'images/' và thay thế khối HTML này bằng thẻ &lt;img src="images/ch10_title_hero.png"&gt;</span>
+  </div>
+</figure>
+
+<div class="meta-grid">
+  <div class="meta-item">
+    <div class="meta-label">Tác giả</div>
+    <div class="meta-value">William J. O'Neil</div>
+  </div>
+  <div class="meta-item">
+    <div class="meta-label">Độ sâu phân tích</div>
+    <div class="meta-value">DEEP+ Mode (23 Slides)</div>
+  </div>
+  <div class="meta-item">
+    <div class="meta-label">Đối tượng mục tiêu</div>
+    <div class="meta-value">Nhà đầu tư cá nhân</div>
+  </div>
+  <div class="meta-item">
+    <div class="meta-label">Ngôn ngữ</div>
+    <div class="meta-value">Song ngữ Anh - Việt</div>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide chapter-divider">
+<div class="chapter-number">Chương 10</div>
+<h2>Quy Tắc Bán Cắt Lỗ Bắt Buộc</h2>
+<p class="chapter-meta">Ước tính thời gian đọc: 40 phút (chế độ DEEP+) &middot; Độ khó: Trung bình &middot; Khái niệm chính: Phòng thủ danh mục (Portfolio Defense), Tỷ lệ Lợi nhuận/Rủi ro 3-to-1, Cắt lỗ cơ học tối đa 7%-8%, Thiên kiến giá mua (Price-Paid Bias), Bẫy trung bình giá xuống (Averaging Down), Ẩn dụ Váy đỏ váy vàng (Red Dress Analogy), Câu chuyện bẫy gà tây (Turkey Trap), Bảo tồn sự tự tin và vốn tinh thần</p>
+
+<figure class="image-slot hero">
+  <div class="image-prompt">
+    <span class="image-prompt-label">AI Image Prompt — Giới hạn quota Image-gen của hệ thống tạm thời hết</span>
+    <p class="image-prompt-text">"A close-up of a premium leather baseball glove catching a spinning baseball in mid-air, dynamic freeze action, dramatic sports stadium lighting, shallow depth of field, high contrast."</p>
+    <span class="image-prompt-hint">Bạn có thể tạo ảnh trên Midjourney, lưu dưới tên 'ch10_divider_hero.png' vào thư mục 'images/' và thay thế khối HTML này bằng thẻ &lt;img src="images/ch10_divider_hero.png"&gt;</span>
+  </div>
+</figure>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 10 &amp;middot; TỔNG QUAN TRỰC QUAN 1</div>
+    <h2>Tỷ lệ Reward/Risk 3:1 và toán học sụt giảm vốn</h2>
+<div class="mermaid">
+graph TD
+    A["TỶ LỆ LỢI NHUẬN / RỦI RO CHUẨN (3-TO-1 RATIO)"] --> B["Thị trường tăng giá (Bull Market)"]
+    A --> C["Thị trường giảm giá (Bear Market)"]
+    
+    B --> B1["Chốt lời: 20% - 25%"]
+    B --> B2["Cắt lỗ tối đa: 7% - 8%"]
+    
+    C --> C1["Chốt lời ngắn: 10% - 15%"]
+    C --> C2["Cắt lỗ siêu chặt: 3%"]
+    
+    D["TOÁN HỌC SỤT GIẢM (DRAWDOWN MATH)"] --> E["Lỗ 33% -> Cần tăng 50% để hòa vốn"]
+    D --> F["Lỗ 50% -> Cần tăng 100% để hòa vốn"]
+    D --> G["Lỗ 75% -> Cần tăng 300% để hòa vốn"]
+
+    style A fill:#8B7CFF,stroke:#2A2D33,color:#F7F7F5
+    style D fill:#DC2626,stroke:#2A2D33,color:#F7F7F5
+</div>
+<div class="callout" style="margin-top: 1rem;">
+  <div class="callout-icon">💡</div>
+  <div class="callout-content">
+    <strong>Bản chất của tỷ lệ 3:1:</strong> Việc thiết lập tỷ lệ này đảm bảo rằng ngay cả khi bạn chỉ đúng 3 hoặc 4 lần trên 10 lần giải ngân (tỷ lệ thắng dưới 40%), bạn vẫn có thể kiếm được một gia tài ròng lũy kế nhờ giữ các khoản lỗ cực nhỏ và để các khoản lãi chạy đúng kỳ vọng. Cắt lỗ sớm chính là "phanh xe" bảo vệ bạn khỏi thảm họa tài chính. <span class="page-ref">Ch 10 &middot; "Bernard Baruch’s Secret Market Method..."</span>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 10 &amp;middot; TỔNG QUAN TRỰC QUAN 2</div>
+    <h2>Mô hình váy vàng váy đỏ vs Hành vi nhà đầu tư cá nhân</h2>
+<div class="mermaid">
+graph TD
+    A["MÔ HÌNH KINH DOANH CỬA HÀNG THỜI TRANG (RETAIL ANALOGY)"] --> B["Cổ phiếu Tốt / Váy Đỏ (Red Dresses - High Demand)"]
+    A --> C["Cổ phiếu Yếu / Váy Vàng (Yellow Dresses - No Demand)"]
+    
+    B --> B1["Nhà bán lẻ thông minh: Nhập thêm hàng bán chạy"]
+    B --> B2["Typical Investor: Bán chốt lời quá sớm vì sợ mất lãi"]
+    
+    C --> C1["Nhà bán lẻ thông minh: Mark down giảm giá xả lỗ thu hồi vốn"]
+    C --> C2["Typical Investor: Ôm giữ hy vọng hòa vốn hoặc trung bình giá xuống"]
+    
+    C1 --> D["Dồn vốn vào các siêu cổ phiếu sinh lời (Red Dresses)"]
+    C2 --> E["Chôn vốn vào cổ phiếu trì trệ suy thoái (Yellow Dresses)"]
+
+    style B fill:#059669,stroke:#2A2D33,color:#F7F7F5
+    style C fill:#DC2626,stroke:#2A2D33,color:#F7F7F5
+</div>
+<div class="callout" style="margin-top: 1rem; border-color: var(--accent-purple);">
+  <div class="callout-icon">👗</div>
+  <div class="callout-content">
+    <strong>Hãy vận hành việc đầu tư như một doanh nghiệp thực thụ:</strong> Một chủ cửa hàng thời trang không bao giờ mua thêm những chiếc váy màu vàng không có người mua chỉ vì "giá nó rẻ hơn giá nhập ban đầu." Họ Mark down xả hàng lỗ 10%-20% để giải phóng dòng tiền dồn vào váy đỏ đang cháy hàng. Hãy làm điều tương tự với danh mục của bạn: "Nhổ cỏ dại (yellow dresses) để trồng hoa hồng (red dresses)." <span class="page-ref">Ch 10 &middot; "The Red Dress Story"</span>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 10 &amp;middot; TÓM TẮT CHƯƠNG</div>
+    <h2>Tóm tắt cấu trúc quy tắc cắt lỗ</h2>
+<div class="content-card">
+  <div class="summary-text">
+    <p><strong>Bối cảnh (Setup):</strong> Tại sao hoạt động phòng thủ lại là yếu tố sống còn quyết định sự sống sót của tài khoản đầu tư? Làm thế nào để vượt qua rào cản tâm lý sợ hãi và cái tôi cá nhân khi phải chấp nhận cắt đi một khoản lỗ thực tế?</p>
+    <p><strong>Luận điểm chính (Argument):</strong> Đầu tư chứng khoán là một trò chơi của xác suất và không một ai – kể cả những nhà quản lý quỹ xuất sắc nhất – có thể luôn luôn đúng. Nguyên tắc cốt lõi số một để chiến thắng là luôn luôn cắt ngắn và giới hạn mọi khoản lỗ ở mức tối đa <strong>7% đến 8%</strong> so với giá mua ban đầu, hoàn toàn không có ngoại lệ. Khoản lỗ trên giấy thực tế đã là khoản lỗ thực sự; việc ôm giữ chỉ làm tê liệt vốn tinh thần và tăng nguy cơ cháy tài khoản. Nhà đầu tư cá nhân phải triệt tiêu "thiên kiến giá mua" (Price-Paid Bias) và tuyệt đối tránh xa bẫy "trung bình giá xuống" (averaging down). Việc cắt lỗ sớm cần được coi như chi phí đóng phí bảo hiểm xe hơi hay bảo hiểm cháy nhà – bảo vệ tài sản lớn trước rủi ro sụp đổ thảm khốc.</p>
+    <p><strong>Bằng chứng (Evidence):</strong> Huyền thoại Wall Street Bernard Baruch chứng minh Speculator chỉ cần đúng 3-4 lần trên 10 là đã có thể kiếm được một gia tài nếu cắt lỗ cực nhanh. Các bài học sụp đổ tàn khốc của siêu cổ phiếu Brunswick (1961) rơi từ $60 về $30 khiến nhà giao dịch đột tử trên sân golf, hay Cisco (2000) giảm 80% từ $70 về $13 là lời cảnh tỉnh đắt giá cho hành vi bắt đáy và trung bình giá xuống. <span class="page-ref">Ch 10 &middot; "Should You Averaging Down in Price?"</span></p>
+    <p><strong>Hệ quả (Implications):</strong> Đặt lệnh cắt lỗ tự động hoặc ghi sẵn giá cắt lỗ tối đa 7%-8% ngay khi mở vị thế mua. Thực hiện chiến lược "nhổ cỏ dại để trồng hoa hồng" – bán các cổ phiếu yếu nhất trước tiên. Tuyệt đối đóng tài khoản và sa thải bất kỳ môi giới nào khuyên bạn mua trung bình giá xuống đối với một cổ phiếu đang lỗ.</p>
+    <p><strong>Tranh luận (Controversy):</strong> Phản bác kịch liệt các lý thuyết tài chính truyền thống khuyên nhà đầu tư nắm giữ cổ phiếu dài hạn để nhận cổ tức bất chấp tài sản bị sụt giảm sâu (ví dụ lỗ 35% tài sản để nhận 4% cổ tức là một khoản lỗ ròng 31% ngớ ngẩn). <span class="page-ref">Ch 10 &middot; "I’m Not Worried; I’m a Long-Term Investor..."</span></p>
+    <p><strong>Mối liên kết (Connection):</strong> Liên kết chặt chẽ với Chương 2 (Mẫu hình biểu đồ giúp xác định điểm pivot chuẩn, nơi giá rất hiếm khi giảm quá 8% nếu bứt phá đúng) và Chương 11 (Tối ưu hóa lợi nhuận chốt lời ở mức 20%-25% để tạo ra tỷ lệ Reward/Risk lý tưởng 3-to-1).</p>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 10 &amp;middot; Ý TƯỞNG CỐT LÕI</div>
+    <h2>Ý tưởng cốt lõi</h2>
+<div class="takeaway-hero">
+  <div class="kicker">CH 10 &middot; Ý TƯỞNG CỐT LÕI</div>
+  <div class="headline">"Luôn luôn, không có bất kỳ ngoại lệ nào, bắt buộc phải cắt ngắn và giới hạn mọi khoản lỗ của bạn ở mức tối đa 7% hoặc 8% so với giá vốn."</div>
+  <div class="subline">Bí quyết chiến thắng trên thị trường chứng khoán không phải là đúng trong mọi thương vụ, mà là giữ cho số tiền thua lỗ ở mức nhỏ nhất có thể khi bạn sai. Phòng thủ xuất sắc mới là chìa khóa để tấn công vĩ đại.</div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 10 &amp;middot; BÀI HỌC CHỦ CHỐT</div>
+    <h2>Bài học chủ chốt</h2>
+<div class="takeaway-list">
+  <div class="takeaway-item">
+    <div class="takeaway-badge">1</div>
+    <div class="takeaway-content">
+      <strong>Phòng thủ quyết định 70% thắng lợi trong đầu tư (Defense is 70% of the Game)</strong>
+      <div class="takeaway-detail">
+        <ul>
+          <li><strong>Ý nghĩa:</strong> Giống như ném bóng và phòng thủ quyết định 70% kết quả một trận đấu bóng chày, hoạt động quản trị rủi ro cắt lỗ chính là lá chắn sống còn bảo vệ vốn của bạn.</li>
+          <li><strong>Bằng chứng:</strong> Phân tích tài khoản thực tế của O'Neil năm 1962 chứng minh dù chỉ đúng 33% số lệnh giải ngân, danh mục vẫn tăng trưởng vượt bậc nhờ các khoản lỗ được khống chế siêu nhỏ. <span class="page-ref">Ch 10 &middot; "Bernard Baruch’s Secret Market Method..."</span></li>
+          <li><strong>Ứng dụng:</strong> Đặt hoạt động bảo vệ vốn lên ưu tiên số một trước khi mơ về các khoản lợi nhuận lớn.</li>
+          <li><strong>Cảnh báo:</strong> Thiếu kế hoạch phòng thủ chắc chắn, bạn sẽ bị cuốn trôi toàn bộ lợi nhuận và vốn liếng khi thị trường gấu bất ngờ ập đến.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="takeaway-item">
+    <div class="takeaway-badge">2</div>
+    <div class="takeaway-content">
+      <strong>Quy tắc cắt lỗ cơ học tối đa 7% - 8% không ngoại lệ (The Mechanical Stop-Loss Rule)</strong>
+      <div class="takeaway-detail">
+        <ul>
+          <li><strong>Ý nghĩa:</strong> Đây là giới hạn chịu đựng tối đa cho mỗi vị thế mua ban đầu để bảo vệ tài khoản khỏi những cú sụt giảm sâu.</li>
+          <li><strong>Bằng chứng:</strong> Mọi khoản lỗ khổng lồ (như -50% hay -90%) đều bắt đầu từ những khoản lỗ nhỏ 5% hay 10%. Ranh giới 8% là điểm phân định lỗi chọn điểm mua hoặc thị trường sập. <span class="page-ref">Ch 10 &middot; "Always, without Exception, Limit Losses..."</span></li>
+          <li><strong>Ứng dụng:</strong> Đặt cảnh báo hoặc lệnh dừng lỗ tự động ở mức 7% hoặc 8% dưới giá vốn của bạn ngay khi khớp lệnh mua.</li>
+          <li><strong>Cảnh báo:</strong> Tuyệt đối không chờ đợi vài ngày, không ôm hy vọng hồi phục, không tranh cãi với thị trường. Bán ngay lập tức khi chạm mốc 8%.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="takeaway-item">
+    <div class="takeaway-badge">3</div>
+    <div class="takeaway-content">
+      <strong>Triệt tiêu thiên kiến giá mua & Tránh bẫy trung bình giá xuống (Price-Paid Bias & Averaging Down)</strong>
+      <div class="takeaway-detail">
+        <ul>
+          <li><strong>Ý nghĩa:</strong> 95% nhà đầu tư mắc sai lầm neo cảm xúc vào mức giá vốn của mình, dẫn đến việc nắm giữ cổ phiếu yếu (weeds) và bán cổ phiếu mạnh (flowers) quá sớm.</li>
+          <li><strong>Bằng chứng:</strong> Việc mua thêm cổ phiếu đang giảm giá (trung bình giá xuống) là hành động nghiệp dư và nguy hiểm nhất, chôn vùi tài sản vào đống đổ nát. <span class="page-ref">Ch 10 &middot; "Should You Averaging Down in Price?"</span></li>
+          <li><strong>Ứng dụng:</strong> Đánh giá danh mục hàng tháng dựa trên hiệu suất tương đối thay vì giá vốn. Nhổ cỏ dại (laggards) dồn tiền vào hoa hồng (leaders).</li>
+          <li><strong>Cảnh báo:</strong> Sa thải ngay lập tức bất kỳ môi giới hay chuyên gia tư vấn nào khuyên bạn mua trung bình giá xuống một cổ phiếu đang thua lỗ.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="takeaway-item">
+    <div class="takeaway-badge">4</div>
+    <div class="takeaway-content">
+      <strong>Cắt lỗ là đóng phí bảo hiểm bảo tồn sự tự tin (Stop-Loss as Insurance for Confidence)</strong>
+      <div class="takeaway-detail">
+        <ul>
+          <li><strong>Ý nghĩa:</strong> Việc cắt lỗ nhỏ chính là chi phí đóng phí bảo hiểm để bảo vệ tài khoản khỏi thảm họa lớn và bảo tồn vốn tinh thần của bạn.</li>
+          <li><strong>Bằng chứng:</strong> Những nhà đầu tư cố chấp giữ khoản lỗ sâu >20% sẽ rơi vào trạng thái tê liệt tâm lý, mất hoàn toàn dũng khí để đưa ra các quyết định giao dịch đúng đắn trong tương lai. <span class="page-ref">Ch 10 &middot; "Never Lose Your Confidence"</span></li>
+          <li><strong>Ứng dụng:</strong> Chấp nhận cắt lỗ vui vẻ như một chi phí kinh doanh thông thường.</li>
+          <li><strong>Cảnh báo:</strong> Để mất dũng khí giao dịch chính là cái chết thực sự của một nhà đầu tư trên thị trường tài chính.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 10 &amp;middot; TRÍCH DẪN ĐẮT GIÁ</div>
+    <h2>Trích dẫn đắt giá</h2>
+<div class="quote-block" style="margin-bottom: 2rem;">
+  <p class="quote-text">"If a speculator is correct half of the time, he is hitting a good average. Even being right 3 or 4 times out of 10 should yield a person a fortune if he has the sense to cut his losses quickly..."</p>
+  <p class="quote-context"><strong>— Bernard Baruch</strong>, huyền thoại đầu cơ phố Wall và cố vấn tổng thống Mỹ. <span class="page-ref">Ch 10 &middot; "Bernard Baruch’s Secret Market Method..."</span></p>
+  <div style="font-size: 0.95rem; color: var(--text-secondary); margin-top: 0.5rem; line-height: 1.5;">
+    <strong>Bản dịch:</strong> "Nếu một nhà đầu cơ đúng một nửa số lần, anh ta đang đạt được một tỷ lệ trung bình tốt. Thậm chí chỉ đúng 3 hoặc 4 lần trên 10 cũng đủ mang lại cho một người cả một gia tài nếu người đó biết cách cắt lỗ nhanh chóng trong những thương vụ mà mình đã sai."<br>
+    <strong>Phân tích:</strong> Giải phóng nhà đầu tư khỏi áp lực ảo tưởng phải luôn đúng 100%. Đầu tư là trò chơi quản trị xác suất. Điều làm nên sự giàu có vượt trội là kiểm soát chặt chẽ các khoản lỗ nhỏ khi sai, và tối đa hóa lợi nhuận khi đúng.
+  </div>
+</div>
+
+<div class="quote-block" style="margin-bottom: 2rem;">
+  <p class="quote-text">"Selling doesn’t give you the loss; you already have the loss. If you think you haven’t incurred a loss until you sell the stock, you’re kidding yourself."</p>
+  <p class="quote-context"><strong>— William J. O'Neil</strong>, phá vỡ bẫy tâm lý tự lừa dối phổ biến của nhà đầu tư. <span class="page-ref">Ch 10 &middot; "When Does a Loss Become a Loss?"</span></p>
+  <div style="font-size: 0.95rem; color: var(--text-secondary); margin-top: 0.5rem; line-height: 1.5;">
+    <strong>Bản dịch:</strong> "Việc bán đi không tạo ra khoản lỗ; bạn đã có khoản lỗ đó rồi. Nếu bạn nghĩ rằng mình chưa chịu lỗ cho đến khi bán cổ phiếu, bạn đang tự lừa dối chính mình."<br>
+    <strong>Phân tích:</strong> Đánh sập bẫy tư duy nguy hiểm "chưa bán là chưa lỗ". Thị trường phản ánh giá trị tài sản thực tế theo thời gian thực (mark-to-market). Ôm giữ một cổ phiếu giảm 30% giá trị không thay đổi thực tế là sức mua và tài sản ròng của bạn đã bị sụt giảm 30%. Chấp nhận thực tế giúp bạn lấy lại sự khách quan để đưa ra quyết định đúng đắn.
+  </div>
+</div>
+
+<div class="quote-block">
+  <p class="quote-text">"There are no good stocks; they’re all bad … unless they go up in price."</p>
+  <p class="quote-context"><strong>— William J. O'Neil</strong>, quan điểm thực tế và lạnh lùng về bản chất của cổ phiếu. <span class="page-ref">Ch 10 &middot; "Never Lose Your Confidence"</span></p>
+  <div style="font-size: 0.95rem; color: var(--text-secondary); margin-top: 0.5rem; line-height: 1.5;">
+    <strong>Bản dịch:</strong> "Không có cổ phiếu nào là tốt cả; tất cả chúng đều tồi tệ... trừ khi chúng tăng giá."<br>
+    <strong>Phân tích:</strong> Triệt tiêu hoàn toàn sự gắn kết cảm xúc với doanh nghiệp. Một cổ phiếu có thương hiệu nổi tiếng, sản phẩm tuyệt vời nhưng giá liên tục giảm sâu thì vẫn là một tài sản tồi tệ phá hoại tài khoản của bạn. Hãy coi cổ phiếu là những công cụ đầu cơ rủi ro cho đến khi chúng chứng minh giá trị bằng hành động tăng giá thực tế trên đồ thị.
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 10 &amp;middot; MÔ HÌNH TƯ DUY 1</div>
+    <h2>Mô hình 1: Cắt lỗ như việc mua bảo hiểm</h2>
+<div class="mental-model-card">
+  <h4 class="model-name" style="color: var(--accent-purple);">Mô Hình 1: Cắt Lỗ Là Chi Phí Đóng Bảo Hiểm Phòng Ngừa Thảm Họa (The Insurance Metaphor)</h4>
+  <div class="model-principle">
+    <strong>Nguyên lý cốt lõi:</strong> Hãy xem việc cắt các khoản lỗ nhỏ (5%-8%) giống như việc bạn đóng phí bảo hiểm định kỳ cho xe hơi hoặc bảo hiểm hỏa hoạn cho ngôi nhà của mình. Bạn không đóng phí vì mong muốn nhà mình bị cháy; bạn đóng phí để bảo vệ mình khỏi rủi ro bị quét sạch toàn bộ tài sản trước những tai họa bất ngờ.
+  </div>
+  
+  <div class="model-application" style="margin-top: 1rem;">
+    <strong>Cơ chế hoạt động của bảo hiểm cắt lỗ:</strong>
+    <ul>
+      <li><strong>Chi phí kinh doanh thông thường (Cost of Doing Business):</strong> Trong bất kỳ hoạt động kinh doanh nào cũng có chi phí vận hành (thuê mặt bằng, điện nước). Trong đầu tư, các khoản lỗ nhỏ 5%-8% chính là chi phí vận hành bắt buộc để đổi lấy cơ hội tìm kiếm các siêu cổ phiếu tăng trưởng từ 50% đến hơn 100%.</li>
+      <li><strong>Giải quyết ức chế tâm lý "bán xong cổ phiếu tăng lại":</strong> Rất nhiều nhà đầu tư cảm thấy tức giận khi vừa cắt lỗ 7% thì cổ phiếu lập tức tăng mạnh trở lại. Điều này dẫn đến tâm lý bảo thủ không cắt lỗ ở thương vụ tiếp theo. Đây là sai lầm chết người.</li>
+      <li><strong>Phép so sánh thực tế:</strong> Nếu bạn mua bảo hiểm hỏa hoạn năm nay và ngôi nhà của bạn không bị cháy, bạn có cảm thấy tức giận vì đã lãng phí tiền bảo hiểm hay không? Chắc chắn là không. Bạn vui mừng vì ngôi nhà an toàn. Cắt lỗ cũng vậy – đó là việc bảo vệ tài khoản "vừa mới đề phòng" rủi ro sập sâu. <span class="page-ref">Ch 10 &middot; "Cutting Losses Is Like Buying an Insurance Policy"</span></li>
+    </ul>
+  </div>
+
+  <div class="model-application" style="margin-top: 1rem;">
+    <strong>Quy tắc ứng xử cho nhà đầu tư:</strong>
+    <ol>
+      <li>Chấp nhận cắt lỗ cơ học một cách vui vẻ và nhanh chóng. Coi đó là hành động thành công trong việc thực thi quy tắc bảo vệ vốn.</li>
+      <li>Tuyệt đối không hối hận hay tự trách móc bản thân khi cổ phiếu phục hồi sau khi bán. Hãy nhớ rằng mục tiêu tối cao của bạn là sống sót dài hạn.</li>
+    </ol>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 10 &amp;middot; MÔ HÌNH TƯ DUY 2</div>
+    <h2>Mô hình 2: Thiên kiến giá mua và nghệ thuật Nhổ cỏ dại</h2>
+<div class="mental-model-card">
+  <h4 class="model-name" style="color: var(--accent-purple);">Mô Hình 2: Thiên Kiến Giá Mua & Quy Tắc "Nhổ Cỏ Dại, Trồng Hoa Hồng"</h4>
+  <div class="model-principle">
+    <strong>Nguyên lý cốt lõi:</strong> Hơn 95% nhà đầu tư cá nhân bị chi phối bởi "Thiên kiến giá mua" (Price-Paid Bias) – đưa ra quyết định nắm giữ hoặc bán chỉ dựa trên mức giá vốn họ đã mua. Việc này dẫn đến hành vi sai lầm kinh điển: vội vàng bán đi những cổ phiếu đang tăng tốt để giữ an toàn (nhổ hoa hồng) và cố chấp giữ lại các cổ phiếu đang giảm sâu để chờ hòa vốn (nuôi cỏ dại).
+  </div>
+  
+  <div class="model-application" style="margin-top: 1rem;">
+    <strong>Sự thật tàn nhẫn về thị trường:</strong>
+    <ul>
+      <li><strong>Thị trường không có cảm xúc:</strong> Cổ phiếu không biết bạn là ai, không biết bạn đã mua nó ở giá nào và hoàn toàn không quan tâm đến việc bạn hy vọng hòa vốn ra sao. Giá của nó chỉ di chuyển theo quy luật cung và cầu thực tế tại thời điểm hiện tại. <span class="page-ref">Ch 10 &middot; "When Does a Loss Become a Loss?"</span></li>
+      <li><strong>Ẩn dụ khu vườn danh mục:</strong> Một danh mục đầu tư giống như một khu vườn hoa. Nếu bạn liên tục cắt đi những bông hoa hồng đang nở rực rỡ nhất (sell winners) để lấy tiền trang trải và tiếp tục chăm sóc, tưới nước cho đống cỏ dại héo úa (keep losers), khu vườn của bạn sẽ sớm muộn chỉ còn lại toàn cỏ dại chết chóc.</li>
+    </ul>
+  </div>
+
+  <div class="model-application" style="margin-top: 1rem;">
+    <strong>Cách loại bỏ thiên kiến giá mua để quản lý danh mục:</strong>
+    <ol>
+      <li><strong>Đánh giá hiệu suất tương đối:</strong> Định kỳ hàng tháng/hàng quý, hãy lập danh sách sắp xếp các cổ phiếu trong danh mục theo tỷ lệ hiệu suất sinh lời từ cao xuống thấp (không quan tâm giá vốn).</li>
+      <li><strong>Nhổ cỏ dại trước tiên:</strong> Kiên quyết bán đi 1-2 cổ phiếu nằm ở đáy bảng xếp hạng hiệu suất để giải phóng dòng tiền.</li>
+      <li><strong>Sử dụng câu hỏi giả định "Quyền mua mới":</strong> Hãy tự hỏi bản thân: <em>"Nếu hôm nay tôi có lượng tiền mặt tương đương giá trị hiện tại của cổ phiếu đang lỗ này, tôi có sẵn sàng giải ngân mua mới nó ở giá này không?"</em> Nếu câu trả lời là không, tại sao bạn vẫn tiếp tục ôm giữ nó? Bán nó đi ngay lập tức. <span class="page-ref">Ch 10 &middot; "When Does a Loss Become a Loss?"</span></li>
+    </ol>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 10 &amp;middot; MÔ HÌNH TƯ DUY 3</div>
+    <h2>Mô hình 3: Nhà đầu cơ vs Nhà đầu tư - Định nghĩa thực tế</h2>
+<div class="mental-model-card">
+  <h4 class="model-name" style="color: var(--accent-purple);">Mô Hình 3: Định Nghĩa Thực Chất Về "Nhà Đầu Cơ" vs "Nhà Đầu Tư"</h4>
+  <div class="model-principle">
+    <strong>Nguyên lý cốt lõi:</strong> Ngôn ngữ truyền thông thông thường luôn ca ngợi "Nhà đầu tư" (Investor) là thông thái, an toàn và chê bai "Nhà đầu cơ" (Speculator) là cờ bạc, rủi ro. Tuy nhiên, các huyền thoại đầu cơ vĩ đại như Bernard Baruch và Jesse Livermore đã vạch trần định kiến sai lầm này bằng những định nghĩa thực chiến vô cùng sâu sắc.
+  </div>
+  
+  <div class="split-layout" style="margin-top: 1rem;">
+    <div class="split-left" style="border-right: 1px solid var(--border); padding-right: 1.5rem;">
+      <h5 style="color: var(--accent-emerald); margin-top: 0;">Nhà Đầu Cơ Thực Thụ (Speculator)</h5>
+      <p style="font-size: 0.9rem; line-height: 1.5;">
+        &bull; <strong>Định nghĩa của Bernard Baruch:</strong> Từ gốc Latin <em>"speculari"</em> có nghĩa là **quan sát và do thám (to spy and observe)**.
+        <br>&bull; <strong>Bản chất:</strong> Nhà đầu cơ là người chịu khó quan sát tỉ mỉ hành vi thực tế của thị trường (giá, khối lượng, dòng tiền) và chủ động hành động trước khi tương lai xảy ra. Đây chính là tinh thần chủ động, thực chứng của CAN SLIM. <span class="page-ref">Ch 10 &middot; "Are You a Speculator or an Investor?"</span>
+      </p>
+    </div>
+
+    <div class="split-right" style="padding-left: 1.5rem;">
+      <h5 style="color: var(--accent-red); margin-top: 0;">Nhà Đầu Tư Mù Quáng (Investor)</h5>
+      <p style="font-size: 0.9rem; line-height: 1.5;">
+        &bull; <strong>Định nghĩa của Jesse Livermore:</strong> <em>"Nhà đầu tư mới chính là những kẻ đánh bạc lớn nhất. Họ đưa ra một vụ đặt cược, ôm chặt lấy nó và khi thương vụ đó đi chệch hướng, họ mất sạch tất cả."</em>
+        <br>&bull; <strong>Bản chất:</strong> Việc tự gắn mác "nhà đầu tư dài hạn" thực chất chỉ là một chiếc mặt nạ tâm lý để trốn tránh nỗi sợ cắt lỗ và thừa nhận sai lầm. Nắm giữ thụ động bất chấp giá rơi sâu chính là hành vi cờ bạc liều lĩnh nhất. <span class="page-ref">Ch 10 &middot; "Are You a Speculator or an Investor?"</span>
+      </p>
+    </div>
+  </div>
+
+  <div class="callout" style="margin-top: 1rem;">
+    <div class="callout-icon">🧠</div>
+    <div class="callout-content">
+      <strong>Bài học đắt giá:</strong> Hãy từ bỏ cái tôi học thuật. Trên thị trường chứng khoán, không có chỗ cho khái niệm "đầu tư dài hạn" một khi vị thế của bạn đã rơi vào vùng thua lỗ sâu và vi phạm điểm cắt lỗ tối đa 8%. Hãy trở thành một nhà quan sát thực tế (speculator) và hành động kỷ luật để bảo toàn vốn.
+    </div>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 10 &amp;middot; SỐ LIỆU &amp; THỐNG KÊ</div>
+    <h2>Quy tắc dừng lỗ của Loeb, Astrop và O&#x27;Neil</h2>
+<div class="metric-grid">
+  <div class="metric-card">
+    <div class="metric-value" style="color: var(--accent-red);">7% - 8%</div>
+    <div class="metric-label">Giới hạn cắt lỗ tuyệt đối (William O'Neil)</div>
+    <div class="metric-detail">Mức dừng lỗ cơ học tối đa đối với vốn ban đầu cho mỗi vị thế mua. O'Neil yêu cầu mức thua lỗ trung bình của toàn bộ tài khoản phải được giữ ở mức thấp hơn, khoảng <strong>5% đến 6%</strong> nhờ việc bán chủ động sớm. <span class="page-ref">Ch 10 &middot; "Always, without Exception, Limit Losses..."</span></div>
+  </div>
+
+  <div class="metric-card">
+    <div class="metric-value" style="color: var(--accent-red);">10%</div>
+    <div class="metric-label">Quy tắc cổ điển (Gerald Loeb)</div>
+    <div class="metric-detail">Được đề xuất trong cuốn sách kinh điển <em>"The Battle for Investment Survival"</em>. Tuy nhiên, khi được hỏi, Loeb chia sẻ ông luôn cố gắng hành động để thoát vị thế **trước khi** khoản lỗ chạm mức 10%. <span class="page-ref">Ch 10 &middot; "Always, without Exception, Limit Losses..."</span></div>
+  </div>
+
+  <div class="metric-card">
+    <div class="metric-value" style="color: var(--accent-cyan);">5% & 10%</div>
+    <div class="metric-label">Chiến lược chia đôi vị thế (Bill Astrop)</div>
+    <div class="metric-detail">Bán hạ tỷ trọng **50% vị thế** ngay khi cổ phiếu sụt giảm 5% so với giá vốn, và bán sạch **50% còn lại** khi giá giảm chạm mốc 10%. Cách làm này giúp giảm thiểu rủi ro sớm và đưa mức lỗ trung bình về 7.5%. <span class="page-ref">Ch 10 &middot; "Always, without Exception, Limit Losses..."</span></div>
+  </div>
+
+  <div class="metric-card">
+    <div class="metric-value" style="color: var(--accent-red);">3% - 4%</div>
+    <div class="metric-label">Giới hạn trong thị trường gấu (Bear Market Limit)</div>
+    <div class="metric-detail">Nếu bạn bắt buộc phải giao dịch trong điều kiện thị trường chung suy yếu hoặc đang điều chỉnh mạnh, hãy thắt chặt mức cắt lỗ tối đa xuống còn **3% đến 4%** vì đà phục hồi của cổ phiếu sẽ rất yếu và thiếu bền vững. <span class="page-ref">Ch 10 &middot; "Always, without Exception, Limit Losses..."</span></div>
+  </div>
+</div>
+
+<div class="callout" style="margin-top: 1rem;">
+  <div class="callout-icon">📊</div>
+  <div class="callout-content">
+    <strong>Sức mạnh của việc cắt lỗ dưới 8%:</strong> Nếu bạn kết hợp điểm mua bứt phá chuẩn xác tại điểm pivot (Chương 2), cổ phiếu rất hiếm khi giảm quá 8% so với giá pivot. Do đó, một khi giá giảm chạm mốc 8% dưới giá mua, đồ thị đang thông báo rõ ràng rằng: Hoặc là bạn đã chọn sai thời điểm mua, hoặc là toàn bộ thị trường chung đang có biến cố xấu. Cắt lỗ giúp bạn loại bỏ sai sót ngay lập tức.
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 10 &amp;middot; SAI LẦM KINH ĐIỂN</div>
+    <h2>Cạm bẫy từ việc mua trung bình giá xuống</h2>
+<div class="mental-model-card">
+  <h4 class="model-name" style="color: var(--accent-red);">Cạm Bẫy Chết Người: Mua Trung Bình Giá Xuống (The Fallacy of Averaging Down)</h4>
+  <div class="model-principle" style="border-left: 4px solid var(--accent-red); padding-left: 15px;">
+    <em>"Trung bình giá xuống là hành động nghiệp dư và thiếu chuyên nghiệp nhất mà một nhà môi giới có thể khuyên khách hàng của mình làm. Nếu môi giới khuyên tôi làm vậy, tôi sẽ lập tức đóng tài khoản và đi tìm một môi giới thông minh hơn."</em>
+    <br><strong style="color: var(--accent-red);">— William J. O'Neil</strong>
+  </div>
+
+  <div class="model-application" style="margin-top: 1.5rem;">
+    <strong>Tại sao trung bình giá xuống lại là con đường ngắn nhất dẫn đến phá sản?</strong>
+    <ul>
+      <li><strong>Ném tiền tốt vào chỗ tiền xấu (Throwing good money after bad):</strong> Khi cổ phiếu giảm giá dưới giá mua, thị trường đang phát đi tín hiệu rõ ràng rằng quyết định ban đầu của bạn đã sai. Việc mua thêm chỉ vì giá "rẻ hơn" là hành động cố chấp gia tăng quy mô đặt cược cho một vị thế sai lầm.</li>
+      <li><strong>Khuếch đại thua lỗ cấp số nhân:</strong> Nếu cổ phiếu tiếp tục rơi tự do (như các bài học Enron, WorldCom, Lehman Brothers), quy mô vị thế khổng lồ do gom mua trung bình giá xuống sẽ nhanh chóng nghiền nát toàn bộ tài sản của bạn chỉ trong vài tuần.</li>
+      <li><strong>Chôn chân dòng vốn thông minh:</strong> Thay vì rút tiền ra để giải ngân vào các siêu cổ phiếu dẫn đầu đang tăng mạnh (flowers), bạn lại tự tay giam cầm toàn bộ nguồn lực tài chính của mình vào một doanh nghiệp đang thoái trào (weeds).</li>
+    </ul>
+  </div>
+
+  <div class="callout" style="margin-top: 1rem; border-color: var(--accent-red);">
+    <div class="callout-icon">⚠️</div>
+    <div class="callout-content">
+      <strong>Quy tắc ứng xử khi nhận Margin Call:</strong>
+      <br>Khi tài khoản của bạn bị gọi bổ sung ký quỹ (Margin Call) do cổ phiếu giảm sâu, thị trường và nhân viên quản lý rủi ro đang cảnh báo bạn đang đứng trước vực thẳm. **Tuyệt đối không bao giờ nộp thêm tiền để gồng lỗ**. Hành động đúng đắn duy nhất là chủ động bán hạ tỷ trọng cổ phiếu để đưa tài khoản về vùng an toàn và nhìn nhận sai lầm một cách khách quan. <span class="page-ref">Ch 10 &middot; "Should You Averaging Down in Price?"</span>
+    </div>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 10 &amp;middot; CÂU CHUYỆN GÀ TÂY</div>
+    <h2>Bài học về lòng tham, sự tiếc nuối và neo đỉnh giá</h2>
+<div class="mental-model-card">
+  <h4 class="model-name" style="color: var(--accent-purple);">Câu Chuyện "Bẫy Gà Tây" – Bài Học Về Tâm Lý Neo Đỉnh & Hy Vọng Huyễn Hoặc</h4>
+  <div class="model-principle" style="font-size: 0.95rem; line-height: 1.5; border-left: 4px solid var(--accent-cyan); padding-left: 15px;">
+    <strong>Tóm tắt câu chuyện (Fred C. Kelly):</strong> Một người đàn ông đặt bẫy gà tây bằng một chiếc hộp mở cửa bằng dây giật. 
+    <br>&bull; Lần đầu có **12 con gà** vào hộp. Một con bước ra còn 11. Ông tiếc nuối và đợi con thứ 12 quay lại để giật dây.
+    <br>&bull; Trong lúc đợi, thêm 2 con bước ra còn 9. Ông nghĩ: <em>"Chỉ cần 1 con quay lại để được 10 con là tôi sẽ giật dây."</em>
+    <br>&bull; Gà cứ tiếp tục bước ra ngoài. Khi còn 3 con, ông không muốn về nhà với ít hơn 8 con. Cuối cùng, con gà duy nhất còn lại cũng bước ra ngoài, và ông lão ra về tay trắng. <span class="page-ref">Ch 10 &middot; "The Turkey Story"</span>
+  </div>
+
+  <div class="split-layout" style="margin-top: 1rem;">
+    <div class="split-left" style="border-right: 1px solid var(--border); padding-right: 1.5rem;">
+      <h5 style="color: var(--accent-red); margin-top: 0;">Sự Nghịch Đảo Cảm Xúc (Hope vs Fear)</h5>
+      <p style="font-size: 0.9rem; line-height: 1.5;">
+        &bull; <strong>Sai lầm lớn nhất:</strong> Chúng ta thường **Hy vọng khi đáng lẽ phải Sợ hãi**, và **Sợ hãi khi đáng lẽ phải Hy vọng**.
+        <br>&bull; <strong>Khi cổ phiếu giảm (Lỗ):</strong> Lẽ ra phải sợ hãi khoản lỗ sẽ lớn hơn và bán ngay, nhà đầu tư lại ôm hy vọng huyễn hoặc rằng giá sẽ hồi phục về điểm hòa vốn hoặc đỉnh cũ.
+        <br>&bull; <strong>Khi cổ phiếu tăng (Lãi):</strong> Lẽ ra phải nuôi hy vọng cổ phiếu tăng tiếp để ăn trọn sóng, nhà đầu tư lại sợ hãi giá sẽ giảm mất phần lãi nhỏ và vội vàng bán chốt lời quá sớm.
+      </p>
+    </div>
+
+    <div class="split-right" style="padding-left: 1.5rem;">
+      <h5 style="color: var(--accent-red); margin-top: 0;">Bẫy Neo Giá Đỉnh (Peak Anchoring)</h5>
+      <p style="font-size: 0.9rem; line-height: 1.5;">
+        &bull; Giống như người bẫy gà tây tiếc nuối con số 12, nhà đầu tư thường tiếc nuối mức giá đỉnh cao nhất mà tài khoản từng đạt được.
+        <br>&bull; Khi giá cổ phiếu giảm từ $100 về $80, họ từ chối bán ở giá $80 vì muốn đợi nó hồi về $100. Giá tiếp tục giảm về $60, họ lại muốn đợi về $80. Cuối cùng, họ mất sạch khi cổ phiếu rơi về vùng giá trà đá.
+      </p>
+    </div>
+  </div>
+
+  <div class="callout" style="margin-top: 1rem; border-color: var(--accent-red);">
+    <div class="callout-icon">⚠️</div>
+    <div class="callout-content">
+      <strong>Bài học hành động:</strong> Hãy ngừng đếm số gà tây! Hãy học cách giật dây dứt khoát khi thị trường bộc lộ tín hiệu xấu. Đừng để lòng tham ngắn hạn và sự tiếc nuối đỉnh cũ khóa chặt khả năng hành động của bạn.
+    </div>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 10 &amp;middot; ẨN DỤ BÁN LẺ</div>
+    <h2>Bài học quản trị kho hàng của chủ shop thời trang</h2>
+<div class="mental-model-card">
+  <h4 class="model-name" style="color: var(--accent-purple);">Câu Chuyện "Chiếc Váy Màu Đỏ" – Tư Duy Thương Nhân Trong Quản Trị Danh Mục</h4>
+  <div class="model-principle">
+    <strong>Nguyên lý cốt lõi:</strong> Hãy coi danh mục đầu tư của bạn giống như kho hàng của một cửa hàng thời trang. Một nhà kinh doanh quần áo thông minh luôn quản lý hàng tồn kho dựa trên thực tế sức mua của khách hàng (cung - cầu), chứ không bao giờ dựa trên sở thích cá nhân hay giá vốn nhập hàng.
+  </div>
+
+  <div class="split-layout" style="margin-top: 1rem;">
+    <div class="split-left" style="border-right: 1px solid var(--border); padding-right: 1.5rem;">
+      <h5 style="color: var(--accent-emerald); margin-top: 0;">1. Nhận diện "Váy Đỏ" & "Váy Vàng"</h5>
+      <p style="font-size: 0.9rem; line-height: 1.5;">
+        &bull; Bạn nhập về ba loại váy: **Vàng, Xanh, Đỏ**.
+        <br>&bull; **Váy Đỏ (Siêu cổ phiếu - Leaders):** Bán chạy cháy hàng ngay lập tức vì nhu cầu cực kỳ cao.
+        <br>&bull; **Váy Xanh (Cổ phiếu trung bình):** Bán được một nửa.
+        <br>&bull; **Váy Vàng (Cổ phiếu yếu - Laggards):** Hoàn toàn không có khách mua, tồn kho chất đống (những chú chó già - "old dogs"). <span class="page-ref">Ch 10 &middot; "The Red Dress Story"</span>
+      </p>
+    </div>
+
+    <div class="split-right" style="padding-left: 1.5rem;">
+      <h5 style="color: var(--accent-emerald); margin-top: 0;">2. Quyết định của Chủ cửa hàng thông minh</h5>
+      <p style="font-size: 0.9rem; line-height: 1.5;">
+        &bull; Chủ cửa hàng không bao giờ nói: <em>"Váy vàng là màu tôi thích nhất, và giá nhập của nó rất cao nên tôi sẽ giữ lại kho chờ bán đúng giá vốn, hoặc tôi sẽ mua thêm váy vàng vì nhà cung cấp đang giảm giá."</em>
+        <br>&bull; Họ sẽ tổ chức chương trình **Mark down (Giảm giá cắt lỗ)**: giảm giá váy vàng 10%, rồi 20% để đẩy sạch đống hàng tồn thu tiền mặt về. Họ dùng số tiền đó để tái nhập thêm váy đỏ đang có nhu cầu cực lớn.
+      </p>
+    </div>
+  </div>
+
+  <div class="callout" style="margin-top: 1rem; border-color: var(--accent-red);">
+    <div class="callout-icon">⚠️</div>
+    <div class="callout-content">
+      <strong>Tại sao nhà đầu tư cá nhân làm ngược lại tư duy thương nhân?</strong>
+      <br>&bull; **Hành vi sai lầm:** Bán phăng những "chiếc váy đỏ" đang tăng giá mạnh để chốt khoản lãi nhỏ, và giữ chặt những "chiếc váy vàng" đang giảm sâu trong danh mục, thậm chí bơm thêm tiền mua trung bình giá xuống.
+      <br>&bull; **Hệ quả:** Danh mục của bạn sau một thời gian sẽ trống trơn các cổ phiếu dẫn đầu khỏe mạnh, và chứa đầy các cổ phiếu trì trệ suy thoái đang tiếp tục mất giá. Hãy dứt khoát: **"Bán váy vàng, nhập thêm váy đỏ!"**
+    </div>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 10 &amp;middot; BẪY CỔ TỨC</div>
+    <h2>Sự thật về cổ tức và ngộ nhận an toàn của Blue-chips</h2>
+<div class="mental-model-card">
+  <h4 class="model-name" style="color: var(--accent-red);">Lầm Tưởng Về Cổ Tức & Cạm Bẫy Cổ Phiếu "Blue-Chip"</h4>
+  <div class="model-principle">
+    <strong>Nguyên lý cốt lõi:</strong> Rất nhiều nhà đầu tư tự an ủi mình khi cổ phiếu giảm sâu bằng cách tự nhủ: <em>"Tôi không lo lắng vì đây là cổ phiếu tốt hàng đầu ngành (Blue-chip) và doanh nghiệp vẫn chi trả cổ tức đều đặn hàng năm."</em> Đây là lối tư duy phòng vệ sai lệch phá hủy tài khoản một cách thầm lặng.
+  </div>
+
+  <div class="split-layout" style="margin-top: 1rem;">
+    <div class="split-left" style="border-right: 1px solid var(--border); padding-right: 1.5rem;">
+      <h5 style="color: var(--accent-red); margin-top: 0;">1. Phép toán cổ tức tàn nhẫn</h5>
+      <p style="font-size: 0.9rem; line-height: 1.5;">
+        &bull; <strong>Thực tế số liệu:</strong> Nếu cổ phiếu của bạn sụt giảm <strong>-35%</strong> giá trị vốn, việc bạn nhận được mức cổ tức <strong>+4%/năm</strong> chỉ mang lại một kết quả **thua lỗ ròng 31%** trên tài sản của bạn.
+        <br>&bull; Cổ tức không bao giờ có thể bù đắp được tốc độ bào mòn tài sản cực nhanh của một cổ phiếu đang bước vào xu hướng giảm giá dài hạn. <span class="page-ref">Ch 10 &middot; "I’m Not Worried; I’m a Long-Term Investor..."</span>
+      </p>
+    </div>
+
+    <div class="split-right" style="padding-left: 1.5rem;">
+      <h5 style="color: var(--accent-red); margin-top: 0;">2. Sự sụp đổ của "bò thiêng" Blue-chips</h5>
+      <p style="font-size: 0.9rem; line-height: 1.5;">
+        &bull; Không có doanh nghiệp nào là invincible (bất khả xâm phạm). Tượng đài công nghiệp xe hơi Mỹ General Motors (GM) từng có giá <strong>$94/cổ phiếu</strong>, nhưng đã sụt giảm về chỉ còn <strong>$2.00</strong> và phải tuyên bố phá sản tái cấu trúc năm 2009.
+        <br>&bull; Đường sức mạnh giá tương đối (RS Line) của GM đã liên tục cắm đầu đi xuống suốt 14 năm (1994 - 2008), cảnh báo dòng tiền lớn đã rút đi từ lâu nhưng đám đông cá nhân vẫn ôm chặt vì mác "Blue-chip". <span class="page-ref">Ch 10 &middot; "All Common Stocks Are Speculative and Risky"</span>
+      </p>
+    </div>
+  </div>
+
+  <div class="callout" style="margin-top: 1rem; border-color: var(--accent-red);">
+    <div class="callout-icon">⚠️</div>
+    <div class="callout-content">
+      <strong>Bài học định giá của thị trường:</strong> Khái niệm cổ phiếu "tốt" chỉ là ý kiến chủ quan cá nhân của bạn hoặc của các chuyên gia phân tích. Đối với thị trường chứng khoán, chỉ có một thước đo duy nhất cho cổ phiếu tốt: **Nó phải tăng giá**. Mọi cổ phiếu đang làm bạn mất tiền đều là cổ phiếu tồi tệ, bất kể tên tuổi của nó hoành tráng đến đâu.
+    </div>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 10 &amp;middot; ĐÁNH GIÁ CHỨNG CỨ</div>
+    <h2>Tính thực chứng của dừng lỗ 8% &amp; Bất lợi từ việc gồng lỗ</h2>
+<div class="evidence-card" style="margin-bottom: 1.5rem; border-left: 4px solid var(--accent-cyan);">
+  <div class="evidence-header">
+    <span class="claim-text"><strong>Quy tắc giới hạn cắt lỗ ở mức tối đa 7% - 8% bảo vệ tài khoản hiệu quả</strong></span>
+    <span class="quality-score">⭐⭐⭐⭐★ (4.9/5)</span>
+  </div>
+  <div class="evidence-type">📊 Thực chứng Thực địa & Phân tích Quản trị Rủi ro Danh mục</div>
+  <div class="evidence-body">
+    <ul>
+      <li><strong>Điểm mạnh:</strong> Chân lý toán học không thể chối cãi. Phép toán sụt giảm (Drawdown Math) chứng minh bảo vệ vốn là cách duy nhất để sống sót dài hạn. Mọi đợt sụt giảm tàn khốc (-50% đến -90%) trong lịch sử đều có thể tránh được hoàn toàn nếu tuân thủ giới hạn 8%.</li>
+      <li><strong>Điểm yếu:</strong> Nếu nhà đầu tư chọn điểm mua sai (mua đuổi quá cao >5% từ điểm pivot), quy tắc 8% sẽ dễ dàng bị kích hoạt bởi các nhịp điều chỉnh tự nhiên, lành mạnh của cổ phiếu (shakeouts), dẫn đến việc bị quét cắt lỗ liên tục và mất hàng trước sóng tăng lớn. Điểm mua chuẩn (Ch 2) là điều kiện bắt buộc đi kèm.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="evidence-card" style="margin-bottom: 1.5rem; border-left: 4px solid var(--accent-cyan);">
+  <div class="evidence-header">
+    <span class="claim-text"><strong>Mua trung bình giá xuống (Averaging Down) là hành động nghiệp dư và rủi ro cực cao</strong></span>
+    <span class="quality-score">⭐⭐⭐⭐★ (4.9/5)</span>
+  </div>
+  <div class="evidence-type">📈 Thống kê Hành vi giao dịch & Nghiên cứu Bẫy Giá trị (Value Traps)</div>
+  <div class="evidence-body">
+    <ul>
+      <li><strong>Điểm mạnh:</strong> Minh chứng bằng hàng ngàn ví dụ thực tế lịch sử của các doanh nghiệp phá sản hoặc thoái trào vĩnh viễn (Enron, WorldCom, Kodak, Lehman Brothers). Việc nhồi thêm tiền vào một vị thế đang thua lỗ là hành vi khuếch đại rủi ro phi lý trí.</li>
+      <li><strong>Điểm yếu:</strong> Không có điểm yếu. Đây là quy tắc bất di bất dịch của mọi nhà giao dịch chuyên nghiệp và các nhà quản trị rủi ro danh mục hàng đầu thế giới.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="callout" style="margin-top: 1rem; border-color: var(--accent-purple);">
+  <div class="callout-icon">🧠</div>
+  <div class="callout-content">
+    <strong>Cập nhật xu hướng dòng tiền ETF 2026 & Phân tích tâm lý Trading Burnout:</strong>
+    <br>&bull; <strong>Thực tế hiện đại 2026:</strong> Sự bùng nổ của dòng tiền thụ động ETF khiến một số cổ phiếu Blue-chip trong rổ chỉ số chính nhận được lực cầu mua ròng tự động liên tục bất kể kết quả kinh doanh ngắn hạn, giúp chúng nhanh chóng phục hồi sau các nhịp giảm ngắn. Tuy nhiên, đối với các cổ phiếu tăng trưởng vừa và nhỏ ngoài rổ chỉ số, không có dòng tiền này nâng đỡ. Do đó, việc cắt lỗ 7%-8% cơ học vẫn là quy tắc sinh tử bắt buộc để tránh rủi ro mất hoàn toàn thanh khoản.
+    <br>&bull; <strong>Trading Burnout & Kiệt sức tinh thần:</strong> Việc liên tục bị quét cắt lỗ trong các giai đoạn thị trường đi ngang giằng co (whipsaw/choppy market) dễ gây ra trạng thái ức chế tinh thần cực hạn và nghi ngờ phương pháp. Nhà đầu tư sẽ tự hỏi: <em>"Tại sao mình vừa cắt lỗ xong giá lại tăng?"</em> và ở thương vụ tiếp theo họ quyết định phá bỏ kỷ luật, ôm gồng lỗ – đó chính là lúc thị trường gấu thực sự ập đến xé nát tài khoản. Để phòng tránh Trading Burnout, khi tài khoản của bạn bị quét cắt lỗ liên tiếp quá 3 lần, hãy đóng bảng điện và rút hoàn toàn về đứng ngoài quan sát từ 1 đến 2 tuần để hồi phục vốn tinh thần.
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 10 &amp;middot; GÓC NHÌN ĐỐI LẬP</div>
+    <h2>Bảo tồn vốn chủ động vs Tích sản dài hạn giá rẻ</h2>
+<div class="split-layout">
+  <div class="split-left" style="border-right: 1px solid var(--border); padding-right: 1.5rem;">
+    <h4 style="color: var(--accent-emerald); margin-top: 0;">Trường phái Cắt Lỗ Chủ Động (CAN SLIM)</h4>
+    <p><strong>Triết lý cốt lõi:</strong> Bảo tồn vốn chủ động (Capital Preservation). Luôn giới hạn thua lỗ tối đa ở mức 7%-8% cho mỗi vị thế giải ngân ban đầu. Thị trường luôn đúng, giá giảm dưới điểm mua là bằng chứng cho thấy quyết định sai lầm.</p>
+    <p><strong>Ưu điểm:</strong> Triệt tiêu hoàn toàn rủi ro cháy tài khoản. Giải phóng dòng vốn nhanh chóng để luân chuyển sang các siêu cổ phiếu dẫn đầu khác khỏe mạnh hơn.</p>
+    <p><strong>Hạn chế:</strong> Chịu rủi ro bị quét dừng lỗ oan khi gặp nhịp rũ bỏ kỹ thuật ngắn hạn (shakeout) trước khi cổ phiếu bứt phá tăng tốc.</p>
+  </div>
+
+  <div class="split-right" style="padding-left: 1.5rem;">
+    <h4 style="color: var(--accent-red); margin-top: 0;">Trường phái Giá Trị & Trung Bình Giá (Value Investing)</h4>
+    <p><strong>Triết lý cốt lõi:</strong> Biên an toàn vĩ đại (Margin of Safety). Khi giá cổ phiếu giảm sâu, doanh nghiệp càng trở nên rẻ hơn và an toàn hơn để mua gom tích sản dài hạn. Biến động ngắn hạn của thị trường là cơ hội mua giá hời.</p>
+    <p><strong>Ưu điểm:</strong> Phù hợp với dòng vốn khổng lồ của các quỹ đầu tư lớn không thể giải ngân nhanh, không yêu cầu kỹ năng chọn điểm mua pivot kỹ thuật.</p>
+    <p><strong>Hạn chế:</strong> Dễ rơi vào bẫy giá trị (Value Traps) của các doanh nghiệp thoái trào vĩnh viễn. Chôn vốn nhiều năm và gánh chịu mức sụt giảm tài sản cực lớn trước khi phục hồi.</p>
+  </div>
+</div>
+
+<div class="callout" style="margin-top: 1.5rem; background-color: rgba(139, 124, 255, 0.05); border-color: var(--accent-purple);">
+  <div class="callout-icon">⚖️</div>
+  <div class="callout-content">
+    <strong>Giải pháp dung hòa cho nhà đầu tư cá nhân năng động:</strong>
+    <br>&bull; <strong>Dành cho nhà đầu tư CAN SLIM:</strong> Hãy kết hợp bộ lọc cơ bản (C-A-N) của cổ phiếu giá trị tốt với điểm mua breakout pivot kỹ thuật (Ch 2). Điều này đảm bảo bạn mua được doanh nghiệp có nền tảng xuất sắc đúng vào thời điểm nó bắt đầu tăng giá, giảm thiểu thời gian chôn vốn và khống chế rủi ro dừng lỗ tối đa dưới 8%.
+    <br>&bull; <strong>Chìa khóa:</strong> Không bao giờ gồng lỗ dài hạn hay trung bình giá xuống cho bất kỳ vị thế nào. Hãy để việc cắt lỗ 8% bảo vệ bạn khỏi các rủi ro vĩ mô không lường trước.
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 10 &amp;middot; RỦI RO &amp; PHẢN BIỆN</div>
+    <h2>Rủi ro bị quét dừng lỗ oan và cái chết từ ngàn nhát cắt</h2>
+<div class="bullet-grid">
+  <div class="bullet-card" style="border-left: 3px solid var(--accent-red);">
+    <h4>1. Rủi ro bị quét dừng lỗ oan (Whipsaw / Shakeouts)</h4>
+    <p>Trong các phiên giao dịch biến động mạnh, giá cổ phiếu có thể tạm thời giảm chạm mốc 8% dưới điểm pivot để rũ bỏ các nhà giao dịch nhỏ lẻ đeo bám, sau đó lập tức rút chân và bùng nổ tăng mạnh vượt đỉnh. Nhà đầu tư sẽ bị mất hàng và gánh chịu khoản thua lỗ nhỏ đáng tiếc.</p>
+  </div>
+
+  <div class="bullet-card" style="border-left: 3px solid var(--accent-red);">
+    <h4>2. Cái chết từ hàng ngàn nhát cắt (Death by a Thousand Cuts)</h4>
+    <p>Nếu thị trường chung bước vào giai đoạn đi ngang giằng co (choppy market), việc liên tục mua bứt phá và bị cắt lỗ 7%-8% lặp đi lặp lại nhiều lần sẽ tích lũy thành một khoản thua lỗ khổng lồ, phá hủy vốn liếng và tinh thần của nhà đầu tư tương đương một cú sụp đổ lớn.</p>
+  </div>
+
+  <div class="bullet-card" style="border-left: 3px solid var(--accent-red);">
+    <h4>3. Rủi ro trượt giá không thanh khoản (Gap Downs)</h4>
+    <p>Khi doanh nghiệp đột ngột công bố tin tức thảm họa bất ngờ (gian lận báo cáo, thiên tai, biến cố pháp lý), giá cổ phiếu có thể mở cửa giảm sàn ngay từ đầu phiên (gap down) mà không có bên mua. Lệnh dừng lỗ 8% sẽ không thể khớp, bắt buộc bạn phải bán ở mức giá chiết khấu sâu hơn nhiều.</p>
+  </div>
+
+  <div class="bullet-card" style="border-left: 3px solid var(--accent-red);">
+    <h4>4. Bị săn lệnh dừng lỗ tự động (Stop-loss Hunting)</h4>
+    <p>Việc đặt sẵn lệnh dừng lỗ tự động trên hệ thống sàn giao dịch vô tình làm lộ quân bài của bạn cho các nhà tạo lập thị trường (market makers). Họ có thể thực hiện các nhịp đạp giá sâu chớp nhoáng trong phiên để kích hoạt quét sạch các lệnh dừng lỗ tự động rồi kéo giá lên.</p>
+  </div>
+</div>
+
+<div class="callout" style="margin-top: 1.5rem;">
+  <div class="callout-icon">⚠️</div>
+  <div class="callout-content">
+    <strong>Giải pháp phòng thủ tối ưu:</strong>
+    <br>1. Chỉ đặt lệnh dừng lỗ tinh thần (Mental Stop Loss) và tự thực thi dứt khoát bằng tay thay vì đặt lệnh tự động trên sàn nếu bạn có thời gian theo dõi sát bảng điện, nhằm tránh bị quét săn dừng lỗ (Stop-loss Hunting).
+    <br>2. Khi bị cắt lỗ liên tục quá 3 lần, đó là tín hiệu thị trường đang đi ngang xấu. Hãy dừng hoàn toàn việc mua mới, rút về đứng ngoài giữ tiền mặt để bảo vệ vốn tinh thần.
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 10 &amp;middot; SƠ ĐỒ KHÁI NIỆM</div>
+    <h2>Mối liên kết quy tắc cắt lỗ với hệ thống CAN SLIM</h2>
+<div class="mermaid">
+graph TB
+    A["Chương 2: Mẫu hình biểu đồ (Cơ sở xác định điểm mua Pivot để tối ưu hóa tỷ lệ cắt lỗ)"] --> C["Chương 10: Quy tắc Bán cắt lỗ 7%-8% (Lá chắn bảo vệ tài sản tối cao)"]
+    B["Chương 9: Chữ M - Xu hướng thị trường (Quyết định việc thắt chặt mức cắt lỗ xuống 3%-4% trong Bear Market)"] --> C
+    C --> D["Chương 11: Quy tắc Bán chốt lời (Kết hợp duy trì tỷ lệ Reward/Risk lý tưởng 3-to-1)"]
+    C --> E["Quản trị Danh mục (Giải phóng vốn từ cổ phiếu yếu dồn sang cổ phiếu mạnh - Force feeding)"]
+    
+    style C fill:#8B7CFF,stroke:#2A2D33,color:#F7F7F5
+</div>
+
+<div class="split-layout" style="margin-top: 1rem;">
+  <div class="split-left" style="padding-right: 1rem; border-right: 1px solid var(--border);">
+    <h5 style="color: var(--accent-purple); margin-top: 0;">Mối quan hệ tiên quyết (Prerequisites)</h5>
+    <ul style="font-size: 0.9rem; padding-left: 1rem; margin: 0; line-height: 1.5;">
+      <li><strong>Mẫu hình biểu đồ & Điểm Pivot (Ch 2):</strong> Mua đúng điểm breakout pivot từ nền giá chặt chẽ giúp khống chế rủi ro tốt nhất, vì giá cổ phiếu rất hiếm khi sụt giảm quá 8% so với điểm pivot chuẩn. Việc mua đuổi quá cao (>5% từ pivot) sẽ tăng rủi ro bị kích hoạt cắt lỗ do biến động lắc thông thường.</li>
+      <li><strong>Xu hướng thị trường (Ch 9):</strong> Trong thị trường gấu (Bear market), bắt buộc phải nâng cao phòng thủ bằng cách rút ngắn giới hạn cắt lỗ xuống còn **3% đến 4%**.</li>
+    </ul>
+  </div>
+  
+  <div class="split-right" style="padding-left: 1rem;">
+    <h5 style="color: var(--accent-emerald); margin-top: 0;">Mối quan hệ mở khóa (Future Unlocks)</h5>
+    <ul style="font-size: 0.9rem; padding-left: 1rem; margin: 0; line-height: 1.5;">
+      <li><strong>Quy tắc bán chốt lời (Ch 11):</strong> Sự kết hợp giữa giới hạn cắt lỗ 7%-8% và mục tiêu chốt lời 20%-25% tạo nên tỷ lệ vàng **3-to-1 Reward/Risk**, làm cơ sở cho sự gia tăng tài sản lũy kế bền vững.</li>
+      <li><strong>Quản trị danh mục thông minh:</strong> Giúp giải phóng dòng tiền bị chôn vùi trong những cổ phiếu trì trệ (yellow dresses) để bổ sung sức mạnh cho các siêu cổ phiếu dẫn đầu đang tăng mạnh (red dresses).</li>
+    </ul>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 10 &amp;middot; HƯỚNG DẪN THỰC HÀNH</div>
+    <h2>Lộ trình ứng dụng thực tế dừng lỗ và nhổ cỏ dại</h2>
+<div class="phase-progress">
+  <div class="phase active">Pha 1: Thiết Lập Trước</div>
+  <div class="phase">Pha 2: Thực Thi Cơ Học</div>
+  <div class="phase">Pha 3: Nhổ Cỏ Dại</div>
+  <div class="phase">Pha 4: Quản Trị Rủi Ro</div>
+</div>
+
+<div class="bullet-grid" style="margin-top: 1.5rem;">
+  <div class="bullet-card">
+    <h4>Pha 1: Thiết lập kế hoạch trước khi giải ngân</h4>
+    <ul class="checklist" style="padding-left: 0; list-style: none;">
+      <li><input type="checkbox" checked disabled> <strong>Tính toán mức dừng lỗ:</strong> Xác định giá trị cụ thể của mức giảm 7% và 8% dưới giá pivot định mua. Ghi chép rõ ràng vào nhật ký giao dịch.</li>
+      <li><input type="checkbox" checked disabled> <strong>Đánh giá điều kiện thị trường:</strong> Xác định xem thị trường chung ở trạng thái tăng (cắt lỗ 7%-8%) hay giảm/bear (thắt dừng lỗ chặt hơn về 3%-4%).</li>
+    </ul>
+  </div>
+
+  <div class="bullet-card">
+    <h4>Pha 2: Thực thi cắt lỗ cơ học robot</h4>
+    <ul class="checklist" style="padding-left: 0; list-style: none;">
+      <li><input type="checkbox" disabled> <strong>Bán không do dự:</strong> Thực hiện lệnh bán khớp lệnh thị trường (market order) ngay lập tức khi giá chạm mốc cắt lỗ 8%, tuyệt đối không hy vọng hay chờ đợi phiên đóng cửa.</li>
+      <li><input type="checkbox" disabled> <strong>Bán chủ động sớm:</strong> Nếu hành vi giá của cổ phiếu hoặc thị trường chung bộc lộ phân phối xấu, chủ động bán cắt lỗ sớm ở mức 2%-3% để giảm thiểu thiệt hại trước.</li>
+    </ul>
+  </div>
+
+  <div class="bullet-card">
+    <h4>Pha 3: Rà soát danh mục nhổ cỏ dại định kỳ</h4>
+    <ul class="checklist" style="padding-left: 0; list-style: none;">
+      <li><input type="checkbox" disabled> <strong>Xếp hạng hiệu suất:</strong> Cuối mỗi tuần/mỗi tháng, sắp xếp toàn bộ cổ phiếu theo tỷ lệ sinh lời từ cao xuống thấp (bất kể giá vốn ban đầu).</li>
+      <li><input type="checkbox" disabled> <strong>Bán xả hàng yếu (Yellow Dresses):</strong> Kiên quyết bán đi các cổ phiếu nằm cuối danh sách hiệu suất để bảo toàn vốn, tập trung nguồn lực tái phân bổ cho nhóm dẫn đầu (Red Dresses).</li>
+    </ul>
+  </div>
+
+  <div class="bullet-card">
+    <h4>Pha 4: Quản trị rủi ro margin & cấm gồng lỗ</h4>
+    <ul class="checklist" style="padding-left: 0; list-style: none;">
+      <li><input type="checkbox" disabled> <strong>Cấm trung bình giá xuống:</strong> Ký cam kết tuyệt đối không bao giờ mua thêm đối với bất kỳ cổ phiếu nào đang chịu khoản lỗ.</li>
+      <li><input type="checkbox" disabled> <strong>Xử lý margin call khách quan:</strong> Khi nhận yêu cầu bổ sung ký quỹ (Margin Call), tuyệt đối không nộp thêm tiền mặt để gồng lỗ. Hãy thực hiện bán hạ tỷ trọng cổ phiếu.</li>
+    </ul>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 10 &amp;middot; CHIẾN LƯỢC HỌC TẬP</div>
+    <h2>Mỏ neo trí nhớ &amp; Lặp lại ngắt quãng</h2>
+<div class="learning-style-section visual" style="margin-bottom: 1rem;">
+  <div class="style-icon">👁️ Phương Pháp Học Tập Đa Cảm Giác (Dành cho Học viên Cân bằng)</div>
+  <div class="style-content" style="font-size: 0.95rem; line-height: 1.5;">
+    <ul>
+      <li><strong>Mỏ neo trực quan (Visual Anchor):</strong> Hãy nhớ đến hình ảnh <em>chủ cửa hàng thời trang dứt khoát gắn biển giảm giá 20% cho đống váy màu vàng héo úa không ai mua</em> để khắc ghi triết lý: <em>"Cắt lỗ không phải là thất bại cá nhân, đó là hành động dọn dẹp hàng tồn thông minh của thương nhân để lấy lại tiền mặt, dồn sức mua vào những chiếc váy đỏ đang cháy hàng."</em></li>
+      <li><strong>Hành động thực tế (Kinesthetic Action):</strong> Hãy kiểm tra lịch sử giao dịch của chính bạn. Tìm ra 3 thương vụ thua lỗ lớn nhất trong quá khứ. Xác định xem có phải chúng đều bắt đầu từ các khoản lỗ nhỏ dưới 10% nhưng do bạn chần chừ, ôm hy vọng đã phình to thành các thảm họa phá hủy tài khoản hay không. Ghi lại bài học kinh nghiệm này vào sổ tay giao dịch.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="split-layout" style="margin-top: 1rem;">
+  <div class="split-left" style="padding-right: 1rem; border-right: 1px solid var(--border);">
+    <h5 style="color: var(--accent-purple); margin-top: 0;">Mỏ Neo Trí Nhớ & Case Study Cảnh Tỉnh</h5>
+    <ul style="font-size: 0.9rem; padding-left: 1rem; margin: 0; line-height: 1.5;">
+      <li><strong>Mất dũng khí giao dịch (Mental Capital):</strong> Lý do lớn nhất để cắt lỗ nhanh không chỉ là bảo vệ tiền mặt, mà là **bảo tồn lòng dũng cảm của bạn**. Một khoản lỗ sâu 30-50% sẽ làm bạn tê liệt tâm lý, sợ hãi và mất hoàn toàn tự tin để đưa ra các quyết định mua bán đúng đắn trong tương lai. <span class="page-ref">Ch 10 &middot; "Never Lose Your Confidence"</span></li>
+      <li><strong>Câu chuyện gà tây:</strong> Đừng bao giờ đếm số gà tây đã thoát ra ngoài! Hãy chấp nhận hiện thực cung cầu của thị trường và hành động dứt khoát trước khi quá muộn.</li>
+    </ul>
+  </div>
+
+  <div class="split-right" style="padding-left: 1rem;">
+    <h5 style="color: var(--accent-emerald); margin-top: 0;">Lịch Trình Lặp Lại Ngắt Quãng</h5>
+    <ul style="font-size: 0.9rem; padding-left: 1rem; margin: 0; line-height: 1.5;">
+      <li><strong>Ngày 1:</strong> Khắc sâu nguyên tắc cắt lỗ tối đa 7%-8%, triệt tiêu bẫy tâm lý "chưa bán là chưa lỗ".</li>
+      <li><strong>Ngày 2:</strong> Nghiên cứu kỹ tác hại của việc trung bình giá xuống và lầm tưởng về việc gồng lỗ ăn cổ tức.</li>
+      <li><strong>Ngày 7:</strong> Suy ngẫm sâu về ẩn dụ Váy đỏ váy vàng và Bẫy gà tây để thay đổi hoàn toàn hệ quy chiếu ra quyết định bán.</li>
+      <li><strong>Ngày 30:</strong> Thực hiện rà soát danh mục định kỳ hàng tháng: Lập bảng xếp hạng hiệu suất và thực thi "nhổ cỏ dại, trồng hoa hồng" cơ học robot.</li>
+    </ul>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 10 &amp;middot; HÀNH ĐỘNG CUỐI CÙNG</div>
+    <h2>Hành động cuối cùng</h2>
+<ul class="action-list">
+  <li class="action-item">
+    <div>
+      <div class="action-headline">Viết cam kết cắt lỗ cơ học dán trước bàn làm việc</div>
+      <div class="action-detail">Viết ra một tờ giấy cam kết kỷ luật thép và dán ngay trước màn hình giao dịch của bạn từ ngày mai: <em>"Tôi cam kết cắt ngắn và giải phóng mọi vị thế sụt giảm chạm mốc tối đa 7% - 8% dưới giá mua mà không cần suy nghĩ, không chờ đợi và không ngoại lệ."</em></div>
+    </div>
+  </li>
+  <li class="action-item">
+    <div>
+      <div class="action-headline">Thiết lập quy trình rà soát "Nhổ cỏ dại" hàng tuần</div>
+      <div class="action-detail">Lên lịch cố định vào mỗi sáng thứ Bảy hàng tuần để rà soát toàn bộ sức khỏe danh mục của bạn. Sắp xếp thứ tự các cổ phiếu theo hiệu suất, nhận diện các "chiếc váy màu vàng" trì trệ và lên kế hoạch bán dứt điểm ngay đầu phiên thứ Hai để thu hồi dòng tiền.</div>
+    </div>
+  </li>
+  <li class="action-item">
+    <div>
+      <div class="action-headline">Sa thải môi giới tư vấn trung bình giá xuống hoặc gồng lỗ</div>
+      <div class="action-detail">Đánh giá khách quan các khuyến nghị tư vấn tài khoản của môi giới hoặc hội nhóm bạn đang tham gia. Nếu họ có tư duy khuyên bạn mua trung bình giá xuống hoặc nộp thêm tiền gồng lỗ margin, hãy kiên quyết đóng tài khoản hoặc đổi người tư vấn để bảo vệ tài sản ròng.</div>
+    </div>
+  </li>
+</ul>
+
+<figure class="image-slot hero" style="margin-top: 1.5rem;">
+  <div class="image-prompt">
+    <span class="image-prompt-label">AI Image Prompt — Giới hạn quota Image-gen của hệ thống tạm thời hết</span>
+    <p class="image-prompt-text">"A glowing neon red STOP sign in the middle of a dark misty street, wet reflective asphalt, moody atmosphere, minimalist composition, high contrast, 8k."</p>
+    <span class="image-prompt-hint">Bạn có thể tạo ảnh trên Midjourney, lưu dưới tên 'ch10_stoploss_hero.png' vào thư mục 'images/' và thay thế khối HTML này bằng thẻ &lt;img src="images/ch10_stoploss_hero.png"&gt; để hoàn thiện slide Closing Actions.</span>
+  </div>
+</figure>
+
+  </section>
+
+</div>
+
+<div class="nav-controls">
+  <button class="nav-btn" id="prevBtn" onclick="prevSlide()" aria-label="Previous slide">&#8592;</button>
+  <div class="counter" id="counter" aria-live="polite">1 / 1</div>
+  <button class="nav-btn" id="nextBtn" onclick="nextSlide()" aria-label="Next slide">&#8594;</button>
+</div>
+
+<script src="common.js"></script>
+</body>
+</html>

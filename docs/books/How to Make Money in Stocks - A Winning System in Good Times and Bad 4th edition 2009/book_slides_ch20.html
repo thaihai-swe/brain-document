@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How to Make Money in Stocks — Chapter 20</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="common.css">
+<script src="https://cdn.jsdelivr.net/npm/@panzoom/panzoom@4.5.1/dist/panzoom.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11.10.0/dist/mermaid.min.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div class="progress-bar" id="progressBar"></div>
+
+<div class="chapter-menu">
+  <button class="menu-btn" id="chapterMenuBtn" onclick="toggleChapterMenu()" aria-haspopup="true" aria-expanded="false">Chapters &#9662;</button>
+  <div class="chapter-menu-panel" id="chapterMenuPanel" role="menu"></div>
+</div>
+
+<div class="slide-container" id="slideContainer">
+
+  <section class="slide" aria-hidden="false">
+<h1>Chương 20: Các Quy Tắc và Hướng Dẫn Quan Trọng Cần Nhớ</h1>
+<p class="subtitle">Hệ thống hóa toàn bộ phương pháp CAN SLIM thành bộ 23 quy tắc thực chiến tối thượng</p>
+
+<div class="meta-grid">
+  <div class="meta-item">
+    <div class="meta-label">Tác phẩm</div>
+    <div class="meta-value">How to Make Money in Stocks</div>
+  </div>
+  <div class="meta-item">
+    <div class="meta-label">Phiên bản</div>
+    <div class="meta-value">4th Edition (2009)</div>
+  </div>
+  <div class="meta-item">
+    <div class="meta-label">Cấp độ thiết kế</div>
+    <div class="meta-value">DEEP+ (22 Slides)</div>
+  </div>
+  <div class="meta-item">
+    <div class="meta-label">Thời gian học</div>
+    <div class="meta-value">~60 phút</div>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide chapter-divider">
+<div class="chapter-number">CHƯƠNG 20</div>
+<h2>Các Quy Tắc và Hướng Dẫn Quan Trọng Cần Nhớ</h2>
+<p class="chapter-meta">
+  <strong>Thời gian đọc ước tính:</strong> 15 phút &middot;
+  <strong>Độ khó:</strong> Nâng cao &middot;
+  <strong>Khái niệm then chốt:</strong> Bộ lọc CAN SLIM, Quản lý rủi ro bất đối xứng, Nghịch lý giá cao mới, Kỷ luật cắt lỗ tuyệt đối, Loại bỏ cái tôi (Ego)
+</p>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 20 &amp;middot; TỔNG QUAN TRỰC QUAN 1</div>
+    <h2>Bộ lọc định lượng cơ bản &amp; kỹ thuật CAN SLIM</h2>
+<div class="content-card" style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%;">
+  <div class="mermaid" style="width: 100%; max-height: 75vh;">
+    graph TD
+        %% Inputs
+        In["Toàn bộ cổ phiếu trên thị trường"] --> F1{"Bước 1: Lọc cơ bản (Fundamentals)"}
+
+        %% Fundamental filter details
+        F1 -->|"Đạt yêu cầu"| F1_1["EPS năm tăng >= 25%"]
+        F1 -->|"Đạt yêu cầu"| F1_2["EPS quý gần nhất tăng >= 25-30%"]
+        F1 -->|"Đạt yêu cầu"| F1_3["Doanh thu quý tăng >= 25% hoặc tăng tốc"]
+        F1 -->|"Đạt yêu cầu"| F1_4["ROE >= 17% (Ưu tiên 25-50%)"]
+        F1 -->|"Đạt yêu cầu"| F1_5["Biên lợi nhuận sau thuế tiệm cận đỉnh lịch sử"]
+
+        %% Combined Fundamentals
+        F1_1 & F1_2 & F1_3 & F1_4 & F1_5 --> T1{"Bước 2: Lọc kỹ thuật (Technical)"}
+
+        %% Technical filter details
+        T1 -->|"Đạt yêu cầu"| T1_1["Sức mạnh giá RS >= 85"]
+        T1 -->|"Đạt yêu cầu"| T1_2["Đang bứt phá khỏi Nền giá tốt"]
+        T1 -->|"Đạt yêu cầu"| T1_3["Khối lượng phiên Breakout tăng >= 50%"]
+        T1 -->|"Đạt yêu cầu"| T1_4["Giá cổ phiếu >= 15 USD"]
+        T1 -->|"Đạt yêu cầu"| T1_5["Có bảo trợ tổ chức tăng dần"]
+
+        %% Market Condition
+        T1_1 & T1_2 & T1_3 & T1_4 & T1_5 --> M1{"Bước 3: Xu hướng thị trường (Market)"}
+        M1 -->|"Thị trường tăng giá (Confirmed Uptrend)"| Buy["Quyết định MUA"]
+        M1 -->|"Thị trường điều chỉnh (Correction)"| Cash["Đứng ngoài giữ tiền mặt"]
+
+        %% Styling
+        style Buy fill:#10B981,stroke:#047857,color:#FFF
+        style Cash fill:#EF4444,stroke:#B91C1C,color:#FFF
+        style F1 fill:#8B7CFF,stroke:#2A2D33,color:#FFF
+        style T1 fill:#8B7CFF,stroke:#2A2D33,color:#FFF
+        style M1 fill:#F59E0B,stroke:#D97706,color:#FFF
+
+        classDef default fill:#F4F4F6,stroke:#D1D1D6,color:#1C1C1E;
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 20 &amp;middot; TỔNG QUAN TRỰC QUAN 2</div>
+    <h2>Hệ thống quản lý rủi ro &amp; quy tắc Bán</h2>
+<div class="content-card" style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%;">
+  <div class="mermaid" style="width: 100%; max-height: 75vh;">
+    graph TD
+        %% State after Buy
+        Start["Vị thế MUA mới mở"] --> Monitor{"Theo dõi biến động giá"}
+
+        %% Risk Scenarios
+        Monitor -->|"Giá giảm xuống -7% hoặc -8%"| StopLoss["BÁN CẮT LỖ TUYỆT ĐỐI - Không ngoại lệ"]
+        Monitor -->|"Giá tăng đạt +20% đến +25%"| ProfitCheck{"Đánh giá tốc độ tăng"}
+
+        %% Profit taking branches
+        ProfitCheck -->|"Tăng 20% trong dưới 3 tuần"| Rule8Weeks["Giữ thêm tối thiểu 8 tuần"]
+        ProfitCheck -->|"Tăng chậm / Bình thường"| TakeProfit["BÁN CHỐT LỜI chủ động"]
+
+        %% 8 weeks hold outcomes
+        Rule8Weeks --> MonitorLeaders{"Đánh giá lại tại tuần thứ 9"}
+        MonitorLeaders -->|"Xu hướng tăng tiếp tục mạnh"| HoldLong["Giữ trung hạn ăn trọn sóng"]
+        MonitorLeaders -->|"Có dấu hiệu phân phối/đạt đỉnh"| SellClimax["BÁN CHỐT LỜI tại vùng cao trào"]
+
+        %% Market risk
+        Monitor -->|"Thị trường chung xuất hiện Ngày phân phối"| ReduceRisk["Hạ tỷ trọng margin - Tăng tiền mặt"]
+
+        %% Styling
+        style StopLoss fill:#EF4444,stroke:#B91C1C,color:#FFF
+        style TakeProfit fill:#10B981,stroke:#047857,color:#FFF
+        style SellClimax fill:#10B981,stroke:#047857,color:#FFF
+        style Rule8Weeks fill:#635BFF,stroke:#4338CA,color:#FFF
+        style ReduceRisk fill:#F59E0B,stroke:#D97706,color:#FFF
+
+        classDef default fill:#F4F4F6,stroke:#D1D1D6,color:#1C1C1E;
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 20 &amp;middot; TÓM TẮT CHƯƠNG</div>
+    <h2>Tóm tắt hệ thống 23 quy tắc vàng CAN SLIM</h2>
+<div class="content-card">
+  <div class="summary-text">
+    <p><strong>Bối cảnh (Setup):</strong> Sau khi giới thiệu hàng loạt nguyên tắc phân tích kỹ thuật, cơ bản và tâm lý thị trường qua 19 chương trước, làm thế nào để nhà đầu tư có thể hệ thống hóa và áp dụng một cách nhất quán, tránh bị choáng ngợp bởi thông tin nhiễu loạn trong thực chiến?</p>
+    
+    <p><strong>Luận điểm chính (Argument):</strong> Chương 20 đóng vai trò là chương tổng kết toàn diện nhất của cuốn sách. O'Neil đúc kết toàn bộ triết lý CAN SLIM thành **23 quy tắc vàng thực chiến** và **4 lý do cốt lõi khiến nhà đầu tư bỏ lỡ siêu cổ phiếu**. Luận điểm cốt lõi của chương là: Sự thành bại trong đầu tư không nằm ở chỉ số IQ hay bằng cấp cao, mà nằm ở **kỷ luật sắt đá tuân thủ các quy tắc đã được chứng minh lịch sử và loại bỏ cái tôi (Ego) cá nhân**. Thị trường luôn luôn đúng và thông minh hơn bất kỳ ai; thành công chỉ đến khi nhà đầu tư chấp nhận hành động như một cỗ máy tuân thủ luật lệ, loại bỏ hoàn toàn các thiên kiến tâm lý tự nhiên (như thích mua rẻ, ngại cắt lỗ, tự phụ).</p>
+    
+    <p><strong>Bằng chứng (Evidence):</strong> Tiền lệ lịch sử chứng minh: hầu hết siêu cổ phiếu đều bứt phá từ các nền giá chặt chẽ ở mức giá trên 15-20 USD và có P/E cao bất thường. Nghiên cứu thực tế chỉ ra việc mua cổ phiếu giá rẻ dưới 10 USD (penny) hoặc mua trung bình giá xuống là con đường nhanh nhất dẫn đến cháy tài khoản. O'Neil cũng chỉ ra rằng việc áp dụng kỷ luật cắt lỗ tuyệt đối ở mức 7-8% là lớp giáp bảo vệ duy nhất cứu sống các tài khoản lớn qua mọi thị trường gấu tàn khốc trong lịch sử. <span class="page-ref">Ch 20 &middot; "12. Cut every single loss when it is 7% or 8% below your purchase price"</span></p>
+    
+    <p><strong>Hệ quả (Implications):</strong> Nhà đầu tư cá nhân bắt buộc phải: viết ra giấy quy tắc mua/bán của mình, tự động hóa lệnh dừng lỗ, từ bỏ ảo tưởng lướt sóng quyền chọn/phái sinh phức tạp, và chỉ tập trung vào một số ít cổ phiếu tăng trưởng hàng đầu trong các ngành mạnh nhất. Hãy chấp nhận những thất bại nhỏ (7-8%) để đổi lấy cơ hội ăn trọn sóng siêu cổ phiếu (tăng 100% đến 1000%).</p>
+    
+    <p><strong>Tranh luận (Controversy):</strong> O'Neil kịch liệt phản đối việc đa dạng hóa quá mức (overdiversification) và đầu tư vào quyền chọn/phái sinh/trái phiếu. Ông coi việc phân bổ danh mục quá rộng là "chia sẻ sự thiếu hiểu biết" và khẳng định các công cụ phái sinh chỉ là trò chơi đầu cơ làm giàu cho các công ty môi giới chứ không đem lại sự tự do tài chính bền vững cho cá nhân.</p>
+    
+    <p><strong>Mối liên kết (Connection):</strong> Kết nối và đúc kết toàn bộ cuốn sách: Tích hợp CAN SLIM (Chương 1-8), Quản lý vốn & Cắt lỗ (Chương 10-11), Thiết kế bộ lọc dữ liệu (Chương 16) và Quản lý danh mục (Chương 19) thành một cẩm nang hành động hoàn chỉnh.</p>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 20 &amp;middot; Ý TƯỞNG CỐT LÕI</div>
+    <h2>Ý tưởng cốt lõi</h2>
+<div class="takeaway-hero">
+  <div class="kicker">CH 20 &middot; THE BIG IDEA</div>
+  <div class="headline">"Forget your pride and your ego; the market doesn’t care what you think or want. No matter how smart you think you are, the market is always smarter."</div>
+  <div class="subline">Hãy vứt bỏ niềm kiêu hãnh và cái tôi cá nhân; thị trường không bao giờ quan tâm bạn nghĩ gì hay muốn gì. Dù bạn có thông minh hay học cao đến đâu, thị trường luôn thông minh hơn bạn. Thành công bền vững chỉ thuộc về những ai biết tôn trọng luật chơi và kỷ luật hành động. <span class="page-ref">Ch 20 &middot; Rule 20</span></div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 20 &amp;middot; BÀI HỌC CHỦ CHỐT</div>
+    <h2>Bài học chủ chốt</h2>
+<div class="takeaway-list">
+  <div class="takeaway-item">
+    <div class="takeaway-badge">1</div>
+    <div class="takeaway-content">
+      <strong>Vứt bỏ cái tôi và tôn trọng xu hướng thị trường</strong>
+      <div class="takeaway-detail">
+        <strong>Ý nghĩa:</strong> Thị trường là một thực thể thông minh và khách quan. Cố chứng minh mình đúng và thị trường sai là con đường ngắn nhất dẫn đến thua lỗ lớn.
+        <br><strong>Áp dụng:</strong> Chấp nhận sai lầm nhanh chóng khi giá vi phạm quy tắc. Không bao giờ cố tranh cãi hay bám víu vào các nhận định cá nhân.
+        <br><strong>Lưu ý:</strong> Một chỉ số IQ cao hay bằng thạc sĩ tài chính không đảm bảo chiến thắng mà đôi khi chính là cái bẫy tự phụ cản trở việc cắt lỗ. <span class="page-ref">Ch 20 &middot; Rule 20</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="takeaway-item">
+    <div class="takeaway-badge">2</div>
+    <div class="takeaway-content">
+      <strong>Kỷ luật cắt lỗ tuyệt đối 7-8% không ngoại lệ</strong>
+      <div class="takeaway-detail">
+        <strong>Ý nghĩa:</strong> Đây là lá chắn bảo vệ tài khoản của bạn khỏi mọi đợt suy thoái thảm khốc. Cắt những khoản lỗ nhỏ để giữ vốn săn tìm cơ hội lớn tiếp theo.
+        <br><strong>Áp dụng:</strong> Cắt lỗ ngay lập tức khi giá giảm 7-8% so với điểm mua gốc, tuyệt đối không mua trung bình giá xuống dưới bất kỳ hình thức nào.
+        <br><strong>Lưu ý:</strong> Cần mua đúng điểm bứt phá (breakout) từ nền giá tốt để tránh bị quét dừng lỗ do các dao động bình thường của cổ phiếu. <span class="page-ref">Ch 20 &middot; Rule 12 & 23</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="takeaway-item">
+    <div class="takeaway-badge">3</div>
+    <div class="takeaway-content">
+      <strong>Tránh bẫy định giá rẻ (P/E thấp) và cổ phiếu Penny</strong>
+      <div class="takeaway-detail">
+        <strong>Ý nghĩa:</strong> Cổ phiếu tốt nhất giống như những vận động viên giỏi nhất — chúng xứng đáng có giá trị cao (P/E lớn). Cổ phiếu giá trị rẻ thường là các doanh nghiệp suy thoái hoặc đang gặp trục trặc nội bộ.
+        <br><strong>Áp dụng:</strong> Tập trung mua các cổ phiếu bứt phá đỉnh giá mới trên sàn Nasdaq (từ $15 trở lên) và NYSE (từ $20 trở lên) với nền tảng cơ bản cực tốt. Tránh xa các cổ phiếu dưới $10.
+        <br><strong>Lưu ý:</strong> Mua cổ phiếu tại đỉnh giá mới tạo cảm giác rủi ro nhưng thực chất đó là lúc dòng tiền tổ chức xác nhận đẩy giá mạnh mẽ nhất. <span class="page-ref">Ch 20 &middot; Rule 1, 8 & 9</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="takeaway-item">
+    <div class="takeaway-badge">4</div>
+    <div class="takeaway-content">
+      <strong>Tập trung chuyên sâu thay vì phân bổ tài sản quá rộng</strong>
+      <div class="takeaway-detail">
+        <strong>Ý nghĩa:</strong> Đa dạng hóa quá mức (overdiversification) và đầu tư quyền chọn/phái sinh phức tạp chỉ làm loãng sự tập trung và bào mòn tài khoản qua phí giao dịch.
+        <br><strong>Áp dụng:</strong> Tránh xa giao dịch quyền chọn, hàng hóa, trái phiếu hoặc cổ phiếu nước ngoài nếu không phải chuyên gia. Tập trung vào danh mục tinh gọn từ 4-6 siêu cổ phiếu tăng trưởng dẫn đầu.
+        <br><strong>Lưu ý:</strong> Có thể trích tối đa 5-10% tài khoản nếu muốn thử nghiệm quyền chọn, nhưng tài sản chính phải đặt vào cổ phiếu tăng trưởng cơ bản. <span class="page-ref">Ch 20 &middot; Rule 17</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="takeaway-item">
+    <div class="takeaway-badge">5</div>
+    <div class="takeaway-content">
+      <strong>Đọc vị thị trường chung mỗi ngày qua IBD "The Big Picture"</strong>
+      <div class="takeaway-detail">
+        <strong>Ý nghĩa:</strong> 3/4 cổ phiếu sẽ di chuyển theo xu hướng chung của thị trường. Đầu tư trong thị trường gấu giống như bơi ngược dòng nước xiết.
+        <br><strong>Áp dụng:</strong> Theo dõi sát sao cột "The Big Picture" hàng ngày để nhận diện xu hướng chung (Uptrend vs Market in Correction). Chỉ giao dịch tích cực khi thị trường ở trạng thái an toàn.
+        <br><strong>Lưu ý:</strong> Đừng đoán đỉnh đáy thị trường, hãy để các ngày bứt phá theo đà (Follow-through days) và ngày phân phối (Distribution days) xác nhận xu hướng khách quan. <span class="page-ref">Ch 20 &middot; Rule 16 & 21</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 20 &amp;middot; TRÍCH DẪN ĐẮT GIÁ</div>
+    <h2>Trích dẫn đắt giá</h2>
+<div class="quote-container">
+  <div class="quote-block">
+    <p class="quote-text">"Forget your pride and your ego; the market doesn’t care what you think or want. No matter how smart you think you are, the market is always smarter. A high IQ and a master’s degree are no guarantee of market success. Your ego could cost you a lot of money. Don’t argue with the market. Never try to prove you’re right and the market is wrong."</p>
+    <p class="quote-context">
+      <strong>Bản dịch:</strong> "Hãy quên đi niềm kiêu hãnh và cái tôi của bạn; thị trường không quan tâm bạn nghĩ gì hay muốn gì. Bất kể bạn nghĩ mình thông minh thế nào, thị trường luôn thông minh hơn. Một chỉ số IQ cao và tấm bằng thạc sĩ không đảm bảo sự thành công trên thị trường. Cái tôi có thể khiến bạn mất rất nhiều tiền. Đừng tranh cãi với thị trường. Đừng bao giờ cố chứng minh bạn đúng và thị trường sai."
+      <br><strong>Ý nghĩa:</strong> Lời cảnh báo tối thượng về sự tự mãn. Nhà đầu tư thông minh phải phục tùng hành động giá khách quan thay vì cố chấp bảo vệ các phân tích chủ quan của mình.
+      <span class="page-ref">Ch 20 &middot; Rule 20</span>
+    </p>
+  </div>
+
+  <div class="quote-block" style="margin-top: 2rem;">
+    <p class="quote-text">"Contrary to conventional wisdom, the best stocks rarely sell at low P/Es. Just as the best ballplayers make the highest salaries, the better companies sell at better (higher) P/Es. Using P/Es as a selection criterion will prevent you from buying most of the best stocks."</p>
+    <p class="quote-context">
+      <strong>Bản dịch:</strong> "Trái ngược với quan điểm thông thường, những cổ phiếu tốt nhất hiếm khi được bán với mức P/E thấp. Giống như các cầu thủ giỏi nhất nhận mức lương cao nhất, các công ty tốt hơn sẽ bán ở mức P/E tốt hơn (cao hơn). Việc sử dụng P/E làm tiêu chí lựa chọn sẽ ngăn cản bạn mua được hầu hết các cổ phiếu tốt nhất."
+      <br><strong>Ý nghĩa:</strong> Chỉ trích trực diện định kiến mua P/E thấp của giới đầu tư giá trị truyền thống. Mức P/E cao phản ánh kỳ vọng đột phá và chất lượng vượt trội của doanh nghiệp dẫn đầu.
+      <span class="page-ref">Ch 20 &middot; "Key Reasons People Miss Buying Big Winning Stocks"</span>
+    </p>
+  </div>
+
+  <div class="quote-block" style="margin-top: 2rem;">
+    <p class="quote-text">"Success in a free country is simple. Get a job, get an education, and learn to save and invest wisely. Anyone can do it. You can do it."</p>
+    <p class="quote-context">
+      <strong>Bản dịch:</strong> "Thành công ở một quốc gia tự do thật đơn giản. Hãy tìm một công việc, học hỏi kiến thức, và học cách tiết kiệm cũng như đầu tư khôn ngoan. Bất kỳ ai cũng có thể làm được. Bạn có thể làm được."
+      <br><strong>Ý nghĩa:</strong> Thông điệp kết thúc đầy cảm hứng của William O'Neil. Ông nhấn mạnh rằng cơ hội tự do tài chính mở ra cho tất cả mọi người, chỉ cần sự chuẩn bị kỹ lưỡng, chăm chỉ học hỏi và kiên trì rèn luyện tính kỷ luật.
+      <span class="page-ref">Ch 20 &middot; "One Final Thought"</span>
+    </p>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 20 &amp;middot; MÔ HÌNH TƯ DUY 1</div>
+    <h2>Mô hình 1: Nghịch lý Cái tôi vs Thị trường</h2>
+<div class="mental-model-card">
+  <h4 class="model-name">Nghịch lý Cái tôi vs Thị trường (The Ego-Market Paradox)</h4>
+  <div class="model-principle">
+    Thị trường chứng khoán không quan tâm đến chỉ số IQ, bằng cấp hay niềm kiêu hãnh cá nhân của bạn. Nó là sự phản chiếu khách quan của dòng tiền và hành vi đám đông. Để chiến thắng, nhà đầu tư phải đặt **kỷ luật quy tắc lên trên niềm tin cá nhân**, chấp nhận sai lầm nhanh chóng thay vì cố tranh cãi với xu hướng giá.
+  </div>
+  
+  <div class="model-application" style="margin-top: 1rem;">
+    <strong>Cách thức hoạt động & Quy tắc áp dụng:</strong>
+    <ul>
+      <li><strong>Cạm bẫy của người thông minh:</strong> Những người có bằng cấp cao thường khó cắt lỗ hơn vì họ có xu hướng tìm kiếm lý do, ngụy tạo bằng chứng để chứng minh phân tích ban đầu của họ là đúng và thị trường đang "sai lầm tạm thời".</li>
+      <li><strong>Tự động hóa hành động:</strong> Thiết lập sẵn các lệnh dừng lỗ tự động trên hệ thống (stop-loss) ngay khi mở vị thế để loại bỏ sự do dự mang tính cảm xúc khi giá giảm.</li>
+      <li><strong>Tôn trọng hành động giá:</strong> Nếu một cổ phiếu giảm qua điểm dừng lỗ 7-8% hoặc một thị trường xuất hiện liên tiếp các ngày phân phối, hãy hành động cắt giảm exposure ngay lập tức mà không cần hỏi lý do vĩ mô tại sao.</li>
+    </ul>
+  </div>
+
+  <div class="model-limitations" style="margin-top: 1rem;">
+    <strong>⚠️ Hạn chế & Sai lầm cần tránh:</strong>
+    <ul>
+      <li><strong>Cố chấp giữ vị thế:</strong> "Cổ phiếu tốt thế này chắc chắn sẽ hồi lại" &rarr; Đây là tiếng nói của cái tôi tổn thương, dẫn đến việc để khoản lỗ nhỏ biến thành thảm họa sụt giảm 50-90% tài khoản.</li>
+      <li><strong>Cảm xúc cay cú (Revenge Trading):</strong> Cố gắng giao dịch gỡ gạc ngay lập tức sau một lệnh lỗ lớn bằng cách tăng quy mô margin, vi phạm hoàn toàn các nguyên tắc quản lý rủi ro cốt lõi.</li>
+    </ul>
+  </div>
+  
+  <div class="page-reference">Ch 20 &middot; Rule 20 &middot; "Forget your pride and your ego"</div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 20 &amp;middot; MÔ HÌNH TƯ DUY 2</div>
+    <h2>Mô hình 2: Động lực bứt phá Đỉnh giá mới</h2>
+<div class="mental-model-card">
+  <h4 class="model-name">Động lực bứt phá Đỉnh giá mới (The New Price High Breakout Catalyst)</h4>
+  <div class="model-principle">
+    Khác với trực giác tự nhiên của con người (thích mua đồ giảm giá, mua rẻ), các siêu cổ phiếu dẫn đầu thị trường luôn bắt đầu đà tăng giá thần kỳ từ khu vực **gần hoặc ngay tại đỉnh cao lịch sử (New Highs)**, chứ không phải vùng đáy mới (New Lows). Sự bứt phá đỉnh giá là bằng chứng xác thực rằng lực cung kẹp hàng phía trên đã được hấp thụ hoàn toàn và dòng tiền lớn của tổ chức bắt đầu đẩy giá mạnh mẽ.
+  </div>
+  
+  <div class="model-application" style="margin-top: 1rem;">
+    <strong>Cơ chế vận hành của mẫu hình bứt phá:</strong>
+    <ul>
+      <li><strong>Hiện tượng giải phóng kháng cự:</strong> Khi giá vượt đỉnh cũ sau một quá trình tích lũy nền giá (như Cốc tay cầm, Hai đáy), cổ phiếu không còn gặp áp lực bán hòa vốn từ những người mua kẹt hàng ở đỉnh cũ. Phía trước là bầu trời tự do (no overhead supply).</li>
+      <li><strong>Xác nhận bằng khối lượng giao dịch đột biến:</strong> Phiên bứt phá vượt điểm mua lý tưởng (pivot point) bắt buộc phải đi kèm khối lượng giao dịch lớn hơn trung bình tối thiểu 50% để chứng minh sự tham gia quyết liệt của các định chế tài chính lớn.</li>
+    </ul>
+  </div>
+
+  <div class="model-limitations" style="margin-top: 1rem;">
+    <strong>⚠️ Quy tắc giao dịch & Hạn chế:</strong>
+    <ul>
+      <li><strong>Vùng mua an toàn giới hạn:</strong> Chỉ mua trong phạm vi tối đa 5% tính từ điểm bứt phá lý tưởng. Tuyệt đối không đu bám mua đuổi (chasing) khi giá đã chạy quá xa nền tích lũy.</li>
+      <li><strong>Bẫy bứt phá giả (Fakeouts) trong thị trường gấu:</strong> Nỗ lực vượt đỉnh trong thị trường chung đang điều chỉnh hoặc suy thoái có tỷ lệ thất bại rất cao. Chỉ áp dụng mô hình này khi xu hướng thị trường chung được xác nhận là đang tăng giá (Confirmed Uptrend).</li>
+    </ul>
+  </div>
+  
+  <div class="page-reference">Ch 20 &middot; Key Reason 3 &middot; "The real leaders start their big moves by selling near or at new price highs"</div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 20 &amp;middot; MÔ HÌNH TƯ DUY 3</div>
+    <h2>Mô hình 3: Động cơ Lợi nhuận Bất đối xứng</h2>
+<div class="mental-model-card">
+  <h4 class="model-name">Động cơ Lợi nhuận Bất đối xứng (The Asymmetrical Risk-Reward Engine)</h4>
+  <div class="model-principle">
+    Bí mật của việc gia tăng tài sản bền vững không nằm ở việc đoán đúng 100% hướng đi của thị trường, mà nằm ở **tỷ lệ toán học bất đối xứng giữa Lợi nhuận trung bình và Thua lỗ trung bình**. Bằng việc giới hạn thua lỗ tối đa ở mức 7-8% (trung bình thực tế cắt sớm ở 5-6%) và chốt lời chủ động ở mức 20-25%, bạn chỉ cần đúng 30-40% số lần giao dịch là đã có thể kiếm được lợi nhuận lớn.
+  </div>
+  
+  <div class="model-application" style="margin-top: 1rem;">
+    <strong>Các quy tắc cốt lõi để duy trì thế bất đối xứng:</strong>
+    <ul>
+      <li><strong>Nguyên tắc cắt lỗ thép (Rule 12):</strong> Cắt lỗ tại mức 7-8% dưới giá mua mà không có bất kỳ lý do ngoại lệ nào. Điều này bảo toàn vốn để bạn có thể thực hiện nhiều lượt chơi tiếp theo.</li>
+      <li><strong>Chốt lời mục tiêu 20-25%:</strong> Hầu hết cổ phiếu tăng trưởng sau khi bứt phá sẽ tăng từ 20% đến 25% rồi bước vào giai đoạn điều chỉnh tích lũy lại. Việc khóa lợi nhuận tại đây giúp vòng quay vốn đạt hiệu quả cao nhất.</li>
+      <li><strong>Mua trung bình giá lên (Rule 12):</strong> Chỉ gia tăng thêm vị thế (nhỏ hơn vị thế gốc) khi vị thế ban đầu đã có lãi lập tức. Không bao giờ mua trung bình giá xuống (averaging down) vì hành động này làm tăng quy mô vốn ở một vị thế đang mất giá, phá vỡ hoàn toàn toán học rủi ro.</li>
+    </ul>
+  </div>
+
+  <div class="model-limitations" style="margin-top: 1rem;">
+    <strong>⚠️ Quy tắc ngoại lệ của Siêu cổ phiếu (Rule 8 tuần):</strong>
+    <ul>
+      <li>Nếu một cổ phiếu cực mạnh tăng hơn 20% chỉ trong vòng chưa đầy 3 tuần kể từ điểm bứt phá lý tưởng, bạn bắt buộc phải **giữ cổ phiếu đó trong tối thiểu 8 tuần** tiếp theo. Đây là những siêu cổ phiếu dẫn đầu có khả năng tăng bằng lần (x2, x3), cần giữ lại để tối đa hóa tỷ lệ bất đối xứng lên mức cực đại.</li>
+    </ul>
+  </div>
+  
+  <div class="page-reference">Ch 20 &middot; Rule 12 & 23 &middot; "Carefully average up, not down, and cut every single loss"</div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 20 &amp;middot; SỐ LIỆU &amp; THỐNG KÊ</div>
+    <h2>Số liệu thống kê &amp; Ngưỡng giao dịch CAN SLIM</h2>
+<div class="metric-grid">
+  <div class="metric-card">
+    <div class="metric-value">7% &minus; 8%</div>
+    <div class="metric-label">Giới hạn cắt lỗ tuyệt đối</div>
+    <div class="metric-detail">
+      Cắt toàn bộ vị thế lỗ ngay lập tức khi giá giảm xuống dưới điểm mua gốc 7% hoặc 8%, không chấp nhận bất kỳ lý do ngoại lệ nào.
+      <span class="page-ref">Ch 20 &middot; Rule 12</span>
+    </div>
+  </div>
+
+  <div class="metric-card">
+    <div class="metric-value">&ge; 17%</div>
+    <div class="metric-label">Tỷ suất sinh lợi trên vốn cổ phần (ROE)</div>
+    <div class="metric-detail">
+      ROE tối thiểu là 17%. Những doanh nghiệp hàng đầu thực sự có ROE từ 25% đến 50%.
+      <span class="page-ref">Ch 20 &middot; Rule 5</span>
+    </div>
+  </div>
+
+  <div class="metric-card">
+    <div class="metric-value">&ge; 85</div>
+    <div class="metric-label">Chỉ số sức mạnh giá Relative Strength</div>
+    <div class="metric-detail">
+      RS rating tối thiểu là 85 trên IBD SmartSelect. Chứng minh cổ phiếu nằm trong top 15% mạnh nhất thị trường.
+      <span class="page-ref">Ch 20 &middot; Rule 9</span>
+    </div>
+  </div>
+
+  <div class="metric-card">
+    <div class="metric-value">&ge; 25%</div>
+    <div class="metric-label">Tăng trưởng EPS năm & Dự báo</div>
+    <div class="metric-detail">
+      EPS của mỗi năm trong 3 năm gần nhất tăng trưởng từ 25% trở lên. Dự báo đồng thuận năm tiếp theo tăng trưởng tối thiểu 25%.
+      <span class="page-ref">Ch 20 &middot; Rule 2</span>
+    </div>
+  </div>
+
+  <div class="metric-card">
+    <div class="metric-value">&ge; 50%</div>
+    <div class="metric-label">Khối lượng phiên Breakout</div>
+    <div class="metric-detail">
+      Khối lượng giao dịch của ngày bứt phá (breakout) khỏi nền giá tốt phải cao hơn tối thiểu 50% so với khối lượng trung bình ngày.
+      <span class="page-ref">Ch 20 &middot; Rule 11</span>
+    </div>
+  </div>
+
+  <div class="metric-card">
+    <div class="metric-value">15 - 20 USD</div>
+    <div class="metric-label">Giá tối thiểu của cổ phiếu chất lượng</div>
+    <div class="metric-detail">
+      Chỉ tập trung mua cổ phiếu Nasdaq từ 15 USD trở lên và NYSE từ 20 USD trở lên. Tránh xa rác thải dưới 10 USD (penny).
+      <span class="page-ref">Ch 20 &middot; Rule 1</span>
+    </div>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 20 &amp;middot; PHÂN TÍCH CHUYÊN SÂU 1</div>
+    <h2>Quy tắc 1 đến 10: Tiêu chí lọc Căn bản &amp; Kỹ thuật cốt lõi</h2>
+<div class="content-card">
+  <h3 style="color: var(--accent); margin-top: 0; border-bottom: 2px solid var(--border); padding-bottom: 0.5rem;">Quy tắc 1 đến 10: Tiêu chí lọc Căn bản & Kỹ thuật cốt lõi</h3>
+  
+  <div class="bullet-grid" style="margin-top: 1.2rem;">
+    <div class="bullet-card" style="padding: 0.8rem;">
+      <strong>1. Giá sàn chất lượng</strong>
+      <p style="font-size: 0.9rem; margin: 0.2rem 0 0 0;">Chỉ chọn cổ phiếu Nasdaq &ge; 15 USD và NYSE &ge; 20 USD. Đỉnh cao siêu cổ phiếu thường xuất phát từ nền giá trên 30 USD. Tránh rác dưới 10 USD.</p>
+    </div>
+    
+    <div class="bullet-card" style="padding: 0.8rem;">
+      <strong>2. Tăng trưởng năm (A)</strong>
+      <p style="font-size: 0.9rem; margin: 0.2rem 0 0 0;">3 năm gần nhất EPS tăng trưởng &ge; 25%/năm. Dự báo năm tiếp theo tăng &ge; 25%. Dòng tiền hàng năm cao hơn EPS ít nhất 20%.</p>
+    </div>
+
+    <div class="bullet-card" style="padding: 0.8rem;">
+      <strong>3. Đột phá quý (C)</strong>
+      <p style="font-size: 0.9rem; margin: 0.2rem 0 0 0;">EPS 2-3 quý gần nhất tăng &ge; 25-30% (trong thị trường bò, ưu tiên tăng 40% đến 500%). Chỉ số càng cao càng tốt.</p>
+    </div>
+
+    <div class="bullet-card" style="padding: 0.8rem;">
+      <strong>4. Tăng tốc doanh số</strong>
+      <p style="font-size: 0.9rem; margin: 0.2rem 0 0 0;">Tỷ lệ tăng trưởng doanh thu quý gần nhất tăng &ge; 25% hoặc liên tục tăng tốc trong 3 quý gần đây.</p>
+    </div>
+
+    <div class="bullet-card" style="padding: 0.8rem;">
+      <strong>5. Sức sinh lợi ROE</strong>
+      <p style="font-size: 0.9rem; margin: 0.2rem 0 0 0;">Chỉ số ROE đạt tối thiểu 17%. Những siêu cổ phiếu hàng đầu thế giới thường có tỷ lệ ROE xuất sắc từ 25% đến 50%.</p>
+    </div>
+
+    <div class="bullet-card" style="padding: 0.8rem;">
+      <strong>6. Biên lợi nhuận cao</strong>
+      <p style="font-size: 0.9rem; margin: 0.2rem 0 0 0;">Biên lợi nhuận sau thuế của quý gần đây phải liên tục cải thiện và tiệm cận mức biên lợi nhuận đỉnh lịch sử của chính doanh nghiệp.</p>
+    </div>
+
+    <div class="bullet-card" style="padding: 0.8rem;">
+      <strong>7. Ngành dẫn dắt (L)</strong>
+      <p style="font-size: 0.9rem; margin: 0.2rem 0 0 0;">Cổ phiếu thuộc top 6 ngành lớn trên danh sách "New Price Highs" của IBD hoặc nằm trong top 10% của 197 nhóm ngành phụ độc quyền.</p>
+    </div>
+
+    <div class="bullet-card" style="padding: 0.8rem;">
+      <strong>8. Chọn số 1 (Leader)</strong>
+      <p style="font-size: 0.9rem; margin: 0.2rem 0 0 0;">Không mua vì cổ tức hay P/E thấp. Chọn công ty số 1 trong ngành về tăng trưởng doanh thu, biên lợi nhuận, ROE và tính đột phá của sản phẩm.</p>
+    </div>
+
+    <div class="bullet-card" style="padding: 0.8rem;">
+      <strong>9. Sức mạnh giá RS</strong>
+      <p style="font-size: 0.9rem; margin: 0.2rem 0 0 0;">RS rating đạt tối thiểu 85. Chứng minh hành động giá của cổ phiếu mạnh hơn 85% toàn bộ thị trường trong 12 tháng qua.</p>
+    </div>
+
+    <div class="bullet-card" style="padding: 0.8rem;">
+      <strong>10. Thanh khoản tối thiểu</strong>
+      <p style="font-size: 0.9rem; margin: 0.2rem 0 0 0;">Không giới hạn quy mô vốn hóa nhưng khối lượng giao dịch trung bình hàng ngày nên đạt từ vài trăm nghìn cổ phiếu trở lên để bảo đảm thanh khoản.</p>
+    </div>
+  </div>
+</div>
+<div class="page-reference" style="margin-top: 0.8rem; text-align: right;">Ch 20 &middot; Rules 1-10 &middot; "Important Rules and Guidelines to Remember"</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 20 &amp;middot; PHÂN TÍCH CHUYÊN SÂU 2</div>
+    <h2>Quy tắc 11 đến 23: Định thời điểm, Quản trị vốn &amp; Thực thi</h2>
+<div class="content-card">
+  <h3 style="color: var(--accent); margin-top: 0; border-bottom: 2px solid var(--border); padding-bottom: 0.5rem;">Quy tắc 11 đến 23: Định thời điểm, Quản trị vốn & Thực thi thị trường</h3>
+  
+  <div class="bullet-grid" style="margin-top: 1.2rem;">
+    <div class="bullet-card" style="padding: 0.6rem;">
+      <strong>11. Đọc biểu đồ & Breakout</strong>
+      <p style="font-size: 0.85rem; margin: 0.1rem 0 0 0;">Nhận diện mẫu hình tích lũy chuẩn (Cốc tay cầm, 2 đáy, nền phẳng). Mua tại điểm breakout vượt pivot với volume tăng &ge; 50%.</p>
+    </div>
+
+    <div class="bullet-card" style="padding: 0.6rem;">
+      <strong>12. Quản trị rủi ro hai chiều</strong>
+      <p style="font-size: 0.85rem; margin: 0.1rem 0 0 0;">Cắt lỗ lập tức tại mức 7-8% dưới giá mua. Chỉ mua trung bình giá lên (average up) khi vị thế đã có lãi, tuyệt đối không trung bình giá xuống.</p>
+    </div>
+
+    <div class="bullet-card" style="padding: 0.6rem;">
+      <strong>13. Viết ra quy tắc Bán chốt lời</strong>
+      <p style="font-size: 0.85rem; margin: 0.1rem 0 0 0;">Thiết lập các quy định BÁN rõ ràng để khóa lại khoản lợi nhuận mục tiêu (20-25%) hoặc bán cao trào khi cổ phiếu chạy nước rút.</p>
+    </div>
+
+    <div class="bullet-card" style="padding: 0.6rem;">
+      <strong>14. Sự bảo trợ tổ chức (I)</strong>
+      <p style="font-size: 0.85rem; margin: 0.1rem 0 0 0;">Cổ phiếu được nắm giữ bởi ít nhất 1-2 quỹ đầu tư có hiệu suất tốt nhất và có số lượng tổ chức bảo trợ liên tục tăng trong các quý gần đây.</p>
+    </div>
+
+    <div class="bullet-card" style="padding: 0.6rem;">
+      <strong>15. Sản phẩm đột phá (N)</strong>
+      <p style="font-size: 0.85rem; margin: 0.1rem 0 0 0;">Doanh nghiệp có sản phẩm hoặc dịch vụ mới, vượt trội, có thị trường tiêu thụ rộng lớn và khả năng mua lặp lại (repeat sales) cao.</p>
+    </div>
+
+    <div class="bullet-card" style="padding: 0.6rem;">
+      <strong>16. Xu hướng thị trường (M)</strong>
+      <p style="font-size: 0.85rem; margin: 0.1rem 0 0 0;">Chỉ đầu tư khi thị trường chung đang trong xu hướng tăng (Confirmed Uptrend). Theo dõi "The Big Picture" trên IBD hàng ngày.</p>
+    </div>
+
+    <div class="bullet-card" style="padding: 0.6rem;">
+      <strong>17. Tránh phái sinh & Phân tán</strong>
+      <p style="font-size: 0.85rem; margin: 0.1rem 0 0 0;">Tránh xa quyền chọn, hàng hóa, trái phiếu và cổ phiếu nước ngoài. Giới hạn tối đa 5-10% vốn nếu đầu cơ phái sinh.</p>
+    </div>
+
+    <div class="bullet-card" style="padding: 0.6rem;">
+      <strong>18. Sở hữu của ban lãnh đạo</strong>
+      <p style="font-size: 0.85rem; margin: 0.1rem 0 0 0;">Ban điều hành và những người sáng lập doanh nghiệp nên nắm giữ một tỷ lệ cổ phần nhất định để cùng chung lợi ích với cổ đông.</p>
+    </div>
+
+    <div class="bullet-card" style="padding: 0.6rem;">
+      <strong>19. Doanh nghiệp Entrepreneur mới</strong>
+      <p style="font-size: 0.85rem; margin: 0.1rem 0 0 0;">Tập trung vào các công ty mới lên sàn (IPO trong vòng 8-10 năm qua) đại diện cho "nước Mỹ mới" đầy năng động và đổi mới sáng tạo.</p>
+    </div>
+
+    <div class="bullet-card" style="padding: 0.6rem;">
+      <strong>20. Loại bỏ cái tôi (Ego)</strong>
+      <p style="font-size: 0.85rem; margin: 0.1rem 0 0 0;">Đừng bao giờ cố gắng chứng minh mình đúng và thị trường sai. Thị trường luôn thông minh hơn bất kỳ cá nhân nào.</p>
+    </div>
+
+    <div class="bullet-card" style="padding: 0.6rem;">
+      <strong>21. Học hỏi hàng ngày</strong>
+      <p style="font-size: 0.85rem; margin: 0.1rem 0 0 0;">Đọc chuyên mục "Investor's Corner" và "The Big Picture" mỗi ngày để liên tục rèn luyện kỹ năng và nhạy cảm thị trường.</p>
+    </div>
+
+    <div class="bullet-card" style="padding: 0.6rem;">
+      <strong>22. Mua lại cổ phiếu (Buybacks)</strong>
+      <p style="font-size: 0.85rem; margin: 0.1rem 0 0 0;">Quan sát các công ty thông báo mua lại 5-10% cổ phiếu quỹ của chính họ và các chuyển dịch nhân sự cấp cao từ các tổ chức giỏi khác.</p>
+    </div>
+
+    <div class="bullet-card" style="padding: 0.6rem;">
+      <strong>23. Tuyệt đối không bắt đáy</strong>
+      <p style="font-size: 0.85rem; margin: 0.1rem 0 0 0;">Không mua bắt đáy hoặc mua trung bình giá xuống. Không bao giờ cố mua một cổ phiếu đang trong đà rơi tự do.</p>
+    </div>
+  </div>
+</div>
+<div class="page-reference" style="margin-top: 0.5rem; text-align: right;">Ch 20 &middot; Rules 11-23 &middot; "Important Rules and Guidelines to Remember"</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 20 &amp;middot; PHÂN TÍCH CHUYÊN SÂU 3</div>
+    <h2>4 sai lầm cốt lõi khiến nhà đầu tư bỏ lỡ siêu cổ phiếu</h2>
+<div class="content-card">
+  <p>Hầu hết nhà đầu tư nhỏ lẻ bỏ lỡ các siêu cổ phiếu lớn nhất trong cuộc đời do bị mắc kẹt vào các lối tư duy cũ kỹ và trực giác sai lầm. O'Neil chỉ ra 4 nguyên nhân cốt lõi:</p>
+
+  <div class="bullet-grid" style="margin-top: 1.5rem;">
+    <div class="bullet-card">
+      <div class="bullet-icon">😨</div>
+      <h4>1. Sự nghi ngờ, sợ hãi & thiếu hiểu biết</h4>
+      <p>Nhà đầu tư có xu hướng chỉ mua những cái tên quen thuộc (như Sears, General Motors) và nghi ngờ các công ty trẻ mới lên sàn (IPO dưới 8-10 năm). Thực tế, nhóm doanh nghiệp trẻ, năng động mới chính là động cơ tăng trưởng tạo ra các sản phẩm đột phá mang lại mức tăng x10, x20 lần.</p>
+    </div>
+
+    <div class="bullet-card">
+      <div class="bullet-icon">📉</div>
+      <h4>2. Thiên kiến định giá rẻ (P/E Bias)</h4>
+      <p>Định kiến thông thường cho rằng P/E cao là rủi ro và P/E thấp là an toàn. Nhưng giống như những cầu thủ ngôi sao luôn có lương cao nhất, các công ty xuất sắc nhất luôn được thị trường trả định giá P/E rất cao. Mua P/E thấp sẽ khiến bạn loại bỏ hầu hết siêu cổ phiếu tăng trưởng.</p>
+    </div>
+
+    <div class="bullet-card">
+      <div class="bullet-icon">⛰️</div>
+      <h4>3. Sợ mua tại Đỉnh giá cao mới (New Highs)</h4>
+      <p>Nhà đầu tư thích mua cổ phiếu "có vẻ rẻ" vì nó đã giảm giá sâu so với vài tháng trước. Họ quên rằng các nhà dẫn dắt thực thụ bắt đầu đợt tăng giá điên cuồng nhất bằng việc thiết lập đỉnh cao mới sau khi bứt phá khỏi nền tích lũy, chứ không phải đi lên từ vùng đáy rơi tự do.</p>
+    </div>
+
+    <div class="bullet-card">
+      <div class="bullet-icon">⏱️</div>
+      <h4>4. Chốt lời quá sớm & Cắt lỗ quá muộn</h4>
+      <p>Tâm lý sợ hãi khiến nhà đầu tư nhanh chóng bán non cổ phiếu vừa tăng được 5-10% (chốt quá sớm), trong khi lại chần chừ, hy vọng cổ phiếu giảm giá sẽ hồi lại, biến một khoản lỗ nhỏ thành khoản lỗ khổng lồ 30-50% do vi phạm nguyên tắc cắt lỗ 8%.</p>
+    </div>
+  </div>
+</div>
+<div class="page-reference" style="margin-top: 1rem; text-align: right;">Ch 20 &middot; "Key Reasons People Miss Buying Big Winning Stocks"</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 20 &amp;middot; PHÂN TÍCH CHUYÊN SÂU 4</div>
+    <h2>Ảo tưởng đa dạng hóa &amp; Bẫy đầu cơ quyền chọn</h2>
+<div class="split-layout">
+  <div class="split-left" style="border-left-color: var(--accent-red); background-color: rgba(239, 68, 68, 0.05); flex: 1;">
+    <h3 style="color: var(--accent-red); margin-top: 0;">Ảo tưởng Đa dạng hóa & Phân bổ (Over-diversification)</h3>
+    <ul class="action-list" style="padding: 0; list-style: none; font-size: 0.95rem;">
+      <li style="margin-bottom: 1rem;">
+        <strong>"Đa dạng hóa để tự vệ trước sự thiếu hiểu biết":</strong> Việc sở hữu quá nhiều cổ phiếu (20-50 mã) khiến bạn không thể theo dõi sát sao hoạt động của doanh nghiệp và biểu đồ kỹ thuật của từng mã.
+      </li>
+      <li style="margin-bottom: 1rem;">
+        <strong>Làm loãng hiệu suất alpha:</strong> Sở hữu danh mục quá rộng sẽ biến bạn thành một quỹ mô phỏng chỉ số (index fund) thụ động nhưng phải gánh chi phí giao dịch cao, triệt tiêu khả năng đạt lợi nhuận đột phá.
+      </li>
+      <li style="margin-bottom: 1rem;">
+        <strong>Lời khuyên của O'Neil:</strong> Chỉ nên tập trung nắm giữ từ 4 đến 6 cổ phiếu tăng trưởng hàng đầu. Điều này cho phép bạn dồn toàn bộ nguồn lực nghiên cứu và phản ứng nhanh khi xu hướng thay đổi.
+      </li>
+    </ul>
+  </div>
+  
+  <div class="split-right" style="border-left-color: var(--accent-amber); background-color: rgba(217, 119, 6, 0.05); flex: 1;">
+    <h3 style="color: var(--accent-amber); margin-top: 0;">Bẫy phái sinh & Đa thị trường (Options & Commodities)</h3>
+    <ul class="action-list" style="padding: 0; list-style: none; font-size: 0.95rem;">
+      <li style="margin-bottom: 1rem;">
+        <strong>Sự bào mòn của thời gian (Time Decay):</strong> Quyền chọn (options) là trò chơi có tổng bằng âm do sự hao hụt giá trị thời gian. Phần lớn người mua quyền chọn nhỏ lẻ đều mất sạch phí mua quyền.
+      </li>
+      <li style="margin-bottom: 1rem;">
+        <strong>Cạm bẫy "Một nghề cho chín":</strong> Đầu tư dàn trải vào trái phiếu, hàng hóa, ngoại hối, cổ phiếu nước ngoài khiến bạn trở thành kẻ "biết mỗi thứ một ít nhưng không giỏi thứ gì" (jack-of-all-trades).
+      </li>
+      <li style="margin-bottom: 1rem;">
+        <strong>Quy tắc phân bổ vốn nghiêm ngặt:</strong> Tốt nhất là tránh xa quyền chọn và hàng hóa. Nếu bắt buộc muốn tham gia đầu cơ phái sinh, giới hạn quy mô vốn ở mức tối đa 5% đến 10% danh mục.
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="callout" style="margin-top: 1.5rem; border-left-color: var(--accent-red);">
+  <div class="callout-icon">⚠️</div>
+  <div class="callout-content">
+    <strong>Bản chất cốt lõi:</strong> Hãy giữ mọi thứ đơn giản và tập trung. Sự tự do tài chính bền vững đến từ việc nghiên cứu sâu sắc một phương pháp, làm chủ một nhóm ngành, và dồn lực vào một số ít siêu cổ phiếu có nền tảng cơ bản cực kỳ xuất sắc.
+    <span class="page-ref">Ch 20 &middot; Rule 17 &middot; "Don’t mess around with options... or engage in too much asset allocation"</span>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 20 &amp;middot; ĐÁNH GIÁ CHỨNG CỨ</div>
+    <h2>Thực chứng thị trường hiện đại &amp; Biến động vĩ mô 2026</h2>
+<div class="evidence-card">
+  <div class="evidence-header">
+    <span class="claim-text">Mua bứt phá đỉnh giá cao mới (New High Breakouts) từ nền giá chặt chẽ</span>
+    <span class="quality-score">⭐⭐⭐⭐☆ 4/5</span>
+  </div>
+  <div class="evidence-type">📈 Nghiên cứu thực chứng & Thống kê kỹ thuật</div>
+  <div class="evidence-body">
+    <ul>
+      <li><strong>Chứng cứ gốc:</strong> Nghiên cứu của O'Neil trên mô hình siêu cổ phiếu lịch sử và khảo sát độc lập của Giáo sư Marc Reinganum (SMU) xác thực tỷ suất alpha vượt trội khi mua các cổ phiếu bứt phá đỉnh giá từ nền tích lũy. <span class="page-ref">Ch 20 &middot; Rule 11 &middot; "Is An Index Fund the Way to Go?"</span></li>
+      <li><strong>Cập nhật thị trường 2026:</strong> Trong kỷ nguyên thuật toán (HFT), bẫy bứt phá giả (fakeouts) xuất hiện nhiều hơn do các thuật toán săn tìm thanh khoản (liquidity sweeps). Tuy nhiên, khi có sự đồng thuận của thị trường chung và dòng tiền tổ chức thực sự biểu hiện qua cột khối lượng tăng đột biến (>100% trung bình), việc mua breakout vẫn là điểm vào có xác suất thành công cao nhất đối với siêu cổ phiếu tăng trưởng (Ví dụ: sóng cổ phiếu bán dẫn & AI giai đoạn 2023-2025).</li>
+    </ul>
+  </div>
+</div>
+
+<div class="evidence-card" style="margin-top: 1.5rem;">
+  <div class="evidence-header">
+    <span class="claim-text">Kỷ luật cắt lỗ 7-8% bảo vệ tài khoản khỏi thảm họa</span>
+    <span class="quality-score">⭐⭐⭐⭐⭐ 5/5</span>
+  </div>
+  <div class="evidence-type">📐 Công thức toán học & Thống kê rủi ro</div>
+  <div class="evidence-body">
+    <ul>
+      <li><strong>Chứng cứ gốc:</strong> Logic toán học chứng minh: nếu mất 8%, bạn chỉ cần tăng 8.7% để hòa vốn. Nhưng nếu để tài khoản lỗ 50%, bạn cần phải tăng 100% chỉ để quay lại điểm xuất phát. Cắt lỗ sớm là chiếc phao cứu sinh duy nhất trong thị trường gấu. <span class="page-ref">Ch 20 &middot; Rule 12</span></li>
+      <li><strong>Cập nhật thị trường 2026:</strong> Tốc độ phân phối và trượt giá của thị trường ngày nay diễn ra vô cùng nhanh chóng. Khi một doanh nghiệp lớn công bố kết quả kinh doanh kém kỳ vọng, các lệnh bán bằng thuật toán có thể đẩy giá sập 20-30% chỉ trong vài giây. Nếu không thiết lập lệnh dừng lỗ tự động (systematic stops) từ trước và phụ thuộc vào việc "chờ hồi kỹ thuật để bán", nhà đầu tư chắc chắn sẽ phải chịu những khoản lỗ khổng lồ không thể phục hồi.</li>
+    </ul>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 20 &amp;middot; GÓC NHÌN ĐỐI LẬP</div>
+    <h2>Giao dịch theo quy tắc vs Đầu tư vĩ mô vs Đầu tư giá trị</h2>
+<table class="signal-matrix" style="width: 100%; border-collapse: collapse; font-size: 0.9rem;">
+  <thead>
+    <tr style="background-color: var(--surface);">
+      <th style="padding: 10px; border: 1px solid var(--border);">Khía cạnh</th>
+      <th style="padding: 10px; border: 1px solid var(--border); color: var(--accent-emerald);">CAN SLIM (Systematic Rules)</th>
+      <th style="padding: 10px; border: 1px solid var(--border); color: var(--accent-purple);">Đầu tư Vĩ mô Tùy ý (Macro Discretionary)</th>
+      <th style="padding: 10px; border: 1px solid var(--border); color: var(--accent-cyan);">Đầu tư Giá trị Graham-Buffett</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th style="padding: 10px; border: 1px solid var(--border); text-align: left;">Ra quyết định</th>
+      <td style="padding: 10px; border: 1px solid var(--border);">Hệ thống hóa hoàn toàn. Mua bán nghiêm ngặt theo các tín hiệu kỹ thuật (breakout, volume) và tăng trưởng cơ bản. <span class="page-ref">Ch 20, Rule 11 & 12</span></td>
+      <td style="padding: 10px; border: 1px solid var(--border);">Dựa trên phân tích vĩ mô (lãi suất, lạm phát, dòng tiền NHTW) để dự đoán chu kỳ lớn và chủ động luân chuyển tài sản.</td>
+      <td style="padding: 10px; border: 1px solid var(--border);">Định giá giá trị nội tại của doanh nghiệp. Mua khi thị giá thấp hơn nhiều so với giá trị thực (biên an toàn).</td>
+    </tr>
+    <tr>
+      <th style="padding: 10px; border: 1px solid var(--border); text-align: left;">Hành vi khi giá giảm</th>
+      <td class="bearish" style="padding: 10px; border: 1px solid var(--border);"><strong>Cắt lỗ lập tức tại 7-8%</strong>. Tuyệt đối không mua trung bình giá xuống dưới mọi hình thức. <span class="page-ref">Ch 20, Rule 12 & 23</span></td>
+      <td style="padding: 10px; border: 1px solid var(--border);">Đánh giá lại giả định vĩ mô. Có thể hedging rủi ro thông qua các công cụ phái sinh, quyền chọn phức tạp.</td>
+      <td class="bullish" style="padding: 10px; border: 1px solid var(--border);"><strong>Mua thêm (Averaging down)</strong> vì doanh nghiệp càng rẻ càng hấp dẫn. Nắm giữ dài hạn bất chấp biến động giá ngắn hạn.</td>
+    </tr>
+    <tr>
+      <th style="padding: 10px; border: 1px solid var(--border); text-align: left;">Sử dụng P/E</th>
+      <td style="padding: 10px; border: 1px solid var(--border);">Bỏ qua định kiến P/E rẻ. Siêu cổ phiếu thường xuất hiện ở P/E cao và sẽ tiếp tục cao hơn. <span class="page-ref">Ch 20 &middot; Key Reason 2</span></td>
+      <td style="padding: 10px; border: 1px solid var(--border);">Xem xét P/E trong mối tương quan với chu kỳ kinh tế và lãi suất vĩ mô để phân bổ tỷ trọng ngành.</td>
+      <td style="padding: 10px; border: 1px solid var(--border);">Ưu tiên P/E thấp hoặc P/B thấp để bảo đảm biên an toàn tài sản lớn và giảm thiểu khả năng thua lỗ.</td>
+    </tr>
+    <tr>
+      <th style="padding: 10px; border: 1px solid var(--border); text-align: left;">Kết hợp tối ưu</th>
+      <td colspan="3" class="opportunity" style="padding: 10px; border: 1px solid var(--border); text-align: center;">
+        <strong>Hệ thống hóa lai (Hybrid System):</strong> Sử dụng triết lý chất lượng doanh nghiệp của Buffett để lập danh sách theo dõi (Watchlist), quan sát xu hướng vĩ mô để xác định xu hướng lớn của Dalio, và dùng bộ quy tắc định thời điểm breakout/cắt lỗ 7-8% của O'Neil để thực thi giao dịch.
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 20 &amp;middot; RỦI RO &amp; PHẢN BIỆN</div>
+    <h2>Rủi ro quét cắt lỗ liên tục &amp; Chi phí trượt giá thực tế</h2>
+<div class="content-card">
+  <p>Mặc dù bộ 23 quy tắc của O'Neil cung cấp một hệ thống quản lý rủi ro xuất sắc, việc áp dụng chúng một cách máy móc trong thực tế cũng mang lại những trở ngại tâm lý và vận hành đáng kể:</p>
+
+  <div class="bullet-grid" style="margin-top: 1.5rem;">
+    <div class="bullet-card">
+      <div class="bullet-icon">✂️</div>
+      <h4>1. Rủi ro quét cắt lỗ liên tục (Whipsaw Risk)</h4>
+      <p>
+        Trong các giai đoạn thị trường biến động mạnh, đi ngang (choppy markets), các cổ phiếu bứt phá đỉnh thường gặp bẫy tăng giá giả (fakeouts) rồi quay đầu giảm sâu đột ngột. Việc cắt lỗ nghiêm ngặt 7-8% liên tiếp có thể dẫn đến hiện tượng **"tử vong bởi ngàn vết cắt" (death by a thousand cuts)**, bào mòn vốn nhanh chóng trước khi thị trường bước vào xu hướng tăng rõ ràng.
+      </p>
+    </div>
+
+    <div class="bullet-card">
+      <div class="bullet-icon">📉</div>
+      <h4>2. Chi phí trượt giá giao dịch (Slippage)</h4>
+      <p>
+        Quy tắc O'Neil yêu cầu hành động quyết liệt khi cổ phiếu giảm quá 7-8%. Trong các phiên hoảng loạn vĩ mô hoặc khoảng trống giảm giá (downward gaps) lúc mở cửa, lệnh bán của bạn có thể bị khớp ở mức giá thấp hơn nhiều so với điểm cắt lỗ dự kiến (ví dụ khớp âm 12-15% thay vì 8%). Trượt giá là một ma sát thực tế làm giảm tính chính xác của toán học bất đối xứng.
+      </p>
+    </div>
+
+    <div class="bullet-card">
+      <div class="bullet-icon">🤯</div>
+      <h4>3. Kiệt quệ cảm xúc & Áp lực tinh thần (Burnout)</h4>
+      <p>
+        Việc theo dõi bảng điện hàng ngày, liên tục đọc biểu đồ và đưa ra các quyết định cắt lỗ đòi hỏi năng lượng tinh thần rất lớn. Việc phải liên tục chấp nhận sai lầm và cắt lỗ (đôi khi chiếm 60-70% số lệnh giao dịch trong thị trường khó khăn) gây ra sự kiệt quệ cảm xúc, dẫn đến việc nhà đầu tư dễ bỏ cuộc ngay trước khi một chu kỳ siêu cổ phiếu xuất hiện.
+      </p>
+    </div>
+  </div>
+
+  <div class="callout" style="margin-top: 1.5rem; border-left-color: var(--accent-red); background-color: rgba(239, 68, 68, 0.05);">
+    <div class="callout-icon">⚠️</div>
+    <div class="callout-content">
+      <strong>Khắc phục thực tế:</strong> Để giảm thiểu rủi ro này, nhà đầu tư phải kiên nhẫn **chỉ giao dịch khi thị trường chung thực sự an toàn (Uptrend)**, giảm quy mô vị thế (position sizing) xuống mức thấp trong giai đoạn nhạy cảm để hạn chế thiệt hại ròng của tài khoản và bảo vệ tinh thần.
+    </div>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 20 &amp;middot; SƠ ĐỒ KHÁI NIỆM</div>
+    <h2>Bản đồ tri thức tích hợp hệ thống CAN SLIM</h2>
+<div class="content-card" style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%;">
+  <div class="mermaid" style="width: 100%; max-height: 70vh;">
+    graph TB
+        %% Foundation Concepts
+        F1["Ch 1-8: CAN SLIM Fundamental & Technical Selection"] --> C1["Chapter 20: Synthesis of 23 Golden Rules"]
+        F2["Ch 9: Market Trend & Distribution Analysis"] --> C1
+        F3["Ch 10-11: Risk Management & Stop Loss Rules"] --> C1
+        F4["Ch 16 & 19: Quantitative Database Screening"] --> C1
+
+        %% Chapter 20 Core Concepts
+        C1 --> A1["Overcoming the 4 Big Buying Obstacles"]
+        C1 --> A2["Subservience of Ego to Market Trend"]
+        C1 --> A3["Asymmetrical Risk-Reward Execution"]
+
+        %% Future Unlocks
+        A1 & A2 & A3 --> G1["Consistent Market Alpha & Financial Independence"]
+
+        %% Styling
+        style C1 fill:#8B7CFF,stroke:#2A2D33,color:#F7F7F5
+        style G1 fill:#10B981,stroke:#047857,color:#F7F7F5
+        style A2 fill:#F59E0B,stroke:#D97706,color:#F7F7F5
+        
+        classDef default fill:#F4F4F6,stroke:#D1D1D6,color:#1C1C1E;
+  </div>
+  
+  <div class="callout" style="margin-top: 1.5rem; width: 100%;">
+    <div class="callout-icon">📚</div>
+    <div class="callout-content">
+      <strong>Tổng kết tri thức:</strong> Chương 20 không giới thiệu khái niệm hoàn toàn mới, mà đóng vai trò là chiếc keo gắn kết toàn bộ các mảnh ghép tri thức độc lập từ các chương trước thành một khối thống nhất, mở khóa năng lực thực thi thực tế để chinh phục thị trường tài chính vĩ đại.
+    </div>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 20 &amp;middot; HƯỚNG DẪN THỰC THI</div>
+    <h2>Kế hoạch hành động 4 giai đoạn làm chủ bộ quy tắc</h2>
+<div class="phase-progress" style="margin-bottom: 2rem;">
+  <div class="phase active">P1: Ghi nhớ & Nhận diện (Tuần 1)</div>
+  <div class="phase">P2: Thử nghiệm thực tế (Tuần 2-4)</div>
+  <div class="phase">P3: Tích hợp hệ thống (Tháng 2-3)</div>
+  <div class="phase">P4: Kỷ luật sắt đá (Tháng 4+)</div>
+</div>
+
+<div class="content-card">
+  <div class="checklist">
+    <h3 style="color: var(--accent); margin-top: 0;">Lộ trình rèn luyện để trở thành nhà giao dịch chuyên nghiệp:</h3>
+    
+    <div style="margin-bottom: 1.2rem;">
+      <strong>Phase 1: Ghi nhớ & Nhận diện lỗi cũ (Tuần 1)</strong>
+      <ul>
+        <li>[ ] In bộ 23 quy tắc thực chiến và dán ngay cạnh góc làm việc hoặc bàn giao dịch của bạn.</li>
+        <li>[ ] Xem lại lịch sử giao dịch trong quá khứ để tự kiểm điểm xem mình thường xuyên mắc lỗi nào trong 4 cạm bẫy lớn (ví dụ: bẫy P/E rẻ hay bẫy bắt đáy cổ phiếu đang rơi).</li>
+      </ul>
+    </div>
+
+    <div style="margin-bottom: 1.2rem;">
+      <strong>Phase 2: Thử nghiệm lập kế hoạch giao dịch chuẩn (Tuần 2-4)</strong>
+      <ul>
+        <li>[ ] Viết ngắn gọn bộ quy tắc Mua/Bán của riêng bạn trên một trang giấy A4 duy nhất.</li>
+        <li>[ ] Áp dụng triệt để lệnh dừng lỗ tự động 7-8% cho toàn bộ các vị thế mua mới mở, tuyệt đối không di dời hoặc hủy bỏ lệnh dừng khi giá giảm.</li>
+        <li>[ ] Lập danh mục theo dõi (Watchlist) chỉ gồm các mã giá &ge; 15-20 USD và chỉ số RS &ge; 85.</li>
+      </ul>
+    </div>
+
+    <div style="margin-bottom: 1.2rem;">
+      <strong>Phase 3: Tích hợp kỷ luật & Tinh giản hóa (Tháng 2-3)</strong>
+      <ul>
+        <li>[ ] Đếm ngày phân phối thị trường hàng tuần để kiểm soát quy mô giải ngân vốn (giảm vốn khi thị trường có tín hiệu phân phối mạnh).</li>
+        <li>[ ] Thực hành quy trình mua trung bình giá lên (average up) theo tỷ trọng giảm dần trên các vị thế đã sinh lời ngay lập tức.</li>
+        <li>[ ] Rút toàn bộ vốn khỏi thị trường quyền chọn, phái sinh, trái phiếu hoặc penny dưới 10 USD để tập trung 100% sức lực vào siêu cổ phiếu tăng trưởng.</li>
+      </ul>
+    </div>
+
+    <div>
+      <strong>Phase 4: Loại bỏ cái tôi & Làm chủ cảm xúc (Tháng 4+)</strong>
+      <ul>
+        <li>[ ] Cắt lỗ tự động, nhanh chóng và nhẹ nhàng mà không có bất kỳ sự do dự hay cảm xúc nuối tiếc nào.</li>
+        <li>[ ] Thực hiện đánh giá lại toàn bộ hiệu suất danh mục sau một chu kỳ tăng/giảm kinh tế trọn vẹn.</li>
+        <li>[ ] Chia sẻ và hướng dẫn bộ 23 quy tắc này cho một người khác để củng cố sâu sắc tính kỷ luật của chính mình.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 20 &amp;middot; HÀNH ĐỘNG CUỐI CÙNG</div>
+    <h2>Hành động cuối cùng</h2>
+<div class="split-layout">
+  <div class="split-left" style="flex: 1.2;">
+    <ul class="action-list" style="padding: 0; list-style: none;">
+      <li class="action-item" style="margin-bottom: 1.5rem;">
+        <div>
+          <div class="action-headline">1. Thực thi kỷ luật cắt lỗ tự động 7-8% không ngoại lệ</div>
+          <div class="action-detail">
+            Cam kết thiết lập lệnh cắt lỗ tự động cho mọi giao dịch ngay khi mở vị thế. Chấp nhận những khoản lỗ nhỏ như một chi phí bảo hiểm thiết yếu để bảo vệ nguồn vốn lớn dài hạn.
+          </div>
+        </div>
+      </li>
+      <li class="action-item" style="margin-bottom: 1.5rem;">
+        <div>
+          <div class="action-headline">2. Dọn sạch cổ phiếu Penny dưới 10 USD và các giao dịch phái sinh</div>
+          <div class="action-detail">
+            Kiên quyết loại bỏ hoàn toàn các loại cổ phiếu đầu cơ giá rẻ và các công cụ quyền chọn phức tạp ra khỏi danh mục của bạn. Chỉ đầu tư vào các doanh nghiệp dẫn đầu có chất lượng tăng trưởng cao.
+          </div>
+        </div>
+      </li>
+      <li class="action-item">
+        <div>
+          <div class="action-headline">3. Theo dõi xu hướng thị trường chung hàng ngày</div>
+          <div class="action-detail">
+            Đọc chuyên mục "The Big Picture" mỗi ngày và để thị trường khách quan dẫn lối. Hãy rèn luyện sự kiên nhẫn, tinh thần tích cực và không bao giờ bỏ cuộc.
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <div class="split-right" style="flex: 0.8; display: flex; align-items: center; justify-content: center;">
+    <figure class="image-slot hero" style="width: 100%;">
+      <div class="image-prompt">
+        <span class="image-prompt-label">AI Image Prompt — DALL-E 3 / Midjourney</span>
+        <p class="image-prompt-text">"A giant, ancient, majestic oak tree, strong deep roots in soil, sunbeams breaking through leaves, golden hour, wide cinematic landscape, oil painting style, green and golden amber accents #059669 #D97706"</p>
+        <span class="image-prompt-hint">Paste this into ChatGPT/DALL-E/Midjourney, save as images/ch20_oaktree.png, and replace this block with &lt;img src="images/ch20_oaktree.png" alt="Majestic oak tree"&gt;</span>
+      </div>
+    </figure>
+  </div>
+</div>
+
+  </section>
+
+</div>
+
+<div class="nav-controls">
+  <button class="nav-btn" id="prevBtn" onclick="prevSlide()" aria-label="Previous slide">&#8592;</button>
+  <div class="counter" id="counter" aria-live="polite">1 / 1</div>
+  <button class="nav-btn" id="nextBtn" onclick="nextSlide()" aria-label="Next slide">&#8594;</button>
+</div>
+
+<script src="common.js"></script>
+</body>
+</html>

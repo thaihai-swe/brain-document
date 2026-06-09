@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How to Make Money in Stocks — Chapter 13</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="common.css">
+<script src="https://cdn.jsdelivr.net/npm/@panzoom/panzoom@4.5.1/dist/panzoom.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11.10.0/dist/mermaid.min.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div class="progress-bar" id="progressBar"></div>
+
+<div class="chapter-menu">
+  <button class="menu-btn" id="chapterMenuBtn" onclick="toggleChapterMenu()" aria-haspopup="true" aria-expanded="false">Chapters &#9662;</button>
+  <div class="chapter-menu-panel" id="chapterMenuPanel" role="menu"></div>
+</div>
+
+<div class="slide-container" id="slideContainer">
+
+  <section class="slide" aria-hidden="false">
+<h1>How to Make Money in Stocks</h1>
+<p class="subtitle">Chương 13: 21 Sai Lầm Đắt Giá Hầu Hết Các Nhà Đầu Tư Thường Mắc Phải<br><span style="font-size: 0.9em; opacity: 0.85;">(Twenty-One Costly Common Mistakes Most Investors Make)</span></p>
+
+<figure class="image-slot hero">
+  <div class="image-prompt">
+    <span class="image-prompt-label">AI Image Prompt — Giới hạn quota Image-gen của hệ thống tạm thời hết</span>
+    <p class="image-prompt-text">"A broken hand-held mirror lying on top of a pile of old stock certificates and charts, dramatic warm light catching the cracks, moody shadow, high contrast, 8k."</p>
+    <span class="image-prompt-hint">Bạn có thể tạo ảnh trên Midjourney, lưu dưới tên 'ch13_title_hero.png' vào thư mục 'images/' và thay thế khối HTML này bằng thẻ &lt;img src="images/ch13_title_hero.png"&gt;</span>
+  </div>
+</figure>
+
+<div class="meta-grid">
+  <div class="meta-item">
+    <div class="meta-label">Tác giả</div>
+    <div class="meta-value">William J. O'Neil</div>
+  </div>
+  <div class="meta-item">
+    <div class="meta-label">Độ sâu phân tích</div>
+    <div class="meta-value">DEEP+ Mode (24 Slides)</div>
+  </div>
+  <div class="meta-item">
+    <div class="meta-label">Đối tượng mục tiêu</div>
+    <div class="meta-value">Nhà đầu tư cá nhân</div>
+  </div>
+  <div class="meta-item">
+    <div class="meta-label">Ngôn ngữ</div>
+    <div class="meta-value">Song ngữ Anh - Việt</div>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide chapter-divider">
+<div class="chapter-number">Chương 13</div>
+<h2>21 Sai Lầm Chí Tử Của Nhà Đầu Tư</h2>
+<p class="chapter-meta">Ước tính thời gian đọc: 45 phút (chế độ DEEP+) &middot; Độ khó: Cao &middot; Khái niệm chính: Tự phân tích sai lầm (Postmortem Analysis), Tẩy não thói quen cũ (Unlearning), Bẫy gồng lỗ & trung bình giá xuống, Bẫy bắt dao rơi (falling knives), Cơn nghiện penny stocks, Bẫy cổ tức & P/E thấp, Lắng nghe mách nước (tips/rumors), Lạm dụng lệnh giới hạn (limit orders), Kỷ luật khắc chế cái tôi (Ego)</p>
+
+<figure class="image-slot hero">
+  <div class="image-prompt">
+    <span class="image-prompt-label">AI Image Prompt — Giới hạn quota Image-gen của hệ thống tạm thời hết</span>
+    <p class="image-prompt-text">"A clean school blackboard with one big red chalk circle highlighting a mathematical error, dusty chalkboard texture, soft classroom side lighting, cinematic composition."</p>
+    <span class="image-prompt-hint">Bạn có thể tạo ảnh trên Midjourney, lưu dưới tên 'ch13_divider_hero.png' vào thư mục 'images/' và thay thế khối HTML này bằng thẻ &lt;img src="images/ch13_divider_hero.png"&gt;</span>
+  </div>
+</figure>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 13 &amp;middot; TỔNG QUAN TRỰC QUAN 1</div>
+    <h2>Chu kỳ lặp lại sai lầm của nhà đầu tư nghiệp dư</h2>
+<div class="mermaid">
+graph TD
+    A["Giai đoạn 1: Mua bừa bãi <br> (Mách nước, tin đồn, penny giá rẻ, không dùng đồ thị)"] --> B["Giai đoạn 2: Giá cổ phiếu quay đầu giảm <br> (Không chấp nhận cắt lỗ 7-8%, ôm hy vọng ảo)"]
+    B --> C["Giai đoạn 3: Mua trung bình giá xuống <br> (Ném thêm tiền mặt để cố hạ giá vốn vị thế lỗi)"]
+    C --> D["Giai đoạn 4: Thua lỗ nặng & Tê liệt tâm lý <br> (Lỗ 30-50%, mất hết dũng khí và sự tự tin giao dịch)"]
+    D --> E["Giai đoạn 5: Bán tháo ngay đáy hoặc Bỏ cuộc <br> (Đổ lỗi cho thị trường, không chịu nhìn nhận sai lầm)"]
+    E --> A["Lặp lại vòng lặp hỏng: Không làm hậu phân tích, tiếp tục thói quen cũ"]
+    
+    style A fill:#4F46E5,stroke:#2A2D33,color:#F7F7F5
+    style E fill:#DC2626,stroke:#2A2D33,color:#F7F7F5
+</div>
+
+<div class="callout" style="margin-top: 1rem; border-color: var(--accent-red);">
+  <div class="callout-icon">⚠️</div>
+  <div class="callout-content">
+    <strong>Tác hại của việc củng cố thói quen xấu (The Reinforcement of Bad Habits):</strong> William O'Neil khẳng định rằng số năm kinh nghiệm trên thị trường có thể trở nên cực kỳ độc hại nếu nó chỉ liên tục củng cố các thói quen xấu của bạn. Nếu không chịu "unlearn" (gạt bỏ) những ngộ nhận cũ và nghiên cứu nhật ký thua lỗ, bạn sẽ mãi bị giam cầm trong vòng lặp thua lỗ cơ học này. <span class="page-ref">Ch 13 &middot; "CHAPTER 13"</span>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 13 &amp;middot; TỔNG QUAN TRỰC QUAN 2</div>
+    <h2>Bản đồ phân loại hệ thống 21 sai lầm chí tử</h2>
+<div class="mermaid">
+graph TD
+    A["PHÂN LOẠI 21 SAI LẦM CHÍ TỬ (Classification of 21 Mistakes)"] --> B["I. Quản trị Rủi ro & Cắt lỗ <br> (Mistakes 1, 2, 3, 16)"]
+    A --> C["II. Tiêu chí chọn lọc & Đi vốn <br> (Mistakes 5, 10, 12, 14)"]
+    A --> D["III. Kỹ thuật đồ thị & Đặt lệnh <br> (Mistakes 4, 9, 19)"]
+    A --> E["IV. Quản trị Tâm lý & Kỷ luật <br> (Mistakes 6, 7, 8, 11, 15, 17, 18, 20, 21)"]
+    
+    B --> F["HỆ QUẢ: Bào mòn vốn gốc ròng nhanh chóng"]
+    C --> F
+    D --> F
+    E --> F
+    
+    style A fill:#4F46E5,stroke:#2A2D33,color:#F7F7F5
+    style B fill:#DC2626,stroke:#2A2D33,color:#F7F7F5
+    style E fill:#D97706,stroke:#2A2D33,color:#F7F7F5
+</div>
+
+<div class="callout" style="margin-top: 1rem; border-color: var(--accent-orange);">
+  <div class="callout-icon">💡</div>
+  <div class="callout-content">
+    <strong>Bản đồ định vị điểm yếu cá nhân:</strong> Việc nhóm 21 sai lầm thành 4 nhóm cốt lõi giúp nhà đầu tư dễ dàng làm "khám nghiệm giao dịch" (postmortem). Hãy đối chiếu nhật ký giao dịch của bản thân để xem mình đang mắc lỗi nhiều nhất ở nhóm nào để tập trung khắc phục điểm yếu đó trước tiên. <span class="page-ref">Ch 13 &middot; "CHAPTER 13"</span>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 13 &amp;middot; TÓM TẮT CHƯƠNG</div>
+    <h2>Tóm tắt cấu trúc khắc phục sai lầm</h2>
+<div class="content-card">
+  <div class="summary-text">
+    <p><strong>Bối cảnh (Setup):</strong> Tại sao phần lớn nhà đầu tư trên thị trường chứng khoán, từ những người mới tham gia đến những người có hàng chục năm kinh nghiệm, đều gặp kết quả thua lỗ hoặc tầm thường? Nguyên nhân cốt lõi không nằm ở việc thiếu cơ hội chiến thắng, mà nằm ở việc họ liên tục mắc phải và củng cố các sai lầm kinh điển mà không hề hay biết hoặc không chịu sửa chữa.</p>
+    <p><strong>Luận điểm chính (Argument):</strong> O'Neil trích dẫn câu nói của HLV Knute Rockne: <strong>"Hãy cải thiện các điểm yếu cho đến khi chúng trở thành điểm mạnh của bạn."</strong> 98% nhà đầu tư thất bại vì họ không bao giờ dành thời gian nghiêm túc để làm "khám nghiệm giao dịch" (postmortem analysis) đối với các thương vụ thua lỗ của chính mình. Đầu tư thành công đòi hỏi nhà đầu tư phải dũng cảm loại bỏ (unlearn) những thói quen xấu cũ và xây dựng hệ thống quy tắc mua bán khách quan, tôn trọng hành vi cung cầu thực tế của thị trường thay vì dựa vào cảm xúc. Trọng tâm của việc này là khắc phục triệt để 21 sai lầm chí tử, đặc biệt là lỗi gồng lỗ (bắt buộc cắt lỗ ở mốc 7%-8%), trung bình giá xuống, ham rẻ mua penny stocks dưới $15, lầm tưởng về cổ tức của cổ phiếu suy thoái, nghe ngóng mách nước tin đồn (tips), và quá chi li đặt lệnh giới hạn (limit orders).</p>
+    <p><strong>Bằng chứng (Evidence):</strong> Thảm họa lừa đảo hàng tỷ đô của Bernie Madoff và sự sụp đổ của các tập đoàn khổng lồ Enron, WorldCom, Citigroup, AIG năm 2008 là bằng chứng đanh thép cho thấy sự nguy hiểm của niềm tin mù quáng và chiến lược mua - nắm giữ dài hạn mà không dùng đồ thị kỹ thuật. Case study Xerox sụt giảm từ $34 về $6 hay Cisco sập từ $50 về $16 vào năm 2000 vạch trần cạm bẫy tàn khốc của việc bắt đáy cổ phiếu đang rơi (bắt dao rơi). <span class="page-ref">Ch 13 &middot; "CHAPTER 13"</span></p>
+    <p><strong>Hệ quả (Implications):</strong> Nhà đầu tư phải tự chịu trách nhiệm 100% về tài sản của mình (bao gồm cả tài khoản tự doanh, quỹ tương hỗ, 401k). Định kỳ hàng năm phải in đồ thị các giao dịch thua lỗ, dùng bút đỏ khoanh tròn các điểm mua bán sai lầm để tự rút ra quy tắc sửa sai cá nhân và tuân thủ chúng một cách cơ học như robot.</p>
+    <p><strong>Tranh luận (Controversy):</strong> Thách thức trực tiếp lời khuyên phổ biến của các chuyên gia tự lực (self-help) "chỉ tập trung vào điểm mạnh". CAN SLIM khẳng định trong đầu tư tài chính, chính điểm yếu và lỗi hệ thống mới là thứ tiêu diệt tài khoản của bạn. Phản bác tư duy đầu tư giá trị khuyên mua trung bình giá xuống để có giá vốn rẻ hơn.</p>
+    <p><strong>Mối liên kết (Connection):</strong> Kết nối chặt chẽ với Chương 10 (quy tắc dừng lỗ 8% chống lại lỗi gồng lỗ), Chương 2 (kỹ thuật đọc đồ thị chống lại lỗi sợ mua cổ phiếu vượt đỉnh pivot), và Chương 12 (phân bổ tập trung chống lại lỗi đa dạng hóa tràn lan).</p>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 13 &amp;middot; Ý TƯỞNG CỐT LÕI</div>
+    <h2>Ý tưởng cốt lõi</h2>
+<div class="big-idea-card">
+  <div class="big-idea-quote">
+    "By far the greatest mistake that 98% of all investors make is never spending any real time trying to learn where they made their mistakes in buying and selling stock... You must unlearn many things you thought you knew that ain’t so, stop doing them, and start learning new and better rules."
+  </div>
+  <div class="big-idea-translation">
+    "Sai lầm lớn nhất của 98% nhà đầu tư là không bao giờ dành thời gian nghiêm túc để tìm hiểu xem họ đã sai lầm ở đâu khi mua bán cổ phiếu... Bạn phải gạt bỏ hoàn toàn nhiều điều bạn từng nghĩ là đúng nhưng thực tế không phải vậy, ngừng làm chúng, và bắt đầu học những quy tắc mới tốt hơn."
+  </div>
+  <div class="big-idea-core">
+    <strong>Ý TƯỞNG CỐT LÕI:</strong> Sự khác biệt giữa người chiến thắng và kẻ thua cuộc trên thị trường chứng khoán không nằm ở IQ, mà nằm ở <strong>tính dũng cảm đối diện với thất bại cá nhân</strong>. Đừng trốn tránh hay đổ lỗi cho ngoại cảnh. Hãy coi mỗi khoản thua lỗ là một bài học đắt giá cần được khám nghiệm tỉ mỉ. Bằng cách nhận diện và sửa chữa từng thói quen xấu của mình, bạn sẽ biến điểm yếu thành điểm mạnh và mở cánh cửa dẫn tới thành công bền vững.
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 13 &amp;middot; BÀI HỌC CHỦ CHỐT</div>
+    <h2>Bài học chủ chốt</h2>
+<div class="takeaway-list">
+  <div class="takeaway-item">
+    <div class="takeaway-badge">1</div>
+    <div class="takeaway-content">
+      <strong>Khám nghiệm tử thi giao dịch thua lỗ (Postmortem Analysis)</strong>
+      <div class="takeaway-detail">
+        <ul>
+          <li><strong>Ý nghĩa:</strong> Sự tiến bộ thực sự chỉ bắt đầu khi bạn dũng cảm vượt qua cái tôi lớn để đối diện với sai lầm của chính mình. Phải in biểu đồ các lệnh thua lỗ lớn nhất và dùng bút đỏ tìm ra nguyên nhân cốt lõi để viết quy tắc sửa sai cá nhân.</li>
+          <li><strong>Bằng chứng:</strong> O'Neil khẳng định: <em>"Kinh nghiệm sẽ trở nên có hại nếu nó chỉ liên tục củng cố các thói quen xấu của bạn."</em> Ông tự phân tích các sai lầm Certain-teed (1961) của mình để hoàn thiện hệ thống bán chốt lời. <span class="page-ref">Ch 13 &middot; "CHAPTER 13"</span></li>
+          <li><strong>Ứng dụng:</strong> Thiết lập thói quen rà soát định kỳ hàng năm: in biểu đồ các lệnh thua lỗ lớn nhất và tự viết quy tắc tự khắc phục sai lầm.</li>
+          <li><strong>Cảnh báo:</strong> Việc đổ lỗi cho thị trường, môi giới hoặc hệ thống sẽ đảm bảo rằng bạn sẽ lặp lại chính xác những sai lầm đó ở chu kỳ sau.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="takeaway-item">
+    <div class="takeaway-badge">2</div>
+    <div class="takeaway-content">
+      <strong>Ngăn chặn bẫy gồng lỗ và trung bình giá xuống (Stop Loss & No Averaging Down)</strong>
+      <div class="takeaway-detail">
+        <ul>
+          <li><strong>Ý nghĩa:</strong> Cắt lỗ nhanh ở mốc 7%-8% là quy tắc thép bảo vệ tài khoản khỏi các khoản sụt giảm sâu tàn khốc. Tuyệt đối cấm mua trung bình giá xuống (averaging down) vì đó là hành vi ném thêm tiền tốt cứu lấy vị thế tồi.</li>
+          <li><strong>Bằng chứng:</strong> Các ví dụ bắt đáy Cisco ở $50 hay Xerox ở $34 rồi sụp đổ thảm khốc chứng minh bẫy bắt dao rơi tàn bạo như thế nào. <span class="page-ref">Ch 13 &middot; "CHAPTER 13 &middot; Mistake 1, 2, 3"</span></li>
+          <li><strong>Ứng dụng:</strong> Đặt dừng lỗ tự động ở mức tối đa 7%-8% dưới giá mua và cam kết tuyệt đối không bao giờ mua thêm khi giá cổ phiếu đang sụt giảm.</li>
+          <li><strong>Cảnh báo:</strong> Trung bình giá xuống các cổ phiếu đang rơi tự do là cách nhanh nhất để biến một khoản lỗ nhỏ thành thảm họa tài chính phá hủy hoàn toàn tài khoản.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="takeaway-item">
+    <div class="takeaway-badge">3</div>
+    <div class="takeaway-content">
+      <strong>Chống lại bẫy ham rẻ cổ phiếu Penny dưới $15 (Avoiding Penny Stocks Trap)</strong>
+      <div class="takeaway-detail">
+        <ul>
+          <li><strong>Ý nghĩa:</strong> Nhà đầu tư cá nhân thường ham rẻ mua số lượng lớn cổ phiếu $2, $5, $10 để cảm thấy "có nhiều cổ phiếu". Thực tế, cổ phiếu rẻ vì nó kém chất lượng, bị thao túng, không có dòng tiền tổ chức nâng đỡ và có chênh lệch Bid/Ask cực lớn.</li>
+          <li><strong>Bằng chứng:</strong> Thống kê lịch sử 125 năm siêu cổ của O'Neil cho thấy 80%+ siêu cổ phiếu bứt phá breakout từ nền giá dao động từ $30 đến $50. Cổ phiếu penny dưới $15 mang rủi ro lớn do spread bid/ask chiếm tới 5% giá trị vị thế. <span class="page-ref">Ch 13 &middot; "CHAPTER 13 &middot; Mistake 10"</span></li>
+          <li><strong>Ứng dụng:</strong> Đặt bộ lọc cứng loại bỏ hoàn toàn cổ phiếu dưới $15 ra khỏi danh mục theo dõi và tập trung vốn mua số lượng ít cổ phiếu giá cao chất lượng tốt.</li>
+          <li><strong>Cảnh báo:</strong> Mua 1000 cổ phiếu giá $5 rủi ro và kém hiệu quả hơn rất nhiều so với mua 100 cổ phiếu giá $50 của doanh nghiệp dẫn đầu thị trường.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="takeaway-item">
+    <div class="takeaway-badge">4</div>
+    <div class="takeaway-content">
+      <strong>Gạt bỏ mách nước tin đồn và cấm mặc cả giá lệnh Limit (Avoiding Tips & Limit Orders)</strong>
+      <div class="takeaway-detail">
+        <ul>
+          <li><strong>Ý nghĩa:</strong> Đừng bao giờ đặt cược tiền bạc vào tin đồn, mách nước (tips) từ người thân hoặc chuyên gia TV. Đồng thời, cấm đặt lệnh Limit chi li để lỡ mất siêu cổ phiếu chỉ vì vài xu lẻ.</li>
+          <li><strong>Bằng chứng:</strong> Thảm họa Madoff lừa đảo hàng tỷ đô chứng minh sự nguy hiểm của việc nghe ngóng thông tin mờ ám. Việc so đo đặt lệnh limit thấp hơn vài phần tư đô có thể khiến bạn bỏ lỡ siêu cổ tăng 300% hoặc bị kẹt lại không bán được khi sụp đổ. <span class="page-ref">Ch 13 &middot; "CHAPTER 13 &middot; Mistake 11, 19"</span></li>
+          <li><strong>Ứng dụng:</strong> Chỉ mua bán dựa trên các dữ liệu đồ thị khách quan và quy tắc rõ ràng. Sử dụng lệnh thị trường (market order) khi giao dịch các siêu cổ phiếu.</li>
+          <li><strong>Cảnh báo:</strong> Việc quá chi li mặc cả vài xu với thị trường sẽ khiến bạn mất đi bức tranh toàn cảnh và gánh chịu tổn thất lớn về cơ hội.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 13 &amp;middot; TRÍCH DẪN ĐẮT GIÁ</div>
+    <h2>Trích dẫn đắt giá</h2>
+<div class="quote-block" style="margin-bottom: 2rem;">
+  <p class="quote-text">“Build up your weaknesses until they become your strong points.”</p>
+  <p class="quote-context"><strong>— Knute Rockne</strong>, huấn luyện viên bóng đá huyền thoại của Notre Dame, được O'Neil dẫn chiếu. <span class="page-ref">Ch 13 &middot; "CHAPTER 13"</span></p>
+  <div style="font-size: 0.95rem; color: var(--text-secondary); margin-top: 0.5rem; line-height: 1.5;">
+    <strong>Bản dịch:</strong> "Hãy cải thiện các điểm yếu của bạn cho đến khi chúng trở thành điểm mạnh của bạn."<br>
+    <strong>Phân tích:</strong> Phản bác lại triết lý tự lực (self-help) thông thường khuyên chỉ tập trung vào thế mạnh. Trong đầu tư chứng khoán, điểm yếu của bạn mới là thứ quyết định sự sinh tồn của tài khoản. Chỉ cần lặp lại một sai lầm chí mạng (như không chịu cắt lỗ), toàn bộ thành quả từ các điểm mạnh khác của bạn đều sẽ bị xóa sạch.
+  </div>
+</div>
+
+<div class="quote-block" style="margin-bottom: 2rem;">
+  <p class="quote-text">“...you must unlearn many things you thought you knew that ain’t so, stop doing them, and start learning new and better rules and methods to use in the future.”</p>
+  <p class="quote-context"><strong>— William J. O'Neil</strong>, về sự cần thiết của việc gạt bỏ định kiến cũ. <span class="page-ref">Ch 13 &middot; "CHAPTER 13"</span></p>
+  <div style="font-size: 0.95rem; color: var(--text-secondary); margin-top: 0.5rem; line-height: 1.5;">
+    <strong>Bản dịch:</strong> "...bạn phải gạt bỏ hoàn toàn nhiều điều bạn từng nghĩ là đúng nhưng thực tế không phải vậy, ngừng làm chúng, và bắt đầu học những quy tắc và phương pháp mới tốt hơn để sử dụng trong tương lai."<br>
+    <strong>Phân tích:</strong> Nhà đầu tư cá nhân thường bước vào thị trường với hàng loạt ngộ nhận có hại như "mua rẻ trung bình giá xuống" hay "mua cổ phiếu quen thuộc ăn cổ tức". Sự tiến bộ đòi hỏi quá trình "tẩy não định kiến" (unlearning) đau đớn để thay thế bằng các quy tắc khách quan dựa trên sự thực nghiệm.
+  </div>
+</div>
+
+<div class="quote-block">
+  <p class="quote-text">“Without exception, you should cut every single loss short. The rule I have taught in classes all across the nation for 45 years is to always cut all your losses immediately when a stock falls 7% or 8% below your purchase price.”</p>
+  <p class="quote-context"><strong>— William J. O'Neil</strong>, nhấn mạnh tính tuyệt đối của quy tắc cắt lỗ. <span class="page-ref">Ch 13 &middot; "CHAPTER 13 &middot; Mistake 1"</span></p>
+  <div style="font-size: 0.95rem; color: var(--text-secondary); margin-top: 0.5rem; line-height: 1.5;">
+    <strong>Bản dịch:</strong> "Không có ngoại lệ, bạn phải cắt ngắn mọi khoản thua lỗ duy nhất. Quy tắc tôi đã dạy trong các lớp học trên khắp cả nước suốt 45 năm qua là luôn luôn cắt giảm tất cả các khoản lỗ ngay lập tức khi một cổ phiếu giảm 7% hoặc 8% dưới giá mua của bạn."<br>
+    <strong>Phân tích:</strong> O'Neil coi việc cắt lỗ 7%-8% là quy tắc phòng thủ thiêng liêng nhất của CAN SLIM. Không có chỗ cho sự do dự, hy vọng hay phân tích cơ bản lúc này. Việc tuân thủ quy tắc dừng lỗ cơ học không ngoại lệ là điều kiện tiên quyết duy nhất để nhà đầu tư sinh tồn qua mọi cuộc khủng hoảng.
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 13 &amp;middot; MÔ HÌNH TƯ DUY 1</div>
+    <h2>Mô hình 1: Nguyên lý mắt xích yếu và chiến lược Rockne</h2>
+<div class="split-layout">
+  <div class="split-left" style="padding-right: 1rem; border-right: 1px solid var(--border);">
+    <h3 style="color: var(--accent-purple); margin-top: 0;">Mô hình 1: Nguyên lý mắt xích yếu (The Chain Link Principle)</h3>
+    <p style="font-size: 0.95rem; line-height: 1.5;">
+      Huấn luyện viên Knute Rockne khuyên: <em>"Hãy rèn luyện điểm yếu cho đến khi chúng trở thành thế mạnh."</em> Trong kỹ thuật và đầu tư tài chính, điều này tương đương với <strong>Nguyên lý Mắt xích yếu</strong>.
+    </p>
+    <div class="callout" style="border-color: var(--accent-purple); margin-top: 1rem; padding: 0.8rem;">
+      <strong>Định luật:</strong> Sức mạnh chịu lực của một sợi xích được quyết định bởi mắt xích yếu nhất của nó, chứ không phải các mắt xích mạnh nhất. Nếu sợi xích có 9 mắt xích siêu bền nhưng có 1 mắt xích bị nứt rỉ sét, sợi xích sẽ đứt ngay tại mắt xích yếu đó khi gặp áp lực lớn.
+    </div>
+  </div>
+  
+  <div class="split-right" style="padding-left: 1rem;">
+    <h4 style="color: var(--accent-emerald); margin-top: 0;">Áp dụng vào Hệ thống Giao dịch</h4>
+    <p style="font-size: 0.85rem; line-height: 1.4; margin-top: 0.5rem;">
+      Nhà đầu tư thường dành 90% thời gian để tối ưu hóa khả năng chọn cổ phiếu bùng nổ (thế mạnh), nhưng lờ đi quy tắc dừng lỗ và kỷ luật bán (điểm yếu).
+    </p>
+    <ul style="font-size: 0.85rem; padding-left: 1.2rem; line-height: 1.5; margin: 0.5rem 0;">
+      <li><strong>Hủy diệt NAV:</strong> Chỉ cần bạn mắc 1 sai lầm chí mạng duy nhất (ví dụ: gồng lỗ sâu hoặc trung bình giá xuống), toàn bộ lợi nhuận kiếm được từ 9 thương vụ thành công trước đó đều sẽ bị thổi bay trong nháy mắt.</li>
+      <li><strong>Hành động sửa sai:</strong> Nhận diện "mắt xích rỉ sét" của bản thân (do dự cắt lỗ, ham mua penny rẻ, nghe ngóng mách nước) và thiết lập quy tắc dừng tự động để loại bỏ hoàn toàn yếu tố cảm xúc con người.</li>
+    </ul>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 13 &amp;middot; MÔ HÌNH TƯ DUY 2</div>
+    <h2>Mô hình 2: Ngộ nhận về kinh nghiệm và củng cố thói quen xấu</h2>
+<div class="split-layout">
+  <div class="split-left" style="padding-right: 1rem; border-right: 1px solid var(--border);">
+    <h3 style="color: var(--accent-purple); margin-top: 0;">Mô hình 2: Ngộ nhận về Kinh nghiệm (The Experience Fallacy)</h3>
+    <p style="font-size: 0.95rem; line-height: 1.5;">
+      Phần lớn mọi người tin rằng thời gian tham gia thị trường càng lâu thì kinh nghiệm càng nhiều và kết quả sẽ tốt hơn. O'Neil đập tan định kiến này: <strong>"Kinh nghiệm là có hại nếu nó liên tục củng cố các thói quen xấu của bạn."</strong>
+    </p>
+    <div class="callout" style="border-color: var(--accent-purple); margin-top: 1rem; padding: 0.8rem;">
+      <strong>Sự thật:</strong> Nếu bạn đầu tư 10 năm mà vẫn gồng lỗ sâu, trung bình giá xuống và nghe ngóng tin đồn, bạn không hề có 10 năm kinh nghiệm. Bạn chỉ có <strong>1 năm kinh nghiệm mắc lỗi được lặp đi lặp lại 10 lần</strong>.
+    </div>
+  </div>
+  
+  <div class="split-right" style="padding-left: 1rem;">
+    <h4 style="color: var(--accent-emerald); margin-top: 0;">Bẫy phản hồi ngẫu nhiên (Random Reinforcement)</h4>
+    <p style="font-size: 0.85rem; line-height: 1.4; margin-top: 0.5rem;">
+      Tại sao các thói quen xấu lại khó bỏ đến vậy? Đó là do cơ chế phản hồi ngẫu nhiên của thị trường:
+    </p>
+    <ul style="font-size: 0.85rem; padding-left: 1.2rem; line-height: 1.5; margin: 0.5rem 0;">
+      <li><strong>Ảo tưởng trong Uptrend:</strong> Trong thị trường giá lên mạnh mẽ, các hành vi sai lầm như gồng lỗ sâu hay mua trung bình giá xuống thỉnh thoảng vẫn mang lại lợi nhuận do dòng nước vĩ mô nâng mọi con thuyền lên.</li>
+      <li><strong>Mỏ neo thói quen xấu:</strong> Bộ não của bạn nhận được tín hiệu "được thưởng" cho hành vi sai lầm đó, tạo ra mỏ neo thói quen cực kỳ độc hại.</li>
+      <li><strong>Hủy diệt trong Bear market:</strong> Khi thị trường gấu thực sự ập tới, thói quen gồng lỗ cũ sẽ giữ chân bạn lại cho đến khi tài khoản sụt giảm 80-90% và không bao giờ hồi phục.</li>
+    </ul>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 13 &amp;middot; MÔ HÌNH TƯ DUY 3</div>
+    <h2>Mô hình 3: Bẫy cái tôi cá nhân vs Sự khách quan của thị trường</h2>
+<div class="split-layout">
+  <div class="split-left" style="padding-right: 1rem; border-right: 1px solid var(--border);">
+    <h3 style="color: var(--accent-purple); margin-top: 0;">Mô hình 3: Cái tôi cá nhân vs Sự khách quan của thị trường</h3>
+    <p style="font-size: 0.95rem; line-height: 1.5;">
+      Bản năng tự nhiên của con người là muốn bảo vệ lòng tự trọng của bản thân. Việc chấp nhận cắt lỗ 8% đồng nghĩa với việc thừa nhận: <strong>"Tôi đã sai"</strong>.
+    </p>
+    <div class="callout" style="border-color: var(--accent-purple); margin-top: 1rem; padding: 0.8rem;">
+      <strong>Bẫy cái tôi (The Ego Trap):</strong> Để trốn tránh cảm giác thất bại cá nhân, nhà đầu tư chọn cách ôm chặt cổ phiếu và nuôi hy vọng ảo. Họ muốn chứng minh mình đúng hơn là muốn kiếm được tiền ròng.
+    </div>
+  </div>
+  
+  <div class="split-right" style="padding-left: 1rem;">
+    <h4 style="color: var(--accent-emerald); margin-top: 0;">Sự thật khách quan của thị trường</h4>
+    <p style="font-size: 0.85rem; line-height: 1.4; margin-top: 0.5rem;">
+      Để trở thành nhà giao dịch chuyên nghiệp, bạn phải chấp nhận các sự thật khách quan sau:
+    </p>
+    <ul style="font-size: 0.85rem; padding-left: 1.2rem; line-height: 1.5; margin: 0.5rem 0;">
+      <li><strong>Cổ phiếu không có cảm xúc:</strong> Cổ phiếu không hề biết hay quan tâm đến việc bạn đang sở hữu nó, cũng không biết giá vốn bạn mua là bao nhiêu. Nó chỉ phản ứng theo quy luật cung cầu của dòng tiền tổ chức lớn.</li>
+      <li><strong>Cắt lỗ là chi phí vận hành:</strong> Hãy coi khoản lỗ 7%-8% như chi phí mua bảo hiểm rủi ro hoặc chi phí dọn dẹp hàng tồn kho của một thương nhân kinh doanh hàng hóa thông minh.</li>
+      <li><strong>Buông bỏ định kiến:</strong> Hãy tập trung vào việc kiếm tiền ròng một cách khách quan thay vì chi li cố chấp cãi nhau với xu hướng giảm của đồ thị giá.</li>
+    </ul>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 13 &amp;middot; SỐ LIỆU &amp; THỐNG KÊ</div>
+    <h2>Bất lợi toán học chênh lệch Bid/Ask và thị giá siêu cổ</h2>
+<div class="split-layout">
+  <div class="split-left" style="padding-right: 1rem; border-right: 1px solid var(--border); flex: 1.1;">
+    <h3 style="color: var(--accent-purple); margin-top: 0;">Toán học đằng sau bẫy chênh lệch Bid/Ask</h3>
+    <p style="font-size: 0.9rem; line-height: 1.5; margin-bottom: 0.8rem;">
+      William O'Neil chứng minh bằng con số cụ thể tại sao việc mua cổ phiếu Penny giá rẻ là bất lợi cực lớn về mặt toán học giao dịch:
+    </p>
+    <table style="width: 100%; border-collapse: collapse; font-size: 0.8rem; text-align: left;">
+      <thead>
+        <tr style="border-bottom: 2px solid var(--border); background-color: rgba(255,255,255,0.02);">
+          <th style="padding: 0.5rem; color: var(--text-secondary);">Thông số so sánh</th>
+          <th style="padding: 0.5rem; color: var(--accent-red); text-align: center;">Cổ phiếu Penny ($5)</th>
+          <th style="padding: 0.5rem; color: var(--accent-emerald); text-align: center;">Cổ phiếu cao cấp ($50)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom: 1px solid var(--border);">
+          <td style="padding: 0.5rem; font-weight: bold;">Chênh lệch Bid/Ask mặc định</td>
+          <td style="padding: 0.5rem; text-align: center;">$0.25 (25 xu)</td>
+          <td style="padding: 0.5rem; text-align: center;">$0.25 (25 xu)</td>
+        </tr>
+        <tr style="border-bottom: 1px solid var(--border);">
+          <td style="padding: 0.5rem; font-weight: bold;">Tỷ lệ tổn thất ngay khi mua</td>
+          <td style="padding: 0.5rem; text-align: center; color: var(--accent-red); font-weight: bold;">5.0% tài sản vị thế</td>
+          <td style="padding: 0.5rem; text-align: center; color: var(--accent-emerald); font-weight: bold;">0.5% tài sản vị thế</td>
+        </tr>
+        <tr style="border-bottom: 1px solid var(--border);">
+          <td style="padding: 0.5rem; font-weight: bold;">Mức tăng giá để hòa vốn</td>
+          <td style="padding: 0.5rem; text-align: center;">Phải tăng >5.2% mới hòa vốn</td>
+          <td style="padding: 0.5rem; text-align: center;">Chỉ cần tăng >0.5% để hòa vốn</td>
+        </tr>
+        <tr style="border-bottom: 1px solid var(--border);">
+          <td style="padding: 0.5rem; font-weight: bold;">Tốc độ sụt giá khi chỉnh</td>
+          <td style="padding: 0.5rem; text-align: center;">Nhanh hơn 15% – 20%</td>
+          <td style="padding: 0.5rem; text-align: center;">Chậm và giữ nền tốt hơn</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  <div class="split-right" style="padding-left: 1rem; flex: 0.9;">
+    <h4 style="color: var(--accent-emerald); margin-top: 0;">Số liệu thống kê 125 năm siêu cổ phiếu</h4>
+    <ul style="font-size: 0.85rem; padding-left: 1.2rem; line-height: 1.6; margin: 0.5rem 0;">
+      <li><strong>Vùng giá breakout lý tưởng:</strong> Nghiên cứu của O'Neil chứng minh hơn <strong>80% siêu cổ phiếu thành công nhất lịch sử nước Mỹ</strong> bứt phá xuất phát từ các nền tích lũy có thị giá dao động từ <strong>$30 đến $50</strong> một cổ phiếu.</li>
+      <li><strong>Sự vắng mặt của Penny:</strong> Cực kỳ hiếm siêu cổ phiếu thực sự tăng trưởng bền vững có điểm xuất phát dưới $10. Nhóm này thường chỉ tăng nóng theo sóng đầu cơ ngắn rồi rơi rụng về 0.</li>
+    </ul>
+    <div class="callout" style="border-color: var(--accent-emerald); padding: 0.6rem; font-size: 0.8rem; margin-top: 0.5rem;">
+      <strong>Bài học đắt giá:</strong> Hãy tập trung tư duy vào tổng số đô la bạn đầu tư, chứ không phải số lượng cổ phiếu bạn sở hữu. Sở hữu 100 cổ phiếu giá $50 chất lượng cao tốt hơn vạn lần sở hữu 1000 cổ phiếu giá $5 rác rưởi.
+    </div>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 13 &amp;middot; CHI TIẾT SAI LẦM 1</div>
+    <h2>Nhóm 1: Sai lầm trong Quản trị Rủi ro &amp; Cắt lỗ</h2>
+<div class="split-layout">
+  <div class="split-left" style="padding-right: 1rem; border-right: 1px solid var(--border); flex: 1.1;">
+    <h3 style="color: var(--accent-red); margin-top: 0;">Sai lầm Chí tử trong Quản trị Rủi ro & Cắt lỗ</h3>
+    <p style="font-size: 0.9rem; line-height: 1.4; margin-bottom: 0.5rem;">
+      Đây là nhóm sai lầm phổ biến nhất và trực tiếp dẫn đến việc hủy diệt 80%-90% giá trị tài khoản giao dịch:
+    </p>
+    <ul style="font-size: 0.85rem; padding-left: 1.2rem; line-height: 1.6; margin: 0;">
+      <li><strong>Sai lầm 1: Gồng giữ khoản lỗ (Stubbornly holding losses):</strong> Không chấp nhận cắt lỗ nhỏ 7%-8% do hy vọng và tự ái. Khoản lỗ nhỏ nhanh chóng phình to thành khoản lỗ lớn 30%-50% làm tê liệt hoàn toàn tài khoản.</li>
+      <li><strong>Sai lầm 2: Bắt dao rơi (Buying on the way down):</strong> Cho rằng cổ phiếu đang cắm đầu giảm sâu là "món hời". Ví dụ lịch sử: Mua Xerox năm 1999 khi rớt về $34 vì nghĩ rẻ, kết quả nó sập về $6. Mua Cisco năm 2000 ở mức $50 sau khi rớt từ $82, kết quả sập về $16.</li>
+      <li><strong>Sai lầm 3: Trung bình giá xuống (Averaging down):</strong> Liên tục ném thêm tiền tốt vào để gỡ gạc cho vị thế tồi tệ đang thua lỗ. Cách này chỉ làm gia tăng vị thế sai và phóng đại khoản lỗ gấp nhiều lần.</li>
+    </ul>
+  </div>
+  
+  <div class="split-right" style="padding-left: 1rem; flex: 0.9;">
+    <h4 style="color: var(--accent-emerald); margin-top: 0;">Sai lầm 16: Nhổ hoa hồng, tưới cỏ dại</h4>
+    <p style="font-size: 0.85rem; line-height: 1.4; margin-top: 0.5rem;">
+      Hành vi làm vườn ngược đời của nhà đầu tư nghiệp dư:
+    </p>
+    <ul style="font-size: 0.85rem; padding-left: 1.2rem; line-height: 1.5; margin: 0.5rem 0;">
+      <li><strong>Cắt hoa hồng:</strong> Vội vã bán chốt lời non các cổ phiếu vừa tăng nhẹ 5%-10% (xanh) chỉ để tìm kiếm cảm giác an tâm và thỏa mãn ngắn hạn.</li>
+      <li><strong>Tưới cỏ dại:</strong> Tiếp tục ôm giữ, gồng lỗ qua nhiều tháng các cổ phiếu đang giảm sâu (đỏ) với hy vọng hão huyền giá sẽ hồi phục.</li>
+      <li><strong>Hệ quả:</strong> Danh mục của bạn nhanh chóng bị lấp đầy bởi các cổ phiếu rác héo úa, trong khi các siêu cổ phiếu mạnh nhất đã bị bán đi từ sớm.</li>
+    </ul>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 13 &amp;middot; CHI TIẾT SAI LẦM 2</div>
+    <h2>Nhóm 2: Sai lầm trong Chọn lọc cổ phiếu &amp; Phân bổ vốn</h2>
+<div class="split-layout">
+  <div class="split-left" style="padding-right: 1rem; border-right: 1px solid var(--border); flex: 1.1;">
+    <h3 style="color: var(--accent-red); margin-top: 0;">Sai lầm trong Chọn lọc & Phân bổ vốn</h3>
+    <p style="font-size: 0.9rem; line-height: 1.4; margin-bottom: 0.5rem;">
+      Việc không hiểu rõ các tiêu chí cốt lõi cấu thành một siêu cổ phiếu dẫn đến việc sở hữu danh mục yếu kém:
+    </p>
+    <ul style="font-size: 0.85rem; padding-left: 1.2rem; line-height: 1.6; margin: 0;">
+      <li><strong>Sai lầm 5: Tiêu chí chọn lọc mơ hồ:</strong> Không biết phân biệt các chỉ số tài chính quan trọng. Đi mua các cổ phiếu hạng tư, không có động lực tăng trưởng doanh thu/lợi nhuận thực tế và thiếu sự dẫn đầu nhóm ngành.</li>
+      <li><strong>Sai lầm 10: Nghiện mua cổ phiếu giá rẻ (Penny stocks):</strong> Nghĩ rằng mua 1000 cổ phiếu giá $5 là hời hơn mua 100 cổ phiếu giá $50. Các cổ phiếu dưới $10 rẻ vì nội tại kém chất lượng, spread bid/ask cực rộng và hoàn toàn không có sự bảo trợ của dòng tiền tổ chức lớn.</li>
+      <li><strong>Sai lầm 12: Ham cổ tức cao & P/E thấp:</strong> Chọn cổ phiếu suy thoái lỗi thời chỉ vì ham cổ tức hoặc P/E có vẻ "rẻ". Thực tế, các công ty tốt nhất tái đầu tư lợi nhuận để phát triển sản phẩm mới chứ không trả cổ tức nhiều; còn P/E thấp thường phản ánh kết quả kinh doanh kém cỏi của quá khứ.</li>
+    </ul>
+  </div>
+  
+  <div class="split-right" style="padding-left: 1rem; flex: 0.9;">
+    <h4 style="color: var(--accent-emerald); margin-top: 0;">Sai lầm 14: Bẫy hoài niệm cổ phiếu quen thuộc</h4>
+    <p style="font-size: 0.85rem; line-height: 1.4; margin-top: 0.5rem;">
+      Nhà đầu tư cá nhân thường mua cổ phiếu chỉ vì:
+    </p>
+    <ul style="font-size: 0.85rem; padding-left: 1.2rem; line-height: 1.5; margin: 0.5rem 0;">
+      <li><strong>Cảm xúc quen mặt:</strong> Mua cổ phiếu của công ty mình từng làm việc, hoặc các thương hiệu lâu đời quen thuộc (ví dụ: General Motors).</li>
+      <li><strong>Sự thật cay đắng:</strong> Các tên tuổi lâu đời thường đã bước sang giai đoạn bão hòa hoặc thoái trào chu kỳ kinh doanh.</li>
+      <li><strong>Bài học:</strong> Các siêu cổ phiếu tăng mạnh nhất thường là những cái tên mới mẻ, sáng tạo công nghệ mà đám đông chưa hề biết tới trong thời gian đầu.</li>
+    </ul>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 13 &amp;middot; CHI TIẾT SAI LẦM 3</div>
+    <h2>Nhóm 3: Sai lầm về Đồ thị kỹ thuật &amp; Đặt lệnh</h2>
+<div class="split-layout">
+  <div class="split-left" style="padding-right: 1rem; border-right: 1px solid var(--border); flex: 1.1;">
+    <h3 style="color: var(--accent-red); margin-top: 0;">Sai lầm về Kỹ thuật Đồ thị & Đặt lệnh</h3>
+    <p style="font-size: 0.9rem; line-height: 1.4; margin-bottom: 0.5rem;">
+      Việc từ chối sử dụng các công cụ trực quan và quá chi li đặt lệnh làm mất đi lợi thế timing:
+    </p>
+    <ul style="font-size: 0.85rem; padding-left: 1.2rem; line-height: 1.6; margin: 0;">
+      <li><strong>Sai lầm 4: Sợ mua cổ phiếu vượt đỉnh (New Highs):</strong> Đám đông cho rằng cổ phiếu vượt đỉnh mọi thời đại là "quá đắt" và có xu hướng đi mua cổ phiếu cắm đầu giảm vì "rẻ". Thực tế, điểm bứt phá (breakout) khỏi nền tích lũy 7-8 tuần để thiết lập đỉnh cao mới là thời điểm an toàn nhất để siêu cổ phiếu bước vào sóng tăng mạnh mẽ.</li>
+      <li><strong>Sai lầm 9: Không biết đọc biểu đồ & bỏ qua bảo trợ tổ chức:</strong> Mua bán hoàn toàn dựa trên cảm tính hoặc tin tức cơ bản mà không phân tích nền giá tích lũy và khối lượng giao dịch (volume). Điều này dẫn đến việc mua sai thời điểm, dễ bị shakeout trong nhịp chỉnh ngắn.</li>
+    </ul>
+  </div>
+  
+  <div class="split-right" style="padding-left: 1rem; flex: 0.9;">
+    <h4 style="color: var(--accent-emerald); margin-top: 0;">Sai lầm 19: Cơn nghiện lệnh giới hạn (Limit Orders)</h4>
+    <p style="font-size: 0.85rem; line-height: 1.4; margin-top: 0.5rem;">
+      Mặc cả vài xu lẻ với thị trường là thói quen tai hại:
+    </p>
+    <ul style="font-size: 0.85rem; padding-left: 1.2rem; line-height: 1.5; margin: 0.5rem 0;">
+      <li><strong>Mất siêu cổ phiếu:</strong> Khi siêu cổ phiếu bùng nổ vượt pivot, việc chi li đặt lệnh limit thấp hơn vài chục xu sẽ khiến bạn bị bỏ lỡ cơ hội tham gia thương vụ mang lại lợi nhuận bằng lần.</li>
+      <li><strong>Kẹt cứng khi sụp đổ:</strong> Khi cổ phiếu sụp gãy hỗ trợ và cần tháo chạy khẩn cấp, đặt lệnh limit sẽ làm bạn bị kẹt lại không bán được do giá rơi quá nhanh, biến khoản lỗ nhỏ thành lỗ sâu.</li>
+      <li><strong>Hành động đúng:</strong> Sử dụng lệnh thị trường (Market Order) để khớp lệnh tức thì. Tập trung vào các biến động lớn của xu hướng thay vì chi li xu lẻ.</li>
+    </ul>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 13 &amp;middot; CHI TIẾT SAI LẦM 4</div>
+    <h2>Nhóm 4: Sai lầm về Quản trị Tâm lý, Kỷ luật &amp; mách nước</h2>
+<div class="split-layout">
+  <div class="split-left" style="padding-right: 1rem; border-right: 1px solid var(--border); flex: 1.1;">
+    <h3 style="color: var(--accent-red); margin-top: 0;">Sai lầm về Quản trị Tâm lý & Kỷ luật</h3>
+    <p style="font-size: 0.9rem; line-height: 1.4; margin-bottom: 0.5rem;">
+      Tâm lý yếu và thiếu hệ thống quy tắc hành động là rào cản lớn ngăn cản thành công:
+    </p>
+    <ul style="font-size: 0.85rem; padding-left: 1.2rem; line-height: 1.5; margin: 0;">
+      <li><strong>Sai lầm 7 & 8: Thiếu kỷ luật tuân thủ & Không có kế hoạch Bán:</strong> Nhiều nhà đầu tư lập ra quy tắc nhưng không tuân thủ do cảm xúc chi phối. Họ quá tập trung vào việc tìm mã mua, nhưng khi mua xong lại hoàn toàn không biết bán ở đâu và khi nào.</li>
+      <li><strong>Sai lầm 20: Thiếu quyết đoán (Indecisiveness):</strong> Do dự, chần chừ không dám hành động khi điểm mua chuẩn xuất hiện, hoặc không dám bấm nút cắt lỗ khi giá chạm ngưỡng phòng vệ do thiếu các mốc quy tắc định vị rõ ràng.</li>
+      <li><strong>Sai lầm 21: Yêu thích cổ phiếu (Ego & Favorites):</strong> Xem cổ phiếu như "đứa con tinh thần", ôm giữ bằng niềm tin và hy vọng (cross fingers) thay vì nhìn nhận đồ thị một cách khách quan khách quan.</li>
+    </ul>
+  </div>
+  
+  <div class="split-right" style="padding-left: 1rem; flex: 0.9;">
+    <h4 style="color: var(--accent-emerald); margin-top: 0;">Sai lầm 11 & 15: Bẫy mách nước tin đồn</h4>
+    <p style="font-size: 0.85rem; line-height: 1.4; margin-top: 0.5rem;">
+      Giao phó tài sản cho ý kiến bên ngoài:
+    </p>
+    <ul style="font-size: 0.85rem; padding-left: 1.2rem; line-height: 1.5; margin: 0.5rem 0;">
+      <li><strong>Độc hại từ mách nước (Tips):</strong> Mua cổ phiếu theo tin đồn rỉ tai, gợi ý của bạn bè, người thân, hoặc các chuyên gia phân tích hô hào trên TV mà không chịu tự mình nghiên cứu. Hầu hết tin đồn đều sai sự thật hoặc đã phản ánh hết vào giá.</li>
+      <li><strong>Môi giới thiếu năng lực:</strong> Tin lời khuyên của môi giới không có lịch sử thực chứng thành công. Hãy nhớ rằng nhiều công ty chứng khoán thậm chí không quản lý nổi dòng vốn của chính họ.</li>
+      <li><strong>Bài học:</strong> Bạn phải tự chịu trách nhiệm 100% về tài sản của mình và chỉ giao dịch dựa trên các quy tắc khách quan đã được chứng thực.</li>
+    </ul>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 13 &amp;middot; CHI TIẾT SAI LẦM 5</div>
+    <h2>Nhóm 5: Sai lầm về Thuế, Phí &amp; Ảo tưởng làm giàu nhanh</h2>
+<div class="split-layout">
+  <div class="split-left" style="padding-right: 1rem; border-right: 1px solid var(--border); flex: 1.1;">
+    <h3 style="color: var(--accent-red); margin-top: 0;">Sai lầm về Thuế, Phí & Ảo tưởng Làm giàu nhanh</h3>
+    <p style="font-size: 0.9rem; line-height: 1.4; margin-bottom: 0.5rem;">
+      Mong muốn có lợi nhuận dễ dàng và quá chi li tính toán chi phí trung gian cản trở hiệu quả giao dịch:
+    </p>
+    <ul style="font-size: 0.85rem; padding-left: 1.2rem; line-height: 1.6; margin: 0;">
+      <li><strong>Sai lầm 13: Ảo tưởng làm giàu nhanh (Quick buck):</strong> Tham gia thị trường với tâm thế cờ bạc, mong muốn nhân đôi tài khoản tức thì mà không chịu bỏ công sức học hỏi quy tắc, rèn luyện kỷ luật và chuẩn bị kiến thức. Điều này dẫn đến việc mua đuổi quá đà và cắt lỗ quá muộn.</li>
+      <li><strong>Sai lầm 18: Đầu cơ phái sinh quá mức:</strong> Lao vào giao dịch Options ngắn hạn hoặc Futures hàng hóa với đòn bẩy lớn chỉ vì thấy chúng biến động nhanh. Sự thiếu kinh nghiệm sẽ nhanh chóng đốt cháy sạch tài khoản của bạn.</li>
+    </ul>
+  </div>
+  
+  <div class="split-right" style="padding-left: 1rem; flex: 0.9;">
+    <h4 style="color: var(--accent-emerald); margin-top: 0;">Sai lầm 17: Bẫy chi phí thuế & hoa hồng</h4>
+    <p style="font-size: 0.85rem; line-height: 1.4; margin-top: 0.5rem;">
+      Quá lo lắng về thuế và phí giao dịch là sai lầm phổ biến:
+    </p>
+    <ul style="font-size: 0.85rem; padding-left: 1.2rem; line-height: 1.5; margin: 0.5rem 0;">
+      <li><strong>Giữ lệnh vì thuế:</strong> Cố gắng gồng giữ cổ phiếu thêm vài tháng để đạt điều kiện thuế suất dài hạn (long-term capital gains), để rồi nhìn toàn bộ khoản lãi lớn bị bốc hơi do nhịp điều chỉnh mạnh của thị trường.</li>
+      <li><strong>Bỏ lỡ tính thanh khoản:</strong> Phí giao dịch online hiện nay là cực kỳ nhỏ so với tỷ suất sinh lời của siêu cổ phiếu. Thanh khoản tức thời là ưu thế tuyệt đối của cổ phiếu so với bất động sản. Hãy vui vẻ đóng thuế khi bạn có lãi ròng lớn.</li>
+    </ul>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 13 &amp;middot; ĐÁNH GIÁ CHỨNG CỨ</div>
+    <h2>Tính thực chứng của nỗi sợ lỗ Prospect Theory &amp; Nghiên cứu 2026</h2>
+<div class="split-layout">
+  <div class="split-left" style="padding-right: 1rem; border-right: 1px solid var(--border); flex: 1.1;">
+    <h3 style="color: var(--accent-purple); margin-top: 0;">Tính thực chứng khoa học: Lý thuyết viễn cảnh & Thiên kiến sợ lỗ</h3>
+    <p style="font-size: 0.9rem; line-height: 1.4; margin-bottom: 0.5rem;">
+      Tại sao các sai lầm của O'Neil chỉ ra lại lặp đi lặp lại ở mọi thế hệ nhà đầu tư? Kinh tế học hành vi giải thích điều này thông qua <strong>Lý thuyết viễn cảnh (Prospect Theory)</strong> của Daniel Kahneman:
+    </p>
+    <ul style="font-size: 0.85rem; padding-left: 1.2rem; line-height: 1.5; margin: 0;">
+      <li><strong>Thiên kiến sợ thua lỗ (Loss Aversion):</strong> Các nghiên cứu thực chứng chứng minh rằng nỗi đau tâm lý từ một khoản thua lỗ có tác động mạnh gấp <strong>2 đến 2.5 lần</strong> niềm vui từ một khoản lợi nhuận có cùng giá trị.</li>
+      <li><strong>Hành vi né tránh nỗi đau:</strong> Khi vị thế bị âm 7%-8%, bộ não con người tự động kích hoạt cơ chế tự vệ: Né tránh thực tế, không nhìn vào danh mục, gồng giữ và hy vọng giá hồi phục để tránh phải thừa nhận mình sai. Đây là lý do cốt lõi khiến khoản lỗ nhỏ phình to thành thảm họa.</li>
+    </ul>
+  </div>
+  
+  <div class="split-right" style="padding-left: 1rem; flex: 0.9;">
+    <h4 style="color: var(--accent-emerald); margin-top: 0;">Nghiên cứu Thần kinh học năm 2026</h4>
+    <p style="font-size: 0.85rem; line-height: 1.4; margin-top: 0.5rem;">
+      Các nghiên cứu FMRI quét não bộ nhà đầu tư vào năm 2026 mang lại những phát hiện đột phá:
+    </p>
+    <ul style="font-size: 0.85rem; padding-left: 1.2rem; line-height: 1.5; margin: 0.5rem 0;">
+      <li><strong>Sự tê liệt thùy đảo (Insula Activation):</strong> Khi đối mặt với khoản thua lỗ lớn tài chính, <em>thùy đảo</em> (vùng não xử lý nỗi sợ và sự ghê tởm) bị kích hoạt mạnh, gây ra trạng thái tê liệt tư duy logic và phản biện (tâm lý đóng băng).</li>
+      <li><strong>Tính đúng đắn của dừng lỗ cơ học:</strong> Phát hiện này củng cố quy tắc thép của O'Neil: Việc dừng lỗ 7%-8% bắt buộc phải được thực hiện bằng hệ thống lệnh điều kiện tự động trên sàn, loại bỏ hoàn toàn quyền quyết định của bộ não con người tại thời điểm giá rơi.</li>
+    </ul>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 13 &amp;middot; GÓC NHÌN ĐỐI LẬP</div>
+    <h2>Học từ trải nghiệm tự phát vs Huấn luyện mô phỏng dựa trên quy tắc</h2>
+<div class="split-layout">
+  <div class="split-left" style="padding-right: 1rem; border-right: 1px solid var(--border);">
+    <h3 style="color: var(--accent-purple); margin-top: 0;">Góc nhìn A: Thử và sai thực tế (Trial and Error)</h3>
+    <p style="font-size: 0.9rem; line-height: 1.5; margin-bottom: 0.8rem;">
+      <strong>Đại diện tiêu biểu:</strong> Trường phái đầu tư tự do, các nhà giao dịch tin vào "học từ thực chiến" (learning by doing).
+    </p>
+    <ul style="font-size: 0.85rem; padding-left: 1.2rem; line-height: 1.5; margin: 0;">
+      <li><strong>Luận điểm:</strong> Không có cuốn sách hay lý thuyết nào thay thế được cảm giác đau đớn thực tế khi bị lỗ nặng hoặc cháy tài khoản. Nhà đầu tư phải tự mình va vấp, tự trải qua nhiều chu kỳ thị trường thì mới tích lũy được kinh nghiệm và trưởng thành.</li>
+      <li><strong>Cách tiếp cận:</strong> Cứ giao dịch liên tục với số vốn nhỏ, học từ mỗi lần vấp ngã thực tế trên sàn.</li>
+    </ul>
+  </div>
+  
+  <div class="split-right" style="padding-left: 1rem;">
+    <h3 style="color: var(--accent-emerald); margin-top: 0;">Góc nhìn B: Huấn luyện dựa trên quy tắc (Rules-Based)</h3>
+    <p style="font-size: 0.9rem; line-height: 1.5; margin-bottom: 0.8rem;">
+      <strong>Đại diện tiêu biểu:</strong> William O'Neil, Jesse Livermore, và các chương trình đào tạo mô phỏng chuyên nghiệp.
+    </p>
+    <ul style="font-size: 0.85rem; padding-left: 1.2rem; line-height: 1.5; margin: 0;">
+      <li><strong>Luận điểm:</strong> Thử và sai vô nguyên tắc chỉ làm củng cố các thói quen xấu và đốt cháy sạch vốn của bạn trước khi kịp khôn ngoan. Hãy học như phi công lái máy bay chiến đấu: Họ luyện tập hàng ngàn giờ trong phòng mô phỏng giả lập các tình huống lỗi kỹ thuật trước khi bước lên buồng lái thật.</li>
+      <li><strong>Cách tiếp cận:</strong> Nghiên cứu hàng trăm biểu đồ siêu cổ phiếu trong quá khứ để nhận diện mẫu hình chuẩn. Ghi chép nhật ký thua lỗ, thiết lập các quy tắc sửa sai cứng và backtest kiểm chứng lịch sử trước khi giải ngân vốn thật.</li>
+    </ul>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 13 &amp;middot; RỦI RO &amp; PHẢN BIỆN</div>
+    <h2>Rủi ro tê liệt phân tích và sự cứng nhắc dừng lỗ trong sideways</h2>
+<div class="split-layout">
+  <div class="split-left" style="padding-right: 1rem; border-right: 1px solid var(--border); flex: 1.1;">
+    <h3 style="color: var(--accent-purple); margin-top: 0;">Rủi ro tê liệt phân tích & Sự cứng nhắc của quy tắc</h3>
+    <p style="font-size: 0.9rem; line-height: 1.4; margin-bottom: 0.5rem;">
+      Mặc dù các quy tắc của O'Neil là khiên bảo vệ vốn tuyệt vời, việc áp dụng thiếu linh hoạt cũng có thể tạo ra các bất lợi lớn:
+    </p>
+    <ul style="font-size: 0.85rem; padding-left: 1.2rem; line-height: 1.5; margin: 0;">
+      <li><strong>Tê liệt phân tích (Analysis Paralysis):</strong> Việc quá sợ hãi mắc phải 21 sai lầm có thể khiến nhà đầu tư bị áp lực tâm lý nặng nề, sợ hãi thái quá và dẫn đến trạng thái tê liệt, bỏ lỡ các điểm bứt phá pivot của siêu cổ phiếu do chần chừ do dự.</li>
+      <li><strong>Bào mòn vốn do quét dừng lỗ cứng nhắc:</strong> Trong các giai đoạn thị trường biến động giằng co (whipsaw/choppy markets), việc cắt lỗ 7%-8% liên tục mà không đánh giá đúng bối cảnh tích lũy của cổ phiếu sẽ khiến NAV sụt giảm nhanh chóng do bị quét dừng lỗ liên tục trước khi cổ phiếu tăng tốc.</li>
+    </ul>
+  </div>
+  
+  <div class="split-right" style="padding-left: 1rem; flex: 0.9;">
+    <h4 style="color: var(--accent-emerald); margin-top: 0;">Thiên kiến tự đánh giá & Ngoại lệ</h4>
+    <ul style="font-size: 0.85rem; padding-left: 1.2rem; line-height: 1.5; margin: 0.5rem 0;">
+      <li><strong>Thiên kiến tự phục vụ (Self-Serving Bias):</strong> Khi tự phân tích nhật ký giao dịch, nhà đầu tư rất dễ tự lừa dối bản thân: Quy kết các lệnh thắng là do tài năng của mình, còn các lệnh thua lỗ là do "tin đồn" hay "sự xấu xí bất ngờ của thị trường". Điều này làm sai lệch kết quả hậu phân tích.</li>
+      <li><strong>Bỏ lỡ cơ hội tái cấu trúc (Turnaround):</strong> Việc loại bỏ hoàn toàn các cổ phiếu dưới $15 có thể khiến nhà đầu tư bỏ lỡ một số ít thương vụ phục hồi ngoạn mục từ đống tro tàn của các doanh nghiệp đang tái cấu trúc thành công.</li>
+    </ul>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 13 &amp;middot; SƠ ĐỒ KHÁI NIỆM</div>
+    <h2>Mối liên kết sửa đổi lỗi lầm trong hệ thống</h2>
+<div class="mermaid">
+graph TB
+    A["Chương 10: Dừng lỗ 8% <br> (Khắc phục lỗi gồng lỗ & trung bình giá xuống)"] --> C["Chương 13: 21 sai lầm chí tử"]
+    B["Chương 2: Đọc đồ thị & Pivot <br> (Khắc phục lỗi sợ mua đỉnh, bỏ qua volume & tổ chức)"] --> C
+    D["Chương 12: Quản trị danh mục <br> (Khắc phục lỗi đa dạng hóa rộng & nộp tiền cứu margin)"] --> C
+    C --> E["Quy trình Khám nghiệm giao dịch <br> (In chart tìm lỗi sai, tự viết quy tắc sửa sai cá nhân)"]
+    C --> F["Tẩy não định kiến cũ <br> (Unlearning thói quen giao dịch hỏng)"]
+    
+    style C fill:#8B7CFF,stroke:#2A2D33,color:#F7F7F5
+</div>
+
+<div class="split-layout" style="margin-top: 1rem;">
+  <div class="split-left" style="padding-right: 1rem; border-right: 1px solid var(--border);">
+    <h5 style="color: var(--accent-purple); margin-top: 0;">Mối quan hệ tiên quyết (Prerequisites)</h5>
+    <ul style="font-size: 0.9rem; padding-left: 1rem; margin: 0; line-height: 1.5;">
+      <li><strong>Cắt lỗ 8% (Ch 10):</strong> Cung cấp vũ khí tối thượng để triệt tiêu vĩnh viễn hai sai lầm lớn nhất của nhà đầu tư cá nhân: Gồng lỗ sâu và mua trung bình giá xuống.</li>
+      <li><strong>Biểu đồ và Điểm Pivot (Ch 2):</strong> Cung cấp lăng kính trực quan để nhà đầu tư vượt qua nỗi sợ tâm lý mua vượt đỉnh (breakout new high) và nhận diện sự bảo trợ của tổ chức.</li>
+    </ul>
+  </div>
+  
+  <div class="split-right" style="padding-left: 1rem;">
+    <h5 style="color: var(--accent-emerald); margin-top: 0;">Mối quan hệ mở khóa (Future Unlocks)</h5>
+    <ul style="font-size: 0.9rem; padding-left: 1rem; margin: 0; line-height: 1.5;">
+      <li><strong>Quy trình Hậu Phân Tích (Postmortem):</strong> Phương pháp học tập tối ưu giúp nâng cấp toàn bộ hệ thống giao dịch của bạn sau mỗi chu kỳ thị trường bằng cách học trực tiếp từ sai lầm cá nhân.</li>
+      <li><strong>Hành động cơ học không cảm xúc:</strong> Quá trình gạt bỏ định kiến cũ (unlearning) giúp bạn đồng bộ hóa tâm lý với hành vi khách quan của thị trường, đưa các quyết định giao dịch tiệm cận sự lạnh lùng của robot.</li>
+    </ul>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 13 &amp;middot; HƯỚNG DẪN THỰC HÀNH</div>
+    <h2>Lộ trình ứng dụng thực tế rà soát sai lầm và tự vệ</h2>
+<div class="phase-progress">
+  <div class="phase active">Pha 1: Khám Nghiệm Giao Dịch</div>
+  <div class="phase">Pha 2: Bộ Lọc Cản Rác</div>
+  <div class="phase">Pha 3: Lệnh Thị Trường</div>
+  <div class="phase">Pha 4: Dừng Lỗ Tự Động</div>
+</div>
+
+<div class="bullet-grid" style="margin-top: 1.5rem;">
+  <div class="bullet-card">
+    <h4>Pha 1: Tiến hành khám nghiệm tử thi giao dịch</h4>
+    <ul class="checklist" style="padding-left: 0; list-style: none;">
+      <li><input type="checkbox" checked disabled> <strong>In đồ thị thua lỗ:</strong> Tập hợp lịch sử giao dịch của 12 tháng qua. In biểu đồ của 5 thương vụ thua lỗ nặng nề nhất.</li>
+      <li><input type="checkbox" checked disabled> <strong>Vẽ điểm sai lầm:</strong> Dùng bút đỏ đánh dấu chính xác điểm mua, các điểm mua thêm (nếu có), và điểm bán thực tế. Nhận diện xem bạn đã mua đuổi, trung bình giá xuống hay do dự không chịu cắt lỗ sớm.</li>
+    </ul>
+  </div>
+
+  <div class="bullet-card">
+    <h4>Pha 2: Thiết lập bộ lọc ngăn chặn tài sản rác</h4>
+    <ul class="checklist" style="padding-left: 0; list-style: none;">
+      <li><input type="checkbox" disabled> <strong>Cài bộ lọc giá cứng:</strong> Thiết lập bộ lọc trên phần mềm giao dịch ẩn hoàn toàn mọi cổ phiếu có thị giá dưới $15 một cổ phiếu.</li>
+      <li><input type="checkbox" disabled> <strong>Chặn bẫy cổ tức & P/E thấp:</strong> Loại bỏ thói quen tìm kiếm cổ phiếu chỉ dựa trên tỷ suất cổ tức cao hoặc P/E thấp của các doanh nghiệp đang đi lùi tăng trưởng EPS.</li>
+    </ul>
+  </div>
+
+  <div class="bullet-card">
+    <h4>Pha 3: Chuyển đổi sang lệnh thị trường (Market Orders)</h4>
+    <ul class="checklist" style="padding-left: 0; list-style: none;">
+      <li><input type="checkbox" disabled> <strong>Khớp lệnh tức thì:</strong> Khi siêu cổ phiếu bùng nổ vượt điểm pivot chuẩn, sử dụng lệnh thị trường để khớp lệnh ngay, tránh mất cơ hội.</li>
+      <li><input type="checkbox" disabled> <strong>Cấm mặc cả vài xu:</strong> Tuyệt đối từ bỏ thói quen chi li so đo vài xu lẻ bằng lệnh giới hạn (Limit Orders) khi vị thế mua hoặc bán tháo khẩn cấp đang xuất hiện.</li>
+    </ul>
+  </div>
+
+  <div class="bullet-card">
+    <h4>Pha 4: Đóng băng cảm xúc dừng lỗ tự động</h4>
+    <ul class="checklist" style="padding-left: 0; list-style: none;">
+      <li><input type="checkbox" disabled> <strong>Cài dừng lỗ tự động:</strong> Cài đặt lệnh dừng lỗ điều kiện tự động ở mốc tối đa 7%-8% dưới giá mua ngay khi vị thế được khớp.</li>
+      <li><input type="checkbox" disabled> <strong>Cấm gồng lỗ:</strong> Tuyệt đối tuân thủ lệnh dừng tự động. Nghiêm cấm hành vi nộp tiền cứu margin call hoặc trung bình giá xuống cổ phiếu đang rơi.</li>
+    </ul>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 13 &amp;middot; CHIẾN LƯỢC HỌC TẬP</div>
+    <h2>Mỏ neo trực quan &amp; Lặp lại ngắt quãng</h2>
+<div class="learning-style-section visual" style="margin-bottom: 1rem;">
+  <div class="style-icon">👁️ Phương Pháp Học Tập Đa Cảm Giác (Dành cho Học viên Cân bằng)</div>
+  <div class="style-content" style="font-size: 0.95rem; line-height: 1.5;">
+    <ul>
+      <li><strong>Mỏ neo trực quan (Visual Anchor):</strong> Hãy nhớ đến hình ảnh <em>chiếc bảng đen bị khoanh phấn đỏ lỗi sai (The Red Chalk Circle)</em>: Sự tiến bộ vượt bậc chỉ đến khi chúng ta dũng cảm dùng phấn đỏ khoanh tròn lỗi sai lớn nhất của mình để phân tích, thay vì vội vã bôi xóa nó đi để che giấu sự xấu hổ của cái tôi. Triết lý: <em>"Nhìn thẳng vào vết thương thua lỗ để học cách tự vệ."</em></li>
+      <li><strong>Hành động thực tế (Kinesthetic Action):</strong> Lập một cuốn sổ tay nhỏ có tên <strong>"Nhật ký Khám nghiệm Sai lầm"</strong>. Ghi vào đó 3 thương vụ thua lỗ lớn nhất trong quá khứ của bạn kèm theo nguyên nhân cụ thể (do nghe mách nước, gồng lỗ, hay bắt dao rơi). Trước mỗi lần bấm nút đặt lệnh mua mới từ ngày mai, bắt buộc phải mở cuốn sổ này ra đọc lại để cam kết không lặp lại lỗi cũ.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="split-layout" style="margin-top: 1rem;">
+  <div class="split-left" style="padding-right: 1rem; border-right: 1px solid var(--border);">
+    <h5 style="color: var(--accent-purple); margin-top: 0;">Mỏ Neo Trí Nhớ & Case Cảnh Tỉnh</h5>
+    <ul style="font-size: 0.9rem; padding-left: 1rem; margin: 0; line-height: 1.5;">
+      <li><strong>Knute Rockne & Mắt xích yếu:</strong> Điểm yếu trong kỷ luật bán mới là thứ quyết định sự sinh tồn của tài khoản của bạn. Sợi xích tài sản luôn đứt ở mắt xích rỉ sét nhất. <span class="page-ref">Ch 13 &middot; "CHAPTER 13"</span></li>
+      <li><strong>Bernie Madoff & Bẫy mách nước:</strong> Sự nguy hiểm tột cùng của việc giao phó tài sản cho các nguồn tin đồn rỉ tai và từ bỏ quyền phân tích độc lập bằng đồ thị kỹ thuật khách quan.</li>
+    </ul>
+  </div>
+
+  <div class="split-right" style="padding-left: 1rem;">
+    <h5 style="color: var(--accent-emerald); margin-top: 0;">Lịch Trình Lặp Lại Ngắt Quãng</h5>
+    <ul style="font-size: 0.9rem; padding-left: 1rem; margin: 0; line-height: 1.5;">
+      <li><strong>Ngày 1:</strong> Ghi nhớ nguyên tắc cắt lỗ cơ học 7%-8% không ngoại lệ. Cam kết tuyệt đối cấm trung bình giá xuống.</li>
+      <li><strong>Ngày 2:</strong> Học kỹ tác hại toán học của cổ phiếu Penny (Spreads chiếm 5% NAV) và tác hại của việc quibble đặt lệnh Limit chi xu lẻ.</li>
+      <li><strong>Ngày 7:</strong> In lịch sử giao dịch năm, thực hiện "khám nghiệm tử thi" và viết quy tắc sửa sai cá nhân đầu tiên vào sổ nhật ký.</li>
+      <li><strong>Ngày 30:</strong> Đọc lại "Nhật ký Khám nghiệm Sai lầm" trước khi bước vào tháng giao dịch mới, cập nhật các quy tắc tự khắc chế cái tôi cá nhân.</li>
+    </ul>
+  </div>
+</div>
+
+  </section>
+
+  <section class="slide">
+    <div class="slide-kicker">CH 13 &amp;middot; HÀNH ĐỘNG CUỐI CÙNG</div>
+    <h2>Hành động cuối cùng</h2>
+<ul class="action-list">
+  <li class="action-item">
+    <div>
+      <div class="action-headline">Viết danh sách các điều cấm dán trước màn hình giao dịch</div>
+      <div class="action-detail">Chép lại 5 sai lầm chí mạng nhất của bạn từ danh sách 21 sai lầm lên một tờ giấy lớn và dán ngay trước màn hình máy tính giao dịch. Đọc lại danh sách này mỗi sáng trước khi thị trường mở cửa để tự răn đe cái tôi cá nhân.</div>
+    </div>
+  </li>
+  <li class="action-item">
+    <div>
+      <div class="action-headline">Lên lịch cố định cho quy trình "Khám nghiệm giao dịch"</div>
+      <div class="action-detail">Lên lịch cố định vào tuần đầu tiên của tháng Giêng hàng năm để thực hiện quy trình "Postmortem" cho toàn bộ giao dịch của năm cũ. Nghiên cứu tỉ mỉ từng khoản thua lỗ lớn và tự viết quy tắc tự khắc phục để áp dụng cho năm mới.</div>
+    </div>
+  </li>
+  <li class="action-item">
+    <div>
+      <div class="action-headline">Gỡ bỏ hoàn toàn lệnh Limit thụ động khi tháo chạy</div>
+      <div class="action-detail">Cam kết từ ngày mai, mỗi khi thị trường chung đảo chiều hoặc cổ phiếu chạm ngưỡng dừng lỗ 8%, bạn sẽ chỉ sử dụng lệnh thị trường (Market Order) để tháo chạy ngay lập tức, gạt bỏ hoàn toàn việc chi li mặc cả vài xu lẻ bằng lệnh Limit.</div>
+    </div>
+  </li>
+</ul>
+
+<figure class="image-slot hero" style="margin-top: 1.5rem;">
+  <div class="image-prompt">
+    <span class="image-prompt-label">AI Image Prompt — Giới hạn quota Image-gen của hệ thống tạm thời hết</span>
+    <p class="image-prompt-text">"A classic leather-bound journal lying open on a clean white desk, with a red fountain pen resting on a page marked 'Postmortem Analysis', soft minimalist workspace aesthetic, warm side lighting, depth of field, 8k."</p>
+    <span class="image-prompt-hint">Bạn có thể tạo ảnh trên Midjourney, lưu dưới tên 'ch13_journal_hero.png' vào thư mục 'images/' và thay thế khối HTML này bằng thẻ &lt;img src="images/ch13_journal_hero.png"&gt; để hoàn thiện slide Closing Actions.</span>
+  </div>
+</figure>
+
+  </section>
+
+</div>
+
+<div class="nav-controls">
+  <button class="nav-btn" id="prevBtn" onclick="prevSlide()" aria-label="Previous slide">&#8592;</button>
+  <div class="counter" id="counter" aria-live="polite">1 / 1</div>
+  <button class="nav-btn" id="nextBtn" onclick="nextSlide()" aria-label="Next slide">&#8594;</button>
+</div>
+
+<script src="common.js"></script>
+</body>
+</html>

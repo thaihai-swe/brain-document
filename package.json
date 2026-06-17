@@ -1,31 +1,23 @@
 {
   "name": "brain-document",
   "version": "1.0.0",
-  "description": "Personal knowledge base and documentation site built with Eleventy.",
-  "main": "index.js",
-  "directories": {
-    "doc": "docs"
+  "description": "Personal knowledge base and documentation site built with Astro and Starlight.",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/starlight": "^0.37.0",
+    "@fontsource-variable/inter": "^5.2.8",
+    "astro": "^5.5.0",
+    "starlight-blog": "^0.25.0",
+    "unist-util-visit": "^5.0.0"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^3.1.5",
-    "@11ty/eleventy-navigation": "^1.0.5",
-    "html-minifier-terser": "^7.2.0",
-    "markdown-it": "^14.2.0",
-    "markdown-it-anchor": "^9.2.0",
-    "markdown-it-attrs": "^5.0.0",
-    "markdown-it-task-lists": "^2.1.1",
-    "markdown-it-toc-done-right": "^4.2.0",
-    "npm-run-all": "^4.1.5",
-    "pagefind": "^1.5.2"
-  },
-  "scripts": {
-    "start": "npm-run-all --parallel dev:*",
-    "dev:eleventy": "eleventy --serve",
-    "dev:pagefind": "echo 'Pagefind will run on build'",
-    "build": "NODE_ENV=production eleventy && pagefind --site public",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+    "typescript": "^5.0.0"
+  }
 }

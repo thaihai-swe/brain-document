@@ -1,0 +1,112 @@
+/* Replicate Brand Design System Guidelines (Warm Editorial & Near-Black Craft Tool) */
+
+/* Dark mode (default) colors */
+:root {
+  /* System fonts only (no heavy web fonts like Google Fonts) */
+  --sl-font: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+
+  /* Accent Color: Indigo Voltage */
+  --sl-color-accent: #635BFF;
+  --sl-color-accent-high: #8a85ff;
+  --sl-color-accent-low: #1c1854;
+  --sl-color-text-accent: #8a85ff;
+
+  /* Near-Black Craft Tool theme colors */
+  --sl-color-black: #08090A;
+  --sl-color-bg: #08090A;
+  --sl-color-bg-sidebar: #08090A;
+  --sl-color-bg-nav: #08090A;
+  --sl-color-text: #F3F4F5;
+  --sl-color-text-muted: #9BA0A6;
+  --sl-color-hairline: #1C1D1F;
+  --sl-color-hairline-light: #222428;
+  --sl-color-hairline-shade: #1C1D1F;
+
+  /* Custom grays for dark mode */
+  --sl-color-gray-1: #f3f4f6;
+  --sl-color-gray-2: #e5e7eb;
+  --sl-color-gray-3: #9ca3af;
+  --sl-color-gray-4: #4b5563;
+  --sl-color-gray-5: #1f2937;
+  --sl-color-gray-6: #111827;
+}
+
+/* Light mode colors */
+:root[data-theme='light'] {
+  /* Accent Color: Indigo Voltage */
+  --sl-color-accent: #635BFF;
+  --sl-color-accent-high: #4f46e5;
+  --sl-color-accent-low: #eef2ff;
+  --sl-color-text-accent: #4f46e5;
+
+  /* Warm Editorial theme colors */
+  --sl-color-black: #FAFAF8;
+  --sl-color-bg: #FAFAF8;
+  --sl-color-bg-sidebar: #FAFAF8;
+  --sl-color-bg-nav: #FAFAF8;
+  --sl-color-text: #1C1D1F;
+  --sl-color-text-muted: #5C5E62;
+  --sl-color-hairline: #E5E5E0;
+  --sl-color-hairline-light: #F4F4F1;
+  --sl-color-hairline-shade: #E5E5E0;
+
+  /* Custom grays for light mode */
+  --sl-color-gray-6: #f4f4f1;
+  --sl-color-gray-5: #e5e5e0;
+  --sl-color-gray-4: #a3a39e;
+  --sl-color-gray-3: #73736f;
+  --sl-color-gray-2: #40403f;
+  --sl-color-gray-1: #1c1d1f;
+}
+
+/* Desktop layout proportions override:
+   15% Left Navigation | 75% Main Content | 10% Right TOC (when TOC is present)
+   15% Left Navigation | 85% Main Content (when TOC is not present)
+*/
+@media (min-width: 72rem) {
+  :root {
+    --sl-sidebar-width: 15vw !important;
+    --sl-content-width: 75vw !important;
+  }
+
+  /* Force Left Sidebar width */
+  .sidebar-pane {
+    width: 15vw !important;
+    border-inline-end: 1px solid var(--sl-color-hairline) !important;
+  }
+
+  /* Adjust Main Frame starting position */
+  .main-frame {
+    padding-inline-start: 15vw !important;
+  }
+
+  /* Main pane width when TOC is present */
+  :global([data-has-sidebar][data-has-toc]) .main-pane {
+    width: 75vw !important;
+    max-width: 75vw !important;
+  }
+
+  /* Main pane width when TOC is NOT present (e.g. Library page) */
+  :global([data-has-sidebar]:not([data-has-toc])) .main-pane {
+    width: 85vw !important;
+    max-width: 85vw !important;
+  }
+
+  /* Force Right Sidebar (TOC) width */
+  .right-sidebar-container {
+    width: 10vw !important;
+    max-width: 10vw !important;
+  }
+
+  .right-sidebar {
+    width: 10vw !important;
+    max-width: 10vw !important;
+    border-inline-start: 1px solid var(--sl-color-hairline) !important;
+  }
+
+  /* Allow main content container to take the full width of the main pane */
+  .main-pane .sl-container {
+    max-width: 100% !important;
+    margin-inline: 0 !important;
+  }
+}

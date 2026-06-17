@@ -1,60 +1,75 @@
 # Digital Brain
 
-Personal knowledge base and documentation site built with Eleventy.
+Personal knowledge base and documentation site built with **Astro** and the **Starlight** documentation theme, featuring the **Starlight Blog** plugin.
 
 ## Quick Start
 
 ### Local Development
 
-1. Install dependencies:
-```bash
-npm install
-```
+1. **Install dependencies**:
+   ```bash
+   npm install
+   ```
 
-2. Serve locally:
-```bash
-npm start
-```
+2. **Serve locally**:
+   ```bash
+   npm start
+   # or
+   npm run dev
+   ```
 
-Visit http://127.0.0.1:8000
+3. **Visit the site**:
+   Go to [http://localhost:4321/brain-document/](http://localhost:4321/brain-document/) in your browser.
+
+---
 
 ### Adding Content
 
-Simply create new folders and markdown files in the `docs/` directory:
+Simply create new folders and markdown files in the `src/content/docs/` directory:
 
-```bash
-# Create a new topic
-mkdir -p docs/programming
-echo "# Python Guide" > docs/programming/python.md
+1. **Documentation Pages**:
+   Create a markdown file under `src/content/docs/`:
+   ```bash
+   # Example:
+   touch src/content/docs/programming/python.md
+   ```
+   *Make sure you include a title in the YAML frontmatter:*
+   ```markdown
+   ---
+   title: "Python Guide"
+   ---
+   # Content starts here...
+   ```
+   The left sidebar navigation will update automatically!
 
-# Navigation updates automatically!
-```
+2. **Blog Posts**:
+   Create a markdown file inside `src/content/docs/blog/`:
+   ```bash
+   # Example:
+   touch src/content/docs/blog/my-update.md
+   ```
+   *Make sure you include a title, date, and author keys in the YAML frontmatter:*
+   ```markdown
+   ---
+   title: "My Blog Update"
+   date: 2026-06-17
+   authors: ["thaihai"]
+   ---
+   Your introduction here...
+   ```
+
+3. **Library (HTML/PDF Documents)**:
+   Place any standalone `.html`, `.htm`, or `.pdf` file anywhere inside the `public/` folder (e.g. `public/books/`). They will be scanned and updated in the Library page automatically during local dev or production builds.
+
+---
 
 ### Deployment
 
-Push to GitHub and the site will automatically deploy to GitHub Pages via GitHub Actions.
-
-## Features
-
-- ✅ Automatic navigation generation
-- ✅ Full-text search
-- ✅ Dark/light mode
-- ✅ Mobile responsive
-- ✅ Code syntax highlighting
-- ✅ Auto-deploy to GitHub Pages
+Push your changes to the `main` branch on GitHub, and the site will automatically build and deploy to GitHub Pages via GitHub Actions.
 
 ## Customization
 
-Edit `.eleventy.js` and CSS files to customize:
-- Site configuration and collections
-- Theme colors in `overrides/assets/stylesheets/design-tokens.css`
-- Features and plugins
-
-
-## Layout
-  ┌──────────────────────────────────────────────────────┐
-  │  15%   │           75%              │      10%       │
-  │  Left  │      Main Content          │     Right      │
-  │ Sidebar│   (Your HTML page)         │    Sidebar     │
-  │  (Nav) │  7.5% padding on each side │     (TOC)      │
-  └──────────────────────────────────────────────────────┘
+Edit files to customize:
+* **Site and Sidebar configuration**: `astro.config.mjs`
+* **Content Collections and Schema**: `src/content.config.ts`
+* **Backlinks logic**: `src/utils/backlinks.ts` and components `src/components/Backlinks.astro` / `src/components/CustomFooter.astro`

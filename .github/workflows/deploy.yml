@@ -24,29 +24,21 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Setup Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.x'
-
-      - name: Build library index
-        run: python3 build_library.py
-
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: '20'
 
       - name: Install dependencies
-        run: rm -f package-lock.json && npm install --no-audit --no-fund
+        run: rm -f package-lock.json && npm install --no-audit --no-fund --legacy-peer-deps
 
-      - name: Build Eleventy site
+      - name: Build Astro site
         run: npm run build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./public
+          path: ./dist
 
   deploy:
     environment:

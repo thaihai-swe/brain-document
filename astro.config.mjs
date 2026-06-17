@@ -2,6 +2,7 @@ import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import starlightBlog from 'starlight-blog';
 import { remarkWikiLinks } from './src/plugins/remark-wiki-links.js';
+import { sidebar } from './src/utils/sidebar.mjs';
 
 export default defineConfig({
   base: '/brain-document',
@@ -40,32 +41,7 @@ export default defineConfig({
           }
         })
       ],
-      sidebar: [
-        {
-          label: 'Architecture',
-          autogenerate: { directory: 'architecture' },
-        },
-        {
-          label: 'Backend',
-          autogenerate: { directory: 'backend' },
-        },
-        {
-          label: 'Frontend',
-          autogenerate: { directory: 'frontend' },
-        },
-        {
-          label: 'DevOps',
-          autogenerate: { directory: 'devops' },
-        },
-        {
-          label: 'Guides',
-          autogenerate: { directory: 'guides' },
-        },
-        {
-          label: 'Library',
-          link: '/library/',
-        },
-      ],
+      sidebar,
       components: {
         Footer: './src/components/CustomFooter.astro',
       },

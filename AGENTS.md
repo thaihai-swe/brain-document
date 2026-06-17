@@ -1,44 +1,51 @@
-Dont commit and push code
+# CLAUDE.md
 
-# AI Agent Instructions for "Digital Brain"
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
-This file (`AGENTS.md`) serves as the core instruction manual for any AI assistant (Gemini, Claude, Cursor, etc.) interacting with this codebase.
+## Project
 
-## 🎯 Project Overview
-- **Name:** Digital Brain
-- **Purpose:** A personal knowledge base and documentation site.
-- **Framework:** [Eleventy](https://www.11ty.dev/).
-- **Core Principle:** Simple markdown authoring with advanced interconnected features (like Obsidian).
+"Digital Brain" is a personal knowledge base / documentation site built with **Astro 5** + **Starlight** (`@astrojs/starlight`) and the **starlight-blog** plugin. It deploys as a static site to GitHub Pages at `https://thaihai-swe.github.io/brain-document/`.
 
-## 🛠 Tech Stack & Structure
-- **Content:** Written in standard Markdown (`.md`) inside the `docs/` and `blog/` directories.
-- **Styling:** Vanilla CSS overrides located in `overrides/assets/stylesheets/design-tokens.css` and `overrides/assets/stylesheets/extra.css`. We do NOT use Tailwind or other CSS frameworks.
-- **JavaScript:** Custom scripts (backlinks) are in `overrides/assets/javascripts/`.
-- **Config:** `.eleventy.js` holds all plugin configurations and collections.
+Note: the project was migrated from Eleventy to Astro. Some artifacts still reference the old stack — the staged-for-deletion `AGENTS.md` describes the Eleventy setup (ignore it), and the GitHub Actions workflow is named "Deploy Eleventy" but actually builds Astro. Trust the current Astro config over those stale references.
 
-## 🎨 Design & Aesthetics
-Always refer to the custom design system when making UI/CSS changes:
-- **Light Mode:** Warm Editorial (`#FAFAF8` background).
-- **Dark Mode:** Near-Black Craft Tool (`#08090A` background).
-- **Accent Color:** Indigo Voltage (`#635BFF`).
-- **Typography:** System fonts only (no heavy web fonts like Google Fonts).
-- **Layout (Desktop):** 15% Left Navigation | 75% Main Content | 10% Right TOC.
-- **Aesthetics First:** UIs should be visually stunning, responsive, and follow modern micro-interaction principles without sacrificing performance.
+## Commands
 
-## 🧠 Key Features to Maintain
-1. **Wiki Links:** We use Obsidian-style `[[page-name]]` or `[[page-name|Display Text]]` links. Do not replace these with standard markdown links unless requested.
-2. **Backlinks:** Bidirectional links automatically rendered at the bottom of pages.
-3. **Blog:** Posts are located in `blog/posts/YYYY/MM/`. They require specific YAML frontmatter (date, authors, categories).
-4. **Mermaid Diagrams:** Heavily used for architecture and flow charts. Use ` ```mermaid ` syntax.
+```bash
+npm install --legacy-peer-deps   # install (--legacy-peer-deps avoids upstream peer conflicts)
+npm start                        # or `npm run dev` — local dev server
+npm run build                    # production build to dist/ (also builds Pagefind search index)
+npm run preview                  # serve the built dist/ locally
+```
 
-## ⚙️ Workflows & Commands
-- **Local Dev:** Run `npm start` to preview changes at `http://localhost:8080`.
-- **Build:** Run `npm run build` to generate the static site in the `public/` directory and build the Pagefind search index.
-- **Adding Regular Docs:** Create `docs/category/topic.md`. Navigation auto-updates.
-- **Adding Blog Posts:** Create `blog/posts/YYYY/MM/post-name.md` with proper YAML frontmatter (date, authors, categories) and an `<!-- more -->` separator.
+There is no test suite, linter, or typecheck script configured. `npm run build` is the verification step — it surfaces TypeScript and content-schema errors.
 
-## ⚠️ Strict Rules for AI Agents
-1. **Respect Existing CSS:** Make changes in `design-tokens.css` or `extra.css` instead of writing inline styles. Always check existing media queries and layout proportions before modifying sidebars or grids.
-2. **No Unnecessary Polling/Loops:** When running `npm run build` or background tasks, wait for completion rather than polling.
-3. **Markdown Best Practices:** Maintain clean markdown formatting. Keep `yaml` frontmatter intact when modifying existing pages.
-4. **Test UI Changes:** If you modify navigation or sidebars, verify changes across different viewport sizes.
+## Base path (important)
+
+The site is served from a subfolder, so `base: '/brain-document'` is set in `astro.config.mjs`. Locally you must visit `http://localhost:4321/brain-document/` (not the bare root). Any hand-written internal URL or asset path must include the `/brain-document/` prefix — this is why the wiki-link plugin and library scanner hardcode it.
+
+## Architecture
+
+Content lives in `src/content/docs/` as Markdown. The `docs` collection (`src/content.config.ts`) uses Starlight's `docsLoader` with `docsSchema` extended by `blogSchema`, so every page accepts both docs and blog frontmatter.
+
+Three content types share that one collection, distinguished by location/frontmatter:
+- **Docs** — `src/content/docs/<category>/...md`. Need a `title` in frontmatter. Sidebar sections (Architecture, Backend, Frontend, DevOps, Guides) are auto-generated from top-level directories via `autogenerate` in `astro.config.mjs` — to add a sidebar section you must edit that config, not just create a folder.
+- **Blog posts** — `src/content/docs/blog/YYYY/MM/*.md`. Need `title`, `date`, and `authors` (keys must match the `authors` map registered in the `starlightBlog({...})` plugin config). The plugin generates the blog index, pagination, and RSS.
+- **Library** — standalone `.html`, `.htm`, `.pdf` files placed anywhere under `public/`. `src/pages/library.astro` scans `public/` **at build time** with Node `fs` and renders a file tree. No manual indexing step; just add the file and rebuild.
+
+### Custom features (two coordinated pieces each)
+
+**Wiki links** (`[[page-name]]` / `[[page-name|Display Text]]`): the remark plugin in `src/plugins/remark-wiki-links.js` (registered under `markdown.remarkPlugins`) rewrites these at parse time into anchor nodes. It normalizes the target to `/brain-document/<lowercased, .md-stripped, spaces→dashes>/`.
+
+**Backlinks**: `src/utils/backlinks.ts` builds a map by scanning every page's raw body for `[[...]]` patterns and resolving them to page IDs (matched by filename, full cleaned id, or subpath suffix). `src/components/Backlinks.astro` reads that map for the current page id and renders a "Backlinks" list. It's injected via `src/components/CustomFooter.astro`, which Starlight uses as the `Footer` component override.
+
+Because both the link rewriter and the backlink resolver parse `[[...]]` independently, their normalization rules (lowercase, strip `.md`, spaces→dashes) must stay in sync or links and backlinks will disagree.
+
+## Deployment
+
+Pushing to `main` triggers `.github/workflows/*.yml`, which runs `npm install --legacy-peer-deps` then `npm run build` and publishes `dist/` to GitHub Pages.
+
+## Conventions
+
+- Don't replace `[[wiki-links]]` with standard Markdown links unless asked.
+- Keep YAML frontmatter intact when editing existing pages.
+- Custom CSS goes in `src/styles/custom.css` (registered as `customCss`); avoid inline styles.

@@ -4,8 +4,10 @@
   "description": "Personal knowledge base and documentation site built with Astro and Starlight.",
   "type": "module",
   "scripts": {
+    "predev": "node scripts/generate-sidebar.js",
     "dev": "astro dev",
     "start": "astro dev",
+    "prebuild": "node scripts/generate-sidebar.js",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro"

@@ -1,14 +1,27 @@
 # Digital Brain
 
-Personal knowledge base and documentation site built with **Astro** and the **Starlight** documentation theme, featuring the **Starlight Blog** plugin.
+Personal knowledge base and documentation site built with **Astro 5** + **Starlight** (`@astrojs/starlight`) and the **starlight-blog** plugin.
 
-## Quick Start
+- **Repository**: https://github.com/thaihai-swe/brain-document
+- **Live Site**: https://thaihai-swe.github.io/brain-document/
 
-### Local Development
+---
+
+## 💡 Key Features & Architecture
+
+- **Astro 5 & Starlight**: Modern static site generator optimized for technical documentation.
+- **Obsidian Wiki Links**: Custom Remark plugin (`src/plugins/remark-wiki-links.js`) supporting `[[wiki-links]]`.
+- **Automated Backlinks**: Calculated at build time (`src/utils/backlinks.ts`) and rendered in a custom footer (`src/components/CustomFooter.astro`).
+- **Built-in Search**: Integrated Pagefind indexer with Starlight.
+- **Auto-indexed Library**: Standalone `.html`, `.htm`, and `.pdf` files placed under `public/` are automatically scanned and listed on the `/library` page.
+
+---
+
+## 🚀 Quick Start & Local Development
 
 1. **Install dependencies**:
    ```bash
-   npm install
+   npm install --legacy-peer-deps
    ```
 
 2. **Serve locally**:
@@ -19,57 +32,78 @@ Personal knowledge base and documentation site built with **Astro** and the **St
    ```
 
 3. **Visit the site**:
-   Go to [http://localhost:4321/brain-document/](http://localhost:4321/brain-document/) in your browser.
+   Go to [http://localhost:4321/brain-document/](http://localhost:4321/brain-document/) in your browser (Astro prefixes URLs with the base path `/brain-document/`).
+
+4. **Production Build & Verification**:
+   ```bash
+   npm run build
+   npm run preview
+   ```
 
 ---
 
-### Adding Content
+## 📝 Adding Content
 
-Simply create new folders and markdown files in the `src/content/docs/` directory:
-
-1. **Documentation Pages**:
-   Create a markdown file under `src/content/docs/`:
+### 1. Documentation Pages (Knowledge Base)
+Evergreen technical knowledge, references, and guides.
+1. Create a markdown file anywhere under `src/content/docs/`:
    ```bash
-   # Example:
    touch src/content/docs/programming/python.md
    ```
-   *Make sure you include a title in the YAML frontmatter:*
+2. Include YAML frontmatter with at least the `title`:
    ```markdown
    ---
    title: "Python Guide"
    ---
-   # Content starts here...
+   Your content here...
    ```
-   The left sidebar navigation will update automatically!
+3. Sidebar navigation sections update automatically based on directory structure configured in `astro.config.mjs`.
 
-2. **Blog Posts**:
-   Create a markdown file inside `src/content/docs/blog/`:
+### 2. Blog Posts
+For journals, release logs, and progress updates.
+1. Create a markdown file under `src/content/docs/blog/` (e.g. `src/content/docs/blog/2026/06/my-update.md`):
    ```bash
-   # Example:
-   touch src/content/docs/blog/my-update.md
+   touch src/content/docs/blog/2026/06/my-update.md
    ```
-   *Make sure you include a title, date, and author keys in the YAML frontmatter:*
+2. Include YAML frontmatter with `title`, `date`, and `authors`:
    ```markdown
    ---
-   title: "My Blog Update"
+   title: "June Progress Report"
    date: 2026-06-17
    authors: ["thaihai"]
    ---
-   Your introduction here...
+   Your post introduction here...
    ```
+3. The plugin automatically generates the blog index, pagination, author tags, and RSS feed at `/blog/`.
 
-3. **Library (HTML/PDF Documents)**:
-   Place any standalone `.html`, `.htm`, or `.pdf` file anywhere inside the `public/` folder (e.g. `public/books/`). They will be scanned and updated in the Library page automatically during local dev or production builds.
+### 3. Library (HTML/PDF Documents)
+For standalone HTML decks (such as book slides) and PDFs.
+1. Place any `.html`, `.htm`, or `.pdf` file anywhere inside the `public/` directory (e.g. `public/books/`).
+2. `src/pages/library.astro` scans and lists them automatically at build time without requiring manual indexing.
 
 ---
 
-### Deployment
+## ⚙️ Customization & Architecture
 
-Push your changes to the `main` branch on GitHub, and the site will automatically build and deploy to GitHub Pages via GitHub Actions.
+- **Site & Sidebar Configuration**: `astro.config.mjs`
+- **Content Collections & Schema**: `src/content.config.ts`
+- **Wiki Links Plugin**: `src/plugins/remark-wiki-links.js`
+- **Backlinks Logic**: `src/utils/backlinks.ts` and components `src/components/Backlinks.astro` / `src/components/CustomFooter.astro`
+- **Custom Styling**: `src/styles/custom.css`
 
-## Customization
+---
 
-Edit files to customize:
-* **Site and Sidebar configuration**: `astro.config.mjs`
-* **Content Collections and Schema**: `src/content.config.ts`
-* **Backlinks logic**: `src/utils/backlinks.ts` and components `src/components/Backlinks.astro` / `src/components/CustomFooter.astro`
+## 🚀 Deployment
+
+Push your changes to the `main` branch on GitHub:
+```bash
+git add .
+git commit -m "Update content"
+git push origin main
+```
+GitHub Actions automatically builds and deploys the site to GitHub Pages.
+
+---
+
+## 📚 Related Documentation
+- `DEPLOYMENT.md`: Build and release pipeline details.

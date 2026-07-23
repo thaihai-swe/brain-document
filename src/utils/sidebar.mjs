@@ -1,6 +1,13 @@
 // Generated automatically by scripts/generate-sidebar.js. Do not edit directly.
 export const sidebar = [
   {
+    "label": "Baby",
+    "collapsed": true,
+    "autogenerate": {
+      "directory": "Baby"
+    }
+  },
+  {
     "label": "Architecture",
     "collapsed": true,
     "autogenerate": {

@@ -1,0 +1,30 @@
+---
+import { getBacklinksMap } from '../utils/backlinks';
+
+interface Props {
+  id: string;
+}
+
+const { id } = Astro.props;
+const backlinksMap = await getBacklinksMap();
+const backlinks = backlinksMap.get(id) || [];
+
+function formatUrl(pageId: string) {
+  const cleanId = pageId.replace(/index\.(md|mdx)$/, '').replace(/\.(md|mdx)$/, '');
+  return `/brain-document/${cleanId}`;
+}
+---
+
+{backlinks.length > 0 && (
+  <div class="sl-markdown-content">
+    <hr />
+    <h3>Backlinks</h3>
+    <ul>
+      {backlinks.map(link => (
+        <li>
+          <a href={formatUrl(link.id)}>{link.title}</a>
+        </li>
+      ))}
+    </ul>
+  </div>
+)}

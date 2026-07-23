@@ -6,6 +6,7 @@
   "scripts": {
     "predev": "node scripts/generate-sidebar.js",
     "dev": "astro dev",
+    "prestart": "node scripts/generate-sidebar.js",
     "start": "astro dev",
     "prebuild": "node scripts/generate-sidebar.js",
     "build": "astro build",

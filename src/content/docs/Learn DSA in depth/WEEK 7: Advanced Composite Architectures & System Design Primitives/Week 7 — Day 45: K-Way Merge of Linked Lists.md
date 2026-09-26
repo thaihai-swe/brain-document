@@ -2,8 +2,6 @@
 title: "Week 7 — Day 45: K-Way Merge of Linked Lists"
 ---
 
-# 🚀 Week 7 — Day 45: K-Way Merge of Linked Lists
-
 In **Day 44**, we mastered arbitrary-precision list arithmetic, carry propagation invariants, and non-destructive stack accumulators.
 
 Today, we conquer **$K$-Way Stream Merging**:

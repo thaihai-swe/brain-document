@@ -2,8 +2,6 @@
 title: "Week 4 — Day 25: Multi-Pointer Reductions & Water Trapping"
 ---
 
-# 🚀 Week 4 — Day 25: Multi-Pointer Reductions & Water Trapping
-
 Over **Days 22 to 24**, we conquered logarithmic search spaces: exact vs boundary searches, cyclic rotations, and binary search on monotonic answer spaces.
 
 Today, we return to multi-element combinations and spatial geometry with **Advanced Multi-Pointer Reductions & Water Trapping**.

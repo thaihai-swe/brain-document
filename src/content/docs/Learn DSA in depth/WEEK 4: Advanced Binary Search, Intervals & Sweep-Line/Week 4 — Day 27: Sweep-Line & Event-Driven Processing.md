@@ -2,8 +2,6 @@
 title: "Week 4 — Day 27: Sweep-Line & Event-Driven Processing"
 ---
 
-# 🚀 Week 4 — Day 27: Sweep-Line & Event-Driven Processing
-
 In **Day 26**, we studied Interval Algebra ($[start, end]$), learning how to sort intervals as indivisible blocks to merge overlapping ranges and greedily schedule activities.
 
 Today, we unlock **Sweep-Line (Event-Driven Timeline Processing)** — one of the most intellectually elegant and versatile algorithmic patterns in computer science.

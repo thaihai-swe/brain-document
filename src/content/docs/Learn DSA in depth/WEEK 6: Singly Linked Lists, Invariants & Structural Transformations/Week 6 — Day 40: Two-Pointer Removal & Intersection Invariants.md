@@ -2,8 +2,6 @@
 title: "Week 6 — Day 40: Two-Pointer Removal & Intersection Invariants"
 ---
 
-# 🚀 Week 6 — Day 40: Two-Pointer Removal & Intersection Invariants
-
 In **Days 37 to 39**, we used fast & slow pointers to find midpoints, prove cyclic loops, and reverse nodes in $K$-element blocks.
 
 Today, we explore **Relative Distance Invariants & Pointer-Switching Mechanics**:

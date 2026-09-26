@@ -2,8 +2,6 @@
 title: "Week 5 — Day 34: Week 5 Integration & Timed Simulation"
 ---
 
-# 🚀 Week 5 — Day 34: Week 5 Integration & Timed Simulation
-
 Welcome to **Day 34: Week 5 Integration & Timed Simulation**.
 
 Over the past 5 days, you mastered advanced 2D coordinate geometry, string search automata, polynomial rolling hashes, and register-level bit manipulation:

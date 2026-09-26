@@ -2,8 +2,6 @@
 title: "Week 3 — Day 17: Subsequences vs. Substrings & Multi-Pointer Matching"
 ---
 
-# 🚀 Week 3 — Day 17: Subsequences vs. Substrings & Multi-Pointer Matching
-
 Welcome to Day 17! Today we analyze one of the most foundational distinctions in string algorithms: **Substrings vs. Subsequences**.
 
 Understanding the difference between contiguous segments and order-preserving sparse sequences unlocks greedy two-pointer traversals, inverted-index lookups, and the **Multi-Pointer Bucket pattern** (an interview favorite at Google and Meta).

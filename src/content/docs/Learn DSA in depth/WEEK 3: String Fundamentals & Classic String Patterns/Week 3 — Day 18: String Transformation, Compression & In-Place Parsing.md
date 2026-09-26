@@ -2,8 +2,6 @@
 title: "Week 3 — Day 18: String Transformation, Compression & In-Place Parsing"
 ---
 
-# 🚀 Week 3 — Day 18: String Transformation, Compression & In-Place Parsing
-
 Welcome to Day 18! Today we bring our traversal toolkit full-circle by combining **in-place pointer mechanics** (from Week 1) with **string manipulation and compression**.
 
 In managed languages, strings are immutable, but interviewers frequently present string problems formatted around `char[]` buffers or ask you to simulate **$O(1)$ auxiliary space transformations**. Mastering the **Reader & Writer idiom** and the **Reverse-All-Then-Reverse-Each-Word idiom** is essential for high-performance string engineering.

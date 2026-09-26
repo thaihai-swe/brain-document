@@ -2,8 +2,6 @@
 title: "Week 2 — Day 14: Week 2 Integration, Pattern Contrast & Timed Practice"
 ---
 
-# 🚀 Week 2 — Day 14: Week 2 Integration, Pattern Contrast & Timed Practice
-
 Welcome to Day 14! You have completed the core traversal and range query curriculum of **Week 2**.
 
 Today is our **Synthesis & Integration Day**. In high-stakes Big Tech interviews, the primary challenge is rarely writing the code—it is **correctly identifying the pattern within the first 60 seconds**. Today, we codify the decision boundaries between **Prefix Sums** and **Sliding Windows**, walk through two classic synthesis problems, and review the Week 2 mental architecture.

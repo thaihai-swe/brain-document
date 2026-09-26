@@ -2,8 +2,6 @@
 title: "Week 6 — Day 37: Fast & Slow Pointers — Midpoint Finding & Cycle Detection Proof"
 ---
 
-# 🚀 Week 6 — Day 37: Fast & Slow Pointers — Midpoint Finding & Cycle Detection Proof
-
 In **Day 36**, we established the memory realities of linked lists on the managed heap, explored pointer chasing, and mastered the **Sentinel Dummy Node Invariant** and **Iterative 3-Pointer Reversals**.
 
 Today, we unlock one of the most celebrated algorithmic techniques in computer science: **Fast & Slow Pointers (Floyd's Tortoise & Hare Algorithm)**.

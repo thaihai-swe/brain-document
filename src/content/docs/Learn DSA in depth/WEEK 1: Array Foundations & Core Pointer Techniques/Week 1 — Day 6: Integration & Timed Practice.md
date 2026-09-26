@@ -2,8 +2,6 @@
 title: "Week 1 — Day 6: Integration & Timed Practice"
 ---
 
-# 🚀 Week 1 — Day 6: Integration & Timed Practice
-
 Welcome to Day 6! This is your **integration day** — a chance to combine everything you've learned in Weeks 1–5 (array memory, in-place mutation, two-pointer patterns, and sorting invariants) to solve two classic, high-frequency interview problems.
 
 You will see the **same patterns reappear** in slightly different guises, reinforcing why these abstractions matter.

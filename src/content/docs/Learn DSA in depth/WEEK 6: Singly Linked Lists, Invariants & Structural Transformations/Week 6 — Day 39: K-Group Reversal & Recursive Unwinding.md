@@ -2,8 +2,6 @@
 title: "Week 6 — Day 39: K-Group Reversal & Recursive Unwinding"
 ---
 
-# 🚀 Week 6 — Day 39: K-Group Reversal & Recursive Unwinding
-
 In **Day 38**, we mastered single subsegment reversals and palindrome symmetry verification.
 
 Today, we confront the undisputed gold standard of linked list interview questions: **Reverse Nodes in $K$-Group ([LeetCode 25 — Hard])**.

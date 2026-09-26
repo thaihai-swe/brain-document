@@ -2,8 +2,6 @@
 title: "Week 2 — Day 11: Fixed-Size Sliding Window"
 ---
 
-# 🚀 Week 2 — Day 11: Fixed-Size Sliding Window
-
 Welcome to Day 11! Today we begin our deep dive into the **Sliding Window pattern**, starting with its most structured form: the **Fixed-Size Window**.
 
 In [Day 8](file:///Users/thaihai-swe/Desktop/my-prompt/learn%20DSA%20in%20depth/WEEK%202:%20Advanced%20Traversal%20-%20Sliding%20Window%20&%20Prefix%20Sums/Week%202%20%E2%80%94%20Day%208:%20Prefix%20Sum%20Fundamentals%20%281D%29.md), we solved range queries with $O(N)$ prefix sum memory. When queries all share the **exact same length $K$** and proceed sequentially, the Fixed-Size Sliding Window achieves the same $O(1)$ query capability with **$O(1)$ auxiliary memory**!

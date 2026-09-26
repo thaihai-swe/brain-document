@@ -2,8 +2,6 @@
 title: "Week 2 — Day 10: 2D Prefix Sums & Matrix Range Queries"
 ---
 
-# 🚀 Week 2 — Day 10: 2D Prefix Sums & Matrix Range Queries
-
 Welcome to Day 10! Today we expand prefix sums into **two dimensions**.
 
 In [Day 8](file:///Users/thaihai-swe/Desktop/my-prompt/learn%20DSA%20in%20depth/WEEK%202:%20Advanced%20Traversal%20-%20Sliding%20Window%20&%20Prefix%20Sums/Week%202%20%E2%80%94%20Day%208:%20Prefix%20Sum%20Fundamentals%20%281D%29.md), we precomputed a 1D prefix strip to answer range queries in $O(1)$ time. In 2D space (grids and matrices), calculating the sum of an arbitrary rectangular subgrid from $(r_1, c_1)$ to $(r_2, c_2)$ appears to require looping over rows and columns ($O(M \times N)$). 

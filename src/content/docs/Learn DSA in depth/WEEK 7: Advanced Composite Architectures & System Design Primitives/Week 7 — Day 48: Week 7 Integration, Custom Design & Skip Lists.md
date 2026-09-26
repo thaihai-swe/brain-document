@@ -2,8 +2,6 @@
 title: "Week 7 — Day 48: Week 7 Integration, Custom Design & Skip Lists"
 ---
 
-# 🚀 Week 7 — Day 48: Week 7 Integration, Custom Design & Skip Lists
-
 In **Days 43 to 47**, we explored advanced pointer graphs, arbitrary-precision arithmetic, $K$-way stream merging, and high-performance cache engines (LRU & LFU).
 
 Today, we conquer **Custom Data Structure Design from Scratch**:

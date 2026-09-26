@@ -2,8 +2,6 @@
 title: "Week 2 — Day 9: Prefix Sum + Hash Map (The Subarray Sum Pattern)"
 ---
 
-# 🚀 Week 2 — Day 9: Prefix Sum + Hash Map (The Subarray Sum Pattern)
-
 Welcome to Day 9! Today we study one of the most powerful and high-frequency array patterns asked in Big Tech interviews: **Prefix Sum combined with a Hash Map**.
 
 Yesterday on [Day 8](file:///Users/thaihai-swe/Desktop/my-prompt/learn%20DSA%20in%20depth/WEEK%202:%20Advanced%20Traversal%20-%20Sliding%20Window%20&%20Prefix%20Sums/Week%202%20%E2%80%94%20Day%208:%20Prefix%20Sum%20Fundamentals%20%281D%29.md), we explored static range sum queries using the property $\text{Sum}(L \dots R) = P[R] - P[L-1]$. Today, we invert that formula to locate sub-arrays dynamically in $O(N)$ time—**even when the array contains negative numbers**, a scenario where sliding window completely collapses.

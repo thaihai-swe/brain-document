@@ -2,8 +2,6 @@
 title: "Week 2 — Day 13: Sliding Window with Frequency Map & Match Counters"
 ---
 
-# 🚀 Week 2 — Day 13: Sliding Window with Frequency Map & Match Counters
-
 Welcome to Day 13! Today we tackle the most sophisticated variant of the sliding window technique: **Sliding Window with Frequency Maps and Match Counters**.
 
 This pattern governs classic Big Tech interview problems involving anagrams, string permutations, and the crown jewel of sliding window questions: **LeetCode 76 (Minimum Window Substring)**.

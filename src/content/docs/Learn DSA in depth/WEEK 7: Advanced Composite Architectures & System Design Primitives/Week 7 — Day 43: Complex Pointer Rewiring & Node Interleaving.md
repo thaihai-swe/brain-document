@@ -2,8 +2,6 @@
 title: "Week 7 — Day 43: Complex Pointer Rewiring & Node Interleaving"
 ---
 
-# 🚀 Week 7 — Day 43: Complex Pointer Rewiring & Node Interleaving
-
 Welcome to **Week 7: Advanced Composite Architectures & System Design Primitives**!
 
 In **Week 6 (Days 36–42)**, you conquered singly linked list fundamentals: pointer chasing, fast & slow pointers, in-place reversals, $K$-group chunking, multi-chain partitioning, and list merge sort.

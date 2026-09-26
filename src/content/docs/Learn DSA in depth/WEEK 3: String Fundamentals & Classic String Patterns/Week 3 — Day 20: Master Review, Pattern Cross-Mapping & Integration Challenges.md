@@ -2,8 +2,6 @@
 title: "Week 3 — Day 20: Master Review, Pattern Cross-Mapping & Integration Challenges"
 ---
 
-# 🚀 Week 3 — Day 20: Master Review, Pattern Cross-Mapping & Integration Challenges
-
 Welcome to Day 20! You have now completed the entire array and string curriculum across Weeks 1, 2, and 3.
 
 Today is our **Grand Synthesis & Pattern Cross-Mapping Day**. Before the Week 1–3 Milestone Assessment (Mock Interview) tomorrow, we construct a unified decision architecture across all 12 core patterns, walk through three integration challenges combining multiple techniques, and provide your master code templates.

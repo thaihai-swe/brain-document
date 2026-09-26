@@ -2,8 +2,6 @@
 title: "Week 4 — Day 22: Binary Search Invariants and Boundary Formulations"
 ---
 
-# 🚀 Week 4 — Day 22: Binary Search Invariants and Boundary Formulations
-
 Welcome to **Week 4**! Over Weeks 1–3, you built an unshakeable foundation in linear data structures: memory layouts, pointer coordination (Opposite-Ends, Fast & Slow Reader/Writer), range accumulation (Prefix Sums, Difference Arrays), continuous windowing, and string runtime internals.
 
 This week, we make the leap from $O(N)$ linear scans into **$O(\log N)$ logarithmic search spaces**. 

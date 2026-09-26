@@ -2,8 +2,6 @@
 title: "Week 5 — Day 32: KMP Pattern Matching & The Pi-Array"
 ---
 
-# 🚀 Week 5 — Day 32: KMP Pattern Matching & The Pi-Array
-
 In **Day 31**, we used the Rabin-Karp algorithm to perform probabilistic substring matching via polynomial rolling hashes.
 
 Today, we conquer **Knuth-Morris-Pratt (KMP)**: one of the crowning theoretical achievements in string algorithms.

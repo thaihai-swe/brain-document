@@ -2,8 +2,6 @@
 title: "Week 3 — Day 15: String Memory Internals & Character Arrays"
 ---
 
-# 🚀 Week 3 — Day 15: String Memory Internals & Character Arrays
-
 Welcome to **Week 3**! In Weeks 1 and 2, you mastered array memory layout, in-place pointer coordination, and continuous range queries (Prefix Sums and Sliding Windows).
 
 This week, we apply those foundational traversal skills to **Strings**. In technical interviews, string problems test not only your algorithmic reasoning, but also your understanding of **low-level language runtime internals**: heap allocations, immutability, cache locality, and character encoding.

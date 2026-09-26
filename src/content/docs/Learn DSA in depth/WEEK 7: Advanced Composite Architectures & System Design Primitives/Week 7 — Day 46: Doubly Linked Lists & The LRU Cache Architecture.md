@@ -2,8 +2,6 @@
 title: "Week 7 — Day 46: Doubly Linked Lists & The LRU Cache Architecture"
 ---
 
-# 🚀 Week 7 — Day 46: Doubly Linked Lists & The LRU Cache Architecture
-
 In **Day 45**, we scaled list merging across $K$ sorted streams, proving why Divide-and-Conquer beats Min-Heaps in physical CPU cache efficiency.
 
 Today, we build one of the most celebrated and frequently asked composite data structures in Big Tech interview history:

@@ -2,8 +2,6 @@
 title: "Week 6 — Day 38: In-Place Reversals & Palindrome Lists"
 ---
 
-# 🚀 Week 6 — Day 38: In-Place Reversals & Palindrome Lists
-
 In **Days 36 and 37**, we mastered basic pointer chasing, sentinel dummy nodes, and single-pass midpoint finding via fast & slow pointers.
 
 Today, we combine those techniques to conquer **Structural Transformations & Symmetry Invariants**:

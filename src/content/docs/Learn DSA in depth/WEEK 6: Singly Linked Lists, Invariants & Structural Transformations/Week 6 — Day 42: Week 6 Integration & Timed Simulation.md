@@ -2,8 +2,6 @@
 title: "Week 6 — Day 42: Week 6 Integration & Timed Simulation"
 ---
 
-# 🚀 Week 6 — Day 42: Week 6 Integration & Timed Simulation
-
 Welcome to **Day 42: Week 6 Integration & Timed Simulation**!
 
 Over the past 6 days, you progressed from the hardware mechanics of pointer dereferencing on the CLR managed heap to advanced structural transformations and $O(1)$ space list sorting:

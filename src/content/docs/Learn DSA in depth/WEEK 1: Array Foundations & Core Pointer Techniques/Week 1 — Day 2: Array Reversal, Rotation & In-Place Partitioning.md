@@ -2,8 +2,6 @@
 title: "Week 1 — Day 2: Array Reversal, Rotation & In-Place Partitioning"
 ---
 
-# 🚀 Week 1 — Day 2: Array Reversal, Rotation & In-Place Partitioning
-
 Welcome to Day 2! Today we build upon in-place operations by mastering two essential array manipulation techniques frequently tested in Big Tech interviews:
 1. **The 3-Reversal Rotation Technique** ($O(1)$ auxiliary space rotation)
 2. **The Dutch National Flag Algorithm** (3-Way In-Place Partitioning)

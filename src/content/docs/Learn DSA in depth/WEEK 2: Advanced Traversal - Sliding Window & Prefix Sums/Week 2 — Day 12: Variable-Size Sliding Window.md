@@ -2,8 +2,6 @@
 title: "Week 2 — Day 12: Variable-Size Sliding Window"
 ---
 
-# 🚀 Week 2 — Day 12: Variable-Size Sliding Window
-
 Welcome to Day 12! Yesterday on [Day 11](file:///Users/thaihai-swe/Desktop/my-prompt/learn%20DSA%20in%20depth/WEEK%202:%20Advanced%20Traversal%20-%20Sliding%20Window%20&%20Prefix%20Sums/Week%202%20%E2%80%94%20Day%2011:%20Fixed-Size%20Sliding%20Window.md), we mastered windows with a static length $K$.
 
 Today we study the **Variable-Size Sliding Window** (often called the Dynamic Window or Accordion Pattern). Instead of a rigid frame, the window expands and contracts dynamically to locate the **longest** or **shortest** contiguous subarray satisfying a given constraint.

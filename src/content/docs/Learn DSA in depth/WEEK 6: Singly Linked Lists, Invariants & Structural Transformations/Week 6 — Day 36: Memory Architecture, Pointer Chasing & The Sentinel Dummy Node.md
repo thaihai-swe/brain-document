@@ -2,8 +2,6 @@
 title: "Week 6 — Day 36: Memory Architecture, Pointer Chasing & The Sentinel Dummy Node"
 ---
 
-# 🚀 Week 6 — Day 36: Memory Architecture, Pointer Chasing & The Sentinel Dummy Node
-
 Welcome to **Week 6** and the start of **Phase 2 (Linear Abstract Data Types & Pointer Networks)**!
 
 Over the past 5 weeks (Days 1–35), we operated primarily on contiguous arrays and flat memory buffers where CPU cache lines provided automatic prefetching and $O(1)$ arithmetic indexing.

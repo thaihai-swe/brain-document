@@ -2,8 +2,6 @@
 title: "Week 6 — Day 41: Sorting Lists — Merge Sort in O(N log N) Time and O(1) Space"
 ---
 
-# 🚀 Week 6 — Day 41: Sorting Lists — Merge Sort in O(N log N) Time and O(1) Space
-
 In **Days 36 to 40**, we mastered pointer chasing, fast & slow pointers, in-place reversals, $K$-group chunking, and multi-chain partitioning.
 
 Today, we conquer **Sorting Linked Lists**:

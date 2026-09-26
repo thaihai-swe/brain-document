@@ -2,8 +2,6 @@
 title: "Week 3 — Day 16: Two-Pointer String Patterns & Palindromes"
 ---
 
-# 🚀 Week 3 — Day 16: Two-Pointer String Patterns & Palindromes
-
 Welcome to Day 16! Today we explore **Two-Pointer String Patterns and Palindromic Symmetry**.
 
 Palindromes are among the most frequently tested concepts in technical interviews because they reveal whether a candidate can effectively coordinate pointers in two opposing directions: **Outside-In (Converging / Verification)** and **Inside-Out (Expanding / Discovery)**.

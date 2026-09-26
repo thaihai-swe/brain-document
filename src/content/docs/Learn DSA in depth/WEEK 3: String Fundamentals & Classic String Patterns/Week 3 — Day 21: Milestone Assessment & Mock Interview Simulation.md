@@ -2,8 +2,6 @@
 title: "Week 3 — Day 21: Milestone Assessment & Mock Interview Simulation"
 ---
 
-# 🚀 Week 3 — Day 21: Milestone Assessment & Mock Interview Simulation
-
 Welcome to Day 21! Today marks the **Milestone Assessment for Weeks 1–3**.
 
 Over the last 20 days, you have systematically built an unshakeable foundation in:

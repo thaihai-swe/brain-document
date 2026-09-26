@@ -2,8 +2,6 @@
 title: "Week 1 — Day 3: Two Pointers — Opposite Ends Pattern"
 ---
 
-# 🚀 Week 1 — Day 3: Two Pointers — Opposite Ends Pattern
-
 Welcome to Day 3! Today we master the **Opposite-Ends Two-Pointer Pattern** (sometimes called the Converging Pointers technique). This is one of the highest-frequency algorithmic patterns in technical interviews because it transforms naive $O(N^2)$ exhaustive pair searches into blazing fast $O(N)$ single-pass solutions with $O(1)$ auxiliary space.
 
 ---

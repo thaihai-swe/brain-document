@@ -2,8 +2,6 @@
 title: "Week 1 — Day 4: Two Pointers — Fast & Slow (Reader & Writer)"
 ---
 
-# 🚀 Week 1 — Day 4: Two Pointers — Fast & Slow (Reader & Writer)
-
 Welcome to Day 4! Today we master the **Fast & Slow Pointer Pattern** (also widely known as the **Reader / Writer** or **Leader / Follower** pattern).
 
 While the Opposite-Ends pattern (Day 3) moves inward from both boundaries, Fast & Slow pointers move in the **same direction** at different speeds or under different advancing conditions. It is the premier technique for in-place array transformations, filtering, partitioning, and sequence compression with $O(1)$ auxiliary memory.

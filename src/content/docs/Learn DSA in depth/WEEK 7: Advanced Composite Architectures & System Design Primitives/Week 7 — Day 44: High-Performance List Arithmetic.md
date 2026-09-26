@@ -2,8 +2,6 @@
 title: "Week 7 — Day 44: High-Performance List Arithmetic"
 ---
 
-# 🚀 Week 7 — Day 44: High-Performance List Arithmetic
-
 In **Day 43**, we tackled complex arbitrary pointer networks using the 3-pass node interleaving technique and flattened multilevel child branches.
 
 Today, we explore **Arbitrary-Precision Arithmetic on Linked Lists**:

@@ -1,3 +1,7 @@
+---
+title: "Week 5 — Day 35: Phase 1 Milestone Assessment & Mock Interview Simulation"
+---
+
 # 🏆 Week 5 — Day 35: Phase 1 Milestone Assessment & Mock Interview Simulation
 
 Congratulations on reaching **Day 35**! 

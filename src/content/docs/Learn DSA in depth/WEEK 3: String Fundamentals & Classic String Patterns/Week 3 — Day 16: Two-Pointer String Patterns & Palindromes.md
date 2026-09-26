@@ -1,3 +1,7 @@
+---
+title: "Week 3 — Day 16: Two-Pointer String Patterns & Palindromes"
+---
+
 # 🚀 Week 3 — Day 16: Two-Pointer String Patterns & Palindromes
 
 Welcome to Day 16! Today we explore **Two-Pointer String Patterns and Palindromic Symmetry**.

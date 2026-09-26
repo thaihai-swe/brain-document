@@ -1,3 +1,7 @@
+---
+title: "Week 2 — Day 8: Prefix Sum Fundamentals (1D)"
+---
+
 # 🚀 Week 2 — Day 8: Prefix Sum Fundamentals (1D)
 
 Welcome to **Week 2**! In Week 1, you built an unshakeable foundation in array memory layout, in-place pointer coordination (Opposite-Ends, Fast & Slow), and sorting invariants. 

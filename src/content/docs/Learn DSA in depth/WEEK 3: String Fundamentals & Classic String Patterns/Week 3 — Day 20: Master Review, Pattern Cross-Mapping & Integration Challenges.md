@@ -1,3 +1,7 @@
+---
+title: "Week 3 — Day 20: Master Review, Pattern Cross-Mapping & Integration Challenges"
+---
+
 # 🚀 Week 3 — Day 20: Master Review, Pattern Cross-Mapping & Integration Challenges
 
 Welcome to Day 20! You have now completed the entire array and string curriculum across Weeks 1, 2, and 3.

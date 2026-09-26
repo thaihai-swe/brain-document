@@ -1,3 +1,7 @@
+---
+title: "Week 2 — Day 12: Variable-Size Sliding Window"
+---
+
 # 🚀 Week 2 — Day 12: Variable-Size Sliding Window
 
 Welcome to Day 12! Yesterday on [Day 11](file:///Users/thaihai-swe/Desktop/my-prompt/learn%20DSA%20in%20depth/WEEK%202:%20Advanced%20Traversal%20-%20Sliding%20Window%20&%20Prefix%20Sums/Week%202%20%E2%80%94%20Day%2011:%20Fixed-Size%20Sliding%20Window.md), we mastered windows with a static length $K$.

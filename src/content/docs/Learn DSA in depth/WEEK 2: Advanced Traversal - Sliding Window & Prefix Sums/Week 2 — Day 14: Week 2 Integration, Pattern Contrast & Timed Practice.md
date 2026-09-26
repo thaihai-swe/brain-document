@@ -1,3 +1,7 @@
+---
+title: "Week 2 — Day 14: Week 2 Integration, Pattern Contrast & Timed Practice"
+---
+
 # 🚀 Week 2 — Day 14: Week 2 Integration, Pattern Contrast & Timed Practice
 
 Welcome to Day 14! You have completed the core traversal and range query curriculum of **Week 2**.

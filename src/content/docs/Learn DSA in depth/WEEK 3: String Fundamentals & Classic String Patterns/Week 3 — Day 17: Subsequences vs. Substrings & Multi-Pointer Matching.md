@@ -1,3 +1,7 @@
+---
+title: "Week 3 — Day 17: Subsequences vs. Substrings & Multi-Pointer Matching"
+---
+
 # 🚀 Week 3 — Day 17: Subsequences vs. Substrings & Multi-Pointer Matching
 
 Welcome to Day 17! Today we analyze one of the most foundational distinctions in string algorithms: **Substrings vs. Subsequences**.

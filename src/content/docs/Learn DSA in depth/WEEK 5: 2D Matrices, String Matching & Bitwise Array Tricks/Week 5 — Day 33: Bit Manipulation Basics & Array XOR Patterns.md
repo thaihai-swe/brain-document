@@ -1,3 +1,7 @@
+---
+title: "Week 5 — Day 33: Bit Manipulation Basics & Array XOR Patterns"
+---
+
 # 🚀 Week 5 — Day 33: Bit Manipulation Basics & Array XOR Patterns
 
 In **Days 31 and 32**, we explored high-level string algorithms (Rabin-Karp rolling hashes and KMP prefix automata).

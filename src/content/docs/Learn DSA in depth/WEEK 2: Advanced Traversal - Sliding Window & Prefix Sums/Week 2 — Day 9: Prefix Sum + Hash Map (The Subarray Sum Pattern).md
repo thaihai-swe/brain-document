@@ -1,3 +1,7 @@
+---
+title: "Week 2 — Day 9: Prefix Sum + Hash Map (The Subarray Sum Pattern)"
+---
+
 # 🚀 Week 2 — Day 9: Prefix Sum + Hash Map (The Subarray Sum Pattern)
 
 Welcome to Day 9! Today we study one of the most powerful and high-frequency array patterns asked in Big Tech interviews: **Prefix Sum combined with a Hash Map**.

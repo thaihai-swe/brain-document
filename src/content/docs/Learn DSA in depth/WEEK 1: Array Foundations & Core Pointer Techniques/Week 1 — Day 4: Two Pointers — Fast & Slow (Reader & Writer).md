@@ -1,3 +1,7 @@
+---
+title: "Week 1 — Day 4: Two Pointers — Fast & Slow (Reader & Writer)"
+---
+
 # 🚀 Week 1 — Day 4: Two Pointers — Fast & Slow (Reader & Writer)
 
 Welcome to Day 4! Today we master the **Fast & Slow Pointer Pattern** (also widely known as the **Reader / Writer** or **Leader / Follower** pattern).

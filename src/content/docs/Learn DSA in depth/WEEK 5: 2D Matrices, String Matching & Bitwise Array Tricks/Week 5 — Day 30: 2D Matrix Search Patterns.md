@@ -1,3 +1,7 @@
+---
+title: "Week 5 — Day 30: 2D Matrix Search Patterns"
+---
+
 # 🚀 Week 5 — Day 30: 2D Matrix Search Patterns
 
 In **Day 29**, we explored physical memory row-major layouts, in-place matrix rotations via transpose decomposition, and 4-boundary spiral traversals.

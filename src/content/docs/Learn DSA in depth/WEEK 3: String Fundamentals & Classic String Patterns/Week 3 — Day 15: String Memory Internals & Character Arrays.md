@@ -1,3 +1,7 @@
+---
+title: "Week 3 — Day 15: String Memory Internals & Character Arrays"
+---
+
 # 🚀 Week 3 — Day 15: String Memory Internals & Character Arrays
 
 Welcome to **Week 3**! In Weeks 1 and 2, you mastered array memory layout, in-place pointer coordination, and continuous range queries (Prefix Sums and Sliding Windows).

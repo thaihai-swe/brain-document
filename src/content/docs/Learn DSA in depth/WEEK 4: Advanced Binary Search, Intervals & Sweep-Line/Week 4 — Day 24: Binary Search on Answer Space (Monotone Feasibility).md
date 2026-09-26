@@ -1,3 +1,7 @@
+---
+title: "Week 4 — Day 24: Binary Search on Answer Space (Monotone Feasibility)"
+---
+
 # 🚀 Week 4 — Day 24: Binary Search on Answer Space (Monotone Feasibility)
 
 In **Days 22 and 23**, we applied Binary Search over **array indices** ($0 \dots N - 1$). The data elements were positioned in memory, and we exploited either global sorting or localized sorted segments to discard half the indices.

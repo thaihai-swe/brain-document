@@ -1,3 +1,7 @@
+---
+title: "Week 1 — Day 1: Array Memory Model & In-Place Traversal"
+---
+
 🚀 Week 1 — Day 1: Array Memory Model & In-Place Traversal
 
  Welcome to Day 1! Today we lay down the physical and theoretical foundation of arrays. Everything in DSA—from dynamic programming arrays to hash maps and circular

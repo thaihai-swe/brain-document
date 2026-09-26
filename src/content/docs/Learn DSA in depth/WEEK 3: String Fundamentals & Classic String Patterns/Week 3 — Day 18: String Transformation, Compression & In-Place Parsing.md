@@ -1,3 +1,7 @@
+---
+title: "Week 3 — Day 18: String Transformation, Compression & In-Place Parsing"
+---
+
 # 🚀 Week 3 — Day 18: String Transformation, Compression & In-Place Parsing
 
 Welcome to Day 18! Today we bring our traversal toolkit full-circle by combining **in-place pointer mechanics** (from Week 1) with **string manipulation and compression**.

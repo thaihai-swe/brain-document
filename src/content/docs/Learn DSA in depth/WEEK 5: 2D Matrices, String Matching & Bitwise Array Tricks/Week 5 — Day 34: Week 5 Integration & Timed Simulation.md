@@ -1,3 +1,7 @@
+---
+title: "Week 5 — Day 34: Week 5 Integration & Timed Simulation"
+---
+
 # 🚀 Week 5 — Day 34: Week 5 Integration & Timed Simulation
 
 Welcome to **Day 34: Week 5 Integration & Timed Simulation**.

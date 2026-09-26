@@ -1,3 +1,7 @@
+---
+title: "Week 1 — Day 5: Basic Sorting & Order Invariants"
+---
+
 # 🚀 Week 1 — Day 5: Basic Sorting & Order Invariants
 
 Welcome to Day 5! Sorting is the most frequently *implicit* technique in DSA. Even when a problem never says "sort this array," you will constantly find yourself sorting — either explicitly (`Array.Sort`) or implicitly (binary search, two pointers on sorted input, merging, k-way merge, dedup by key).

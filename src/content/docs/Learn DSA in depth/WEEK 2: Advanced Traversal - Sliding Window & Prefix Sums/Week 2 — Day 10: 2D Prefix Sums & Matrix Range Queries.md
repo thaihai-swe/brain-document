@@ -1,3 +1,7 @@
+---
+title: "Week 2 — Day 10: 2D Prefix Sums & Matrix Range Queries"
+---
+
 # 🚀 Week 2 — Day 10: 2D Prefix Sums & Matrix Range Queries
 
 Welcome to Day 10! Today we expand prefix sums into **two dimensions**.

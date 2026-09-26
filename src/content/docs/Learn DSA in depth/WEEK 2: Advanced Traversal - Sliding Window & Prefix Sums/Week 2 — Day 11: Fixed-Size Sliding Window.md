@@ -1,3 +1,7 @@
+---
+title: "Week 2 — Day 11: Fixed-Size Sliding Window"
+---
+
 # 🚀 Week 2 — Day 11: Fixed-Size Sliding Window
 
 Welcome to Day 11! Today we begin our deep dive into the **Sliding Window pattern**, starting with its most structured form: the **Fixed-Size Window**.

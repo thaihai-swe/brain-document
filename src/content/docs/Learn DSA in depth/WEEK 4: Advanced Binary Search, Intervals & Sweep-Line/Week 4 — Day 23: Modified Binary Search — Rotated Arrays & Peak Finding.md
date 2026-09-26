@@ -1,3 +1,7 @@
+---
+title: "Week 4 — Day 23: Modified Binary Search — Rotated Arrays & Peak Finding"
+---
+
 # 🚀 Week 4 — Day 23: Modified Binary Search — Rotated Arrays & Peak Finding
 
 In **Day 22**, we established the foundational invariants of Binary Search: exact match versus boundary search (`LowerBound`), integer overflow prevention, and the half-open range `[left, right)`. Every problem assumed a globally sorted array.

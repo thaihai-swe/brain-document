@@ -1,3 +1,7 @@
+---
+title: "Week 5 — Day 31: Rabin-Karp Rolling Hash & Polynomial Fingerprinting"
+---
+
 # 🚀 Week 5 — Day 31: Rabin-Karp Rolling Hash & Polynomial Fingerprinting
 
 In **Days 29 and 30**, we mastered 2D matrix transformations and search topologies (Virtual 1D Binary Search and Saddleback Search).

@@ -1,3 +1,7 @@
+---
+title: "Week 4 — Day 26: Interval Algebra — Sorting, Merging & Insertion"
+---
+
 # 🚀 Week 4 — Day 26: Interval Algebra — Sorting, Merging & Insertion
 
 In **Day 25**, we explored multi-pointer coordination on discrete array elements ($K$-Sum and Trapping Rain Water).

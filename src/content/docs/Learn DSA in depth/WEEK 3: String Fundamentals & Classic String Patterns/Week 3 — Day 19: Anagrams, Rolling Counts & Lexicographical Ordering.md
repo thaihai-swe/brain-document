@@ -1,3 +1,7 @@
+---
+title: "Week 3 — Day 19: Anagrams, Rolling Counts & Lexicographical Ordering"
+---
+
 # 🚀 Week 3 — Day 19: Anagrams, Rolling Counts & Lexicographical Ordering
 
 Welcome to Day 19! Today we examine the intersection of **frequency balance arrays, recursive string generation, and custom lexicographical sorting**.

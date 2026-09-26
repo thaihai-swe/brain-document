@@ -1,3 +1,7 @@
+---
+title: "Week 5 — Day 29: 2D Matrix Transformations & In-Place Symmetries"
+---
+
 # 🚀 Week 5 — Day 29: 2D Matrix Transformations & In-Place Symmetries
 
 Welcome to **Week 5**! Over Weeks 1–4, you mastered 1D linear array techniques, continuous windowing, prefix sums, binary search in all its variants, multi-pointer combinations, and interval sweep-lines.

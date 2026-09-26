@@ -1,3 +1,7 @@
+---
+title: "Week 4 — Day 28: Week 4 Integration & Timed Simulation"
+---
+
 # 🚀 Week 4 — Day 28: Week 4 Integration & Timed Simulation
 
 Congratulations on completing the core content of **Week 4**! 

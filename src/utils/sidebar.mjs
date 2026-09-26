@@ -8,6 +8,13 @@ export const sidebar = [
     }
   },
   {
+    "label": "Learn DSA in depth",
+    "collapsed": true,
+    "autogenerate": {
+      "directory": "Learn DSA in depth"
+    }
+  },
+  {
     "label": "Architecture",
     "collapsed": true,
     "autogenerate": {

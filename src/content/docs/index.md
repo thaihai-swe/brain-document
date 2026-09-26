@@ -19,22 +19,6 @@ This site is designed to scale with your knowledge:
   - `P` - Previous page
   - `N` - Next page
 
-## 📚 Content Organization
-
-Content is organized into logical categories that expand as you explore:
-
-### Technical Knowledge
-- **Architecture** - System design, patterns, and best practices
-- **Databases** - SQL, NoSQL, caching, and data modeling
-- **DevOps** - Containers, orchestration, CI/CD, and infrastructure
-- **Web Development** - Frontend frameworks, TypeScript, and modern web
-- **Programming** - Languages, paradigms, and core concepts
-
-### Learning & Growth
-- **Learning** - Study techniques, resources, and methodologies
-- **Notes** - Daily notes, quick references, and observations
-- **Tools** - Development tools, utilities, and workflows
-
 ### Reference
 - **Compare** - Technology comparisons and decision guides
 
@@ -42,7 +26,7 @@ Content is organized into logical categories that expand as you explore:
 
 !!! tip "Scaling Your Brain"
     As your knowledge base grows to hundreds or thousands of documents:
-    
+
     - **Tag consistently** - Use consistent naming conventions
     - **Link liberally** - Cross-reference related topics
     - **Search first** - The search is your best friend
@@ -63,13 +47,5 @@ echo "# My New Topic" > docs/new-topic/index.md
 
 **No configuration needed** - just create folders and markdown files. The navigation builds itself.
 
-## 📊 Current Stats
-
-As of 2026-05-30:
-- 8 main categories
-- 16 documents
-- Growing daily
-
----
 
 *Start exploring using the sidebar or search above. Your knowledge journey begins here.*

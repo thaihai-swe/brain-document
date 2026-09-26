@@ -1,6 +1,8 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import starlightBlog from 'starlight-blog';
+import remarkMath from 'remark-math';
+import rehypeKatex from 'rehype-katex';
 import { remarkWikiLinks } from './src/plugins/remark-wiki-links.js';
 import { sidebar } from './src/utils/sidebar.mjs';
 
@@ -8,12 +10,16 @@ export default defineConfig({
   base: '/brain-document',
   site: 'https://thaihai-swe.github.io',
   markdown: {
-    remarkPlugins: [remarkWikiLinks],
+    remarkPlugins: [remarkWikiLinks, remarkMath],
+    rehypePlugins: [rehypeKatex],
   },
   integrations: [
     starlight({
       title: 'Digital Brain',
-      customCss: ['./src/styles/custom.css'],
+      customCss: [
+        './src/styles/custom.css',
+        'katex/dist/katex.min.css',
+      ],
       editLink: {
         baseUrl: 'https://github.com/thaihai-swe/brain-document/edit/main/',
       },

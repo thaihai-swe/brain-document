@@ -28,7 +28,7 @@ The site is served from a subfolder, so `base: '/brain-document'` is set in `ast
 Content lives in `src/content/docs/` as Markdown. The `docs` collection (`src/content.config.ts`) uses Starlight's `docsLoader` with `docsSchema` extended by `blogSchema`, so every page accepts both docs and blog frontmatter.
 
 Three content types share that one collection, distinguished by location/frontmatter:
-- **Docs** — `src/content/docs/<category>/...md`. Need a `title` in frontmatter. Sidebar sections (Architecture, Backend, Frontend, DevOps, Guides) are auto-generated from top-level directories via `autogenerate` in `astro.config.mjs` — to add a sidebar section you must edit that config, not just create a folder.
+- **Docs** — `src/content/docs/<category>/...md`. Need a `title` in frontmatter. Sidebar sections are dynamically auto-generated at runtime from top-level directories under `src/content/docs` by `src/utils/sidebar.mjs` — simply adding or removing a directory will automatically update the sidebar without manual editing.
 - **Blog posts** — `src/content/docs/blog/YYYY/MM/*.md`. Need `title`, `date`, and `authors` (keys must match the `authors` map registered in the `starlightBlog({...})` plugin config). The plugin generates the blog index, pagination, and RSS.
 - **Library** — standalone `.html`, `.htm`, `.pdf` files placed anywhere under `public/`. `src/pages/library.astro` scans `public/` **at build time** with Node `fs` and renders a file tree. No manual indexing step; just add the file and rebuild.
 

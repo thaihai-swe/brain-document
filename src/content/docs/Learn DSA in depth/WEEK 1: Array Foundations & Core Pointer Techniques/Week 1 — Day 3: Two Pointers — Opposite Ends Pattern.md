@@ -8,6 +8,28 @@ Welcome to Day 3! Today we master the **Opposite-Ends Two-Pointer Pattern** (som
 
 ## 1. 🧠 TEACH: The Mechanics of Opposite Pointers
 
+### 🧭 5W1H Executive Architecture Blueprint
+- **1. WHAT:**
+  - *Formal Definition:* The **Opposite-Ends Two-Pointer Pattern** coordinates two pointer indices converging from the extreme boundaries ($0$ and $N-1$) toward each other.
+  - *Core Invariants:* Monotonic Convergence Invariant: Active search range is strictly $[left, right]$; incrementing $left$ strictly increases/relaxes the left parameter, decrementing $right$ strictly decreases/relaxes the right parameter; $left < right$ ensures termination.
+  - *Misconception Check:* Two pointers from opposite ends do *not* work on unsorted arrays for pair-sum problems; sorting is a mandatory prerequisite because monotonicity of the sum is required to discard search space safely.
+- **2. WHY:**
+  - *Bottleneck Solved:* Eliminates the combinatorial $O(N^2)$ exhaustive pair comparison bottleneck.
+  - *Complexity Advantage:* Reduces pair search from $O(N^2)$ to $O(N)$ time by discarding an entire row or column of the 2D search matrix in each step.
+- **3. WHEN:**
+  - *When to Choose / Signal Words:* Sorted array, "find two numbers that sum to target", "container with most water", "reverse elements symmetrically".
+  - *When to Avoid / Failure Modes:* Unsorted input where sorting is prohibited or exceeds $O(N)$ budget; problem requires finding all non-monotonic subarrays.
+- **4. WHERE:**
+  - *Physical CLR Memory:* Pointers reside in CPU registers; sequential access moves symmetrically inward across memory addresses, maintaining moderate cache line efficiency.
+  - *Production Systems:* Dual-pivot quicksort partitioning, network packet boundary framing, image horizontal scanline mirroring.
+- **5. WHO:**
+  - *Spoken Script:* "On a sorted array, I initialize pointers at both extremities. In Two-Sum, if the current sum is less than the target, only incrementing the left pointer can increase it; if greater, only decrementing the right pointer can decrease it. This monotonic property eliminates an entire search branch at each step in $O(1)$ time."
+  - *Interviewer Evaluation Lens:* Checks understanding of monotonic search space elimination, boundary conditions (`left < right`), and duplicate handling.
+- **6. HOW:**
+  - *Cost Model:* Time: $O(N)$ after sorting ($O(N \log N)$ total if unsorted); Space: $O(1)$ auxiliary memory.
+  - *State Transition Trace:* `nums=[2, 7, 11, 15], target=9 -> L=0 (2), R=3 (15), sum=17 > 9 => R-- -> L=0 (2), R=2 (11), sum=13 > 9 => R-- -> L=0 (2), R=1 (7), sum=9 == target => return [0, 1]`.
+
+
 ### 1.1 The Prerequisite: Monotonicity
 The opposite-ends pattern places one pointer at the start (`left = 0`) and one pointer at the end (`right = n - 1`), marching them toward each other until they meet (`while (left < right)`).
 
@@ -101,10 +123,10 @@ public class Solution {
     public int[] TwoSum(int[] numbers, int target) {
         int left = 0;
         int right = numbers.Length - 1;
-        
+
         while (left < right) {
             int sum = numbers[left] + numbers[right];
-            
+
             if (sum == target) {
                 return new int[] { left + 1, right + 1 }; // 1-based indexing
             } else if (sum < target) {
@@ -113,7 +135,7 @@ public class Solution {
                 right--; // Need a smaller sum
             }
         }
-        
+
         return new int[0]; // No solution found
     }
 }
@@ -147,7 +169,7 @@ Now, which pointer do we move?
 
 ```
 h[L] = 1, h[R] = 7, Width = 8  --> Area = 8 * min(1, 7) = 8
-                                  
+
 If we move the taller pointer (R):
 Width becomes 7, height is STILL capped at 1! Area <= 7 (strictly worse).
 Moving R is a wasted dead end.
@@ -193,16 +215,16 @@ public class Solution {
         int left = 0;
         int right = height.Length - 1;
         int maxArea = 0;
-        
+
         while (left < right) {
             int width = right - left;
             int currentHeight = Math.Min(height[left], height[right]);
             int currentArea = width * currentHeight;
-            
+
             if (currentArea > maxArea) {
                 maxArea = currentArea;
             }
-            
+
             // Greedily discard the shorter line
             if (height[left] < height[right]) {
                 left++;
@@ -210,7 +232,7 @@ public class Solution {
                 right--;
             }
         }
-        
+
         return maxArea;
     }
 }
@@ -240,11 +262,11 @@ public class Solution {
         int left = 0;
         int right = n - 1;
         int write = n - 1; // Fill from the end
-        
+
         while (left <= right) {
             int leftSquare = nums[left] * nums[left];
             int rightSquare = nums[right] * nums[right];
-            
+
             if (leftSquare > rightSquare) {
                 result[write] = leftSquare;
                 left++;
@@ -254,7 +276,7 @@ public class Solution {
             }
             write--;
         }
-        
+
         return result;
     }
 }

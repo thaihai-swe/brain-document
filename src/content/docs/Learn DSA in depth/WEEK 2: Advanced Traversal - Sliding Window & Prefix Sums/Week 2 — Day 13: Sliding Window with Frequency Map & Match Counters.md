@@ -10,6 +10,28 @@ This pattern governs classic Big Tech interview problems involving anagrams, str
 
 ## 1. 🧠 TEACH: The Mechanics of State Tracking
 
+### 🧭 5W1H Executive Architecture Blueprint
+- **1. WHAT:**
+  - *Formal Definition:* The **Sliding Window with Frequency Map & Match Counters** tracks multi-character frequency constraints simultaneously using a single scalar `matchedCount`.
+  - *Core Invariants:* Scalar Match Invariant: `matchedCount` equals the number of distinct characters whose current frequency matches their exact required target frequency; Full Validity: Window is a valid match if and only if `matchedCount == requiredDistinctCount`.
+  - *Misconception Check:* Do *not* compare the entire frequency array of size 26 or 128 on every single pointer advance ($O(26 \times N)$); updating `matchedCount` only when an individual count reaches or departs from target achieves strict $O(1)$ state updates.
+- **2. WHY:**
+  - *Bottleneck Solved:* Eliminates the $O(|\Sigma|)$ per-step dictionary/array comparison overhead.
+  - *Complexity Advantage:* Reduces window validation cost from $O(|\Sigma|)$ to strict $O(1)$ per step, yielding $O(N)$ overall time.
+- **3. WHEN:**
+  - *When to Choose / Signal Words:* "Permutation in string" (LC 567), "find all anagrams in a string" (LC 438), "minimum window substring" (LC 76). Signal words: "contains permutation", "anagram substring", "minimum window containing all characters".
+  - *When to Avoid / Failure Modes:* When character order within the window matters (anagrams/permutations disregard order; exact sequence matching requires KMP or Rabin-Karp).
+- **4. WHERE:**
+  - *Physical CLR Memory:* Stack-allocated fixed-size integer arrays (`int[128]` or `stackalloc int[26]`) avoiding heap GC allocations completely.
+  - *Production Systems:* Intrusion detection regex pattern filters, genomic DNA sequence motif search, real-time packet payload signature matching.
+- **5. WHO:**
+  - *Spoken Script:* "To verify anagram or substring matches in $O(1)$ per step without scanning the entire frequency table, I track a single scalar `matchedCount`. When adding or removing a character, I only update `matchedCount` when that specific character's count enters or leaves its exact target frequency."
+  - *Interviewer Evaluation Lens:* Checks whether candidate uses a scalar match counter vs. re-iterating the frequency table, handling of characters with count exceeding requirement, and contraction condition.
+- **6. HOW:**
+  - *Cost Model:* Time: $O(N)$ linear time; Space: $O(1)$ auxiliary space (fixed ASCII/alphabet size).
+  - *State Transition Trace:* `s="cbaebabacd", p="abc" -> need={'a':1,'b':1,'c':1}, required=3 -> R adds 'c','b','a': matched=3 (Found index 0!) -> R adds 'e': matched stays 3, but window invalid -> contract L`.
+
+
 ### 1.1 The Bottleneck: Comparing Frequency Maps in $O(|\Sigma|)$
 
 When searching for an anagram or substring permutation of pattern $P$ inside string $S$:
@@ -249,7 +271,7 @@ public class SolutionMinWindow {
 
         for (int right = 0; right < s.Length; right++) {
             char rChar = s[right];
-            
+
             // If this character was needed, decrement deficit
             if (need[rChar] > 0) {
                 missing--;

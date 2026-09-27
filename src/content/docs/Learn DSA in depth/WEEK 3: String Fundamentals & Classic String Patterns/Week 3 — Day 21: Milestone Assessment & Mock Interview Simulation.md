@@ -15,6 +15,28 @@ Today, we transition from *learning* to *execution*. In this assessment, you wil
 
 ## 1. 🧠 TEACH: The Big Tech 45-Minute Interview Protocol
 
+### 🧭 5W1H Executive Architecture Blueprint
+- **1. WHAT:**
+  - *Formal Definition:* Day 21 is the **Phase 1 Milestone Assessment & Mock Interview Simulation**, conducting a rigorous 90-minute timed technical interview simulation.
+  - *Core Invariants:* Five-Phase Interview Protocol: 1. Exploration & Clarification; 2. Invariant Formulation; 3. Production C# Code; 4. Dry-Run Verification; 5. Big-O Complexity Derivation.
+  - *Misconception Check:* Solving the problem is only 50% of the interview score. Communication clarity, invariant articulation, defensive coding, and proactive dry-running make the difference between "Hire" and "Strong Hire".
+- **2. WHY:**
+  - *Bottleneck Solved:* Eliminates anxiety, silent coding habits, and unverified edge-case bugs under intense time pressure.
+  - *Complexity Advantage:* Produces production-grade optimal solutions ($O(N)$ time, $O(1)$ space) while demonstrating senior engineering maturity.
+- **3. WHEN:**
+  - *When to Choose / Signal Words:* Milestone capstone assessment; testing interview readiness on benchmark Hard problems (LeetCode 76, LeetCode 42).
+  - *When to Avoid / Failure Modes:* Do not rush to code before stating the core invariant and confirming complexity targets with the interviewer.
+- **4. WHERE:**
+  - *Physical CLR Memory:* Zero-allocation algorithms, cache line friendliness, reference loitering prevention, and safe boundary guards.
+  - *Production Systems:* Real-world engineering trade-off evaluations (memory footprint vs. latency vs. code simplicity).
+- **5. WHO:**
+  - *Spoken Script:* "In Big Tech technical screens, I execute a structured five-step protocol: I clarify constraints and edge cases, formulate the mathematical invariant out loud, implement clean idiomatic C# with defensive guards, dry-run with an example, and formally derive time and space complexity."
+  - *Interviewer Evaluation Lens:* Evaluates candidate against the 4 Senior Hire signals: Invariant Discovery (25%), Algorithmic Optimality (25%), Production Code Quality (25%), and Edge-Case Tracing (25%).
+- **6. HOW:**
+  - *Cost Model:* 45 minutes per problem (LC 76 Minimum Window Substring, LC 42 Trapping Rain Water).
+  - *State Transition Trace:* `Understand -> Formulate Invariant -> Implement -> Trace Edge Cases -> Derive Complexity`.
+
+
 In interviews at Google, Meta, Amazon, and Microsoft, your score is **not** determined solely by passing test cases. Interviewers evaluate five distinct competencies:
 
 ```
@@ -31,8 +53,8 @@ In interviews at Google, Meta, Amazon, and Microsoft, your score is **not** dete
 
 ### The Senior / Staff Differentiating Statement
 When given a contiguous subarray problem:
-> *"Before writing code, I want to clarify: **Can the array contain negative numbers?**  
-> If all numbers are non-negative, I can achieve $O(N)$ time and **$O(1)$ space** using a Variable Sliding Window.  
+> *"Before writing code, I want to clarify: **Can the array contain negative numbers?**
+> If all numbers are non-negative, I can achieve $O(N)$ time and **$O(1)$ space** using a Variable Sliding Window.
 > If the array contains negative numbers, sliding window monotonicity collapses, and I must use **Prefix Sum + Hash Map** which takes $O(N)$ time and **$O(N)$ space**."*
 
 Stating this in the first 2 minutes immediately demonstrates pattern mastery.
@@ -50,14 +72,14 @@ Stating this in the first 2 minutes immediately demonstrates pattern mastery.
 
 #### Candidate-Interviewer Walkthrough Script:
 
-**Candidate:** *"Let me verify the constraints: The array is already sorted in non-decreasing order. Is it guaranteed that exactly one valid solution exists, or could there be none?"*  
+**Candidate:** *"Let me verify the constraints: The array is already sorted in non-decreasing order. Is it guaranteed that exactly one valid solution exists, or could there be none?"*
 **Interviewer:** *"Exactly one solution is guaranteed. You cannot use the same element twice."*
 
-**Candidate:** *"Understood. A brute-force nested loop would compare all pairs in $O(N^2)$ time. A Hash Map achieves $O(N)$ time but uses $O(N)$ auxiliary space, violating our $O(1)$ constraint.*  
-*Because the array is sorted, we have **monotonicity**. I will place two pointers at opposite ends: `left = 0` and `right = numbers.Length - 1`.*  
-- *If `numbers[left] + numbers[right] < target`, the sum is too small. Because `numbers[right]` is the largest available element, `numbers[left]` cannot pair with any element to reach `target`. We safely eliminate it via `left++`.*  
-- *If `numbers[left] + numbers[right] > target`, the sum is too large. By the symmetric invariant, we eliminate `numbers[right]` via `right--`.*  
-- *When the sum matches, we return `[left + 1, right + 1]` in 1-based indexing.*  
+**Candidate:** *"Understood. A brute-force nested loop would compare all pairs in $O(N^2)$ time. A Hash Map achieves $O(N)$ time but uses $O(N)$ auxiliary space, violating our $O(1)$ constraint.*
+*Because the array is sorted, we have **monotonicity**. I will place two pointers at opposite ends: `left = 0` and `right = numbers.Length - 1`.*
+- *If `numbers[left] + numbers[right] < target`, the sum is too small. Because `numbers[right]` is the largest available element, `numbers[left]` cannot pair with any element to reach `target`. We safely eliminate it via `left++`.*
+- *If `numbers[left] + numbers[right] > target`, the sum is too large. By the symmetric invariant, we eliminate `numbers[right]` via `right--`.*
+- *When the sum matches, we return `[left + 1, right + 1]` in 1-based indexing.*
 *This reduces the 2D search space from $O(N^2)$ to $O(N)$ time and $O(1)$ space."*
 
 **Interviewer:** *"Sounds great. Please write the code."*
@@ -104,14 +126,14 @@ public class SolutionTwoSumII {
 
 #### Candidate-Interviewer Walkthrough Script:
 
-**Candidate:** *"Can the array contain negative numbers?"*  
+**Candidate:** *"Can the array contain negative numbers?"*
 **Interviewer:** *"Yes, `nums[i]` can be negative, positive, or zero."*
 
-**Candidate:** *"Because numbers can be negative, a sliding window is invalid. Adding an element may decrease the sum, and shrinking may increase it.*  
+**Candidate:** *"Because numbers can be negative, a sliding window is invalid. Adding an element may decrease the sum, and shrinking may increase it.*
 *Instead, I will express the subarray sum from index $i$ to $j$ in terms of cumulative prefix sums:*
 $$\sum_{m=i}^{j} \text{nums}[m] = P[j] - P[i - 1] = K \implies P[i - 1] = P[j] - K$$
-*As I iterate through the array maintaining running sum $P[j]$, I look backward into a Hash Map to see how many previous prefix sums equaled $(P[j] - K)$.*  
-*Base Case: I must initialize `map[0] = 1` because an empty prefix before index 0 has a sum of 0. If $P[j] == K$, the subarray `nums[0 .. j]` is valid.*  
+*As I iterate through the array maintaining running sum $P[j]$, I look backward into a Hash Map to see how many previous prefix sums equaled $(P[j] - K)$.*
+*Base Case: I must initialize `map[0] = 1` because an empty prefix before index 0 has a sum of 0. If $P[j] == K$, the subarray `nums[0 .. j]` is valid.*
 *Time complexity: $O(N)$ with a single pass. Space complexity: $O(N)$ to store up to $N+1$ prefix sums."*
 
 **Interviewer:** *"Excellent derivation. Go ahead and implement it."*
@@ -122,7 +144,7 @@ public class SolutionSubarraySumEqualsKAssessment {
     public int SubarraySum(int[] nums, int k) {
         int count = 0;
         int runningSum = 0;
-        
+
         // Key: prefix sum, Value: frequency of occurrence
         var prefixFreq = new Dictionary<int, int>();
         prefixFreq[0] = 1; // Base case for subarrays starting at index 0
@@ -198,7 +220,7 @@ Score your performance honestly across these 5 categories:
     • L1/L2/L3 cache line spatial locality (row-major sequential iteration)
     • In-place pointer swaps, 3-step reversals (A^R B^R)^R = BA
     • Fast & Slow reader/writer pointer overwriting
-    
+
   Range Calculations & Windows:
     • 1D Prefix Sum with (N+1) dummy zero: P[R+1] - P[L]
     • 2D Matrix Prefix Sum via Inclusion-Exclusion: +BR - TR - BL + TL

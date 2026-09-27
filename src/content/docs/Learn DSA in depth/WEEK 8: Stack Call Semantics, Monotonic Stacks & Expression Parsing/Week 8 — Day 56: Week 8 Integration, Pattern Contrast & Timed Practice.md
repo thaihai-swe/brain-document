@@ -18,6 +18,28 @@ Today is your **Integration and Timed Simulation Day**. We contrast monotonic st
 
 ## 1. 🧠 RETROSPECTIVE: The Week 8 Pattern Contrast Matrix
 
+### 🧭 5W1H Executive Architecture Blueprint
+- **1. WHAT:**
+  - *Formal Definition:* Day 56 is the **Week 8 Integration, Contrast & Timed Simulation Module**, evaluating pattern recognition across Call Stacks, Monotonic Stacks, Area Formulations, Range Contributions, and Expression Parsing.
+  - *Core Invariants:* Stack Diagnostic Decision Invariant: Parenthesis / Scope Matching $\implies$ Standard Stack; Next Greater / Smaller Boundary $\implies$ Monotonic Stack ($O(N)$); Histogram / Area Optimization $\implies$ Monotonic Stack with $i - \text{top} - 1$; Infix Arithmetic $\implies$ Shunting-Yard.
+  - *Misconception Check:* Candidates often struggle to identify monotonic stack problems because the problem statement rarely mentions a stack; the signal is always "find the nearest element that is larger/smaller than the current element".
+- **2. WHY:**
+  - *Bottleneck Solved:* Eliminates confusion between standard LIFO stacks and monotonic stacks during technical interviews.
+  - *Complexity Advantage:* Identifies optimal $O(N)$ solutions within 30–60 seconds of reading the problem prompt.
+- **3. WHEN:**
+  - *When to Choose / Signal Words:* Week 8 milestone timed simulation; practicing monotonic stack and parsing implementations under time pressure.
+  - *When to Avoid / Failure Modes:* Writing monotonic stack code without verifying strict vs. non-strict inequalities on duplicates.
+- **4. WHERE:**
+  - *Physical CLR Memory:* Hardware thread stack vs. managed heap array-backed stacks, cache line friendliness, reference loitering prevention.
+  - *Production Systems:* Expression evaluators, database execution query parsing, financial time-series anomaly detection.
+- **5. WHO:**
+  - *Spoken Script:* "Week 8 mastered stack semantics: we use standard stacks for nested matching and expression evaluation; monotonic stacks to find nearest greater/smaller boundaries in $O(N)$ time; and range contribution models to sum subarray metrics without enumerating subarrays."
+  - *Interviewer Evaluation Lens:* Evaluates candidate's speed of invariant discovery, execution fluency across diverse stack paradigms, and defensive coding discipline.
+- **6. HOW:**
+  - *Cost Model:* 60-minute timed simulation drill (LeetCode 84 Largest Rectangle in Histogram and LeetCode 227 Basic Calculator II).
+  - *State Transition Trace:* Problem Prompt $\to$ Scope / Boundary Check $\to$ Invariant Formulation $\to$ Implementation $\to$ Verification.
+
+
 Study this comparative reference matrix before starting the timed simulation:
 
 | Pattern | Input Precondition | Key Signals / Problem Clue | Time Complexity | Core Invariant to State in Interview |
@@ -54,8 +76,8 @@ Simulate a Big Tech technical screen. Allocate **25–30 minutes per problem**:
 
 ### Challenge A (30 Mins): LeetCode 735 — Asteroid Collision (Medium)
 
-> We are given an array `asteroids` of integers representing asteroids in a row.  
-> For each asteroid, the absolute value represents its size, and the sign represents its direction (positive = right, negative = left). Each asteroid moves at the same speed.  
+> We are given an array `asteroids` of integers representing asteroids in a row.
+> For each asteroid, the absolute value represents its size, and the sign represents its direction (positive = right, negative = left). Each asteroid moves at the same speed.
 > Find out the state of the asteroids after all collisions. If two asteroids meet, the smaller one explodes. If both are the same size, both explode. Two asteroids moving in the same direction will never meet.
 >
 > **Constraints:**
@@ -151,7 +173,7 @@ public class SolutionAsteroidCollision {
    - If all operations are valid, every element is popped: `stack.Count == 0` (or `popIdx == popped.Length`).
 
 #### Advanced Follow-Up ($O(1)$ Auxiliary Space):
-Can we do this in **$O(1)$ extra space**?  
+Can we do this in **$O(1)$ extra space**?
 Yes! We can reuse the `pushed` array itself as our stack buffer using an integer pointer `top = 0`!
 
 #### Production C# Implementation ($O(1)$ Auxiliary Space):

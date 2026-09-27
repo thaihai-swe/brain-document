@@ -14,9 +14,31 @@ We will prove that Binary Search does **not** strictly require a fully sorted ar
 
 ## 1. 🧠 TEACH: Preserving Binary Search Without Global Sorting
 
+### 🧭 5W1H Executive Architecture Blueprint
+- **1. WHAT:**
+  - *Formal Definition:* **Modified Binary Search** applies logarithmic partitioning to piece-wise monotonic or unimodal domains where sorted invariants hold locally.
+  - *Core Invariants:* Rotated Array Invariant: For any midpoint $mid$, at least one half ($[left .. mid]$ or $[mid .. right]$) is strictly sorted; Gradient Peak Invariant: If $nums[mid] < nums[mid + 1]$, an uphill walk to the right is guaranteed to encounter a local peak.
+  - *Misconception Check:* A rotated array is *not* completely unsorted. Comparing $nums[mid]$ with $nums[right]$ instantly identifies which half is normally sorted and which half contains the pivot cliff.
+- **2. WHY:**
+  - *Bottleneck Solved:* Prevents degrading to $O(N)$ linear scans on cyclically shifted or unimodal arrays.
+  - *Complexity Advantage:* Preserves $O(\log N)$ time complexity without needing to un-rotate or restore the original array.
+- **3. WHEN:**
+  - *When to Choose / Signal Words:* "Search in rotated sorted array" (LC 33), "find minimum in rotated sorted array" (LC 153), "find peak element" (LC 162).
+  - *When to Avoid / Failure Modes:* When rotated array contains many duplicates (e.g. `[1, 0, 1, 1, 1]`); worst-case drops to $O(N)$ because $nums[mid] == nums[left] == nums[right]$ prevents determining the sorted half.
+- **4. WHERE:**
+  - *Physical CLR Memory:* Stack registers for indices; zero heap memory; minimal CPU instruction branches.
+  - *Production Systems:* Circular ring buffer binary search in network packet sniffers, log file time partition discovery.
+- **5. WHO:**
+  - *Spoken Script:* "In a rotated sorted array, splitting at any midpoint divides the array into one strictly sorted half and one rotated half. By checking if the target lies within the sorted half's boundaries, I discard the other half, maintaining logarithmic $O(\log N)$ search."
+  - *Interviewer Evaluation Lens:* Checks whether candidate correctly identifies the sorted half, handles strictly $< vs \le$ comparisons, and avoids duplicate degradation traps.
+- **6. HOW:**
+  - *Cost Model:* Time: $O(\log N)$ (worst $O(N)$ with duplicates); Space: $O(1)$ auxiliary space.
+  - *State Transition Trace (Search Rotated):* `nums=[4,5,6,7,0,1,2], target=0 -> L=0, R=6, mid=3 (val 7) -> Left [4..7] is sorted -> 0 not in [4..7] => L = mid + 1 = 4 -> L=4, R=6, mid=5 (val 1) -> Target found!`.
+
+
 ### 1.1 The Geometric Anatomy of a Rotated Sorted Array
 
-Take an array sorted in ascending order: `[0, 1, 2, 4, 5, 6, 7]`.  
+Take an array sorted in ascending order: `[0, 1, 2, 4, 5, 6, 7]`.
 Rotate it clockwise at pivot index 4:
 
 ```
@@ -54,7 +76,7 @@ Values
 
 Pick **any** arbitrary index `mid` in a rotated sorted array. It is impossible for both halves to contain the cliff. Therefore:
 
-> **Fundamental Invariant:**  
+> **Fundamental Invariant:**
 > For any `mid`, at least one of the two halves (`[left .. mid]` or `[mid .. right]`) is **monotonically sorted without any rotation**.
 
 ```
@@ -82,7 +104,7 @@ The cliff lies in the left half. The RIGHT half is strictly sorted!
 
 ### 1.3 Finding the Inflection Point (The Minimum Element)
 
-Suppose we want to find the minimum element in `nums = [4, 5, 6, 7, 0, 1, 2]`.  
+Suppose we want to find the minimum element in `nums = [4, 5, 6, 7, 0, 1, 2]`.
 Should we compare `nums[mid]` against `nums[left]` or `nums[right]`?
 
 #### The Flaw of Comparing with `left`:
@@ -301,7 +323,7 @@ public class SolutionSearchRotated {
                 } else {
                     left = mid + 1;  // Search right
                 }
-            } 
+            }
             // Case B: Right half [mid .. right] is strictly sorted
             else {
                 // Is target within the sorted right half?
@@ -439,7 +461,7 @@ Compare today's modified binary search against the overall roadmap:
 ```
 
 ### Preview for Day 24: Binary Search on Answer Space
-Notice that in Days 22 and 23, we always searched across an **array of indices**.  
+Notice that in Days 22 and 23, we always searched across an **array of indices**.
 Tomorrow in **Day 24**, we elevate Binary Search to an entirely new paradigm: searching across a **range of potential answers** (e.g. ship capacity, eating speed, or split sums) where the array itself does not even need to be sorted, but the **feasibility function** $P(\text{answer})$ is monotonic.
 
 ---

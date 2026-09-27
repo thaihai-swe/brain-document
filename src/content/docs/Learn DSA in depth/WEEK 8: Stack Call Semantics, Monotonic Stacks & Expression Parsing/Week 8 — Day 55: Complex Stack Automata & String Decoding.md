@@ -15,6 +15,28 @@ Today, we conquer **Complex Stack Automata & Greedy String Reduction**:
 
 ## 1. 🧠 TEACH: Concept & Invariants
 
+### 🧭 5W1H Executive Architecture Blueprint
+- **1. WHAT:**
+  - *Formal Definition:* **Complex Stack Automata** use multi-variable stack frames to evaluate nested grammar encodings and serialized object graphs.
+  - *Core Invariants:* Context Stashing Invariant: When an opening bracket `[` is encountered, stash the current outer context `(currentString, currentK)` onto the stack and reset accumulators; Unwinding Invariant: When `]` is encountered, pop `(prevString, k)` and update `currentString = prevString + repeat(currentString, k)`.
+  - *Misconception Check:* String concatenation inside decoding loops can trigger quadratic memory churn; use `StringBuilder` or pre-sized buffers to prevent GC Gen 0 thrashing.
+- **2. WHY:**
+  - *Bottleneck Solved:* Evaluates nested recursive string encodings without risking call stack overflow from deep recursion.
+  - *Complexity Advantage:* Decodes strings in optimal $O(\text{Output Length})$ time and memory.
+- **3. WHEN:**
+  - *When to Choose / Signal Words:* "Decode String" (LC 394), "Mini Parser" (LC 385), "Flatten Nested List Iterator" (LC 341). Signal words: "decode string", "nested k-multiplied strings", "parse nested lists".
+  - *When to Avoid / Failure Modes:* When grammar is ambiguous or requires backtracking parser tables.
+- **4. WHERE:**
+  - *Physical CLR Memory:* Stack holding tuple frames `Stack<(string, int)>`; heap-allocated `StringBuilder` for character accumulation.
+  - *Production Systems:* JSON/XML streaming deserializers, template engine macro expansions, compressed archive decoding (run-length packet decoders).
+- **5. WHO:**
+  - *Spoken Script:* "To decode nested repeat patterns like 3[a2[c]], I use a stack to stash the outer string and multiplier whenever an opening bracket appears. On a closing bracket, I pop the parent context, duplicate the child string K times, and append it back to the parent string in $O(N)$ time."
+  - *Interviewer Evaluation Lens:* Verifies handling of multi-digit numbers ($k \ge 10$), consecutive letters without multipliers, deeply nested brackets, and clean state resetting.
+- **6. HOW:**
+  - *Cost Model:* Time: $O(\text{Output Length})$; Space: $O(\text{Output Length})$.
+  - *State Transition Trace (Decode String):* `3[a2[c]] -> see '3', '[': push ("", 3), str="a" -> see '2', '[': push ("a", 2), str="" -> see 'c': str="c" -> see ']': pop ("a", 2) => str = "a" + "cc" = "acc" -> see ']': pop ("", 3) => str = "" + 3*"acc" = "accaccacc"`.
+
+
 ### 1.1 Hierarchical String Decoding ([LeetCode 394])
 
 Given an encoded string such as `3[a2[c]]`, decode it into `accaccacc`.
@@ -90,7 +112,7 @@ Conclusion: POP 'c'! We can pick up a better 'c' later!
 Given string `num` representing a non-negative integer and integer `k`, remove `k` digits from the number so that the new number is the **smallest possible**.
 
 #### The Exponential Dominance of High-Order Digits:
-In a base-10 number, a change in the $i$-th digit from the left impacts the value by $10^{N - 1 - i}$.  
+In a base-10 number, a change in the $i$-th digit from the left impacts the value by $10^{N - 1 - i}$.
 Comparing `1432` vs `1342`:
 - In `1432`, at index 1 we have digit `4` followed by smaller digit `3` ($4 > 3$).
 - Removing `4` yields `132`, which is strictly smaller than removing any later digit!

@@ -4,13 +4,35 @@ title: "Week 2 — Day 10: 2D Prefix Sums & Matrix Range Queries"
 
 Welcome to Day 10! Today we expand prefix sums into **two dimensions**.
 
-In [Day 8](file:///Users/thaihai-swe/Desktop/my-prompt/learn%20DSA%20in%20depth/WEEK%202:%20Advanced%20Traversal%20-%20Sliding%20Window%20&%20Prefix%20Sums/Week%202%20%E2%80%94%20Day%208:%20Prefix%20Sum%20Fundamentals%20%281D%29.md), we precomputed a 1D prefix strip to answer range queries in $O(1)$ time. In 2D space (grids and matrices), calculating the sum of an arbitrary rectangular subgrid from $(r_1, c_1)$ to $(r_2, c_2)$ appears to require looping over rows and columns ($O(M \times N)$). 
+In [Day 8](./Week%202%20%E2%80%94%20Day%208:%20Prefix%20Sum%20Fundamentals%20%281D%29.md), we precomputed a 1D prefix strip to answer range queries in $O(1)$ time. In 2D space (grids and matrices), calculating the sum of an arbitrary rectangular subgrid from $(r_1, c_1)$ to $(r_2, c_2)$ appears to require looping over rows and columns ($O(M \times N)$).
 
 With the **Principle of Inclusion-Exclusion**, we can answer any 2D submatrix sum query in **strictly $O(1)$ constant time**.
 
 ---
 
 ## 1. 🧠 TEACH: The Principle of Inclusion-Exclusion on Grids
+
+### 🧭 5W1H Executive Architecture Blueprint
+- **1. WHAT:**
+  - *Formal Definition:* A **2D Prefix Sum Matrix** stores cumulative 2D rectangular sums from $(0, 0)$ to $(r-1, c-1)$ using the 2D inclusion-exclusion principle.
+  - *Core Invariants:* Inclusion-Exclusion Build Invariant: $P[r+1, c+1] = \text{mat}[r, c] + P[r, c+1] + P[r+1, c] - P[r, c]$; Query Invariant: $\text{Sum}(r1, c1, r2, c2) = P[r2+1, c2+1] - P[r1, c2+1] - P[r2+1, c1] + P[r1, c1]$.
+  - *Misconception Check:* Building a 2D prefix matrix does *not* require nested quad loops; it is constructed in a single $O(M \times N)$ pass using the exact same inclusion-exclusion subtraction.
+- **2. WHY:**
+  - *Bottleneck Solved:* Eliminates the $O(R \times C)$ cell-by-cell iteration required for rectangular submatrix queries.
+  - *Complexity Advantage:* Reduces submatrix query time from $O(M \times N)$ to strict $O(1)$ constant time.
+- **3. WHEN:**
+  - *When to Choose / Signal Words:* "Range sum query 2D - immutable", "maximum sum submatrix", "box blur image filter". Signal words: "submatrix sum", "2D rectangle query", "matrix area sum".
+  - *When to Avoid / Failure Modes:* Frequently updated 2D matrices (updating a cell takes $O(M \times N)$; use 2D Fenwick Tree for $O(\log M \log N)$ updates).
+- **4. WHERE:**
+  - *Physical CLR Memory:* 2D contiguous `int[,]` array on managed heap; iterating rows sequentially (`r` outer, `c` inner) matches row-major memory layout, preventing CPU cache thrashing.
+  - *Production Systems:* Computer graphics integral images for Viola-Jones face detection, GIS elevation map queries, spatial database query bounding boxes.
+- **5. WHO:**
+  - *Spoken Script:* "2D prefix sums use the inclusion-exclusion principle to answer arbitrary rectangle queries in $O(1)$ time. I build an $(M+1) \times (N+1)$ prefix table where each entry adds the top and left prefixes and subtracts the doubly-counted diagonal overlap. Querying subtracts the top and left strips and restores the overlap."
+  - *Interviewer Evaluation Lens:* Checks correct 2D inclusion-exclusion formula derivation, 1-based indexing offset $(r+1, c+1)$, and row-major loop ordering.
+- **6. HOW:**
+  - *Cost Model:* Build: $O(M \times N)$ time and space; Query: $O(1)$ time and space.
+  - *State Transition Trace:* `Query(r1=1, c1=1, r2=2, c2=2) = P[3, 3] - P[1, 3] - P[3, 1] + P[1, 1]`.
+
 
 ### 1.1 The Geometric Mental Model
 
@@ -154,24 +176,24 @@ public class NumMatrix {
     public NumMatrix(int[][] matrix) {
         int m = matrix.Length;
         int n = matrix[0].Length;
-        
+
         // (m + 1) x (n + 1) table to eliminate edge-case checks
         _prefix = new int[m + 1, n + 1];
 
         for (int r = 0; r < m; r++) {
             for (int c = 0; c < n; c++) {
-                _prefix[r + 1, c + 1] = matrix[r][c] 
-                                      + _prefix[r, c + 1] 
-                                      + _prefix[r + 1, c] 
+                _prefix[r + 1, c + 1] = matrix[r][c]
+                                      + _prefix[r, c + 1]
+                                      + _prefix[r + 1, c]
                                       - _prefix[r, c];
             }
         }
     }
-    
+
     public int SumRegion(int row1, int col1, int row2, int col2) {
-        return _prefix[row2 + 1, col2 + 1] 
-             - _prefix[row1, col2 + 1] 
-             - _prefix[row2 + 1, col1] 
+        return _prefix[row2 + 1, col2 + 1]
+             - _prefix[row1, col2 + 1]
+             - _prefix[row2 + 1, col1]
              + _prefix[row1, col1];
     }
 }
@@ -247,25 +269,25 @@ public class SolutionCountSquares {
         int m = matrix.Length;
         int n = matrix[0].Length;
         int totalSquares = 0;
-        
+
         // dp[r, c] represents the side length of the largest all-ones square
         // with its bottom-right corner at (r, c).
         int[,] dp = new int[m, n];
-        
+
         for (int r = 0; r < m; r++) {
             for (int c = 0; c < n; c++) {
                 if (matrix[r][c] == 1) {
                     if (r == 0 || c == 0) {
                         dp[r, c] = 1;
                     } else {
-                        dp[r, c] = 1 + Math.Min(dp[r - 1, c - 1], 
+                        dp[r, c] = 1 + Math.Min(dp[r - 1, c - 1],
                                        Math.Min(dp[r - 1, c], dp[r, c - 1]));
                     }
                     totalSquares += dp[r, c];
                 }
             }
         }
-        
+
         return totalSquares;
     }
 }

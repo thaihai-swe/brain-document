@@ -1,18 +1,40 @@
 ---
-title: "Week 3 — Day 15: String Memory Internals & Character Arrays"
+title: "Week 3 — Day 15: String Memory Internals, Character Arrays & From-Scratch Mutable String Buffer (StringBuilder)"
 ---
 
 Welcome to **Week 3**! In Weeks 1 and 2, you mastered array memory layout, in-place pointer coordination, and continuous range queries (Prefix Sums and Sliding Windows).
 
-This week, we apply those foundational traversal skills to **Strings**. In technical interviews, string problems test not only your algorithmic reasoning, but also your understanding of **low-level language runtime internals**: heap allocations, immutability, cache locality, and character encoding.
+This week, we apply those foundational traversal skills to **Strings**. In technical interviews, string problems test not only your algorithmic reasoning, but also your understanding of **low-level language runtime internals**: heap allocations, immutability, cache locality, character encoding, and building mutable character buffers from scratch.
 
 ---
 
-## 1. 🧠 TEACH: The Physical Reality of Strings
+## 1. 🧠 TEACH: The Physical Reality of Strings & Mutable Buffers
+
+### 🧭 5W1H Executive Architecture Blueprint
+- **1. WHAT:**
+  - *Formal Definition:* In C#/.NET, `System.String` is an **immutable reference type** representing a contiguous sequence of UTF-16 code units (`char`).
+  - *Core Invariants:* Immutability Invariant: String content cannot be modified post-allocation; UTF-16 Encoding Invariant: Each `char` is 16 bits (2 bytes); characters outside the Basic Multilingual Plane (BMP, e.g. emojis) require 2 `char` code units (surrogate pairs) represented as a `System.Text.Rune`.
+  - *Misconception Check:* `string +=` inside a loop does *not* append in $O(1)$; it allocates a brand new string and copies all characters, creating an $O(N^2)$ quadratic allocation disaster and thrashing Gen 0 Garbage Collection.
+- **2. WHY:**
+  - *Bottleneck Solved:* Eliminates $O(N^2)$ GC memory thrashing and allocation pressure during high-throughput string operations.
+  - *Complexity Advantage:* `StringBuilder` achieves amortized $O(1)$ append; `Span<char>` and `string.AsSpan()` achieve $O(1)$ zero-allocation slicing.
+- **3. WHEN:**
+  - *When to Choose / Signal Words:* String building in loops, substring slicing, text parsing, character frequency counting. Signal words: "reverse string in-place", "string concatenation in loop", "zero-allocation parsing".
+  - *When to Avoid / Failure Modes:* Treating strings as mutable arrays; performing naive `s[i]` indexing when non-BMP Unicode emojis or surrogate pairs are present (use `.EnumerateRunes()`).
+- **4. WHERE:**
+  - *Physical CLR Memory:* Heap layout: 8-byte `Object Header` + 8-byte `MethodTable Pointer` + 4-byte `Length` + contiguous UTF-16 character buffer + 2-byte null terminator. `Span<char>` is a `ref struct` that lives strictly on the stack.
+  - *Production Systems:* Web server HTTP header parsers (Kestrel ASP.NET Core zero-allocation pipelines), Roslyn compiler lexical analyzers.
+- **5. WHO:**
+  - *Spoken Script:* "In C#, strings are immutable reference types stored as UTF-16 code units. In loops, naive string concatenation creates $O(N^2)$ memory churn; I use `StringBuilder` for dynamic growth or stack-allocated `Span<char>` for zero-allocation slicing. For internationalized text with emojis, I iterate using `Rune` to avoid splitting surrogate pairs."
+  - *Interviewer Evaluation Lens:* Checks deep CLR memory knowledge, distinction between value and reference types, `Span<T>` stack semantics, and Unicode surrogate awareness.
+- **6. HOW:**
+  - *Cost Model:* `string +=`: $O(N^2)$ time and space; `StringBuilder.Append`: $O(1)$ amortized time; `Span<char>` slicing: $O(1)$ time, $0$ bytes allocated.
+  - *State Transition Trace:* `string.Concat in loop -> Allocates 10B, 20B, 30B... -> GC Gen 0 triggers. StringBuilder -> Doubles buffer (16->32->64) -> Single final string allocation`.
+
 
 ### 1.1 Strings on the Managed Heap (CLR / JVM / Python)
 
-In managed languages (C#, Java, Python), strings are **reference types** allocated on the managed heap:
+In managed runtimes (C#, Java, Python), strings are **reference types** allocated on the managed heap:
 
 ```
 Stack:                          Heap:
@@ -27,7 +49,7 @@ Stack:                          Heap:
 ```
 
 #### String Immutability:
-Strings are **strictly immutable**. Once created in memory, the character buffer cannot be altered without unsafe memory manipulation. Any operation that appears to "modify" a string (`Substring`, `Replace`, `ToLower`, `+=`) actually **allocates a brand-new string object on the heap** and copies the characters.
+Strings in .NET are **strictly immutable**. Once created in memory, the character buffer cannot be altered without unsafe pointer operations. Any standard string operation (`Substring`, `Replace`, `ToLower`, `+=`) **allocates a brand-new string object on the heap** and copies the characters.
 
 ---
 
@@ -52,12 +74,12 @@ for (int i = 0; i < n; i++) {
 
 $$\text{Total Chars Copied} = 1 + 2 + 3 + \dots + N = \frac{N(N + 1)}{2} \approx \mathbf{\frac{N^2}{2} \implies O(N^2) \text{ Time!}}$$
 
-- If $N = 100,000$, this loop does $\approx 5 \times 10^9$ character copies and allocates gigabytes of short-lived garbage on the heap, triggering continuous **Garbage Collection (GC Gen 0/1) pauses**.
+If $N = 100,000$, this loop performs $\approx 5 \times 10^9$ character copies and allocates gigabytes of short-lived garbage on the heap, triggering continuous **Garbage Collection (GC Gen 0/1) pauses**.
 
-#### The Fix: `StringBuilder` (Amortized $O(1)$ Append)
-`StringBuilder` manages an internal mutable `char[]` buffer. When the buffer fills up, it doubles its capacity:
+#### The Architectural Solution: Mutable Character Buffer (`StringBuilder`)
+A mutable string buffer manages an internal dynamic `char[]` buffer. When the buffer fills up, it doubles its capacity:
 - Copying only occurs on capacity doubling: $1 + 2 + 4 + 8 + \dots + N \le 2N$ total copies.
-- Total time: **strictly $O(N)$**.
+- Total time over $N$ appends: **strictly $O(N)$ total $\implies O(1)$ amortized per append**.
 
 ---
 
@@ -98,11 +120,311 @@ Whenever a problem states: *"The string consists only of lowercase English lette
 
 ---
 
-## 2. 🎬 DEMONSTRATE: Problem Walkthroughs
+### 1.5 Interview Spoken Drill (20–30 Seconds)
+
+> *"In .NET, strings are immutable reference types stored on the managed heap with an 8-byte object header and 4-byte length prefix. Repeated concatenation in a loop creates an $O(N^2)$ complexity trap because each addition allocates a brand-new string and copies all previous characters, thrashing Gen 0 garbage collection. To achieve linear time, we use a mutable character buffer like StringBuilder, which amortizes appends to $O(1)$ by doubling an internal char array. For English alphabet frequency maps, a flat int[26] array is orders of magnitude faster than a Dictionary because it fits completely inside a single L1 cache line."*
 
 ---
 
-### Problem 1: LeetCode 387 — First Unique Character in a String (Easy)
+## 2. ⚙️ IMPLEMENT: Production-Grade From-Scratch Mutable String Buffer
+
+### 2.1 Complete C# Implementation (`CustomStringBuilder`)
+
+```csharp
+using System;
+
+/// <summary>
+/// A production-grade mutable character buffer implemented from scratch in C#.
+/// Demonstrates geometric doubling, in-place string mutation, zero-allocation span slicing,
+/// and efficient ToString() conversion.
+/// </summary>
+public class CustomStringBuilder {
+    private const int DefaultCapacity = 16;
+    private char[] _buffer;
+    private int _length;
+
+    /// <summary>
+    /// Initializes a new instance with the default or specified initial capacity.
+    /// </summary>
+    public CustomStringBuilder(int capacity = DefaultCapacity) {
+        if (capacity < 0) throw new ArgumentOutOfRangeException(nameof(capacity));
+        _buffer = new char[Math.Max(capacity, DefaultCapacity)];
+        _length = 0;
+    }
+
+    /// <summary>
+    /// Initializes a new instance pre-populated with a string.
+    /// </summary>
+    public CustomStringBuilder(string? initial) {
+        int cap = string.IsNullOrEmpty(initial) ? DefaultCapacity : Math.Max(initial.Length * 2, DefaultCapacity);
+        _buffer = new char[cap];
+        _length = 0;
+        if (!string.IsNullOrEmpty(initial)) {
+            Append(initial);
+        }
+    }
+
+    /// <summary>
+    /// Gets the current character count.
+    /// </summary>
+    public int Length => _length;
+
+    /// <summary>
+    /// Gets the total allocated character capacity.
+    /// </summary>
+    public int Capacity => _buffer.Length;
+
+    /// <summary>
+    /// Gets or sets the character at the specified index.
+    /// </summary>
+    public char this[int index] {
+        get {
+            ValidateIndex(index);
+            return _buffer[index];
+        }
+        set {
+            ValidateIndex(index);
+            _buffer[index] = value;
+        }
+    }
+
+    /// <summary>
+    /// Appends a string to the end of the buffer.
+    /// Time Complexity: Amortized O(M) where M is value.Length.
+    /// </summary>
+    public CustomStringBuilder Append(string? value) {
+        if (string.IsNullOrEmpty(value)) return this;
+
+        EnsureCapacity(_length + value.Length);
+        value.CopyTo(0, _buffer, _length, value.Length);
+        _length += value.Length;
+        return this;
+    }
+
+    /// <summary>
+    /// Appends a single character.
+    /// Time Complexity: Amortized O(1).
+    /// </summary>
+    public CustomStringBuilder Append(char c) {
+        EnsureCapacity(_length + 1);
+        _buffer[_length++] = c;
+        return this;
+    }
+
+    /// <summary>
+    /// Appends an integer converted directly to characters without extra heap allocations.
+    /// </summary>
+    public CustomStringBuilder Append(int value) {
+        if (value == 0) {
+            return Append('0');
+        }
+
+        if (value == int.MinValue) {
+            return Append("-2147483648");
+        }
+
+        if (value < 0) {
+            Append('-');
+            value = -value;
+        }
+
+        // Convert digits in reverse on stack
+        Span<char> digits = stackalloc char[10];
+        int count = 0;
+        while (value > 0) {
+            digits[count++] = (char)('0' + (value % 10));
+            value /= 10;
+        }
+
+        // Append in correct order
+        EnsureCapacity(_length + count);
+        for (int i = count - 1; i >= 0; i--) {
+            _buffer[_length++] = digits[i];
+        }
+
+        return this;
+    }
+
+    /// <summary>
+    /// Appends a read-only character span without intermediate string allocation.
+    /// </summary>
+    public CustomStringBuilder Append(ReadOnlySpan<char> span) {
+        if (span.IsEmpty) return this;
+        EnsureCapacity(_length + span.Length);
+        span.CopyTo(_buffer.AsSpan(_length));
+        _length += span.Length;
+        return this;
+    }
+
+    /// <summary>
+    /// Inserts a string at the specified character index.
+    /// Time Complexity: O(N + M) due to shifting.
+    /// </summary>
+    public CustomStringBuilder Insert(int index, string? value) {
+        if ((uint)index > (uint)_length) throw new ArgumentOutOfRangeException(nameof(index));
+        if (string.IsNullOrEmpty(value)) return this;
+
+        EnsureCapacity(_length + value.Length);
+        // Shift existing characters right
+        Array.Copy(_buffer, index, _buffer, index + value.Length, _length - index);
+        value.CopyTo(0, _buffer, index, value.Length);
+        _length += value.Length;
+        return this;
+    }
+
+    /// <summary>
+    /// Removes a range of characters from the buffer.
+    /// Time Complexity: O(N) due to leftward shifting.
+    /// </summary>
+    public CustomStringBuilder Remove(int startIndex, int length) {
+        if ((uint)startIndex > (uint)_length) throw new ArgumentOutOfRangeException(nameof(startIndex));
+        if (length < 0 || startIndex + length > _length) throw new ArgumentOutOfRangeException(nameof(length));
+        if (length == 0) return this;
+
+        int remaining = _length - (startIndex + length);
+        if (remaining > 0) {
+            Array.Copy(_buffer, startIndex + length, _buffer, startIndex, remaining);
+        }
+        _length -= length;
+        return this;
+    }
+
+    /// <summary>
+    /// Resets the buffer length to zero.
+    /// </summary>
+    public void Clear() {
+        _length = 0;
+    }
+
+    /// <summary>
+    /// Converts the buffer contents to a standard immutable string.
+    /// </summary>
+    public override string ToString() {
+        return new string(_buffer, 0, _length);
+    }
+
+    private void EnsureCapacity(int minCapacity) {
+        if (_buffer.Length >= minCapacity) return;
+
+        int newCapacity = Math.Max(_buffer.Length * 2, minCapacity);
+        char[] newBuffer = new char[newCapacity];
+        if (_length > 0) {
+            Array.Copy(_buffer, newBuffer, _length);
+        }
+        _buffer = newBuffer;
+    }
+
+    private void ValidateIndex(int index) {
+        if ((uint)index >= (uint)_length) {
+            throw new ArgumentOutOfRangeException(nameof(index), $"Index {index} out of range [0, {_length - 1}].");
+        }
+    }
+}
+```
+
+---
+
+### 2.2 Visual Invariant Traces
+
+#### Trace 1: `Append("world")` with Geometric Resizing
+Initial capacity = 4, buffer = `['h', 'e', 'y', ' ']`, length = 4. Append `"world"` (length 5):
+
+```
+1. Before Append:
+   _buffer: [ 'h', 'e', 'y', ' ' ]  (Length = 4, Capacity = 4)
+
+2. Capacity Check (4 + 5 = 9 > 4):
+   Triggers EnsureCapacity(9):
+   New capacity = Math.Max(4 * 2, 9) = 9 (or rounded up to 16):
+   Allocate newBuffer of size 16.
+   Array.Copy: copy 4 chars.
+   _buffer points to newBuffer: [ 'h', 'e', 'y', ' ', \0, \0, ... ]
+
+3. Copy new characters:
+   "world".CopyTo(_buffer, 4, 5)
+   _buffer: [ 'h', 'e', 'y', ' ', 'w', 'o', 'r', 'l', 'd', \0, ... ]
+   _length = 9
+```
+
+---
+
+### 2.3 Comprehensive Verification Test Suite
+
+```csharp
+using System;
+using System.Diagnostics;
+
+public static class CustomStringBuilderVerificationSuite {
+    public static void RunAllTests() {
+        TestAppendAndToString();
+        TestGeometricDoubling();
+        TestAppendInteger();
+        TestInsertAndRemove();
+        TestSpanAppend();
+        Console.WriteLine("✅ All CustomStringBuilder Unit Tests Passed Successfully!");
+    }
+
+    private static void TestAppendAndToString() {
+        var sb = new CustomStringBuilder();
+        sb.Append("Hello").Append(' ').Append("World");
+        Debug.Assert(sb.Length == 11);
+        Debug.Assert(sb.ToString() == "Hello World");
+    }
+
+    private static void TestGeometricDoubling() {
+        var sb = new CustomStringBuilder(4);
+        Debug.Assert(sb.Capacity >= 4);
+        sb.Append("1234");
+        Debug.Assert(sb.Length == 4);
+
+        sb.Append("5"); // Triggers capacity doubling
+        Debug.Assert(sb.Length == 5);
+        Debug.Assert(sb.Capacity >= 8);
+        Debug.Assert(sb.ToString() == "12345");
+    }
+
+    private static void TestAppendInteger() {
+        var sb = new CustomStringBuilder();
+        sb.Append(42).Append(',').Append(-105).Append(',').Append(0);
+        Debug.Assert(sb.ToString() == "42,-105,0");
+    }
+
+    private static void TestInsertAndRemove() {
+        var sb = new CustomStringBuilder("ACD");
+        sb.Insert(1, "B"); // "ABCD"
+        Debug.Assert(sb.ToString() == "ABCD");
+
+        sb.Remove(1, 2); // Removes "BC" -> "AD"
+        Debug.Assert(sb.ToString() == "AD");
+        Debug.Assert(sb.Length == 2);
+    }
+
+    private static void TestSpanAppend() {
+        var sb = new CustomStringBuilder();
+        ReadOnlySpan<char> span = "SpanSlice".AsSpan(4, 5); // "Slice"
+        sb.Append(span);
+        Debug.Assert(sb.ToString() == "Slice");
+    }
+}
+```
+
+---
+
+## 3. 🔬 ANALYZE: Systems & Memory Performance
+
+### 3.1 Contiguous Char Buffer vs. .NET Chunked `StringBuilder`
+
+Modern .NET (`System.Text.StringBuilder`) uses a **chunked rope** implementation rather than a flat doubling array:
+- In .NET, a `StringBuilder` holds a reference to a `char[] m_ChunkChars` and a reference to `StringBuilder m_ChunkPrevious`.
+- When capacity is exceeded, it allocates a new chunk that points backwards to the previous chunk like a linked list of arrays.
+- **Advantage of Chunked Rope:** Appending never has to copy previous chunks! Large string builders don't trigger large array reallocations on the LOH (Large Object Heap).
+- **Advantage of Flat Contiguous Buffer (`CustomStringBuilder`):** $O(1)$ random indexing (`this[int]`) and superior CPU cache locality during character scans.
+
+---
+
+## 4. 🎬 DEMONSTRATE: Problem Walkthroughs
+
+### 4.1 Problem 1: LeetCode 387 — First Unique Character in a String (Easy)
 
 > Given a string `s`, find the first non-repeating character in it and return its index. If it does not exist, return `-1`.
 
@@ -150,7 +472,7 @@ public class SolutionFirstUniqChar {
 
 ---
 
-### Problem 2: LeetCode 383 — Ransom Note (Easy)
+### 4.2 Problem 2: LeetCode 383 — Ransom Note (Easy)
 
 > Given two strings `ransomNote` and `magazine`, return `true` if `ransomNote` can be constructed by using the letters from `magazine` and `false` otherwise.
 > Each letter in `magazine` can only be used once in `ransomNote`.
@@ -193,46 +515,39 @@ public class SolutionCanConstruct {
 
 ---
 
-### Problem 3: LeetCode 49 — Group Anagrams (Medium)
+### 4.3 Problem 3: LeetCode 49 — Group Anagrams (Medium)
 
 > Given an array of strings `strs`, group the **anagrams** together. You can return the answer in **any order**.
 
 #### The Core Question: How to Design the Equivalence Key?
-Two strings are anagrams if and only if they have the exact same character counts. To group them in a `Dictionary<string, List<string>>`, we need a canonical hashable key.
+Two strings are anagrams if and only if their sorted versions are identical, or their character frequency counts are identical.
 
-##### Key Strategy A: Sorted Character Array ($O(N \cdot L \log L)$)
-Sort the characters of each string:
-`"eat" -> "aet"`, `"tea" -> "aet"`, `"ate" -> "aet"`
-All three share key `"aet"`.
+#### Approach 1: Sorted String Key ($O(N \cdot K \log K)$)
+- For each word of length $K$, convert to `char[]`, sort it ($O(K \log K)$), and convert back to string.
+- Use sorted string as dictionary key: `Dictionary<string, List<string>>`.
 
-##### Key Strategy B: Frequency Signature ($O(N \cdot L)$)
-Count character frequencies in `int[26]`, then serialize into a delimited string:
-`"1#0#0#0#1...#1"`
-Theoretical time is $O(L)$, but string building overhead often makes Strategy A faster in practice for words with $L \le 20$.
+#### Approach 2: Frequency Count Hash Key ($O(N \cdot K)$)
+- For each word, build `int[26]` count array in $O(K)$ time.
+- Encode counts into a unique canonical string: `"#1#0#0#0#1..."`.
+- Faster for long strings ($K > 100$).
 
-#### Production C# Implementation (Strategy A - High Performance):
+#### Production C# Implementation (Sorted Key):
 ```csharp
 public class SolutionGroupAnagrams {
     public IList<IList<string>> GroupAnagrams(string[] strs) {
-        if (strs == null || strs.Length == 0) {
-            return new List<IList<string>>();
-        }
+        if (strs == null || strs.Length == 0) return new List<IList<string>>();
 
-        var map = new Dictionary<string, List<string>>();
+        var map = new Dictionary<string, IList<string>>();
 
-        for (int i = 0; i < strs.Length; i++) {
-            string s = strs[i];
-            
-            // Convert to char array and sort to generate canonical key
+        foreach (string s in strs) {
             char[] chars = s.ToCharArray();
             Array.Sort(chars);
             string key = new string(chars);
 
-            if (!map.TryGetValue(key, out var list)) {
-                list = new List<string>();
-                map[key] = list;
+            if (!map.ContainsKey(key)) {
+                map[key] = new List<string>();
             }
-            list.Add(s);
+            map[key].Add(s);
         }
 
         return new List<IList<string>>(map.Values);
@@ -241,61 +556,60 @@ public class SolutionGroupAnagrams {
 ```
 
 #### Complexity:
-- **Time Complexity:** $O(N \cdot L \log L)$ where $N$ is the number of strings and $L$ is the maximum string length.
-- **Space Complexity:** $O(N \cdot L)$ to store grouped results.
+- **Time Complexity:** $O(N \cdot K \log K)$ where $N$ is number of strings, $K$ is maximum length of a string.
+- **Space Complexity:** $O(N \cdot K)$ to store keys and grouped strings in dictionary.
 
 ---
 
-## 3. 🏋️ PRACTICE: Your Daily Challenges
+## 5. 🏋️ PRACTICE: Your Daily Challenges
 
-Solve these in sequence to solidify string memory fundamentals:
+Reinforce string memory manipulation on LeetCode:
 
-### Problem 1 (Two-Pass Frequency): LeetCode 387 — First Unique Character in a String (Easy)
-- **Goal:** Find first non-repeating character in $O(N)$ time.
-- **Key Insight:** `int[26]` frequency array + second linear scan.
+### Problem 1 (Warmup): LeetCode 387 — First Unique Character in a String (Easy)
+- **Goal:** Find the first character with frequency 1 using a 2-pass `int[26]` array.
 - **Target Complexity:** $O(N)$ time, $O(1)$ space.
 
-### Problem 2 (Inventory Tracking): LeetCode 383 — Ransom Note (Easy)
-- **Goal:** Verify if magazine contains sufficient characters.
-- **Key Insight:** Early length check + decrement inventory.
+### Problem 2 (Inventory Consumption): LeetCode 383 — Ransom Note (Easy)
+- **Goal:** Validate character supply from magazine using early exit and decrements.
 - **Target Complexity:** $O(M + N)$ time, $O(1)$ space.
 
-### Problem 3 (Key Canonicalization): LeetCode 49 — Group Anagrams (Medium)
-- **Goal:** Group words having identical character distributions.
-- **Key Insight:** Sorted string key or frequency tuple key with `Dictionary<string, List<string>>`.
-- **Target Complexity:** $O(N \cdot L \log L)$ time, $O(N \cdot L)$ space.
+### Problem 3 (Hash Key Encoding): LeetCode 49 — Group Anagrams (Medium)
+- **Goal:** Group identical letter permutations using canonical dictionary keys.
+- **Target Complexity:** $O(N \cdot K \log K)$ time, $O(N \cdot K)$ space.
 
-### Bonus / Extension Challenge: LeetCode 242 — Valid Anagram (Easy)
-- **Goal:** Check if string `t` is an anagram of `s`.
-- **Hint:** Solve using a single `int[26]` array without sorting.
+### Bonus Challenge: LeetCode 242 — Valid Anagram (Easy)
+- **Goal:** Check if two strings have identical character distributions using a single 26-slot counter.
 
 ---
 
-## 4. 🔗 CONNECT: Arrays to Strings
+## 6. 🔗 CONNECT: The Pattern Decision Bridge
 
 ```
-Memory Architecture Bridge:
-  ┌────────────────────────────────────────────────────────────┐
-  │ Array of T:  Contiguous memory block, directly mutable     │
-  └────────────────────────────────────────────────────────────┘
-                               ▲
-                 .ToCharArray()│  new string(chars)
-                               ▼
-  ┌────────────────────────────────────────────────────────────┐
-  │ Managed String: Contiguous UTF-16 chars, STRICTLY IMMUTABLE│
-  └────────────────────────────────────────────────────────────┘
+┌────────────────────────────────────────────────────────────────────────┐
+│                   String Memory & Parsing Decision Tree                │
+└────────────────────────────────────────────────────────────────────────┘
+                   │
+                   ├─► Multiple string concatenations in loop?
+                   │   └─► CustomStringBuilder / StringBuilder (Amortized O(1))
+                   │
+                   ├─► Lowercase English character frequency counting?
+                   │   └─► int[26] Array (c - 'a') (O(1) L1 Cache Fit) [LC 387, 383]
+                   │
+                   ├─► Grouping anagrams or isomorphic patterns?
+                   │   └─► Canonical Hash Key (Sorted string or encoded counts) [LC 49]
+                   │
+                   └─► Zero-allocation string slicing?
+                       └─► ReadOnlySpan<char> / string.AsSpan()
 ```
-
-When you need in-place pointer manipulation on strings (reversals, partitions, compressions), always convert to `char[]` first, execute in-place two-pointer operations in $O(1)$ extra memory, and reconstruct the string once at the end!
 
 ---
 
-## 5. 🎯 Day 15 Checkpoint Questions
+## 7. 🎯 Day 15 Checkpoint Questions
 
-Verify your string memory mental model:
+Verify your foundational string memory and mutable buffer intuition:
 
-1. **Concatenation Trap:** If a loop runs $N = 100,000$ times concatenating one character `s += 'a'`, explain precisely why the runtime is $O(N^2)$ and what happens to the managed heap.
-2. **Character Offset:** Why is `c - 'a'` guaranteed to produce an index from $0$ to $25$ for any lowercase English letter? What happens if `c` is uppercase?
-3. **Key Generation Trade-off:** In LeetCode 49 (Group Anagrams), when would Strategy B (Frequency Tuple $O(L)$) be strictly superior to Strategy A (Sorting $O(L \log L)$)?
-
-When you are ready, share your answers or request to move to **Day 16: Two-Pointer String Patterns & Palindromes**!
+1. **Concatenation Trap:** Why does `s += c` inside a loop of length $N$ take $O(N^2)$ time in C#? What happens to the heap memory allocated in intermediate iterations?
+2. **Buffer Doubling:** How does `CustomStringBuilder` ensure that appending $N$ characters total takes only $O(N)$ time rather than $O(N^2)$?
+3. **Zero-Allocation Slicing:** Why is passing a `ReadOnlySpan<char>` to `Append()` more memory efficient than passing `s.Substring(start, length)`?
+4. **ASCII Offset Math:** Explain why `'g' - 'a'` evaluates to the exact integer `6`.
+5. **Cache Reality:** Why does an `int[26]` frequency array execute faster than a `Dictionary<char, int>` in CPU hardware?

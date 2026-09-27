@@ -16,6 +16,28 @@ Today is your **Phase 2 Part 1 Capstone Assessment**. We conduct a full **90-min
 
 ## 1. 🎯 MOCK INTERVIEW STRUCTURE & SCORING RUBRIC
 
+### 🧭 5W1H Executive Architecture Blueprint
+- **1. WHAT:**
+  - *Formal Definition:* Day 49 is the **Phase 2 Part 1 Milestone Assessment & Mock Interview Simulation**, conducting a rigorous 90-minute timed evaluation on benchmark Hard problems: LeetCode 25 (Reverse Nodes in k-Group) and LeetCode 146 (LRU Cache).
+  - *Core Invariants:* Phase 2 Part 1 Mastery Invariants: Lookahead segment reversal with $groupPrev$ reconnection; Doubly linked list with sentinel sentinels coupled with hash map for $O(1)$ LRU eviction.
+  - *Misconception Check:* Candidates often rush through linked list problems without drawing pointer diagrams, leading to unsevered cycle bugs or dropped references.
+- **2. WHY:**
+  - *Bottleneck Solved:* Validates candidate's ability to manipulate pointers with zero bugs, manage composite systems architectures, and articulate trade-offs under Big Tech interview conditions.
+  - *Complexity Advantage:* Produces production-ready C# implementations ($O(N)$ time, $O(1)$ space for K-Group; strict $O(1)$ time for LRU Cache) meeting Senior Engineering hiring bars.
+- **3. WHEN:**
+  - *When to Choose / Signal Words:* Milestone capstone assessment; testing interview readiness on advanced linked structures before progressing to Stacks & Queues.
+  - *When to Avoid / Failure Modes:* Failing to state pointer boundaries or dry-running edge cases before writing code.
+- **4. WHERE:**
+  - *Physical CLR Memory:* Full synthesis of Phase 2 memory models: 24-32B node heap footprints, CPU cache line pointer chasing penalties, and reference loitering prevention.
+  - *Production Systems:* Systems design primitives: cache eviction policies (LRU/LFU), memory freelists, and concurrent skip lists.
+- **5. WHO:**
+  - *Spoken Script:* "In linked structure interviews, I establish sentinel dummy nodes to eliminate boundary null-head branching, verify lookahead counts before executing mutations, state pointer rewirings explicitly, and analyze CPU cache line miss implications."
+  - *Interviewer Evaluation Lens:* Evaluates candidate against the 4 Senior Hire signals: Invariant Discovery (25%), Algorithmic Optimality (25%), Production Code Quality (25%), and Edge-Case Tracing (25%).
+- **6. HOW:**
+  - *Cost Model:* 90-minute simulation (45 mins per problem); passing bar $\ge 16/20$ points.
+  - *State Transition Trace:* Exploration $\to$ Invariant Formulation $\to$ Production Implementation $\to$ Edge-Case Dry Run $\to$ Complexity Derivation.
+
+
 Treat this simulation as a real onsite technical interview at Google, Meta, or Microsoft:
 
 | Evaluation Dimension | Standard for "Strong Hire" (4/4) | Score (0–4) |
@@ -32,8 +54,8 @@ Treat this simulation as a real onsite technical interview at Google, Meta, or M
 
 ## 2. 🥊 MOCK INTERVIEW PROBLEM 1: LeetCode 25 — Reverse Nodes in k-Group (Hard)
 
-> Given the `head` of a linked list, reverse the nodes of the list `k` at a time, and return the modified list.  
-> `k` is a positive integer and is less than or equal to the length of the linked list. If the number of nodes is not a multiple of `k` then left-out nodes, in the end, should remain as it is.  
+> Given the `head` of a linked list, reverse the nodes of the list `k` at a time, and return the modified list.
+> `k` is a positive integer and is less than or equal to the length of the linked list. If the number of nodes is not a multiple of `k` then left-out nodes, in the end, should remain as it is.
 > You may not alter the values in the list's nodes, only nodes themselves may be changed.
 >
 > **Constraints:**

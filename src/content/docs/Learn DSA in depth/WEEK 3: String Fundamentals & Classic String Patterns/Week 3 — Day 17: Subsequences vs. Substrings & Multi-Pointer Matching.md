@@ -10,6 +10,28 @@ Understanding the difference between contiguous segments and order-preserving sp
 
 ## 1. 🧠 TEACH: The Hierarchy of String Decompositions
 
+### 🧭 5W1H Executive Architecture Blueprint
+- **1. WHAT:**
+  - *Formal Definition:* A **Substring** is a strictly contiguous slice of characters ($s[i .. j]$). A **Subsequence** is derived by deleting zero or more characters while strictly preserving relative left-to-right ordering ($i_1 < i_2 < \dots < i_k$).
+  - *Core Invariants:* Relative Order Invariant: $index(s[k]) < index(s[k+1])$; Greedy Matching Invariant: To determine if $s$ is a subsequence of $t$, matching the earliest possible occurrence of character $s[i]$ in $t$ is always globally optimal.
+  - *Misconception Check:* Subsequence matching does *not* require backtracking or dynamic programming; the greedy choice never closes off any viable solution, guaranteeing that a single linear two-pointer scan is optimal.
+- **2. WHY:**
+  - *Bottleneck Solved:* Eliminates exponential $O(2^N)$ subsequence generation or $O(M \times N)$ dynamic programming tables for simple matching.
+  - *Complexity Advantage:* Reduces single-query matching to $O(|s| + |t|)$ time with $O(1)$ space.
+- **3. WHEN:**
+  - *When to Choose / Signal Words:* "Is Subsequence" (LC 392), "Longest Word in Dictionary through Deleting" (LC 524). Signal words: "subsequence", "delete characters without reordering", "match characters in order".
+  - *When to Avoid / Failure Modes:* If the query string $t$ is fixed and receives millions of stream queries $s$ (single scan takes $O(Q \times |t|)$; precompute inverted index `Dictionary<char, List<int>>` and binary search in $O(Q \times |s| \log |t|)$).
+- **4. WHERE:**
+  - *Physical CLR Memory:* Two integer index variables in CPU registers (`i` for $s$, `j` for $t$); zero heap allocations.
+  - *Production Systems:* Git diff Myers diff algorithm base cases, fuzzy string search engines, command-line auto-completion.
+- **5. WHO:**
+  - *Spoken Script:* "A substring requires contiguous memory, whereas a subsequence only requires relative order preservation. To check if $s$ is a subsequence of $t$, I use two pointers greedily matching characters from left to right in $O(|s| + |t|)$ time and $O(1)$ space, because taking the earliest match never restricts future matches."
+  - *Interviewer Evaluation Lens:* Checks candidate's understanding of greedy correctness, ability to distinguish contiguous substrings from subsequences, and handling of repeated queries via inverted index.
+- **6. HOW:**
+  - *Cost Model:* Single match: $O(|s| + |t|)$ time, $O(1)$ space; Repeated queries: $O(|t|)$ preprocess, $O(|s| \log |t|)$ per query.
+  - *State Transition Trace:* `s="abc", t="ahbgdc" -> match 'a' at t[0] -> match 'b' at t[2] -> match 'c' at t[5] -> i == s.Length => return true`.
+
+
 ### 1.1 Strict Definitions
 
 ```
@@ -193,7 +215,7 @@ public class SolutionNumMatchingSubseq {
         for (int i = 0; i < s.Length; i++) {
             int c = s[i] - 'a';
             List<WordPointer> currentBucket = buckets[c];
-            
+
             // Re-initialize bucket for new arrivals
             buckets[c] = new List<WordPointer>();
 
@@ -240,7 +262,7 @@ public class SolutionFindLongestWord {
 
         for (int i = 0; i < dictionary.Count; i++) {
             string word = dictionary[i];
-            
+
             // Prune: only check if longer OR equal length and lexicographically smaller
             if (word.Length < bestWord.Length) continue;
             if (word.Length == bestWord.Length && string.CompareOrdinal(word, bestWord) >= 0) continue;

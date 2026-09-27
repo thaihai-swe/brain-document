@@ -10,6 +10,28 @@ Today is our **Grand Synthesis & Pattern Cross-Mapping Day**. Before the Week 1�
 
 ## 1. 🧠 TEACH: The Unified Pattern Decision Architecture
 
+### 🧭 5W1H Executive Architecture Blueprint
+- **1. WHAT:**
+  - *Formal Definition:* Day 20 is the **Phase 1 Master Review & Cross-Mapping Module**, synthesizing pattern selection across Array Memory, Pointers, Windows, Prefixes, and Strings.
+  - *Core Invariants:* Diagnostic Decision Invariant: Contiguous range query $\implies$ Prefix Sum / Sliding Window; Sorted pair/triplet search $\implies$ Opposite-Ends Two Pointers; In-place compaction $\implies$ Reader/Writer Pointers; Anagrams $\implies$ Frequency Vector.
+  - *Misconception Check:* Do not jump into coding immediately; the 60-second interview diagnostic must establish whether the problem domain is monotonic, whether memory is contiguous, and whether auxiliary space is restricted to $O(1)$.
+- **2. WHY:**
+  - *Bottleneck Solved:* Prevents candidate panic and false starts in technical interviews by building structured pattern recognition reflexes.
+  - *Complexity Advantage:* Instantly maps any linear data problem to its mathematically optimal complexity tier ($O(N)$ time, $O(1)$ or $O(N)$ space).
+- **3. WHEN:**
+  - *When to Choose / Signal Words:* Pre-assessment synthesis, complex multi-pattern problems blending sliding window with frequency vectors or two pointers with sorting.
+  - *When to Avoid / Failure Modes:* Never rely on memorized code solutions; always derive the solution from the underlying invariant.
+- **4. WHERE:**
+  - *Physical CLR Memory:* Full spectrum: stack allocation, CPU cache lines, Gen 0/1/2 GC impact, string immutability, and zero-allocation `Span<T>`.
+  - *Production Systems:* High-performance low-latency service architectures where GC pauses and memory allocations are strictly bounded.
+- **5. WHO:**
+  - *Spoken Script:* "In linear collections, my first step is diagnosing access patterns and constraints: contiguous ranges with non-negative data map to sliding window; negative numbers require prefix sums with a hash map; sorted pair searches map to opposite-ends two pointers; and in-place updates map to reader-writer compaction."
+  - *Interviewer Evaluation Lens:* Assesses breadth of pattern recognition, crisp articulation of trade-offs, and speed of algorithmic classification.
+- **6. HOW:**
+  - *Cost Model:* Diagnostic classification: $\le 60$ seconds; Implementation: $\le 15$ minutes per Medium problem.
+  - *State Transition Trace:* Problem Prompt $\to$ Monotonicity Check $\to$ Memory Constraint Check $\to$ Invariant Selection $\to$ Implementation $\to$ Verification.
+
+
 ### 1.1 The 5-Second Diagnostic Flowchart
 
 When you read any Array or String problem in an interview, trace this decision path:

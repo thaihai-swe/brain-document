@@ -2,13 +2,35 @@
 title: "Week 2 — Day 12: Variable-Size Sliding Window"
 ---
 
-Welcome to Day 12! Yesterday on [Day 11](file:///Users/thaihai-swe/Desktop/my-prompt/learn%20DSA%20in%20depth/WEEK%202:%20Advanced%20Traversal%20-%20Sliding%20Window%20&%20Prefix%20Sums/Week%202%20%E2%80%94%20Day%2011:%20Fixed-Size%20Sliding%20Window.md), we mastered windows with a static length $K$.
+Welcome to Day 12! Yesterday on [Day 11](./Week%202%20%E2%80%94%20Day%2011:%20Fixed-Size%20Sliding%20Window.md), we mastered windows with a static length $K$.
 
 Today we study the **Variable-Size Sliding Window** (often called the Dynamic Window or Accordion Pattern). Instead of a rigid frame, the window expands and contracts dynamically to locate the **longest** or **shortest** contiguous subarray satisfying a given constraint.
 
 ---
 
 ## 1. 🧠 TEACH: The Accordion Mental Model
+
+### 🧭 5W1H Executive Architecture Blueprint
+- **1. WHAT:**
+  - *Formal Definition:* The **Variable-Size Sliding Window** dynamically expands and contracts a contiguous subarray $[L, R]$ based on a monotonic validity condition.
+  - *Core Invariants:* Monotonic Pointer Invariant: Both $L$ and $R$ advance strictly forward ($L \le R$); Invariant Maintenance: Expand $R$ to include elements; contract $L$ while the window is invalid (for longest window) or valid (for shortest window).
+  - *Misconception Check:* A nested `while` loop inside a `for` loop does *not* mean $O(N^2)$ time! Because $L$ only increments and never resets to 0, each element enters the window at most once and exits at most once ($2N$ operations total $\implies O(N)$ amortized).
+- **2. WHY:**
+  - *Bottleneck Solved:* Eliminates the $O(N^2)$ brute-force examination of all possible subarray endpoints.
+  - *Complexity Advantage:* Reduces search time from $O(N^2)$ to $O(N)$ amortized linear time.
+- **3. WHEN:**
+  - *When to Choose / Signal Words:* "Longest substring without repeating characters", "minimum size subarray sum $\ge S$", "fruit into baskets" (at most 2 distinct). Signal words: "longest/shortest contiguous subarray satisfying condition", "all positive numbers".
+  - *When to Avoid / Failure Modes:* Non-monotonic conditions (e.g. array with negative numbers where contracting $L$ can either increase or decrease the sum; use prefix sum + hash map instead).
+- **4. WHERE:**
+  - *Physical CLR Memory:* Stack indices `L` and `R`, plus auxiliary frequency table (`int[128]` or `Dictionary<char, int>`).
+  - *Production Systems:* TCP flow control sliding window, video streaming bitrate buffer adaptation, log aggregation sliding windows.
+- **5. WHO:**
+  - *Spoken Script:* "In a variable sliding window, the right pointer expands the window to incorporate new data, and the left pointer contracts it whenever the validity invariant is violated. Because both pointers move strictly monotonically forward, each element enters and exits the window at most once, guaranteeing $O(N)$ amortized time."
+  - *Interviewer Evaluation Lens:* Checks amortized $O(N)$ proof, distinction between longest vs. shortest window templates, and detection of non-monotonic failure modes.
+- **6. HOW:**
+  - *Cost Model:* Time: $O(2N) = O(N)$ amortized; Space: $O(1)$ for fixed alphabet or $O(K)$ for distinct elements.
+  - *State Transition Trace (Longest Substring Without Repeating):* `s="abcabcbb" -> R expands 'a','b','c' (len 3) -> R sees duplicate 'a': L moves past previous 'a' -> window remains valid`.
+
 
 ### 1.1 Expansion vs. Contraction
 
@@ -84,7 +106,7 @@ for (int right = 0; right < n; right++) {
     }
 }
 ```
-often mistakenly assumes this is $O(N^2)$. 
+often mistakenly assumes this is $O(N^2)$.
 
 #### The Amortized Proof:
 - `right` increments from $0$ to $N - 1$: exactly $N$ steps.
@@ -154,7 +176,7 @@ public class SolutionMinSubArrayLen {
                 if (currentWindowLen < minLen) {
                     minLen = currentWindowLen;
                 }
-                
+
                 currentSum -= nums[left];
                 left++;
             }
@@ -210,14 +232,14 @@ public class SolutionLengthOfLongestSubstring {
 
         for (int right = 0; right < s.Length; right++) {
             char c = s[right];
-            
+
             // If c has been seen at or after 'left', fast-forward left
             if (lastSeen[c] > left) {
                 left = lastSeen[c];
             }
 
             maxLen = Math.Max(maxLen, right - left + 1);
-            
+
             // Record 1-based index of right (so default 0 means unvisited)
             lastSeen[c] = right + 1;
         }

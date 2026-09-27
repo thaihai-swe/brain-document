@@ -10,6 +10,28 @@ Palindromes are among the most frequently tested concepts in technical interview
 
 ## 1. 🧠 TEACH: The Mechanics of Palindromic Symmetry
 
+### 🧭 5W1H Executive Architecture Blueprint
+- **1. WHAT:**
+  - *Formal Definition:* Palindromic patterns exploit reflectional symmetry across a center: a string is a palindrome if $s[i] == s[N - 1 - i]$ for all $i$.
+  - *Core Invariants:* Symmetry Invariant: $s[L] == s[R]$; Center Expansion Invariant: A string of length $N$ contains exactly $2N - 1$ possible palindrome centers ($N$ single-character odd centers, $N - 1$ between-character even centers).
+  - *Misconception Check:* Finding the longest palindromic substring does *not* require $O(N^3)$ brute-force substring generation and testing; expanding outward from all $2N-1$ centers takes $O(N^2)$ time with strictly $O(1)$ auxiliary space.
+- **2. WHY:**
+  - *Bottleneck Solved:* Eliminates $O(N^3)$ substring extraction and $O(N^2)$ auxiliary space of dynamic programming tables.
+  - *Complexity Advantage:* Center expansion achieves $O(N^2)$ time with strictly $O(1)$ space, avoiding large 2D boolean matrices.
+- **3. WHEN:**
+  - *When to Choose / Signal Words:* "Valid Palindrome" (LC 125), "Valid Palindrome II" (LC 680 — at most one deletion), "Longest Palindromic Substring" (LC 5). Signal words: "reads the same forward and backward", "palindrome", "expand around center".
+  - *When to Avoid / Failure Modes:* When string length is $N \ge 10^5$, where $O(N^2)$ center expansion TLEs (requires Manacher's Algorithm for $O(N)$ linear time).
+- **4. WHERE:**
+  - *Physical CLR Memory:* Stack registers for `left` and `right` pointer indices; `char.IsLetterOrDigit` and `char.ToLowerInvariant` for ASCII character normalization.
+  - *Production Systems:* DNA bioinformatics reverse complement palindrome identification, computational linguistics morphology parsing.
+- **5. WHO:**
+  - *Spoken Script:* "For palindrome verification, I use opposite-ends two pointers skipping non-alphanumeric characters. For finding palindromic substrings, I expand outwards from each of the $2N-1$ possible centers in $O(1)$ auxiliary space, eliminating the need for an $O(N^2)$ dynamic programming table."
+  - *Interviewer Evaluation Lens:* Checks handling of both odd and even palindrome centers, character normalization, and branching logic when 1 deletion is permitted (Valid Palindrome II).
+- **6. HOW:**
+  - *Cost Model:* Verification: $O(N)$ time, $O(1)$ space; Center Expansion: $O(N^2)$ time, $O(1)$ auxiliary space.
+  - *State Transition Trace (Center Expansion):* `s="babad" -> Center i=1 ('a'): expand L=0 ('b'), R=2 ('b') => match "bab" (len 3) -> L=-1 stop. Max len = 3`.
+
+
 ### 1.1 The Two Opposing Pointer Paradigms
 
 ```
@@ -170,7 +192,7 @@ public class SolutionValidPalindromeII {
         while (left < right) {
             if (s[left] != s[right]) {
                 // Try deleting s[left] OR deleting s[right]
-                return IsPalindromeRange(s, left + 1, right) 
+                return IsPalindromeRange(s, left + 1, right)
                     || IsPalindromeRange(s, left, right - 1);
             }
             left++;
@@ -246,7 +268,7 @@ public class SolutionLongestPalindrome {
         return s.Substring(startIdx, maxLen);
     }
 
-    private static void ExpandAroundCenter(string s, int left, int right, 
+    private static void ExpandAroundCenter(string s, int left, int right,
                                            ref int startIdx, ref int maxLen) {
         while (left >= 0 && right < s.Length && s[left] == s[right]) {
             left--;

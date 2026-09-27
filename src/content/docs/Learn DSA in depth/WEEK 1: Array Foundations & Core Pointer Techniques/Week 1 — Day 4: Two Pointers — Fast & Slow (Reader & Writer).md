@@ -10,6 +10,28 @@ While the Opposite-Ends pattern (Day 3) moves inward from both boundaries, Fast 
 
 ## 1. 🧠 TEACH: The Mental Model of Reader & Writer
 
+### 🧭 5W1H Executive Architecture Blueprint
+- **1. WHAT:**
+  - *Formal Definition:* The **Fast & Slow (Reader & Writer) Two-Pointer Pattern** is an asymmetric unidirectional traversal where a `read` pointer inspects elements while a `write` pointer anchors the boundary of processed, valid data.
+  - *Core Invariants:* Compaction Invariant: $write \le read$ at all times; subarray $[0 .. write-1]$ contains only elements satisfying the retention predicate; subarray $[write .. read-1]$ contains discarded/overwritable garbage; $[read .. N-1]$ contains unprocessed elements.
+  - *Misconception Check:* In-place deletion does *not* require shifting remaining elements left on every deletion ($O(N^2)$); copying valid elements forward to `write` achieves $O(N)$ single-pass compaction.
+- **2. WHY:**
+  - *Bottleneck Solved:* Eliminates the $O(N^2)$ cascade of memory shifts caused by calling `Array.Copy` or naive deletion loops.
+  - *Complexity Advantage:* Reduces time complexity from $O(N^2)$ to $O(N)$ while maintaining strictly $O(1)$ auxiliary space.
+- **3. WHEN:**
+  - *When to Choose / Signal Words:* "Remove element in-place", "remove duplicates from sorted array", "move zeroes to end", "filter array without extra memory".
+  - *When to Avoid / Failure Modes:* When original array elements must not be modified or overwritten; when non-contiguous sequence preservation requires secondary indices.
+- **4. WHERE:**
+  - *Physical CLR Memory:* Sequential streaming read and sequential write to the same buffer; zero GC allocations; near 100% L1 data cache hits due to monotonic forward traversal.
+  - *Production Systems:* In-memory database log compaction, garbage collector mark-and-compact phases, disk sector defragmentation.
+- **5. WHO:**
+  - *Spoken Script:* "I use a reader pointer to scan every element and a writer pointer to anchor the boundary of kept data. The writer only advances when the reader encounters an element that meets the retention rule, overwriting discarded slots in-place in $O(N)$ time and $O(1)$ memory."
+  - *Interviewer Evaluation Lens:* Checks strict enforcement of $write \le read$, correct handling of arrays with zero deletions, and proper return of final length $write$.
+- **6. HOW:**
+  - *Cost Model:* Time: $\Theta(N)$ single pass; Space: $O(1)$ auxiliary memory.
+  - *State Transition Trace:* `nums=[0, 1, 0, 3, 12] -> write=0; read=0 (val 0, skip); read=1 (val 1, nums[write++]=1); read=2 (val 0, skip); read=3 (val 3, nums[write++]=3); read=4 (val 12, nums[write++]=12) -> final write=3, fill rest with 0 -> [1, 3, 12, 0, 0]`.
+
+
 ### 1.1 The Dual-Zone Invariant
 When you are asked to filter or reorder an array in-place, visualize the array being partitioned dynamically into three zones:
 
@@ -59,7 +81,7 @@ Scan for zeroes. Whenever a zero is found at index $i$, shift all elements from 
 public class SolutionTwoPass {
     public void MoveZeroes(int[] nums) {
         int write = 0;
-        
+
         // Pass 1: Compact non-zeroes to the front
         for (int read = 0; read < nums.Length; read++) {
             if (nums[read] != 0) {
@@ -67,7 +89,7 @@ public class SolutionTwoPass {
                 write++;
             }
         }
-        
+
         // Pass 2: Zero out the rest
         while (write < nums.Length) {
             nums[write] = 0;
@@ -86,7 +108,7 @@ Instead of two passes, whenever `read` encounters a non-zero, **swap** `nums[rea
 public class Solution {
     public void MoveZeroes(int[] nums) {
         int write = 0;
-        
+
         for (int read = 0; read < nums.Length; read++) {
             if (nums[read] != 0) {
                 if (read != write) {
@@ -118,16 +140,16 @@ Since the array is sorted, duplicates are always adjacent.
 public class Solution {
     public int RemoveDuplicates(int[] nums) {
         if (nums.Length == 0) return 0;
-        
+
         int write = 1; // nums[0] is already valid
-        
+
         for (int read = 1; read < nums.Length; read++) {
             if (nums[read] != nums[write - 1]) {
                 nums[write] = nums[read];
                 write++;
             }
         }
-        
+
         return write;
     }
 }
@@ -206,11 +228,11 @@ public class Solution {
     public int RemoveDuplicates(int[] nums) {
         return RemoveDuplicatesAtMostK(nums, 2);
     }
-    
+
     // Universal template: allows at most K occurrences
     private int RemoveDuplicatesAtMostK(int[] nums, int k) {
         if (nums.Length <= k) return nums.Length;
-        
+
         int write = k;
         for (int read = k; read < nums.Length; read++) {
             if (nums[read] != nums[write - k]) {
@@ -218,7 +240,7 @@ public class Solution {
                 write++;
             }
         }
-        
+
         return write;
     }
 }

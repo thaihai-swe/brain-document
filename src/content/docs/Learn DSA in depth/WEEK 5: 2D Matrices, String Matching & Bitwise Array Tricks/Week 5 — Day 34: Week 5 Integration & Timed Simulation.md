@@ -17,6 +17,28 @@ Today is your **Integration and Timed Practice Day**. We synthesize these paradi
 
 ## 1. 🧠 RETROSPECTIVE: The Week 5 Pattern Contrast Matrix
 
+### 🧭 5W1H Executive Architecture Blueprint
+- **1. WHAT:**
+  - *Formal Definition:* Day 34 is the **Week 5 Integration, Contrast & Timed Simulation Module**, synthesizing 2D Matrix transformations, string matching automata, and register-level bitwise operations.
+  - *Core Invariants:* Synthesis Invariants: In-place 2D rotation $\implies$ Transpose + Reverse; Sorted 2D search $\implies$ Top-right Saddleback ($O(M+N)$); Non-backtracking pattern matching $\implies$ KMP $\pi$-Automata ($O(N+M)$); Parity / Single unique discovery $\implies$ XOR algebraic reduction ($O(1)$ space).
+  - *Misconception Check:* Do not treat string matching or bit manipulation as isolated tricks; they are formal state machines and algebraic rings that guarantee zero-allocation performance under Big Tech review.
+- **2. WHY:**
+  - *Bottleneck Solved:* Eliminates hesitation when transitioning between multidimensional geometries, string state automata, and hardware bitwise primitives.
+  - *Complexity Advantage:* Instantly derives the optimal invariant and proves time/space bounds within 30–60 seconds.
+- **3. WHEN:**
+  - *When to Choose / Signal Words:* Week 5 integration checkpoint; timed simulation testing multi-topic synthesis.
+  - *When to Avoid / Failure Modes:* Writing code without verifying operator precedence (especially in bitwise expressions) or boundary invariants.
+- **4. WHERE:**
+  - *Physical CLR Memory:* In-place matrix memory layout, CPU cache lines, KMP $\pi$-array buffer, and ALU bitwise instructions.
+  - *Production Systems:* Computer vision rendering pipelines, high-throughput string parsers, low-level systems programming.
+- **5. WHO:**
+  - *Spoken Script:* "Week 5 integrates 2D transformations, string matching automata, and bitwise logic: we use transpose + reverse for in-place rotations; top-right saddleback for 2D search; KMP $\pi$-array for non-backtracking pattern matching; and XOR properties to isolate unique values in $O(1)$ space."
+  - *Interviewer Evaluation Lens:* Evaluates candidate's speed of invariant discovery, execution fluency across diverse paradigms, and defensive coding discipline.
+- **6. HOW:**
+  - *Cost Model:* 60-minute timed simulation drill (LeetCode 48 Rotate Image and LeetCode 260 Single Number III).
+  - *State Transition Trace:* Problem Prompt $\to$ Coordinate / State Check $\to$ Invariant Formulation $\to$ Implementation $\to$ Verification.
+
+
 Study this comparative matrix before starting the timed simulation:
 
 | Pattern | Input Precondition | Key Signals / Problem Words | Time Complexity | Core Invariant to State in Interview |

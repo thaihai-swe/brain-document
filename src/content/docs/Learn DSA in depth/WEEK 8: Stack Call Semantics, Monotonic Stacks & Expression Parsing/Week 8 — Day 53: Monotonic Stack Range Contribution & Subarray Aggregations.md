@@ -15,9 +15,31 @@ Today, we conquer one of the most mathematically profound patterns in advanced a
 
 ## 1. 🧠 TEACH: Concept & Invariants
 
+### 🧭 5W1H Executive Architecture Blueprint
+- **1. WHAT:**
+  - *Formal Definition:* The **Monotonic Stack Range Contribution Pattern** inverts subarray aggregation problems by determining the exact number of contiguous subarrays in which each element $nums[i]$ acts as the dominant minimum or maximum.
+  - *Core Invariants:* Range Contribution Invariant: If $nums[i]$ is the minimum across range $[L_i + 1 .. R_i - 1]$, total subarrays where $nums[i]$ is minimum $= (i - L_i) \times (R_i - i)$; Duplicate Asymmetry Rule: Use strictly $<$ on one boundary and $\le$ on the opposite boundary to prevent double-counting equal elements.
+  - *Misconception Check:* If duplicate elements exist (e.g. `[2, 2, 2]`), using strictly $<$ on both sides or $\le$ on both sides will either under-count or over-count overlapping subarrays. Strict asymmetry ($<$ left, $\le$ right) guarantees a mathematical partition.
+- **2. WHY:**
+  - *Bottleneck Solved:* Eliminates the $O(N^2)$ generation or $O(N^3)$ evaluation of all contiguous subarrays.
+  - *Complexity Advantage:* Reduces cumulative subarray aggregations to a single linear $O(N)$ scan.
+- **3. WHEN:**
+  - *When to Choose / Signal Words:* "Sum of Subarray Minimums" (LC 907), "Sum of Subarray Ranges" (LC 2104). Signal words: "sum of minimum of all subarrays", "sum of max - min of all subarrays".
+  - *When to Avoid / Failure Modes:* If subarray lengths are constrained to fixed size $K$ (use Monotonic Deque instead).
+- **4. WHERE:**
+  - *Physical CLR Memory:* 64-bit integer accumulators (`long`) to prevent 32-bit overflow before modulo $10^9 + 7$; two monotonic stack passes (or a single pass calculating left and right simultaneously).
+  - *Production Systems:* Statistical dispersion analysis in financial time series, variance aggregation in signal processing streams.
+- **5. WHO:**
+  - *Spoken Script:* "Instead of finding the minimum of every subarray, I invert the problem to ask: in how many subarrays is $nums[i]$ the minimum? A monotonic stack finds the left and right boundaries where $nums[i]$ is strictly dominant. The number of subarrays is $(i - L) \times (R - i)$, contributing $nums[i] \times \text{count}$ to the total sum in $O(N)$ time."
+  - *Interviewer Evaluation Lens:* Checks duplicate asymmetry rule ($<$ left, $\le$ right), 64-bit integer overflow defense, and modulo arithmetic hygiene.
+- **6. HOW:**
+  - *Cost Model:* Time: $O(N)$ (two linear passes); Space: $O(N)$ auxiliary memory.
+  - *State Transition Trace (LC 907):* `nums=[3, 1, 2, 4] -> For val 1: Left boundary=-1, Right boundary=4 -> Count = (1 - (-1)) * (4 - 1) = 2 * 3 = 6 subarrays -> Contribution = 1 * 6 = 6`.
+
+
 ### 1.1 The Combinatorial Subarray Dilemma
 
-Given an array of integers `arr`, compute the sum of `min(b)` for every contiguous subarray `b`.  
+Given an array of integers `arr`, compute the sum of `min(b)` for every contiguous subarray `b`.
 Since the answer may be large, return it modulo $10^9 + 7$.
 
 - An array of length $N$ has $\frac{N(N + 1)}{2}$ contiguous subarrays ($O(N^2)$).
@@ -30,7 +52,7 @@ Since the answer may be large, return it modulo $10^9 + 7$.
 
 ### 1.2 The Element Contribution Model (Inversion of Summation)
 
-Instead of asking: *"For each subarray, what is its minimum?"*  
+Instead of asking: *"For each subarray, what is its minimum?"*
 We **invert the summation**:
 
 > [!TIP]
@@ -63,7 +85,7 @@ For $arr[i]$ to be the minimum of subarray $[start \dots end]$:
 
 ### 1.3 The Duplicate Catastrophe & The Asymmetry Invariant
 
-What happens when an array contains **duplicate elements**?  
+What happens when an array contains **duplicate elements**?
 Consider: `arr = [2, 2]`. Subarrays: `[2] (idx 0)`, `[2] (idx 1)`, and `[2, 2]`.
 
 #### The Symmetric Trap (Strict $<$ on both sides):
@@ -99,7 +121,7 @@ Total = 1 + 2 = 3 subarrays! PERFECT BIJECTION!
 
 ### 1.4 Linearity of Summation: Sum of Subarray Ranges ([LeetCode 2104])
 
-The "range" of a subarray is defined as $\max(b) - \min(b)$.  
+The "range" of a subarray is defined as $\max(b) - \min(b)$.
 By the distributive property of summation:
 $$\sum_{b} (\max(b) - \min(b)) = \sum_{b} \max(b) - \sum_{b} \min(b)$$
 

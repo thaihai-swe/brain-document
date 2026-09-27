@@ -15,9 +15,31 @@ Today, we unlock one of the most intellectually elegant and high-frequency patte
 
 ## 1. 🧠 TEACH: Concept & Invariants
 
+### 🧭 5W1H Executive Architecture Blueprint
+- **1. WHAT:**
+  - *Formal Definition:* A **Monotonic Stack** is a stack whose elements are strictly monotonically increasing or decreasing from bottom to top.
+  - *Core Invariants:* Monotonicity Invariant: Elements in the stack maintain $S[0] < S[1] < \dots < S[\text{top}]$; Nearest Boundary Invariant: When an arriving element $x$ pops an element $y$, $x$ is the **Next Greater (or Smaller) Element** to the right of $y$, and the element directly below $y$ in the stack is the Nearest Greater (or Smaller) to the left of $y$.
+  - *Misconception Check:* A monotonic stack does *not* require $O(N^2)$ time despite the nested `while` loop inside the traversal `for` loop; because every array index is pushed onto the stack exactly once and popped at most once, the total number of operations across the entire loop is at most $2N$, guaranteeing strict $O(N)$ amortized time.
+- **2. WHY:**
+  - *Bottleneck Solved:* Eliminates the $O(N^2)$ exhaustive search for the nearest larger or smaller neighbor of every array element.
+  - *Complexity Advantage:* Reduces nearest neighbor searches from $O(N^2)$ to strict $O(N)$ amortized linear time.
+- **3. WHEN:**
+  - *When to Choose / Signal Words:* "Next Greater Element" (LC 496, 503), "Daily Temperatures" (LC 739), "Online Stock Span" (LC 901). Signal words: "next greater element", "days until warmer temperature", "first element larger to the right".
+  - *When to Avoid / Failure Modes:* When queries seek global extremes across the entire array rather than the nearest adjacent boundary (use Prefix/Suffix Max or Heap instead).
+- **4. WHERE:**
+  - *Physical CLR Memory:* Heap-allocated array-backed integer stack `int[]`; storing array indices rather than values allows both the value (`nums[idx]`) and relative distance ($i - idx$) to be retrieved in $O(1)$ time.
+  - *Production Systems:* Stock market order book depth processing, oceanographic sensor wave peak detection, seismic event threshold monitoring.
+- **5. WHO:**
+  - *Spoken Script:* "A monotonic stack maintains elements in sorted order. When a new element violates the monotonicity invariant, it pops smaller elements from the stack. The incoming element is the next greater element for everything it pops, resolving all queries in $O(N)$ total time."
+  - *Interviewer Evaluation Lens:* Evaluates whether candidate stores indices vs. values, handles strictly increasing vs. non-decreasing equality ties, and proves amortized $O(N)$ complexity.
+- **6. HOW:**
+  - *Cost Model:* Time: $O(2N) = O(N)$ amortized; Space: $O(N)$ auxiliary space.
+  - *State Transition Trace (Daily Temps):* `T=[73, 74, 75, 71, 69, 72] -> push 0 (73) -> 74 > 73: pop 0, ans[0] = 1 - 0 = 1, push 1 (74) -> ...`.
+
+
 ### 1.1 The Naive Inefficiency ($O(N^2)$)
 
-Suppose you are given an array of temperatures and asked:  
+Suppose you are given an array of temperatures and asked:
 *"For each day, how many days do you have to wait until a warmer temperature?"*
 
 ```
@@ -64,7 +86,7 @@ Push 74 onto stack.
 
 ### 1.3 The Amortized $O(N)$ Complexity Proof
 
-Candidates frequently stumble in Big Tech interviews when asked:  
+Candidates frequently stumble in Big Tech interviews when asked:
 *"You have a `while` loop nested inside a `for` loop. How can you claim this is $O(N)$ time?"*
 
 #### The Potential / Aggregate Accounting Proof:
@@ -111,7 +133,7 @@ A fatal beginner flaw is writing `Stack<int>` and pushing `nums[i]` (the value).
 In **LeetCode 503**, the array is circular: the search wraps around from the end of the array back to index 0.
 
 #### The Zero-Allocation Trick:
-Do not concatenate `nums` with itself to create an array of size $2N$ (wastes $O(N)$ heap memory).  
+Do not concatenate `nums` with itself to create an array of size $2N$ (wastes $O(N)$ heap memory).
 Instead, run your loop from `0` to `2 * N - 1` and map to the array using **modulo arithmetic**:
 $$\mathbf{\text{virtualIndex} = i \% N}$$
 
@@ -198,7 +220,7 @@ public class SolutionDailyTemperatures {
 
 ### 2.2 [LeetCode 496] Next Greater Element I
 
-The **next greater element** of some element `x` in an array is the first greater element to its right in the same array.  
+The **next greater element** of some element `x` in an array is the first greater element to its right in the same array.
 You are given two distinct integer arrays `nums1` and `nums2`, where `nums1` is a subset of `nums2`. For each `0 <= i < nums1.length`, find the index `j` such that `nums1[i] == nums2[j]` and determine the next greater element of `nums2[j]` in `nums2`. If there is no next greater element, then the answer for this query is `-1`.
 
 #### Algorithmic Invariants:

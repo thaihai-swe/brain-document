@@ -10,6 +10,28 @@ Welcome to Day 2! Today we build upon in-place operations by mastering two essen
 
 ## 1. 🧠 TEACH: In-Place Array Transformations
 
+### 🧭 5W1H Executive Architecture Blueprint
+- **1. WHAT:**
+  - *Formal Definition:* In-place array coordinate transformations invert or partition array regions via symmetric index reflections without allocating secondary buffers.
+  - *Core Invariants:* 3-Reversal Invariant: $\text{rev}(\text{rev}(A) + \text{rev}(B)) = B + A$; Dutch National Flag (DNF) 4-region invariant: $[0 .. low-1] < \text{pivot}$, $[low .. mid-1] == \text{pivot}$, $[mid .. high]$ unknown, $[high+1 .. N-1] > \text{pivot}$.
+  - *Misconception Check:* Array rotation does not require a temporary copy or circular ring juggling; 3 simple reversals achieve $O(N)$ time and $O(1)$ auxiliary space. DNF is *unstable*; it does not preserve original relative ordering of equal elements.
+- **2. WHY:**
+  - *Bottleneck Solved:* Eliminates $O(N)$ auxiliary heap memory allocation during rotations and multi-way sorting, avoiding Garbage Collection allocation churn.
+  - *Complexity Advantage:* Reduces memory complexity from $O(N)$ to strictly $O(1)$ auxiliary space while maintaining linear $O(N)$ time.
+- **3. WHEN:**
+  - *When to Choose / Signal Words:* "Rotate array by K steps in-place", "sort colors / 3-way partition", "move elements matching criteria to boundary".
+  - *When to Avoid / Failure Modes:* When stable sorting is required (DNF is unstable); when input is a stream where random index swapping is impossible.
+- **4. WHERE:**
+  - *Physical CLR Memory:* Zero managed heap allocations; pointer indices (`low`, `mid`, `high`) reside in CPU registers/stack frames. In-place swaps write directly to L1 CPU cache lines.
+  - *Production Systems:* QuickSort partition inner loops in standard library sorting engines; circular ring buffer compaction in operating system kernel queues.
+- **5. WHO:**
+  - *Spoken Script:* "To rotate an array by K steps in $O(1)$ space, I use the 3-reversal algorithm: reverse the whole array, reverse the first K elements, then reverse the rest. For three-way partitioning, I maintain four invariant regions using three pointers—low, mid, and high—classifying each element in a single linear pass."
+  - *Interviewer Evaluation Lens:* Verifies pointer boundary discipline, off-by-one avoidance on $K \ge N$ ($K = K \pmod N$), and loop termination invariants.
+- **6. HOW:**
+  - *Cost Model:* Swap: $O(1)$ time, $O(1)$ space; 3-Reversal: $O(N)$ time ($N$ swaps total), $O(1)$ space; DNF: $O(N)$ time, $O(1)$ space.
+  - *State Transition Trace:* `nums=[2, 0, 2, 1, 1, 0] -> low=0, mid=0, high=5 -> mid sees 2: swap(mid, high), high-- -> mid sees 0: swap(low, mid), low++, mid++ -> final: [0, 0, 1, 1, 2, 2]`.
+
+
 ### 1.1 In-Place Swapping
 An in-place algorithm transforms the input data structure without using auxiliary data structures proportional to the input size ($O(1)$ extra space).
 The foundational building block is the **Two-Pointer Swap**:
@@ -120,7 +142,7 @@ public class Solution {
         int n = nums.Length;
         k %= n;
         if (k == 0) return;
-        
+
         // Step 1: Reverse entire array
         Reverse(nums, 0, n - 1);
         // Step 2: Reverse first k elements
@@ -128,7 +150,7 @@ public class Solution {
         // Step 3: Reverse remaining n - k elements
         Reverse(nums, k, n - 1);
     }
-    
+
     private void Reverse(int[] nums, int left, int right) {
         while (left < right) {
             int temp = nums[left];
@@ -211,7 +233,7 @@ public class Solution {
         int low = 0;
         int mid = 0;
         int high = nums.Length - 1;
-        
+
         while (mid <= high) {
             if (nums[mid] == 0) {
                 Swap(nums, low, mid);
@@ -226,7 +248,7 @@ public class Solution {
             }
         }
     }
-    
+
     private void Swap(int[] nums, int i, int j) {
         int temp = nums[i];
         nums[i] = nums[j];

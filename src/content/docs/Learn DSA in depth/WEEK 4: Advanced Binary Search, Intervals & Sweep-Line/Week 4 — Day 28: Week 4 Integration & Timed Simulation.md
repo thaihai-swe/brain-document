@@ -2,7 +2,7 @@
 title: "Week 4 — Day 28: Week 4 Integration & Timed Simulation"
 ---
 
-Congratulations on completing the core content of **Week 4**! 
+Congratulations on completing the core content of **Week 4**!
 
 Over the past 6 days, you mastered advanced search spaces, multidimensional reductions, and timeline geometry:
 - **Day 22:** Binary Search Invariants, Overflow Safety & Lower Bound
@@ -17,6 +17,28 @@ Today is your **Integration, Contrast, and Timed Simulation Day**. The goal is t
 ---
 
 ## 1. 🧠 RETROSPECTIVE: The Week 4 Pattern Contrast Matrix
+
+### 🧭 5W1H Executive Architecture Blueprint
+- **1. WHAT:**
+  - *Formal Definition:* Day 28 is the **Week 4 Integration, Contrast & Timed Simulation Module**, evaluating pattern diagnosis across Logarithmic Search, Multi-Pointer Reductions, and Interval Geometry.
+  - *Core Invariants:* Diagnostic Decision Invariant: Sorted target lookup $\implies$ Binary Search ($O(\log N)$); Monotonic optimization threshold $\implies$ Binary Search on Answer ($O(N \log(\text{Range}))$); Overlapping intervals $\implies$ Sort by Start ($O(N \log N)$); Compatible non-overlapping scheduling $\implies$ Sort by End ($O(N \log N)$); Peak concurrency $\implies$ Sweep-Line.
+  - *Misconception Check:* Candidates frequently confuse interval merging with interval scheduling. Merging requires start-time sorting; scheduling (maximizing non-overlapping events) requires end-time sorting.
+- **2. WHY:**
+  - *Bottleneck Solved:* Eliminates pattern misdiagnosis and hesitation under strict technical interview time pressure.
+  - *Complexity Advantage:* Selects the optimal algorithmic paradigm within 30–60 seconds of hearing the problem statement.
+- **3. WHEN:**
+  - *When to Choose / Signal Words:* Week 4 capstone timed simulation; technical interview simulation testing speed and accuracy.
+  - *When to Avoid / Failure Modes:* Do not proceed to implementation before stating the core invariant and confirming complexity targets with the interviewer.
+- **4. WHERE:**
+  - *Physical CLR Memory:* Zero-allocation registers, in-place interval manipulation, and cache-conscious event buffers.
+  - *Production Systems:* Resource allocation schedulers, real-time query optimization planners.
+- **5. WHO:**
+  - *Spoken Script:* "Week 4 expands algorithmic search and geometry: we use binary search on answer when feasibility is monotonic; sort by start time to merge intervals; sort by end time to schedule intervals; and convert intervals to +/-1 point events for concurrent timeline sweep."
+  - *Interviewer Evaluation Lens:* Assesses speed of diagnostic pattern recognition, code cleanliness, boundary condition handling, and verbal articulation.
+- **6. HOW:**
+  - *Cost Model:* 60-minute timed simulation drill (25–30 mins per challenge: LeetCode 1283 and LeetCode 435).
+  - *State Transition Trace:* Problem Prompt $\to$ Monotonicity / Geometry Check $\to$ Invariant Selection $\to$ Implementation $\to$ Verification.
+
 
 Study this diagnostic synthesis before beginning the timed simulation:
 

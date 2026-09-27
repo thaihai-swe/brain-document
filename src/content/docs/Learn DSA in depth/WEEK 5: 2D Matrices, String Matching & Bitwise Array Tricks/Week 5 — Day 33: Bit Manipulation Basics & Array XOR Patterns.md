@@ -12,6 +12,28 @@ In software engineering, bitwise operators operate directly within CPU registers
 
 ## 1. 🧠 TEACH: CPU Bitwise Execution & The Algebraic Properties of XOR
 
+### 🧭 5W1H Executive Architecture Blueprint
+- **1. WHAT:**
+  - *Formal Definition:* **Bit Manipulation** performs low-level boolean algebraic operations directly on binary word representations using CPU hardware bitwise instructions.
+  - *Core Invariants:* XOR Self-Inverse Invariant: $x \oplus x = 0, x \oplus 0 = x$; Commutative & Associative Invariant: $a \oplus b \oplus a = b$; Lowest Set Bit Isolation: $x \ \& \ (-x)$; Lowest Set Bit Clearing: $x \ \& \ (x - 1)$.
+  - *Misconception Check:* Bitwise operators (`&`, `|`, `^`) have **lower operator precedence** in C# than equality and relational operators (`==`, `<`, `>`). Always wrap bitwise expressions in parentheses: `if ((x & 1) == 0)` instead of `if (x & 1 == 0)`.
+- **2. WHY:**
+  - *Bottleneck Solved:* Eliminates the need for hash sets or secondary arrays when tracking occurrences, parities, and binary states.
+  - *Complexity Advantage:* Executes in single-cycle CPU instructions, reducing space complexity from $O(N)$ to strictly $O(1)$ auxiliary space.
+- **3. WHEN:**
+  - *When to Choose / Signal Words:* "Single Number" (LC 136), "Single Number III" (LC 260 — two unique numbers), "Number of 1 Bits" (LC 191), "Counting Bits" (LC 338). Signal words: "every element appears twice except one", "bitwise operations", "constant space $O(1)$".
+  - *When to Avoid / Failure Modes:* When array numbers appear an arbitrary or variable number of times not cleanly reducible to modular bit counting.
+- **4. WHERE:**
+  - *Physical CLR Memory:* Zero heap allocations; operates directly in CPU Arithmetic Logic Unit (ALU) registers (`xor`, `and`, `bsf`/`tzcnt` instructions).
+  - *Production Systems:* Database bloom filters, operating system memory allocation bitmaps, permission bitmasks (UNIX `chmod` flags).
+- **5. WHO:**
+  - *Spoken Script:* "Bit manipulation exploits single-cycle CPU instructions. In Single Number, because XOR is commutative and $x \oplus x = 0$, XORing all elements cancels duplicate pairs, leaving the unique element in $O(N)$ time and $O(1)$ space. For two distinct numbers, I isolate their differing bit with $x \ \& \ (-x)$ to partition the array."
+  - *Interviewer Evaluation Lens:* Checks operator precedence awareness, familiarity with two's complement arithmetic (why $-x = \sim x + 1$), and partitioning logic.
+- **6. HOW:**
+  - *Cost Model:* Time: $O(N)$ linear scan; Space: $O(1)$ auxiliary memory.
+  - *State Transition Trace (Single Number III):* `nums=[1,2,1,3,2,5] -> total_xor = 3 ^ 5 = 6 (0110_2) -> diff_bit = 6 & (-6) = 2 (0010_2) -> Partition: group1 has bit set (2, 2, 3), group2 has bit clear (1, 1, 5) -> XORing yields 3 and 5`.
+
+
 ### 1.1 The Hardware Reality: Two's Complement & Registers
 
 All modern architectures (x86-64, ARM64) represent signed integers using **Two's Complement**.
@@ -167,7 +189,7 @@ public class SolutionSingleNumber {
 > Given an array `nums` containing `n` distinct numbers in the range `[0, n]`, return the only number in the range that is missing from the array.
 
 #### The Dual-Stream XOR Cancellation:
-The complete set should be $0, 1, 2, \dots, n$.  
+The complete set should be $0, 1, 2, \dots, n$.
 The array has all of them except one missing number.
 If we XOR all numbers from $0$ to $n$, and simultaneously XOR all numbers in `nums`, every present number appears exactly twice and cancels out, leaving only the missing number!
 
@@ -200,7 +222,7 @@ public class SolutionMissingNumber {
 > You must write an algorithm that runs in linear runtime complexity and uses only constant extra space.
 
 #### Visual Step-by-Step Trace:
-`nums = [1, 2, 1, 3, 2, 5]`  
+`nums = [1, 2, 1, 3, 2, 5]`
 The two unique numbers are `3` (`011_2`) and `5` (`101_2`).
 
 ```
@@ -327,7 +349,7 @@ Master low-level bit manipulation on LeetCode:
 ```
 
 ### Preview for Day 34: Week 5 Integration & Timed Simulation
-Congratulations on mastering 2D matrix transformations, saddleback search, polynomial rolling hashes (Rabin-Karp), KMP failure automata, and register-level bit tricks!  
+Congratulations on mastering 2D matrix transformations, saddleback search, polynomial rolling hashes (Rabin-Karp), KMP failure automata, and register-level bit tricks!
 Tomorrow in **Day 34**, we conduct the **Week 5 Integration & Timed Simulation Round** to prepare you for the Phase 1 Capstone Assessment (Day 35).
 
 ---

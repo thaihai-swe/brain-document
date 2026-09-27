@@ -2,13 +2,35 @@
 title: "Week 2 — Day 8: Prefix Sum Fundamentals (1D)"
 ---
 
-Welcome to **Week 2**! In Week 1, you built an unshakeable foundation in array memory layout, in-place pointer coordination (Opposite-Ends, Fast & Slow), and sorting invariants. 
+Welcome to **Week 2**! In Week 1, you built an unshakeable foundation in array memory layout, in-place pointer coordination (Opposite-Ends, Fast & Slow), and sorting invariants.
 
 This week, we elevate our traversal capabilities into **continuous range queries and windowing techniques**. Today's focus is **Prefix Sums (1D)** — one of the most elegant and frequently tested patterns in technical interviews. It converts expensive $O(N)$ range scans into instantaneous $O(1)$ queries through clever precomputation.
 
 ---
 
 ## 1. 🧠 TEACH: The Mechanics of Cumulative Sums
+
+### 🧭 5W1H Executive Architecture Blueprint
+- **1. WHAT:**
+  - *Formal Definition:* A **Prefix Sum Array** $P$ stores cumulative sums of elements: $P[i] = \sum_{k=0}^{i-1} nums[k]$, with 1-based indexing ($P[0] = 0$).
+  - *Core Invariants:* Range Sum Invariant: $\text{Sum}(L \dots R) = P[R + 1] - P[L]$; Size Invariant: $\text{Length}(P) = \text{Length}(nums) + 1$; Dummy Base Invariant: $P[0] = 0$.
+  - *Misconception Check:* 0-based prefix sums are prone to out-of-bounds branching when $L = 0$ ($P[R] - P[L-1]$ fails). Using 1-based indexing with $P[0] = 0$ universally eliminates all conditional branching at the zero boundary.
+- **2. WHY:**
+  - *Bottleneck Solved:* Eliminates the $O(N)$ linear summation cost per range query.
+  - *Complexity Advantage:* Preprocessing in $O(N)$ time allows answering any subsequent range sum query in strict $O(1)$ constant time.
+- **3. WHEN:**
+  - *When to Choose / Signal Words:* Static arrays, frequent range sum queries, finding pivot index, product of array except self (prefix/suffix products). Signal words: "range sum query immutable", "sum between indices i and j", "pivot index".
+  - *When to Avoid / Failure Modes:* Dynamic arrays with frequent element updates (updating an element in $nums$ invalidates all subsequent prefix sums, costing $O(N)$; use Fenwick / Binary Indexed Tree or Segment Tree for $O(\log N)$ updates).
+- **4. WHERE:**
+  - *Physical CLR Memory:* Contiguous `long[]` buffer on managed heap. Always use 64-bit integers (`long`) if element sums can exceed $2 \times 10^9$ to prevent 32-bit integer overflow exceptions.
+  - *Production Systems:* Database columnar query engines, financial ledger auditing, audio signal energy integration.
+- **5. WHO:**
+  - *Spoken Script:* "A prefix sum array precomputes running cumulative totals in $O(N)$ time, allowing any range sum from L to R to be answered in $O(1)$ time via $P[R+1] - P[L]$. I always size the prefix array to $N+1$ with $P[0]=0$ to eliminate boundary checks when querying ranges starting at index 0."
+  - *Interviewer Evaluation Lens:* Checks proper handling of 1-based dummy indexing, integer overflow defense (`long`), and distinction between static and dynamic queries.
+- **6. HOW:**
+  - *Cost Model:* Build: $O(N)$ time, $O(N)$ space; Query: $O(1)$ time, $O(1)$ space.
+  - *State Transition Trace:* `nums=[1, 2, 3, 4] -> P=[0, 1, 3, 6, 10] -> Query Range(1, 2) => P[3] - P[1] = 6 - 1 = 5`.
+
 
 ### 1.1 The Bottleneck of Naive Range Queries
 
@@ -133,13 +155,13 @@ public class NumArray {
     // O(N) constructor precomputation
     public NumArray(int[] nums) {
         _prefix = new int[nums.Length + 1];
-        
+
         // Invariant: _prefix[i] stores the sum of nums[0 .. i - 1]
         for (int i = 0; i < nums.Length; i++) {
             _prefix[i + 1] = _prefix[i] + nums[i];
         }
     }
-    
+
     // O(1) query time
     public int SumRange(int left, int right) {
         return _prefix[right + 1] - _prefix[left];
@@ -173,7 +195,7 @@ $$\iff 2 \times \text{leftSum} + \text{nums}[i] == \text{totalSum}$$
 This means we **do not need an auxiliary prefix array**! We can solve this with a single running scalar `leftSum` in **$O(1)$ auxiliary space**.
 
 #### Step-by-Step Visual Trace:
-`nums = [1, 7, 3, 6, 5, 6]`  
+`nums = [1, 7, 3, 6, 5, 6]`
 1. `totalSum = 1 + 7 + 3 + 6 + 5 + 6 = 28`
 2. Initialize `leftSum = 0`
 

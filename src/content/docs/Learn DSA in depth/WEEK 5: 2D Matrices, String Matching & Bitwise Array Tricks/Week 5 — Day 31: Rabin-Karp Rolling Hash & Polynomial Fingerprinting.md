@@ -12,6 +12,28 @@ String matching is ubiquitous: database full-text indexing, plagiarism detection
 
 ## 1. 🧠 TEACH: The Mechanics of Polynomial Rolling Hashes
 
+### 🧭 5W1H Executive Architecture Blueprint
+- **1. WHAT:**
+  - *Formal Definition:* **Rabin-Karp Rolling Hash** is a string search algorithm that computes a polynomial fingerprint of a sliding window to achieve constant-time window equality testing.
+  - *Core Invariants:* Polynomial Hash Invariant: $H(s[i..i+m-1]) = \sum_{k=0}^{m-1} s[i+k] \times B^{m-1-k} \pmod M$; Rolling Update Invariant: $H_{new} = ((H_{old} - s[i] \times B^{m-1}) \times B + s[i+m]) \pmod M$.
+  - *Misconception Check:* A hash match is *not* a guaranteed string match when using a single modulus, due to hash collisions. In interviews, state that you either verify characters upon hash match (costing $O(M)$ on collision) or use double hashing with two large primes to make collision probability negligible.
+- **2. WHY:**
+  - *Bottleneck Solved:* Eliminates the $O(M)$ character comparison overhead on every window shift.
+  - *Complexity Advantage:* Reduces average pattern matching time from $O(N \times M)$ to $O(N + M)$ with $O(1)$ auxiliary space.
+- **3. WHEN:**
+  - *When to Choose / Signal Words:* "Find the Index of the First Occurrence in a String" (LC 28), "Repeated DNA Sequences" (LC 187), "Longest Duplicate Substring" (LC 1044). Signal words: "rolling hash", "find all occurrences of pattern", "polynomial fingerprint".
+  - *When to Avoid / Failure Modes:* Adversarial inputs engineered to cause hash collisions on a single known modulus (causes worst-case degradation to $O(N \times M)$).
+- **4. WHERE:**
+  - *Physical CLR Memory:* 64-bit integer registers (`long`) to prevent arithmetic overflow before modulo operation; choose prime base $B$ (e.g. 31 or 131) and large modulus $M$ ($10^9 + 7$).
+  - *Production Systems:* Rsync rolling checksum delta transfer algorithm, plagiarism detection software, DNA sequence motif search.
+- **5. WHO:**
+  - *Spoken Script:* "Rabin-Karp computes a polynomial rolling hash over a sliding window of length M. When sliding one character right, I subtract the outgoing high-order term, multiply by the base, and add the incoming character in $O(1)$ time, yielding $O(N)$ average time for pattern search."
+  - *Interviewer Evaluation Lens:* Checks proper modular arithmetic handling (avoiding negative modulo results: `(val % M + M) % M`), power calculation $B^{m-1} \pmod M$, and collision defense.
+- **6. HOW:**
+  - *Cost Model:* Best/Avg: $O(N + M)$ time; Worst: $O(N \times M)$ on hash collisions; Space: $O(1)$ auxiliary memory.
+  - *State Transition Trace:* `H_new = ((H_old - s[i] * power) * base + s[i + m]) % mod`.
+
+
 ### 1.1 The Bottleneck of Naive Substring Searching
 
 Given a text $T$ of length $N$ and a pattern $P$ of length $M$ ($M \le N$):
@@ -209,7 +231,7 @@ DNA only uses 4 characters $\implies$ we can encode each nucleotide into **2 bit
 - `'G' = 10_2 = 2`
 - `'T' = 11_2 = 3`
 
-A 10-letter window requires $10 \times 2 = \mathbf{20 \text{ bits}}$.  
+A 10-letter window requires $10 \times 2 = \mathbf{20 \text{ bits}}$.
 A standard 32-bit `int` holds 32 bits! We can represent an entire 10-letter DNA sequence as a **single integer hash with ZERO modulo arithmetic and ZERO collisions**!
 
 #### The $O(1)$ Bitwise Rolling Transition:
@@ -397,7 +419,7 @@ Master Rabin-Karp and rolling hashes on LeetCode:
 ```
 
 ### Preview for Day 32: KMP Pattern Matching & The $\pi$-Array
-Rabin-Karp is probabilistic (dependent on modulo arithmetic and hash collisions).  
+Rabin-Karp is probabilistic (dependent on modulo arithmetic and hash collisions).
 Tomorrow in **Day 32**, we conquer **Knuth-Morris-Pratt (KMP)**: a strictly deterministic algorithm that constructs a prefix-suffix failure automaton ($\pi$-table) in $O(M)$ time to guarantee exact $O(N + M)$ pattern matching with **zero hash collisions, zero floating-point math, and zero string verification overhead**!
 
 ---

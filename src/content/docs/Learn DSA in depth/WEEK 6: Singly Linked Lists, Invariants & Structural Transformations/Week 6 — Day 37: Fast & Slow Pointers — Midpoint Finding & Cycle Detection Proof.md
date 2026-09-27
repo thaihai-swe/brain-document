@@ -12,6 +12,28 @@ Using two pointers moving at different velocities ($2v$ vs $v$), we can locate l
 
 ## 1. 🧠 TEACH: The Mechanics of Asymmetric Pointer Speeds
 
+### 🧭 5W1H Executive Architecture Blueprint
+- **1. WHAT:**
+  - *Formal Definition:* **Floyd's Cycle-Finding Algorithm (Tortoise and Hare)** coordinates two pointers moving at asymmetric velocities (`slow` advances 1 step, `fast` advances 2 steps) to detect cycles and locate midpoints.
+  - *Core Invariants:* Floyd's Convergence Invariant: Inside a cycle of length $C$, the relative gap between `fast` and `slow` decreases by 1 step per iteration ($2k - k = k \pmod C$), guaranteeing they meet in $\le C$ steps; Cycle Entrance Invariant: $L = (k \times C) - X$, where $L$ is distance from head to entrance and $X$ is distance from entrance to meeting point.
+  - *Misconception Check:* Resetting `slow` to `head` and advancing both at 1 step is *not* a magic coincidence; it is a rigorous algebraic identity ($L \equiv -X \pmod C$) proving they will collide precisely at the entrance node.
+- **2. WHY:**
+  - *Bottleneck Solved:* Eliminates the $O(N)$ auxiliary hash set memory typically used to track visited node addresses.
+  - *Complexity Advantage:* Reduces memory complexity from $O(N)$ to strictly $O(1)$ auxiliary space while retaining optimal $O(N)$ time.
+- **3. WHEN:**
+  - *When to Choose / Signal Words:* "Linked List Cycle" (LC 141), "Linked List Cycle II" (LC 142), "Middle of the Linked List" (LC 876), "Find the Duplicate Number" (LC 287). Signal words: "detect cycle in list", "find cycle start node", "find middle node in one pass".
+  - *When to Avoid / Failure Modes:* If the collection is an array and values are outside the $[1 .. N]$ range (Floyd's cycle detection on arrays requires value-as-pointer indexing).
+- **4. WHERE:**
+  - *Physical CLR Memory:* Two reference pointers (`slow`, `fast`) in CPU registers; zero heap memory allocations.
+  - *Production Systems:* Deadlock detection in resource allocation wait-for graphs, routing loop detection in distributed network protocols (BGP split horizon).
+- **5. WHO:**
+  - *Spoken Script:* "Floyd's Tortoise and Hare algorithm uses slow moving 1 step and fast moving 2 steps. The gap closes by 1 step every iteration inside a cycle, guaranteeing they meet in $O(N)$ time. Once they meet, resetting slow to head and advancing both at 1 step guarantees they meet at the cycle entrance because $L = kC - X$."
+  - *Interviewer Evaluation Lens:* Verifies formal mathematical proof of the entrance formula, loop condition `fast != null && fast.next != null`, and clean midpoint initialization.
+- **6. HOW:**
+  - *Cost Model:* Cycle Detection: $O(N)$ time, $O(1)$ space; Cycle Entrance: $O(N)$ time, $O(1)$ space; Midpoint: $O(N)$ time ($N/2$ steps), $O(1)$ space.
+  - *State Transition Trace (Detect Cycle):* `slow=head, fast=head; while(fast?.next != null) { slow = slow.next; fast = fast.next.next; if (slow == fast) break; }`.
+
+
 ### 1.1 The Concept: Relative Velocity in Pointer Traversal
 
 Place two pointers at the `head` of a linked list:
@@ -323,7 +345,7 @@ Master fast & slow pointers on LeetCode:
 ```
 
 ### Preview for Day 38: In-Place Reversals & Palindrome Lists
-Today we analyzed pointer speeds and cycles.  
+Today we analyzed pointer speeds and cycles.
 Tomorrow in **Day 38**, we combine **Midpoint Finding (Day 37)** with **3-Pointer Reversal (Day 36)** to conquer **Palindrome Linked Lists** in $O(N)$ time and $O(1)$ space, and master partial subsegment reversals (**Reverse Linked List II**)!
 
 ---

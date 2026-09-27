@@ -13,6 +13,28 @@ Today, we explore **Relative Distance Invariants & Pointer-Switching Mechanics**
 
 ## 1. 🧠 TEACH: Relative Gap Invariants & Cycle Switching Tricks
 
+### 🧭 5W1H Executive Architecture Blueprint
+- **1. WHAT:**
+  - *Formal Definition:* Two-pointer linked list coordination utilizes relative spacing offsets and cyclic path equivalence to identify boundary nodes and structural intersections.
+  - *Core Invariants:* Relative Gap Invariant ($N$-th from End): Advance `fast` $N + 1$ steps ahead of `slow` from a dummy node; when `fast` hits `null`, `slow` anchors the predecessor of the deletion target; Cyclic Walk Invariant (Intersection): Concatenating traversals ($A \to B$ and $B \to A$) equalizes total path length ($L_A + C + L_B = L_B + C + L_A$).
+  - *Misconception Check:* In finding list intersection, calculating list lengths is *not* required; switching pointers to the opposite list's head upon reaching `null` causes both pointers to traverse identical total distances, colliding at the intersection in a single pass.
+- **2. WHY:**
+  - *Bottleneck Solved:* Eliminates two-pass length calculations and secondary hash sets for node address tracking.
+  - *Complexity Advantage:* Reduces memory complexity to $O(1)$ auxiliary space and execution to a single coordinated pass.
+- **3. WHEN:**
+  - *When to Choose / Signal Words:* "Remove Nth Node From End of List" (LC 19), "Intersection of Two Linked Lists" (LC 160), "Delete Node in a Linked List" (LC 237). Signal words: "remove nth from end in one pass", "intersection of two lists".
+  - *When to Avoid / Failure Modes:* If lists contain cycles, the cyclic walk invariant never terminates (requires Floyd's cycle detection first).
+- **4. WHERE:**
+  - *Physical CLR Memory:* Sentinel dummy node on stack; two reference pointers in registers; zero heap allocations.
+  - *Production Systems:* Git branch merge base detection, reference graph dependency cycle resolution.
+- **5. WHO:**
+  - *Spoken Script:* "To remove the N-th node from the end in one pass, I maintain an offset of $N+1$ between fast and slow starting from a dummy node. When fast hits null, slow sits right before the target. For list intersection, walking both pointers across both lists equalizes total travel distance ($L_A + L_B$), causing them to collide at the intersection node in $O(M+N)$ time."
+  - *Interviewer Evaluation Lens:* Checks use of dummy node for $N = \text{length}$ deletion (deleting the original head), and termination proof for non-intersecting lists ($null == null$).
+- **6. HOW:**
+  - *Cost Model:* Time: $O(N)$ (LC 19) / $O(M + N)$ (LC 160); Space: $O(1)$ auxiliary space.
+  - *State Transition Trace (Intersection):* `pA walks listA then listB; pB walks listB then listA; collision occurs at intersection or null`.
+
+
 ### 1.1 The Fixed $K$-Gap Pattern: One-Pass $N$-th From End
 
 Suppose you are asked to delete the $N$-th node from the end of a list of unknown length $L$:
@@ -108,7 +130,7 @@ greaterList: dummyGreater ──► 4 ──► 3 ──► 5
 ```
 
 #### The Critical Bug: Severing the Tail!
-Notice that the last node in `greaterList` (node `5`) originally pointed to node `2` in the input list!  
+Notice that the last node in `greaterList` (node `5`) originally pointed to node `2` in the input list!
 If you do not explicitly sever this link:
 $$\mathbf{\text{greaterTail.next} = \text{null}}$$
 When you stitch `lessTail.next = greaterDummy.next`, node `5` will still point to node `2`, creating a **catastrophic infinite cycle**!
@@ -192,8 +214,8 @@ public class SolutionRemoveNthFromEnd {
 > Given the heads of two singly linked-lists `headA` and `headB`, return the node at which the two lists intersect. If the two linked lists have no intersection at all, return `null`. Solve in $O(m + n)$ time and **$O(1)$ space**.
 
 #### Visual Step-by-Step Trace:
-`List A = [4 -> 1 -> 8 -> 4 -> 5]` ($L_A = 5$)  
-`List B = [5 -> 6 -> 1 -> 8 -> 4 -> 5]` ($L_B = 6$)  
+`List A = [4 -> 1 -> 8 -> 4 -> 5]` ($L_A = 5$)
+`List B = [5 -> 6 -> 1 -> 8 -> 4 -> 5]` ($L_B = 6$)
 Intersection at node `8`.
 
 ```
@@ -240,7 +262,7 @@ public class SolutionGetIntersectionNode {
 
 ### Problem 3: LeetCode 86 — Partition List (Medium)
 
-> Given the `head` of a linked list and a value `x`, partition it such that all nodes **less than** `x` come before nodes **greater than or equal** to `x`.  
+> Given the `head` of a linked list and a value `x`, partition it such that all nodes **less than** `x` come before nodes **greater than or equal** to `x`.
 > You should preserve the original relative order of the nodes in each of the two partitions.
 
 #### Production C# Implementation:
@@ -327,7 +349,7 @@ Master relative gap invariants and multi-chain partitioning on LeetCode:
 ```
 
 ### Preview for Day 41: Sorting Lists — Merge Sort in $O(N \log N)$ Time and $O(1)$ Space
-Today we mastered single-pass gap tracking and multi-chain partitioning.  
+Today we mastered single-pass gap tracking and multi-chain partitioning.
 Tomorrow in **Day 41**, we tackle **Sorting Linked Lists**:
 We will prove why **Merge Sort** is the gold standard for linked lists (unlike arrays, merging two lists requires **$O(1)$ auxiliary memory**), how to find midpoints and sever connections cleanly, and how bottom-up iterative merge sort achieves true $O(1)$ stack space!
 

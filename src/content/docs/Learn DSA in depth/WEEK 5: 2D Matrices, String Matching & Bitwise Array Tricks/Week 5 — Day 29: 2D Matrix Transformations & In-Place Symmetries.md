@@ -6,12 +6,34 @@ Welcome to **Week 5**! Over Weeks 1–4, you mastered 1D linear array techniques
 
 This week, we elevate our spatial reasoning to **2D Matrices, String Matching Automata, and Bitwise Array Invariants**.
 
-Today, we dive into **2D Matrix Transformations & In-Place Symmetries**.  
+Today, we dive into **2D Matrix Transformations & In-Place Symmetries**.
 Matrix manipulation is a favorite among Big Tech interviewers because it tests whether you can handle multidimensional coordinate indexing without allocating expensive auxiliary memory ($O(1)$ space), understand CPU cache line locality in row-major memory, and maintain strict boundary invariants in complex traversals like **Spiral Order**.
 
 ---
 
 ## 1. 🧠 TEACH: 2D Memory Layouts, Symmetries & In-Place Algebra
+
+### 🧭 5W1H Executive Architecture Blueprint
+- **1. WHAT:**
+  - *Formal Definition:* **2D Matrix Transformations** perform in-place spatial reflections and index permutations on 2D grids without secondary matrix allocation.
+  - *Core Invariants:* Transpose Invariant: Swapping $(r, c) \leftrightarrow (c, r)$ reflects elements across the main diagonal; Clockwise $90^\circ$ Rotation Invariant: $\text{Rotate} = \text{ReverseRows}(\text{Transpose}(M))$; Spiral Peeling Invariant: 4 bounding walls (`top`, `bottom`, `left`, `right`) shrink monotonically until boundaries cross.
+  - *Misconception Check:* In spiral matrix traversal, when `top` and `bottom` (or `left` and `right`) become equal, processing the return sweep without checking `top <= bottom` and `left <= right` causes duplicate elements to be added.
+- **2. WHY:**
+  - *Bottleneck Solved:* Eliminates the $O(M \times N)$ auxiliary memory allocation required to instantiate a copy of the matrix.
+  - *Complexity Advantage:* Reduces memory complexity from $O(M \times N)$ to strictly $O(1)$ auxiliary space while traversing every cell in $\Theta(M \times N)$ time.
+- **3. WHEN:**
+  - *When to Choose / Signal Words:* "Rotate Image" (LC 48), "Spiral Matrix" (LC 54), "Set Matrix Zeroes" (LC 73). Signal words: "rotate matrix 90 degrees in-place", "spiral order", "modify matrix in-place".
+  - *When to Avoid / Failure Modes:* Non-square rectangular matrices for in-place 90-degree rotations (in-place rotation of $M \times N$ where $M \ne N$ requires complex cyclic cycle leader permutation).
+- **4. WHERE:**
+  - *Physical CLR Memory:* 2D row-major array in managed heap; row-by-row traversal maximizes CPU cache line spatial locality. In Set Matrix Zeroes, use row 0 and column 0 as in-place bit flags to achieve $O(1)$ space.
+  - *Production Systems:* Computer vision image rotation filters, matrix transposition in BLAS linear algebra libraries, display framebuffer rotation.
+- **5. WHO:**
+  - *Spoken Script:* "To rotate an $N \times N$ matrix 90 degrees clockwise in-place, I transpose the matrix by swapping elements across the main diagonal, then reverse each row horizontally. For spiral traversal, I maintain four shrinking boundaries—top, bottom, left, and right—peeling outer perimeter layers until the boundaries cross."
+  - *Interviewer Evaluation Lens:* Checks in-place swap coordinate discipline, boundary crossing guards in spiral traversal, and $O(1)$ auxiliary space implementation in Set Matrix Zeroes.
+- **6. HOW:**
+  - *Cost Model:* Transpose + Reverse: $O(N^2)$ time, $O(1)$ space; Spiral: $O(M \times N)$ time, $O(1)$ space.
+  - *State Transition Trace (Rotate 90 Deg):* `[[1,2],[3,4]] -> Transpose: [[1,3],[2,4]] -> Reverse rows: [[3,1],[4,2]]`.
+
 
 ### 1.1 Physical Memory Reality of 2D Grids
 
@@ -107,9 +129,9 @@ Maintain 4 boundary pointers:
 While `top <= bottom` and `left <= right`:
 1. **Left $\to$ Right along `top`:** Read `matrix[top][col]` for `col` from `left` to `right`. Then contract boundary: `top++`.
 2. **Top $\to$ Bottom along `right`:** Read `matrix[row][right]` for `row` from `top` to `bottom`. Then contract boundary: `right--`.
-3. **Right $\to$ Left along `bottom`:**  
+3. **Right $\to$ Left along `bottom`:**
    ⚠️ **CRITICAL GUARD:** Check `if (top <= bottom)` before executing! Read `matrix[bottom][col]` for `col` from `right` down to `left`. Then contract: `bottom--`.
-4. **Bottom $\to$ Top along `left`:**  
+4. **Bottom $\to$ Top along `left`:**
    ⚠️ **CRITICAL GUARD:** Check `if (left <= right)` before executing! Read `matrix[row][left]` for `row` from `bottom` down to `top`. Then contract: `left++`.
 
 #### Why the Guards in Steps 3 and 4 are Mandatory:
@@ -122,6 +144,71 @@ For non-square matrices (e.g., $1 \times 4$ or $3 \times 1$):
 ### 1.5 Interview Spoken Drill (20–30 Seconds)
 
 > *"To rotate an $N \times N$ matrix 90 degrees clockwise in-place, I decompose the rotation into two linear algebra operations: transpose followed by a horizontal row reversal. First, I swap `matrix[i][j]` with `matrix[j][i]` for all $j > i$ to flip over the main diagonal. Then, I reverse each individual row using two pointers. This achieves the exact 90-degree rotation in $O(N^2)$ time with strictly $O(1)$ auxiliary space."*
+
+---
+
+### 1.6 Sparse Matrix Architecture: CSR, COO, and DOK Representations
+
+In large-scale data engineering (graph adjacency matrices, recommender embeddings, natural language term-document matrices), matrices are often **over 99% zeroes**.
+Allocating a full $M \times N$ matrix of integers requires $4 \times M \times N$ bytes. For a $100,000 \times 100,000$ matrix, dense storage requires **40 Gigabytes**, resulting in immediate `OutOfMemoryException`.
+
+#### The 3 Canonical Sparse Formats:
+1. **COO (Coordinate List):**
+   - Stores a list of tuples: `(row, col, value)`.
+   - Ideal for constructing matrices incrementally by appending non-zero entries.
+   - Poor for random access or row-by-row matrix operations.
+2. **DOK (Dictionary of Keys):**
+   - Hash table mapping `(row, col) -> value`.
+   - $O(1)$ average random access, but incurs substantial memory overhead due to hash bucket structures.
+3. **CSR (Compressed Sparse Row) — The Production Gold Standard:**
+   - Stores data using **three contiguous flat 1D arrays**:
+     - `values[]`: The non-zero elements in row-major order (size $=\text{nnz}$).
+     - `colIndices[]`: The column index for each element in `values[]` (size $=\text{nnz}$).
+     - `rowPointers[]`: Pointers into `values[]` indicating where each row begins (size $= M + 1$).
+   - **Memory Advantage:** Total memory is $O(\text{nnz} + M)$, dropping 40 GB to mere megabytes.
+   - **Cache Efficiency:** Matrix-vector multiplication $y = A \cdot x$ iterates contiguously across `values` and `colIndices` with near-perfect hardware prefetching:
+     ```csharp
+     // CSR Matrix-Vector Multiply: O(nnz) time!
+     for (int r = 0; r < M; r++) {
+         double sum = 0;
+         for (int idx = rowPointers[r]; idx < rowPointers[r + 1]; idx++) {
+             sum += values[idx] * x[colIndices[idx]];
+         }
+         y[r] = sum;
+     }
+     ```
+
+---
+
+### 1.7 Strassen's Fast Matrix Multiplication Recurrence
+
+Standard matrix multiplication of two $N \times N$ matrices requires 8 sub-matrix multiplications of size $(N/2) \times (N/2)$ plus additions:
+$$T(N) = 8T(N/2) + O(N^2) \implies O(N^{\log_2 8}) = O(N^3)$$
+
+Volker Strassen discovered that 8 sub-matrix multiplications can be reduced to **7 multiplications** by computing 10 clever linear combinations of sub-matrices:
+$$T(N) = 7T(N/2) + O(N^2)$$
+By the Master Theorem ($a = 7, b = 2, d = 2$):
+$$\log_b a = \log_2 7 \approx 2.807 > 2 \implies \mathbf{O(N^{\log_2 7}) \approx O(N^{2.807})}$$
+While Strassen's algorithm incurs higher constant factors and numerical instability for small matrices, it forms the theoretical foundation for all fast sub-cubic matrix algebra in scientific computing.
+
+---
+
+### 1.8 In-Place Array State-Encoding: Sign-Flipping & Cyclic Placement
+
+A recurring Big Tech interview theme is eliminating $O(N)$ space when finding duplicates or missing elements in an array where values are constrained to $[1, N]$:
+
+1. **Sign-Flipping Invariant:**
+   - Since values are in $[1, N]$, each value $x$ can be treated as a valid 0-based index `abs(x) - 1`.
+   - To mark an index as "seen", negate the value at that index: `nums[idx] = -nums[idx]`.
+   - If `nums[idx]` is *already* negative, we have detected a duplicate!
+   - Canonical problems: [LeetCode 448] Find All Numbers Disappeared in an Array, [LeetCode 442] Find All Duplicates.
+
+2. **Cyclic Placement Invariant:**
+   - In a zero-indexed array of length $N$ with elements $[1, N]$, every element $x$ belongs at canonical index $x - 1$.
+   - Using a while-loop swap: `while (nums[i] > 0 && nums[i] <= N && nums[nums[i]-1] != nums[i]) Swap(nums, i, nums[i]-1)`.
+   - Each swap places at least one element into its permanent home.
+   - Total swaps $\le N \implies$ strictly **$O(N)$ time and $O(1)$ space**.
+   - Canonical problem: [LeetCode 41] First Missing Positive (Hard).
 
 ---
 
@@ -204,7 +291,7 @@ public class SolutionRotateImage {
 > Given an `m x n` `matrix`, return all elements of the `matrix` in **spiral order**.
 
 #### Visual Step-by-Step Trace on Non-Square Matrix:
-`matrix = [[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12]]` ($3 \times 4$)  
+`matrix = [[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12]]` ($3 \times 4$)
 Initialize: `top = 0, bottom = 2, left = 0, right = 3`
 
 ```
@@ -346,6 +433,52 @@ public class SolutionSpiralMatrixII {
 
 ---
 
+### Problem 4: LeetCode 41 — First Missing Positive (Hard) ⭐⭐⭐
+
+> Given an unsorted integer array `nums`, return the smallest positive integer that is not present in `nums`.
+> You must implement an algorithm that runs in **$O(N)$ time** and uses **$O(1)$ auxiliary space**.
+
+#### Algorithmic Invariant: Cyclic Placement
+The smallest missing positive must lie in the range $[1, N + 1]$.
+We can use the array itself as a hash table: each positive number $x \in [1, N]$ belongs at index $x - 1$.
+We place each number at its correct index using in-place swaps.
+
+```csharp
+public class SolutionFirstMissingPositive {
+    public int FirstMissingPositive(int[] nums) {
+        int n = nums.Length;
+
+        // Phase 1: Cyclic placement
+        for (int i = 0; i < n; i++) {
+            // While nums[i] is a valid 1-based target and not already at its home
+            while (nums[i] > 0 && nums[i] <= n && nums[nums[i] - 1] != nums[i]) {
+                int targetIndex = nums[i] - 1;
+                // Swap nums[i] and nums[targetIndex]
+                int temp = nums[i];
+                nums[i] = nums[targetIndex];
+                nums[targetIndex] = temp;
+            }
+        }
+
+        // Phase 2: Identify the first index where nums[i] != i + 1
+        for (int i = 0; i < n; i++) {
+            if (nums[i] != i + 1) {
+                return i + 1;
+            }
+        }
+
+        // If all 1..n are placed correctly, missing is n + 1
+        return n + 1;
+    }
+}
+```
+
+#### Complexity Analysis:
+- **Time Complexity:** $O(N)$ — Although there is a nested while loop, each swap places at least one element into its permanent destination where it will never be swapped again. Total swaps across the entire loop cannot exceed $N \implies 2N$ total operations.
+- **Space Complexity:** $O(1)$ — modifies input array strictly in-place.
+
+---
+
 ## 3. 🏋️ PRACTICE: Your Daily Challenges
 
 Apply 2D matrix transformations on LeetCode:
@@ -361,6 +494,10 @@ Apply 2D matrix transformations on LeetCode:
 ### Problem 3 (Matrix Construction): LeetCode 59 — Spiral Matrix II (Medium)
 - **Goal:** Fill an $N \times N$ matrix with $1 \dots N^2$ in spiral order.
 - **Target Complexity:** $O(N^2)$ time, $O(1)$ space.
+
+### Problem 4 (In-Place State Encoding): LeetCode 41 — First Missing Positive (Hard)
+- **Goal:** Find the first missing positive in $O(N)$ time and $O(1)$ auxiliary space using cyclic placement.
+- **Target Complexity:** $O(N)$ time, $O(1)$ space.
 
 ### Bonus / Extension Challenge: LeetCode 73 — Set Matrix Zeroes (Medium)
 - **Goal:** If `matrix[r][c] == 0`, set its entire row and column to 0 **in-place with $O(1)$ extra space**.
@@ -383,13 +520,16 @@ Apply 2D matrix transformations on LeetCode:
                    │                                             [LC 54, LC 59]
                    │
                    ├─► In-place state marking with O(1) space ──► Use Row 0 & Col 0 as flag bitsets [LC 73]
+                   │                                             or Cyclic Placement / Sign-Flipping [LC 41, LC 448]
+                   │
+                   ├─► Massive sparse matrices (>95% zeroes) ──► Compressed Sparse Row (CSR) Layout
                    │
                    └─► Search in row/column sorted matrix ──────► Saddleback Search / 1D Binary Search (Day 30)
                                                                  [LC 74, LC 240]
 ```
 
 ### Preview for Day 30: 2D Matrix Search Patterns
-Today we operated on matrix transformations and geometric rotations.  
+Today we operated on matrix transformations and geometric rotations.
 Tomorrow in **Day 30**, we tackle **Searching in 2D Matrices**:
 - When rows and columns are strictly sorted sequentially $\implies$ **Virtual 1D Binary Search** in $O(\log(M \times N))$.
 - When only individual rows and columns are sorted independently $\implies$ **Saddleback Search** starting from the top-right corner in $O(M + N)$.
@@ -404,3 +544,5 @@ Verify your mastery of 2D memory layouts and geometric invariants:
 2. **Transpose Range Invariant:** In `Rotate Image`, why does the transpose inner loop iterate `for (int j = i + 1; j < n; j++)` starting at `i + 1` instead of `0`? What catastrophic bug happens if it starts at `0`?
 3. **The Non-Square Spiral Trap:** Trace what happens in LeetCode 54 (Spiral Matrix) on a $1 \times 4$ matrix `[[1, 2, 3, 4]]` if you remove the guard condition `if (top <= bottom)` before Step 3.
 4. **Counter-Clockwise Formula:** Express a 90° counter-clockwise rotation as a combination of Transpose and row/column reflection. What are the two valid combinations?
+5. **CSR Structure:** What are the three 1D arrays that compose Compressed Sparse Row (CSR) format, and why does CSR matrix-vector multiplication achieve $O(\text{nnz})$ time instead of $O(M \times N)$?
+6. **Cyclic Placement Invariant:** In LeetCode 41 (First Missing Positive), why is the total number of swaps across all iterations of the outer loop bounded by $N$, despite the inner `while` loop?

@@ -15,6 +15,28 @@ Today, we conquer what is widely regarded as the **gold standard of composite da
 
 ## 1. 🧠 TEACH: The Multi-Tier Architecture of the LFU Cache
 
+### 🧭 5W1H Executive Architecture Blueprint
+- **1. WHAT:**
+  - *Formal Definition:* The **LFU (Least Frequently Used) Cache** is a composite data structure combining frequency-bucketed doubly linked lists with dual hash maps to evict items accessed least often, breaking frequency ties via LRU.
+  - *Core Invariants:* Frequency Bucket Invariant: Every frequency count $F$ has an independent doubly linked list of nodes; Min-Frequency Invariant: `minFreq` tracks the global minimum access frequency among active items; `minFreq` updates in $O(1)$ time during `Get` and resets to $1$ during a fresh `Put`.
+  - *Misconception Check:* Tracking access frequencies with a Min-Heap takes $O(\log N)$ time per operation; using frequency-bucketed doubly linked lists achieves strictly $O(1)$ time for both `Get` and `Put`.
+- **2. WHY:**
+  - *Bottleneck Solved:* Eliminates the $O(\log N)$ heap update cost in frequency tracking.
+  - *Complexity Advantage:* Provides strict worst-case $O(1)$ time for both `Get` and `Put` operations.
+- **3. WHEN:**
+  - *When to Choose / Signal Words:* "LFU Cache" (LC 460), content delivery network (CDN) caching, long-tail query caching. Signal words: "LFU cache", "least frequently used", "evict least frequent then least recent".
+  - *When to Avoid / Failure Modes:* Workloads with sudden temporal shifts where historically popular items remain cached forever despite never being queried again (frequency starvation).
+- **4. WHERE:**
+  - *Physical CLR Memory:* Dual dictionaries: `keyToNode` (`Dictionary<int, LfuNode>`) and `freqToList` (`Dictionary<int, DoublyLinkedList>`); each node stores `(key, val, freq)`.
+  - *Production Systems:* CDN edge proxy caching (Cloudflare, Akamai), database query plan cache eviction.
+- **5. WHO:**
+  - *Spoken Script:* "An LFU cache evicts the least frequently accessed item, breaking ties with LRU. To achieve $O(1)$ operations, I use two hash maps: one mapping keys to nodes, and another mapping frequency counts to doubly linked lists. I maintain a minFreq pointer that updates in $O(1)$ when a node's frequency increments or a new element is inserted."
+  - *Interviewer Evaluation Lens:* Evaluates `minFreq` maintenance logic, correct frequency list promotion during `Get`, and capacity 0 edge-case handling.
+- **6. HOW:**
+  - *Cost Model:* `Get`: $O(1)$ time; `Put`: $O(1)$ time; Space: $O(\text{Capacity})$.
+  - *State Transition Trace:* `Get(key) -> node.freq++ -> move node from freqToList[old] to freqToList[new] -> if (oldList.empty && minFreq == old) minFreq++`.
+
+
 ### 1.1 The LFU Problem Specification
 
 Design a data structure that implements a **Least Frequently Used (LFU) cache**:

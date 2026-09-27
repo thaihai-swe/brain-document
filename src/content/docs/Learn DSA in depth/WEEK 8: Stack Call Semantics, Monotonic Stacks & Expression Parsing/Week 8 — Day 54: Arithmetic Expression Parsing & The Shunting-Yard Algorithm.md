@@ -15,6 +15,28 @@ Today, we step from data structures into **compiler front-end engineering**:
 
 ## 1. 🧠 TEACH: Concept & Invariants
 
+### 🧭 5W1H Executive Architecture Blueprint
+- **1. WHAT:**
+  - *Formal Definition:* **Arithmetic Expression Parsing** evaluates mathematical strings using operator precedence state machines (Dijkstra's Shunting-Yard algorithm).
+  - *Core Invariants:* Operator Precedence Invariant: When operator $op$ arrives, all operators on the operator stack with greater or equal precedence ($\text{Prec}(\text{top}) \ge \text{Prec}(op)$) must be popped and evaluated before pushing $op$; Parenthesis Isolation Invariant: Sub-expressions within `(` and `)` evaluate completely before popping the matching `(`.
+  - *Misconception Check:* Unary operators (e.g. `"-5"` or `"1 - (-2)"`) break binary operator assumptions; handling unary minus by prepending a virtual `0` (`0 - 5`) restores binary arithmetic consistency.
+- **2. WHY:**
+  - *Bottleneck Solved:* Eliminates the overhead and complexity of building full Abstract Syntax Trees (ASTs) for simple arithmetic evaluations.
+  - *Complexity Advantage:* Evaluates arbitrary infix expressions in $O(N)$ linear time and $O(N)$ space.
+- **3. WHEN:**
+  - *When to Choose / Signal Words:* "Basic Calculator" (LC 224), "Basic Calculator II" (LC 227), "Evaluate Reverse Polish Notation" (LC 150). Signal words: "evaluate mathematical expression", "basic calculator", "operator precedence".
+  - *When to Avoid / Failure Modes:* Full programming languages with complex control flow and block scopes (requires full recursive descent parser).
+- **4. WHERE:**
+  - *Physical CLR Memory:* Dual stacks: operand stack (`Stack<long>`) and operator stack (`Stack<char>`); 64-bit integer precision prevents intermediate overflow.
+  - *Production Systems:* Spreadsheet calculation engines (Excel formula evaluation), SQL WHERE clause condition evaluators, math engine REPLs.
+- **5. WHO:**
+  - *Spoken Script:* "Dijkstra's Shunting-Yard algorithm maintains an operator stack and an operand stack. When an operator arrives, all operators on the stack with greater or equal precedence are popped and evaluated first, ensuring correct operator precedence and parenthesis associativity in $O(N)$ time."
+  - *Interviewer Evaluation Lens:* Checks operator precedence map, unary sign handling, whitespace skipping, multi-digit integer parsing, and parenthesis unwinding.
+- **6. HOW:**
+  - *Cost Model:* Time: $O(N)$ linear time; Space: $O(N)$ auxiliary stack space.
+  - *State Transition Trace (Shunting-Yard):* `3 + 2 * 2 -> push 3, push '+' -> push 2 -> '*' has higher precedence than '+' => push '*' -> push 2 -> end of string: eval 2 * 2 = 4 -> eval 3 + 4 = 7`.
+
+
 ### 1.1 The Three Mathematical Notations
 
 How does a CPU or compiler evaluate $3 + 4 \times 2$?

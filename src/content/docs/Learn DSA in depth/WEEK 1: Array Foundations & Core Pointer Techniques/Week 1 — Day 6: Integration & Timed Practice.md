@@ -10,6 +10,28 @@ You will see the **same patterns reappear** in slightly different guises, reinfo
 
 ## 1. 🧠 TEACH: Two Problems, One Mental Toolbox
 
+### 🧭 5W1H Executive Architecture Blueprint
+- **1. WHAT:**
+  - *Formal Definition:* Week 1 Integration synthesizes sorting, opposite-ends pointers, and bounded-min invariants for composite multidimensional challenges (3Sum, Trapping Rain Water).
+  - *Core Invariants:* 3Sum Anchor Reduction Invariant: Sorting + fixing index $i$ reduces $3\text{Sum}(target)$ to $2\text{Sum}(target - nums[i])$ on $[i+1 .. N-1]$; Rain Water Bounded-Min Invariant: Water level at index $i$ is strictly governed by $\min(left\_max, right\_max) - height[i]$.
+  - *Misconception Check:* In 3Sum, skipping duplicates must occur at *both* the outer loop and inner two-pointer loops; omitting either produces duplicate triplets. In Trapping Rain Water, you do *not* need $O(N)$ left/right max arrays; the lower wall dictates the water level, enabling $O(1)$ space.
+- **2. WHY:**
+  - *Bottleneck Solved:* Eliminates $O(N^3)$ brute-force search in 3Sum and $O(N)$ extra memory in Trapping Rain Water.
+  - *Complexity Advantage:* 3Sum: $O(N^3) \to O(N^2)$; Trapping Rain Water: $O(N)$ space $\to O(1)$ space.
+- **3. WHEN:**
+  - *When to Choose / Signal Words:* "Unique triplets summing to zero", "container trapping water", "three numbers satisfying condition".
+  - *When to Avoid / Failure Modes:* If the array cannot be sorted and original indices must be returned (3Sum sort destroys index mapping unless pairs of (value, index) are maintained).
+- **4. WHERE:**
+  - *Physical CLR Memory:* Pointers and boundary variables (`left`, `right`, `left_max`, `right_max`) reside in CPU registers. Zero heap allocations during two-pointer traversal.
+  - *Production Systems:* Computer graphics rendering bounding boxes, civil engineering hydraulic elevation modeling, geometric computational convex hulls.
+- **5. WHO:**
+  - *Spoken Script:* "For 3Sum, I sort the array in $O(N \log N)$ and fix each element as an anchor, running opposite-ends two pointers on the suffix while aggressively skipping duplicate values. For Trapping Rain Water, because the lower of the two boundaries limits the water height, I move the pointer at the shorter boundary inward, computing trapped water in $O(N)$ time and $O(1)$ space."
+  - *Interviewer Evaluation Lens:* Evaluates duplicate-skipping hygiene in 3Sum, mathematical proof of the bounded-min invariant in Trapping Rain Water, and live boundary tracing.
+- **6. HOW:**
+  - *Cost Model:* 3Sum: $O(N^2)$ time, $O(1)$ aux space (excluding output list); Trapping Rain Water: $O(N)$ time, $O(1)$ aux space.
+  - *State Transition Trace (Rain Water):* `left=0, right=n-1; while(left < right) { if(h[left] < h[right]) { if(h[left] >= left_max) left_max=h[left]; else water += left_max - h[left]; left++; } else { ... right--; } }`.
+
+
 ### 1.1 LeetCode 15 — 3Sum (Medium)
 > Given an integer array `nums`, return **all unique triplets** `[nums[i], nums[j], nums[k]]` such that `i != j != k` and `nums[i] + nums[j] + nums[k] == 0`.
 
@@ -79,7 +101,7 @@ This eliminates the need to precompute both max arrays — we only need one side
 
 **Brute Force ($O(N^3)$):** Triple nested loops. Infeasible for $N > 100$.
 
-**Sort + Two Pointers ($O(N^2)$):** 
+**Sort + Two Pointers ($O(N^2)$):**
 1. Sort the array — $O(N \log N)$.
 2. Fix one element `nums[i]`.
 3. Use opposite-ends two pointers on the subarray `nums[i+1 .. n-1]` to find pairs summing to `-nums[i]`.
@@ -111,26 +133,26 @@ public class Solution {
     public IList<IList<int>> ThreeSum(int[] nums) {
         var result = new List<IList<int>>();
         Array.Sort(nums);
-        
+
         for (int i = 0; i < nums.Length - 2; i++) {
             // 1️⃣ Skip duplicate i
             if (i > 0 && nums[i] == nums[i - 1]) continue;
-            
+
             int target = -nums[i];
             int left = i + 1;
             int right = nums.Length - 1;
-            
+
             while (left < right) {
                 int sum = nums[left] + nums[right];
-                
+
                 if (sum == target) {
                     result.Add(new List<int> { nums[i], nums[left], nums[right] });
-                    
+
                     // 2️⃣ Skip duplicate left
                     while (left < right && nums[left] == nums[left + 1]) left++;
                     // 3️⃣ Skip duplicate right
                     while (left < right && nums[right] == nums[right - 1]) right--;
-                    
+
                     left++;
                     right--;
                 } else if (sum < target) {
@@ -140,7 +162,7 @@ public class Solution {
                 }
             }
         }
-        
+
         return result;
     }
 }
@@ -237,7 +259,7 @@ public class Solution {
         int right = height.Length - 1;
         int left_max = 0, right_max = 0;
         int water = 0;
-        
+
         while (left < right) {
             if (height[left] < height[right]) {
                 if (height[left] >= left_max) {
@@ -255,7 +277,7 @@ public class Solution {
                 right--;
             }
         }
-        
+
         return water;
     }
 }
@@ -330,7 +352,7 @@ public class Solution {
 | ✅ Can I explain the "move the shorter pointer" invariant in my own words? | ___ |
 | ✅ Am I comfortable skipping duplicates in-place without extra sets? | ___ |
 
-**If all boxes are checked → you are ready for Week 2!**  
+**If all boxes are checked → you are ready for Week 2!**
 **If any are blank → re‑review that day’s checkpoint answers before proceeding.**
 
 Whenever you're ready, say **"proceed to Week 2"** (Prefix Sums & Subarray Problems) — or let me know if you'd like to revisit any specific Day 1–6 material first!

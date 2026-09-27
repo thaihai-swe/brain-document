@@ -14,11 +14,33 @@ Today, we conquer **$K$-Way Stream Merging**:
 
 ## 1. 🧠 TEACH: Stream Merging & Complexity Derivations
 
+### 🧭 5W1H Executive Architecture Blueprint
+- **1. WHAT:**
+  - *Formal Definition:* **K-Way Merge** consolidates $K$ independently sorted linked lists into a single globally sorted list using a Min-Heap or Divide-and-Conquer tournament tree.
+  - *Core Invariants:* Min-Heap Invariant: A priority queue of capacity $K$ always holds the current smallest available node across all active lists; Tournament Invariant: Pairwise merging of $K$ lists reduces the problem in $\lceil \log_2 K \rceil$ rounds.
+  - *Misconception Check:* Merging lists sequentially one-by-one takes $O(K^2 \times N / K) = O(K \times N)$ time; using a Min-Heap or Divide-and-Conquer reduces the time to $O(N \log K)$.
+- **2. WHY:**
+  - *Bottleneck Solved:* Eliminates the $O(K \times N)$ bottleneck of sequential list merging.
+  - *Complexity Advantage:* Reduces merge time from $O(K \times N)$ to optimal $O(N \log K)$, where $N$ is total node count across all lists.
+- **3. WHEN:**
+  - *When to Choose / Signal Words:* "Merge k Sorted Lists" (LC 23), external merge sort runs, multi-source log stream merging. Signal words: "merge k sorted lists", "stream merging".
+  - *When to Avoid / Failure Modes:* When $K$ is very large and exceeds available RAM; requires external disk tournament trees.
+- **4. WHERE:**
+  - *Physical CLR Memory:* .NET `PriorityQueue<ListNode, int>` on managed heap (size $\le K$); rewires existing node references in-place with zero node reallocations.
+  - *Production Systems:* Database query merge joins on partitioned tables, distributed search engine inverted index posting list merging (Lucene).
+- **5. WHO:**
+  - *Spoken Script:* "To merge K sorted lists in $O(N \log K)$ time, I maintain a Min-Heap of size at most K holding the current head of each list. At each step, I pop the minimum node, append it to my merged result via a sentinel pointer, and push its next node back into the heap."
+  - *Interviewer Evaluation Lens:* Evaluates Min-Heap vs. Divide-and-Conquer trade-offs, handling of null or empty lists in array, and zero-allocation pointer stitching.
+- **6. HOW:**
+  - *Cost Model:* Min-Heap: $O(N \log K)$ time, $O(K)$ space; Divide-and-Conquer: $O(N \log K)$ time, $O(\log K)$ recursion space.
+  - *State Transition Trace (Min-Heap):* `PQ holds heads of lists 1..K -> pop min node u -> append u to tail -> if (u.next != null) PQ.Enqueue(u.next, u.next.val)`.
+
+
 ### 1.1 The Problem Formulation
 
 Given an array of $K$ singly linked lists, each sorted in ascending order:
 $$\text{lists} = [L_0, L_1, L_2, \dots, L_{K-1}]$$
-Let $N$ denote the total number of nodes across all $K$ lists ($N = \sum |L_i|$).  
+Let $N$ denote the total number of nodes across all $K$ lists ($N = \sum |L_i|$).
 Our goal is to merge all $K$ lists into a single sorted linked list.
 
 ---

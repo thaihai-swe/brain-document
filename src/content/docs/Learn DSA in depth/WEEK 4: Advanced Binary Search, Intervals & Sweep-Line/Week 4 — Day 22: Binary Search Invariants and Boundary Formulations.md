@@ -4,13 +4,35 @@ title: "Week 4 — Day 22: Binary Search Invariants and Boundary Formulations"
 
 Welcome to **Week 4**! Over Weeks 1–3, you built an unshakeable foundation in linear data structures: memory layouts, pointer coordination (Opposite-Ends, Fast & Slow Reader/Writer), range accumulation (Prefix Sums, Difference Arrays), continuous windowing, and string runtime internals.
 
-This week, we make the leap from $O(N)$ linear scans into **$O(\log N)$ logarithmic search spaces**. 
+This week, we make the leap from $O(N)$ linear scans into **$O(\log N)$ logarithmic search spaces**.
 
 Binary Search is universally famous, yet it is notorious for producing subtle **off-by-one errors**, **infinite loops**, and **boundary miscalculations** under interview pressure. Today, we demystify the algorithm from first principles, establishing **strict loop invariants** and mastering the **canonical boundary templates** that guarantee 100% correctness on every problem.
 
 ---
 
 ## 1. 🧠 TEACH: The Mechanics of Binary Search Invariants
+
+### 🧭 5W1H Executive Architecture Blueprint
+- **1. WHAT:**
+  - *Formal Definition:* **Binary Search** is a divide-and-conquer algorithm that locates an element or boundary in a monotonically ordered sequence by halving the candidate search domain in each step.
+  - *Core Invariants:* Range Invariant: The active search range $[left, right]$ (closed) or $[left, right)$ (half-open) provably contains the target if it exists; Midpoint Formula: $mid = left + (right - left) / 2$ guarantees mathematical overflow immunity.
+  - *Misconception Check:* `(left + right) / 2` causes integer overflow in C# when $left + right \ge 2^{31}$; three-way branching (`==`, `<`, `>`) does not cleanly adapt to lower/upper bound boundary searches.
+- **2. WHY:**
+  - *Bottleneck Solved:* Eliminates the $O(N)$ linear scan bottleneck on sorted data.
+  - *Complexity Advantage:* Reduces search complexity from $O(N)$ to strictly logarithmic $O(\log N)$ time.
+- **3. WHEN:**
+  - *When to Choose / Signal Words:* Sorted arrays, "find first element satisfying condition", "search in logarithmic time $O(\log N)$", "first bad version".
+  - *When to Avoid / Failure Modes:* Unsorted arrays where sorting exceeds $O(N)$ budget; dynamic collections with expensive midpoint lookups (e.g. standard linked lists).
+- **4. WHERE:**
+  - *Physical CLR Memory:* Zero heap allocations; pointer indices (`left`, `mid`, `right`) live strictly in CPU registers. High branch prediction accuracy once search domain narrows.
+  - *Production Systems:* B-Tree leaf node binary searches in SQL database engines, OS virtual memory page address lookups.
+- **5. WHO:**
+  - *Spoken Script:* "Binary search eliminates half the search space per iteration by evaluating a monotonic condition. I use half-open intervals $[left, right)$ where left advances to $mid + 1$ and right contracts to $mid$, terminating when $left == right$ at the exact lower bound."
+  - *Interviewer Evaluation Lens:* Checks overflow-safe midpoint calculation, termination proof ($right - left$ strictly decreases), and mastery of lower vs. upper bound boundary logic.
+- **6. HOW:**
+  - *Cost Model:* Access: $O(1)$; Search: $O(\log N)$ time, $O(1)$ auxiliary space.
+  - *State Transition Trace (Lower Bound):* `nums=[1, 3, 5, 6], target=2 -> L=0, R=4 -> mid=2 (5 >= 2 => R=2) -> L=0, R=2 -> mid=1 (3 >= 2 => R=1) -> L=0, R=1 -> mid=0 (1 < 2 => L=1) -> L=1==R => return index 1`.
+
 
 ### 1.1 The Core Intuition: Halving the Hypothesis Space
 

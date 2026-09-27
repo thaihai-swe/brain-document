@@ -4,11 +4,33 @@ title: "Week 2 — Day 11: Fixed-Size Sliding Window"
 
 Welcome to Day 11! Today we begin our deep dive into the **Sliding Window pattern**, starting with its most structured form: the **Fixed-Size Window**.
 
-In [Day 8](file:///Users/thaihai-swe/Desktop/my-prompt/learn%20DSA%20in%20depth/WEEK%202:%20Advanced%20Traversal%20-%20Sliding%20Window%20&%20Prefix%20Sums/Week%202%20%E2%80%94%20Day%208:%20Prefix%20Sum%20Fundamentals%20%281D%29.md), we solved range queries with $O(N)$ prefix sum memory. When queries all share the **exact same length $K$** and proceed sequentially, the Fixed-Size Sliding Window achieves the same $O(1)$ query capability with **$O(1)$ auxiliary memory**!
+In [Day 8](./Week%202%20%E2%80%94%20Day%208:%20Prefix%20Sum%20Fundamentals%20%281D%29.md), we solved range queries with $O(N)$ prefix sum memory. When queries all share the **exact same length $K$** and proceed sequentially, the Fixed-Size Sliding Window achieves the same $O(1)$ query capability with **$O(1)$ auxiliary memory**!
 
 ---
 
 ## 1. 🧠 TEACH: Mechanics of the Fixed Window
+
+### 🧭 5W1H Executive Architecture Blueprint
+- **1. WHAT:**
+  - *Formal Definition:* The **Fixed-Size Sliding Window** maintains a continuous subarray of constant width $K$ as it translates across a sequence.
+  - *Core Invariants:* Window Width Invariant: $|R - L + 1| == K$ at every step; Differential Update Invariant: $\text{State}_{R} = \text{State}_{R-1} + \text{Enter}(nums[R]) - \text{Exit}(nums[R - K])$.
+  - *Misconception Check:* Never recompute the window metric from scratch at every index ($O(N \times K)$); differential update (add incoming, subtract outgoing) guarantees $O(1)$ transitions per step.
+- **2. WHY:**
+  - *Bottleneck Solved:* Eliminates repeated $O(K)$ redundant computations across overlapping adjacent windows.
+  - *Complexity Advantage:* Reduces time complexity from $O(N \times K)$ to strict $O(N)$ linear time.
+- **3. WHEN:**
+  - *When to Choose / Signal Words:* "Subarray of size K with maximum sum", "average of all contiguous subarrays of size K", "check if string contains permutation of length K". Signal words: "contiguous subarray of fixed length k", "consecutive k elements".
+  - *When to Avoid / Failure Modes:* When window size is variable or conditioned on an unknown threshold (use variable sliding window instead).
+- **4. WHERE:**
+  - *Physical CLR Memory:* Stack registers holding window bounds (`L`, `R`) and running accumulator (`windowSum`). Zero heap allocations during sliding.
+  - *Production Systems:* Real-time network rate limiters (leaky/token bucket fixed windows), streaming moving-average calculations in IoT telemetry.
+- **5. WHO:**
+  - *Spoken Script:* "For a fixed window of size K, I initialize the state over the first K elements. Then, for each subsequent element from index K to N-1, I incorporate the new element at R and subtract the outgoing element at R-K in $O(1)$ time, maintaining strict $O(N)$ linear time with $O(1)$ extra space."
+  - *Interviewer Evaluation Lens:* Checks clean two-phase structure (warmup loop for first $K$ elements followed by sliding loop), and correct boundary indexing.
+- **6. HOW:**
+  - *Cost Model:* Time: $\Theta(N)$ single pass; Space: $O(1)$ auxiliary memory.
+  - *State Transition Trace:* `nums=[1, 4, 2, 10, 2], K=3 -> init sum=7 -> slide: sum += 10 - 1 = 16 -> slide: sum += 2 - 4 = 14 -> max=16`.
+
 
 ### 1.1 The Physical Intuition: A Shutter of Width K
 
@@ -134,14 +156,14 @@ Result = 51 / 4.0 = 12.75
 public class SolutionMaxAverageSubarray {
     public double FindMaxAverage(int[] nums, int k) {
         int windowSum = 0;
-        
+
         // Build initial window of size k
         for (int i = 0; i < k; i++) {
             windowSum += nums[i];
         }
-        
+
         int maxSum = windowSum;
-        
+
         // Slide window from k to end
         for (int i = k; i < nums.Length; i++) {
             windowSum += nums[i] - nums[i - k];
@@ -149,7 +171,7 @@ public class SolutionMaxAverageSubarray {
                 maxSum = windowSum;
             }
         }
-        
+
         // Divide by k once at the end
         return (double)maxSum / k;
     }
@@ -189,12 +211,12 @@ i = 5 ('i' is vowel): enters 'i' (+1), exits s[2]='c' ( 0) -> count = 2 - 0 + 1 
 public class SolutionMaxVowels {
     public int MaxVowels(string s, int k) {
         int currentVowels = 0;
-        
+
         // Build first window of size k
         for (int i = 0; i < k; i++) {
             if (IsVowel(s[i])) currentVowels++;
         }
-        
+
         int maxVowels = currentVowels;
         if (maxVowels == k) return k; // Cannot exceed k
 
@@ -202,16 +224,16 @@ public class SolutionMaxVowels {
         for (int i = k; i < s.Length; i++) {
             if (IsVowel(s[i])) currentVowels++;
             if (IsVowel(s[i - k])) currentVowels--;
-            
+
             if (currentVowels > maxVowels) {
                 maxVowels = currentVowels;
                 if (maxVowels == k) return k; // Early exit
             }
         }
-        
+
         return maxVowels;
     }
-    
+
     [System.Runtime.CompilerServices.MethodImpl(
         System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
     private static bool IsVowel(char c) {
@@ -244,16 +266,16 @@ public class SolutionNumOfSubarrays {
         int targetSum = k * threshold;
         int currentSum = 0;
         int count = 0;
-        
+
         // Pre-fill first window
         for (int i = 0; i < k; i++) {
             currentSum += arr[i];
         }
-        
+
         if (currentSum >= targetSum) {
             count++;
         }
-        
+
         // Slide window
         for (int i = k; i < arr.Length; i++) {
             currentSum += arr[i] - arr[i - k];
@@ -261,7 +283,7 @@ public class SolutionNumOfSubarrays {
                 count++;
             }
         }
-        
+
         return count;
     }
 }

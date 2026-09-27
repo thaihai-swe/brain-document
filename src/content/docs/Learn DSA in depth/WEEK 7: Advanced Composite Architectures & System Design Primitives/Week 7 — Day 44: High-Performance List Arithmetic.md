@@ -16,9 +16,31 @@ Today, we explore **Arbitrary-Precision Arithmetic on Linked Lists**:
 
 ## 1. 🧠 TEACH: Concept & Invariants
 
+### 🧭 5W1H Executive Architecture Blueprint
+- **1. WHAT:**
+  - *Formal Definition:* **High-Performance List Arithmetic** performs arbitrary-precision arithmetic operations directly over linked list digit sequences.
+  - *Core Invariants:* Carry Invariant: $\text{sum} = \text{val}_1 + \text{val}_2 + \text{carry}$; $\text{nodeVal} = \text{sum} \pmod{10}$; $\text{carry} = \text{sum} / 10$; Termination Invariant: Loop must continue while `l1 != null || l2 != null || carry != 0`.
+  - *Misconception Check:* Terminating the loop when both lists become null (`while (l1 != null || l2 != null)`) drops the final trailing carry (e.g. $99 + 1 = 00$ instead of $100$); the loop condition must include `carry != 0`.
+- **2. WHY:**
+  - *Bottleneck Solved:* Eliminates 64-bit integer overflow exceptions when adding numbers with hundreds or thousands of digits.
+  - *Complexity Advantage:* Operates in $O(\max(M, N))$ time without intermediate string allocations or conversion to `BigInteger`.
+- **3. WHEN:**
+  - *When to Choose / Signal Words:* "Add Two Numbers" (LC 2), "Add Two Numbers II" (LC 445 — most significant digit first), "Plus One Linked List". Signal words: "add two linked lists", "digits stored in reverse order".
+  - *When to Avoid / Failure Modes:* When digits are stored most significant first without reversal permissions (use two stacks to reverse processing order).
+- **4. WHERE:**
+  - *Physical CLR Memory:* Sentinel dummy node on stack; allocating $O(\max(M, N))$ result nodes on managed heap.
+  - *Production Systems:* Arbitrary-precision cryptographic libraries (RSA key generation), financial accounting ledger computation.
+- **5. WHO:**
+  - *Spoken Script:* "List arithmetic mimics hardware ripple-carry addition. I traverse both lists with a sentinel dummy node, maintaining a running carry variable. The loop condition must continue while either list has digits OR carry is non-zero, ensuring the trailing carry is never dropped."
+  - *Interviewer Evaluation Lens:* Verifies trailing carry handling, sentinel node setup, defensive null coalescing (`l1?.val ?? 0`), and complexity derivation.
+- **6. HOW:**
+  - *Cost Model:* Time: $O(\max(M, N))$; Space: $O(\max(M, N))$ for the resulting digit list.
+  - *State Transition Trace (Add Two Numbers):* `l1=[2,4,3], l2=[5,6,4] -> 2+5=7, c=0 -> 4+6=10, c=1, val=0 -> 3+4+1=8, c=0 -> Result: [7,0,8]`.
+
+
 ### 1.1 Why Linked Lists for Big Integer Arithmetic?
 
-In production financial engines, public-key cryptography (RSA 2048/4096-bit primes), and scientific computing, numbers often have thousands of decimal digits. 
+In production financial engines, public-key cryptography (RSA 2048/4096-bit primes), and scientific computing, numbers often have thousands of decimal digits.
 - A 32-bit `int` overflows at $2,147,483,647$ (10 digits).
 - A 64-bit `long` overflows at $9,223,372,036,854,775,807$ (19 digits).
 

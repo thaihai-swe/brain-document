@@ -12,6 +12,28 @@ Interval problems ($[start, end]$) are fundamental to computer science: calendar
 
 ## 1. 🧠 TEACH: The Mathematical Foundations of Interval Overlaps
 
+### 🧭 5W1H Executive Architecture Blueprint
+- **1. WHAT:**
+  - *Formal Definition:* **Interval Algebra** operates on 1-dimensional continuous segments $[start, end]$ through boundary sorting and greedy linear scanning.
+  - *Core Invariants:* Overlap Invariant: Interval $A$ and $B$ overlap $\iff \max(A.start, B.start) \le \min(A.end, B.end)$; Merging Invariant: Sorting by **start time** ensures all overlapping candidates appear consecutively; Scheduling Invariant: Sorting by **end time** maximizes compatible non-overlapping intervals (Greedy Stays Ahead).
+  - *Misconception Check:* Interval problems cannot be treated with a single sorting rule. You must sort by **start time** when consolidating/merging overlapping intervals, but sort by **end time** when selecting the maximum number of non-overlapping intervals.
+- **2. WHY:**
+  - *Bottleneck Solved:* Eliminates pairwise $O(N^2)$ intersection checks between intervals.
+  - *Complexity Advantage:* Reduces interval processing to $O(N \log N)$ sorting followed by an $O(N)$ single-pass greedy scan.
+- **3. WHEN:**
+  - *When to Choose / Signal Words:* "Merge intervals" (LC 56), "insert interval" (LC 57), "non-overlapping intervals" (LC 435), "minimum arrows to burst balloons" (LC 452).
+  - *When to Avoid / Failure Modes:* High-frequency dynamic intervals with continuous point queries (use an Interval Tree or Segment Tree for $O(\log N)$ operations).
+- **4. WHERE:**
+  - *Physical CLR Memory:* Contiguous array of intervals `int[][]` or value tuples `(int Start, int End)`. Sort in-place using `Array.Sort` with custom comparator.
+  - *Production Systems:* Calendar scheduling engines (Google Calendar, Outlook), OS thread timeslice allocators, disk block range allocation.
+- **5. WHO:**
+  - *Spoken Script:* "For interval merging, I sort by start time so overlapping intervals are adjacent, merging them by extending the active end boundary. For interval scheduling to maximize non-overlapping events, I sort by end time, greedily selecting intervals with earliest finish time to preserve maximum remaining capacity."
+  - *Interviewer Evaluation Lens:* Evaluates candidate's immediate recognition of sort-by-start vs. sort-by-end, handling of adjacent touching intervals ($end_1 == start_2$), and in-place merging.
+- **6. HOW:**
+  - *Cost Model:* Time: $O(N \log N)$ (sorting dominated); Space: $O(N)$ or $O(1)$ auxiliary space.
+  - *State Transition Trace (Merge Intervals):* `intervals=[[1,3],[2,6],[8,10]] -> sorted by start -> [1,3] overlaps [2,6] since 2 <= 3 => merged: [1, max(3,6)] = [1,6] -> [1,6] vs [8,10]: 8 > 6 (No overlap) => emit [1,6]`.
+
+
 ### 1.1 The Mathematical Overlap Theorem
 
 Given two closed intervals $I_1 = [A, B]$ and $I_2 = [C, D]$ where $A \le B$ and $C \le D$:
@@ -61,8 +83,8 @@ The general overlap condition $\max(A, C) \le \min(B, D)$ collapses into a **sin
 
 $$\mathbf{\text{Overlap} \iff C \le B}$$
 
-> **The Linear Chain Invariant:**  
-> Once sorted by start time, interval $I_2$ overlaps with interval $I_1$ **if and only if $I_2$ starts before (or when) $I_1$ ends**!  
+> **The Linear Chain Invariant:**
+> Once sorted by start time, interval $I_2$ overlaps with interval $I_1$ **if and only if $I_2$ starts before (or when) $I_1$ ends**!
 > Furthermore, if $I_2$ does not overlap with $I_1$, **no subsequent interval can ever overlap with $I_1$** (since future starts are $\ge C > B$). We can permanently commit $I_1$!
 
 ---
@@ -117,7 +139,7 @@ One of the most profound interview design decisions is knowing **which coordinat
 #### Visual Step-by-Step Trace:
 `intervals = [[1, 3], [8, 10], [2, 6], [15, 18]]`
 
-**Step 1: Sort by start time:**  
+**Step 1: Sort by start time:**
 `[[1, 3], [2, 6], [8, 10], [15, 18]]`
 
 ```
@@ -244,8 +266,8 @@ public class SolutionInsertInterval {
 > Given an array of intervals `intervals` where `intervals[i] = [start_i, end_i]`, return the minimum number of intervals you need to remove to make the rest of the intervals non-overlapping.
 
 #### The Equivalence Transformation:
-> *"Minimizing removals to leave non-overlapping intervals"*  
-> $\equiv$  
+> *"Minimizing removals to leave non-overlapping intervals"*
+> $\equiv$
 > **Total Intervals ($N$) $-$ Maximum Non-Overlapping Intervals (Interval Scheduling)**
 
 #### The Greedy Proof: Why Sort by End Time?
@@ -332,7 +354,7 @@ Master the interval algebra pattern on LeetCode:
 ```
 
 ### Preview for Day 27: Sweep-Line & Event-Driven Processing
-Today we handled intervals as single atomic entities $[start, end]$.  
+Today we handled intervals as single atomic entities $[start, end]$.
 Tomorrow in **Day 27**, we split intervals into discrete **Arrival (+1)** and **Departure (-1)** events along a timeline. This is **Sweep-Line**, the foundational pattern behind conference room allocation ([Meeting Rooms II]), skyline generation, and 2D computational geometry!
 
 ---

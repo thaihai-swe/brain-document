@@ -14,6 +14,28 @@ In basic pointer problems (Week 1), you moved two pointers across a 1D array. To
 
 ## 1. 🧠 TEACH: Dimensionality Reduction & The Bounded-Min Invariant
 
+### 🧭 5W1H Executive Architecture Blueprint
+- **1. WHAT:**
+  - *Formal Definition:* **Multi-Pointer Reductions** reduce high-dimensional combinatorial search problems by fixing outer anchor variables and coordinating converging pointers along the remaining degrees of freedom.
+  - *Core Invariants:* Anchor Invariant: In $K$-Sum, sorting and anchoring $K-2$ variables reduces problem to $2\text{Sum}$ on suffix; Bounded-Min Invariant: Trapped water at index $i$ is $\min(left\_max, right\_max) - height[i]$.
+  - *Misconception Check:* In Trapping Rain Water, you do *not* need $O(N)$ left and right prefix-max arrays. Moving the pointer with the strictly smaller height guarantees that the other side contains an equal or taller wall, enabling $O(1)$ space.
+- **2. WHY:**
+  - *Bottleneck Solved:* Eliminates polynomial explosion ($O(N^K) \to O(N^{K-1})$) and auxiliary buffer allocations ($O(N) \to O(1)$ space).
+  - *Complexity Advantage:* 3Sum: $O(N^3) \to O(N^2)$ time; Rain Water: $O(N)$ space $\to O(1)$ space.
+- **3. WHEN:**
+  - *When to Choose / Signal Words:* 3Sum (LC 15), 3Sum Closest (LC 16), 4Sum (LC 18), Trapping Rain Water (LC 42), Container With Most Water (LC 11).
+  - *When to Avoid / Failure Modes:* When array order cannot be disrupted and output requires original unsorted indices (unless index-value pairs are tracked).
+- **4. WHERE:**
+  - *Physical CLR Memory:* Stack registers for anchor indices and converging boundary pointers; zero heap allocations during pointer convergence.
+  - *Production Systems:* Computer graphics horizon culling, physics fluid simulation volume calculation, geometric convex hull bounding.
+- **5. WHO:**
+  - *Spoken Script:* "To solve K-Sum problems, sorting enables duplicate pruning and allows fixing $K-2$ variables in outer loops while running two-pointer convergence on the innermost pair. For Trapping Rain Water, because the lower boundary limits the water ceiling, I advance the shorter side inward in $O(N)$ time and $O(1)$ space."
+  - *Interviewer Evaluation Lens:* Checks duplicate pruning hygiene at all pointer levels, mathematical proof of the bounded-min invariant, and off-by-one avoidance.
+- **6. HOW:**
+  - *Cost Model:* 3Sum: $O(N^2)$ time, $O(1)$ aux space; Rain Water: $O(N)$ time, $O(1)$ aux space.
+  - *State Transition Trace (Container With Most Water):* `h=[1,8,6,2,5,4,8,3,7] -> L=0 (1), R=8 (7) -> area = 1 * 8 = 8 -> h[L] < h[R] => L++ -> L=1 (8), R=8 (7) -> area = 7 * 7 = 49 -> h[R] < h[L] => R--`.
+
+
 ### 1.1 Dimensionality Reduction ($O(N^3) \to O(N^2)$)
 
 Consider finding all unique triplets in an array such that:
@@ -138,7 +160,7 @@ $$\mathbf{\text{Water}[i] = \max\Big(0, \ \min(\text{LeftMax}[i], \ \text{RightM
 > Notice that the solution set must not contain duplicate triplets.
 
 #### Step-by-Step Visual Trace:
-`nums = [-1, 0, 1, 2, -1, -4]`  
+`nums = [-1, 0, 1, 2, -1, -4]`
 Sort: `nums = [-4, -1, -1, 0, 1, 2]`
 
 ```
@@ -281,7 +303,7 @@ public class SolutionThreeSumClosest {
 > Given `n` non-negative integers representing an elevation map where the width of each bar is `1`, compute how much water it can trap after raining.
 
 #### The State Machine Trace:
-`height = [0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1]`  
+`height = [0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1]`
 Initialize: `left = 0, right = 11, leftMax = 0, rightMax = 0, totalWater = 0`
 
 | Step | `left` | `right` | `height[L]` | `height[R]` | `leftMax` | `rightMax` | Action | Water Added | Total |

@@ -2,7 +2,7 @@
 title: "Week 5 — Day 35: Phase 1 Milestone Assessment & Mock Interview Simulation"
 ---
 
-Congratulations on reaching **Day 35**! 
+Congratulations on reaching **Day 35**!
 
 Today marks the **completion of Phase 1 (Linear Data Structures & Core Algorithmic Techniques)**. Over the last 5 weeks and 35 consecutive days, you have systematically built an elite algorithmic foundation:
 - **Weeks 1–3:** Array Memory Layouts, Pointer Coordination, Sliding Windows, Prefix Sums, and String CLR Internals.
@@ -15,6 +15,28 @@ Today is your **Phase 1 Capstone Assessment**. We conduct a full **90-minute Moc
 ---
 
 ## 1. 🎯 MOCK INTERVIEW STRUCTURE & SCORING RUBRIC
+
+### 🧭 5W1H Executive Architecture Blueprint
+- **1. WHAT:**
+  - *Formal Definition:* Day 35 is the **Phase 1 Capstone Milestone Assessment & Mock Interview Simulation**, conducting a rigorous 90-minute timed evaluation on benchmark Hard problems: LeetCode 4 (Median of Two Sorted Arrays) and LeetCode 76 (Minimum Window Substring).
+  - *Core Invariants:* Phase 1 Mastery Invariants: Binary search on partition cut with $\max(\text{Left}) \le \min(\text{Right})$; Variable sliding window with frequency map and scalar match counters.
+  - *Misconception Check:* In LeetCode 4, binary searching on the larger array causes index out-of-bounds calculations in the smaller array; you must always ensure $M \le N$ before initiating binary search.
+- **2. WHY:**
+  - *Bottleneck Solved:* Verifies candidate's complete readiness across all 8 core pillars of Phase 1 before ascending to linked structures and dynamic collections in Phase 2.
+  - *Complexity Advantage:* Generates optimal solutions to LeetCode Hard problems ($O(\log(\min(M, N)))$ for Median, $O(M + N)$ for Minimum Window) under realistic interview pressure.
+- **3. WHEN:**
+  - *When to Choose / Signal Words:* Phase 1 graduation; evaluating readiness for senior engineering technical screens.
+  - *When to Avoid / Failure Modes:* Failing to state the mathematical invariant or dry-running edge cases before coding.
+- **4. WHERE:**
+  - *Physical CLR Memory:* Full synthesis of Phase 1 memory models: CPU cache lines, LOH dynamics, string immutability, `Span<T>`, and zero-allocation stack registers.
+  - *Production Systems:* Real-world engineering trade-off evaluations: memory footprint, GC pause latency, and algorithmic optimality.
+- **5. WHO:**
+  - *Spoken Script:* "Phase 1 established mastery over linear data structures, pointer coordination, search spaces, and string automata. I articulate invariants before writing code, write zero-allocation C# with defensive boundaries, and formally derive time and space trade-offs."
+  - *Interviewer Evaluation Lens:* Evaluates candidate against the 4 Senior Hire signals: Invariant Discovery (25%), Algorithmic Optimality (25%), Production Code Quality (25%), and Edge-Case Tracing (25%).
+- **6. HOW:**
+  - *Cost Model:* 90-minute simulation (45 mins per Hard problem); passing bar $\ge 16/20$ points.
+  - *State Transition Trace:* Exploration $\to$ Invariant Formulation $\to$ Production Implementation $\to$ Edge-Case Dry Run $\to$ Complexity Derivation.
+
 
 Treat this simulation as a real onsite technical interview at Google, Meta, or Microsoft:
 
@@ -32,7 +54,7 @@ Treat this simulation as a real onsite technical interview at Google, Meta, or M
 
 ## 2. 🥊 MOCK INTERVIEW PROBLEM 1: LeetCode 4 — Median of Two Sorted Arrays (Hard)
 
-> Given two sorted arrays `nums1` and `nums2` of size `m` and `n` respectively, return the **median** of the two sorted arrays.  
+> Given two sorted arrays `nums1` and `nums2` of size `m` and `n` respectively, return the **median** of the two sorted arrays.
 > The overall run time complexity should be **$O(\log(m + n))$**.
 >
 > **Constraints:**

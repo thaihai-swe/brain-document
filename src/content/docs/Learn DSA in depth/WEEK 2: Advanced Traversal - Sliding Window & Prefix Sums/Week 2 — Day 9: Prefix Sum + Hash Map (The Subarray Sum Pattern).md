@@ -4,11 +4,33 @@ title: "Week 2 — Day 9: Prefix Sum + Hash Map (The Subarray Sum Pattern)"
 
 Welcome to Day 9! Today we study one of the most powerful and high-frequency array patterns asked in Big Tech interviews: **Prefix Sum combined with a Hash Map**.
 
-Yesterday on [Day 8](file:///Users/thaihai-swe/Desktop/my-prompt/learn%20DSA%20in%20depth/WEEK%202:%20Advanced%20Traversal%20-%20Sliding%20Window%20&%20Prefix%20Sums/Week%202%20%E2%80%94%20Day%208:%20Prefix%20Sum%20Fundamentals%20%281D%29.md), we explored static range sum queries using the property $\text{Sum}(L \dots R) = P[R] - P[L-1]$. Today, we invert that formula to locate sub-arrays dynamically in $O(N)$ time—**even when the array contains negative numbers**, a scenario where sliding window completely collapses.
+Yesterday on [Day 8](./Week%202%20%E2%80%94%20Day%208:%20Prefix%20Sum%20Fundamentals%20%281D%29.md), we explored static range sum queries using the property $\text{Sum}(L \dots R) = P[R] - P[L-1]$. Today, we invert that formula to locate sub-arrays dynamically in $O(N)$ time—**even when the array contains negative numbers**, a scenario where sliding window completely collapses.
 
 ---
 
 ## 1. 🧠 TEACH: The Synthesis of Running Sums and Hash Lookups
+
+### 🧭 5W1H Executive Architecture Blueprint
+- **1. WHAT:**
+  - *Formal Definition:* The **Prefix Sum + Hash Map Pattern** records the frequency or earliest index of cumulative prefix sums in a hash table to find subarrays satisfying exact mathematical conditions.
+  - *Core Invariants:* Subarray Difference Invariant: If $P[j] - P[i] = K$, then $P[i] = P[j] - K$; Base Invariant: The hash map must be initialized with `{0: 1}` (or `{0: -1}` for length queries) to account for valid subarrays starting at index 0.
+  - *Misconception Check:* Sliding window *cannot* solve LeetCode 560 when the array contains negative numbers. Negative numbers break monotonicity (adding an element can decrease the sum). Prefix Sum + Hash Map works universally regardless of signs.
+- **2. WHY:**
+  - *Bottleneck Solved:* Eliminates the $O(N^2)$ exhaustive search of all possible subarrays $(i, j)$.
+  - *Complexity Advantage:* Converts an $O(N^2)$ search into an $O(N)$ single-pass linear scan with $O(N)$ space.
+- **3. WHEN:**
+  - *When to Choose / Signal Words:* "Subarray sum equals K", "continuous subarray sum divisible by K", "longest subarray with equal number of 0s and 1s" (transform 0 to -1). Signal words: "subarray sum equals k", "contains negative numbers", "count of subarrays".
+  - *When to Avoid / Failure Modes:* When space complexity must strictly be $O(1)$ and elements are strictly positive (use variable sliding window instead).
+- **4. WHERE:**
+  - *Physical CLR Memory:* `Dictionary<long, int>` allocated on managed heap. Resizing triggers Gen 0 GC allocations; initialize dictionary with initial capacity if $N$ is known.
+  - *Production Systems:* Distributed stream anomaly detection, transaction balance validation, network traffic packet burst detection.
+- **5. WHO:**
+  - *Spoken Script:* "When an array contains negative numbers, sliding window fails because sum monotonicity is broken. Instead, I maintain a running prefix sum and query a hash map for how many times $P[j] - K$ has occurred previously. I seed the map with `0: 1` to account for subarrays starting at index 0."
+  - *Interviewer Evaluation Lens:* Checks why sliding window fails on negative numbers, proper map initialization with `{0: 1}`, and 64-bit integer overflow protection.
+- **6. HOW:**
+  - *Cost Model:* Time: $O(N)$ average; Space: $O(N)$ auxiliary space for dictionary.
+  - *State Transition Trace:* `nums=[1, -1, 1, 1, 1], K=2 -> map={0:1} -> sum=1: map[1]=1 -> sum=0: count+=map[0-2]=0, map[0]=2 -> sum=1: count+=map[1-2]=0, map[1]=2 -> sum=2: count+=map[2-2]=2 (subarrays found!)`.
+
 
 ### 1.1 The Critical Dilemma: Why Sliding Window Fails on Negative Numbers
 
@@ -56,7 +78,7 @@ $$P[i - 1] = P[j] - K$$
 
 **The Core Epiphany:**
 > As we iterate through the array and maintain the running sum $P[j]$, we do not search forward for what comes next. Instead, we look **backward** and ask:
-> 
+>
 > *"How many times have we previously seen a prefix sum equal to $(P[j] - K)$?"*
 
 Every prior occurrence of $(P[j] - K)$ marks the start of a valid subarray ending exactly at $j$ that sums to $K$. By recording historical prefix sum frequencies in a **Hash Map**, this query takes **$O(1)$** time!
@@ -173,22 +195,22 @@ public class SolutionSubarraySumEqualsK {
     public int SubarraySum(int[] nums, int k) {
         int count = 0;
         int runningSum = 0;
-        
+
         // Key: prefix sum, Value: number of times this prefix sum has occurred
         var prefixFreq = new Dictionary<int, int>();
-        
+
         // Base case: an empty prefix has sum 0 occurring once
         prefixFreq[0] = 1;
-        
+
         for (int i = 0; i < nums.Length; i++) {
             runningSum += nums[i];
-            
+
             // If (runningSum - k) exists in history, those prefixes form valid subarrays
             int complement = runningSum - k;
             if (prefixFreq.TryGetValue(complement, out int freq)) {
                 count += freq;
             }
-            
+
             // Add current runningSum to frequency map
             if (prefixFreq.TryGetValue(runningSum, out int currentCount)) {
                 prefixFreq[runningSum] = currentCount + 1;
@@ -196,7 +218,7 @@ public class SolutionSubarraySumEqualsK {
                 prefixFreq[runningSum] = 1;
             }
         }
-        
+
         return count;
     }
 }
@@ -229,7 +251,7 @@ $$\text{Sum}(i \dots j) = P[j] - P[i - 1] = 0 \iff P[j] = P[i - 1]$$
 Whenever we see the **same prefix sum twice**, the elements between the first occurrence and the current index sum to $0$!
 
 #### Visual Trace:
-`nums = [ 0,  1,  0,  1,  1,  0 ]`  
+`nums = [ 0,  1,  0,  1,  1,  0 ]`
 Converted: `[-1,  1, -1,  1,  1, -1 ]`
 
 Initialize: `firstSeen = { 0: -1 }`, `maxLen = 0`, `runningSum = 0`
@@ -251,17 +273,17 @@ public class SolutionContiguousArray {
     public int FindMaxLength(int[] nums) {
         int maxLen = 0;
         int runningSum = 0;
-        
+
         // Key: prefix sum, Value: earliest index where this prefix sum occurred
         var firstSeen = new Dictionary<int, int>();
-        
+
         // Base case: prefix sum 0 occurs before the array starts at index -1
         firstSeen[0] = -1;
-        
+
         for (int i = 0; i < nums.Length; i++) {
             // Treat 1 as +1, and 0 as -1
             runningSum += (nums[i] == 1) ? 1 : -1;
-            
+
             if (firstSeen.TryGetValue(runningSum, out int prevIndex)) {
                 // Do not update map! Keep earliest index to maximize (i - prevIndex)
                 maxLen = Math.Max(maxLen, i - prevIndex);
@@ -269,7 +291,7 @@ public class SolutionContiguousArray {
                 firstSeen[runningSum] = i;
             }
         }
-        
+
         return maxLen;
     }
 }
@@ -311,26 +333,26 @@ public class SolutionSubarraySumsDivisibleByK {
     public int SubarraysDivByK(int[] nums, int k) {
         int count = 0;
         int runningSum = 0;
-        
+
         // Direct array lookup for remainders in [0 .. k - 1]
         int[] remainderFreq = new int[k];
-        
+
         // Base case: remainder 0 occurs once before processing (empty prefix)
         remainderFreq[0] = 1;
-        
+
         for (int i = 0; i < nums.Length; i++) {
             runningSum += nums[i];
-            
+
             // Normalize remainder to range [0 .. k - 1]
             int remainder = ((runningSum % k) + k) % k;
-            
+
             // Add count of previous prefixes having the same remainder
             count += remainderFreq[remainder];
-            
+
             // Increment frequency for this remainder
             remainderFreq[remainder]++;
         }
-        
+
         return count;
     }
 }

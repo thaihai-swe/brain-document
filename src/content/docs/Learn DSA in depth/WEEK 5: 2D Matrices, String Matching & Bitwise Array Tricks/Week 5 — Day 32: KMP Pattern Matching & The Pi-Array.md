@@ -12,6 +12,28 @@ While Rabin-Karp relies on hash arithmetic (which can suffer from hash collision
 
 ## 1. 🧠 TEACH: Deterministic Automata & The Prefix Function
 
+### 🧭 5W1H Executive Architecture Blueprint
+- **1. WHAT:**
+  - *Formal Definition:* The **Knuth-Morris-Pratt (KMP)** algorithm is a deterministic pattern matching algorithm that constructs a prefix function ($\pi$-array / LPS table) to search strings without text pointer backtracking.
+  - *Core Invariants:* LPS Invariant: $\pi[i]$ is the length of the longest proper prefix of $P[0 .. i]$ that is also a suffix of $P[0 .. i]$; Non-Backtracking Invariant: The text pointer $i$ moves strictly monotonically forward ($i$ never decrements).
+  - *Misconception Check:* When a character mismatch occurs at pattern index $j$, do *not* restart matching at index 0! Jump directly to $\pi[j - 1]$, which preserves the longest already-matched prefix.
+- **2. WHY:**
+  - *Bottleneck Solved:* Eliminates text pointer backtracking and avoids $O(N \times M)$ worst-case performance on repetitive strings (e.g. text `AAAAAAAAB`, pattern `AAAB`).
+  - *Complexity Advantage:* Guarantees strictly linear $O(N + M)$ worst-case time complexity.
+- **3. WHEN:**
+  - *When to Choose / Signal Words:* Exact pattern matching with strict worst-case linear time SLAs, "Repeated Substring Pattern" (LC 459), "Shortest Palindrome" (LC 214). Signal words: "longest prefix which is also suffix", "KMP", "pattern matching in linear time".
+  - *When to Avoid / Failure Modes:* Simple search where standard runtime methods (Boyer-Moore or SIMD-accelerated `string.IndexOf`) are faster in practice on English text.
+- **4. WHERE:**
+  - *Physical CLR Memory:* Heap-allocated `int[M]` array for pattern $\pi$ table; registers for text pointer $i$ and pattern pointer $j$.
+  - *Production Systems:* Intrusion detection packet payload scanning (Snort), text editors searching large documents without disk seek backtracking.
+- **5. WHO:**
+  - *Spoken Script:* "KMP achieves guaranteed $O(N + M)$ worst-case matching without backtracking the text pointer. We precompute the $\pi$-array encoding the longest proper prefix that is also a suffix. On a character mismatch, the pattern pointer jumps directly to $\pi[j-1]$, skipping redundant comparisons."
+  - *Interviewer Evaluation Lens:* Evaluates candidate's derivation of the $\pi$-array preprocessing loop, proof that text pointer $i$ never retreats, and off-by-one index discipline.
+- **6. HOW:**
+  - *Cost Model:* Preprocessing: $O(M)$ time and space; Search: $O(N)$ time; Total: $O(N + M)$ worst-case time, $O(M)$ auxiliary space.
+  - *State Transition Trace (LPS Construction):* `pattern="ababc" -> i=1, len=0: 'b'!='a' => pi[1]=0 -> i=2: 'a'=='a' => len=1, pi[2]=1 -> i=3: 'b'=='b' => len=2, pi[3]=2 -> pi=[0,0,1,2,0]`.
+
+
 ### 1.1 The Backtracking Problem in Naive Search
 
 Suppose we are searching for `pattern = "ABABCABAB"` inside `text = "ABABDABACDABABCABAB"`:
@@ -27,7 +49,7 @@ Index:   0  1  2  3  4
 - In a naive search, when the mismatch occurs at index 4, the algorithm resets `pattern` back to index 0 and rewinds `text` back to index 1 (`'B'`).
 - **The Redundancy:** We *already* examined `text[0 .. 3] = "ABAB"`. We already know its contents! Why throw away that information and re-read characters we have already seen?
 - **The KMP Invariant:**
-  > **The text pointer $i$ NEVER moves backward.**  
+  > **The text pointer $i$ NEVER moves backward.**
   > Only the pattern pointer $j$ falls back to the longest known prefix that matches what we just read.
 
 ---
@@ -79,7 +101,7 @@ P:     [ A   B   A   B   C   A   B   A   B ]
    - `pi[i] = len`
    - `i++`
 2. **If $P[i] \ne P[len]$:** We cannot extend the current prefix.
-   - We must fall back to a shorter prefix that is also a suffix:  
+   - We must fall back to a shorter prefix that is also a suffix:
      $$\mathbf{len = \pi[len - 1]}$$
    - We repeat this check without advancing $i$ until either characters match or `len == 0`.
    - If `len == 0` and still no match: `pi[i] = 0; i++;`.
@@ -135,7 +157,7 @@ pi:    0  0  0  1  2  3  4  5  6   (pi[8] = 6)
 The length of the non-overlapping remaining segment is:
 $$\text{Candidate Unit Length} = N - \pi[N - 1] = 9 - 6 = 3 \quad (\text{"abc"})$$
 
-> **String Periodicity Theorem:**  
+> **String Periodicity Theorem:**
 > A string $S$ of length $N$ consists of a repeated substring if and only if:
 > 1. $\pi[N - 1] > 0$, AND
 > 2. $\mathbf{N \pmod{N - \pi[N - 1]} == 0}$
@@ -280,12 +302,12 @@ To make $S$ a palindrome by prepending the minimum number of characters:
 2. Once we know the longest palindrome prefix $S[0 \dots k-1]$, the remaining suffix $S[k \dots N-1]$ must be reversed and prepended to the front.
 
 #### How to find the Longest Palindrome Prefix with KMP?
-Reverse $S$ into $S^R$.  
+Reverse $S$ into $S^R$.
 Construct a synthetic string with a unique separator `#`:
 $$\mathbf{T = S + '\#' + S^R}$$
 
 Compute the $\pi$-array for $T$.
-The value at the very end, $\pi[T.Length - 1]$, gives the length of the longest prefix of $S$ that matches a suffix of $S^R$!  
+The value at the very end, $\pi[T.Length - 1]$, gives the length of the longest prefix of $S$ that matches a suffix of $S^R$!
 Because a prefix of $S$ that matches a suffix of $S^R$ is **symmetrical with its own reverse $\implies$ it is a palindrome!**
 
 ```
@@ -385,8 +407,8 @@ Master the KMP pattern on LeetCode:
 ```
 
 ### Preview for Day 33: Bit Manipulation Basics & Array XOR Patterns
-Over Days 31 and 32, we explored high-level string algorithms (Rabin-Karp and KMP).  
-Tomorrow in **Day 33**, we drop down to the lowest layer of machine execution: **Bit Manipulation & Array XOR Patterns**.  
+Over Days 31 and 32, we explored high-level string algorithms (Rabin-Karp and KMP).
+Tomorrow in **Day 33**, we drop down to the lowest layer of machine execution: **Bit Manipulation & Array XOR Patterns**.
 We will master register-level bit tricks: isolating lowest set bits with `x & (-x)`, Brian Kernighan's bit counting, and using XOR group cancellation to find unique elements in $O(N)$ time and strictly $O(1)$ space!
 
 ---

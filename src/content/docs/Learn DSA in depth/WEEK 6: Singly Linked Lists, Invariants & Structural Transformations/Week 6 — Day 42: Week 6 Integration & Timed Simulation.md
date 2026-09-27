@@ -18,6 +18,28 @@ Today is your **Integration and Timed Practice Day**. We synthesize these paradi
 
 ## 1. 🧠 RETROSPECTIVE: The Week 6 Pattern Contrast Matrix
 
+### 🧭 5W1H Executive Architecture Blueprint
+- **1. WHAT:**
+  - *Formal Definition:* Day 42 is the **Week 6 Integration, Contrast & Timed Simulation Module**, synthesizing Singly Linked Lists, Invariant Maintenance, and Pointer Rewiring under interview timer pressure.
+  - *Core Invariants:* Defensive Pointer Invariants: Sentinel dummy nodes eliminate null-head branching; Always stash `nextTemp` before overwriting `.next`; Explicitly sever trailing pointers to prevent phantom cycles (`tail.next = null`).
+  - *Misconception Check:* Linked list bugs are almost exclusively off-by-one errors or lost pointers. Drawing a 3-node diagram and tracing pointer assignments before writing code eliminates 90% of interview rejections.
+- **2. WHY:**
+  - *Bottleneck Solved:* Eliminates pointer overwrites, infinite cycle loops, and null reference exceptions during live interviews.
+  - *Complexity Advantage:* Produces production-grade $O(N)$ and $O(N \log N)$ solutions with strictly $O(1)$ auxiliary memory.
+- **3. WHEN:**
+  - *When to Choose / Signal Words:* Week 6 milestone timed simulation; practicing pointer speed and accuracy under 25-minute problem limits.
+  - *When to Avoid / Failure Modes:* Coding without verifying loop termination conditions on 0-node, 1-node, and 2-node edge cases.
+- **4. WHERE:**
+  - *Physical CLR Memory:* Heap node layout, cache line miss realities, and pointer register allocation.
+  - *Production Systems:* Low-level kernel driver data structures, garbage collection mark-sweep pointer chains.
+- **5. WHO:**
+  - *Spoken Script:* "Week 6 mastered pointer manipulation without secondary memory: we use sentinel nodes to eliminate head branching; fast/slow pointers for midpoint halving and cycle proofs; in-place 3-pointer swaps for reversals; and merge sort for $O(N \log N)$ list ordering in $O(1)$ auxiliary space."
+  - *Interviewer Evaluation Lens:* Evaluates candidate's pointer discipline, memory safety, boundary case defense, and verbal reasoning.
+- **6. HOW:**
+  - *Cost Model:* 60-minute timed simulation drill (LeetCode 24 Swap Nodes in Pairs and LeetCode 148 Sort List).
+  - *State Transition Trace:* Problem Prompt $\to$ Pointer Boundary Framing $\to$ Sentinel Setup $\to$ In-Place Rewiring $\to$ Verification.
+
+
 Study this comparative reference matrix before starting the timed simulation:
 
 | Pattern | Key Signals / Problem Words | Pointer Roles & Setup | Time Complexity | Core Invariant to State in Interview |
@@ -149,10 +171,10 @@ public class SolutionRotateList {
 ### Challenge B (30 Mins): LeetCode 328 — Odd Even Linked List (Medium)
 
 > Given the head of a singly linked list, group all the nodes with odd indices together followed by the nodes with even indices, and return the reordered list.
-> 
+>
 > The **first** node is considered odd, and the **second** node is even, and so on.
 > Note that the relative order inside both the even and odd groups should remain as it was in the input.
-> 
+>
 > You must solve the problem in $O(1)$ extra space complexity and $O(N)$ time complexity.
 >
 > **Constraints:**

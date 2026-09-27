@@ -10,6 +10,28 @@ In technical interviews, these problems verify whether you can reason about stri
 
 ## 1. 🧠 TEACH: Frequency Verification & Concatenation Invariants
 
+### 🧭 5W1H Executive Architecture Blueprint
+- **1. WHAT:**
+  - *Formal Definition:* An **Anagram** is a word formed by rearranging the letters of another word using all original letters exactly once.
+  - *Core Invariants:* Frequency Vector Isomorphism: Two strings $s_1$ and $s_2$ are anagrams $\iff$ $\vec{f}(s_1) == \vec{f}(s_2)$ across all alphabet symbols; Monotonic Lexicographical Invariant: Smallest lexicographical sequence drops larger previous characters if they appear again later.
+  - *Misconception Check:* Grouping anagrams by sorting each string takes $O(N \times K \log K)$; grouping by a formatted 26-element frequency signature string (e.g. `#1#0#2...`) achieves $O(N \times K)$ linear time.
+- **2. WHY:**
+  - *Bottleneck Solved:* Eliminates $O(K \log K)$ sorting cost per string and prevents exponential backtracking in lexicographical sequence problems.
+  - *Complexity Advantage:* Reduces anagram key generation to $O(K)$, and optimizes monotonic subsequence construction to $O(N)$ using greedy stack filtering.
+- **3. WHEN:**
+  - *When to Choose / Signal Words:* "Group Anagrams" (LC 49), "Valid Anagram" (LC 242), "Remove Duplicate Letters / Smallest Subsequence" (LC 316). Signal words: "anagram", "rearrange letters", "smallest lexicographical order".
+  - *When to Avoid / Failure Modes:* If the alphabet size $|\Sigma|$ is huge (e.g. full Unicode), a 26-element array fails; use a hash map or sorted character string instead.
+- **4. WHERE:**
+  - *Physical CLR Memory:* Stack-allocated fixed-size `int[26]` frequency buffers; managed heap hash map `Dictionary<string, List<string>>` for grouping.
+  - *Production Systems:* Search engine query typo suggestions, dictionary word scrambler solvers, compiler symbol table canonicalization.
+- **5. WHO:**
+  - *Spoken Script:* "Two strings are anagrams if and only if their character frequency vectors are identical. For grouping anagrams, I use a 26-character count signature as the hash map key to group words in $O(N \times K)$ time, avoiding the $O(K \log K)$ sorting cost per word."
+  - *Interviewer Evaluation Lens:* Evaluates candidate's choice of key representation (sort vs. frequency count), space complexity analysis, and mastery of monotonic stack for lexicographical problems.
+- **6. HOW:**
+  - *Cost Model:* Valid Anagram: $O(N)$ time, $O(1)$ space; Group Anagrams: $O(N \times K)$ time, $O(N \times K)$ space; Monotonic Lexicographical: $O(N)$ time, $O(1)$ aux space.
+  - *State Transition Trace (Group Anagrams):* `words=["eat", "tea", "ate"] -> freq("eat")=[1,0,...,1,...] -> key="#1#0...#1" -> map[key]=["eat", "tea", "ate"]`.
+
+
 ### 1.1 The Single-Pass Balance Array (`int[26]`)
 
 Two strings $S$ and $T$ are anagrams if and only if:

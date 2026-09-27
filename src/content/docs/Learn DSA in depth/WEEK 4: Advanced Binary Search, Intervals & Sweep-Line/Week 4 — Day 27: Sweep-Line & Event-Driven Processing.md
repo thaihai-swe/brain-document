@@ -12,6 +12,28 @@ Instead of treating an interval as an atomic block, Sweep-Line deconstructs inte
 
 ## 1. 🧠 TEACH: The Mechanics of Chronological Event Decomposition
 
+### 🧭 5W1H Executive Architecture Blueprint
+- **1. WHAT:**
+  - *Formal Definition:* The **Sweep-Line Algorithm** decomposes intervals into discrete point events (Start/Arrival $= +1$, End/Departure $= -1$) sorted chronologically along a timeline.
+  - *Core Invariants:* Chronological Event Order: Events are processed in strictly ascending timestamp order; Tie-Breaking Invariant: If simultaneous events do not consume concurrent capacity, Departures ($-1$) must be processed **before** Arrivals ($+1$); Active Sum Invariant: $\text{ActiveCount} = \sum \text{delta}$.
+  - *Misconception Check:* On identical timestamps, processing an arrival before a departure falsely inflates the concurrent resource count by 1. Exact tie-breaking logic is critical to interview correctness.
+- **2. WHY:**
+  - *Bottleneck Solved:* Eliminates continuous timeline discretization or 2D intersection tracking.
+  - *Complexity Advantage:* Calculates global peak concurrent usage across arbitrary floating-point or 64-bit timestamps in $O(N \log N)$ time.
+- **3. WHEN:**
+  - *When to Choose / Signal Words:* "Meeting Rooms II" (LC 253), "Car Pooling" (LC 1094), "My Calendar III" (LC 732). Signal words: "concurrent events", "maximum rooms required", "peak load".
+  - *When to Avoid / Failure Modes:* If the timestamp domain is tiny (e.g. $[0 .. 1000]$), a Difference Array on a flat array achieves $O(N + \text{Range})$ without sorting overhead.
+- **4. WHERE:**
+  - *Physical CLR Memory:* Array of event structs `(int Time, int Delta)` on managed heap, or a Min-Heap (`PriorityQueue<int, int>`) tracking active end times.
+  - *Production Systems:* Airport runway gate scheduling, cloud virtual machine peak core capacity planning, network bandwidth billing peak meters.
+- **5. WHO:**
+  - *Spoken Script:* "Sweep-line decomposes intervals into discrete point events: start times add $+1$ to active count, end times subtract $-1$. By sorting all events chronologically with careful tie-breaking, a single pass tracks active concurrent resources and finds the global peak demand in $O(N \log N)$ time."
+  - *Interviewer Evaluation Lens:* Evaluates event decoupling representation, precise tie-breaking on simultaneous events, and Min-Heap vs. Event List trade-off analysis.
+- **6. HOW:**
+  - *Cost Model:* Time: $O(N \log N)$ time; Space: $O(N)$ auxiliary space.
+  - *State Transition Trace (Meeting Rooms II):* `[[0,30],[5,10],[15,20]] -> Events: (0,+1), (5,+1), (10,-1), (15,+1), (20,-1), (30,-1) -> Running sum: 1 -> 2 (peak) -> 1 -> 2 -> 1 -> 0 => Max rooms = 2`.
+
+
 ### 1.1 The Core Insight: Deconstructing Intervals into Flux
 
 Consider scheduling meetings:
@@ -335,7 +357,7 @@ Master Sweep-Line patterns on LeetCode:
 ```
 
 ### Preview for Day 28: Week 4 Integration & Timed Simulation
-Congratulations on mastering Binary Search invariants, Rotated Arrays, Answer Spaces, Multi-Pointer reductions, Interval algebra, and Sweep-Line!  
+Congratulations on mastering Binary Search invariants, Rotated Arrays, Answer Spaces, Multi-Pointer reductions, Interval algebra, and Sweep-Line!
 Tomorrow in **Day 28**, we conduct a **Timed Simulation & Pattern Contrast Session**. You will face mixed problems under realistic interview conditions to hone your pattern diagnosis speed.
 
 ---

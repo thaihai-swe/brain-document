@@ -14,6 +14,28 @@ Searching in a 2D matrix is one of the most frequently asked themes in Big Tech 
 
 ## 1. 🧠 TEACH: Searching in Sorted 2D Spaces
 
+### 🧭 5W1H Executive Architecture Blueprint
+- **1. WHAT:**
+  - *Formal Definition:* **2D Matrix Search Patterns** locate target values in ordered 2D grids using coordinate flattening or multidimensional elimination.
+  - *Core Invariants:* Flattened Invariant (Matrix I: entire matrix sorted end-to-end): Cell $(r, c)$ maps to 1D index $idx = r \times N + c$, and $r = idx / N, c = idx \pmod N$; Saddleback Invariant (Matrix II: rows and columns independently sorted): Start at top-right corner $(0, N-1)$; if $mat[r, c] > target$, decrement column; if $< target$, increment row.
+  - *Misconception Check:* You cannot start saddleback search at $(0, 0)$ or $(M-1, N-1)$! Both directions from $(0, 0)$ increase values, so you cannot eliminate a direction deterministically. You must start at top-right or bottom-left, where moving along one axis increases and the other decreases.
+- **2. WHY:**
+  - *Bottleneck Solved:* Eliminates the $O(M \times N)$ exhaustive cell scan.
+  - *Complexity Advantage:* Reduces search time to $O(\log(MN))$ (for fully sorted matrices) or $O(M + N)$ (for row/col sorted matrices) with $O(1)$ space.
+- **3. WHEN:**
+  - *When to Choose / Signal Words:* "Search a 2D Matrix" (LC 74), "Search a 2D Matrix II" (LC 240). Signal words: "search 2D matrix", "rows sorted left to right", "columns sorted top to bottom".
+  - *When to Avoid / Failure Modes:* If the matrix has no monotonic ordering (requires $O(MN)$ full scan).
+- **4. WHERE:**
+  - *Physical CLR Memory:* Zero heap allocations; coordinate pointers (`r`, `c`) live in CPU registers; cache lines are utilized effectively along row scans.
+  - *Production Systems:* 2D spatial indexing lookups, range searches in multi-attribute database tables.
+- **5. WHO:**
+  - *Spoken Script:* "If a 2D matrix is completely sorted end-to-end, I treat it as a flattened 1D array of size $M \times N$ and perform standard binary search in $O(\log(MN))$. If rows and columns are independently sorted, I start at the top-right corner: moving left decreases the value, moving down increases it, finding the target in $O(M + N)$ time."
+  - *Interviewer Evaluation Lens:* Checks whether candidate distinguishes between fully sorted (LC 74) vs. row/col sorted (LC 240) and can explain why top-right/bottom-left corners are mandatory for saddleback search.
+- **6. HOW:**
+  - *Cost Model:* LC 74: $O(\log(MN))$ time, $O(1)$ space; LC 240: $O(M + N)$ time, $O(1)$ space.
+  - *State Transition Trace (Saddleback):* `mat 5x5, target=5 -> start at (0, 4) val 15: 15 > 5 => col-- -> (0, 3) val 11 > 5 => col-- -> (0, 2) val 7 > 5 => col-- -> (0, 1) val 4 < 5 => row++ -> (1, 1) val 5 == target => found!`.
+
+
 ### 1.1 The Two Types of Sorted Matrices
 
 Understanding the exact problem constraints dictates whether you use a logarithmic binary search or a linear staircase walk:
@@ -45,7 +67,7 @@ Optimal Algorithm: Saddleback Search in O(M + N).
 
 ### 1.2 Virtual 1D Binary Search: The Coordinate Mapping Invariant
 
-In Topology A ([LeetCode 74]), candidates often write two binary searches (one on the first column to find the row, then another on that row).  
+In Topology A ([LeetCode 74]), candidates often write two binary searches (one on the first column to find the row, then another on that row).
 While correct, it is clunky, branch-heavy, and unnecessary!
 
 Because the matrix is globally monotonic, we can treat the entire $M \times N$ matrix as a single virtual 1D array of length $L = M \times N$ with indices $0 \dots L - 1$:
@@ -134,11 +156,11 @@ Space complexity is strictly **$O(1)$**.
 > - Each row is sorted in non-decreasing order.
 > - The first integer of each row is greater than the last integer of the previous row.
 >
-> Given an integer `target`, return `true` if `target` is in `matrix` or `false` otherwise.  
+> Given an integer `target`, return `true` if `target` is in `matrix` or `false` otherwise.
 > You must write a solution in $O(\log(m \times n))$ time complexity.
 
 #### Visual Step-by-Step Trace:
-`matrix = [[1, 3, 5, 7], [10, 11, 16, 20], [23, 30, 34, 60]]`, `target = 3`  
+`matrix = [[1, 3, 5, 7], [10, 11, 16, 20], [23, 30, 34, 60]]`, `target = 3`
 $M = 3, C = 4$. Virtual range: `left = 0, right = 3 * 4 - 1 = 11`.
 
 ```
@@ -229,7 +251,7 @@ public class SolutionSearch2DMatrix {
 [ 10,  13,  14,  17,  24 ]
 [ 18,  21,  23,  26,  30 ]
 ```
-`target = 5`  
+`target = 5`
 Start at top-right: `row = 0, col = 4`
 
 | Step | `(row, col)` | `matrix[row][col]` | Comparison | Action | Eliminated Space |
@@ -392,7 +414,7 @@ Master 2D matrix searches on LeetCode:
 ```
 
 ### Preview for Day 31: Rabin-Karp Rolling Hash & Polynomial Fingerprinting
-Over Days 29 and 30, we conquered 2D matrix geometry and search bifurcations.  
+Over Days 29 and 30, we conquered 2D matrix geometry and search bifurcations.
 Tomorrow in **Day 31**, we transition from numeric grids to **Advanced String Search**:
 We will learn **Rabin-Karp Rolling Hashing**, unlocking how polynomial modular fingerprints enable $O(1)$ sliding window substring comparisons and $O(N)$ multi-pattern searching without string allocations!
 

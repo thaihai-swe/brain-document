@@ -13,6 +13,28 @@ Today, we combine those techniques to conquer **Structural Transformations & Sym
 
 ## 1. 🧠 TEACH: Subsegment Pointer Rewiring & Structural Symmetry
 
+### 🧭 5W1H Executive Architecture Blueprint
+- **1. WHAT:**
+  - *Formal Definition:* **In-Place Linked List Reversal** redirects node reference pointers backward using 3 iterative pointers (`prev`, `curr`, `nextTemp`).
+  - *Core Invariants:* 3-Pointer Invariant: At every step, preserve `nextTemp = curr.next`, redirect `curr.next = prev`, then shift `prev = curr` and `curr = nextTemp`; Palindrome Invariant: Reversing the second half allows lockstep comparison with the first half.
+  - *Misconception Check:* Overwriting `curr.next = prev` before stashing `curr.next` severs the remaining list into an unrecoverable orphaned memory leak. Always save `nextTemp` first.
+- **2. WHY:**
+  - *Bottleneck Solved:* Eliminates the need to copy list values into an array or allocate new reversed nodes.
+  - *Complexity Advantage:* Reverses the list in $\Theta(N)$ time and strictly $O(1)$ auxiliary space.
+- **3. WHEN:**
+  - *When to Choose / Signal Words:* "Reverse Linked List" (LC 206), "Reverse Linked List II" (LC 92 — between $m$ and $n$), "Palindrome Linked List" (LC 234). Signal words: "reverse linked list in-place", "palindrome list in O(1) space".
+  - *When to Avoid / Failure Modes:* When the list is shared across concurrent readers and mutating node references causes data race corruption.
+- **4. WHERE:**
+  - *Physical CLR Memory:* Pointers reside in CPU registers; in-place mutation rewires existing managed heap node references with zero GC allocations.
+  - *Production Systems:* Undo/redo command history stacks, reversing packet routes in network path routing, reversing transaction logs.
+- **5. WHO:**
+  - *Spoken Script:* "To reverse a linked list in-place in $O(1)$ space, I maintain three pointers: prev, curr, and nextTemp. At each step, I stash curr.next into nextTemp, reverse curr.next to point to prev, and advance prev and curr forward. For palindrome lists, I find the midpoint with fast/slow, reverse the second half, and compare both halves."
+  - *Interviewer Evaluation Lens:* Checks pointer preservation order, boundary condition when reversing subsegment $[m .. n]$, and restoring list structure post-palindrome check.
+- **6. HOW:**
+  - *Cost Model:* Time: $\Theta(N)$; Space: $O(1)$ auxiliary memory.
+  - *State Transition Trace:* `1 -> 2 -> 3 -> null: curr=1, prev=null -> nextTemp=2, 1.next=null, prev=1, curr=2 -> nextTemp=3, 2.next=1, prev=2, curr=3 -> nextTemp=null, 3.next=2, prev=3, curr=null -> return prev (3)`.
+
+
 ### 1.1 The Anatomy of Subsegment Reversal (Reverse Linked List II)
 
 Given a list, reverse only the nodes from position $left$ to position $right$:
@@ -65,7 +87,7 @@ In exactly $right - left$ operations, the sublist is completely reversed in-plac
 
 ### 1.2 Palindrome Verification in $O(1)$ Auxiliary Space
 
-Testing if an array is a palindrome is trivial because arrays allow bidirectional indexing: `arr[left] == arr[right]`.  
+Testing if an array is a palindrome is trivial because arrays allow bidirectional indexing: `arr[left] == arr[right]`.
 Singly linked lists only point forward!
 
 - **Naive Approach ($O(N)$ Space):** Copy values into a `List<int>` and use two pointers. In Big Tech interviews, this is an automatic downgrade because it uses $O(N)$ auxiliary memory.
@@ -162,7 +184,7 @@ public class SolutionReverseBetween {
 
 ### Problem 2: LeetCode 234 — Palindrome Linked List (Easy)
 
-> Given the `head` of a singly linked list, return `true` if it is a palindrome or `false` otherwise.  
+> Given the `head` of a singly linked list, return `true` if it is a palindrome or `false` otherwise.
 > Could you do it in $O(n)$ time and $O(1)$ space?
 
 #### Production C# Implementation (Complete with List Restoration):
@@ -173,7 +195,7 @@ public class SolutionPalindromeList {
 
         // Step 1: Find end of first half via Fast & Slow pointers
         ListNode firstHalfEnd = GetFirstHalfEnd(head);
-        
+
         // Step 2: Reverse second half in-place
         ListNode secondHalfStart = ReverseList(firstHalfEnd.next);
 
@@ -229,8 +251,8 @@ public class SolutionPalindromeList {
 
 ### Problem 3: LeetCode 143 — Reorder List (Medium)
 
-> You are given the head of a singly linked-list: $L_0 \to L_1 \to \dots \to L_{n-1} \to L_n$  
-> Reorder it to be: $L_0 \to L_n \to L_1 \to L_{n-1} \to L_2 \to L_{n-2} \dots$  
+> You are given the head of a singly linked-list: $L_0 \to L_1 \to \dots \to L_{n-1} \to L_n$
+> Reorder it to be: $L_0 \to L_n \to L_1 \to L_{n-1} \to L_2 \to L_{n-2} \dots$
 > You may not modify the values in the list's nodes. Only nodes themselves may be changed.
 
 #### Visual Step-by-Step Trace:
@@ -350,7 +372,7 @@ Master in-place reversals and symmetry checks on LeetCode:
 ```
 
 ### Preview for Day 39: $K$-Group Reversal & Recursive Unwinding
-Today we reversed arbitrary subsegments and single halves.  
+Today we reversed arbitrary subsegments and single halves.
 Tomorrow in **Day 39**, we tackle the pinnacle of singly linked list structural rewiring: **Reverse Nodes in $K$-Group ([LeetCode 25 — Hard])**. We will learn how to maintain sublist boundaries and cleanly stitch consecutive reversed chunks without memory leaks!
 
 ---

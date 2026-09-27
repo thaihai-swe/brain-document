@@ -10,6 +10,28 @@ Today we cover the three **quadratic ($O(N^2)$) foundational sorts**, understand
 
 ## 1. 🧠 TEACH: The Three Quadratic Sorts & Their Invariants
 
+### 🧭 5W1H Executive Architecture Blueprint
+- **1. WHAT:**
+  - *Formal Definition:* Sorting establishes a total ordering relation $\le$ across all elements in a collection.
+  - *Core Invariants:* Sorted Prefix Invariant (Insertion Sort: $[0 .. i-1]$ is sorted at iteration $i$); Minimum Element Invariant (Selection Sort: $[0 .. i-1]$ holds the $i$ smallest elements in final sorted positions); Stability Invariant (equal keys retain their relative initial order).
+  - *Misconception Check:* Selection Sort is *never* adaptive; it always performs $\Theta(N^2)$ comparisons even on an already sorted array. Insertion Sort is adaptive: it runs in $O(N)$ time on sorted or nearly-sorted data.
+- **2. WHY:**
+  - *Bottleneck Solved:* Unlocks $O(\log N)$ binary search, $O(N)$ two-pointer reductions, and $O(1)$ min/max queries.
+  - *Complexity Advantage:* Converts unstructured search from $O(N)$ into $O(\log N)$, and pair/triplet discovery from $O(N^2)$/$O(N^3)$ to $O(N)$/$O(N^2)$.
+- **3. WHEN:**
+  - *When to Choose / Signal Words:* Preprocessing for two pointers, binary search, interval scheduling, or duplicate detection. Use Insertion Sort when $N \le 16-32$ or array is nearly sorted.
+  - *When to Avoid / Failure Modes:* Avoid $O(N^2)$ elementary sorts on large datasets ($N > 10^3$); avoid unstable sorts when preserving initial key order is required.
+- **4. WHERE:**
+  - *Physical CLR Memory:* .NET `Array.Sort<T>` uses **IntroSort** (Dual-Pivot QuickSort, switching to HeapSort if recursion depth exceeds $2 \log N$, and InsertionSort for sub-arrays $N \le 16$).
+  - *Production Systems:* Database index creation, query execution sort-merge joins, CPU branch predictor optimization via sorted stream processing.
+- **5. WHO:**
+  - *Spoken Script:* "Sorting establishes an ordering invariant that unlocks logarithmic search and linear pointer convergence. While elementary sorts like Insertion Sort are $O(N^2)$ worst-case, Insertion Sort's adaptive $O(N)$ performance on nearly-sorted data makes it the optimal base case for modern hybrid engines like .NET IntroSort."
+  - *Interviewer Evaluation Lens:* Checks deep knowledge of stability, in-place vs. out-of-place complexity, adaptive characteristics, and hybrid production sort internals.
+- **6. HOW:**
+  - *Cost Model:* Insertion Sort: Best $O(N)$, Avg/Worst $O(N^2)$, Space $O(1)$; Selection Sort: $\Theta(N^2)$ always, Space $O(1)$; IntroSort: Best/Avg/Worst $O(N \log N)$, Space $O(\log N)$.
+  - *State Transition Trace (Insertion Sort):* `[5, 2, 4] -> key=2, shift 5 -> [2, 5, 4] -> key=4, shift 5 -> [2, 4, 5]`.
+
+
 All three sorts achieve the same goal (ascending order) using $O(1)$ extra space, but they differ fundamentally in **what they maintain and how many operations they perform**.
 
 ---
@@ -190,6 +212,28 @@ Selection Sort (UNSTABLE):
 
 \* Bubble sort's $O(N)$ best case **only** happens with the `swapped` early-exit flag. Without it, it is *always* $O(N^2)$.
 
+---
+
+### 1.6 Coordinate Compression: Exploiting Order Invariants on Massive Universes
+
+#### The 5W1H Architecture Blueprint
+- **WHAT:** An algorithmic technique that maps a set of arbitrary, potentially huge or negative values (e.g. coordinates in $[-10^9, 10^9]$) into a contiguous, compact index range $[0, K - 1]$ (or $[1, K]$) while strictly preserving their relative order invariant ($a < b \iff \text{rank}(a) < \text{rank}(b)$).
+- **WHY:** Direct index addressing into an array of size $10^9$ requires $\approx 4\text{ GB}$ of memory and causes `OutOfMemoryException`. When problem inputs contain only $N \le 10^5$ distinct points, $99.999\%$ of that universe is empty space.
+- **WHEN:** Use whenever an algorithm needs fast random access, direct array indexing, frequency counting, segment trees, or sweep-line processing over coordinates whose absolute magnitude exceeds available memory ($|X| > 10^7$).
+- **WHERE:** Computational geometry (2D sweep line, rectangle area union), Fenwick / Binary Indexed Trees, range query structures, and interval scheduling.
+- **WHO:** Standard tool in competitive programming and high-performance spatial GIS databases.
+- **HOW:** The 3-Step Pipeline:
+  1. **Clone & Sort:** Copy the $N$ values into an auxiliary array and sort in $O(N \log N)$.
+  2. **Deduplicate:** Filter out duplicates to form a strictly increasing sequence of length $K \le N$.
+  3. **Binary Search:** For any original query value $x$, its compressed coordinate is its index in the deduplicated array found via binary search in $O(\log K)$.
+
+```
+Original Values:    [-500, 1000000000, 42, -500, 99999999]
+Sorted Unique:      [-500, 42, 99999999, 1000000000]
+Dense Ranks (0-idx):[  0,   1,        2,          3]
+Mapped Array:       [  0,   3,        1,    0,    2]
+```
+
 **The Golden Rule for interviews:**
 
 > **If the problem does not explicitly say "implement a sorting algorithm," use `Array.Sort` and state $O(N \log N)$.**
@@ -222,17 +266,17 @@ public class Solution {
         for (int i = 1; i < nums.Length; i++) {
             int key = nums[i];          // "card" to insert
             int j = i - 1;
-            
+
             // Shift larger elements one slot to the right
             while (j >= 0 && nums[j] > key) {
                 nums[j + 1] = nums[j];
                 j--;
             }
-            
+
             // Place the key in its final resting spot
             nums[j + 1] = key;
         }
-        
+
         return nums;
     }
 }
@@ -342,7 +386,7 @@ public class Solution {
         int i = m - 1;            // last valid element in nums1
         int j = n - 1;            // last element in nums2
         int k = m + n - 1;        // write cursor
-        
+
         while (j >= 0) {
             if (i >= 0 && nums1[i] > nums2[j]) {
                 nums1[k] = nums1[i];
@@ -362,6 +406,58 @@ public class Solution {
 **The Generalizable Lesson (this is the real takeaway):**
 > **When merging into a fixed-size buffer, iterate *backward*.**
 > Forward merging requires destination space; backward merging only reuses already-consumed slots. This same logic reappears in **in-place merge sort**, **LC 453 Merge Sorted Array (min moves)**, and **sorting a nearly-sorted array with a single element out of place**.
+
+---
+
+### Problem 3: LeetCode 1331 — Rank Transform of an Array (Easy/Medium) ⭐⭐
+
+> Given an array of integers `arr`, replace each element with its **rank**.
+> The rank represents how large the element is:
+> - Rank is an integer starting from 1.
+> - The larger the element, the larger the rank. If two elements are equal, their rank must be the same.
+> - Rank should be as small as possible.
+>
+> **Constraints:** $0 \le \text{arr.Length} \le 10^5$, $-10^9 \le \text{arr}[i] \le 10^9$.
+
+#### Conceptual Walkthrough: Coordinate Compression in Practice
+Directly allocating `int[10^9]` will crash with an out-of-memory exception. Instead, we use **Coordinate Compression**:
+1. Copy the elements and sort them: $O(N \log N)$.
+2. Assign sequential ranks $1, 2, 3, \dots$ to unique sorted values.
+3. Map the original array into rank values via binary search or hash lookup in $O(1)$ to $O(\log N)$ per query.
+
+```csharp
+public class Solution {
+    public int[] ArrayRankTransform(int[] arr) {
+        if (arr == null || arr.Length == 0) return arr;
+
+        // Step 1: Copy and sort values
+        int[] sorted = (int[])arr.Clone();
+        Array.Sort(sorted);
+
+        // Step 2: In-place deduplication to isolate unique sorted ranks
+        int uniqueCount = 0;
+        for (int i = 0; i < sorted.Length; i++) {
+            if (i == 0 || sorted[i] != sorted[i - 1]) {
+                sorted[uniqueCount++] = sorted[i];
+            }
+        }
+
+        // Step 3: Replace original values with 1-based rank using Array.BinarySearch
+        int[] result = new int[arr.Length];
+        for (int i = 0; i < arr.Length; i++) {
+            // Binary search in the unique prefix sorted[0 .. uniqueCount - 1]
+            int rankIndex = Array.BinarySearch(sorted, 0, uniqueCount, arr[i]);
+            result[i] = rankIndex + 1; // 1-based rank
+        }
+
+        return result;
+    }
+}
+```
+
+**Complexity Analysis:**
+- **Time Complexity:** $O(N \log N)$ to sort, $O(N)$ for deduplication, and $N \times O(\log K)$ for binary search lookups $\implies \mathbf{O(N \log N)}$ total time.
+- **Space Complexity:** $O(N)$ auxiliary memory for the cloned sorted array, avoiding massive $O(\max(arr) - \min(arr))$ sparse table allocations.
 
 ---
 

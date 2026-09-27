@@ -14,6 +14,28 @@ Today, we conquer **Sorting Linked Lists**:
 
 ## 1. 🧠 TEACH: Concept & Invariants
 
+### 🧭 5W1H Executive Architecture Blueprint
+- **1. WHAT:**
+  - *Formal Definition:* **Linked List Merge Sort** is a divide-and-conquer sorting algorithm that recursively halves a list at its midpoint and merges the sorted sublists via pointer rewiring.
+  - *Core Invariants:* Midpoint Halving Invariant: Initializing `fast = head.next` (or tracking `prev`) ensures `slow` lands on the left middle node for 2-element lists, preventing infinite recursion; Severing Invariant: The link between `slow` and `slow.next` must be explicitly severed (`slow.next = null`) before recursive calls.
+  - *Misconception Check:* QuickSort is *poor* for singly linked lists because random pivot selection is expensive and backward partitioning is impossible; Merge Sort is optimal because sequential access and in-place merging match linked list mechanics perfectly.
+- **2. WHY:**
+  - *Bottleneck Solved:* Unlike arrays where merging requires an $O(N)$ auxiliary buffer, merging linked lists rewires existing node pointers in-place with zero memory allocation.
+  - *Complexity Advantage:* Guarantees $O(N \log N)$ worst-case time with $O(1)$ auxiliary space (iterative bottom-up) or $O(\log N)$ stack space.
+- **3. WHEN:**
+  - *When to Choose / Signal Words:* "Sort List" (LC 148), "Merge Two Sorted Lists" (LC 21). Signal words: "sort linked list in O(N log N) time and O(1) space".
+  - *When to Avoid / Failure Modes:* When input is an array (Merge Sort on arrays requires $O(N)$ buffer; use IntroSort/QuickSort instead).
+- **4. WHERE:**
+  - *Physical CLR Memory:* Recursion call stack frames ($O(\log N)$ depth) or bottom-up loop variables; rewires existing heap node references with zero object allocations.
+  - *Production Systems:* External merge sort for multi-gigabyte disk files, sorting transaction logs in database write-ahead log recovery.
+- **5. WHO:**
+  - *Spoken Script:* "Linked lists are uniquely suited for Merge Sort because merging two sorted lists requires only $O(1)$ auxiliary memory via pointer rewiring. I split the list at the midpoint using fast/slow, cut the link, recursively sort both halves, and stitch them together using a sentinel dummy node in $O(N \log N)$ time."
+  - *Interviewer Evaluation Lens:* Verifies midpoint split logic (`fast = head.next`), explicit link severing (`slow.next = null`), and sentinel node merging.
+- **6. HOW:**
+  - *Cost Model:* Time: $\Theta(N \log N)$ in all cases; Space: $O(\log N)$ recursion stack or $O(1)$ bottom-up iterative.
+  - *State Transition Trace:* `Split(head) -> mid = slow; rightHead = mid.next; mid.next = null -> sort(left), sort(right) -> Merge(left, right)`.
+
+
 ### 1.1 Why Merge Sort Dominates Linked Lists (Array vs. List Contrast)
 
 When sorting arrays, **QuickSort** or **IntroSort** (QuickSort + HeapSort + InsertionSort, as used in .NET's `Array.Sort`) is universally preferred:
@@ -426,7 +448,7 @@ public class SolutionInsertionSort {
 ```
 
 #### Complexity Analysis:
-- **Time Complexity:** 
+- **Time Complexity:**
   - Worst Case: $O(N^2)$ (reverse sorted list — every element scans the entire sorted prefix).
   - Best Case: $O(N)$ (already sorted list — the `lastSorted.val <= curr.val` branch triggers on every step, bypassing the inner scan).
 - **Space Complexity:** $O(1)$ auxiliary space.

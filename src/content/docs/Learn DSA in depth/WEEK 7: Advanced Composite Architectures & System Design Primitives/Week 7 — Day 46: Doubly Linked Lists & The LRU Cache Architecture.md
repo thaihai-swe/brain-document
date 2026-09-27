@@ -1,19 +1,57 @@
 ---
-title: "Week 7 — Day 46: Doubly Linked Lists & The LRU Cache Architecture"
+title: "Week 7 — Day 46: Doubly Linked Lists From Scratch & The LRU Cache Architecture"
 ---
 
 In **Day 45**, we scaled list merging across $K$ sorted streams, proving why Divide-and-Conquer beats Min-Heaps in physical CPU cache efficiency.
 
-Today, we build one of the most celebrated and frequently asked composite data structures in Big Tech interview history:
-1. **The LRU Cache Eviction Policy:** Evicting the Least Recently Used item in strict **$O(1)$ average time** for both `Get` and `Put`.
-2. **The Architectural Deduction:** Proving why Arrays, Hash Maps, and Singly Linked Lists all fail in isolation, necessitating a synchronized **Hash Map + Doubly Linked List (DLL)**.
-3. **The Dual Sentinel Pattern (`dummyHead` & `dummyTail`):** Eliminating all edge cases, null pointer dereferences, and conditional checks during node splicing.
+Today, we build one of the most celebrated and frequently asked container and composite data structures in Big Tech interview history:
+1. **The Doubly Linked List Container (`DoublyLinkedList<T>`):** Building a production-grade generic DLL from scratch in C# with a **Dual Sentinel Invariant (`_headSentinel` & `_tailSentinel`)** that eliminates all null pointer checks during splicing.
+2. **The LRU Cache Eviction Policy:** Evicting the Least Recently Used item in strict **$O(1)$ average time** for both `Get` and `Put`.
+3. **The Architectural Deduction:** Proving why Arrays, Hash Maps, and Singly Linked Lists all fail in isolation, necessitating a synchronized **Hash Map + Doubly Linked List (DLL)**.
 4. **The Bidirectional Key Storage Invariant:** Why nodes in the linked list **must** store both `key` and `value` to achieve $O(1)$ eviction.
 5. **Concurrency & Thread Safety:** Why LRU `Get()` is technically a mutation and how production caching engines handle concurrent reads.
 
 ---
 
 ## 1. 🧠 TEACH: Architectural Deduction of the LRU Cache
+
+### 🧭 5W1H Executive Architecture Blueprint
+- **1. WHAT:**
+  - *Formal Definition:* The **LRU (Least Recently Used) Cache** is a composite data structure combining a **Doubly Linked List** and a **Hash Map** to provide $O(1)$ key lookups and $O(1)$ recency-based evictions.
+  - *Core Invariants:* Access Order Invariant: Doubly linked list maintains access order (Most Recently Used at head, Least Recently Used at tail); Fast Lookup Invariant: `Dictionary<K, DNode>` maps keys directly to node references; Bi-Directional Node Invariant: Each `DNode` stores both `key` and `value`.
+  - *Misconception Check:* If `DNode` only stores `value` and omits `key`, evicting the tail node requires scanning the entire dictionary in $O(N)$ time to remove the evicted key! Storing `key` inside `DNode` enables strict $O(1)$ dictionary removal.
+- **2. WHY:**
+  - *Bottleneck Solved:* Eliminates the $O(N)$ eviction cost of array-based caches and the $O(N)$ lookup cost of pure linked lists.
+  - *Complexity Advantage:* Guarantees strict worst-case $O(1)$ time complexity for both `Get(key)` and `Put(key, value)` operations.
+- **3. WHEN:**
+  - *When to Choose / Signal Words:* "LRU Cache" (LC 146), database buffer pool page management, Redis eviction policies, browser cache architectures. Signal words: "LRU cache", "least recently used eviction", "O(1) get and put".
+  - *When to Avoid / Failure Modes:* When access frequency is more important than access recency (use LFU Cache instead); multithreaded environments without synchronization locks.
+- **4. WHERE:**
+  - *Physical CLR Memory:* Sentinel `head` and `tail` dummy nodes bound the doubly linked list; `DNode` occupies 48–56 bytes on 64-bit CLR heap (`Object Header` + `MethodTable` + `key` + `val` + `prev` + `next`).
+  - *Production Systems:* Operating system virtual memory page replacement (clock algorithm approximation), Memcached item eviction engine, CPU L2/L3 cache associativity eviction.
+- **5. WHO:**
+  - *Spoken Script:* "An LRU Cache combines a hash map for $O(1)$ key lookup with a doubly linked list for $O(1)$ node detachment and head promotion. I bind the list with dummy head and tail sentinels to avoid boundary null checks, and store the key inside each node so tail eviction removes the hash map entry in $O(1)$ time."
+  - *Interviewer Evaluation Lens:* Checks why `key` is stored in node, sentinel node usage (`head` and `tail`), handling of existing key updates in `Put`, and capacity boundary enforcement.
+- **6. HOW:**
+  - *Cost Model:* `Get`: $O(1)$ time; `Put`: $O(1)$ time; Space: $O(\text{Capacity})$.
+  - *State Transition Trace (Get / Put):* `Get(key) -> node = map[key] -> Detach(node) -> AddToHead(node) -> return node.val; Put(key, val) -> if exists: update & promote; else: add, if count > cap: EvictTail()`.
+
+
+### ⚖️ Architectural Comparison: Array vs. Linked List (The Fundamental Memory Divide)
+| Evaluation Metric | Array / Dynamic Array (`List<T>`) | Singly Linked List | Doubly Linked List |
+| :--- | :--- | :--- | :--- |
+| **Physical Memory Layout** | **Contiguous** block of memory on heap/stack | **Scattered** individual heap nodes | **Scattered** individual heap nodes |
+| **Random Access `[i]`** | $\mathbf{\Theta(1)}$ direct address calculation | $\Theta(N)$ sequential pointer walk | $\Theta(N)$ sequential pointer walk |
+| **CPU Cache Locality** | **Maximum (Spatial & Temporal):** Contiguous elements fill 64-byte cache lines; hardware prefetcher pre-loads adjacent data | **Poor:** Each node access dereferences an arbitrary pointer, causing frequent L1/L2/L3 cache misses | **Poor:** Double pointer dereferencing causes CPU pipeline stalls and cache line thrashing |
+| **Insert / Delete at Head** | $\Theta(N)$ (requires shifting all subsequent elements right/left) | $\mathbf{\Theta(1)}$ (rewire `head` reference) | $\mathbf{\Theta(1)}$ (rewire `head` and sentinel references) |
+| **Insert at Tail** | **Amortized $\Theta(1)$** ($\Theta(N)$ when reallocation buffer doubles) | $\Theta(1)$ with cached `tail` pointer | $\Theta(1)$ with cached `tail` pointer |
+| **Insert / Delete in Middle** | $\Theta(N)$ memory move / copy overhead | $\Theta(1)$ rewiring *once pointer is at position* ($\Theta(N)$ to find position) | $\Theta(1)$ rewiring *once node reference is known* |
+| **Memory Overhead per Element** | **0 bytes** overhead for primitive value types | **16 to 24 bytes** in 64-bit CLR (Object Header + TypeHandle + Next pointer) | **24 to 32 bytes** in 64-bit CLR (Header + TypeHandle + Next + Prev) |
+| **Resizing Behavior** | Allocates new buffer ($1.5\times$ or $2\times$), copies memory, discards old buffer | Smooth, incremental per-node allocation on demand | Smooth, incremental per-node allocation on demand |
+| **Garbage Collector Impact** | Low GC pressure (single array object) | **High GC pressure** (thousands of isolated node objects to trace/collect) | **High GC pressure** (higher reference density increases GC mark phase duration) |
+| **Best Used When** | Frequent reads, index lookups, batch processing, known size, cache efficiency | Frequent head insertions/removals, unknown size, strict $O(1)$ memory guarantees | LRU Cache implementation (with HashMap), bidirectional browser history |
+
+---
 
 ### 1.1 Problem Specification ([LeetCode 146])
 
@@ -127,11 +165,342 @@ When cache capacity is exceeded during `Put`:
 
 ---
 
-## 2. 🎬 DEMONSTRATE: Problem Walkthroughs
+## 2. ⚙️ IMPLEMENT: Production-Grade From-Scratch Doubly Linked List
 
-### 2.1 [LeetCode 146] LRU Cache — Production C# Implementation
+### 2.1 Complete C# Implementation (`DoublyLinkedList<T>`)
 
 ```csharp
+using System;
+using System.Collections;
+using System.Collections.Generic;
+
+/// <summary>
+/// A node in a generic doubly linked list.
+/// </summary>
+public class DoublyLinkedListNode<T> {
+    public T Value;
+    public DoublyLinkedListNode<T>? Prev;
+    public DoublyLinkedListNode<T>? Next;
+
+    public DoublyLinkedListNode(T value) {
+        Value = value;
+    }
+}
+
+/// <summary>
+/// A production-grade generic doubly linked list container implemented from scratch in C#.
+/// Features a Dual Sentinel Invariant (_headSentinel and _tailSentinel) guaranteeing
+/// branchless O(1) node additions, arbitrary removals, and safe bidirectional iterations.
+/// </summary>
+public class DoublyLinkedList<T> : IEnumerable<T> {
+    private readonly DoublyLinkedListNode<T> _headSentinel;
+    private readonly DoublyLinkedListNode<T> _tailSentinel;
+    private int _count;
+    private int _version;
+
+    public DoublyLinkedList() {
+        _headSentinel = new DoublyLinkedListNode<T>(default!);
+        _tailSentinel = new DoublyLinkedListNode<T>(default!);
+
+        _headSentinel.Next = _tailSentinel;
+        _tailSentinel.Prev = _headSentinel;
+        _count = 0;
+        _version = 0;
+    }
+
+    /// <summary>
+    /// Gets the number of elements contained in the doubly linked list.
+    /// Time Complexity: O(1).
+    /// </summary>
+    public int Count => _count;
+
+    /// <summary>
+    /// Gets a value indicating whether the list is empty.
+    /// </summary>
+    public bool IsEmpty => _count == 0;
+
+    /// <summary>
+    /// Gets the first active data node in the list, or null if the list is empty.
+    /// </summary>
+    public DoublyLinkedListNode<T>? FirstNode => IsEmpty ? null : _headSentinel.Next;
+
+    /// <summary>
+    /// Gets the last active data node in the list, or null if the list is empty.
+    /// </summary>
+    public DoublyLinkedListNode<T>? LastNode => IsEmpty ? null : _tailSentinel.Prev;
+
+    /// <summary>
+    /// Inserts a new value at the beginning of the doubly linked list.
+    /// Time Complexity: Strictly O(1).
+    /// </summary>
+    public DoublyLinkedListNode<T> AddFirst(T item) {
+        var node = new DoublyLinkedListNode<T>(item);
+        InsertNodeBetween(_headSentinel, _headSentinel.Next!, node);
+        return node;
+    }
+
+    /// <summary>
+    /// Appends a new value to the end of the doubly linked list.
+    /// Time Complexity: Strictly O(1).
+    /// </summary>
+    public DoublyLinkedListNode<T> AddLast(T item) {
+        var node = new DoublyLinkedListNode<T>(item);
+        InsertNodeBetween(_tailSentinel.Prev!, _tailSentinel, node);
+        return node;
+    }
+
+    /// <summary>
+    /// Inserts a new value immediately after an existing node.
+    /// Time Complexity: Strictly O(1).
+    /// </summary>
+    public DoublyLinkedListNode<T> AddAfter(DoublyLinkedListNode<T> node, T item) {
+        if (node == null || node.Next == null) {
+            throw new ArgumentNullException(nameof(node), "Cannot insert after null or unlinked node.");
+        }
+        var newNode = new DoublyLinkedListNode<T>(item);
+        InsertNodeBetween(node, node.Next, newNode);
+        return newNode;
+    }
+
+    /// <summary>
+    /// Inserts a new value immediately before an existing node.
+    /// Time Complexity: Strictly O(1).
+    /// </summary>
+    public DoublyLinkedListNode<T> AddBefore(DoublyLinkedListNode<T> node, T item) {
+        if (node == null || node.Prev == null) {
+            throw new ArgumentNullException(nameof(node), "Cannot insert before null or unlinked node.");
+        }
+        var newNode = new DoublyLinkedListNode<T>(item);
+        InsertNodeBetween(node.Prev, node, newNode);
+        return newNode;
+    }
+
+    /// <summary>
+    /// Removes an arbitrary node from the doubly linked list in strict O(1) time.
+    /// </summary>
+    public void Remove(DoublyLinkedListNode<T> node) {
+        if (node == null) throw new ArgumentNullException(nameof(node));
+        if (node.Prev == null || node.Next == null || node == _headSentinel || node == _tailSentinel) {
+            throw new InvalidOperationException("Cannot remove an unlinked or sentinel node.");
+        }
+
+        // Branchless pointer bypass
+        node.Prev.Next = node.Next;
+        node.Next.Prev = node.Prev;
+
+        // Sever links to prevent reference loitering
+        node.Prev = null;
+        node.Next = null;
+
+        _count--;
+        _version++;
+    }
+
+    /// <summary>
+    /// Removes and returns the first element of the list.
+    /// Time Complexity: Strictly O(1).
+    /// </summary>
+    public T RemoveFirst() {
+        if (IsEmpty) throw new InvalidOperationException("List is empty.");
+        var first = _headSentinel.Next!;
+        T val = first.Value;
+        Remove(first);
+        return val;
+    }
+
+    /// <summary>
+    /// Removes and returns the last element of the list.
+    /// Time Complexity: Strictly O(1).
+    /// </summary>
+    public T RemoveLast() {
+        if (IsEmpty) throw new InvalidOperationException("List is empty.");
+        var last = _tailSentinel.Prev!;
+        T val = last.Value;
+        Remove(last);
+        return val;
+    }
+
+    /// <summary>
+    /// Removes all nodes from the doubly linked list.
+    /// </summary>
+    public void Clear() {
+        var curr = _headSentinel.Next;
+        while (curr != _tailSentinel && curr != null) {
+            var next = curr.Next;
+            curr.Prev = null;
+            curr.Next = null;
+            curr = next;
+        }
+
+        _headSentinel.Next = _tailSentinel;
+        _tailSentinel.Prev = _headSentinel;
+        _count = 0;
+        _version++;
+    }
+
+    private void InsertNodeBetween(DoublyLinkedListNode<T> prev, DoublyLinkedListNode<T> next, DoublyLinkedListNode<T> newNode) {
+        newNode.Prev = prev;
+        newNode.Next = next;
+        prev.Next = newNode;
+        next.Prev = newNode;
+
+        _count++;
+        _version++;
+    }
+
+    /// <summary>
+    /// Returns an enumerator that iterates forward through the doubly linked list.
+    /// </summary>
+    public IEnumerator<T> GetEnumerator() {
+        int capturedVersion = _version;
+        var curr = _headSentinel.Next;
+
+        while (curr != _tailSentinel && curr != null) {
+            if (capturedVersion != _version) {
+                throw new InvalidOperationException("Collection was modified during enumeration.");
+            }
+            yield return curr.Value;
+            curr = curr.Next;
+        }
+    }
+
+    IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
+}
+```
+
+---
+
+### 2.2 Visual Invariant Traces
+
+#### Atomic Node Detachment Trace:
+Detaching `Node B` situated between `Node A` and `Node C`:
+
+```
+Before Detach:
+[ Node A ] ◄──────► [ Node B ] ◄──────► [ Node C ]
+          Next ──►           Next ──►
+          ◄── Prev           ◄── Prev
+
+Step 1: node.Prev.Next = node.Next
+Node A's Next pointer bypasses B to point directly to Node C.
+
+Step 2: node.Next.Prev = node.Prev
+Node C's Prev pointer bypasses B to point directly to Node A.
+
+Step 3: Unlink B:
+node.Prev = null; node.Next = null;
+
+After Detach:
+[ Node A ] ◄──────────────────────────► [ Node C ]
+          Next ───────────────────────►
+          ◄─────────────────────────── Prev
+```
+
+---
+
+### 2.3 Comprehensive Verification Test Suite
+
+```csharp
+using System;
+using System.Diagnostics;
+
+public static class DoublyLinkedListVerificationSuite {
+    public static void RunAllTests() {
+        TestAddFirstAndLast();
+        TestAddAfterAndBefore();
+        TestArbitraryNodeRemoval();
+        TestClearAndSentinels();
+        TestFailFastEnumerator();
+        Console.WriteLine("✅ All DoublyLinkedList<T> Unit Tests Passed Successfully!");
+    }
+
+    private static void TestAddFirstAndLast() {
+        var dll = new DoublyLinkedList<int>();
+        var n20 = dll.AddFirst(20);
+        var n10 = dll.AddFirst(10); // [10, 20]
+        var n30 = dll.AddLast(30);  // [10, 20, 30]
+
+        Debug.Assert(dll.Count == 3);
+        Debug.Assert(dll.FirstNode == n10);
+        Debug.Assert(dll.LastNode == n30);
+        Debug.Assert(n20.Prev == n10 && n20.Next == n30);
+    }
+
+    private static void TestAddAfterAndBefore() {
+        var dll = new DoublyLinkedList<string>();
+        var first = dll.AddFirst("A");
+        var last = dll.AddLast("C");
+        var mid = dll.AddAfter(first, "B"); // [A, B, C]
+
+        Debug.Assert(dll.Count == 3);
+        Debug.Assert(first.Next == mid && mid.Prev == first);
+        Debug.Assert(mid.Next == last && last.Prev == mid);
+    }
+
+    private static void TestArbitraryNodeRemoval() {
+        var dll = new DoublyLinkedList<int>();
+        var n1 = dll.AddLast(1);
+        var n2 = dll.AddLast(2);
+        var n3 = dll.AddLast(3);
+
+        dll.Remove(n2); // Removes mid node in O(1)
+        Debug.Assert(dll.Count == 2);
+        Debug.Assert(n1.Next == n3 && n3.Prev == n1);
+
+        int firstVal = dll.RemoveFirst();
+        Debug.Assert(firstVal == 1);
+        Debug.Assert(dll.Count == 1);
+    }
+
+    private static void TestClearAndSentinels() {
+        var dll = new DoublyLinkedList<string>();
+        dll.AddLast("X");
+        dll.AddLast("Y");
+        dll.Clear();
+        Debug.Assert(dll.Count == 0);
+        Debug.Assert(dll.IsEmpty);
+        Debug.Assert(dll.FirstNode == null && dll.LastNode == null);
+    }
+
+    private static void TestFailFastEnumerator() {
+        var dll = new DoublyLinkedList<int>();
+        dll.AddLast(10);
+        dll.AddLast(20);
+
+        bool caught = false;
+        try {
+            foreach (var item in dll) {
+                if (item == 10) dll.AddLast(30);
+            }
+        } catch (InvalidOperationException) {
+            caught = true;
+        }
+        Debug.Assert(caught);
+    }
+}
+```
+
+---
+
+## 3. 🔬 ANALYZE: Systems & Memory Trade-Offs
+
+| Metric | Singly Linked List (`SinglyLinkedList<T>`) | Doubly Linked List (`DoublyLinkedList<T>`) |
+| :--- | :--- | :--- |
+| **Node Overhead in 64-bit CLR** | **32 bytes** (Header 8B + MT 8B + Val 8B + Next 8B) | **40 bytes** (Header 8B + MT 8B + Prev 8B + Next 8B + Val 8B) |
+| **Removal of Arbitrary Node** | $O(N)$ (Must walk to find predecessor) | **Strictly $O(1)$** (Direct `node.Prev.Next = node.Next`) |
+| **Removal of Last Node (`RemoveLast`)** | $O(N)$ (Must scan from head to find node before tail) | **Strictly $O(1)$** (Direct via `_tailSentinel.Prev`) |
+| **Bidirectional Traversal** | Impossible (Requires list reversal) | Supported natively via `Prev` pointers |
+| **Pointer Maintenance Overhead** | 1 pointer write per insertion | 4 pointer writes per insertion |
+
+---
+
+## 4. 🎬 DEMONSTRATE: Problem Walkthroughs
+
+### 4.1 [LeetCode 146] LRU Cache — Production C# Implementation
+
+```csharp
+using System.Collections.Generic;
+
 public class LRUCache {
     /// <summary>
     /// Bidirectional node storing both key and value for O(1) eviction cleanup.
@@ -234,7 +603,7 @@ public class LRUCache {
 
 ---
 
-### 2.2 Visual Execution Trace
+### 4.2 Visual Execution Trace
 
 ```
 Operations:
@@ -264,14 +633,14 @@ Operations:
 ```
 
 #### Complexity Analysis:
-- **Time Complexity:** 
+- **Time Complexity:**
   - `Get(key)`: $O(1)$ average hash table lookup + $O(1)$ node pointer adjustments.
   - `Put(key, value)`: $O(1)$ average hash table insert/update + $O(1)$ node additions/evictions.
 - **Space Complexity:** $O(C)$ where $C$ is the cache capacity. The hash map and linked list store at most $C + 1$ entries at any point.
 
 ---
 
-### 2.3 Production Concurrency Considerations (Senior / Staff Engineer Level)
+### 4.3 Production Concurrency Considerations (Senior / Staff Engineer Level)
 
 In a high-scale multithreaded backend (e.g. ASP.NET Core service):
 - **The Paradox of LRU `Get`:** In standard dictionaries, `Get` is a pure read operation that can execute concurrently under a shared read lock (`ReaderWriterLockSlim.EnterReadLock()`).
@@ -283,7 +652,7 @@ In a high-scale multithreaded backend (e.g. ASP.NET Core service):
 
 ---
 
-## 3. 🏋️ PRACTICE: Your Daily Challenges
+## 5. 🏋️ PRACTICE: Your Daily Challenges
 
 Master composite data structures on LeetCode:
 
@@ -304,7 +673,7 @@ Master composite data structures on LeetCode:
 
 ---
 
-## 4. 🔗 CONNECT: The Pattern Decision Bridge
+## 6. 🔗 CONNECT: The Pattern Decision Bridge
 
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
@@ -326,20 +695,14 @@ Master composite data structures on LeetCode:
                        └─► Design Linked List (Day 48) [LC 707]
 ```
 
-### Preview for Day 47: Advanced Cache Architecture — The LFU Cache
-Tomorrow in **Day 47**, we conquer one of the hardest composite data structure problems on LeetCode:
-- **[LeetCode 460] LFU Cache (Hard):** Least Frequently Used cache eviction.
-- Why a single doubly linked list is insufficient.
-- **The Two-Table Architecture:** `nodeTable: Dictionary<int, LfuNode>` synchronized with `freqTable: Dictionary<int, DoublyLinkedList>`.
-- Maintaining a global `minFreq` scalar in $O(1)$ time across frequency promotions and evictions.
-
 ---
 
-## 5. 🎯 Day 46 Checkpoint Questions
+## 7. 🎯 Day 46 Checkpoint Questions
 
-Verify your mastery of composite cache structures:
+Verify your mastery of doubly linked containers and composite cache structures:
 
 1. **The Invariant of `node.key`:** If we omit `key` from `DNode` and only store `val`, why does `PopTail()` cause the time complexity of `Put` to degrade from $O(1)$ to $O(N)$?
 2. **Sentinel Safety:** How do `dummyHead` and `dummyTail` ensure that calling `RemoveNode(node)` will never trigger a `NullReferenceException`, even if `node` was the only data element in the list?
 3. **The `Put` Branching Logic:** When `Put(key, val)` is called and `key` already exists, what exact steps must occur with respect to the node's value, position in the DLL, and the cache's current capacity?
-4. **Multithreaded Dilemma:** Why does an LRU Cache require exclusive locking even for read requests (`Get`), and what high-throughput architectures mitigate this bottleneck?
+4. **Arbitrary Deletion Advantage:** Why can a `DoublyLinkedList<T>` delete an arbitrary node in $O(1)$ time when provided only the node reference, whereas a `SinglyLinkedList<T>` requires $O(N)$ time?
+5. **Multithreaded Dilemma:** Why does an LRU Cache require exclusive locking even for read requests (`Get`), and what high-throughput architectures mitigate this bottleneck?

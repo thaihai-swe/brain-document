@@ -10,6 +10,28 @@ In managed languages, strings are immutable, but interviewers frequently present
 
 ## 1. 🧠 TEACH: The Mechanics of In-Place String Mutation
 
+### 🧭 5W1H Executive Architecture Blueprint
+- **1. WHAT:**
+  - *Formal Definition:* In-place string transformation mutates a character buffer via reader/writer pointers and symmetric subsegment reversals.
+  - *Core Invariants:* Compaction Invariant: $w \le r$; 3-Step Word Reversal Invariant: $\text{rev}(\text{rev}(w_1) + \text{rev}(w_2) + \dots + \text{rev}(w_k)) = w_k + \dots + w_2 + w_1$; Run-Length Invariant: Write character, then write run count digits if count $> 1$.
+  - *Misconception Check:* Reversing words in a string does *not* require `string.Split(' ')` (which allocates dozens of substring objects); converting to a `char[]` buffer and reversing the entire string followed by reversing each word achieves $O(N)$ time with zero GC garbage.
+- **2. WHY:**
+  - *Bottleneck Solved:* Eliminates the massive heap allocation spikes caused by `Split()`, `Trim()`, and `Join()` in high-throughput services.
+  - *Complexity Advantage:* Reduces memory complexity from $O(N)$ auxiliary allocations to $O(1)$ auxiliary space on mutable character buffers.
+- **3. WHEN:**
+  - *When to Choose / Signal Words:* "String Compression" (LC 443), "Reverse Words in a String" (LC 151), "Clean redundant spaces in text". Signal words: "modify character array in-place", "compress string", "reverse words".
+  - *When to Avoid / Failure Modes:* If the input string cannot be modified and output must be a standard immutable `string` (allocating the result is required, but intermediate garbage is eliminated).
+- **4. WHERE:**
+  - *Physical CLR Memory:* Mutable `char[]` buffer or stack-allocated `Span<char>`. In-place updates avoid Gen 0 GC collections.
+  - *Production Systems:* Protocol buffer wire format serializers, HTTP URL path normalization, log file space sanitizers.
+- **5. WHO:**
+  - *Spoken Script:* "To reverse words in a string in $O(1)$ extra space, I clean extra spaces using reader/writer pointers, reverse the entire character array, and then reverse each individual word within its boundary. For string compression, I count contiguous runs and write the character and count digits in-place."
+  - *Interviewer Evaluation Lens:* Checks multi-pass pointer coordination, edge case handling with leading/trailing/multiple spaces, and single-digit vs multi-digit count formatting.
+- **6. HOW:**
+  - *Cost Model:* Time: $O(N)$ linear time; Space: $O(1)$ auxiliary space (modifying `char[]`).
+  - *State Transition Trace (Reverse Words):* `"the sky is blue" -> Clean spaces -> Reverse all: "eulb si yks eht" -> Reverse words: "blue is sky the"`.
+
+
 ### 1.1 The Reader & Writer Compression Invariant (LeetCode 443)
 
 In Run-Length Encoding (RLE), consecutive identical characters are compressed into the character followed by its count:

@@ -12,6 +12,28 @@ LeetCode 25 is famous among Big Tech interviewers (Google, Meta, Amazon, Apple) 
 
 ## 1. 🧠 TEACH: The Mechanics of Group Chunking & Boundary Stitching
 
+### 🧭 5W1H Executive Architecture Blueprint
+- **1. WHAT:**
+  - *Formal Definition:* **K-Group Reversal** reverses linked list nodes in contiguous chunks of length $K$, leaving trailing sub-groups of length $< K$ unmodified.
+  - *Core Invariants:* Lookahead Invariant: Walk $K$ steps forward to verify $K$ nodes exist before reversing; Group Reconnection Invariant: Reversed segment $[head .. kth]$ must reconnect its new tail to the unreversed suffix `groupNext` and its new head to `groupPrev`.
+  - *Misconception Check:* Reversing without lookahead corrupts trailing partial groups; you must confirm that a full $K$ nodes exist before initiating segment reversal.
+- **2. WHY:**
+  - *Bottleneck Solved:* Reverses complex chunked sequences without allocating node buffers or leaking recursion stack frames.
+  - *Complexity Advantage:* Achieves optimal $O(N)$ time with strictly $O(1)$ auxiliary memory.
+- **3. WHEN:**
+  - *When to Choose / Signal Words:* "Reverse Nodes in k-Group" (LC 25), "Swap Nodes in Pairs" (LC 24 — $k=2$). Signal words: "reverse nodes in k-group", "k elements at a time".
+  - *When to Avoid / Failure Modes:* If $K = 1$, reversal is an identity no-op; short-circuit immediately.
+- **4. WHERE:**
+  - *Physical CLR Memory:* Sentinel dummy node on stack; four pointer references (`groupPrev`, `groupHead`, `kth`, `groupNext`); iterative state machine prevents recursion call stack overflow.
+  - *Production Systems:* Network packet reordering buffers, crypto cipher block chaining (CBC) block permutations.
+- **5. WHO:**
+  - *Spoken Script:* "In K-Group reversal, I verify that K nodes exist using a lookahead pointer. If fewer than K nodes remain, I leave them untouched. Otherwise, I reverse the K-node segment and reconnect groupPrev to the new head and groupHead to the subsequent unreversed group, advancing groupPrev to the old group head."
+  - *Interviewer Evaluation Lens:* Checks lookahead verification, precise 4-pointer boundary reconnection, and avoidance of recursion stack allocation.
+- **6. HOW:**
+  - *Cost Model:* Time: $\Theta(N)$ (each node visited at most twice); Space: $O(1)$ auxiliary memory.
+  - *State Transition Trace:* `groupPrev -> [1 -> 2 -> 3] -> 4... (k=3) -> reverse group: groupPrev.next = 3; 1.next = 4; groupPrev = 1`.
+
+
 ### 1.1 The Challenge of $K$-Group Reversal
 
 Given a linked list and integer $K$:
@@ -63,7 +85,7 @@ Step 1: Save the next group boundary
 
 Step 2: Reverse the K nodes in-place
   Standard 3-pointer reversal starting at curr, stopping when prev reaches kth.
-  Notice: After reversal, 'curr' (Node 1) is now the TAIL of the group, 
+  Notice: After reversal, 'curr' (Node 1) is now the TAIL of the group,
           and 'kth' (Node 3) is now the HEAD of the group!
 
 Step 3: Reconnect with outer list
@@ -180,8 +202,8 @@ public class SolutionSwapPairs {
 
 ### Problem 2: LeetCode 25 — Reverse Nodes in k-Group (Hard)
 
-> Given the `head` of a linked list, reverse the nodes of the list `k` at a time, and return the modified list.  
-> `k` is a positive integer and is less than or equal to the length of the linked list. If the number of nodes is not a multiple of `k` then left-out nodes, in the end, should remain as it is.  
+> Given the `head` of a linked list, reverse the nodes of the list `k` at a time, and return the modified list.
+> `k` is a positive integer and is less than or equal to the length of the linked list. If the number of nodes is not a multiple of `k` then left-out nodes, in the end, should remain as it is.
 > You may not alter the values in the list's nodes, only nodes themselves may be changed.
 
 #### Visual Step-by-Step Trace:
@@ -314,7 +336,7 @@ Master $K$-group chunking on LeetCode:
 ```
 
 ### Preview for Day 40: Two-Pointer Removal & Intersection Invariants
-Today we operated on multi-node chunks.  
+Today we operated on multi-node chunks.
 Tomorrow in **Day 40**, we explore **Relative Distance Invariants**:
 - The **Fixed $K$-Gap Pattern**: removing the $N$-th node from the end in a single pass without knowing the list length ([LC 19]).
 - The **Cyclic Traversal Trick**: finding where two lists intersect without a hash set in $O(1)$ space by switching heads ([LC 160])!

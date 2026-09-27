@@ -15,6 +15,28 @@ Today, we conquer one of the most celebrated geometric algorithmic patterns in B
 
 ## 1. 🧠 TEACH: Concept & Invariants
 
+### 🧭 5W1H Executive Architecture Blueprint
+- **1. WHAT:**
+  - *Formal Definition:* **Monotonic Stack Boundary Formulations** compute optimal geometric areas (histograms, rectangles) by using monotonic stacks to identify the maximal left and right extent of each element.
+  - *Core Invariants:* Boundary Width Invariant: For bar $h$ popped at index $mid$, its right boundary is the arriving index $i$ and its left boundary is the remaining stack top: $\text{Width} = i - \text{stack.Peek()} - 1$; Virtual Sentinel Invariant: Appending a virtual 0-height bar at index $N$ (and $-1$ at bottom) forces all remaining bars to flush and calculate.
+  - *Misconception Check:* The width is *not* simply $i - mid$; the width extends from the left boundary (the new stack top after popping $mid$) to the right boundary ($i$), because all bars in between were strictly taller and previously popped.
+- **2. WHY:**
+  - *Bottleneck Solved:* Eliminates the $O(N^2)$ brute-force expansion of rectangular histogram areas.
+  - *Complexity Advantage:* Reduces Largest Rectangle in Histogram from $O(N^2)$ to optimal $O(N)$ linear time.
+- **3. WHEN:**
+  - *When to Choose / Signal Words:* "Largest Rectangle in Histogram" (LC 84), "Maximal Rectangle" (LC 85). Signal words: "largest rectangle in histogram", "maximal rectangle of 1s in 2D binary matrix".
+  - *When to Avoid / Failure Modes:* When bars cannot be treated as contiguous or when shapes are non-rectangular.
+- **4. WHERE:**
+  - *Physical CLR Memory:* Integer index stack on managed heap; appending virtual sentinel or flushing stack at array end.
+  - *Production Systems:* Computer graphics silhouette bounding box aggregation, silicon chip floorplan area optimization, image processing morphological open operations.
+- **5. WHO:**
+  - *Spoken Script:* "In Largest Rectangle in Histogram, I maintain a monotonic increasing stack of bar indices. When a shorter bar arrives, it serves as the right boundary for the popped bar, while the remaining stack top serves as the left boundary. The width is $i - \text{top} - 1$, computing all areas in $O(N)$ time."
+  - *Interviewer Evaluation Lens:* Checks derivation of the width formula $i - \text{top} - 1$, handling of empty stack left boundary, and virtual sentinel flushing.
+- **6. HOW:**
+  - *Cost Model:* Time: $O(N)$ single pass; Space: $O(N)$ auxiliary stack space.
+  - *State Transition Trace (LC 84):* `heights=[2, 1, 5, 6, 2, 3] -> 1 pops 2: area = 2 * (1 - (-1) - 1) = 2 -> 2 pops 6: area = 6 * (4 - 2 - 1) = 6 -> 2 pops 5: area = 5 * (4 - 1 - 1) = 10 (Max Area!)`.
+
+
 ### 1.1 The Histogram Optimization Dilemma
 
 Given an array of non-negative integers `heights` where each bar has width 1, find the area of the largest rectangle that fits inside the histogram:
@@ -42,7 +64,7 @@ Heights: [2, 1, 5, 6, 2, 3]
 
 ### 1.2 The Bottleneck Inversion Principle
 
-Instead of asking: *"For each pair of endpoints, what is the minimum bar?"*  
+Instead of asking: *"For each pair of endpoints, what is the minimum bar?"*
 We **invert the perspective** and ask:
 
 > [!TIP]
@@ -67,7 +89,7 @@ Area  = heights[mid] * (R - L - 1)
 
 ### 1.3 The Monotonic Increasing Stack Mechanics
 
-How do we find both $L$ and $R$ for every bar in a single pass?  
+How do we find both $L$ and $R$ for every bar in a single pass?
 **We maintain a Monotonic Increasing Stack of Indices** (values increase from bottom to top).
 
 #### The Discovery Moment:

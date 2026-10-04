@@ -29,7 +29,7 @@ export function generateSidebar() {
   const directories = items
     .filter(item => item.isDirectory() && item.name !== 'blog' && !item.name.startsWith('.') && !item.name.startsWith('_'))
     .map(item => item.name)
-    .sort((a, b) => a.localeCompare(b, undefined, { sensitivity: 'base' }));
+    .sort((a, b) => a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' }));
 
   const sidebarEntries = directories.map(dir => ({
     label: formatLabel(dir),

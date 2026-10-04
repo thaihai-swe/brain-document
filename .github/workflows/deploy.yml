@@ -33,7 +33,9 @@ jobs:
         run: rm -f package-lock.json && npm install --no-audit --no-fund --legacy-peer-deps
 
       - name: Build Astro site
-        run: npm run build
+        run: |
+          rm -rf .astro dist
+          npm run build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
